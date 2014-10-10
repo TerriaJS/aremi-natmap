@@ -1,0 +1,15 @@
+#!/bin/bash
+
+npm install
+git submodule update
+gulp release
+
+# TODO: after doing 'gulp release', figure out if we can exclude more things
+
+mkdir target
+tar czf target/aremi-natmap-`date +%Y-%m-%d-%H%M%S`.tar.gz \
+  --exclude make_package \
+  --exclude target \
+  --exclude '*.log' \
+  --exclude '.git*' \
+  .
