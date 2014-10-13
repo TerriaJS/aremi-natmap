@@ -398,6 +398,13 @@ GeoDataCollection.prototype.checkServerHealth = function(layer, succeed, fail) {
             succeed(layer);
         }
     }, function(err) {
+            //ESRI exception case - accept 400 status as well as 200
+        if (err.statusCode === 400) {
+            if (defined(succeed)) {
+                succeed(layer);
+            }
+            return;
+        }
         if (defined(fail)) {
             fail(layer);
         }
@@ -1839,7 +1846,7 @@ function filterMaxScaleDenominatorLayers(getCapabilitiesUrl, layersInGroup, laye
     });
 }
 
-function filterAllLayers(getCapabilitiesUrl, layersIngroup, layersToFilter) {
+function filterAllLayers(getCapabilitiesUrl, layersInGroup, layersToFilter) {
     for (var i = 0; i < layersInGroup.length; ++i) {
         var layerInGroup = layersInGroup[i];
 
