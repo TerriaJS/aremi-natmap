@@ -378,14 +378,14 @@
                           "south": "-44.0",
                           "west": "100.0"
                       },
-                      "base_url": "http://www.ga.gov.au/gis/services/energy/ASEIS_Features/MapServer/WMSServer",
+                      "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                       "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                       "description": "[Licence](http://www.ga.gov.au/copyright)",
                       "type": "WMS",
                       "wfsAvailable": true,
                       "queryable": 1,
-                      "Name": "Slope Areas greater than one percent",
-                      "Title": "Ground slope greater than one percent"
+                      "Name": "slope-green-red-0-5-discrete",
+                      "Title": "Land slope of Australia, 0-5%"
                   },
                   {
                       "BoundingBox": {
