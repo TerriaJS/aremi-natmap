@@ -21,8 +21,7 @@ var TitleWidget = function(options) {
     var wrapper = document.createElement('div');
     wrapper.className = 'ausglobe-title-area';
     wrapper.innerHTML = '\
-        <div style="background: rgba(130,94,51,0.8`); border-radius: 5px; text-align: center; padding: 0.25em; color: #ffffff; font-size: 110%"\
-            class="ausglobe-title-image">\
+        <div class="ausglobe-title-aremi">\
             <strong>Australian Renewable Energy</strong><br/>\
             Mapping Infrastructure\
         </div>\

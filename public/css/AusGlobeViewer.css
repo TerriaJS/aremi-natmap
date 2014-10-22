@@ -209,6 +209,26 @@ li {
     padding-right: 5px;
 }
 
+.ausglobe-title-aremi {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    /* Eucalypt green */
+    background: rgba(141,163,133 ,0.8);
+    /* Brown */
+    /*background: rgba(130,94,51 ,0.8);*/
+    border-radius: 0.4em;
+    padding: 0.4em;
+    margin: 0.3em;
+    color: #ffffff;
+    font-size: 110%;
+    font-weight: 300;
+}
+
+.ausglobe-title-aremi strong {
+    font-weight: 900;
+}
+
 .ausglobe-title-menu {
     position: absolute;
     right: 0;
