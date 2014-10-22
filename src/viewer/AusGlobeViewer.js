@@ -96,7 +96,7 @@ var AusGlobeViewer = function(geoDataManager) {
     this._distanceLegendLabel = undefined;
 
     var that = this;
-    
+
     that.startup = true;
     this.captureCanvas = function() { console.log('capture call unset'); };
     this.captureCanvasCallback = function(dataUrl) { console.log('callback unset'); };
@@ -199,9 +199,9 @@ var AusGlobeViewer = function(geoDataManager) {
     var params = uri.search(true);
 
     this.webGlSupported = (params.map === '2d') ? false : true;
-    
+
     var noWebGLMessage;
-    
+
     if (FeatureDetection.isInternetExplorer() && FeatureDetection.internetExplorerVersion()[0] < 9) {
         noWebGLMessage = new PopupMessage({
             container : document.body,
@@ -215,7 +215,7 @@ and stability issues.'
         this.webGlSupported = false;
     }
 
-    //catch problems 
+    //catch problems
     if (this.webGlSupported && !supportsWebgl()) {
         noWebGLMessage = new PopupMessage({
             container : document.body,
@@ -244,10 +244,10 @@ For a better experience we\'d suggest you visit the application from a larger sc
 If you\'re on a desktop or laptop, consider increasing the size of your window.'
         });
     }
-    
+
     // IE versions prior to 10 don't support CORS, so always use the proxy.
     this._alwaysUseProxy = (FeatureDetection.isInternetExplorer() && FeatureDetection.internetExplorerVersion()[0] < 10);
-    
+
     //TODO: perf test to set environment
 
     // Event watchers for geoDataManager
@@ -281,7 +281,7 @@ If you\'re on a desktop or laptop, consider increasing the size of your window.'
     this.scene = undefined;
     this.viewer = undefined;
     this.map = undefined;
-    
+
     var configUrl = params.config || 'config.json';
 
     //get the server config to know how to handle urls and load initial one
@@ -290,9 +290,9 @@ If you\'re on a desktop or laptop, consider increasing the size of your window.'
         var corsDomains = config.corsDomains;
         //workaround for non-CORS browsers (i.e. IE9)
         corsProxy.setProxyList(config.proxyDomains, config.corsDomains, that._alwaysUseProxy);
-        
+
         that.initialCamera = config.initialCamera;
-        
+
         when.all([loadText('test/ckan_whitelist.txt'), loadText('test/ckan_blacklist.txt')], function(lists) {
             var whitelist = lists[0];
             var blacklist = lists[1];
@@ -311,12 +311,12 @@ If you\'re on a desktop or laptop, consider increasing the size of your window.'
                 viewer : that,
                 container : leftArea,
                 dataManager : geoDataManager,
-                initUrl: params.data_menu || config.initialDataMenu || 'init_nm.json',
+                initUrl: params.data_menu || config.initialDataMenu || 'init_aremi.json',
                 mode3d: that.webGlSupported
             });
-            
+
             that.selectViewer(that.webGlSupported);
-            
+
             // simple way to capture most ux redraw needs - catch all canvas clicks
             $(document).click(function() {
                 if (that.frameChecker !== undefined) {
@@ -592,7 +592,7 @@ AusGlobeViewer.prototype._createCesiumViewer = function(container) {
 */
 
     var that = this;
-    
+
     var inputHandler = viewer.screenSpaceEventHandler;
 
     // Add double click zoom
@@ -617,7 +617,7 @@ AusGlobeViewer.prototype._createCesiumViewer = function(container) {
         if (defined(pickedTriangle)) {
             // Get a fast, accurate-ish height every time the mouse moves.
             var ellipsoid = globe.ellipsoid;
-            
+
             var v0 = ellipsoid.cartesianToCartographic(pickedTriangle.v0);
             var v1 = ellipsoid.cartesianToCartographic(pickedTriangle.v1);
             var v2 = ellipsoid.cartesianToCartographic(pickedTriangle.v2);
@@ -728,7 +728,7 @@ AusGlobeViewer.prototype.isCesium = function() {
 
 AusGlobeViewer.prototype.selectViewer = function(bCesium) {
     var bnds, rect;
-    var timeline = {}; 
+    var timeline = {};
     var cam = this.initialCamera;
 
     var that = this;
@@ -1122,7 +1122,7 @@ AusGlobeViewer.prototype.setCurrentDataset = function(layer) {
         this.updateTimeline();
         return;
     }
-    
+
     //table info
     var tableData, start, finish, current;
     if (layer.dataSource !== undefined) {
@@ -1134,7 +1134,7 @@ AusGlobeViewer.prototype.setCurrentDataset = function(layer) {
         }
     }
     this.updateTimeline(start, finish, start, true);
-    
+
     if (layer.zoomTo && layer.extent !== undefined) {
         this.updateCameraFromRect(layer.extent, 3000);
     }
@@ -1233,7 +1233,7 @@ function flyToPosition(scene, position, durationMilliseconds) {
 
     var initialEnuToFixedRotation = new Matrix4();
     Matrix4.getRotation(initialEnuToFixed, initialEnuToFixedRotation);
-    
+
     var initialFixedToEnuRotation = new Matrix3();
     Matrix3.transpose(initialEnuToFixedRotation, initialFixedToEnuRotation);
 
@@ -1281,7 +1281,7 @@ function flyToPosition(scene, position, durationMilliseconds) {
     });
 }
 
-function zoomCamera(scene, distFactor, pos) { 
+function zoomCamera(scene, distFactor, pos) {
     var camera = scene.camera;
     var pickRay = camera.getPickRay(pos);
     var targetCartesian = scene.globe.pick(pickRay, scene);
@@ -1307,7 +1307,7 @@ AusGlobeViewer.prototype.updateCameraFromRect = function(rect_in, flightTimeMill
 
     var scene = this.scene;
     var map = this.map;
-    
+
     //check that we're not too close
     var epsilon = CesiumMath.EPSILON3;
     var rect = rect_in.clone();
@@ -1349,7 +1349,7 @@ function getWmsFeatureInfo(baseUrl, useProxy, layers, extent, width, height, i, 
     var ne;
     if (useWebMercator) {
         srs = 'EPSG:3857';
-        
+
         var projection = new WebMercatorProjection();
         sw = projection.project(Rectangle.southwest(extent));
         ne = projection.project(Rectangle.northeast(extent));
@@ -1359,7 +1359,7 @@ function getWmsFeatureInfo(baseUrl, useProxy, layers, extent, width, height, i, 
         ne = new Cartesian3(CesiumMath.toDegrees(extent.east), CesiumMath.toDegrees(extent.north), 0.0);
     }
 
-    url += 'service=WMS&request=GetFeatureInfo&version=1.1.1&layers=' + layers + '&query_layers=' + layers + 
+    url += 'service=WMS&request=GetFeatureInfo&version=1.1.1&layers=' + layers + '&query_layers=' + layers +
            '&srs=' + srs + '&width=' + width + '&height=' + height + '&info_format=application/json' +
            '&x=' + i + '&y=' + j + '&';
 
@@ -1470,8 +1470,8 @@ function selectFeatures(promises, viewer, latlng) {
 
                 var properties;
                 if (json.FeatureCollection &&
-                    json.FeatureCollection.FeatureMembers && 
-                    json.FeatureCollection.FeatureMembers.Feature && 
+                    json.FeatureCollection.FeatureMembers &&
+                    json.FeatureCollection.FeatureMembers.Feature &&
                     json.FeatureCollection.FeatureMembers.Feature.Val) {
 
                     properties = {};
