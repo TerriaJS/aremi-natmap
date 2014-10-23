@@ -67,7 +67,7 @@ a:hover {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    
+
     font-size: 9.5pt;
     padding: 0px;
     color: #444;
@@ -105,22 +105,22 @@ a:hover {
 .list {
     height:20%;
     overflow: auto;
-    list-style-type: none; 
+    list-style-type: none;
     margin: 10px;
     width: 100%;
 }
 
-.list .ui-selecting { 
+.list .ui-selecting {
     background: #FECA40;
 }
 
-.list .ui-selected { 
-    background: #F39814; 
-    color: white; 
+.list .ui-selected {
+    background: #F39814;
+    color: white;
 }
 
 li {
-    padding-left: 10px; 
+    padding-left: 10px;
     margin-left: 10px;
 }
 
@@ -131,10 +131,10 @@ li {
     margin: 20px;
 }
 
-.data_type { 
-    font-weight: bold;  
-    margin-left: 0px; 
-    margin-top: 8px; 
+.data_type {
+    font-weight: bold;
+    margin-left: 0px;
+    margin-top: 8px;
     margin-bottom: 5px;
 }
 
@@ -215,14 +215,14 @@ li {
     text-align: center;
     /* Eucalypt green */
     /*background: rgba(141,163,133 ,1.0);*/
-    /* Brown */
-    background: rgba(130,94,51 ,1.0);
+    /* Navy blue */
+    background: rgba(0,0,55 ,1.0);
     border-radius: 0.4em;
     padding: 0.2em 0.0em;
     /*margin: 0.3em;*/
     margin-left: -0.5em;
     color: #ffffff;
-    font-size: 110%;
+    font-size: 100%;
     font-weight: 300;
     line-height: 95%;
 }
