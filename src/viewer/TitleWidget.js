@@ -22,10 +22,17 @@ var TitleWidget = function(options) {
     wrapper.className = 'ausglobe-title-area';
     wrapper.innerHTML = '\
         <div class="ausglobe-title-aremi">\
-            <strong>Australian Renewable Energy</strong><br/>\
-            Mapping Infrastructure\
+            <div id="aremi-logo-text">\
+                <strong>Australian Renewable Energy</strong>\
+                <br/>\
+                Mapping Infrastructure\
+                <br/>\
+                <small >in association with NICTA and Geoscience Australia</small>\
+            </div>\
+            <div class="ausglobe-title-image">\
+                <img src="images/ARENA-logo.png" height="40px" style="padding-top: 0.3em;"/>\
+            </div>\
         </div>\
-        <div class="ausglobe-title-image"><img src="images/brands_title.png" width="353" height="40" /></div>\
         <div class="ausglobe-title-middle">\
             <div id="ausglobe-title-position" class="ausglobe-title-position"></div>\
             <div id="ausglobe-title-scale" class="ausglobe-title-scale">\

@@ -214,19 +214,29 @@ li {
     vertical-align: middle;
     text-align: center;
     /* Eucalypt green */
-    background: rgba(141,163,133 ,0.8);
+    /*background: rgba(141,163,133 ,1.0);*/
     /* Brown */
-    /*background: rgba(130,94,51 ,0.8);*/
+    background: rgba(130,94,51 ,1.0);
     border-radius: 0.4em;
-    padding: 0.4em;
-    margin: 0.3em;
+    padding: 0.2em 0.0em;
+    /*margin: 0.3em;*/
+    margin-left: -0.5em;
     color: #ffffff;
     font-size: 110%;
     font-weight: 300;
+    line-height: 95%;
+}
+.ausglobe-title-aremi #aremi-logo-text {
+    padding: 0.4em 0.8em;
+    float: left; border-right: 1px solid rgb(223,225,225);
 }
 
 .ausglobe-title-aremi strong {
     font-weight: 900;
+}
+
+.ausglobe-title-aremi small {
+    font-size: 75%;
 }
 
 .ausglobe-title-menu {
