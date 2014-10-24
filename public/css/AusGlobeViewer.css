@@ -224,7 +224,7 @@ li {
     color: #ffffff;
     font-size: 100%;
     font-weight: 300;
-    line-height: 95%;
+    line-height: 110%;
 }
 .ausglobe-title-aremi #aremi-logo-text {
     padding: 0.4em 0.8em;
@@ -236,7 +236,7 @@ li {
 }
 
 .ausglobe-title-aremi small {
-    font-size: 75%;
+    font-size: 65%;
 }
 
 .ausglobe-title-menu {
