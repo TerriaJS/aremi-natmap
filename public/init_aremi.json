@@ -171,6 +171,12 @@
                 },
                 {
                     "name": "Geothermal",
+                    "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                    "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                    "description": "NICTA Geothermal",
+                    "type": "WMS",
+                    "wfsAvailable": false,
+                    "queryable": 0,
                     "Layer": [
                         {
                             "BoundingBox": {
@@ -203,6 +209,96 @@
                             "queryable": 1,
                             "Name": "ThermalWell",
                             "Title": "Thermal wells"
+                        },
+                        {
+                            "BoundingBox": {
+                                "east": "140.7",
+                                "north": "-27.6",
+                                "south": "-28.3",
+                                "west": "139.8"
+                            },
+                            "Name": "MoombaMeanTemp5400m",
+                            "Title": "Big Lake Suite mean temp at 5400m"
+                        },
+                        {
+                            "BoundingBox": {
+                                "east": "140.7",
+                                "north": "-27.6",
+                                "south": "-28.3",
+                                "west": "139.8"
+                            },
+                            "Name": "MoombaMeanTemp6200m",
+                            "Title": "Big Lake Suite mean temp at 6200m"
+                        },
+                        {
+                            "BoundingBox": {
+                                "east": "140.7",
+                                "north": "-27.6",
+                                "south": "-28.3",
+                                "west": "139.8"
+                            },
+                            "Name": "MoombaPGranite5400m",
+                            "Title": "Big Lake Suite Granite probability at 5400m"
+                        },
+                        {
+                            "BoundingBox": {
+                                "east": "140.7",
+                                "north": "-27.6",
+                                "south": "-28.3",
+                                "west": "139.8"
+                            },
+                            "Name": "MoombaPGranite6900m",
+                            "Title": "Big Lake Suite Granite probability at 6900m"
+                        },
+                        {
+                            "BoundingBox": {
+                                "east": "140.7",
+                                "north": "-27.6",
+                                "south": "-28.3",
+                                "west": "139.8"
+                            },
+                            "Name": "MoombaPGranite8400m",
+                            "Title": "Big Lake Suite Granite probability at 8400m"
+                        },
+                        {
+                            "BoundingBox": {
+                                "east": "142.7",
+                                "north": "-37.95",
+                                "south": "-38.5",
+                                "west": "141.8"
+                            },
+                            "Name": "PrettyHill2200m",
+                            "Title": "Pretty Hill Granite probability at 2200m"
+                        },
+                        {
+                            "BoundingBox": {
+                                "east": "142.7",
+                                "north": "-37.95",
+                                "south": "-38.5",
+                                "west": "141.8"
+                            },
+                            "Name": "PrettyHill2800m",
+                            "Title": "Pretty Hill Granite probability at 2800m"
+                        },
+                        {
+                            "BoundingBox": {
+                                "east": "142.7",
+                                "north": "-37.95",
+                                "south": "-38.5",
+                                "west": "141.8"
+                            },
+                            "Name": "PrettyHill3300m",
+                            "Title": "Pretty Hill Granite probability at 3300m"
+                        },
+                        {
+                            "BoundingBox": {
+                                "east": "142.7",
+                                "north": "-37.95",
+                                "south": "-38.5",
+                                "west": "141.8"
+                            },
+                            "Name": "PrettyHill3800m",
+                            "Title": "Pretty Hill Granite probability at 3800m"
                         },
                         {
                             "BoundingBox": {
@@ -601,6 +697,18 @@
                             "queryable": 1,
                             "Name": "Distance To Translines 10km",
                             "Title": "Distance to transmission lines"
+                        },
+                        {
+                            "BoundingBox": {
+                                "east": "159.0",
+                                "north": "-4.0",
+                                "south": "-44.0",
+                                "west": "100.0"
+                            },
+                            "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                            "queryable": 1,
+                            "Name": "NationalTransmissionSubstations",
+                            "Title": "Transmission Substations"
                         },
                         {
                             "BoundingBox": {
