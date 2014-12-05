@@ -6,3 +6,4 @@ public/doc
 target
 error.log
 output.log
+.DS_Store
