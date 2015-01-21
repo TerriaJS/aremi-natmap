@@ -416,7 +416,7 @@
                         {
                             "Name": "admin_bnds:STE_2011_AUST",
                             "Title": "States & Territories",
-                            "base_url": "http://geoserver.research.nicta.com.au/admin_bnds_abs/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
                             "type": "WMS",
                             "wfsAvailable": true,
                             "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
@@ -432,7 +432,7 @@
                         {
                             "Name": "admin_bnds:LGA_2011_AUST",
                             "Title": "Local Government Areas",
-                            "base_url": "http://geoserver.research.nicta.com.au/admin_bnds_abs/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
                             "type": "WMS",
                             "wfsAvailable": true,
                             "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
@@ -448,7 +448,7 @@
                         {
                             "Name": "admin_bnds:POA_2011_AUST",
                             "Title": "Postal Areas",
-                            "base_url": "http://geoserver.research.nicta.com.au/admin_bnds_abs/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
                             "type": "WMS",
                             "wfsAvailable": true,
                             "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
@@ -464,7 +464,7 @@
                         {
                             "Name": "admin_bnds:CED_2011_AUST",
                             "Title": "Commonwealth Electoral Divisions",
-                            "base_url": "http://geoserver.research.nicta.com.au/admin_bnds_abs/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
                             "type": "WMS",
                             "wfsAvailable": true,
                             "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
@@ -480,7 +480,7 @@
                         {
                             "Name": "admin_bnds:SED_2011_AUST",
                             "Title": "State Electoral Divisions",
-                            "base_url": "http://geoserver.research.nicta.com.au/admin_bnds_abs/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
                             "type": "WMS",
                             "wfsAvailable": true,
                             "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
@@ -496,7 +496,7 @@
                         {
                             "Name": "admin_bnds:SSC_2011_AUST",
                             "Title": "State Suburbs",
-                            "base_url": "http://geoserver.research.nicta.com.au/admin_bnds_abs/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
                             "type": "WMS",
                             "wfsAvailable": true,
                             "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
@@ -512,7 +512,7 @@
                         {
                             "Name": "admin_bnds:ADD_2011_AUST",
                             "Title": "Australian Drainage Divisions",
-                            "base_url": "http://geoserver.research.nicta.com.au/admin_bnds_abs/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
                             "type": "WMS",
                             "wfsAvailable": true,
                             "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
@@ -528,7 +528,7 @@
                         {
                             "Name": "admin_bnds:NRMR_2011_AUST",
                             "Title": "Natural Resource Management Regions",
-                            "base_url": "http://geoserver.research.nicta.com.au/admin_bnds_abs/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
                             "type": "WMS",
                             "wfsAvailable": true,
                             "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
@@ -566,7 +566,7 @@
                         {
                             "Name": "benchmarks",
                             "Title": "Benchmarks",
-                            "base_url": "http://geoserver.research.nicta.com.au/geotopo_250k/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
                             "BoundingBox": {
                                 "west": "113.50982",
                                 "east": "149.92117",
@@ -578,7 +578,7 @@
                         {
                             "Name": "contours",
                             "Title": "Contours",
-                            "base_url": "http://geoserver.research.nicta.com.au/geotopo_250k/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
                             "BoundingBox": {
                                 "west": "112.92137",
                                 "east": "153.63857000000004",
@@ -590,7 +590,7 @@
                         {
                             "Name": "horizontalcontrolpoints",
                             "Title": "Horizontal Control Points",
-                            "base_url": "http://geoserver.research.nicta.com.au/geotopo_250k/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
                             "BoundingBox": {
                                 "west": "113.06265",
                                 "east": "153.55039",
@@ -602,7 +602,7 @@
                         {
                             "Name": "spotelevations",
                             "Title": "Spot Elevations",
-                            "base_url": "http://geoserver.research.nicta.com.au/geotopo_250k/ows",
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
                             "BoundingBox": {
                                 "west": "112.93472",
                                 "east": "153.63573999999997",
@@ -679,7 +679,7 @@
                 },
                 {
                     "name": "Infrastructure",
-                    "base_url": "http://geoserver.research.nicta.com.au/geotopo_250k/ows",
+                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
                     "type": "WMS",
                     "queryable": 0,
                     "wfsAvailable": true,
@@ -927,7 +927,7 @@
                 },
                 {
                     "name": "Transport",
-                    "base_url": "http://geoserver.research.nicta.com.au/geotopo_250k/ows",
+                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
                     "type": "WMS",
                     "queryable": 0,
                     "wfsAvailable": true,
@@ -1081,7 +1081,7 @@
                 },
                 {
                     "name": "Utility",
-                    "base_url": "http://geoserver.research.nicta.com.au/geotopo_250k/ows",
+                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
                     "type": "WMS",
                     "queryable": 0,
                     "wfsAvailable": true,
@@ -1103,7 +1103,7 @@
                 },
                 {
                     "name": "Vegetation",
-                    "base_url": "http://geoserver.research.nicta.com.au/geotopo_250k/ows",
+                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
                     "type": "WMS",
                     "queryable": 0,
                     "wfsAvailable": true,
@@ -1158,7 +1158,7 @@
                 },
                 {
                     "name": "Water (Surface)",
-                    "base_url": "http://geoserver.research.nicta.com.au/geotopo_250k/ows",
+                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
                     "type": "WMS",
                     "queryable": 0,
                     "wfsAvailable": true,
@@ -1784,7 +1784,7 @@
             "Layer": [
                 {
                     "name": "Topography (Geoscience Australia)",
-                    "base_url": "http://geoserver.research.nicta.com.au/geotopo_250k/ows",
+                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
                     "type": "WMS",
                     "wfsAvailable": true,
                     "description": "[Licence](http://www.ga.gov.au/copyright)",
@@ -1800,7 +1800,7 @@
                 },
                 {
                     "name": "Boundaries (Australia Bureau of Statistics)",
-                    "base_url": "http://geoserver.research.nicta.com.au/admin_bnds_abs/ows",
+                    "base_url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
                     "type": "WMS",
                     "wfsAvailable": true,
                     "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
