@@ -623,19 +623,6 @@
                                 "north": "-9.004409999707923"
                             },
                             "queryable": 1
-                        },
-                        {
-                            "Name": "Flow_Direction_Grid_to_accompany_9_Second_Digital_Elevation_Model_of_Australia_Version_3",
-                            "Title": "Flow Grid Direction Image",
-                            "base_url": "http://www.ga.gov.au/thredds/wms/national_grids/d8-9s.nc",
-                            "wfsAvailable": false,
-                            "BoundingBox": {
-                                "west": "112.93472",
-                                "east": "153.63573999999997",
-                                "south": "-43.657359999057725",
-                                "north": "-9.004409999707923"
-                            },
-                            "queryable": 1
                         }
                     ]
                 },
@@ -652,21 +639,6 @@
                             "wfsAvailable": false,
                             "description": "[Licence](http://www.ga.gov.au/copyright)",
                             "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-                            "BoundingBox": {
-                                "west": "112.93529999999998",
-                                "east": "152.06206",
-                                "south": "-38.208809999082796",
-                                "north": "-11.05104999964455"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "95d9e550_8b36_4273_8df7_2b76c140e73a",
-                            "Title": "Taxation Statistics 2011-2012",
-                            "base_url": "http://data.gov.au/geoserver/taxation-statistics-2011-12/wms",
-                            "completeWfsUrl": "http://data.gov.au/geoserver/taxation-statistics-2011-12/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=95d9e550_8b36_4273_8df7_2b76c140e73a&srsName=EPSG%3A4326&maxFeatures=1000&outputFormat=json",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "dataCustodian": "[data.gov.au](http://www.data.gov.au/)",
                             "BoundingBox": {
                                 "west": "112.93529999999998",
                                 "east": "152.06206",
@@ -723,58 +695,19 @@
                             "Title": "Power stations"
                         },
                         {
-                            "Name": "MyBroadband Availabilty",
-                            "Title": "Broadband Availability",
+                            "Name": "MyBroadband_Availability",
+                            "Title": "Broadband Availability and Quality",
                             "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
                             "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
                             "legendUrl": "https://programs.communications.gov.au/NBNBSL/images/mybroadband/availability.png",
-                            "base_url": "https://programs.communications.gov.au/WMS",
+                            "base_url": "https://programs.communications.gov.au/geoserver/ows",
                             "type": "WMS",
-                            "completeWfsUrl": "https://programs.communications.gov.au/WFS?service=WFS&request=GetFeature&version=1.0.0&typeName=commswfs:MBBPts&maxFeatures=1000",
+                            "completeWfsUrl": "https://programs.communications.gov.au/geoserver/ows?service=WFS&request=GetFeature&version=1.0.0&typeName=commswfs:MBBPts&maxFeatures=1000",
                             "BoundingBox": {
                                 "west": "112.93529999999998",
                                 "east": "152.06206",
                                 "south": "-38.208809999082796",
                                 "north": "-11.05104999964455"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "MyBroadband Quality",
-                            "Title": "Broadband Quality",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
-                            "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
-                            "legendUrl": "https://programs.communications.gov.au/NBNBSL/images/mybroadband/quality.png",
-                            "base_url": "https://programs.communications.gov.au/WMS",
-                            "type": "WMS",
-                            "completeWfsUrl": "https://programs.communications.gov.au/WFS?service=WFS&request=GetFeature&version=1.0.0&typeName=commswfs:MBBPts&maxFeatures=1000",
-                            "BoundingBox": {
-                                "west": "112.93529999999998",
-                                "east": "152.06206",
-                                "south": "-38.208809999082796",
-                                "north": "-11.05104999964455"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "aerialcableways",
-                            "Title": "Aerial Cableways",
-                            "BoundingBox": {
-                                "west": "145.63916",
-                                "east": "153.47854999999998",
-                                "south": "-37.845019999085665",
-                                "north": "-16.819299999476762"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "conveyors",
-                            "Title": "Conveyors",
-                            "BoundingBox": {
-                                "west": "115.65124",
-                                "east": "151.91119",
-                                "south": "-41.48786999906365",
-                                "north": "-12.184729999610212"
                             },
                             "queryable": 1
                         },
@@ -834,39 +767,6 @@
                             "queryable": 1
                         },
                         {
-                            "Name": "minepoints",
-                            "Title": "Mine Points",
-                            "BoundingBox": {
-                                "west": "113.36334",
-                                "east": "153.60394",
-                                "south": "-43.46653999905804",
-                                "north": "-10.575569999659121"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "petroleumwells",
-                            "Title": "Petroleum Wells",
-                            "BoundingBox": {
-                                "west": "113.9964",
-                                "east": "152.48242000000002",
-                                "south": "-38.596209999079896",
-                                "north": "-15.323399999518502"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "storagetanks",
-                            "Title": "Storage Tanks",
-                            "BoundingBox": {
-                                "west": "113.63004999999998",
-                                "east": "153.16552999999996",
-                                "south": "-41.127119999065165",
-                                "north": "-12.426089999602983"
-                            },
-                            "queryable": 1
-                        },
-                        {
                             "Name": "verticalobstructions",
                             "Title": "Vertical Obstructions",
                             "BoundingBox": {
@@ -887,39 +787,6 @@
                                 "east": "153.63573999999997",
                                 "south": "-43.657359999057725",
                                 "north": "-9.004409999707923"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "watertanks",
-                            "Title": "Water Tanks",
-                            "BoundingBox": {
-                                "west": "112.93187000000002",
-                                "east": "153.00634",
-                                "south": "-42.75848999905954",
-                                "north": "-9.951769999678387"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "windpumps",
-                            "Title": "Wind Pumps",
-                            "BoundingBox": {
-                                "west": "113.50105",
-                                "east": "151.48511",
-                                "south": "-35.85509999910395",
-                                "north": "-11.177569999640692"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "yards",
-                            "Title": "Yards",
-                            "BoundingBox": {
-                                "west": "113.18122",
-                                "east": "148.48095",
-                                "south": "-34.994069999113215",
-                                "north": "-10.624669999657616"
                             },
                             "queryable": 1
                         }
@@ -946,17 +813,6 @@
                             "queryable": 1
                         },
                         {
-                            "Name": "barrierpoints",
-                            "Title": "Barrier Points",
-                            "BoundingBox": {
-                                "west": "114.60042999999999",
-                                "east": "146.93454000000003",
-                                "south": "-34.738279999116116",
-                                "north": "-11.439839999632706"
-                            },
-                            "queryable": 1
-                        },
-                        {
                             "Name": "ferryroutelines",
                             "Title": "Ferry Routes",
                             "BoundingBox": {
@@ -964,17 +820,6 @@
                                 "east": "153.52870000000001",
                                 "south": "-43.14290999905865",
                                 "north": "-10.584439999658853"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "foottracks",
-                            "Title": "Foot Tracks",
-                            "BoundingBox": {
-                                "west": "113.52908",
-                                "east": "153.41766",
-                                "south": "-43.61136999905781",
-                                "north": "-14.099749999553625"
                             },
                             "queryable": 1
                         },
@@ -1034,28 +879,6 @@
                             "queryable": 1
                         },
                         {
-                            "Name": "roadcrossinglines",
-                            "Title": "Road Crossing Lines",
-                            "BoundingBox": {
-                                "west": "113.32183",
-                                "east": "153.58248",
-                                "south": "-43.583039999057846",
-                                "north": "-11.161099999641191"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "roadcrossingpoints",
-                            "Title": "Road Crossing Points",
-                            "BoundingBox": {
-                                "west": "114.00941000000002",
-                                "east": "153.59565999999998",
-                                "south": "-42.89165999905921",
-                                "north": "-10.970479999647017"
-                            },
-                            "queryable": 1
-                        },
-                        {
                             "Name": "roads",
                             "Title": "Roads",
                             "BoundingBox": {
@@ -1063,17 +886,6 @@
                                 "east": "153.63281",
                                 "south": "-43.58748999905784",
                                 "north": "-8.93332999971015"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "roadtunnellines",
-                            "Title": "Road Tunnel Lines",
-                            "BoundingBox": {
-                                "west": "115.85188999999998",
-                                "east": "151.67768999999998",
-                                "south": "-37.829839999085785",
-                                "north": "-25.080719999274965"
                             },
                             "queryable": 1
                         }
@@ -1111,17 +923,6 @@
                     "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                     "Layer": [
                         {
-                            "Name": "clearedlines",
-                            "Title": "Cleared Lines",
-                            "BoundingBox": {
-                                "west": "114.30741",
-                                "east": "151.17083",
-                                "south": "-35.68676999910569",
-                                "north": "-11.62904999962697"
-                            },
-                            "queryable": 1
-                        },
-                        {
                             "Name": "cultivatedareas",
                             "Title": "Cultivated Areas",
                             "BoundingBox": {
@@ -1140,17 +941,6 @@
                                 "east": "153.63769",
                                 "south": "-43.658549999057726",
                                 "north": "-8.93332999971015"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "windbreaks",
-                            "Title": "Windbreaks",
-                            "BoundingBox": {
-                                "west": "114.99020999999999",
-                                "east": "151.58246",
-                                "south": "-41.16088999906501",
-                                "north": "-24.201429999293836"
                             },
                             "queryable": 1
                         }
@@ -1172,81 +962,10 @@
                                 "south": "-44.0",
                                 "west": "100.0"
                             },
-                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                            "dataCustodian": "[Bureau of Meteorology](http://www.bom.gov.au/)",
-                            "description": "[Australian Hydrological Geospatial Fabric ](http://www.bom.gov.au/water/geofabric/)",
-                            "queryable": 1,
-                            "Name": "AHGFDam",
-                            "Title": "Dams"
-                        },
-                        {
-                            "BoundingBox": {
-                                "east": "159.0",
-                                "north": "-4.0",
-                                "south": "-44.0",
-                                "west": "100.0"
-                            },
-                            "base_url": "http://www.ga.gov.au/gis/services/hazards/NFRIPCatchments/MapServer/WMSServer",
-                            "queryable": 1,
-                            "Name": "ContractedCatchments",
-                            "Title": "Contracted catchments"
-                        },
-                        {
-                            "BoundingBox": {
-                                "east": "159.0",
-                                "north": "-4.0",
-                                "south": "-44.0",
-                                "west": "100.0"
-                            },
                             "base_url": "http://www.ga.gov.au/gis/services/hazards/NFRIPCatchments/MapServer/WMSServer",
                             "queryable": 1,
                             "Name": "RiverRegions",
                             "Title": "River regions"
-                        },
-                        {
-                            "BoundingBox": {
-                                "east": "159.0",
-                                "north": "-4.0",
-                                "south": "-44.0",
-                                "west": "100.0"
-                            },
-                            "base_url": "http://www.ga.gov.au/gis/services/hazards/NFRIPCatchments/MapServer/WMSServer",
-                            "queryable": 1,
-                            "Name": "RiverRegionNames",
-                            "Title": "River region names"
-                        },
-                        {
-                            "Name": "bores",
-                            "Title": "Bores",
-                            "BoundingBox": {
-                                "west": "112.93529999999998",
-                                "east": "152.06206",
-                                "south": "-38.208809999082796",
-                                "north": "-11.05104999964455"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "canalareas",
-                            "Title": "Canal Areas",
-                            "BoundingBox": {
-                                "west": "115.70707",
-                                "east": "145.17220000000003",
-                                "south": "-38.08189999908377",
-                                "north": "-32.253269999147996"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "canallines",
-                            "Title": "Canal Lines",
-                            "BoundingBox": {
-                                "west": "113.35391999999999",
-                                "east": "153.59005",
-                                "south": "-42.85120999905931",
-                                "north": "-12.524599999600033"
-                            },
-                            "queryable": 1
                         },
                         {
                             "Name": "AHGFEstuary",
@@ -1296,17 +1015,6 @@
                             "queryable": 1
                         },
                         {
-                            "Name": "locks",
-                            "Title": "Locks",
-                            "BoundingBox": {
-                                "west": "138.80938",
-                                "east": "144.46688000000003",
-                                "south": "-35.94260999910306",
-                                "north": "-33.996729999124945"
-                            },
-                            "queryable": 1
-                        },
-                        {
                             "Name": "marinehazardareas",
                             "Title": "Reef Areas",
                             "BoundingBox": {
@@ -1329,39 +1037,6 @@
                             "queryable": 1
                         },
                         {
-                            "Name": "pondageareas",
-                            "Title": "Pondage Areas",
-                            "BoundingBox": {
-                                "west": "113.31874",
-                                "east": "153.3509",
-                                "south": "-42.10062999906144",
-                                "north": "-12.191229999610012"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "rapidareas",
-                            "Title": "Rapid Areas",
-                            "BoundingBox": {
-                                "west": "131.03977",
-                                "east": "149.38968999999997",
-                                "south": "-33.995369999124954",
-                                "north": "-12.680119999595398"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "rapidlines",
-                            "Title": "Rapid Lines",
-                            "BoundingBox": {
-                                "west": "131.66452",
-                                "east": "149.13695",
-                                "south": "-43.20146999905853",
-                                "north": "-10.70548999965513"
-                            },
-                            "queryable": 1
-                        },
-                        {
                             "Name": "reservoirs",
                             "Title": "Reservoirs",
                             "BoundingBox": {
@@ -1369,28 +1044,6 @@
                                 "east": "153.56568",
                                 "south": "-43.19763999905853",
                                 "north": "-10.571689999659238"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "spillways",
-                            "Title": "Spillways",
-                            "BoundingBox": {
-                                "west": "117.10128000000002",
-                                "east": "153.28249",
-                                "south": "-42.103829999061425",
-                                "north": "-20.977869999368615"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "springs",
-                            "Title": "Springs",
-                            "BoundingBox": {
-                                "west": "114.13676",
-                                "east": "147.96741000000003",
-                                "south": "-38.23244999908261",
-                                "north": "-11.523879999630154"
                             },
                             "queryable": 1
                         },
@@ -1405,62 +1058,6 @@
                                 "east": "153.63207400000002",
                                 "south": "-43.629381999057735",
                                 "north": "-9.242297499700408"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "AHGFMappedNode",
-                            "Title": "Stream Nodes",
-                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                            "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "113.37534500000005",
-                                "east": "153.6320740000001",
-                                "south": "-43.629381999057735",
-                                "north": "-9.242297499700424"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "AHGFNetworkStream",
-                            "Title": "Stream Network",
-                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                            "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "112.10056181999998",
-                                "east": "154.86193818000004",
-                                "south": "-47.81318817937922",
-                                "north": "-5.051811819379163"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "AHGFNetworkNode",
-                            "Title": "Stream Network Nodes",
-                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                            "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "113.33375",
-                                "east": "153.62875000000008",
-                                "south": "-43.628749999057746",
-                                "north": "-9.23624999970059"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "AHGFStructure",
-                            "Title": "Structure",
-                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                            "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "113.76872500000002",
-                                "east": "153.5956600000001",
-                                "south": "-43.58274499905778",
-                                "north": "-10.64324999965701"
                             },
                             "queryable": 1
                         },
@@ -1490,92 +1087,6 @@
                             "queryable": 1
                         },
                         {
-                            "Name": "watercourselines",
-                            "Title": "Water Course Lines",
-                            "BoundingBox": {
-                                "west": "113.37533999999998",
-                                "east": "153.6321",
-                                "south": "-43.629399999057775",
-                                "north": "-8.93332999971015"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "waterfallpoints",
-                            "Title": "Waterfall Points",
-                            "BoundingBox": {
-                                "west": "115.84323",
-                                "east": "153.04724000000002",
-                                "south": "-43.49497999905798",
-                                "north": "-10.643249999657044"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "waterholes",
-                            "Title": "Waterholes",
-                            "BoundingBox": {
-                                "west": "112.89583439399999",
-                                "east": "154.01767560599998",
-                                "south": "-47.40775060536477",
-                                "north": "-6.2859093933647605"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "waterpoints",
-                            "Title": "Water Points",
-                            "BoundingBox": {
-                                "west": "113.76517999999999",
-                                "east": "153.09347999999997",
-                                "south": "-38.63448999907962",
-                                "north": "-10.072709999674638"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "AHGFWaterPipeline",
-                            "Title": "Water Pipeline",
-                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                            "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "113.80691",
-                                "east": "152.89131000000003",
-                                "south": "-43.00307999905891",
-                                "north": "-10.903989999649017"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "AHGFDam",
-                            "Title": "Water Storage",
-                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                            "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "112.9318700000001",
-                                "east": "153.00634000000005",
-                                "south": "-42.75848999905948",
-                                "north": "-9.951769999678337"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "RiverRegion",
-                            "Title": "River Region",
-                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                            "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "112.9225",
-                                "east": "153.63750000000013",
-                                "south": "-43.64250000005773",
-                                "north": "-9.229999999700832"
-                            },
-                            "queryable": 1
-                        },
-                        {
                             "Name": "AHGFContractedCatchment",
                             "Title": "Catchment",
                             "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
@@ -1586,48 +1097,6 @@
                                 "east": "153.63750000000002",
                                 "south": "-43.73999999905757",
                                 "north": "-9.197499999701808"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "AWRADrainageDivision",
-                            "Title": " Drainage Division",
-                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                            "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "111.24438730279999",
-                                "east": "155.3156126972001",
-                                "south": "-48.47186269657931",
-                                "north": "-4.400637302179204"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "NCBLevel1DrainageDivision",
-                            "Title": "NCB Level1 Drainage Division",
-                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                            "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "112.9225",
-                                "east": "153.63750000000002",
-                                "south": "-43.73999999905757",
-                                "north": "-9.197499999701801"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "NCBLevel2DrainageBasinGroup",
-                            "Title": "NCB Level2 Drainage Basin Group",
-                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                            "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "112.9225",
-                                "east": "153.63750000000013",
-                                "south": "-43.73999999905757",
-                                "north": "-9.197499999701803"
                             },
                             "queryable": 1
                         }
@@ -1643,18 +1112,6 @@
                     "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
                     "Layer": [
                         {
-                            "Name": "AHGFAquiferContour",
-                            "Title": "Aquifer Contours",
-                            "legendUrl": "",
-                            "BoundingBox": {
-                                "west": "130.9294316820001",
-                                "east": "151.640955901",
-                                "south": "-41.24101109706462",
-                                "north": "-12.157000677611002"
-                            },
-                            "queryable": 1
-                        },
-                        {
                             "Name": "AHGFWaterTableAquifer",
                             "Title": "Water Table Aquifer",
                             "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
@@ -1665,162 +1122,8 @@
                                 "north": "-9.219939999701113"
                             },
                             "queryable": 1
-                        },
-                        {
-                            "Name": "AHGFSurficialHydrogeologicUnit",
-                            "Title": "Surficial Hydrogeologic Unit",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "112.92137000000001",
-                                "east": "153.63857000000004",
-                                "south": "-43.65854999905766",
-                                "north": "-9.219939999701113"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "AHGFAquiferBoundary",
-                            "Title": "Aquifer Boundary",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "112.92137000000001",
-                                "east": "152.49040280900007",
-                                "south": "-39.135739999076094",
-                                "north": "-12.243238350608436"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "AHGFAquiferOutcrop",
-                            "Title": "Aquifer Outcrop",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "113.8055180570001",
-                                "east": "152.49040280900002",
-                                "south": "-38.755833332078694",
-                                "north": "-13.441636424572783"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "IGWAquiferSalinity",
-                            "Title": "Aquifer Salinity",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "112.92137000000001",
-                                "east": "148.91107675700005",
-                                "south": "-38.97436811707721",
-                                "north": "-20.97124299936873"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "IGWAquiferYield",
-                            "Title": "Aquifer Yield",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "138.73545507400001",
-                                "east": "148.9098995590001",
-                                "south": "-38.97436810607722",
-                                "north": "-31.999839353151554"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "IGWWaterTableYield",
-                            "Title": "Water Table Yield",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "129.00048000000004",
-                                "east": "153.63857000000007",
-                                "south": "-39.135739999076094",
-                                "north": "-10.965879999647115"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "IGWWaterTableSalinity",
-                            "Title": "Water Table Salinity",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "112.92137000000001",
-                                "east": "153.63857000000007",
-                                "south": "-43.643049999057716",
-                                "north": "-10.687579999655645"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "IGWWaterTableHydraulicConductivity",
-                            "Title": "IGWWaterTableHydraulicConductivity",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "140.96334594200005",
-                                "east": "152.49056374800008",
-                                "south": "-37.68073353908695",
-                                "north": "-24.586309583285477"
-                            },
-                            "queryable": 1
-                        },
-                        {
-                            "Name": "AHGFWaterTableAquifer",
-                            "Title": "WaterTableAquifer",
-                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                            "BoundingBox": {
-                                "west": "112.92137000000001",
-                                "east": "153.63857000000004",
-                                "south": "-43.65854999905766",
-                                "north": "-9.219939999701113"
-                            },
-                            "queryable": 1
                         }
                     ]
-                }
-            ]
-        },
-
-        {
-            "name": "Data Providers",
-            "Layer": [
-                {
-                    "name": "Topography (Geoscience Australia)",
-                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
-                    "type": "WMS",
-                    "wfsAvailable": true,
-                    "description": "[Licence](http://www.ga.gov.au/copyright)",
-                    "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
-                },
-                {
-                    "name": "Water (Bureau of Meteorology Geofabric)",
-                    "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                    "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-                    "type": "WMS",
-                    "wfsAvailable": true,
-                    "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)"
-                },
-                {
-                    "name": "Boundaries (Australia Bureau of Statistics)",
-                    "base_url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
-                    "type": "WMS",
-                    "wfsAvailable": true,
-                    "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
-                    "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)"
-                },
-                {
-                    "name": "data.gov.au",
-                    "base_url": "http://data.gov.au/geoserver/ows",
-                    "type": "WMS",
-                    "wfsAvailable": true,
-                    "dataCustodian": "[data.gov.au](http://www.data.gov.au/)"
-                },
-                {
-                    "name": "National Exposure Information System 2012",
-                    "base_url": "http://www.ga.gov.au/gis/services/hazards/NEXIS_2012_WMS/MapServer/WMSServer",
-                    "type": "WMS",
-                    "wfsAvailable": true,
-                    "wfsUrl": "http://www.ga.gov.au/gis/services/hazards/NEXIS_2012_WMS/MapServer/WFSServer",
-                    "description": "[Licence](http://www.ga.gov.au/copyright)",
-                    "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                 }
             ]
         }
