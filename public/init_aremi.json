@@ -776,19 +776,6 @@
                                 "north": "-9.080289999705544"
                             },
                             "queryable": 1
-                        },
-                        {
-                            "Name": "0",
-                            "Title": "Waste Management Facilities",
-                            "base_url": "http://www.ga.gov.au/gis/services/topography/National_Waste_Management_Facilities/MapServer/WMSServer",
-                            "wfsUrl": "http://www.ga.gov.au/gis/services/topography/National_Waste_Management_Facilities/MapServer/WFSServer",
-                            "BoundingBox": {
-                                "west": "112.93472",
-                                "east": "153.63573999999997",
-                                "south": "-43.657359999057725",
-                                "north": "-9.004409999707923"
-                            },
-                            "queryable": 1
                         }
                     ]
                 },
