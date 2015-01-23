@@ -171,12 +171,6 @@
                 },
                 {
                     "name": "Geothermal",
-                    "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
-                    "dataCustodian": "[NICTA](http://nicta.com.au/)",
-                    "description": "NICTA Geothermal",
-                    "type": "WMS",
-                    "wfsAvailable": false,
-                    "queryable": 0,
                     "Layer": [
                         {
                             "BoundingBox": {
@@ -218,7 +212,13 @@
                                 "west": "139.8"
                             },
                             "Name": "MoombaMeanTemp5400m",
-                            "Title": "Big Lake Suite mean temp at 5400m"
+                            "Title": "Big Lake Suite mean temp at 5400m",
+                            "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                            "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                            "description": "NICTA Geothermal",
+                            "type": "WMS",
+                            "wfsAvailable": false,
+                            "queryable": 0
                         },
                         {
                             "BoundingBox": {
@@ -228,7 +228,13 @@
                                 "west": "139.8"
                             },
                             "Name": "MoombaMeanTemp6200m",
-                            "Title": "Big Lake Suite mean temp at 6200m"
+                            "Title": "Big Lake Suite mean temp at 6200m",
+                            "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                            "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                            "description": "NICTA Geothermal",
+                            "type": "WMS",
+                            "wfsAvailable": false,
+                            "queryable": 0
                         },
                         {
                             "BoundingBox": {
@@ -238,7 +244,13 @@
                                 "west": "139.8"
                             },
                             "Name": "MoombaPGranite5400m",
-                            "Title": "Big Lake Suite Granite probability at 5400m"
+                            "Title": "Big Lake Suite Granite probability at 5400m",
+                            "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                            "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                            "description": "NICTA Geothermal",
+                            "type": "WMS",
+                            "wfsAvailable": false,
+                            "queryable": 0
                         },
                         {
                             "BoundingBox": {
@@ -248,7 +260,13 @@
                                 "west": "139.8"
                             },
                             "Name": "MoombaPGranite6900m",
-                            "Title": "Big Lake Suite Granite probability at 6900m"
+                            "Title": "Big Lake Suite Granite probability at 6900m",
+                            "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                            "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                            "description": "NICTA Geothermal",
+                            "type": "WMS",
+                            "wfsAvailable": false,
+                            "queryable": 0
                         },
                         {
                             "BoundingBox": {
@@ -258,7 +276,13 @@
                                 "west": "139.8"
                             },
                             "Name": "MoombaPGranite8400m",
-                            "Title": "Big Lake Suite Granite probability at 8400m"
+                            "Title": "Big Lake Suite Granite probability at 8400m",
+                            "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                            "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                            "description": "NICTA Geothermal",
+                            "type": "WMS",
+                            "wfsAvailable": false,
+                            "queryable": 0
                         },
                         {
                             "BoundingBox": {
@@ -268,7 +292,13 @@
                                 "west": "141.8"
                             },
                             "Name": "PrettyHill2200m",
-                            "Title": "Pretty Hill Granite probability at 2200m"
+                            "Title": "Pretty Hill Granite probability at 2200m",
+                            "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                            "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                            "description": "NICTA Geothermal",
+                            "type": "WMS",
+                            "wfsAvailable": false,
+                            "queryable": 0
                         },
                         {
                             "BoundingBox": {
@@ -278,7 +308,13 @@
                                 "west": "141.8"
                             },
                             "Name": "PrettyHill2800m",
-                            "Title": "Pretty Hill Granite probability at 2800m"
+                            "Title": "Pretty Hill Granite probability at 2800m",
+                            "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                            "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                            "description": "NICTA Geothermal",
+                            "type": "WMS",
+                            "wfsAvailable": false,
+                            "queryable": 0
                         },
                         {
                             "BoundingBox": {
@@ -288,7 +324,13 @@
                                 "west": "141.8"
                             },
                             "Name": "PrettyHill3300m",
-                            "Title": "Pretty Hill Granite probability at 3300m"
+                            "Title": "Pretty Hill Granite probability at 3300m",
+                            "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                            "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                            "description": "NICTA Geothermal",
+                            "type": "WMS",
+                            "wfsAvailable": false,
+                            "queryable": 0
                         },
                         {
                             "BoundingBox": {
@@ -298,7 +340,13 @@
                                 "west": "141.8"
                             },
                             "Name": "PrettyHill3800m",
-                            "Title": "Pretty Hill Granite probability at 3800m"
+                            "Title": "Pretty Hill Granite probability at 3800m",
+                            "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                            "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                            "description": "NICTA Geothermal",
+                            "type": "WMS",
+                            "wfsAvailable": false,
+                            "queryable": 0
                         },
                         {
                             "BoundingBox": {
@@ -427,7 +475,7 @@
                                 "south": "-43.74050960205765",
                                 "north": "-9.142175976703609"
                             },
-                            "queryable": "1"
+                            "queryable": 1
                         },
                         {
                             "Name": "admin_bnds:LGA_2011_AUST",
@@ -443,7 +491,7 @@
                                 "south": "-43.74050957905761",
                                 "north": "-9.142175969703604"
                             },
-                            "queryable": "1"
+                            "queryable": 1
                         },
                         {
                             "Name": "admin_bnds:POA_2011_AUST",
@@ -459,7 +507,7 @@
                                 "south": "-43.59821500205783",
                                 "north": "-9.142175976703609"
                             },
-                            "queryable": "1"
+                            "queryable": 1
                         },
                         {
                             "Name": "admin_bnds:CED_2011_AUST",
@@ -475,7 +523,7 @@
                                 "south": "-43.740509602057614",
                                 "north": "-9.142175976703609"
                             },
-                            "queryable": "1"
+                            "queryable": 1
                         },
                         {
                             "Name": "admin_bnds:SED_2011_AUST",
@@ -491,7 +539,7 @@
                                 "south": "-43.740509602057614",
                                 "north": "-9.142175976703609"
                             },
-                            "queryable": "1"
+                            "queryable": 1
                         },
                         {
                             "Name": "admin_bnds:SSC_2011_AUST",
@@ -507,7 +555,7 @@
                                 "south": "-43.740509602057614",
                                 "north": "-9.142175976703609"
                             },
-                            "queryable": "1"
+                            "queryable": 1
                         },
                         {
                             "Name": "admin_bnds:ADD_2011_AUST",
@@ -523,7 +571,7 @@
                                 "south": "-43.740509602057614",
                                 "north": "-9.142175976703609"
                             },
-                            "queryable": "1"
+                            "queryable": 1
                         },
                         {
                             "Name": "admin_bnds:NRMR_2011_AUST",
@@ -539,17 +587,12 @@
                                 "south": "-43.740509602057614",
                                 "north": "-9.142175976703609"
                             },
-                            "queryable": "1"
+                            "queryable": 1
                         }
                     ]
                 },
                 {
                     "name": "Elevation",
-                    "type": "WMS",
-                    "queryable": 0,
-                    "wfsAvailable": true,
-                    "description": "[Licence](http://www.ga.gov.au/copyright)",
-                    "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                     "Layer": [
                         {
                             "BoundingBox": {
@@ -561,7 +604,11 @@
                             "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                             "queryable": 1,
                             "Name": "slope-green-red-0-5-discrete",
-                            "Title": "Land slope of Australia, 0-5%"
+                            "Title": "Land slope of Australia, 0-5%",
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "benchmarks",
@@ -573,7 +620,11 @@
                                 "south": "-38.647199999079525",
                                 "north": "-12.41999999960316"
                             },
-                            "queryable": 1
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "contours",
@@ -585,7 +636,11 @@
                                 "south": "-43.74297999905761",
                                 "north": "-8.93332999971015"
                             },
-                            "queryable": 1
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "horizontalcontrolpoints",
@@ -597,7 +652,11 @@
                                 "south": "-43.51730999905795",
                                 "north": "-10.462999999662589"
                             },
-                            "queryable": 1
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "spotelevations",
@@ -609,7 +668,11 @@
                                 "south": "-43.657359999057725",
                                 "north": "-9.004409999707923"
                             },
-                            "queryable": 1
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "0",
@@ -622,15 +685,16 @@
                                 "south": "-43.657359999057725",
                                 "north": "-9.004409999707923"
                             },
-                            "queryable": 1
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         }
                     ]
                 },
                 {
                     "name": "Society and Economy",
-                    "type": "WMS",
-                    "queryable": "0",
-                    "wfsAvailable": true,
                     "Layer": [
                         {
                             "Name": "7",
@@ -645,18 +709,13 @@
                                 "south": "-38.208809999082796",
                                 "north": "-11.05104999964455"
                             },
-                            "queryable": 1
+                            "queryable": 1,
+                            "type": "WMS"
                         }
                     ]
                 },
                 {
                     "name": "Infrastructure",
-                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
-                    "type": "WMS",
-                    "queryable": 0,
-                    "wfsAvailable": true,
-                    "description": "[Licence](http://www.ga.gov.au/copyright)",
-                    "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                     "Layer": [
                         {
                             "BoundingBox": {
@@ -668,7 +727,11 @@
                             "base_url": "http://www.ga.gov.au/gis/services/energy/ASEIS_Features/MapServer/WMSServer",
                             "queryable": 1,
                             "Name": "Distance To Translines 10km",
-                            "Title": "Distance to transmission lines"
+                            "Title": "Distance to transmission lines",
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "BoundingBox": {
@@ -680,7 +743,11 @@
                             "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                             "queryable": 1,
                             "Name": "NationalTransmissionSubstations",
-                            "Title": "Transmission Substations"
+                            "Title": "Transmission Substations",
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "BoundingBox": {
@@ -692,7 +759,11 @@
                             "base_url": "http://www.ga.gov.au/gis/services/energy/ASEIS_Features/MapServer/WMSServer",
                             "queryable": 1,
                             "Name": "Power Stations",
-                            "Title": "Power stations"
+                            "Title": "Power stations",
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "MyBroadband_Availability",
@@ -720,7 +791,12 @@
                                 "south": "-43.18769999905856",
                                 "north": "-10.571689999659238"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "fences",
@@ -731,7 +807,12 @@
                                 "south": "-35.37394999910903",
                                 "north": "-10.895739999649303"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "marineinfrastructurelines",
@@ -742,7 +823,12 @@
                                 "south": "-43.16099999905862",
                                 "north": "-9.062449999706104"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "marineinfrastructurepoints",
@@ -753,7 +839,12 @@
                                 "south": "-43.657359999057725",
                                 "north": "-9.140769999703654"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "mineareas",
@@ -764,7 +855,12 @@
                                 "south": "-43.43038999905809",
                                 "north": "-11.872959999619598"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "verticalobstructions",
@@ -775,18 +871,17 @@
                                 "south": "-43.37782999905819",
                                 "north": "-9.080289999705544"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         }
                     ]
                 },
                 {
                     "name": "Transport",
-                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
-                    "type": "WMS",
-                    "queryable": 0,
-                    "wfsAvailable": true,
-                    "description": "[Licence](http://www.ga.gov.au/copyright)",
-                    "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                     "Layer": [
                         {
                             "Name": "aircraftfacilitypoints",
@@ -797,7 +892,12 @@
                                 "south": "-43.651859999057734",
                                 "north": "-9.088949999705271"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "ferryroutelines",
@@ -808,7 +908,12 @@
                                 "south": "-43.14290999905865",
                                 "north": "-10.584439999658853"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "railwaybridgepoints",
@@ -819,7 +924,12 @@
                                 "south": "-38.58041999908001",
                                 "north": "-16.387539999488673"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "railwaycrossinglines",
@@ -830,7 +940,12 @@
                                 "south": "-42.75558999905954",
                                 "north": "-12.482379999601294"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "railways",
@@ -841,7 +956,12 @@
                                 "south": "-43.45491999905806",
                                 "north": "-12.435059999602709"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "railwaystoppoints",
@@ -852,7 +972,12 @@
                                 "south": "-42.87814999905925",
                                 "north": "-12.4720799996016"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "railwaytunnellines",
@@ -863,7 +988,12 @@
                                 "south": "-42.48963999906026",
                                 "north": "-16.861979999475594"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "roads",
@@ -874,18 +1004,17 @@
                                 "south": "-43.58748999905784",
                                 "north": "-8.93332999971015"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         }
                     ]
                 },
                 {
                     "name": "Utility",
-                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
-                    "type": "WMS",
-                    "queryable": 0,
-                    "wfsAvailable": true,
-                    "description": "[Licence](http://www.ga.gov.au/copyright)",
-                    "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                     "Layer": [
                         {
                             "Name": "pipelines",
@@ -896,18 +1025,17 @@
                                 "south": "-43.00307999905895",
                                 "north": "-10.903989999649047"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         }
                     ]
                 },
                 {
                     "name": "Vegetation",
-                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
-                    "type": "WMS",
-                    "queryable": 0,
-                    "wfsAvailable": true,
-                    "description": "[Licence](http://www.ga.gov.au/copyright)",
-                    "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                     "Layer": [
                         {
                             "Name": "cultivatedareas",
@@ -918,7 +1046,12 @@
                                 "south": "-43.44901999905807",
                                 "north": "-9.04530999970664"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "nativevegetationareas",
@@ -929,18 +1062,17 @@
                                 "south": "-43.658549999057726",
                                 "north": "-8.93332999971015"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         }
                     ]
                 },
                 {
                     "name": "Water (Surface)",
-                    "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
-                    "type": "WMS",
-                    "queryable": 0,
-                    "wfsAvailable": true,
-                    "description": "[Licence](http://www.ga.gov.au/copyright)",
-                    "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                     "Layer": [
                         {
                             "BoundingBox": {
@@ -952,7 +1084,11 @@
                             "base_url": "http://www.ga.gov.au/gis/services/hazards/NFRIPCatchments/MapServer/WMSServer",
                             "queryable": 1,
                             "Name": "RiverRegions",
-                            "Title": "River regions"
+                            "Title": "River regions",
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "AHGFEstuary",
@@ -966,7 +1102,11 @@
                                 "south": "-43.59020860705779",
                                 "north": "-10.835983610651068"
                             },
-                            "queryable": 1
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "flats",
@@ -977,7 +1117,12 @@
                                 "south": "-43.60604999905781",
                                 "north": "-8.93332999971015"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "foreshoreflats",
@@ -988,7 +1133,12 @@
                                 "south": "-43.511829999057966",
                                 "north": "-9.007109999707835"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "lakes",
@@ -999,7 +1149,12 @@
                                 "south": "-43.55222999905789",
                                 "north": "-8.93787999971001"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "marinehazardareas",
@@ -1010,7 +1165,12 @@
                                 "south": "-43.5473099990579",
                                 "north": "-8.998569999708106"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "marinehazardpoints",
@@ -1021,7 +1181,12 @@
                                 "south": "-43.66633999905772",
                                 "north": "-9.063349999706077"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "reservoirs",
@@ -1032,7 +1197,12 @@
                                 "south": "-43.19763999905853",
                                 "north": "-10.571689999659238"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "AHGFMappedStream",
@@ -1046,7 +1216,9 @@
                                 "south": "-43.629381999057735",
                                 "north": "-9.242297499700408"
                             },
-                            "queryable": 1
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true
                         },
                         {
                             "Name": "AHGFWaterbody",
@@ -1060,7 +1232,9 @@
                                 "south": "-43.00307999905891",
                                 "north": "-10.903989999649017"
                             },
-                            "queryable": 1
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true
                         },
                         {
                             "Name": "watercourseareas",
@@ -1071,7 +1245,12 @@
                                 "south": "-43.58998999905784",
                                 "north": "-8.93332999971015"
                             },
-                            "queryable": 1
+                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
                             "Name": "AHGFContractedCatchment",
@@ -1091,12 +1270,6 @@
                 },
                 {
                     "name": "Water (Ground)",
-                    "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                    "type": "WMS",
-                    "queryable": 0,
-                    "wfsAvailable": true,
-                    "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
-                    "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
                     "Layer": [
                         {
                             "Name": "AHGFWaterTableAquifer",
@@ -1108,7 +1281,12 @@
                                 "south": "-43.65854999905766",
                                 "north": "-9.219939999701113"
                             },
-                            "queryable": 1
+                            "queryable": 1,
+                            "base_url": "http://geofabric.bom.gov.au/simplefeatures/ows",
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
+                            "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)"
                         }
                     ]
                 }
