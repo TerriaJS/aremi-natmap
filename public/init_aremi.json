@@ -395,7 +395,7 @@
                             "wfsAvailable": true,
                             "queryable": 1,
                             "Name": "Exclusion Blob",
-                            "Title": "Military exclusion areas"
+                            "Title": "Development exclusion areas"
                         },
                         {
                             "BoundingBox": {
