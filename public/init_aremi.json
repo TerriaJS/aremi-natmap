@@ -601,12 +601,11 @@
                                 "south": "-44.0",
                                 "west": "100.0"
                             },
-                            "base_url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
-                            "queryable": 1,
-                            "Name": "slope-green-red-0-5-discrete",
-                            "Title": "Land slope of Australia, 0-5%",
+                            "base_url": "http://www.ga.gov.au/gisimg/services/topography/dem_s_slopepct/ImageServer/WMSServer",
+                            "queryable": 0,
+                            "Name": "0",
+                            "Title": "Land slope in percent",
                             "type": "WMS",
-                            "wfsAvailable": true,
                             "description": "[Licence](http://www.ga.gov.au/copyright)",
                             "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
