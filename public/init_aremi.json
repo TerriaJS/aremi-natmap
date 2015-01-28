@@ -1049,7 +1049,7 @@
                     ]
                 },
                 {
-                    "name": "Vegetation",
+                    "name": "Land",
                     "Layer": [
                         {
                             "Name": "cultivatedareas",
@@ -1077,6 +1077,22 @@
                                 "north": "-8.93332999971015"
                             },
                             "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "queryable": 1,
+                            "type": "WMS",
+                            "wfsAvailable": true,
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
+                        },
+                        {
+                            "Name": "AUS_GA_2500k_GUPoly_Lithology",
+                            "Title": "Geological lithology",
+                            "BoundingBox": {
+                                "west": "112.93226",
+                                "east": "153.63769",
+                                "south": "-43.658549999057726",
+                                "north": "-8.93332999971015"
+                            },
+                            "base_url": "http://www.ga.gov.au/gis/services/earth_science/GA_Surface_Geology_of_Australia/MapServer/WMSServer",
                             "queryable": 1,
                             "type": "WMS",
                             "wfsAvailable": true,
