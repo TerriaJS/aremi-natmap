@@ -611,6 +611,21 @@
                             "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
+                            "Name": "0",
+                            "Title": "Aspect",
+                            "base_url": "http://www.ga.gov.au/gisimg/services/topography/dem_s_aspect/ImageServer/WMSServer",
+                            "BoundingBox": {
+                                "west": "113.50982",
+                                "east": "149.92117",
+                                "south": "-38.647199999079525",
+                                "north": "-12.41999999960316"
+                            },
+                            "queryable": 0,
+                            "type": "WMS",
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
+                        },
+                        {
                             "Name": "benchmarks",
                             "Title": "Benchmarks",
                             "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
