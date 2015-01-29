@@ -1010,7 +1010,7 @@
                             "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         },
                         {
-                            "Name": "roads",
+                            "Name": "TOPO250K_Roads,Roads_1,Roads_2,Roads_3,Roads_4,TOPO250K_Road_Crossings",
                             "Title": "Roads",
                             "BoundingBox": {
                                 "west": "112.93174000000002",
@@ -1018,7 +1018,7 @@
                                 "south": "-43.58748999905784",
                                 "north": "-8.93332999971015"
                             },
-                            "base_url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+                            "base_url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography_2014/MapServer/WMSServer",
                             "queryable": 1,
                             "type": "WMS",
                             "wfsAvailable": true,
