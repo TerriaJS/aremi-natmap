@@ -725,6 +725,21 @@
                             },
                             "queryable": 1,
                             "type": "WMS"
+                        },
+                        {
+                            "Name": "0,1,2,3,4",
+                            "Title": "Population Density",
+                            "BoundingBox": {
+                                "west": "113.62627",
+                                "east": "153.61314",
+                                "south": "-43.45491999905806",
+                                "north": "-12.435059999602709"
+                            },
+                            "base_url": "http://www.ga.gov.au/gis/services/hazards/NEXIS_National_Exposure_Information_System_Population_Density_Exposure/MapServer/WMSServer",
+                            "queryable": 0,
+                            "type": "WMS",
+                            "description": "[Licence](http://www.ga.gov.au/copyright)",
+                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)"
                         }
                     ]
                 },
