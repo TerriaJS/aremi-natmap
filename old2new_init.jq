@@ -32,7 +32,7 @@
 
               type: (if .type == "WMS" then
                 "wms"
-              end
+              else
                 .type
               end),
 
