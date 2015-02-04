@@ -7,6 +7,18 @@
 #
 
 {
+  corsDomains : [
+      "data.gov.au",
+      "ga.gov.au",
+      "corsproxy.com",
+      "programs.communications.gov.au"
+  ],
+  camera: {
+      "west": 105,
+      "south": -45,
+      "east": 155,
+      "north": -5
+  },
   services: [],
   catalog: [
 
@@ -27,6 +39,15 @@
               name: .Title,
               layers: .Name,
               description: .description,
+
+              # can't figure out a way of only printing legendUrl only when one
+              # is present, so we just grep out '"legendUrl": null,' in post
+              legendUrl: .legendUrl,
+              # this is what we want to do but isn't valid syntax
+              #(if (.legendUrl | length) > 0 then
+              #  legendUrl: .legendUrl,
+              #end)
+
               dataCustodian: .dataCustodian,
               url: .base_url,
 
