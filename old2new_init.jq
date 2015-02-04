@@ -5,6 +5,10 @@
 # It's a work in progress, and only really deals with the AREMI specific data,
 # but may be useful as a base for extension.
 #
+# To do the conversion, run something like the following command line:
+#
+# cat public/init_aremi.json | jq -f old2new_init.jq | grep -v '"legendUrl": null,' > output.json
+#
 
 {
   corsDomains : [
