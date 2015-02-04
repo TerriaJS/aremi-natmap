@@ -711,22 +711,6 @@
                     "name": "Society and Economy",
                     "Layer": [
                         {
-                            "Name": "7",
-                            "Title": "Population Estimates",
-                            "base_url": "http://www.ga.gov.au/gis/services/hazards/NEXIS_2012_WMS/MapServer/WMSServer",
-                            "wfsAvailable": false,
-                            "description": "[Licence](http://www.ga.gov.au/copyright)",
-                            "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-                            "BoundingBox": {
-                                "west": "112.93529999999998",
-                                "east": "152.06206",
-                                "south": "-38.208809999082796",
-                                "north": "-11.05104999964455"
-                            },
-                            "queryable": 1,
-                            "type": "WMS"
-                        },
-                        {
                             "Name": "0,1,2,3,4",
                             "Title": "Population Density",
                             "BoundingBox": {
