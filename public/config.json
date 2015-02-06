@@ -1,7 +1,6 @@
 { "proxyDomains" : [
-        "nicta.com.au",
-        "ga.gov.au",
-        "communications.gov.au"
+        "geofabric.bom.gov.au",
+        "nicta.com.au"
     ],
  "corsDomains" : [
         "data.gov.au",
