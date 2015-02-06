@@ -10,6 +10,7 @@ var browserify = require('browserify');
 var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var jsdoc = require('gulp-jsdoc');
+var less = require('gulp-less');
 var uglify = require('gulp-uglify');
 var jasmine = require('gulp-jasmine');
 var exec = require('child_process').exec;
@@ -23,7 +24,7 @@ var watchify = require('watchify');
 
 var appJSName = 'ausglobe.js';
 var specJSName = 'ausglobe-specs.js';
-var appEntryJSName = './src/viewer/main.js';
+var appEntryJSName = './src/main.js';
 var workerGlob = [
     './third_party/cesium/Source/Workers/*.js',
     '!./third_party/cesium/Source/Workers/*.profile.js',
@@ -31,7 +32,7 @@ var workerGlob = [
     '!./third_party/cesium/Source/Workers/transferTypedArrayTest.js',
     '!./third_party/cesium/Source/Workers/createTaskProcessorWorker.js'
 ];
-var specGlob = './spec/*.js';
+var specGlob = './spec/**/*.js';
 
 
 // Create the build directory, because browserify flips out if the directory that might
@@ -48,7 +49,15 @@ gulp.task('build-specs', ['prepare-cesium'], function() {
     return build(specJSName, glob.sync(specGlob), false);
 });
 
-gulp.task('build', ['build-app', 'build-specs']);
+gulp.task('build-css', function() {
+    return gulp.src('./src/main.less')
+        .pipe(less({
+
+        }))
+        .pipe(gulp.dest('./public/build'));
+});
+
+gulp.task('build', ['build-css', 'build-app', 'build-specs']);
 
 gulp.task('release-app', ['prepare-cesium'], function() {
     return build(appJSName, appEntryJSName, true);
@@ -58,7 +67,7 @@ gulp.task('release-specs', ['prepare-cesium'], function() {
     return build(specJSName, glob.sync(specGlob), true);
 });
 
-gulp.task('release', ['release-app', 'release-specs']);
+gulp.task('release', ['build-css', 'release-app', 'release-specs']);
 
 gulp.task('watch-app', ['prepare-cesium'], function() {
     return watch(appJSName, appEntryJSName, false);
@@ -68,17 +77,24 @@ gulp.task('watch-specs', ['prepare-cesium'], function() {
     return watch(specJSName, glob.sync(specGlob), false);
 });
 
-gulp.task('watch', ['watch-app', 'watch-specs']);
+gulp.task('watch-css', ['build-css'], function() {
+    return gulp.watch(['./src/main.less', './src/Styles/*.less'], ['build-css']);
+});
+
+gulp.task('watch', ['watch-app', 'watch-specs', 'watch-css']);
 
 gulp.task('lint', function(){
-    return gulp.src('src/**/*.js')
+    return gulp.src(['src/**/*.js', 'spec/**/*.js'])
         .pipe(jshint())
-        .pipe(jshint.reporter('default'));
+        .pipe(jshint.reporter('default'))
+        .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('docs', function(){
-    return gulp.src('src/*.js')
-        .pipe(jsdoc('./public/doc'));
+    return gulp.src('src/**/*.js')
+        .pipe(jsdoc('./public/doc', undefined, {
+            plugins : ['plugins/markdown']
+        }));
 });
 
 gulp.task('prepare-cesium', ['build-cesium', 'copy-cesium-assets', 'copy-cesiumWorkerBootstrapper']);
@@ -154,11 +170,11 @@ function bundle(name, bundler, minify, catchErrors) {
 }
 
 function build(name, files, minify) {
-    return bundle(name, browserify(files).transform('deamdify'), minify, false);
+    return bundle(name, browserify(files).transform('brfs').transform('deamdify'), minify, false);
 }
 
 function watch(name, files, minify) {
-    var bundler = watchify(files).transform('deamdify');
+    var bundler = watchify(files).transform('brfs').transform('deamdify');
 
     function rebundle() {
         var start = new Date();

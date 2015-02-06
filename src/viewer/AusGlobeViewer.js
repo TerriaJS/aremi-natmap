@@ -5,10 +5,9 @@
 
 "use strict";
 
-/*global require,L,URI,$,Document,html2canvas,alert,console*/
+/*global require,L,URI,$,Document,html2canvas,console,ga*/
+
 var BingMapsApi = require('../../third_party/cesium/Source/Core/BingMapsApi');
-var BingMapsImageryProvider = require('../../third_party/cesium/Source/Scene/BingMapsImageryProvider');
-var BingMapsStyle = require('../../third_party/cesium/Source/Scene/BingMapsStyle');
 var CameraFlightPath = require('../../third_party/cesium/Source/Scene/CameraFlightPath');
 var Cartesian2 = require('../../third_party/cesium/Source/Core/Cartesian2');
 var Cartesian3 = require('../../third_party/cesium/Source/Core/Cartesian3');
@@ -18,207 +17,71 @@ var CesiumTerrainProvider = require('../../third_party/cesium/Source/Core/Cesium
 var Clock = require('../../third_party/cesium/Source/Core/Clock');
 var ClockRange = require('../../third_party/cesium/Source/Core/ClockRange');
 var Color = require('../../third_party/cesium/Source/Core/Color');
-var combine = require('../../third_party/cesium/Source/Core/combine');
+var Clock = require('../../third_party/cesium/Source/Core/Clock');
 var Credit = require('../../third_party/cesium/Source/Core/Credit');
 var DataSourceDisplay = require('../../third_party/cesium/Source/DataSources/DataSourceDisplay');
-var DataSourceCollection = require('../../third_party/cesium/Source/DataSources/DataSourceCollection');
 var defaultValue = require('../../third_party/cesium/Source/Core/defaultValue');
 var defined = require('../../third_party/cesium/Source/Core/defined');
-var destroyObject = require('../../third_party/cesium/Source/Core/destroyObject');
 var Ellipsoid = require('../../third_party/cesium/Source/Core/Ellipsoid');
-var EllipsoidGeodesic = require('../../third_party/cesium/Source/Core/EllipsoidGeodesic');
 var EllipsoidTerrainProvider = require('../../third_party/cesium/Source/Core/EllipsoidTerrainProvider');
-var Entity = require('../../third_party/cesium/Source/DataSources/Entity');
 var FeatureDetection = require('../../third_party/cesium/Source/Core/FeatureDetection');
 var EventHelper = require('../../third_party/cesium/Source/Core/EventHelper');
-var GeographicProjection = require('../../third_party/cesium/Source/Core/GeographicProjection');
-var CesiumEvent = require('../../third_party/cesium/Source/Core/Event');
 var Rectangle = require('../../third_party/cesium/Source/Core/Rectangle');
-var Fullscreen = require('../../third_party/cesium/Source/Core/Fullscreen');
 var InfoBox = require('../../third_party/cesium/Source/Widgets/InfoBox/InfoBox');
-var Intersections2D = require('../../third_party/cesium/Source/Core/Intersections2D');
 var JulianDate = require('../../third_party/cesium/Source/Core/JulianDate');
 var KeyboardEventModifier = require('../../third_party/cesium/Source/Core/KeyboardEventModifier');
 var loadJson = require('../../third_party/cesium/Source/Core/loadJson');
-var loadText = require('../../third_party/cesium/Source/Core/loadText');
 var loadXML = require('../../third_party/cesium/Source/Core/loadXML');
 var Material = require('../../third_party/cesium/Source/Scene/Material');
 var Matrix3 = require('../../third_party/cesium/Source/Core/Matrix3');
 var Matrix4 = require('../../third_party/cesium/Source/Core/Matrix4');
-var PolylineCollection = require('../../third_party/cesium/Source/Scene/PolylineCollection');
 var Rectangle = require('../../third_party/cesium/Source/Core/Rectangle');
 var RectanglePrimitive = require('../../third_party/cesium/Source/Scene/RectanglePrimitive');
-var sampleTerrain = require('../../third_party/cesium/Source/Core/sampleTerrain');
-var SceneMode = require('../../third_party/cesium/Source/Scene/SceneMode');
 var ScreenSpaceEventHandler = require('../../third_party/cesium/Source/Core/ScreenSpaceEventHandler');
 var ScreenSpaceEventType = require('../../third_party/cesium/Source/Core/ScreenSpaceEventType');
+var SingleTileImageryProvider = require('../../third_party/cesium/Source/Scene/SingleTileImageryProvider');
 var Transforms = require('../../third_party/cesium/Source/Core/Transforms');
 var Tween = require('../../third_party/cesium/Source/ThirdParty/Tween');
 var Viewer = require('../../third_party/cesium/Source/Widgets/Viewer/Viewer');
-var viewerEntityMixin = require('../../third_party/cesium/Source/Widgets/Viewer/viewerEntityMixin');
-var WebMapServiceImageryProvider = require('../../third_party/cesium/Source/Scene/WebMapServiceImageryProvider');
 var WebMercatorProjection = require('../../third_party/cesium/Source/Core/WebMercatorProjection');
 var when = require('../../third_party/cesium/Source/ThirdParty/when');
 
 var Animation = require('../../third_party/cesium/Source/Widgets/Animation/Animation');
 var AnimationViewModel = require('../../third_party/cesium/Source/Widgets/Animation/AnimationViewModel');
 var Timeline = require('../../third_party/cesium/Source/Widgets/Timeline/Timeline');
-var subscribeAndEvaluate = require('../../third_party/cesium/Source/Widgets/subscribeAndEvaluate');
 var ClockViewModel = require('../../third_party/cesium/Source/Widgets/ClockViewModel');
-var FrameRateMonitor = require('../../third_party/cesium/Source/Scene/FrameRateMonitor');
-
 
 var knockout = require('../../third_party/cesium/Source/ThirdParty/knockout');
-var komapping = require('../../public/third_party/knockout.mapping');
-var knockoutES5 = require('../../third_party/cesium/Source/ThirdParty/knockout-es5');
 
-var corsProxy = require('../corsProxy');
-var GeoDataBrowser = require('./GeoDataBrowser');
-var readJson = require('../readJson');
-var NavigationWidget = require('./NavigationWidget');
-var PopupMessage = require('./PopupMessage');
-var SearchWidget = require('./SearchWidget');
-var ServicesPanel = require('./ServicesPanel');
-var SharePanel = require('./SharePanel');
-var TitleWidget = require('./TitleWidget');
+var FrameRateMonitor = require('../../third_party/cesium/Source/Scene/FrameRateMonitor');
+var runLater = require('../Core/runLater');
 
-var LeafletVisualizer = require('../LeafletVisualizer');
+var corsProxy = require('../Core/corsProxy');
+var Cesium = require('../Models/Cesium');
+var Leaflet = require('../Models/Leaflet');
+var PopupMessageViewModel = require('../ViewModels/PopupMessageViewModel');
+var rectangleToLatLngBounds = require('../Map/rectangleToLatLngBounds');
+var LeafletVisualizer = require('../Map/LeafletVisualizer');
+var ViewerMode = require('../Models/ViewerMode');
 
 //use our own bing maps key
 BingMapsApi.defaultKey = undefined;
 
 //Initialize the selected viewer - Cesium or Leaflet
-var AusGlobeViewer = function(geoDataManager) {
-
-    this.geoDataManager = geoDataManager;
-
+var AusGlobeViewer = function(application) {
     this._distanceLegendBarWidth = undefined;
     this._distanceLegendLabel = undefined;
 
     var that = this;
-
-    that.startup = true;
-    this.captureCanvas = function() { console.log('capture call unset'); };
-    this.captureCanvasCallback = function(dataUrl) { console.log('callback unset'); };
-
-    var titleWidget = new TitleWidget({
-        container : document.body,
-        menuItems : [
-            {
-                svg : {
-                    path : 'M 30.1,5.5 H 1.9 C 1.2376,5.5 0.7,6.0376 0.7,6.7 v 18.6 c 0,0.6624 0.5376,1.2 1.2,1.2 h 28.2 c 0.6624,0 1.2,-0.5376 1.2,-1.2 V 6.7 c 0,-0.6624 -0.537,-1.2 -1.2,-1.2 z m -12,18 c 0,0.6624 -0.5376,1.2 -1.2,1.2 H 3.7 c -0.6624,0 -1.2,-0.5376 -1.2,-1.2 v -7.2 c 0,-0.6624 0.5376,-1.2 1.2,-1.2 h 13.2 c 0.6624,0 1.2,0.5376 1.2,1.2 v 7.2 z',
-                    width : 32,
-                    height : 32
-                },
-                tooltip : 'Fullscreen',
-                callback : function() {
-                    if (Fullscreen.fullscreen) {
-                        Fullscreen.exitFullscreen();
-                    } else {
-                        Fullscreen.requestFullscreen(document.body);
-                    }
-                }
-            },
-            {  //This currently also houses print, but print could be moved here as well
-                svg : {
-                    path : 'm 22.6786,19.8535 c -0.8256,0 -1.5918,0.2514 -2.229,0.6822 l -7.1958,-4.1694 c 0.0198,-0.1638 0.0492,-0.3252 0.0492,-0.4944 0,-0.2934 -0.0366,-0.5778 -0.096,-0.8532 l 6.9978,-3.7554 c 0.6816,0.5442 1.5342,0.8844 2.4738,0.8844 2.199,0 3.9822,-1.7832 3.9822,-3.9822 0,-2.199 -1.7832,-3.9816 -3.9822,-3.9816 -2.199,0 -3.9816,1.7826 -3.9816,3.9816 0,0.1434 0.0276,0.279 0.042,0.4188 l -7.2198,3.9702 c -0.6306,-0.4182 -1.3854,-0.6648 -2.1978,-0.6648 -2.1996,0 -3.9822,1.7826 -3.9822,3.9822 0,2.1984 1.7826,3.9816 3.9822,3.9816 0.906,0 1.731,-0.3144 2.4,-0.8238 l 7.0398,4.1628 c -0.0342,0.2106 -0.0642,0.4224 -0.0642,0.642 0,2.199 1.7826,3.9816 3.9816,3.9816 2.199,0 3.9822,-1.7826 3.9822,-3.9816 -6e-4,-2.1984 -1.7832,-3.981 -3.9822,-3.981 z',
-                    width : 32,
-                    height : 32
-                },
-                tooltip : 'Share',
-                callback : function() {
-                    that.captureCanvasCallback = function (dataUrl) {
-                        that.geoDataManager.setShareRequest({
-                            image: dataUrl,
-                            camera: getCameraRect(that.scene, that.map)
-                        });
-                    };
-                    that.captureCanvas();
-                }
-            },
-            {
-                svg : {
-                    path : 'M26.33,15.836l-3.893-1.545l3.136-7.9c0.28-0.705-0.064-1.505-0.771-1.785c-0.707-0.28-1.506,0.065-1.785,0.771l-3.136,7.9l-4.88-1.937l3.135-7.9c0.281-0.706-0.064-1.506-0.77-1.786c-0.706-0.279-1.506,0.065-1.785,0.771l-3.136,7.9L8.554,8.781l-1.614,4.066l2.15,0.854l-2.537,6.391c-0.61,1.54,0.143,3.283,1.683,3.895l1.626,0.646L8.985,26.84c-0.407,1.025,0.095,2.188,1.122,2.596l0.93,0.369c1.026,0.408,2.188-0.095,2.596-1.121l0.877-2.207l1.858,0.737c1.54,0.611,3.284-0.142,3.896-1.682l2.535-6.391l1.918,0.761L26.33,15.836z',
-                    width : 32,
-                    height : 32
-                },
-                tooltip : 'Services',
-                callback : function() {
-                    that.captureCanvasCallback = function (dataUrl) {
-                        var request = that.geoDataManager.getShareRequest({
-                            image: dataUrl,
-                            camera: getCameraRect(that.scene, that.map)
-                        });
-                        var servicesPanel = new ServicesPanel({
-                            request : request,
-                            container : document.body,
-                            geoDataManager : that.geoDataManager
-                        });
-                    };
-                    that.captureCanvas();
-                }
-            },
-            {
-                svg : {
-                    path : 'M 16,5.0002 C 9.925,5.0002 5.0002,9.925 5.0002,16 5.0002,22.075 9.925,26.9998 16,26.9998 22.075,26.9998 26.9998,22.075 26.9998,16 26.9998,9.9256 22.075,5.0002 16,5.0002 z m 1.7994,17.2002 h -3 v -7.8 h 3 v 7.8 z m -1.5996,-9.8496 c -0.897,0 -1.6248,-0.7272 -1.6248,-1.6248 0,-0.8976 0.7278,-1.6248 1.6248,-1.6248 0.8976,0 1.6254,0.7272 1.6254,1.6248 0,0.8976 -0.7278,1.6248 -1.6254,1.6248 z',
-                    width : 32,
-                    height : 32
-                },
-                tooltip : 'About National Map',
-                uri : 'http://nicta.github.io/nationalmap/public/info.html',
-                target : '_blank'
-            },
-            {
-                svg : {
-                    path : 'M 16,5.0002 C 9.925,5.0002 5.0002,9.925 5.0002,16 5.0002,22.075 9.925,26.9998 16,26.9998 22.075,26.9998 26.9998,22.075 26.9998,16 26.9998,9.9256 22.075,5.0002 16,5.0002 z m 0.1572,17.0004 c -0.7452,0 -1.35,-0.6042 -1.35,-1.35 0,-0.7458 0.6048,-1.35 1.35,-1.35 0.7458,0 1.3506,0.6042 1.3506,1.35 0,0.7458 -0.6048,1.35 -1.3506,1.35 z m 3.486,-7.4106 c -0.1302,0.3228 -0.291,0.5982 -0.4836,0.8268 -0.1926,0.2292 -0.4056,0.4242 -0.6396,0.585 -0.234,0.1614 -0.4548,0.3228 -0.6624,0.4836 -0.2088,0.1614 -0.4758,0.3456 -0.6372,0.5538 -0.162,0.2082 -0.3876,0.468 -0.3876,0.78 v 0.7812 h -1.8 V 17.71 c 0,-0.447 0.048,-0.8214 0.1872,-1.1232 0.1404,-0.3012 0.27,-0.5592 0.4572,-0.7722 0.1872,-0.213 0.3678,-0.3978 0.576,-0.5538 0.2082,-0.156 0.3912,-0.312 0.5682,-0.468 0.177,-0.156 0.315,-0.3276 0.4242,-0.5148 0.1092,-0.1872 0.1566,-0.4212 0.1464,-0.702 0,-0.4782 -0.1182,-0.8322 -0.3522,-1.0608 -0.234,-0.2286 -0.5598,-0.3432 -0.9756,-0.3432 -0.2808,0 -0.5232,0.0546 -0.726,0.1638 -0.2028,0.1092 -0.369,0.255 -0.4992,0.4368 -0.1302,0.1818 -0.2262,0.4956 -0.2886,0.7398 -0.0624,0.2442 -0.093,0.288 -0.093,0.888 h -2.2932 c 0.0102,-0.6 0.1068,-1.1766 0.2886,-1.6446 0.1818,-0.468 0.4368,-0.9234 0.7638,-1.2666 0.3276,-0.3432 0.723,-0.636 1.1862,-0.8286 0.4626,-0.192 0.9798,-0.3006 1.5522,-0.3006 0.738,0 1.3542,0.0948 1.8486,0.2976 0.4932,0.2028 0.891,0.4518 1.1928,0.7536 0.3018,0.3018 0.5172,0.6252 0.6474,0.9732 0.1302,0.348 0.195,0.6726 0.195,0.9744 -6e-4,0.4992 -0.0654,0.909 -0.1956,1.2312 z',
-                    width : 32,
-                    height : 32
-                },
-                tooltip : 'Help',
-                uri : 'http://nicta.github.io/nationalmap/public/faq.html',
-                target : '_blank'
-            }
-        ]
-    });
-
-    this._titleWidget = titleWidget;
-
-    this._navigationWidget = new NavigationWidget(this, document.body);
-
-    this._searchWidget = new SearchWidget({
-        container : document.body,
-        viewer : this
-    });
-
-    var leftArea = document.createElement('div');
-    leftArea.className = 'ausglobe-left-area';
-    document.body.appendChild(leftArea);
-
+    
     var url = window.location;
     var uri = new URI(url);
     var params = uri.search(true);
 
-    this.webGlSupported = (params.map === '2d') ? false : true;
-
-    var noWebGLMessage;
-
-    if (FeatureDetection.isInternetExplorer() && FeatureDetection.internetExplorerVersion()[0] < 9) {
-        noWebGLMessage = new PopupMessage({
-            container : document.body,
-            title : 'Unsupported browser version detected',
-            message : '\
-The National Map is not designed to work on versions of Internet Explorer older than 9.0. \
-We suggest you upgrade to the latest version of Google Chrome, Microsoft IE11 or Mozilla Firefox. \
-Running on your current browser will probably suffer from limited functionality, poor appearance, \
-and stability issues.'
-        });
-        this.webGlSupported = false;
-    }
-
-    //catch problems
-    if (this.webGlSupported && !supportsWebgl()) {
-        noWebGLMessage = new PopupMessage({
-            container : document.body,
+    var useCesium = (application.userProperties.map === '2d' || params.map === '2d') ? false : true;
+    
+    if (useCesium && !supportsWebgl()) {
+        PopupMessageViewModel.open('ui', {
             title : 'WebGL not supported',
             message : '\
 National Map works best with a web browser that supports <a href="http://get.webgl.com" target="_blank">WebGL</a>, \
@@ -228,12 +91,11 @@ including the latest versions of <a href="http://www.google.com/chrome" target="
 <a href="http://www.microsoft.com/ie" target="_blank">Microsoft Internet Explorer</a>. \
 Your web browser does not appear to support WebGL, so you will see a limited, 2D-only experience.'
         });
-        this.webGlSupported = false;
+        useCesium = false;
     }
 
     if (document.body.clientWidth < 520 || document.body.clientHeight < 400) {
-        var smallScreenMessage = new PopupMessage({
-            container : document.body,
+        PopupMessageViewModel.open('ui', {
             title : 'Small screen or window',
             message : '\
 Hello!<br/>\
@@ -245,103 +107,114 @@ If you\'re on a desktop or laptop, consider increasing the size of your window.'
         });
     }
 
-    // IE versions prior to 10 don't support CORS, so always use the proxy.
-    this._alwaysUseProxy = (FeatureDetection.isInternetExplorer() && FeatureDetection.internetExplorerVersion()[0] < 10);
-
+    application.viewerMode = useCesium ? ViewerMode.CesiumTerrain : ViewerMode.Leaflet;
+    
     //TODO: perf test to set environment
-
-    // Event watchers for geoDataManager
-    this.geoDataManager.GeoDataAdded.addEventListener(function(collection, layer) {
-        console.log('Vis Layer Added:', layer.name);
-        layer.zoomTo = collection.zoomTo;
-        that.setCurrentDataset(layer);
-        collection.zoomTo = false;
-    });
-
-    this.geoDataManager.GeoDataRemoved.addEventListener(function(collection, layer) {
-        console.log('Vis Layer Removed:', layer.name);
-        that.setCurrentDataset(undefined);
-    });
-
-    this.geoDataManager.ViewerChanged.addEventListener(function(collection, obj) {
-        console.log('Viewer Changed:', (obj.scene?'Cesium':'Leaflet'));
-        that.scene = obj.scene;
-        that.map = obj.map;
-    });
-
-    this.geoDataManager.ShareRequest.addEventListener(function(collection, request) {
-        console.log('Share Request Event:');
-        var sharePanel = new SharePanel({
-            request : request,
-            container : document.body,
-            geoDataManager : that.geoDataManager
-        });
-    });
 
     this.scene = undefined;
     this.viewer = undefined;
     this.map = undefined;
 
-    var configUrl = params.config || 'config.json';
+    this.application = application;
 
-    //get the server config to know how to handle urls and load initial one
-    loadJson(configUrl).then( function(config) {
-        var proxyDomains = config.proxyDomains;
-        var corsDomains = config.corsDomains;
-        //workaround for non-CORS browsers (i.e. IE9)
-        corsProxy.setProxyList(config.proxyDomains, config.corsDomains, that._alwaysUseProxy);
+    ga('send', 'event', 'startup', 'initialViewer', useCesium ? 'cesium' : 'leaflet');
 
-        that.initialCamera = config.initialCamera;
+    this.selectViewer(useCesium);
 
-        when.all([loadText('test/ckan_whitelist.txt'), loadText('test/ckan_blacklist.txt')], function(lists) {
-            var whitelist = lists[0];
-            var blacklist = lists[1];
+    knockout.getObservable(this.application, 'viewerMode').subscribe(function() {
+        changeViewer(this);
+    }, this);
 
-            that.ckanWhitelist = whitelist.match(/[^\r\n]+/g);
-            if (!that.ckanWhitelist || that.ckanWhitelist.length === 0) {
-                that.ckanWhitelist = undefined;
-            }
+    this._previousBaseMap = this.application.baseMap;
 
-            that.ckanBlacklist = blacklist.match(/[^\r\n]+/g);
-            if (!that.ckanBlacklist || that.ckanBlacklist.length === 0) {
-                that.ckanBlacklist = undefined;
-            }
+    knockout.getObservable(this.application, 'baseMap').subscribe(function() {
+        changeBaseMap(this, this.application.baseMap);
+    }, this);
 
-            that.geoDataBrowser = new GeoDataBrowser({
-                viewer : that,
-                container : leftArea,
-                dataManager : geoDataManager,
-                initUrl: params.data_menu || config.initialDataMenu || 'init_aremi.json',
-                mode3d: that.webGlSupported
-            });
-
-            that.selectViewer(that.webGlSupported);
-
-            // simple way to capture most ux redraw needs - catch all canvas clicks
-            $(document).click(function() {
-                if (that.frameChecker !== undefined) {
-                    that.frameChecker.forceFrameUpdate();
-                }
-            });
-
-            that.geoDataManager.loadInitialUrl(url, that.ckanWhitelist, that.ckanBlacklist);
-        });
+    knockout.getObservable(this.application, 'initialBoundingBox').subscribe(function() {
+        that.updateCameraFromRect(that.application.initialBoundingBox, 2000);
     });
-
-    //TODO: should turn this off based on event from loadUrl
-    $('#loadingIndicator').hide();
 };
 
+AusGlobeViewer.create = function(application) {
+    return new AusGlobeViewer(application);
+};
+
+function changeViewer(viewer) {
+    var application = viewer.application;
+    var newMode = application.viewerMode;
+
+    if (newMode === ViewerMode.Leaflet) {
+        if (!application.leaflet) {
+            ga('send', 'event', 'mapSettings', 'switchViewer', '2D');
+            viewer.selectViewer(false);
+        }
+    } else {
+        if (!supportsWebgl()) {
+            PopupMessageViewModel.open('ui', {
+                title : 'WebGL not supported',
+                message : '\
+Your web browser cannot display the map in 3D because it does not support WebGL.  Please upgrade to the \
+latest version of <a href="http://www.google.com/chrome" target="_blank">Google Chrome</a>, \
+<a href="http://www.mozilla.org/firefox" target="_blank">Mozilla Firefox</a>, \
+<a href="https://www.apple.com/au/osx/how-to-upgrade/" target="_blank">Apple Safari</a>, or \
+<a href="http://www.microsoft.com/ie" target="_blank">Microsoft Internet Explorer</a>.'
+            });
+
+            application.viewerMode = ViewerMode.Leaflet;
+        } else {
+            if (newMode === ViewerMode.CesiumTerrain) {
+                ga('send', 'event', 'mapSettings', 'switchViewer', '3D');
+
+                if (defined(application.leaflet)) {
+                    viewer.selectViewer(true);
+                } else {
+                    application.cesium.scene.globe.terrainProvider = new CesiumTerrainProvider({
+                        url : '//cesiumjs.org/stk-terrain/tilesets/world/tiles'
+                    });
+                }
+            } else if (newMode === ViewerMode.CesiumEllipsoid) {
+                ga('send', 'event', 'mapSettings', 'switchViewer', 'Smooth 3D');
+
+                if (defined(application.leaflet)) {
+                    viewer.selectViewer(true);
+                }
+
+                application.cesium.scene.globe.terrainProvider = new EllipsoidTerrainProvider();
+            }
+        }
+    }
+}
+
+function changeBaseMap(viewer, newBaseMap) {
+    if (defined(viewer._previousBaseMap)) {
+        viewer._previousBaseMap._hide();
+        viewer._previousBaseMap._disable();
+    }
+
+    if (defined(newBaseMap)) {
+        newBaseMap._enable();
+        newBaseMap._show();
+        newBaseMap.lowerToBottom();
+    }
+
+    viewer._previousBaseMap = newBaseMap;
+
+    if (defined(viewer.application.currentViewer)) {
+        viewer.application.currentViewer.notifyRepaintRequired();
+    }
+}
+
 // -------------------------------------------
-// PERF: skip frames where reasonable - global vars for now
+// PERF: skip frames where reasonable
 // -------------------------------------------
 var FrameChecker = function () {
     this._lastDate = new JulianDate(0, 0.0);
     this._lastCam = new Matrix4();
     this._maxFPS = 40.0;
     this._skipCnt = 0;
-    this._skipCntLim = 10.0; //start skip after 10 seconds
-    this._skipCntMax = 15.0; //redraw every few seconds regardless
+    this._skipWaitNorm = 3.0; //start skip after launch
+    this._skipWaitLim = 10.0; //start skip at launch
 };
 
 // call to force draw - usually after long downloads/processes
@@ -363,12 +236,16 @@ FrameChecker.prototype.skipFrame = function(scene, date) {
         }
     }
 
-    if (this._skipCnt > (this._maxFPS * this._skipCntLim)) {
-        this._skipCntLim = 5.0; //then skip after every 5 seconds
-        if (this._skipCnt < (this._maxFPS * this._skipCntMax)) {
-            return true;
-        }
-        this._skipCnt = (this._maxFPS * this._skipCntLim);
+    // If terrain/imagery is loading, force another render immediately so that the loading
+    // happens as quickly as possible.
+    var surface = scene.globe._surface;
+    if (surface._tileLoadQueue.length > 0 || surface._debug.tilesWaitingForChildren > 0) {
+        this._skipCnt = 0;
+    }
+
+    if (this._skipCnt > (this._maxFPS * this._skipWaitLim)) {
+        this._skipWaitLim = this._skipWaitNorm; //go to normal skip wait
+        return true;
     }
 
     this._lastDate = date.clone(this._lastDate);
@@ -384,7 +261,7 @@ var DrawExtentHelper = function (scene, handler) {
     this._scene = scene;
     this._ellipsoid = scene.globe.ellipsoid;
     this._finishHandler = handler;
-    this._mouseHandler = new ScreenSpaceEventHandler(scene.canvas);
+    this._mouseHandler = new ScreenSpaceEventHandler(scene.canvas, false);
     this.active = false;
 };
 
@@ -520,12 +397,18 @@ AusGlobeViewer.prototype._enableSelectExtent = function(bActive) {
     }
 };
 
-AusGlobeViewer.prototype._cesiumViewerActive = function() { return (this.viewer !== undefined); };
 
 AusGlobeViewer.prototype._createCesiumViewer = function(container) {
 
+    var that = this;
+    
+    var terrainProvider = new CesiumTerrainProvider({
+            url : '//cesiumjs.org/stk-terrain/tilesets/world/tiles'
+        });
+
     var options = {
-        dataSources : this.geoDataManager.dataSourceCollection,
+        dataSources: this.application.dataSources,
+        clock: this.application.clock,
         homeButton: false,
         sceneModePicker: false,
         navigationInstructionsInitiallyVisible: false,
@@ -533,15 +416,9 @@ AusGlobeViewer.prototype._createCesiumViewer = function(container) {
         baseLayerPicker: false,
         navigationHelpButton: false,
         fullscreenButton : false,
-        imageryProvider : new BingMapsImageryProvider({
-            url : '//dev.virtualearth.net',
-            mapStyle : BingMapsStyle.AERIAL_WITH_LABELS
-        }),
-        terrainProvider : new CesiumTerrainProvider({
-            url : '//cesiumjs.org/stk-terrain/tilesets/world/tiles'
-        }),
-        timeControlsInitiallyVisible : false,
-        targetFrameRate : 40
+        terrainProvider : terrainProvider,
+        imageryProvider : new SingleTileImageryProvider({ url: 'images/nicta.png' }),
+        timeControlsInitiallyVisible : false
     };
 
     // Workaround for Firefox bug with WebGL and printing:
@@ -552,7 +429,31 @@ AusGlobeViewer.prototype._createCesiumViewer = function(container) {
 
      //create CesiumViewer
     var viewer = new Viewer(container, options);
-    viewer.extend(viewerEntityMixin);
+
+    viewer.scene.imageryLayers.removeAll();
+
+    viewer.clock.shouldAnimate = false;
+
+    //catch Cesium terrain provider down and switch to Ellipsoid
+    terrainProvider.errorEvent.addEventListener(function(err) {
+        console.log('Terrain provider error.  ', err.message);
+        if (viewer.scene.terrainProvider instanceof CesiumTerrainProvider) {
+            console.log('Switching to EllipsoidTerrainProvider.');
+            viewer.scene.terrainProvider = new EllipsoidTerrainProvider();
+            if (!defined(that.TerrainMessageViewed)) {
+                PopupMessageViewModel.open('ui', {
+                    title : 'Terrain Server Not Responding',
+                    message : '\
+The terrain server is not responding at the moment.  You can still use all the features of National \
+Map but there will be no terrain detail in 3D mode.  We\'re sorry for the inconvenience.  Please try \
+again later and the terrain server should be responding as expected.  If the issue persists, please contact \
+us via email at nationalmap@lists.nicta.com.au.'
+                });
+                that.TerrainMessageViewed = true;
+            }
+        }
+    });
+
 
     var lastHeight = 0;
     viewer.scene.preRender.addEventListener(function(scene, time) {
@@ -567,31 +468,12 @@ AusGlobeViewer.prototype._createCesiumViewer = function(container) {
 
 
     var scene = viewer.scene;
-    var canvas = scene.canvas;
     var globe = scene.globe;
-    var ellipsoid = globe.ellipsoid;
-    var camera = scene.camera;
 
     globe.depthTestAgainstTerrain = false;
 
     scene.frameState.creditDisplay.addDefaultCredit(new Credit('CESIUM', undefined, 'http://cesiumjs.org/'));
     scene.frameState.creditDisplay.addDefaultCredit(new Credit('BING', undefined, 'http://www.bing.com/'));
-
-    //TODO: set based on platform
-//        globe.tileCacheSize *= 2;
-/*
-    var monitor = new FrameRateMonitor.fromScene(scene);
-    monitor.minimumFrameRateAfterWarmup = 100;
-    monitor.minimumFrameRateDuringWarmup = 100;
-    monitor.warmupPeriod = 1;
-    monitor.samplingWindow = 1;
-    monitor.quietPeriod = 1;
-    viewer._unsubscribeLowFrameRate = monitor.lowFrameRate.addEventListener(function() {
-        console.log('too slow');
-    });
-*/
-
-    var that = this;
 
     var inputHandler = viewer.screenSpaceEventHandler;
 
@@ -607,141 +489,50 @@ AusGlobeViewer.prototype._createCesiumViewer = function(container) {
         },
         ScreenSpaceEventType.LEFT_DOUBLE_CLICK, KeyboardEventModifier.SHIFT);
 
-    // Show mouse position and height if terrain on
-    inputHandler.setInputAction( function (movement) {
-
-        var pickRay = camera.getPickRay(movement.endPosition);
-
-        var globe = scene.globe;
-        var pickedTriangle = globe.pickTriangle(pickRay, scene);
-        if (defined(pickedTriangle)) {
-            // Get a fast, accurate-ish height every time the mouse moves.
-            var ellipsoid = globe.ellipsoid;
-
-            var v0 = ellipsoid.cartesianToCartographic(pickedTriangle.v0);
-            var v1 = ellipsoid.cartesianToCartographic(pickedTriangle.v1);
-            var v2 = ellipsoid.cartesianToCartographic(pickedTriangle.v2);
-            var intersection = ellipsoid.cartesianToCartographic(pickedTriangle.intersection);
-
-            var barycentric = Intersections2D.computeBarycentricCoordinates(
-                intersection.longitude, intersection.latitude,
-                v0.longitude, v0.latitude,
-                v1.longitude, v1.latitude,
-                v2.longitude, v2.latitude);
-
-            if (barycentric.x >= -1e-15 && barycentric.y >= -1e-15 && barycentric.z >= -1e-15) {
-                var height = barycentric.x * v0.height +
-                             barycentric.y * v1.height +
-                             barycentric.z * v2.height;
-                intersection.height = height;
-            }
-
-            var errorBar = globe.terrainProvider.getLevelMaximumGeometricError(pickedTriangle.tile.level);
-            var approximateHeight = intersection.height;
-            var minHeight = pickedTriangle.tile.data.minimumHeight;
-            var maxHeight = pickedTriangle.tile.data.maximumHeight;
-            var maxDiff = Math.max(approximateHeight - minHeight, maxHeight - approximateHeight);
-            errorBar = Math.min(errorBar, maxDiff);
-
-            document.getElementById('ausglobe-title-position').innerHTML = cartographicToDegreeString(intersection, errorBar);
-
-            debounceSampleAccurateHeight(globe, intersection);
-        } else {
-            document.getElementById('ausglobe-title-position').innerHTML = '';
-        }
-    }, ScreenSpaceEventType.MOUSE_MOVE);
-
     return viewer;
 };
-
-var lastHeightSamplePosition = new Cartographic();
-var accurateHeightTimer;
-var tileRequestInFlight;
-var accurateSamplingDebounceTime = 250;
-
-function debounceSampleAccurateHeight(globe, position) {
-    // After a delay with no mouse movement, get a more accurate height.
-    Cartographic.clone(position, lastHeightSamplePosition);
-
-    var terrainProvider = globe.terrainProvider;
-    if (terrainProvider instanceof CesiumTerrainProvider) {
-        clearTimeout(accurateHeightTimer);
-        accurateHeightTimer = setTimeout(function() {
-            sampleAccurateHeight(terrainProvider, position);
-        }, accurateSamplingDebounceTime);
-    }
-}
-
-function sampleAccurateHeight(terrainProvider, position) {
-        //can happen if reload while over ui element
-    if (!defined(terrainProvider) || !defined(position)) {
-        return;
-    }
-    accurateHeightTimer = undefined;
-    if (tileRequestInFlight) {
-        // A tile request is already in flight, so reschedule for later.
-        accurateHeightTimer = setTimeout(sampleAccurateHeight, accurateSamplingDebounceTime);
-        return;
-    }
-
-    // Find the most detailed available tile at the last mouse position.
-    var tilingScheme = terrainProvider.tilingScheme;
-    var tiles = terrainProvider._availableTiles;
-    var foundTileID;
-    var foundLevel;
-
-    for (var level = tiles.length - 1; !foundTileID && level >= 0; --level) {
-        var levelTiles = tiles[level];
-        var tileID = tilingScheme.positionToTileXY(position, level);
-        var yTiles = tilingScheme.getNumberOfYTilesAtLevel(level);
-        var tmsY = yTiles - tileID.y - 1;
-
-        // Is this tile ID available from the terrain provider?
-        for (var i = 0, len = levelTiles.length; !foundTileID && i < len; ++i) {
-            var range = levelTiles[i];
-            if (tileID.x >= range.startX && tileID.x <= range.endX && tmsY >= range.startY && tmsY <= range.endY) {
-                foundLevel = level;
-                foundTileID = tileID;
-            }
-        }
-    }
-
-    if (foundTileID) {
-        // This tile has our most accurate available height, so go get it.
-        tileRequestInFlight = when(terrainProvider.requestTileGeometry(foundTileID.x, foundTileID.y, foundLevel, false), function(terrainData) {
-            tileRequestInFlight = undefined;
-            if (Cartographic.equals(position, lastHeightSamplePosition)) {
-                position.height = terrainData.interpolateHeight(tilingScheme.tileXYToRectangle(foundTileID.x, foundTileID.y, foundLevel), position.longitude, position.latitude);
-                document.getElementById('ausglobe-title-position').innerHTML = cartographicToDegreeString(position);
-            } else {
-                // Mouse moved since we started this request, so the result isn't useful.  Try again next time.
-            }
-        }, function() {
-            tileRequestInFlight = undefined;
-        });
-    }
-}
 
 AusGlobeViewer.prototype.isCesium = function() {
     return defined(this.viewer);
 };
 
+function isTimelineVisible() {
+    return $('.cesium-viewer-animationContainer').css('visibility') === 'visible';
+}
+
 AusGlobeViewer.prototype.selectViewer = function(bCesium) {
+    var previousClock;
+    if (this.viewer) {
+        previousClock = Clock.clone(this.viewer.clock);
+    } else if (this.map) {
+        previousClock = Clock.clone(this.map.clock);
+    }
+
+    changeBaseMap(this, undefined);
+
+    this.application.beforeViewerChanged.raiseEvent();
+
     var bnds, rect;
-    var timeline = {};
-    var cam = this.initialCamera;
 
     var that = this;
+
+    var timelineVisible = isTimelineVisible();
 
     if (!bCesium) {
 
             //shut down existing cesium
         if (defined(this.viewer)) {
+            this.application.cesium.destroy();
+
             //get camera and timeline settings
-            rect = getCameraRect(this.scene);
-            bnds = [[CesiumMath.toDegrees(rect.south), CesiumMath.toDegrees(rect.west)],
-                [CesiumMath.toDegrees(rect.north), CesiumMath.toDegrees(rect.east)]];
-            timeline = this.getTimelineSettings();
+            try {
+                rect = getCameraRect(this.scene);
+                bnds = [[CesiumMath.toDegrees(rect.south), CesiumMath.toDegrees(rect.west)],
+                    [CesiumMath.toDegrees(rect.north), CesiumMath.toDegrees(rect.east)]];
+            } catch (e) {
+                console.log('Using default screen extent', e.message);
+                bnds = rectangleToLatLngBounds(this.application.initialBoundingBox);
+            }
 
             this._enableSelectExtent(false);
 
@@ -750,21 +541,26 @@ AusGlobeViewer.prototype.selectViewer = function(bCesium) {
             inputHandler.removeInputAction( ScreenSpaceEventType.LEFT_DOUBLE_CLICK );
             inputHandler.removeInputAction( ScreenSpaceEventType.LEFT_DOUBLE_CLICK, KeyboardEventModifier.SHIFT );
 
+            if (defined(this.monitor)) {
+                this.monitor.destroy();
+                this.monitor = undefined;
+            }
             this.viewer.destroy();
             this.viewer = undefined;
         }
         else {
-            bnds = [[cam.south, cam.west], [cam.north, cam.east]];
+            bnds = rectangleToLatLngBounds(this.application.initialBoundingBox);
         }
 
        //create leaflet viewer
         var map = L.map('cesiumContainer', {
+            worldCopyJump: true,
             zoomControl: false
         }).setView([-28.5, 135], 5);
 
         this.map = map;
-        map.clock = new Clock();
-        map.dataSources = this.geoDataManager.dataSourceCollection;
+        map.clock = this.application.clock;
+        map.dataSources = this.application.dataSources;
 
         map.screenSpaceEventHandler = {
             setInputAction : function() {},
@@ -773,14 +569,13 @@ AusGlobeViewer.prototype.selectViewer = function(bCesium) {
         map.destroy = function() {};
 
         map.infoBox = new InfoBox(document.body);
-        viewerEntityMixin(map);
 
         if (!defined(this.leafletVisualizer)) {
             this.leafletVisualizer = new LeafletVisualizer();
         }
         this.dataSourceDisplay = new DataSourceDisplay({
             scene : map,
-            dataSourceCollection : this.geoDataManager.dataSourceCollection,
+            dataSourceCollection : map.dataSources,
             visualizersCallback: this.leafletVisualizer.visualizersCallback
         });
 
@@ -789,6 +584,8 @@ AusGlobeViewer.prototype.selectViewer = function(bCesium) {
         eventHelper.add(map.clock.onTick, function(clock) {
             that.dataSourceDisplay.update(clock.currentTime);
         });
+
+        that.leafletEventHelper = eventHelper;
 
         var ticker = function() {
             if (that.map === map) {
@@ -807,7 +604,9 @@ AusGlobeViewer.prototype.selectViewer = function(bCesium) {
         ticker();
 
         this.createLeafletTimeline(map.clock);
-        this.updateTimeline(timeline.start, timeline.stop, timeline.cur);
+
+        Clock.clone(previousClock, map.clock);
+        map.timeline.zoomTo(map.clock.startTime, map.clock.stopTime);
 
         map.on("boxzoomend", function(e) {
             console.log(e.boxZoomBounds);
@@ -815,13 +614,12 @@ AusGlobeViewer.prototype.selectViewer = function(bCesium) {
 
         map.fitBounds(bnds);
 
-        //Bing Maps Layer by default
-        this.mapBaseLayer = new L.BingLayer(BingMapsApi.getKey(), { type: 'AerialWithLabels' });
-        map.addLayer(this.mapBaseLayer);
+        //redisplay data
+        this.map = map;
 
-        //document.getElementById('controls').style.visibility = 'hidden';
-        this._navigationWidget.showTilt = false;
-        document.getElementById('ausglobe-title-position').style.visibility = 'hidden';
+        this.application.leaflet = new Leaflet(this.application, map);
+        this.application.cesium = undefined;
+        this.application.currentViewer = this.application.leaflet;
 
         this.captureCanvas = function() {
             var that = this;
@@ -842,15 +640,18 @@ AusGlobeViewer.prototype.selectViewer = function(bCesium) {
         map.on('click', function(e) {
             selectFeatureLeaflet(that, e.latlng);
         });
-
-        this.geoDataManager.setViewer({scene: undefined, map: map});
-        this.geoDataBrowser.viewModel.map = map;
     }
     else {
         if (defined(this.map)) {
+            this.application.leaflet.destroy();
+
             //get camera and timeline settings
             rect = getCameraRect(undefined, this.map);
-            timeline = this.getTimelineSettings();
+
+            if (that.leafletEventHelper) {
+                that.leafletEventHelper.removeAll();
+                that.leafletEventHelper = undefined;
+            }
 
             this.removeLeafletTimeline();
             this.dataSourceDisplay.destroy();
@@ -859,124 +660,72 @@ AusGlobeViewer.prototype.selectViewer = function(bCesium) {
             this.map = undefined;
         }
         else {
-            rect = new Rectangle.fromDegrees(cam.west, cam.south, cam.east, cam.north);
+            rect = this.application.initialBoundingBox;
          }
 
         //create Cesium viewer
         this.viewer = this._createCesiumViewer('cesiumContainer');
         this.scene = this.viewer.scene;
+
+        this.application.cesium = new Cesium(this.application, this.viewer);
+        this.application.leaflet = undefined;
+        this.application.currentViewer = this.application.cesium;
+
         this.frameChecker = new FrameChecker();
 
-        // override the default render loop
-        this.scene.base_render = this.scene.render;
-        this.scene.render = function(date) {
-            if (that.frameChecker.skipFrame(that.scene, date)) {
-                return;
-            }
-            that.scene.base_render(date);
+        // Make sure we re-render when data sources or imagery layers are added or removed.
+        this.scene.imageryLayers.layerAdded.addEventListener(this.frameChecker.forceFrameUpdate, this.frameChecker);
+        this.scene.imageryLayers.layerRemoved.addEventListener(this.frameChecker.forceFrameUpdate, this.frameChecker);
+        this.scene.imageryLayers.layerMoved.addEventListener(this.frameChecker.forceFrameUpdate, this.frameChecker);
 
-            that.updateDistanceLegend();
-
-            // If terrain/imagery is loading, force another render immediately so that the loading
-            // happens as quickly as possible.
-            var surface = that.scene.globe._surface;
-            if (surface._tileLoadQueue.length > 0 || surface._debug.tilesWaitingForChildren > 0) {
-                that.frameChecker.forceFrameUpdate();
-            }
-
-            //capture the scene image right after the render and make
-            //call to the GeoDataManager which saves scene data, which sets an event
-            // which is picked up to launch the share dialog
-            if (that.captureCanvasFlag === true) {
-                that.captureCanvasFlag = false;
-                var dataUrl = that.scene.canvas.toDataURL("image/jpeg");
-                that.captureCanvasCallback(dataUrl);
-            }
-        };
-
-        this.captureCanvas = function() {
-            that.captureCanvasFlag = true;
-        };
+        this.viewer.dataSources.dataSourceAdded.addEventListener(this.frameChecker.forceFrameUpdate, this.frameChecker);
+        this.viewer.dataSources.dataSourceRemoved.addEventListener(this.frameChecker.forceFrameUpdate, this.frameChecker);
 
         this.updateCameraFromRect(rect, 0);
 
-        this.geoDataManager.setViewer({scene: this.scene, map: undefined});
-        this.geoDataBrowser.viewModel.map = undefined;
-
         this._enableSelectExtent(true);
-        this.updateTimeline(timeline.start, timeline.stop, timeline.cur);
 
-        this._navigationWidget.showTilt = true;
-        document.getElementById('ausglobe-title-position').style.visibility = 'visible';
+        Clock.clone(previousClock, this.viewer.clock);
 
-    }
-};
+        //Simple monitor to start up and switch to 2D if seem to be stuck.
+        if (!defined(this.checkedStartupPerformance)) {
+            this.checkedStartupPerformance = true;
+            var uri = new URI(window.location);
+            var params = uri.search(true);
+            var frameRate = (defined(params.fps)) ? params.fps : 5;
 
-var offsetScratch = new Cartesian3();
-var geodesic = new EllipsoidGeodesic();
-
-var distances = [
-    1, 2, 3, 5,
-    10, 20, 30, 50,
-    100, 200, 300, 500,
-    1000, 2000, 3000, 5000,
-    10000, 20000, 30000, 50000,
-    100000, 200000, 300000, 500000,
-    1000000, 2000000, 3000000, 5000000,
-    10000000, 20000000, 30000000, 50000000];
-
-AusGlobeViewer.prototype.updateDistanceLegend = function() {
-    // Find the distance between two pixels at the bottom center of the screen.
-    var scene = this.scene;
-    var width = scene.canvas.clientWidth;
-    var height = scene.canvas.clientHeight;
-
-    var left = scene.camera.getPickRay(new Cartesian2((width / 2) | 0, height - 1));
-    var right = scene.camera.getPickRay(new Cartesian2(1 + (width / 2) | 0, height - 1));
-
-    var globe = scene.globe;
-    var leftPosition = globe.pick(left, scene);
-    var rightPosition = globe.pick(right, scene);
-
-    if (!defined(leftPosition) || !defined(rightPosition)) {
-        document.getElementById('ausglobe-title-scale').style.visibility = 'hidden';
-        return;
-    }
-
-    var leftCartographic = globe.ellipsoid.cartesianToCartographic(leftPosition);
-    var rightCartographic = globe.ellipsoid.cartesianToCartographic(rightPosition);
-
-    geodesic.setEndPoints(leftCartographic, rightCartographic);
-    var pixelDistance = geodesic.surfaceDistance;
-
-    // Find the first distance that makes the scale bar less than 150 pixels.
-    var maxBarWidth = 150;
-    var distance;
-    for (var i = distances.length - 1; !defined(distance) && i >= 0; --i) {
-        if (distances[i] / pixelDistance < maxBarWidth) {
-            distance = distances[i];
-        }
-    }
-
-    if (defined(distance)) {
-        var label;
-        if (distance >= 1000) {
-            label = (distance / 1000).toString() + ' km';
-        } else {
-            label = distance.toString() + ' m';
+            this.monitor = new FrameRateMonitor({ 
+                scene: this.scene, 
+                minimumFrameRateDuringWarmup: frameRate,
+                minimumFrameRateAfterWarmup: 0,
+                samplingWindow: 2
+            });
+            this.monitor.lowFrameRate.addEventListener( function() {
+                if (!that.application.cesium.stoppedRendering) {
+                    PopupMessageViewModel.open('ui', {
+                        title : 'Unusually Slow Performance Detected',
+                        message : '\
+        It appears that your system is capable of running National Map in 3D mode, but is having significant performance issues. \
+        We are automatically switching to 2D mode to help resolve this issue.  If you want to switch back to 3D mode you can select \
+        that option from the Maps button at the top of the screen.'
+                    });
+                    runLater(function() { 
+                        that.selectViewer(false); 
+                    });
+                }
+            });
         }
 
-        var barWidth = (distance / pixelDistance) | 0;
-        if (barWidth !== this._distanceLegendBarWidth || label !== this._distanceLegendLabel) {
-            document.getElementById('ausglobe-title-scale').style.visibility = 'visible';
-            document.getElementById('ausglobe-title-scale-label').textContent = label;
-            document.getElementById('ausglobe-title-scale-bar').style.width = barWidth.toString() + 'px';
+    }
 
-            this._distanceLegendBarWidth = barWidth;
-            this._distanceLegendLabel = label;
-        }
+    this.application.afterViewerChanged.raiseEvent();
+
+    changeBaseMap(this, this.application.baseMap);
+
+    if (timelineVisible) {
+        showTimeline(this.viewer);
     } else {
-        document.getElementById('ausglobe-title-scale').style.visibility = 'hidden';
+        hideTimeline(this.viewer);
     }
 };
 
@@ -1115,83 +864,11 @@ AusGlobeViewer.prototype.updateTimeline = function(start, finish, cur, run) {
  };
 
 
-//update timeline and camera
-AusGlobeViewer.prototype.setCurrentDataset = function(layer) {
-    //remove case
-    if (layer === undefined) {
-        this.updateTimeline();
-        return;
-    }
-
-    //table info
-    var tableData, start, finish, current;
-    if (layer.dataSource !== undefined) {
-        var collection = layer.dataSource.entities;
-        var availability = collection.computeAvailability();
-        if (availability.isStartIncluded && availability.isStopIncluded) {
-            start = availability.start;
-            finish = availability.stop;
-        }
-    }
-    this.updateTimeline(start, finish, start, true);
-
-    if (layer.zoomTo && layer.extent !== undefined) {
-        this.updateCameraFromRect(layer.extent, 3000);
-    }
-};
-
-// -------------------------------------------
-// Text Formatting
-// -------------------------------------------
-function cartographicToDegreeString(cartographic, errorBar) {
-    var strNS = cartographic.latitude < 0 ? 'S' : 'N';
-    var strWE = cartographic.longitude < 0 ? 'W' : 'E';
-    var text = 'Lat: ' + Math.abs(CesiumMath.toDegrees(cartographic.latitude)).toFixed(3) + '&deg; ' + strNS +
-        ' | Lon: ' + Math.abs(CesiumMath.toDegrees(cartographic.longitude)).toFixed(3) + '&deg; ' + strWE;
-    if (defined(cartographic.height)) {
-        text += ' | Elev: ' + cartographic.height.toFixed(1);
-        if (defined(errorBar)) {
-            text += "±" + errorBar.toFixed(1);
-        }
-
-        text += ' m';
-    }
-    return text;
-}
-
 var cartesian3Scratch = new Cartesian3();
 
 // -------------------------------------------
 // Camera management
 // -------------------------------------------
-function getCameraPos(scene) {
-    var ellipsoid = Ellipsoid.WGS84;
-    var cam_pos = scene.camera.position;
-    return ellipsoid.cartesianToCartographic(cam_pos);
-}
-
-//determine the distance from the camera to a point
-function getCameraDistance(scene, pos) {
-    var tx_pos = Ellipsoid.WGS84.cartographicToCartesian(
-        Cartographic.fromDegrees(pos[0], pos[1], pos[2]));
-    return Cartesian3.magnitude(Cartesian3.subtract(tx_pos, scene.camera.position, cartesian3Scratch));
-}
-
-
-function getCameraSeaLevel(scene) {
-    var ellipsoid = Ellipsoid.WGS84;
-    var cam_pos = scene.camera.position;
-    return ellipsoid.cartesianToCartographic(ellipsoid.scaleToGeodeticSurface(cam_pos));
-}
-
-
-function getCameraHeight(scene) {
-    var ellipsoid = Ellipsoid.WGS84;
-    var cam_pos = scene.camera.position;
-    var camPos = getCameraPos(scene);
-    var seaLevel = getCameraSeaLevel(scene);
-    return camPos.height - seaLevel.height;
-}
 
 //Camera extent approx for 2D viewer
 function getCameraFocus(scene) {
@@ -1224,8 +901,6 @@ function flyToPosition(scene, position, durationMilliseconds) {
     var camera = scene.camera;
     var startPosition = camera.position;
     var endPosition = position;
-    var heading = camera.heading;
-    var tilt = camera.tilt;
 
     durationMilliseconds = defaultValue(durationMilliseconds, 200);
 
@@ -1233,7 +908,7 @@ function flyToPosition(scene, position, durationMilliseconds) {
 
     var initialEnuToFixedRotation = new Matrix4();
     Matrix4.getRotation(initialEnuToFixed, initialEnuToFixedRotation);
-
+    
     var initialFixedToEnuRotation = new Matrix3();
     Matrix3.transpose(initialEnuToFixedRotation, initialFixedToEnuRotation);
 
@@ -1281,7 +956,7 @@ function flyToPosition(scene, position, durationMilliseconds) {
     });
 }
 
-function zoomCamera(scene, distFactor, pos) {
+function zoomCamera(scene, distFactor, pos) { 
     var camera = scene.camera;
     var pickRay = camera.getPickRay(pos);
     var targetCartesian = scene.globe.pick(pickRay, scene);
@@ -1307,7 +982,7 @@ AusGlobeViewer.prototype.updateCameraFromRect = function(rect_in, flightTimeMill
 
     var scene = this.scene;
     var map = this.map;
-
+    
     //check that we're not too close
     var epsilon = CesiumMath.EPSILON3;
     var rect = rect_in.clone();
@@ -1333,7 +1008,7 @@ AusGlobeViewer.prototype.updateCameraFromRect = function(rect_in, flightTimeMill
     }
 };
 
-function getWmsFeatureInfo(baseUrl, useProxy, layers, extent, width, height, i, j, useWebMercator) {
+function getWmsFeatureInfo(baseUrl, useProxy, layers, extent, width, height, i, j, useWebMercator, wmsFeatureInfoFilter) {
     var url = baseUrl;
     var indexOfQuestionMark = url.indexOf('?');
     if (indexOfQuestionMark >= 0 && indexOfQuestionMark < url.length - 1) {
@@ -1349,7 +1024,7 @@ function getWmsFeatureInfo(baseUrl, useProxy, layers, extent, width, height, i, 
     var ne;
     if (useWebMercator) {
         srs = 'EPSG:3857';
-
+        
         var projection = new WebMercatorProjection();
         sw = projection.project(Rectangle.southwest(extent));
         ne = projection.project(Rectangle.northeast(extent));
@@ -1359,7 +1034,7 @@ function getWmsFeatureInfo(baseUrl, useProxy, layers, extent, width, height, i, 
         ne = new Cartesian3(CesiumMath.toDegrees(extent.east), CesiumMath.toDegrees(extent.north), 0.0);
     }
 
-    url += 'service=WMS&request=GetFeatureInfo&version=1.1.1&layers=' + layers + '&query_layers=' + layers +
+    url += 'service=WMS&request=GetFeatureInfo&version=1.1.1&layers=' + layers + '&query_layers=' + layers + 
            '&srs=' + srs + '&width=' + width + '&height=' + height + '&info_format=application/json' +
            '&x=' + i + '&y=' + j + '&';
 
@@ -1372,6 +1047,9 @@ function getWmsFeatureInfo(baseUrl, useProxy, layers, extent, width, height, i, 
     }
 
     return when(loadJson(url), function(json) {
+        if (defined(wmsFeatureInfoFilter)) {
+            json = wmsFeatureInfoFilter(json);
+        }
         return json;
     }, function (e) {
         // If something goes wrong, try requesting XML instead of GeoJSON.  Then try to interpret it.
@@ -1381,21 +1059,21 @@ function getWmsFeatureInfo(baseUrl, useProxy, layers, extent, width, height, i, 
 }
 
 function selectFeatureLeaflet(viewer, latlng) {
-    var layers = viewer.geoDataManager.layers;
+    var dataSources = viewer.application.nowViewing.items;
 
-    var pickedLocation = new Cartographic(CesiumMath.toRadians(latlng.lng), CesiumMath.toRadians(latlng.lat));
     var pickedXY = viewer.map.latLngToContainerPoint(latlng, viewer.map.getZoom());
     var bounds = viewer.map.getBounds();
     var extent = new Rectangle(CesiumMath.toRadians(bounds.getWest()), CesiumMath.toRadians(bounds.getSouth()), CesiumMath.toRadians(bounds.getEast()), CesiumMath.toRadians(bounds.getNorth()));
 
     var promises = [];
-    for (var i = layers.length - 1; i >=0 ; --i) {
-        var layer = layers[i];
-        if (layer.type !== 'WMS') {
-            continue;
+    for (var i = 0; i < dataSources.length ; ++i) {
+        var dataSource = dataSources[i];
+        if (dataSource.type === 'wms' || (dataSource.type === 'csv' && defined(dataSource.layers))) {
+            var useProxy = corsProxy.shouldUseProxy(dataSource.url);
+            promises.push(getWmsFeatureInfo(dataSource.url, useProxy, dataSource.layers, 
+                extent, viewer.map.getSize().x, viewer.map.getSize().y, pickedXY.x, pickedXY.y, true, 
+                dataSource.wmsFeatureInfoFilter));
         }
-        var useProxy = corsProxy.shouldUseProxy(layer.description.base_url);
-        promises.push(getWmsFeatureInfo(layer.description.base_url, useProxy, layer.description.Name, extent, viewer.map.getSize().x, viewer.map.getSize().y, pickedXY.x, pickedXY.y, true));
     }
 
     if (promises.length === 0) {
@@ -1405,17 +1083,13 @@ function selectFeatureLeaflet(viewer, latlng) {
     selectFeatures(promises, viewer.map, latlng);
 }
 
-function formatPopup(title, text) {
-    return '<h3><center>'+title+'</center></h3>'+text;
-}
 
 function selectFeatures(promises, viewer, latlng) {
     var nextPromiseIndex = 0;
-    var popup;
 
     function waitForNextLayersResponse() {
         if (nextPromiseIndex >= promises.length) {
-            popup.setContent(formatPopup('None', 'No features found.'));
+            updatePopup( 'None', 'No features found.');
             return;
         }
 
@@ -1423,7 +1097,7 @@ function selectFeatures(promises, viewer, latlng) {
             function findGoodIdProperty(properties) {
                 for (var key in properties) {
                     if (properties.hasOwnProperty(key) && properties[key]) {
-                        if (/name/i.test(key) || /title/i.test(key)) {
+                        if (/name/i.test(key) || /title/i.test(key)|| /id/i.test(key)) {
                             return properties[key];
                         }
                     }
@@ -1470,8 +1144,8 @@ function selectFeatures(promises, viewer, latlng) {
 
                 var properties;
                 if (json.FeatureCollection &&
-                    json.FeatureCollection.FeatureMembers &&
-                    json.FeatureCollection.FeatureMembers.Feature &&
+                    json.FeatureCollection.FeatureMembers && 
+                    json.FeatureCollection.FeatureMembers.Feature && 
                     json.FeatureCollection.FeatureMembers.Feature.Val) {
 
                     properties = {};
@@ -1514,9 +1188,9 @@ function selectFeatures(promises, viewer, latlng) {
             // Show information for the first selected feature.
             var feature = result.features[0];
             if (defined(feature)) {
-                popup.setContent( formatPopup( findGoodIdProperty(feature.properties), describe(feature.properties) ));
+                updatePopup( findGoodIdProperty(feature.properties), describe(feature.properties) );
             } else {
-                popup.setContent(formatPopup( 'None', 'No features found.'));
+                updatePopup( 'None', 'No features found.');
             }
         }, function() {
             waitForNextLayersResponse();
@@ -1525,12 +1199,17 @@ function selectFeatures(promises, viewer, latlng) {
 
     waitForNextLayersResponse();
 
-    // Add placeholder information to the infobox so the user knows something is happening.
-    var title = '<h3><center>None</center></h3>';
-    popup = L.popup({maxHeight: 520})
-        .setLatLng(latlng)
-        .setContent(formatPopup('None', 'Loading WMS feature information...'))
-        .openOn(viewer);
+        //create popup but don't show it
+    var popup = L.popup({maxHeight: 520 }).setLatLng(latlng);
+    function updatePopup(title, text) {
+        popup.setContent('<h3><center>'+title+'</center></h3>'+text);
+    }
+        // Show placeholder text to the infobox so the user knows something is happening.
+    updatePopup('', 'Loading WMS feature information...');
+
+        // Wait for .5 seconds to show to let double click through
+    setTimeout(function() { popup.openOn(viewer); }, 500);
+    
 }
 
 module.exports = AusGlobeViewer;

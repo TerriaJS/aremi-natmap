@@ -7,3 +7,4 @@ target
 error.log
 output.log
 .DS_Store
+npm-debug.log

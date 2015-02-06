@@ -4,10 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">  <!-- Use Chrome Frame in IE -->
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <meta name="description" content="National Map">
-    <meta name="copyright" content="Copyright(c) 2012-2013 National ICT Australia Limited (NICTA).  All rights reserved.">
-    <title>AREMI</title>
+    <meta name="description" content="AREMI">
+    <meta name="copyright" content="Copyright(c) 2012-2014 National ICT Australia Limited (NICTA).  All rights reserved.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
+    <link rel="manifest" href="manifest.json">
+
+
+    <title>AREMI</title>
 
     <!-- jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
@@ -15,7 +19,8 @@
     <script type="text/javascript" src="./third_party/jquery.xml2json.js"></script>
 
     <!-- Utility -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400,300' rel='stylesheet' type='text/css'>
     <script src="//cdnjs.cloudflare.com/ajax/libs/proj4js/2.2.2/proj4.js"></script>
     <script src="./third_party/proj4_epsg.js"></script>
     <script src="./third_party/togeojson.js"></script>
@@ -30,9 +35,7 @@
     <script src="./third_party/html2canvas.js"></script>
     <script src="./third_party/TileLayer.Filter.min.js"></script>
 
-
-    <link rel="stylesheet" href="build/Cesium/Widgets/widgets.css" media="screen">
-    <link rel="stylesheet" href="css/AusGlobeViewer.css">
+    <link rel="stylesheet" href="build/main.css">
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -52,7 +55,8 @@
 
 <body>
 
-    <div id="cesiumContainer" class="fullWindow"></div>
+    <div id="cesiumContainer" class="full-window map-displaced"></div>
+    <div id="ui" class="full-window transparent-to-input"></div>
     <div id="loadingIndicator" class="loadingIndicator"></div>
 
     <script src="build/ausglobe.js"></script>
