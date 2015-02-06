@@ -1,11 +1,10 @@
 { "proxyDomains" : [
         "nicta.com.au",
-        "gov.au",
-        "arcgis.com"
+        "ga.gov.au",
+        "communications.gov.au"
     ],
  "corsDomains" : [
         "data.gov.au",
-        "ga.gov.au",
         "corsproxy.com"
     ],
   "initialDataMenu" : "init_aremi.json",
