@@ -132,9 +132,15 @@ if (start) {
 
         BrandBarViewModel.create(ui, {
             elements: [
-                '<a target="_blank" href="http://www.gov.au/"><img src="images/gov-brand.png" height="52" /></a>',
-                '<div class="brand-bar-name"><a target="_blank" href="http://nicta.github.io/nationalmap/public/info.html">NATIONAL<br/><strong>MAP</strong> <small>beta</small></a></div>',
-                '<a target="_blank" href="http://www.nicta.com.au"><img src="images/nicta.png" height="52" /></a>'
+                '<div class="ausglobe-title-aremi">\
+                    <strong>Australian Renewable Energy</strong>\
+                    <br/>\
+                    Mapping Infrastructure\
+                    <br/>\
+                    <small >in association with NICTA and Geoscience Australia</small>\
+                    <br/>\
+                    <img src="images/ARENA-logo.png"/>\
+                </div>'
             ]
         });
 
