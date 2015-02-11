@@ -1,7 +1,8 @@
 {
     "proxyDomains" : [
         "geofabric.bom.gov.au",
-        "nicta.com.au"
+        "nicta.com.au",
+        "www.ga.gov.au"
     ],
     "initializationUrls" : [
     	"init_aremi.json"
