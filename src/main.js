@@ -139,7 +139,7 @@ if (start) {
                     <br/>\
                     <small >in association with NICTA and Geoscience Australia</small>\
                     <br/>\
-                    <img style="margin-top: 0.4em;" src="images/ARENA-logo.png"/>\
+                    <img src="images/ARENA-logo.png"/>\
                 </div>'
             ]
         });
