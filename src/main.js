@@ -139,7 +139,7 @@ if (start) {
                     <br/>\
                     <small >in association with NICTA and Geoscience Australia</small>\
                     <br/>\
-                    <img src="images/ARENA-logo.png"/>\
+                    <img style="margin-top: 0.4em;" src="images/ARENA-logo.png"/>\
                 </div>'
             ]
         });
@@ -287,7 +287,7 @@ if (start) {
         }));
 
         var searchTab = new SearchTabViewModel(application);
-        
+
         searchTab.searchProviders.push(new BingMapsSearchProviderViewModel({
             application: application
         }));
