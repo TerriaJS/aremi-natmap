@@ -18,11 +18,11 @@
       "type": "group",
       "items": [
         {
-          "name": "Solar",
+          "name": "Grid",
           "type": "group",
           "items": [
             {
-              "name": "Breaking the Solar Gridlock - Available Capacity",
+              "name": "Breaking the Solar Gridlock - Available Capacity MIN",
               "type": "czml",
               "url": "datasets/dance/DANCE-2012.min.czml",
               "legendUrl": "datasets/dance/availcap.png",
@@ -33,6 +33,66 @@
                 "-18.5"
               ]
             },
+            {
+              "name": "Breaking the Solar Gridlock - Available Capacity",
+              "type": "czml",
+              "url": "datasets/dance/DANCE-2012.czml",
+              "legendUrl": "datasets/dance/availcap.png",
+              "rectangle":[
+                "137.0",
+                "-39.5",
+                "154.0",
+                "-18.5"
+              ]
+            },
+            {
+              "name": "Transmission lines",
+              "typeNames": "topography_Australian_Topography:Powerlines_MS",
+              "description": "[Licence](http://www.ga.gov.au/copyright)",
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography/MapServer/WFSServer",
+              "type": "wfs",
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ]
+            },
+            {
+              "name": "Power stations",
+              "layers": "Power Stations",
+              "description": "[Licence](http://www.ga.gov.au/copyright)",
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "url": "http://www.ga.gov.au/gis/services/energy/ASEIS_Features/MapServer/WMSServer",
+              "type": "wms",
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ]
+            },
+            {
+              "name": "Distance to transmission lines",
+              "layers": "Distance To Translines 10km",
+              "description": "[Licence](http://www.ga.gov.au/copyright)",
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "url": "http://www.ga.gov.au/gis/services/energy/ASEIS_Features/MapServer/WMSServer",
+              "type": "wms",
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Solar",
+          "type": "group",
+          "items": [
             {
               "name": "GHI minimum January",
               "layers": "GHI minimum January",
@@ -679,34 +739,6 @@
           "name": "Infrastructure",
           "type": "group",
           "items": [
-            {
-              "name": "Distance to transmission lines",
-              "layers": "Distance To Translines 10km",
-              "description": "[Licence](http://www.ga.gov.au/copyright)",
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/gis/services/energy/ASEIS_Features/MapServer/WMSServer",
-              "type": "wms",
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "Power stations",
-              "layers": "Power Stations",
-              "description": "[Licence](http://www.ga.gov.au/copyright)",
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/gis/services/energy/ASEIS_Features/MapServer/WMSServer",
-              "type": "wms",
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
             {
               "name": "Broadband Availability and Quality",
               "layers": "MyBroadband_Availability",
