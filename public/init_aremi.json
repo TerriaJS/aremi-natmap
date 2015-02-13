@@ -22,6 +22,18 @@
           "type": "group",
           "items": [
             {
+              "name": "Breaking the Solar Gridlock - Available Capacity",
+              "type": "czml",
+              "url": "datasets/dance/DANCE-2012.czml",
+              "legendUrl": "datasets/dance/availcap.png",
+              "rectangle":[
+                "137.0",
+                "-39.5",
+                "154.0",
+                "-18.5"
+              ]
+            },
+            {
               "name": "GHI minimum January",
               "layers": "GHI minimum January",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
