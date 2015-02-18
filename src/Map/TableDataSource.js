@@ -13,7 +13,6 @@ And writes a czml file for it to display
 
 var defined = require('../../third_party/cesium/Source/Core/defined');
 var CzmlDataSource = require('../../third_party/cesium/Source/DataSources/CzmlDataSource');
-var Color = require('../../third_party/cesium/Source/Core/Color');
 var defineProperties = require('../../third_party/cesium/Source/Core/defineProperties');
 var destroyObject = require('../../third_party/cesium/Source/Core/destroyObject');
 var JulianDate = require('../../third_party/cesium/Source/Core/JulianDate');
@@ -34,16 +33,17 @@ var TableDataSource = function () {
     this.dataset = new Dataset();
     this.show = true;
 
-    this.color = Color.RED;
-
+    //TODO: create style object to encapsulate these properties
+    this.color = [64, 64, 255, 256];
+    this.scale = 1.0;
+    this.imageUrl = "./images/circle32.png";
+    this.scaleValue = false;
+    this.colorByValue = true;
     this.leadTimeMin = 0;
     this.trailTimeMin = 60;
-    this.scale = 1.0;
-    this.scaleValue = false;
-    this.imageUrl = "./images/circle32.png";
 
     var rainbowGradient = [
-        {offset: 0.0, color: 'rgba(0,0,200,1.00)'},
+        {offset: 0.0, color: 'rgba(32,0,200,1.0)'},
         {offset: 0.25, color: 'rgba(0,200,200,1.0)'},
         {offset: 0.25, color: 'rgba(0,200,200,1.0)'},
         {offset: 0.5, color: 'rgba(0,200,0,1.0)'},
@@ -205,28 +205,35 @@ TableDataSource.prototype.describe = function(properties) {
 TableDataSource.prototype.czmlRecFromPoint = function (point) {
 
     var rec = {
-        "name": "Site Data",
-        "description": "empty",
-        "billboard" : {
-            "horizontalOrigin" : "CENTER",
-            "verticalOrigin" : "BOTTOM",
-            "image" : this.imageUrl,
-            "scale" : this.scale,
-            "color" : { "rgba" : [255, 0, 0, 255] },
-            "show" : [{
-                    "boolean" : false
-                }, {
-                "interval" : "2011-02-04T16:00:00Z/2011-04-04T18:00:00Z",
-                "boolean" : true
-            }]
+        name: "Site Data",
+        description: "empty",
+        point: {
+            color: { "rgba" : [255, 0, 0, 255] },
+            outlineColor: { "rgba" : [0, 0, 0, 255] },
+            outlineWidth: 1,
+            pixelSize: 8,
+            show: [
+                {
+                    boolean: false
+                },
+                {
+                    interval: "2011-02-04T16:00:00Z/2011-04-04T18:00:00Z",
+                    boolean: true
+                }
+            ],
         },
-        "position" : {
-            "cartographicDegrees" : [0, 0, 0]
+        position: {
+            cartographicDegrees: [0, 0, 0]
         }
     };
     
-    rec.billboard.color.rgba = this._mapValue2Color(point.val);
-    rec.billboard.scale = this._mapValue2Scale(point.val);
+    if (this.colorByValue) {
+        rec.point.color.rgba = this._mapValue2Color(point.val);
+    } else {
+        rec.point.color.rgba = this.color;
+    }
+
+    rec.point.pixelSize *= this._mapValue2Scale(point.val);
     for (var p = 0; p < 3; p++) {
         rec.position.cartographicDegrees[p] = point.pos[p];
     }
@@ -234,12 +241,12 @@ TableDataSource.prototype.czmlRecFromPoint = function (point) {
     if (this.dataset.hasTimeData()) {
         var start = JulianDate.addMinutes(point.time, -this.leadTimeMin, startScratch);
         var finish = JulianDate.addMinutes(point.time, this.trailTimeMin, endScratch);
-        rec.billboard.show[1].interval = JulianDate.toIso8601(start) + '/' + JulianDate.toIso8601(finish);
-        rec.availability = rec.billboard.show[1].interval;
+        rec.point.show[1].interval = JulianDate.toIso8601(start) + '/' + JulianDate.toIso8601(finish);
+        rec.availability = rec.point.show[1].interval;
     }
     else {
-        rec.billboard.show[0].boolean = true;
-        rec.billboard.show[1].interval = undefined;
+        rec.point.show[0].boolean = true;
+        rec.point.show[1].interval = undefined;
     }
     return rec;
 };
@@ -309,7 +316,7 @@ TableDataSource.prototype._mapValue2Color = function (pntVal) {
         color[0] = colors.data[colorIndex];
         color[1] = colors.data[colorIndex + 1];
         color[2] = colors.data[colorIndex + 2];
-        color[3] = colors.data[colorIndex + 3] * this.color.alpha;
+        color[3] = colors.data[colorIndex + 3] * (this.color[3] / 255.0);
     }
     return color;
 };
@@ -342,6 +349,10 @@ TableDataSource.prototype.setTrailTimeByPercent = function (pct) {
 
 
 TableDataSource.prototype.getLegendGraphic = function () {
+    if (!this.colorByValue) {
+        return undefined;
+    }
+
     var canvas = document.createElement("canvas");
     if (!defined(canvas)) {
         return;

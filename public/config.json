@@ -2,7 +2,9 @@
     "proxyDomains" : [
         "geofabric.bom.gov.au",
         "nicta.com.au",
-        "www.ga.gov.au"
+        "gov.au",
+        "csiro.au",
+        "arcgis.com"
     ],
     "initializationUrls" : [
     	"init_aremi.json"

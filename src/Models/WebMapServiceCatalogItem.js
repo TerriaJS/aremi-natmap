@@ -14,11 +14,13 @@ var knockout = require('../../third_party/cesium/Source/ThirdParty/knockout');
 var loadXML = require('../../third_party/cesium/Source/Core/loadXML');
 var WebMapServiceImageryProvider = require('../../third_party/cesium/Source/Scene/WebMapServiceImageryProvider');
 var WebMercatorTilingScheme = require('../../third_party/cesium/Source/Core/WebMercatorTilingScheme');
+var Rectangle = require('../../third_party/cesium/Source/Core/Rectangle');
 
 var Metadata = require('./Metadata');
 var MetadataItem = require('./MetadataItem');
 var ImageryLayerCatalogItem = require('./ImageryLayerCatalogItem');
 var inherit = require('../Core/inherit');
+var rectangleToLatLngBounds = require('../Map/rectangleToLatLngBounds');
 
 /**
  * A {@link ImageryLayerCatalogItem} representing a layer from a Web Map Service (WMS) server.
@@ -37,6 +39,8 @@ var WebMapServiceCatalogItem = function(application) {
     this._dataUrlType = undefined;
     this._metadataUrl = undefined;
     this._legendUrl = undefined;
+    this._rectangle = undefined;
+    this._rectangleFromMetadata = undefined;
 
     /**
      * Gets or sets the URL of the WMS server.  This property is observable.
@@ -83,7 +87,18 @@ var WebMapServiceCatalogItem = function(application) {
      */
     this.getFeatureInfoAsXml = true;
 
-    knockout.track(this, ['_dataUrl', '_dataUrlType', '_metadataUrl', '_legendUrl', 'url', 'layers', 'parameters', 'getFeatureInfoAsGeoJson', 'getFeatureInfoAsXml', 'tilingScheme']);
+    /**
+     * Gets or sets a value indicating whether this dataset should be clipped to the {@link WebMapServiceCatalogItem#rectangle}.
+     * If true, no part of the dataset will be displayed outside the rectangle.  This property is false by default because it requires
+     * that the rectangle be highly accurate.  Also, many WMS servers report an extent that does not take into account that the representation
+     * of features sometimes require a larger spatial extent than the features themselves.  For example, if a point feature on the edge of
+     * the extent is drawn as a circle with a radius of 5 pixels, half of that circle will be cut off.
+     * @type {Boolean}
+     * @default false
+     */
+    this.clipToRectangle = false;
+
+    knockout.track(this, ['_dataUrl', '_dataUrlType', '_metadataUrl', '_legendUrl', '_rectangle', '_rectangleFromMetadata', 'url', 'layers', 'parameters', 'getFeatureInfoAsGeoJson', 'getFeatureInfoAsXml', 'tilingScheme', 'clipToRectangle']);
 
     // dataUrl, metadataUrl, and legendUrl are derived from url if not explicitly specified.
     delete this.__knockoutObservables.dataUrl;
@@ -144,6 +159,20 @@ var WebMapServiceCatalogItem = function(application) {
         },
         set : function(value) {
             this._legendUrl = value;
+        }
+    });
+
+    // rectangle comes from metadata if not explicitly specified.
+    delete this.__knockoutObservables.rectangle;
+    knockout.defineProperty(this, 'rectangle', {
+        get : function() {
+            if (defined(this._rectangle)) {
+                return this._rectangle;
+            }
+            return this._rectangleFromMetadata;
+        },
+        set : function(value) {
+            this._rectangle = value;
         }
     });
 };
@@ -256,6 +285,11 @@ WebMapServiceCatalogItem.defaultSerializers.tilingScheme = function(wmsItem, jso
 };
 freezeObject(WebMapServiceCatalogItem.defaultSerializers);
 
+WebMapServiceCatalogItem.prototype._load = function() {
+    this._metadata = requestMetadata(this);
+    return this._metadata.promise;
+};
+
 WebMapServiceCatalogItem.prototype._enableInCesium = function() {
     if (defined(this._imageryLayer)) {
         throw new DeveloperError('This data source is already enabled.');
@@ -274,12 +308,8 @@ WebMapServiceCatalogItem.prototype._enableInCesium = function() {
 
     this._imageryLayer = new ImageryLayer(imageryProvider, {
         show : false,
-        alpha : this.opacity
-        // Ideally we'd specify "rectangle : this.rectangle" here.
-        // But lots of WMS data sources get the extent wrong, and even the ones that get it right
-        // specify the extent of the geometry itself, not the representation of the geometry.  So that means,
-        // for example, that if we clip the layer at the given extent, then a point centered on the edge of the
-        // extent will only be half visible.
+        alpha : this.opacity,
+        rectangle : this.clipToRectangle ? this.rectangle : undefined
     });
 
     scene.imageryLayers.add(this._imageryLayer);
@@ -302,9 +332,8 @@ WebMapServiceCatalogItem.prototype._enableInLeaflet = function() {
 
     var options = {
         layers : this.layers,
-        opacity : this.opacity
-        // Ideally we'd specify "bounds : rectangleToLatLngBounds(this.rectangle)" here.
-        // See comment in _enableInCesium for an explanation of why we don't.
+        opacity : this.opacity,
+        bounds : rectangleToLatLngBounds(this.rectangle)
     };
 
     options = combine(combine(this.parameters, WebMapServiceCatalogItem.defaultParameters), options);
@@ -347,6 +376,19 @@ function proxyUrl(application, url) {
     return url;
 }
 
+function getRectangleFromMetadata(layer) {
+    var egbb = layer.EX_GeographicBoundingBox; // required in WMS 1.3.0
+    if (defined(egbb)) {
+        return Rectangle.fromDegrees(egbb.westBoundLongitude, egbb.southBoundLatitude, egbb.eastBoundLongitude, egbb.northBoundLatitude);
+    } else {
+        var llbb = layer.LatLonBoundingBox; // required in WMS 1.0.0 through 1.1.1
+        if (defined(llbb)) {
+            return Rectangle.fromDegrees(llbb.minx, llbb.miny, llbb.maxx, llbb.maxy);
+        }
+    }
+    return undefined;
+}
+
 function requestMetadata(wmsItem) {
     var result = new Metadata();
 
@@ -367,6 +409,7 @@ function requestMetadata(wmsItem) {
         }
         if (layer) {
             populateMetadataGroup(result.dataSourceMetadata, layer);
+            wmsItem._rectangleFromMetadata = getRectangleFromMetadata(layer);
         } else {
             result.dataSourceErrorMessage = 'Layer information not found in GetCapabilities operation response.';
         }

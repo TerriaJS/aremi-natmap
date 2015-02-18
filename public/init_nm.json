@@ -1,7 +1,5 @@
 {
     "corsDomains" : [
-        "data.gov.au",
-        "ga.gov.au",
         "corsproxy.com",
         "programs.communications.gov.au"
     ],
@@ -18,7 +16,7 @@
             "type": "group",
             "items": [
                 {
-                    "name": "Broadband",
+                    "name": "Communications",
                     "type": "group",
                     "items": [
                         {
@@ -26,108 +24,131 @@
                             "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
                             "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
                             "rectangle": [
-                                "112.93529999999998",
-                                "-38.208809999082796",
-                                "152.06206",
-                                "-11.05104999964455"
+                                "96.799393",
+                                "-43.598214999057824",
+                                "153.63925700000001",
+                                "-9.2159219997013"
                             ],
                             "type": "wms",
                             "url": "https://programs.communications.gov.au/geoserver/ows",
-                            "layers": "MyBroadband_Map",
+                            "layers": "public:MyBroadband_Map",
                             "parameters": {
                                 "tiled": true
                             },
-                            "dataUrlType": "none"
+                            "dataUrlType": "none",
+                            "clipToRectangle": true
                         },
                         {
                             "name": "Broadband Availability",
                             "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
                             "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
                             "rectangle": [
-                                "112.93529999999998",
-                                "-38.208809999082796",
-                                "152.06206",
-                                "-11.05104999964455"
+                                "96.799393",
+                                "-43.598214999057824",
+                                "153.63925700000001",
+                                "-9.2159219997013"
                             ],
                             "type": "wms",
                             "url": "https://programs.communications.gov.au/geoserver/ows",
-                            "layers": "MyBroadband_Availability",
+                            "layers": "public:MyBroadband_Availability",
                             "parameters": {
                                 "tiled": true
                             },
-                            "dataUrlType": "none"
+                            "dataUrlType": "none",
+                            "clipToRectangle": true
                         },
                         {
                             "name": "Broadband Availabilty no Borders",
                             "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
                             "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
                             "rectangle": [
-                                "112.93529999999998",
-                                "-38.208809999082796",
-                                "152.06206",
-                                "-11.05104999964455"
+                                "96.799393",
+                                "-43.598214999057824",
+                                "153.63925700000001",
+                                "-9.2159219997013"
                             ],
                             "type": "wms",
                             "url": "https://programs.communications.gov.au/geoserver/ows",
-                            "layers": "MyBroadband_Availability_no_outline",
+                            "layers": "public:MyBroadband_Availability_no_outline",
                             "parameters": {
                                 "tiled": true
                             },
-                            "dataUrlType": "none"
+                            "dataUrlType": "none",
+                            "clipToRectangle": true
                         },
                         {
                             "name": "Broadband Quality",
                             "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
                             "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
                             "rectangle": [
-                                "112.93529999999998",
-                                "-38.208809999082796",
-                                "152.06206",
-                                "-11.05104999964455"
+                                "96.799393",
+                                "-43.598214999057824",
+                                "153.63925700000001",
+                                "-9.2159219997013"
                             ],
                             "type": "wms",
                             "url": "https://programs.communications.gov.au/geoserver/ows",
-                            "layers": "MyBroadband_Quality",
+                            "layers": "public:MyBroadband_Quality",
                             "parameters": {
                                 "tiled": true
                             },
-                            "dataUrlType": "none"
+                            "dataUrlType": "none",
+                            "clipToRectangle": true
                         },
                         {
                             "name": "Broadband ADSL Quality",
                             "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
                             "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
                             "rectangle": [
-                                "112.93529999999998",
-                                "-38.208809999082796",
-                                "152.06206",
-                                "-11.05104999964455"
+                                "96.799393",
+                                "-43.598214999057824",
+                                "153.63925700000001",
+                                "-9.2159219997013"
                             ],
                             "type": "wms",
                             "url": "https://programs.communications.gov.au/geoserver/ows",
-                            "layers": "MyBroadband_ADSL_Quality",
+                            "layers": "public:MyBroadband_ADSL_Quality",
                             "parameters": {
                                 "tiled": true
                             },
-                            "dataUrlType": "none"
+                            "dataUrlType": "none",
+                            "clipToRectangle": true
                         },
                         {
                             "name": "Broadband ADSL Quality no Borders",
                             "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
                             "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
                             "rectangle": [
-                                "112.93529999999998",
-                                "-38.208809999082796",
-                                "152.06206",
-                                "-11.05104999964455"
+                                "96.799393",
+                                "-43.598214999057824",
+                                "153.63925700000001",
+                                "-9.2159219997013"
                             ],
                             "type": "wms",
                             "url": "https://programs.communications.gov.au/geoserver/ows",
-                            "layers": "MyBroadband_ADSL_Quality_no_outline",
+                            "layers": "public:MyBroadband_ADSL_Quality_no_outline",
                             "parameters": {
                                 "tiled": true
                             },
-                            "dataUrlType": "none"
+                            "dataUrlType": "none",
+                            "clipToRectangle": true
+                        },
+                        {
+                            "name": "Mobile Black Spot Database",
+                            "description": "Between December 2013 and August 2014 the Government accepted reports from individuals and community representatives about locations with poor or no mobile coverage. The reported locations have been included in a database that has been shared with mobile network operators and infrastructure providers to assist them in preparing funding proposals for the Mobile Black Spot Programme. Further information on the programme is available on the Department of Communications’ website [www.communications.gov.au/mobile_coverage](http://www.communications.gov.au/mobile_coverage). These locations have not been independently tested to verify the level of mobile coverage.<br/>[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
+                            "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
+                            "rectangle": [
+                                "96.799393",
+                                "-43.598214999057824",
+                                "153.63925700000001",
+                                "-9.2159219997013"
+                            ],
+                            "type": "csv",
+                            "url": "http://www.data.gov.au/dataset/7be6e3ee-043a-4c47-a6eb-a97702419ccd/resource/c6b211ad-3aa2-4f53-8427-01b52a6433a7/download/mobileblackspotdatabase.csv",
+                            "colorByValue": false,
+                            "legendUrl": "",
+                            "dataUrl": "http://data.gov.au/dataset/community-reports-of-poor-or-no-mobile-coverage",
+                            "dataUrlType": "direct"
                         }
                     ]
                 },
@@ -1185,8 +1206,8 @@
                                 "-11.05104999964455"
                             ],
                             "type": "wms",
-                            "url": "http://www.ga.gov.au/gis/services/hazards/NEXIS_2012_WMS/MapServer/WMSServer",
-                            "layers": "7",
+                            "url": "http://www.ga.gov.au/gis/services/hazards/NEXIS_National_Exposure_Information_System_Population_Density_Exposure/MapServer/WMSServer",
+                            "layers": "0,1,2,3,4",
                             "getFeatureInfoAsGeoJson": false
                         },
                         {
@@ -2456,6 +2477,17 @@
             ]
         },
         {
+            "name": "Data.gov.au",
+            "type": "ckan",
+            "url": "http://www.data.gov.au",
+            "filterQuery": ["fq=res_format%3awms"],
+            "filterByWmsGetCapabilities": false,
+            "minimumMaxScaleDenominator": 1e10,
+            "blacklist": {
+                "Rainforests (EVC_2005)": true
+            }
+        },
+        {
             "name": "Data Providers",
             "type": "group",
             "items": [
@@ -2471,7 +2503,13 @@
                     "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
                     "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
                     "url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-                    "type": "wms-getCapabilities"
+                    "type": "wms-getCapabilities",
+                    "blacklist": {
+                        "Groundwater Cartography 2.1": true,
+                        "Groundwater Cartography 2.1": true,
+                        "Surface Cartography": true,
+                        "Surface Network 2.1": true
+                    }
                 },
                 {
                     "name": "Boundaries (Australia Bureau of Statistics)",
@@ -2479,18 +2517,234 @@
                     "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
                     "url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
                     "type": "wms-getCapabilities"
+                }
+            ]
+        },
+        {
+            "name": "Tasmanian Government",
+            "type": "group",
+            "items": [
+                {
+                    "name": "Base Maps",
+                    "type": "group",
+                    "items": [
+                        {
+                            "name": "Topographic",
+                            "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                            "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                            "rectangle": [
+                                "141",
+                                "-44",
+                                "152",
+                                "-39"
+                            ],
+                            "type": "wms",
+                            "url": "http://services.thelist.tas.gov.au/arcgis/services/Basemaps/Topographic/ImageServer/WMSServer",
+                            "layers": "0",
+                            "opacity": "1.0"
+                        },
+                        {
+                            "name": "Topographic Grayscale",
+                            "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                            "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                            "rectangle": [
+                                "141",
+                                "-44",
+                                "152",
+                                "-39"
+                            ],
+                            "type": "wms",
+                            "url": "http://services.thelist.tas.gov.au/arcgis/services/Basemaps/TopographicGrayScale/ImageServer/WMSServer",
+                            "layers": "0",
+                            "opacity": "1.0"
+                        },
+                        {
+                            "name": "Orthophoto",
+                            "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                            "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                            "rectangle": [
+                                "141",
+                                "-44",
+                                "152",
+                                "-39"
+                            ],
+                            "type": "wms",
+                            "url": "http://services.thelist.tas.gov.au/arcgis/services/Basemaps/Orthophoto/ImageServer/WMSServer",
+                            "layers": "0",
+                            "opacity": "1.0"
+                        },
+                        {
+                            "name": "Tasmania Map 500k Resolution",
+                            "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                            "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                            "rectangle": [
+                                "141",
+                                "-44",
+                                "152",
+                                "-39"
+                            ],
+                            "type": "wms",
+                            "url": "http://services.thelist.tas.gov.au/arcgis/services/Basemaps/Tasmap500K/ImageServer/WMSServer",
+                            "layers": "0",
+                            "opacity": "1.0"
+                        },
+                        {
+                            "name": "Tasmania Map 250k Resolution",
+                            "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                            "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                            "rectangle": [
+                                "141",
+                                "-44",
+                                "152",
+                                "-39"
+                            ],
+                            "type": "wms",
+                            "url": "http://services.thelist.tas.gov.au/arcgis/services/Basemaps/Tasmap250K/ImageServer/WMSServer",
+                            "layers": "0",
+                            "opacity": "1.0"
+                        },
+                        {
+                            "name": "Tasmania Map 100k Resolution",
+                            "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                            "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                            "rectangle": [
+                                "141",
+                                "-44",
+                                "152",
+                                "-39"
+                            ],
+                            "type": "wms",
+                            "url": "http://services.thelist.tas.gov.au/arcgis/services/Basemaps/Tasmap100K/ImageServer/WMSServer",
+                            "layers": "0",
+                            "opacity": "1.0"
+                        },
+                        {
+                            "name": "Tasmania Map 25k Resolution",
+                            "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                            "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                            "rectangle": [
+                                "141",
+                                "-44",
+                                "152",
+                                "-39"
+                            ],
+                            "type": "wms",
+                            "url": "http://services.thelist.tas.gov.au/arcgis/services/Basemaps/Tasmap25K/ImageServer/WMSServer",
+                            "layers": "0",
+                            "opacity": "1.0"
+                        }
+                    ]
                 },
                 {
-                    "name": "data.gov.au",
-                    "dataCustodian": "[data.gov.au](http://www.data.gov.au/)",
-                    "url": "http://data.gov.au/geoserver/ows",
+                    "name": "Census Data",
+                    "description": "Service for Statistical data sourced from the Australian Bureau of Statistics.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/ABSdata/MapServer/WMSServer",
                     "type": "wms-getCapabilities"
                 },
                 {
-                    "name": "National Exposure Information System 2012",
-                    "description": "[Licence](http://www.ga.gov.au/copyright)",
-                    "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-                    "url": "http://www.ga.gov.au/gis/services/hazards/NEXIS_2012_WMS/MapServer/WMSServer",
+                    "name": "Cadastre Parcels",
+                    "description": "Service for Cadastral Parcels service including the property address.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/CadastreParcels/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Climate Change",
+                    "description": "Service for Climate Futures data including mean temperature change, annual rainfall change, pan evaporation change, relative humidity change, mean frost risk, standard precipitation index and standard precipitation index change.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/ClimateChange/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "COP Public",
+                    "description": "Service for Road Closures, Blocks and Exclusion Zones in Tasmania extracted form the Commom Operating Platform.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/COPpublic/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Emergency Management Public",
+                    "description": "Service for Emergency service layers that are publicly available including fire history and nearby safer places.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/EmergencyManagementPublic/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Flood Mapping Public",
+                    "description": "Service for Flood extents that are publicly available showing areas affected (either inundated or surrounded by water) during different flood / dam break scenarios.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/FloodMappingPublic/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Geological & Soils",
+                    "description": "Service for Geological and Soil datasets including Soil Types, Geology captured at 1:25,000 or 1:250,000 scale and Exploration license areas.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/GeologicalAndSoils/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Indexes",
+                    "description": "Service for Index datasets depicting map series areas, aerial photography coverage and plan indexes.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/Indexes/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Marine & Coastal",
+                    "description": "Service for Marine and coastal values relating to Tasmania. Datasets include marine life observations, coastal fauna and flora observations, surveys, wetland data, marine zoning and bathymetry data.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/MarineAndCoastal/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Natural Environment",
+                    "description": "Service for Flora and Fauna data including threatened species data, Natural Values Atlas (NVA) observations and vegetation communities.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/NaturalEnvironment/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Natural Value Atlas",
+                    "description": "Service for The datastets contained in this service are sourced from the Natural Values Atlas (NVA)  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/NVAdata/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Placename Points",
+                    "description": "Service for Placename points is derived from spatial LIST datasets and will show a single point in the centre of each feature.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/PlacenamePoints/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Planning",
+                    "description": "Service for Southern Tasmanian Councils Authority (STCA) planning schemes areas including special areas, planning zones and zone boundaries. Please be aware that the planning scheme data is currently under review and many zones may be currently missing as a consequence. (Last updated 20/03/2014).  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/Planning/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Planning Online",
+                    "description": "Service for Planning scheme mapping developed under the Land Use Planning and Approval Act, including Planning Zones, Planning Overlays and Planning Zone Boundaries maintained by The Tasmanian Planning Commission (TPC) together with contextual layers of Road Names, Cadastral Boundaries and the Topographic Base Map developed by Information and Land Services (ILS) - DPIPWE.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/PlanningOnline/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Topography & Relief",
+                    "description": "Service for Topographic feature typically found on a map such as roads, contours, rivers, points of interest and railway lines.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/TopographyAndRelief/MapServer/WMSServer",
+                    "type": "wms-getCapabilities"
+                },
+                {
+                    "name": "Wealth From Water",
+                    "description": "Service for Wealth from Water program that classifies land according to its suitability for various agricultural enterprises.  [Licence](http://creativecommons.org/licenses/by/2.5/au/)",
+                    "dataCustodian": "[Tasmanian Government](http://www.tas.gov.au/)",
+                    "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/WealthFromWater/MapServer/WMSServer",
                     "type": "wms-getCapabilities"
                 }
             ]

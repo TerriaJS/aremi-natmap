@@ -77,6 +77,13 @@ var Application = function() {
     this.initialBoundingBox = Rectangle.MAX_VALUE;
 
     /**
+     * Gets or sets the initial parameters of the Camera's view.  This object has three properties,
+     * position, direction, and up.  All three are Cartesian3s expressed in the Earth-centered Fixed frame.
+     * @type {Object}
+     */
+    this.initialCamera = undefined;
+
+    /**
      * Gets or sets the {@link corsProxy} used to determine if a URL needs to be proxied and to proxy it if necessary.
      * @type {corsProxy}
      */
@@ -138,7 +145,7 @@ var Application = function() {
      */
     this.nowViewing = new NowViewing(this);
 
-    knockout.track(this, ['viewerMode', 'baseMap', 'initialBoundingBox']);
+    knockout.track(this, ['viewerMode', 'baseMap', 'initialBoundingBox', 'initialCamera']);
 
     // IE versions prior to 10 don't support CORS, so always use the proxy.
     corsProxy.alwaysUseProxy = (FeatureDetection.isInternetExplorer() && FeatureDetection.internetExplorerVersion()[0] < 10);
@@ -213,6 +220,16 @@ Application.prototype.addInitSource = function(initSource) {
 
     // The last init source to specify a camera position wins.
     if (defined(initSource.camera)) {
+        if (defined(initSource.camera.position)) {
+            this.initialCamera = {
+                position: initSource.camera.position,
+                direction: initSource.camera.direction,
+                up: initSource.camera.up
+            };
+        } else {
+            this.initialCamera = undefined;
+        }
+
         this.initialBoundingBox = Rectangle.fromDegrees(initSource.camera.west, initSource.camera.south, initSource.camera.east, initSource.camera.north);
     }
 
@@ -240,6 +257,8 @@ Application.prototype.addInitSource = function(initSource) {
         return when();
     }
 };
+
+var initSourceNameRegex = /\b(\w+)\b/i;
 
 function interpretHash(hashProperties, userProperties, persistentInitSources, temporaryInitSources) {
     for (var property in hashProperties) {
@@ -271,7 +290,8 @@ function interpretHash(hashProperties, userProperties, persistentInitSources, te
                 userProperties[property] = propertyValue;
                 knockout.track(userProperties, [property]);
             } else {
-                var initSourceFile = 'init_' + property + '.json';
+                var name = initSourceNameRegex.exec(property);
+                var initSourceFile = 'init_' + name[0] + '.json';
                 persistentInitSources.push(initSourceFile);
                 temporaryInitSources.push(initSourceFile);
             }
