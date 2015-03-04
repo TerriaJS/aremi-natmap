@@ -1,9 +1,6 @@
 {
   "corsDomains": [
-    "data.gov.au",
-    "ga.gov.au",
-    "corsproxy.com",
-    "programs.communications.gov.au"
+    "corsproxy.com"
   ],
   "camera": {
     "west": 105,
@@ -741,129 +738,135 @@
               ]
             },
             {
-              "name": "Big Lake Suite mean temp at 5400m",
-              "layers": "MoombaMeanTemp5400m",
-              "description": "NICTA Geothermal",
-              "dataCustodian": "[NICTA](http://nicta.com.au/)",
-              "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
-              "type": "wms",
-              "rectangle": [
-                "139.8",
-                "-28.3",
-                "140.7",
-                "-27.6"
-              ]
-            },
-            {
-              "name": "Big Lake Suite mean temp at 6200m",
-              "layers": "MoombaMeanTemp6200m",
-              "description": "NICTA Geothermal",
-              "dataCustodian": "[NICTA](http://nicta.com.au/)",
-              "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
-              "type": "wms",
-              "rectangle": [
-                "139.8",
-                "-28.3",
-                "140.7",
-                "-27.6"
-              ]
-            },
-            {
-              "name": "Big Lake Suite Granite probability at 5400m",
-              "layers": "MoombaPGranite5400m",
-              "description": "NICTA Geothermal",
-              "dataCustodian": "[NICTA](http://nicta.com.au/)",
-              "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
-              "type": "wms",
-              "rectangle": [
-                "139.8",
-                "-28.3",
-                "140.7",
-                "-27.6"
-              ]
-            },
-            {
-              "name": "Big Lake Suite Granite probability at 6900m",
-              "layers": "MoombaPGranite6900m",
-              "description": "NICTA Geothermal",
-              "dataCustodian": "[NICTA](http://nicta.com.au/)",
-              "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
-              "type": "wms",
-              "rectangle": [
-                "139.8",
-                "-28.3",
-                "140.7",
-                "-27.6"
-              ]
-            },
-            {
-              "name": "Big Lake Suite Granite probability at 8400m",
-              "layers": "MoombaPGranite8400m",
-              "description": "NICTA Geothermal",
-              "dataCustodian": "[NICTA](http://nicta.com.au/)",
-              "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
-              "type": "wms",
-              "rectangle": [
-                "139.8",
-                "-28.3",
-                "140.7",
-                "-27.6"
-              ]
-            },
-            {
-              "name": "Pretty Hill Granite probability at 2200m",
-              "layers": "PrettyHill2200m",
-              "description": "NICTA Geothermal",
-              "dataCustodian": "[NICTA](http://nicta.com.au/)",
-              "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
-              "type": "wms",
-              "rectangle": [
-                "141.8",
-                "-38.5",
-                "142.7",
-                "-37.95"
-              ]
-            },
-            {
-              "name": "Pretty Hill Granite probability at 2800m",
-              "layers": "PrettyHill2800m",
-              "description": "NICTA Geothermal",
-              "dataCustodian": "[NICTA](http://nicta.com.au/)",
-              "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
-              "type": "wms",
-              "rectangle": [
-                "141.8",
-                "-38.5",
-                "142.7",
-                "-37.95"
-              ]
-            },
-            {
-              "name": "Pretty Hill Granite probability at 3300m",
-              "layers": "PrettyHill3300m",
-              "description": "NICTA Geothermal",
-              "dataCustodian": "[NICTA](http://nicta.com.au/)",
-              "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
-              "type": "wms",
-              "rectangle": [
-                "141.8",
-                "-38.5",
-                "142.7",
-                "-37.95"
-              ]
-            },
-            {
-              "name": "Pretty Hill Granite probability at 3800m",
-              "layers": "PrettyHill3800m",
-              "description": "NICTA Geothermal",
-              "dataCustodian": "[NICTA](http://nicta.com.au/)",
-              "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
-              "type": "wms",
-              "rectangle": [
-                "141.8",
-                "-38.5",
-                "142.7",
-                "-37.95"
+              "name": "NICTA Geothermal model",
+              "type": "group",
+              "items": [
+                {
+                  "name": "Big Lake mean temp, 5.4km",
+                  "layers": "MoombaMeanTemp5400m",
+                  "description": "NICTA Geothermal",
+                  "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                  "type": "wms",
+                  "rectangle": [
+                    "139.8",
+                    "-28.3",
+                    "140.7",
+                    "-27.6"
+                  ]
+                },
+                {
+                  "name": "Big Lake mean temp, 6.2km",
+                  "layers": "MoombaMeanTemp6200m",
+                  "description": "NICTA Geothermal",
+                  "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                  "type": "wms",
+                  "rectangle": [
+                    "139.8",
+                    "-28.3",
+                    "140.7",
+                    "-27.6"
+                  ]
+                },
+                {
+                  "name": "Big Lake granite probability, 5.4km",
+                  "layers": "MoombaPGranite5400m",
+                  "description": "NICTA Geothermal",
+                  "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                  "type": "wms",
+                  "rectangle": [
+                    "139.8",
+                    "-28.3",
+                    "140.7",
+                    "-27.6"
+                  ]
+                },
+                {
+                  "name": "Big Lake granite probability, 6.9km",
+                  "layers": "MoombaPGranite6900m",
+                  "description": "NICTA Geothermal",
+                  "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                  "type": "wms",
+                  "rectangle": [
+                    "139.8",
+                    "-28.3",
+                    "140.7",
+                    "-27.6"
+                  ]
+                },
+                {
+                  "name": "Big Lake granite probability, 8.4km",
+                  "layers": "MoombaPGranite8400m",
+                  "description": "NICTA Geothermal",
+                  "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                  "type": "wms",
+                  "rectangle": [
+                    "139.8",
+                    "-28.3",
+                    "140.7",
+                    "-27.6"
+                  ]
+                },
+                {
+                  "name": "Pretty Hill granite probability, 2.2km",
+                  "layers": "PrettyHill2200m",
+                  "description": "NICTA Geothermal",
+                  "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                  "type": "wms",
+                  "rectangle": [
+                    "141.8",
+                    "-38.5",
+                    "142.7",
+                    "-37.95"
+                  ]
+                },
+                {
+                  "name": "Pretty Hill granite probability, 2.8km",
+                  "layers": "PrettyHill2800m",
+                  "description": "NICTA Geothermal",
+                  "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                  "type": "wms",
+                  "rectangle": [
+                    "141.8",
+                    "-38.5",
+                    "142.7",
+                    "-37.95"
+                  ]
+                },
+                {
+                  "name": "Pretty Hill granite probability, 3.3km",
+                  "layers": "PrettyHill3300m",
+                  "description": "NICTA Geothermal",
+                  "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                  "type": "wms",
+                  "rectangle": [
+                    "141.8",
+                    "-38.5",
+                    "142.7",
+                    "-37.95"
+                  ]
+                },
+                {
+                  "name": "Pretty Hill granite probability, 3.8km",
+                  "layers": "PrettyHill3800m",
+                  "description": "NICTA Geothermal",
+                  "dataCustodian": "[NICTA](http://nicta.com.au/)",
+                  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
+                  "type": "wms",
+                  "rectangle": [
+                    "141.8",
+                    "-38.5",
+                    "142.7",
+                    "-37.95"
+                  ]
+                }
               ]
             },
             {
