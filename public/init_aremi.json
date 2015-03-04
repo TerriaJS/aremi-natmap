@@ -88,6 +88,372 @@
                     ]
                   },
                   {
+                    "name": "Series 2 - CSP Indicative Firm Capacity",
+                    "type": "group",
+                    "items": [
+                      {
+                        "name":"Summer Afternoon",
+                        "type": "group",
+                        "items": [
+                         {
+                            "name": "0 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-0h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "1 hour of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-1h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "3 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-3h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "5 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-5h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "10 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-10h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "15 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-15h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name":"Summer Evening",
+                        "type": "group",
+                        "items": [
+                         {
+                            "name": "0 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-0h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "1 hour of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-1h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "3 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-3h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "5 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-5h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "10 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-10h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "15 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-15h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name":"Winter Afternoon",
+                        "type": "group",
+                        "items": [
+                         {
+                            "name": "0 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-0h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "1 hour of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-1h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "3 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-3h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "5 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-5h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "10 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-10h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "15 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-15h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name":"Winter Evening",
+                        "type": "group",
+                        "items": [
+                         {
+                            "name": "0 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-0h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "1 hour of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-1h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "3 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-3h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "5 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-5h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "10 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-10h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          },
+                         {
+                            "name": "15 hours of storage",
+                            "description": "A thing",
+                            "dataCustodian": "[Institute for Sustainable Futures - University of Technology, Sydney](http://breakingthesolargridlock.net/)",
+                            "type": "kml",
+                            "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-15h.kmz",
+                            "legendUrl": "datasets/dance/availcap.png",
+                            "rectangle":[
+                              "137.0",
+                              "-39.5",
+                              "154.0",
+                              "-18.5"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
                     "name": "Series 3 - CSP Cost Benefit",
                     "type": "group",
                     "items":[
