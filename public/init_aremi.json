@@ -1,9 +1,6 @@
 {
   "corsDomains": [
-    "data.gov.au",
-    "ga.gov.au",
-    "corsproxy.com",
-    "programs.communications.gov.au"
+    "corsproxy.com"
   ],
   "camera": {
     "west": 105,
