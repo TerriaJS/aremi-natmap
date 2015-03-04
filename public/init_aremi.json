@@ -870,59 +870,65 @@
               ]
             },
             {
-              "name": "Potassium dose",
-              "layers": "radmap10_unfiltered_pct_potassium",
-              "description": "[Licence](http://www.ga.gov.au/copyright)",
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_pctk.nc",
-              "type": "wms",
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "Thorium dose",
-              "layers": "radmap10_unfiltered_ppm_thorium",
-              "description": "[Licence](http://www.ga.gov.au/copyright)",
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_ppmth.nc",
-              "type": "wms",
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "Uranium dose",
-              "layers": "radmap10_unfiltered_ppm_uranium",
-              "description": "[Licence](http://www.ga.gov.au/copyright)",
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_ppmu.nc",
-              "type": "wms",
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "Terrestrial dose",
-              "layers": "radmap10_unfiltered_terrestrial_dose",
-              "description": "[Licence](http://www.ga.gov.au/copyright)",
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_dose.nc",
-              "type": "wms",
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
+              "name": "Radiation",
+              "type": "group",
+              "items": [
+                {
+                  "name": "Potassium dose",
+                  "layers": "radmap10_unfiltered_pct_potassium",
+                  "description": "[Licence](http://www.ga.gov.au/copyright)",
+                  "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+                  "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_pctk.nc",
+                  "type": "wms",
+                  "rectangle": [
+                    "100.0",
+                    "-44.0",
+                    "159.0",
+                    "-4.0"
+                  ]
+                },
+                {
+                  "name": "Thorium dose",
+                  "layers": "radmap10_unfiltered_ppm_thorium",
+                  "description": "[Licence](http://www.ga.gov.au/copyright)",
+                  "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+                  "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_ppmth.nc",
+                  "type": "wms",
+                  "rectangle": [
+                    "100.0",
+                    "-44.0",
+                    "159.0",
+                    "-4.0"
+                  ]
+                },
+                {
+                  "name": "Uranium dose",
+                  "layers": "radmap10_unfiltered_ppm_uranium",
+                  "description": "[Licence](http://www.ga.gov.au/copyright)",
+                  "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+                  "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_ppmu.nc",
+                  "type": "wms",
+                  "rectangle": [
+                    "100.0",
+                    "-44.0",
+                    "159.0",
+                    "-4.0"
+                  ]
+                },
+                {
+                  "name": "Terrestrial dose",
+                  "layers": "radmap10_unfiltered_terrestrial_dose",
+                  "description": "[Licence](http://www.ga.gov.au/copyright)",
+                  "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+                  "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_dose.nc",
+                  "type": "wms",
+                  "rectangle": [
+                    "100.0",
+                    "-44.0",
+                    "159.0",
+                    "-4.0"
+                  ]
+                }
               ]
             }
           ]
