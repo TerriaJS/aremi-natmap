@@ -258,7 +258,7 @@
               ]
             },
             {
-              "name": "Big Lake Suite mean temp at 5400m",
+              "name": "Big Lake mean temp, 5.4km",
               "layers": "MoombaMeanTemp5400m",
               "description": "NICTA Geothermal",
               "dataCustodian": "[NICTA](http://nicta.com.au/)",
@@ -272,7 +272,7 @@
               ]
             },
             {
-              "name": "Big Lake Suite mean temp at 6200m",
+              "name": "Big Lake mean temp, 6.2km",
               "layers": "MoombaMeanTemp6200m",
               "description": "NICTA Geothermal",
               "dataCustodian": "[NICTA](http://nicta.com.au/)",
@@ -286,7 +286,7 @@
               ]
             },
             {
-              "name": "Big Lake Suite Granite probability at 5400m",
+              "name": "Big Lake granite probability, 5.4km",
               "layers": "MoombaPGranite5400m",
               "description": "NICTA Geothermal",
               "dataCustodian": "[NICTA](http://nicta.com.au/)",
@@ -300,7 +300,7 @@
               ]
             },
             {
-              "name": "Big Lake Suite Granite probability at 6900m",
+              "name": "Big Lake granite probability, 6.9km",
               "layers": "MoombaPGranite6900m",
               "description": "NICTA Geothermal",
               "dataCustodian": "[NICTA](http://nicta.com.au/)",
@@ -314,7 +314,7 @@
               ]
             },
             {
-              "name": "Big Lake Suite Granite probability at 8400m",
+              "name": "Big Lake granite probability, 8.4km",
               "layers": "MoombaPGranite8400m",
               "description": "NICTA Geothermal",
               "dataCustodian": "[NICTA](http://nicta.com.au/)",
@@ -328,7 +328,7 @@
               ]
             },
             {
-              "name": "Pretty Hill Granite probability at 2200m",
+              "name": "Pretty Hill granite probability, 2.2km",
               "layers": "PrettyHill2200m",
               "description": "NICTA Geothermal",
               "dataCustodian": "[NICTA](http://nicta.com.au/)",
@@ -342,7 +342,7 @@
               ]
             },
             {
-              "name": "Pretty Hill Granite probability at 2800m",
+              "name": "Pretty Hill granite probability, 2.8km",
               "layers": "PrettyHill2800m",
               "description": "NICTA Geothermal",
               "dataCustodian": "[NICTA](http://nicta.com.au/)",
@@ -356,7 +356,7 @@
               ]
             },
             {
-              "name": "Pretty Hill Granite probability at 3300m",
+              "name": "Pretty Hill granite probability, 3.3km",
               "layers": "PrettyHill3300m",
               "description": "NICTA Geothermal",
               "dataCustodian": "[NICTA](http://nicta.com.au/)",
@@ -370,7 +370,7 @@
               ]
             },
             {
-              "name": "Pretty Hill Granite probability at 3800m",
+              "name": "Pretty Hill granite probability, 3.8km",
               "layers": "PrettyHill3800m",
               "description": "NICTA Geothermal",
               "dataCustodian": "[NICTA](http://nicta.com.au/)",
