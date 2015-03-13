@@ -136,13 +136,10 @@ if (start) {
         BrandBarViewModel.create(ui, {
             elements: [
                 '<div class="ausglobe-title-aremi">\
-                    <strong>Australian Renewable Energy</strong>\
+                    <img class="left"  src="images/ARENA-logo.png"/>\
+                    <img class="right" src="images/nicta.png"/>\
                     <br/>\
-                    Mapping Infrastructure\
-                    <br/>\
-                    <small >in association with NICTA and Geoscience Australia</small>\
-                    <br/>\
-                    <img src="images/ARENA-logo.png"/>\
+                    <strong>Australian Renewable Energy Mapping Infrastructure</strong>\
                 </div>'
             ]
         });
