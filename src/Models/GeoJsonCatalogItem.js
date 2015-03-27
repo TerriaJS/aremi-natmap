@@ -16,6 +16,8 @@ var loadText = require('../../third_party/cesium/Source/Core/loadText');
 var Rectangle = require('../../third_party/cesium/Source/Core/Rectangle');
 var when = require('../../third_party/cesium/Source/ThirdParty/when');
 
+var PointGraphics = require('../../third_party/cesium/Source/DataSources/PointGraphics');
+
 var Metadata = require('./Metadata');
 var ModelError = require('./ModelError');
 var CatalogItem = require('./CatalogItem');
@@ -83,6 +85,8 @@ var GeoJsonCatalogItem = function(application, url) {
 };
 
 inherit(CatalogItem, GeoJsonCatalogItem);
+
+GeoJsonCatalogItem.proj4BaseUrl = 'proj4def/';
 
 defineProperties(GeoJsonCatalogItem.prototype, {
     /**
@@ -293,6 +297,15 @@ function loadGeoJson(geoJsonItem) {
                 point.outlineWidth = new ConstantProperty(1);
             }
 
+            var billboard = entity.billboard;
+            if (defined(billboard)) {
+                entity.point = new PointGraphics({
+                    color: pointColor,
+                    pixelSize: pointSize
+                });
+                entity.billboard = undefined;
+            }
+
             var polyline = entity.polyline;
             if (defined(polyline)) {
                 material = new ColorMaterialProperty();
@@ -335,7 +348,7 @@ function checkProjection(code) {
         return true;
     }
 
-    var url = '/proj4def/' + code;
+    var url = GeoJsonCatalogItem.proj4BaseUrl + code;
     return when(loadText(url), function (proj4Text) {
             proj4_epsg[code] = proj4Text;
             console.log('Added new string for', code, '=', proj4Text);

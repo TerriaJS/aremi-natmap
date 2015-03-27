@@ -2,11 +2,11 @@
   "corsDomains": [
     "corsproxy.com"
   ],
-  "camera": {
-    "west": 105,
-    "south": -45,
-    "east": 155,
-    "north": -5
+  "homeCamera": {
+      "west": 105,
+      "south": -45,
+      "east": 155,
+      "north": -5
   },
   "services": [],
   "catalog": [
@@ -1049,7 +1049,7 @@
               "layers": "admin_bnds:STE_2011_AUST",
               "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
               "rectangle": [
                 "96.816941408",
@@ -1063,7 +1063,7 @@
               "layers": "admin_bnds:LGA_2011_AUST",
               "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
               "rectangle": [
                 "112.92111395999997",
@@ -1077,7 +1077,7 @@
               "layers": "admin_bnds:POA_2011_AUST",
               "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
               "rectangle": [
                 "96.816941408",
@@ -1091,7 +1091,7 @@
               "layers": "admin_bnds:CED_2011_AUST",
               "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
               "rectangle": [
                 "96.816941408",
@@ -1105,7 +1105,7 @@
               "layers": "admin_bnds:SED_2011_AUST",
               "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
               "rectangle": [
                 "112.921113952",
@@ -1119,7 +1119,7 @@
               "layers": "admin_bnds:SSC_2011_AUST",
               "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
               "rectangle": [
                 "96.816941408",
@@ -1133,7 +1133,7 @@
               "layers": "admin_bnds:ADD_2011_AUST",
               "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
               "rectangle": [
                 "112.921113952",
@@ -1147,7 +1147,7 @@
               "layers": "admin_bnds:NRMR_2011_AUST",
               "description": "[Licence](http://creativecommons.org/licenses/by/2.5/au/)",
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/admin_bnds_abs/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
               "rectangle": [
                 "96.816941408",
@@ -1195,7 +1195,7 @@
               "layers": "benchmarks",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.50982",
@@ -1209,7 +1209,7 @@
               "layers": "contours",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "112.92137",
@@ -1223,7 +1223,7 @@
               "layers": "horizontalcontrolpoints",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.06265",
@@ -1237,7 +1237,7 @@
               "layers": "spotelevations",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "112.93472",
@@ -1305,7 +1305,7 @@
               "layers": "damwalls",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "115.00212",
@@ -1319,7 +1319,7 @@
               "layers": "fences",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "112.92895",
@@ -1333,7 +1333,7 @@
               "layers": "marineinfrastructurelines",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.32462999999998",
@@ -1347,7 +1347,7 @@
               "layers": "marineinfrastructurepoints",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "112.97203",
@@ -1361,7 +1361,7 @@
               "layers": "mineareas",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.36167000000002",
@@ -1375,7 +1375,7 @@
               "layers": "verticalobstructions",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.52788",
@@ -1395,7 +1395,7 @@
               "layers": "aircraftfacilitypoints",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.15955999999998",
@@ -1409,7 +1409,7 @@
               "layers": "ferryroutelines",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "115.2094",
@@ -1457,7 +1457,7 @@
               "layers": "pipelines",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.67812999999998",
@@ -1477,7 +1477,7 @@
               "layers": "cultivatedareas",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.66133",
@@ -1491,7 +1491,7 @@
               "layers": "nativevegetationareas",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "112.93226",
@@ -1553,7 +1553,7 @@
               "layers": "flats",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.00808000000002",
@@ -1567,7 +1567,7 @@
               "layers": "foreshoreflats",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.00706",
@@ -1581,7 +1581,7 @@
               "layers": "lakes",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "112.99395",
@@ -1595,7 +1595,7 @@
               "layers": "marinehazardareas",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "112.92034999999998",
@@ -1609,7 +1609,7 @@
               "layers": "marinehazardpoints",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.11903999999998",
@@ -1623,7 +1623,7 @@
               "layers": "reservoirs",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "114.99601",
@@ -1665,7 +1665,7 @@
               "layers": "watercourseareas",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver-nm.nicta.com.au/geotopo_250k/ows",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
               "rectangle": [
                 "113.56261000000002",
