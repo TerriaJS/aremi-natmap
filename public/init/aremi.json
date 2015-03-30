@@ -25,6 +25,11 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography/MapServer/WFSServer",
               "type": "wfs",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -39,6 +44,11 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/energy/ASEIS_Features/MapServer/WMSServer",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -53,6 +63,11 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/energy/ASEIS_Features/MapServer/WMSServer",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -77,6 +92,11 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
+                  "opacity": "1.0",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "139.8",
                     "-28.3",
@@ -91,6 +111,11 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
+                  "opacity": "1.0",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "139.8",
                     "-28.3",
@@ -105,6 +130,11 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
+                  "opacity": "1.0",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "139.8",
                     "-28.3",
@@ -119,6 +149,11 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
+                  "opacity": "1.0",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "139.8",
                     "-28.3",
@@ -133,6 +168,11 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
+                  "opacity": "1.0",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "139.8",
                     "-28.3",
@@ -147,6 +187,11 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
+                  "opacity": "1.0",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "141.8",
                     "-38.5",
@@ -161,6 +206,11 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
+                  "opacity": "1.0",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "141.8",
                     "-38.5",
@@ -175,6 +225,11 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
+                  "opacity": "1.0",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "141.8",
                     "-38.5",
@@ -189,6 +244,11 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
+                  "opacity": "1.0",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "141.8",
                     "-38.5",
@@ -767,6 +827,10 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gisimg/services/energy/Solar_Energy_GHI_Minimum/MapServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -781,6 +845,10 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gisimg/services/energy/Solar_Energy_GHI_Minimum/MapServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -795,6 +863,10 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gisimg/services/energy/Solar_Energy_GHI_Mean/MapServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -809,6 +881,10 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gisimg/services/energy/Solar_Energy_GHI_Mean/MapServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -823,6 +899,10 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gisimg/services/energy/Solar_Energy_DNI_Mean/MapServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -837,6 +917,10 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gisimg/services/energy/Solar_Energy_DNI_Mean/MapServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -862,10 +946,14 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/marine_coastal/Australian_Bathymetry_Topography/MapServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
+                "90.0",
+                "-62.0",
+                "174.0",
                 "-4.0"
               ]
             },
@@ -876,10 +964,14 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/marine_coastal/Australian_Seabed_Features/MapServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
+                "90.0",
+                "-62.0",
+                "174.0",
                 "-4.0"
               ]
             }
@@ -896,6 +988,11 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/topography/National_Waste_Management_Facilities/MapServer/WMSServer",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -916,6 +1013,10 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gisimg/services/energy/OZTemp_Interpreted_Temperature_at_5km_Depth_Image/ImageServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -930,6 +1031,11 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/energy/OZTemp_Well_Data/MapServer/WMSServer",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -948,6 +1054,10 @@
                   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                   "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_pctk.nc",
                   "type": "wms",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "100.0",
                     "-44.0",
@@ -962,7 +1072,11 @@
                   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                   "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_ppmth.nc",
                   "type": "wms",
-                  "rectangle": [
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
+                    "rectangle": [
                     "100.0",
                     "-44.0",
                     "159.0",
@@ -976,6 +1090,10 @@
                   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                   "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_ppmu.nc",
                   "type": "wms",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "100.0",
                     "-44.0",
@@ -990,6 +1108,10 @@
                   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
                   "url": "http://www.ga.gov.au/thredds/wms/national_grids/radmap10_unfiltered_dose.nc",
                   "type": "wms",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
                   "rectangle": [
                     "100.0",
                     "-44.0",
@@ -1023,6 +1145,11 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/energy/ASEIS_Features/MapServer/WMSServer",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -1037,6 +1164,11 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/energy/ASEIS_Features/MapServer/WMSServer",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -1051,11 +1183,16 @@
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "96.816941408",
-                "-43.74050960205765",
-                "159.109219008",
-                "-9.142175976703609"
+                "96.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1065,11 +1202,16 @@
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.92111395999997",
-                "-43.74050957905761",
-                "153.63872711999997",
-                "-9.142175969703604"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1079,11 +1221,16 @@
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "96.816941408",
-                "-43.59821500205783",
-                "159.109219008",
-                "-9.142175976703609"
+                "96.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1093,11 +1240,16 @@
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "96.816941408",
-                "-43.740509602057614",
-                "159.109219008",
-                "-9.142175976703609"
+                "96.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1107,11 +1259,16 @@
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.921113952",
-                "-43.740509602057614",
-                "159.109219008",
-                "-9.142175976703609"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1121,11 +1278,16 @@
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "96.816941408",
-                "-43.740509602057614",
-                "159.109219008",
-                "-9.142175976703609"
+                "96.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1135,11 +1297,16 @@
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.921113952",
-                "-43.740509602057614",
-                "159.109219008",
-                "-9.142175976703609"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1149,11 +1316,16 @@
               "dataCustodian": "[Australian Bureau of Statistics](http://www.abs.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/admin_bnds_abs/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "96.816941408",
-                "-43.740509602057614",
-                "159.109219008",
-                "-9.142175976703609"
+                "96.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             }
           ]
@@ -1169,6 +1341,10 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gisimg/services/topography/dem_s_slopepct/ImageServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -1183,11 +1359,15 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gisimg/services/topography/dem_s_aspect/ImageServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.50982",
-                "-38.647199999079525",
-                "149.92117",
-                "-12.41999999960316"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1197,11 +1377,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.50982",
-                "-38.647199999079525",
-                "149.92117",
-                "-12.41999999960316"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1211,11 +1396,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.92137",
-                "-43.74297999905761",
-                "153.63857000000004",
-                "-8.93332999971015"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1225,11 +1415,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.06265",
-                "-43.51730999905795",
-                "153.55039",
-                "-10.462999999662589"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1239,11 +1434,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.93472",
-                "-43.657359999057725",
-                "153.63573999999997",
-                "-9.004409999707923"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1253,11 +1453,15 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gisimg/services/topography/dem_s_1s/ImageServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.93472",
-                "-43.657359999057725",
-                "153.63573999999997",
-                "-9.004409999707923"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             }
           ]
@@ -1273,11 +1477,15 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/hazards/NEXIS_National_Exposure_Information_System_Population_Density_Exposure/MapServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.62627",
-                "-43.45491999905806",
-                "153.61314",
-                "-12.435059999602709"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             }
           ]
@@ -1293,11 +1501,15 @@
               "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
               "url": "https://programs.communications.gov.au/geoserver/ows",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.93529999999998",
-                "-38.208809999082796",
-                "152.06206",
-                "-11.05104999964455"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1307,11 +1519,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "115.00212",
-                "-43.18769999905856",
-                "153.30629",
-                "-10.571689999659238"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1321,11 +1538,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.92895",
-                "-35.37394999910903",
-                "152.97735999999998",
-                "-10.895739999649303"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1335,11 +1557,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.32462999999998",
-                "-43.16099999905862",
-                "153.59193",
-                "-9.062449999706104"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1349,11 +1576,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.97203",
-                "-43.657359999057725",
-                "153.63569999999999",
-                "-9.140769999703654"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1363,11 +1595,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.36167000000002",
-                "-43.43038999905809",
-                "153.50486000000004",
-                "-11.872959999619598"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1377,11 +1614,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.52788",
-                "-43.37782999905819",
-                "153.58229000000003",
-                "-9.080289999705544"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             }
           ]
@@ -1397,11 +1639,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.15955999999998",
-                "-43.651859999057734",
-                "153.56134999999998",
-                "-9.088949999705271"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1411,11 +1658,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "115.2094",
-                "-43.14290999905865",
-                "153.52870000000001",
-                "-10.584439999658853"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1425,11 +1677,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography_2014/MapServer/WMSServer",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.62627",
-                "-43.45491999905806",
-                "153.61314",
-                "-12.435059999602709"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1439,11 +1696,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography_2014/MapServer/WMSServer",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.93174000000002",
-                "-43.58748999905784",
-                "153.63281",
-                "-8.93332999971015"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             }
           ]
@@ -1459,11 +1721,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.67812999999998",
-                "-43.00307999905895",
-                "153.15454",
-                "-10.903989999649047"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             }
           ]
@@ -1479,11 +1746,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.66133",
-                "-43.44901999905807",
-                "153.54656",
-                "-9.04530999970664"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1493,11 +1765,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.93226",
-                "-43.658549999057726",
-                "153.63769",
-                "-8.93332999971015"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1507,11 +1784,15 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/earth_science/GA_Surface_Geology_of_Australia/MapServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.93226",
-                "-43.658549999057726",
-                "153.63769",
-                "-8.93332999971015"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             }
           ]
@@ -1527,6 +1808,10 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gis/services/hazards/NFRIPCatchments/MapServer/WMSServer",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
                 "100.0",
                 "-44.0",
@@ -1541,11 +1826,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geofabric.bom.gov.au/simplefeatures/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.6089684320001",
-                "-43.59020860705779",
-                "153.62495056300006",
-                "-10.835983610651068"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1555,11 +1845,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.00808000000002",
-                "-43.60604999905781",
-                "153.61275",
-                "-8.93332999971015"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1569,11 +1864,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.00706",
-                "-43.511829999057966",
-                "153.57853",
-                "-9.007109999707835"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1583,11 +1883,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.99395",
-                "-43.55222999905789",
-                "153.61302",
-                "-8.93787999971001"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1597,11 +1902,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.92034999999998",
-                "-43.5473099990579",
-                "153.54714",
-                "-8.998569999708106"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1611,11 +1921,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.11903999999998",
-                "-43.66633999905772",
-                "153.62995",
-                "-9.063349999706077"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1625,11 +1940,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "114.99601",
-                "-43.19763999905853",
-                "153.56568",
-                "-10.571689999659238"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1639,11 +1959,16 @@
               "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
               "url": "http://geofabric.bom.gov.au/simplefeatures/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.37534500000005",
-                "-43.629381999057735",
-                "153.63207400000002",
-                "-9.242297499700408"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1653,11 +1978,16 @@
               "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
               "url": "http://geofabric.bom.gov.au/simplefeatures/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.80691",
-                "-43.00307999905891",
-                "152.89131000000003",
-                "-10.903989999649017"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1667,11 +1997,16 @@
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
               "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "113.56261000000002",
-                "-43.58998999905784",
-                "153.58856",
-                "-8.93332999971015"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             },
             {
@@ -1680,12 +2015,16 @@
               "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
               "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
               "url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-              "type": null,
+              "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.9225",
-                "-43.73999999905757",
-                "153.63750000000002",
-                "-9.197499999701808"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             }
           ]
@@ -1701,11 +2040,15 @@
               "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
               "url": "http://geofabric.bom.gov.au/simplefeatures/ows",
               "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
               "rectangle": [
-                "112.92137000000001",
-                "-43.65854999905766",
-                "153.63857000000004",
-                "-9.219939999701113"
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
               ]
             }
           ]
