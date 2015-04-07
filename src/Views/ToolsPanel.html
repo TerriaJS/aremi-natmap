@@ -16,20 +16,26 @@
                     </select>
                 </label>
 
+                Measure speed of tiles in zoom range:
+                <div class="tools-url-input-outer-holder">
+                    <div class="tools-url-input-inner-holder">
+                        <input class="tools-number-input" type="number" data-bind="value: minZoomLevel" />
+                        &nbsp;to&nbsp;
+                        <input class="tools-number-input" type="number" data-bind="value: maxZoomLevel" />
+                    </div>
+                    <input class="tools-url-add-button" type="submit" value="Request Tiles" />
+                </div>
                 <div>
                     <label class="tools-content-type">
-                        <input type="checkbox" data-bind="checked: useCache" />
+                        <input type="checkbox" data-bind="checked: useWmsTileCache" />
+                        Use WMS tile cache
+                    </label>
+                    <label class="tools-content-type">
+                        <input type="checkbox" data-bind="checked: useProxyCache" />
                         Use proxy cache
                     </label>
                 </div>
 
-                Enter the number of tile levels to request
-                <div class="tools-url-input-outer-holder">
-                    <div class="tools-url-input-inner-holder">
-                        <input class="tools-url-input" type="text" data-bind="value: cacheLevels" />
-                    </div>
-                    <input class="tools-url-add-button" type="submit" value="Request Tiles" />
-                </div>
             </form>
 
             <form class="tools-form" data-bind="submit: exportFile">
