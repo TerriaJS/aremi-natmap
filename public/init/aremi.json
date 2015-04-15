@@ -944,12 +944,9 @@
               "layers": "Australian_Bathymetry_Topography",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/gis/services/marine_coastal/Australian_Bathymetry_Topography/MapServer/WMSServer",
-              "type": "wms",
+              "url": "http://www.ga.gov.au/gis/rest/services/marine_coastal/Australian_Bathymetry_Topography/MapServer",
+              "type": "esri-mapServer",
               "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              },
               "rectangle": [
                 "90.0",
                 "-62.0",
