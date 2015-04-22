@@ -1136,6 +1136,22 @@
           "type": "group",
           "items": [
             {
+              "name": "PSMA Cadastre",
+              "description": "[Licence](http://www.ga.gov.au/copyright)",
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "layers": "Cadastre",
+              "type": "esri-mapServer",
+              "url": "http://www.ga.gov.au/gisimg/rest/services/topography/PSMA_Cadastre/MapServer",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ]
+            },
+            {
               "name": "Development exclusion areas",
               "layers": "Exclusion Blob",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
