@@ -1423,16 +1423,11 @@
             },
             {
               "name": "Horizontal Control Points",
-              "layers": "horizontalcontrolpoints",
+              "typeNames": "topography_Australian_Topography:Horizontal_Control",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
-              "type": "wms",
-              "opacity": "1.0",
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              },
+              "url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography/MapServer/WFSServer",
+              "type": "wfs",
               "rectangle": [
                 "100.0",
                 "-44.0",
