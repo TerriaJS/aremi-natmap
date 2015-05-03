@@ -1121,6 +1121,33 @@
               "type": "group",
               "items": [
                 {
+                  "name": "Australian Photovoltaic Institute",
+                  "type": "group",
+                  "items": [
+                    {
+                      "name": "Solar PV contribution",
+                      "type": "csv",
+                      "url": "http://services.aremi.nicta.com.au/apvi/contribution/csv"
+                    },
+                    {
+                      "name": "Solar PV performance",
+                      "type": "csv",
+                      "url": "http://services.aremi.nicta.com.au/apvi/performance/csv"
+                    }
+                  ]
+                },
+                {
+                  "name": "Australian Energy Market Operator",
+                  "type": "group",
+                  "items": [
+                    {
+                      "name": "NEM 5-minute generation",
+                      "type": "csv",
+                      "url": "http://services.aremi.nicta.com.au/aemo/csv"
+                    }
+                  ]
+                },
+                {
                   "name": "Clean Energy Regulator",
                   "type": "group",
                   "items": [
