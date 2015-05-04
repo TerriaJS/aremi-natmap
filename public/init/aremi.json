@@ -1,5 +1,6 @@
 {
   "corsDomains": [
+    "services.aremi.nicta.com.au",
     "corsproxy.com"
   ],
   "homeCamera": {
