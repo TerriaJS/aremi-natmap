@@ -193,6 +193,24 @@ if (start) {
         var australianHydro = new CompositeCatalogItem(application, [naturalEarthII, australianHydroOverlay]);
         australianHydro.name = 'Australian Hydrography';
 
+        var osmSimpleLight = new WebMapServiceCatalogItem(application);
+        osmSimpleLight.name = 'OpenStreeMaps Light (BETA)';
+        osmSimpleLight.url = 'https://maps.aurin.org.au/cgi-bin/tilecache.cgi';
+        osmSimpleLight.layers = 'austatesgrey';
+        osmSimpleLight.parameters = {
+            tiled: true
+        };
+        osmSimpleLight.opacity = 1.0;
+
+        var osmSimpleDark = new WebMapServiceCatalogItem(application);
+        osmSimpleDark.name = 'OpenStreeMaps Dark (BETA)';
+        osmSimpleDark.url = 'https://maps.aurin.org.au/cgi-bin/tilecache.cgi';
+        osmSimpleDark.layers = 'austatesdark';
+        osmSimpleDark.parameters = {
+            tiled: true
+        };
+        osmSimpleDark.opacity = 1.0;
+
         var settingsPanel = new SettingsPanelViewModel({
             application: application,
             isVisible: false
@@ -231,6 +249,16 @@ if (start) {
         settingsPanel.baseMaps.push(new BaseMapViewModel({
             image: 'images/natural-earth.png',
             catalogItem: naturalEarthII,
+        }));
+
+        settingsPanel.baseMaps.push(new BaseMapViewModel({
+            image: 'images/osmLight.png',
+            catalogItem: osmSimpleLight,
+        }));
+
+        settingsPanel.baseMaps.push(new BaseMapViewModel({
+            image: 'images/osmDark.png',
+            catalogItem: osmSimpleDark,
         }));
 
         settingsPanel.show(ui);
