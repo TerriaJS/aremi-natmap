@@ -166,15 +166,6 @@ if (start) {
         var australianTopo = new CompositeCatalogItem(application, [naturalEarthII, australianTopoOverlay]);
         australianTopo.name = 'Australian Topography';
 
-        var blackMarble = new WebMapServiceCatalogItem(application);
-        blackMarble.name = 'NASA Black Marble';
-        blackMarble.url = 'http://geoserver.nationalmap.nicta.com.au/imagery/nasa-black-marble/wms';
-        blackMarble.layers = 'nasa-black-marble:dnb_land_ocean_ice.2012.54000x27000_geo';
-        blackMarble.parameters = {
-            tiled: true
-        };
-        blackMarble.opacity = 1.0;
-
         var bingMapsAerial = new BingMapsCatalogItem(application);
         bingMapsAerial.name = 'Bing Maps Aerial';
         bingMapsAerial.mapStyle = BingMapsStyle.AERIAL;
@@ -184,14 +175,6 @@ if (start) {
         bingMapsRoads.name = 'Bing Maps Roads';
         bingMapsRoads.mapStyle = BingMapsStyle.ROAD;
         bingMapsRoads.opacity = 1.0;
-
-        var australianHydroOverlay = new ArcGisMapServerCatalogItem(application);
-        australianHydroOverlay.name = 'Australian Hydrography';
-        australianHydroOverlay.url = 'http://www.ga.gov.au/gis/rest/services/topography/AusHydro_WM/MapServer';
-        australianHydroOverlay.opacity = 1.0;
-
-        var australianHydro = new CompositeCatalogItem(application, [naturalEarthII, australianHydroOverlay]);
-        australianHydro.name = 'Australian Hydrography';
 
         var osmSimpleLight = new WebMapServiceCatalogItem(application);
         osmSimpleLight.name = 'OpenStreeMaps Light (BETA)';
@@ -234,21 +217,6 @@ if (start) {
         settingsPanel.baseMaps.push(new BaseMapViewModel({
             image: 'images/bing-maps-roads.png',
             catalogItem: bingMapsRoads,
-        }));
-
-        settingsPanel.baseMaps.push(new BaseMapViewModel({
-            image: 'images/hydro.png',
-            catalogItem: australianHydro,
-        }));
-
-        settingsPanel.baseMaps.push(new BaseMapViewModel({
-            image: 'images/black-marble.png',
-            catalogItem: blackMarble,
-        }));
-
-        settingsPanel.baseMaps.push(new BaseMapViewModel({
-            image: 'images/natural-earth.png',
-            catalogItem: naturalEarthII,
         }));
 
         settingsPanel.baseMaps.push(new BaseMapViewModel({
