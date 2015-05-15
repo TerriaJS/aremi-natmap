@@ -2187,22 +2187,17 @@
               ]
             },
             {
-              "name": "Geological lithology",
-              "layers": "AUS_GA_2500k_GUPoly_Lithology",
+              "name": "Surface Geology",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/gis/services/earth_science/GA_Surface_Geology_of_Australia/MapServer/WMSServer",
-              "type": "wms",
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              },
               "rectangle": [
                 "100.0",
                 "-44.0",
                 "159.0",
                 "-4.0"
-              ]
+              ],
+              "type": "esri-mapServer",
+              "url": "http://www.ga.gov.au/gis/rest/services/earth_science/GA_Surface_Geology_of_Australia_WM/MapServer"
             }
           ]
         },
