@@ -2391,6 +2391,21 @@
               ]
             },
             {
+              "name": "Australian Hydrography",
+              "description": "[Licence](http://www.ga.gov.au/copyright)",
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "url": "http://www.ga.gov.au/gis/rest/services/topography/AusHydro_WM/MapServer",
+              "type": "esri-mapServer",
+              "clipToRectangle": true,
+              "opacity": "1.0",
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ]
+            },
+            {
               "name": "River regions",
               "layers": "RiverRegions",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
