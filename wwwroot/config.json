@@ -1,0 +1,22 @@
+{
+    "proxyDomains" : [
+        "geofabric.bom.gov.au",
+        "aurin.org.au",
+        "nicta.com.au",
+        "gov.au",
+        "csiro.au",
+        "arcgis.com",
+        "argo.jcommops.org",
+        "www.abc.net.au"
+    ],
+    "initializationUrls" : [
+        "aremi"
+    ],
+    "parameters": {
+        "bingMapsKey": null,
+        "disclaimer": {
+            "text": "Disclaimer: AREMI must not be used for navigation or precise spatial analysis",
+            "url": "help/About.html"
+        }
+    }
+}

@@ -2,7 +2,7 @@
 
 
 var url = require('url');
-var configSettings = require('./public/config.json');
+var configSettings = require('./wwwroot/config.json');
 
 var protocolRegex = /^\w+:\//;
 
@@ -152,7 +152,7 @@ if (cluster.isMaster) {
     app.use(compression());
     app.use(cors());
     app.disable('etag');
-    app.use(express.static(path.join(__dirname, 'public')));
+    app.use(express.static(path.join(__dirname, 'wwwroot')));
 
     var upstreamProxy = argv['upstream-proxy'];
     var bypassUpstreamProxyHosts = {};
@@ -318,6 +318,11 @@ if (cluster.isMaster) {
             //send a response with the object and display text
             res.json({ displayHtml: 'Here are the available bike racks.', layer: obj});
         });
+    });
+
+    // Redirect unknown pages back home. We don't actually have a 404 page, for starters.
+    app.use(function(req, res, next) {
+        res.redirect(303, '/');
     });
 
     app.listen(argv.port, argv.public ? undefined : 'localhost');

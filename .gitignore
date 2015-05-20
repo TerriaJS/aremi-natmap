@@ -1,9 +1,8 @@
-docs/
 node_modules/
 .idea/
-public/build
-public/doc
 target
+wwwroot/build/
+wwwroot/doc/
 error.log
 output.log
 .DS_Store
