@@ -1,6 +1,7 @@
 {
     "proxyDomains" : [
         "geofabric.bom.gov.au",
+        "aurin.org.au",
         "nicta.com.au",
         "gov.au",
         "csiro.au",
