@@ -1,12 +1,14 @@
 #!/bin/bash
 
+DESCRIBE=$(git describe)
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
 npm install
-git submodule update
 gulp release
 
 mkdir target
-tar czf target/aremi-natmap-`date +%Y-%m-%d-%H%M%S`.tar.gz \
+tar czf target/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz \
   node_modules \
-  public \
+  wwwroot \
   run_server.sh \
   server.js
