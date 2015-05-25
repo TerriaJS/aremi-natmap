@@ -2198,6 +2198,19 @@
               ],
               "type": "esri-mapServer",
               "url": "http://www.ga.gov.au/gis/rest/services/earth_science/GA_Surface_Geology_of_Australia_WM/MapServer"
+            },
+            {
+              "name": "Land Cover",
+              "description": "[Licence](http://www.ga.gov.au/copyright)",
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "rectangle": [
+                "110",
+                "-45.0047975",
+                "155.00919",
+                "-7.92768801894694"
+              ],
+              "type": "esri-mapServer",
+              "url": "http://www.ga.gov.au/gis/rest/services/earth_observation/Landcover_WM/MapServer"
             }
           ]
         },
