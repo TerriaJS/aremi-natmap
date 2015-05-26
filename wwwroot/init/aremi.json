@@ -1008,9 +1008,119 @@
           ]
         },
         {
-          "name": "Hybrid/Enabling",
+          "name": "Hydro",
           "type": "group",
-          "items": []
+          "items": [
+            {
+              "name": "Australian Hydrography",
+              "description": "[Licence](http://www.ga.gov.au/copyright)",
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "url": "http://www.ga.gov.au/gis/rest/services/topography/AusHydro_WM/MapServer",
+              "type": "esri-mapServer",
+              "clipToRectangle": true,
+              "opacity": "1.0",
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ]
+            },
+            {
+              "name": "Catchment",
+              "layers": "AHGFContractedCatchment",
+              "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)",
+              "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
+              "url": "http://geofabric.bom.gov.au/simplefeatures/ows",
+              "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ]
+            },
+            {
+              "name": "Lakes",
+              "layers": "lakes",
+              "description": "[Licence](http://www.ga.gov.au/copyright)",
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
+              "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ]
+            },
+            {
+              "name": "Reservoirs",
+              "layers": "reservoirs",
+              "description": "[Licence](http://www.ga.gov.au/copyright)",
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
+              "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ]
+            },
+            {
+              "name": "River regions",
+              "layers": "RiverRegions",
+              "description": "[Licence](http://www.ga.gov.au/copyright)",
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "url": "http://www.ga.gov.au/gis/services/hazards/NFRIPCatchments/MapServer/WMSServer",
+              "type": "wms",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ]
+            },
+            {
+              "name": "Damwalls",
+              "layers": "damwalls",
+              "description": "[Licence](http://www.ga.gov.au/copyright)",
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
+              "type": "wms",
+              "opacity": "1.0",
+              "clipToRectangle": true,
+              "parameters": {
+                "tiled": true
+              },
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ]
+            }
+
+          ]
         }
       ]
     },
