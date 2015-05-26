@@ -1,5 +1,12 @@
 #!/bin/bash
 
+git diff-index --quiet HEAD
+CODE=$?
+if [[ ! $CODE == 0 ]]; then
+    echo "There are uncommitted modifications - not making a package!"
+    exit 1
+fi
+
 DESCRIBE=$(git describe)
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
