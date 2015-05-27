@@ -1,8 +1,8 @@
 #!/bin/bash
 
 git diff-index --quiet HEAD
-CODE=$?
-if [[ ! $CODE == 0 ]]; then
+CLEAN=$?
+if [[ ! ${CLEAN} == 0 ]]; then
     echo "There are uncommitted modifications - not making a package!"
     exit 1
 fi
@@ -13,7 +13,7 @@ BRANCH=$(git rev-parse --abbrev-ref HEAD)
 npm install
 gulp release
 
-mkdir target
+mkdir -p target
 tar czf target/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz \
   node_modules \
   wwwroot \
