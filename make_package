@@ -9,6 +9,7 @@ fi
 
 DESCRIBE=$(git describe)
 
+rm -rf node_modules
 npm install
 gulp release
 
