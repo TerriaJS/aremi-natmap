@@ -4,8 +4,8 @@
     "corsproxy.com"
   ],
   "homeCamera": {
-      "west": 105,
-      "south": -45,
+      "west": 112,
+      "south": -48,
       "east": 155,
       "north": -5
   },
@@ -30,17 +30,10 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
-                  "opacity": "1.0",
                   "clipToRectangle": true,
                   "parameters": {
                     "tiled": true
-                  },
-                  "rectangle": [
-                    "139.8",
-                    "-28.3",
-                    "140.7",
-                    "-27.6"
-                  ]
+                  }
                 },
                 {
                   "name": "Big Lake mean temp, 6.2km",
@@ -49,17 +42,10 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
-                  "opacity": "1.0",
                   "clipToRectangle": true,
                   "parameters": {
                     "tiled": true
-                  },
-                  "rectangle": [
-                    "139.8",
-                    "-28.3",
-                    "140.7",
-                    "-27.6"
-                  ]
+                  }
                 },
                 {
                   "name": "Big Lake granite probability, 5.4km",
@@ -68,17 +54,10 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
-                  "opacity": "1.0",
                   "clipToRectangle": true,
                   "parameters": {
                     "tiled": true
-                  },
-                  "rectangle": [
-                    "139.8",
-                    "-28.3",
-                    "140.7",
-                    "-27.6"
-                  ]
+                  }
                 },
                 {
                   "name": "Big Lake granite probability, 6.9km",
@@ -87,17 +66,10 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
-                  "opacity": "1.0",
                   "clipToRectangle": true,
                   "parameters": {
                     "tiled": true
-                  },
-                  "rectangle": [
-                    "139.8",
-                    "-28.3",
-                    "140.7",
-                    "-27.6"
-                  ]
+                  }
                 },
                 {
                   "name": "Big Lake granite probability, 8.4km",
@@ -106,17 +78,10 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
-                  "opacity": "1.0",
                   "clipToRectangle": true,
                   "parameters": {
                     "tiled": true
-                  },
-                  "rectangle": [
-                    "139.8",
-                    "-28.3",
-                    "140.7",
-                    "-27.6"
-                  ]
+                  }
                 },
                 {
                   "name": "Pretty Hill granite probability, 2.2km",
@@ -125,17 +90,10 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
-                  "opacity": "1.0",
                   "clipToRectangle": true,
                   "parameters": {
                     "tiled": true
-                  },
-                  "rectangle": [
-                    "141.8",
-                    "-38.5",
-                    "142.7",
-                    "-37.95"
-                  ]
+                  }
                 },
                 {
                   "name": "Pretty Hill granite probability, 2.8km",
@@ -144,17 +102,10 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
-                  "opacity": "1.0",
                   "clipToRectangle": true,
                   "parameters": {
                     "tiled": true
-                  },
-                  "rectangle": [
-                    "141.8",
-                    "-38.5",
-                    "142.7",
-                    "-37.95"
-                  ]
+                  }
                 },
                 {
                   "name": "Pretty Hill granite probability, 3.3km",
@@ -163,17 +114,10 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
-                  "opacity": "1.0",
                   "clipToRectangle": true,
                   "parameters": {
                     "tiled": true
-                  },
-                  "rectangle": [
-                    "141.8",
-                    "-38.5",
-                    "142.7",
-                    "-37.95"
-                  ]
+                  }
                 },
                 {
                   "name": "Pretty Hill granite probability, 3.8km",
@@ -182,17 +126,10 @@
                   "dataCustodian": "[NICTA](http://nicta.com.au/)",
                   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/aremi/wms",
                   "type": "wms",
-                  "opacity": "1.0",
                   "clipToRectangle": true,
                   "parameters": {
                     "tiled": true
-                  },
-                  "rectangle": [
-                    "141.8",
-                    "-38.5",
-                    "142.7",
-                    "-37.95"
-                  ]
+                  }
                 }
               ]
             },
