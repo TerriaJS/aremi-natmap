@@ -149,10 +149,10 @@
                       "url": "datasets/dance/DANCE-2012-CAP.czml",
                       "legendUrl": "datasets/dance/availcap.png",
                       "rectangle": [
-                        "137.0",
-                        "-39.5",
-                        "154.0",
-                        "-18.5"
+                        "137",
+                        "-41",
+                        "154",
+                        "-18"
                       ]
                     },
                     {
@@ -163,10 +163,10 @@
                       "url": "datasets/dance/DANCE-2012-AD.czml",
                       "legendUrl": "datasets/dance/annualdef.png",
                       "rectangle": [
-                        "137.0",
-                        "-39.5",
-                        "154.0",
-                        "-18.5"
+                        "137",
+                        "-41",
+                        "154",
+                        "-18"
                       ]
                     },
                     {
@@ -181,10 +181,10 @@
                           "url": "datasets/dance/Proposed-Investment-Stli.kml",
                           "legendUrl": "datasets/dance/proposedinvest.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "137",
+                            "-41",
+                            "154",
+                            "-18"
                           ]
                         },
                         {
@@ -195,10 +195,10 @@
                           "url": "datasets/dance/Proposed-Investment-TS.kml",
                           "legendUrl": "datasets/dance/proposedinvest.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "137",
+                            "-41",
+                            "154",
+                            "-18"
                           ]
                         },
                         {
@@ -209,10 +209,10 @@
                           "url": "datasets/dance/Proposed-Investment-ZS.kml",
                           "legendUrl": "datasets/dance/proposedinvest.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "137",
+                            "-41",
+                            "154",
+                            "-18"
                           ]
                         }
                       ]
@@ -235,10 +235,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-0h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -249,10 +249,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-1h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -263,10 +263,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-3h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -277,10 +277,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-5h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -291,10 +291,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-10h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -305,10 +305,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerAfternoon-15h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         }
                       ]
@@ -325,10 +325,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-0h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -339,10 +339,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-1h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -353,10 +353,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-3h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -367,10 +367,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-5h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -381,10 +381,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-10h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -395,10 +395,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-SummerEvening-15h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         }
                       ]
@@ -415,10 +415,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-0h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -429,10 +429,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-1h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -443,10 +443,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-3h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -457,10 +457,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-5h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -471,10 +471,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-10h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -485,10 +485,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterAfternoon-15h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         }
                       ]
@@ -505,10 +505,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-0h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -519,10 +519,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-1h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -533,10 +533,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-3h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -547,10 +547,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-5h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -561,10 +561,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-10h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         },
                         {
@@ -575,10 +575,10 @@
                           "url": "datasets/dance/CSP-IFC-solar-thermal-WinterEvening-15h.kmz",
                           "legendUrl": "datasets/dance/CSP-IFC-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "127",
+                            "-43",
+                            "155",
+                            "-7"
                           ]
                         }
                       ]
@@ -601,10 +601,10 @@
                           "url": "datasets/dance/CSP-Cost-benefit-WithCarbonPrice-Cannotmeetconstraint.kmz",
                           "legendUrl": "datasets/dance/CSP-Cost-benefit-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "137",
+                            "-41",
+                            "154",
+                            "-18"
                           ]
                         },
                         {
@@ -615,10 +615,10 @@
                           "url": "datasets/dance/CSP-Cost-benefit-WithCarbonPrice-Missinginfo.kmz",
                           "legendUrl": "datasets/dance/CSP-Cost-benefit-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "137",
+                            "-41",
+                            "154",
+                            "-18"
                           ]
                         },
                         {
@@ -629,10 +629,10 @@
                           "url": "datasets/dance/CSP-Cost-benefit-WithCarbonPrice-Possiblelocations.kmz",
                           "legendUrl": "datasets/dance/CSP-Cost-benefit-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "137",
+                            "-41",
+                            "154",
+                            "-18"
                           ]
                         }
                       ]
@@ -649,10 +649,10 @@
                           "url": "datasets/dance/CSP-Cost-benefit-NoCarbonPrice-Cannotmeetconstraint.kmz",
                           "legendUrl": "datasets/dance/CSP-Cost-benefit-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "137",
+                            "-41",
+                            "154",
+                            "-18"
                           ]
                         },
                         {
@@ -663,10 +663,10 @@
                           "url": "datasets/dance/CSP-Cost-benefit-NoCarbonPrice-Missinginfo.kmz",
                           "legendUrl": "datasets/dance/CSP-Cost-benefit-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "137",
+                            "-41",
+                            "154",
+                            "-18"
                           ]
                         },
                         {
@@ -677,10 +677,10 @@
                           "url": "datasets/dance/CSP-Cost-benefit-NoCarbonPrice-Possiblelocations.kmz",
                           "legendUrl": "datasets/dance/CSP-Cost-benefit-legend.png",
                           "rectangle": [
-                            "137.0",
-                            "-39.5",
-                            "154.0",
-                            "-18.5"
+                            "137",
+                            "-41",
+                            "154",
+                            "-18"
                           ]
                         }
                       ]
