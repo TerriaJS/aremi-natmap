@@ -511,6 +511,7 @@
               "type": "wms-getCapabilities",
               "url": "http://www.ga.gov.au/gisimg/services/energy/Solar_Energy_DNI_Mean/MapServer/WMSServer",
               "flatten": true,
+              "preserveOrder": true,
               "itemProperties": {
                 "info": [
                   {
@@ -539,6 +540,7 @@
               "type": "wms-getCapabilities",
               "url": "http://www.ga.gov.au/gisimg/services/energy/Solar_Energy_GHI_Mean/MapServer/WMSServer",
               "flatten": true,
+              "preserveOrder": true,
               "itemProperties": {
                 "info": [
                   {
@@ -567,6 +569,7 @@
               "type": "wms-getCapabilities",
               "url": "http://www.ga.gov.au/gisimg/services/energy/Solar_Energy_GHI_Minimum/MapServer/WMSServer",
               "flatten": true,
+              "preserveOrder": true,
               "itemProperties": {
                 "info": [
                   {
