@@ -133,6 +133,7 @@ terria.start({
     osmSimpleLight.name = 'OpenStreeMaps Light (BETA)';
     osmSimpleLight.url = 'https://maps.aurin.org.au/cgi-bin/tilecache.cgi';
     osmSimpleLight.layers = 'austatesgrey';
+    osmSimpleLight.getFeatureInfoFormats = [];
     osmSimpleLight.parameters = {
         tiled: true
     };
@@ -146,6 +147,7 @@ terria.start({
     osmSimpleDark.name = 'OpenStreeMaps Dark (BETA)';
     osmSimpleDark.url = 'https://maps.aurin.org.au/cgi-bin/tilecache.cgi';
     osmSimpleDark.layers = 'austatesdark';
+    osmSimpleDark.getFeatureInfoFormats = [];
     osmSimpleDark.parameters = {
         tiled: true
     };
