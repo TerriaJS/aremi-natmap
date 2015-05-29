@@ -82,7 +82,7 @@
                         },
                         {
                           "name": "Description",
-                          "content": "Currently the APVI related information page is being finalised. In the meantime, for details on the APVI live solar map datasets, please visit: <br/><br/> [http://pv-map.apvi.org.au/live](http://pv-map.apvi.org.au/live)"
+                          "content": "Estimated percentage of electricity demand being met by photovoltaics in each state. Currently unavailable in the NT. For more details on the APVI live solar map datasets, please visit: <br/><br/> [http://pv-map.apvi.org.au/live](http://pv-map.apvi.org.au/live)"
                         },
                         {
                           "name": "Updates",
@@ -109,7 +109,7 @@
                         },
                         {
                           "name": "Description",
-                          "content": "Currently the APVI related information page is being finalised. In the meantime, for details on the APVI live solar map datasets, please visit: <br/><br/> [http://pv-map.apvi.org.au/live](http://pv-map.apvi.org.au/live)"
+                          "content": "Estimated photovoltaic output as a percentage of its maximum capacity in each state. For more details on the APVI live solar map datasets, please visit: <br/><br/> [http://pv-map.apvi.org.au/live](http://pv-map.apvi.org.au/live)"
                         },
                         {
                           "name": "Updates",
