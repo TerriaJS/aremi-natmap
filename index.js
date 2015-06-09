@@ -306,7 +306,7 @@ terria.start({
     message : '<p>\
               The Australian Renewable Energy Mapping Infrastructure (AREMI) website implements a geospatial map viewer which is intended for viewing over the internet. The AREMI website is being developed by National ICT Australia Limited (NICTA) in collaboration with Geoscience Australia (GA) and with funding support from the Australian Renewable Energy Agency (ARENA). ARENA invests in renewable energy projects, supports research and development activities, boosts job creation and industry development, and increases knowledge about renewable energy. The AREMI website is an information service that is intended to be accessible to all interested external parties. The AREMI website provides access to renewable energy and general information which has been provided by various third party data custodians. As a condition of using this website, users should understand and must accept, that the information and data provided on the AREMI website:\
               </p><br/>\
-              <ul style="list-style:circle">\
+              <ul style="list-style:circle; padding-left:16px;">\
               <li>is entirely dependant on the accuracy of the information and data which has been provided by the third party data custodians;</li>\
               <li>is not necessarily complete;</li>\
               <li>sometimes is general in nature; and</li>\
