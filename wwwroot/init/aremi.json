@@ -120,7 +120,7 @@
                   ]
                 },
                 {
-                  "name": "Live Power Generation - AEMO",
+                  "name": "Live NEM Power Generation - AEMO",
                   "type": "group",
                   "items": [
                     {
