@@ -1140,6 +1140,7 @@
               "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
               "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
               "url": "https://programs.communications.gov.au/geoserver/ows",
+              "dataUrlType": "none",
               "type": "wms",
               "clipToRectangle": true,
               "parameters": {
@@ -1151,6 +1152,25 @@
                 "159.0",
                 "-4.0"
               ]
+            },
+            {
+              "name": "Broadband ADSL Quality",
+              "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
+              "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
+              "url": "https://programs.communications.gov.au/geoserver/ows",
+              "layers": "public:MyBroadband_ADSL_Quality",
+              "type": "wms",
+              "dataUrlType": "none",
+              "rectangle": [
+                "100.0",
+                "-44.0",
+                "159.0",
+                "-4.0"
+              ],
+              "parameters": {
+                "tiled": true
+              },
+              "clipToRectangle": true
             },
             {
               "name": "Damwalls",
