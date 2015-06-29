@@ -1112,7 +1112,7 @@
             },
             {
               "name": "SRTM 1 sec DEM Image",
-              "layers": "0",
+              "layers": "dem_s_1s",
               "description": "[Licence](http://www.ga.gov.au/copyright)",
               "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
               "url": "http://www.ga.gov.au/gisimg/services/topography/dem_s_1s/ImageServer/WMSServer",
