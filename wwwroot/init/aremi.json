@@ -128,7 +128,7 @@
                       "type": "csv",
                       "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/all",
                       "tableStyle": {
-                        "dataVariable": "Most Recent Output (MW)"
+                        "dataVariable": "Current % of Reg. Capacity"
                       },
                       "info": [
                         {
@@ -154,7 +154,7 @@
                       "type": "csv",
                       "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/wind",
                       "tableStyle": {
-                        "dataVariable": "Most Recent Output (MW)"
+                        "dataVariable": "Current % of Reg. Capacity"
                       },
                       "info": [
                         {
@@ -180,7 +180,7 @@
                       "type": "csv",
                       "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/solar",
                       "tableStyle": {
-                        "dataVariable": "Most Recent Output (MW)"
+                        "dataVariable": "Current % of Reg. Capacity"
                       },
                       "info": [
                         {
@@ -206,7 +206,7 @@
                       "type": "csv",
                       "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/hydro",
                       "tableStyle": {
-                        "dataVariable": "Most Recent Output (MW)"
+                        "dataVariable": "Current % of Reg. Capacity"
                       },
                       "info": [
                         {
@@ -232,7 +232,7 @@
                       "type": "csv",
                       "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/bio",
                       "tableStyle": {
-                        "dataVariable": "Most Recent Output (MW)"
+                        "dataVariable": "Current % of Reg. Capacity"
                       },
                       "info": [
                         {
@@ -258,7 +258,7 @@
                       "type": "csv",
                       "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/fossil",
                       "tableStyle": {
-                        "dataVariable": "Most Recent Output (MW)"
+                        "dataVariable": "Current % of Reg. Capacity"
                       },
                       "info": [
                         {
