@@ -100,8 +100,8 @@ registerCatalogMembers();
 
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
 var terria = new Terria({
-    appName: 'NationalMap',
-    supportEmail: 'nationalmap@lists.nicta.com.au',
+    appName: 'AREMI',
+    supportEmail: 'aremi@nicta.com.au',
     baseUrl: configuration.terriaBaseUrl,
     cesiumBaseUrl: configuration.cesiumBaseUrl,
     regionMappingDefinitionsUrl: configuration.regionMappingDefinitionsUrl
@@ -255,7 +255,7 @@ terria.start({
             }),
             new MenuBarItemViewModel({
                 label: 'About',
-                tooltip: 'About National Map.',
+                tooltip: 'About AREMI.',
                 svgPath: svgInfo,
                 svgPathWidth: 18,
                 svgPathHeight: 18,
