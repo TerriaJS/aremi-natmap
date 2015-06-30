@@ -808,22 +808,6 @@
           ]
         },
         {
-          "name": "Cadastral Boundaries - Australia",
-          "description": "[Licence](http://www.ga.gov.au/copyright)",
-          "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-          "layers": "Cadastre",
-          "type": "esri-mapServer",
-          "url": "http://www.ga.gov.au/gisimg/rest/services/topography/PSMA_Cadastre/MapServer",
-          "opacity": "1.0",
-          "clipToRectangle": true,
-          "rectangle": [
-            "100.0",
-            "-44.0",
-            "159.0",
-            "-4.0"
-          ]
-        },
-        {
           "name": "Defence Restricted Areas",
           "url": "http://www.ga.gov.au/gis/services/topography/Defence_Restricted_Areas/MapServer/WMSServer",
           "type": "wms-getCapabilities",
