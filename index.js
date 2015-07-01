@@ -193,6 +193,7 @@ terria.start({
                 <strong>Australian Renewable Energy</strong>\
                 <br/>\
                 <small>Mapping Infrastructure</small>\
+                <br/>\
                 <span>Version: ' + version + '</span>\
             </div>'
         ]
