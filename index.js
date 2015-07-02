@@ -171,7 +171,7 @@ terria.start({
         catalogItem: osmSimpleDark,
     }));
 
-    var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps).concat(aremiBaseMaps);
+    var allBaseMaps = aremiBaseMaps.concat(australiaBaseMaps).concat(globalBaseMaps);
     selectBaseMap(terria, allBaseMaps, 'OpenStreeMaps Light (BETA)');
 
     // Create the Settings / Map panel.
