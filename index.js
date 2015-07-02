@@ -299,7 +299,8 @@ terria.start({
     });
 
     var nowViewingTab = new NowViewingTabViewModel({
-        nowViewing: terria.nowViewing
+        nowViewing: terria.nowViewing,
+        name: 'Legends'
     });
 
     // Create the explorer panel.
