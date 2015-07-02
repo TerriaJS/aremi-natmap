@@ -172,7 +172,7 @@ terria.start({
     }));
 
     var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps).concat(aremiBaseMaps);
-    selectBaseMap(terria, allBaseMaps, 'Bing Maps Aerial with Labels');
+    selectBaseMap(terria, allBaseMaps, 'OpenStreeMaps Light (BETA)');
 
     // Create the Settings / Map panel.
     var settingsPanel = SettingsPanelViewModel.create({
