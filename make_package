@@ -18,4 +18,5 @@ tar czf target/aremi-natmap-${DESCRIBE}.tar.gz \
   node_modules \
   wwwroot \
   run_server.sh \
-  server.js
+  server.js \
+  proxyAuth.json
