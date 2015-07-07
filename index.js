@@ -107,8 +107,12 @@ var terria = new Terria({
     regionMappingDefinitionsUrl: configuration.regionMappingDefinitionsUrl
 });
 
+// We'll put the entire user interface into a DOM element called 'ui'.
+var ui = document.getElementById('ui');
+
+
 terria.error.addEventListener(function(e) {
-    PopupMessageViewModel.open('ui', {
+    PopupMessageViewModel.open(ui, {
         title: e.title,
         message: e.message
     });
@@ -134,9 +138,6 @@ terria.start({
             link: 'http://www.nicta.com.au'
         }
     });
-
-    // We'll put the entire user interface into a DOM element called 'ui'.
-    var ui = document.getElementById('ui');
 
     // Create the various base map options.
     var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
@@ -364,14 +365,15 @@ terria.start({
         ]
     });
 
-    PopupMessageViewModel.open('ui', {
+    PopupMessageViewModel.open(ui, {
     title : 'Disclaimer',
+    horizontalPadding: 100,
     width : 600,
     height: 550,
-    message : '<div style="line-height: 130%;">\
+    message : '<div>\
                  <p>The Australian Renewable Energy Mapping Infrastructure (AREMI) website implements a geospatial map viewer which is intended for viewing over the internet. The AREMI website is being developed by National ICT Australia Limited (NICTA) in collaboration with Geoscience Australia (GA) and with funding support from the Australian Renewable Energy Agency (ARENA). ARENA invests in renewable energy projects, supports research and development activities, boosts job creation and industry development, and increases knowledge about renewable energy. The AREMI website is an information service that is intended to be accessible to all interested external parties. The AREMI website provides access to renewable energy and general information which has been provided by various third party data custodians. As a condition of using this website, users should understand and must accept, that the information and data provided on the AREMI website:</p>\
                  <br/>\
-                 <ul style="list-style:circle; padding-left:16px;">\
+                 <ul>\
                    <li>is entirely dependant on the accuracy of the information and data which has been provided by the third party data custodians;</li>\
                    <li>is not necessarily complete;</li>\
                    <li>sometimes is general in nature; and</li>\
@@ -379,7 +381,7 @@ terria.start({
                  </ul>\
                  <br/>\
                  <p>\
-                   <strong style="font-weight:bold;">ARENA, NICTA and GA, do not warrant, and are not liable for the accuracy of the information and data on the AREMI website.</strong>\
+                   <strong>ARENA, NICTA and GA, do not warrant, and are not liable for the accuracy of the information and data on the AREMI website.</strong>\
                  </p>\
                </div>'
         });
