@@ -1,8 +1,6 @@
 #!/bin/bash
 
-git diff-index --quiet HEAD
-CLEAN=$?
-if [[ ! ${CLEAN} == 0 ]]; then
+if [ -n "$(git status --porcelain)" ]; then
     echo "There are uncommitted modifications - not making a package!"
     exit 1
 fi
