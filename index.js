@@ -365,6 +365,7 @@ terria.start({
         ]
     });
 
+    // Add the disclaimer
     PopupMessageViewModel.open(ui, {
     title : 'Disclaimer',
     horizontalPadding: 100,
@@ -385,6 +386,17 @@ terria.start({
                  </p>\
                </div>'
         });
+
+    // Add the survey link
+    var surveyLink = 'https://docs.google.com/forms/d/1ZQkNgSWA2mmxlsEICxlm7cOhJ2xVxRGScsvJ83i0F3M/viewform';
+    var surveyContainer = document.createElement("div");
+    document.querySelector(".explorer-panel-body-pane").appendChild(surveyContainer);
+    surveyContainer.innerHTML =
+      '<div class="feedback-request">\
+        <p><a href="' + surveyLink + '">Give Feedback</a></p>\
+        <p>This site is still in development, so please <a href="' + surveyLink + '">tell us what you think</a>. Our survey will take 5 mins.</p>\
+      </div>';
+
 
     document.getElementById('loadingIndicator').style.display = 'none';
 });
