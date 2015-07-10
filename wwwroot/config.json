@@ -20,6 +20,11 @@
         "disclaimer": {
             "text": "Disclaimer: AREMI must not be used for navigation or precise spatial analysis",
             "url": "About.html"
+        },
+        "globalDisclaimer": {
+            "enabled": true,
+            "confirmationRequired": true,
+            "title": "Disclaimer"
         }
     }
 }
