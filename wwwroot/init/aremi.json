@@ -800,7 +800,7 @@
       "type": "group",
       "items": [
         {
-          "name": "Cadastral Boundaries - Tasmania",
+          "name": "Cadastral Parcels - Tasmania",
           "layers": "0",
           "type": "wms",
           "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/CadastreParcels/MapServer/WMSServer",
@@ -815,7 +815,7 @@
             },
             {
               "name": "Licensing, Terms & Conditions",
-              "content": "![CC BY 3.0 AU](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg) <br/> [Creative Commons BY 3.0 AU](http://creativecommons.org/licenses/by/3.0/au/) <br/><br/> Cadastre Parcels from the LIST © State of Tasmania <br/><br/> [The LIST Terms and Conditions](http://listdata.thelist.tas.gov.au/public/LISTWebServicesTermsConditions.pdf)"
+              "content": "Cadastre Parcels from the LIST © State of Tasmania <br/><br/> [The LIST Terms and Conditions](http://listdata.thelist.tas.gov.au/public/LISTWebServicesTermsConditions.pdf)"
             }
           ]
         },
