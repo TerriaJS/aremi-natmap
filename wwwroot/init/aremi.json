@@ -12,6 +12,227 @@
   "services": [],
   "catalog": [
     {
+      "name": "ISF DANCE demo layers",
+      "type": "group",
+      "items": [
+        {
+          "name": "Available Capacity",
+          "initialMessage": {
+            "title": "Disclaimer",
+            "content": "The 2015 release of these maps is a ‘sample’ version, designed to introduce Network Service Providers (data suppliers) and potential users to the tool, and obtain feedback to refine the mapping outputs. Datasets may be incomplete and figures indicative only and should NOT be relied be upon for planning purposes. The first full map iteration will be provided in mid 2016.",
+            "key": "DANCE2-availcap.geojson.czml.disclaimer"
+          },
+          "info" :[
+            {
+              "name": "Plain English Disclaimer",
+              "content": "These maps are intended to make data on electricity network planning and investment more accessible and consistent. These maps should not be used to make investment decisions, and should only be used to assist in discussions with the local Network Service Provider. You are free to use the data but do so at your own risk. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user agrees and accepts the terms of the Full Legal Disclaimer shown below."
+            },
+            {
+              "name": "Full Legal Disclaimer",
+              "content": "UTS, the authors and the Network Service Providers do not make any representations, guarantees or warranties as to the accuracy, reliability, completeness or currency of the data and content of the maps or that reasonable care has or will be taken by UTS, the authors and the Network Service Providers in compiling preparing or updating the maps.  Except to the extent not permitted by statute or any law, no liability (whether in negligence or tort, by contract or under statute or otherwise) for any error or omission is accepted by UTS, the authors and the Network Service Providers, and UTS, the authors and Network Service Providers specifically disclaim any liability for any costs, losses, claims, demands or liabilities of any kind suffered or incurred by any person by reason of or in connection with the maps or by any purported  reliance on information contained in the maps.  <br/><br/> While due care and attention has been taken in the presentation and transformation of available data and to verify the accuracy of the material published, the maps are not intended to be used as the basis for any investment decision. Users should make their own detailed investigations as to the reliability and suitability of the content of the maps for any use to which the user intends to put it, seek independent expert advice before using it or any information contained in it and initiate dialogue with the relevant Network Service Provider before considering any investment relating to the subject-matter of the maps. <br/><br/> In particular, users should note that Annual Deferral Values are indicative estimates which are subject to change as circumstances change, options are developed and more detailed investigation is done.    Annual Deferral Values are not what the Network Service Provider is willing to pay for demand management support.  Refer to the Network Service Provider’s Demand Side Engagement Document for details on how they assess non-network solutions and determine payment levels. <br/><br/> Data supplied by Network Service Providers and other parties used in the formulation of the maps has been provided, compiled and assessed in good faith, but may be incomplete and is subject to errors and to change over time as the network situation changes, load projections are amended and operational and technical matters affect network performance and investment. Such changes are likely but not guaranteed to have occurred both prior to and after publication of the maps. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise relating to the data.  <br/><br/> A “Network Service Provider” referred to above is a person who engages in the activity of owning, controlling or operating a transmission or distribution system in the National Electricity Market and who is registered by AEMO as a Network Service Provider under Chapter 2 of the National Electricity Rules, and includes Electranet, SA Power Networks, TasNetworks, AEMO, United Energy Distribution, Ausnet Services, Jemena, Citipower-Powercor, Transgrid, Ausgrid, Essential Energy, Endeavour Energy, Powerlink, Ergon Energy and Energex."
+            },
+            {
+              "name": "Description of Data",
+              "content": "This is a map of ‘firm substation capacity’ (determined by the local reliability criteria), minus the forecast peak demand at the Zone Substation level. Data mapped is for the relevant critical peak season (summer or winter) at each Zone Substation. Where a constraint occurs in both seasons, the season with the largest capacity shortfall over the time horizon is mapped. <br/><br/> This map allows the user to see the progression of load growth relative to distribution zone substation capacity over time, and understand areas of emerging capacity-related constraint. Note that capacity constraints may exist at upstream or downstream of the zone substation and as such this map provides an indicative ‘slice’ of the capacity situation through one level of the network. Also note that these images show available capacity before network or non-network options are taken to alleviate constraints, and before load transfer capability between adjacent zones has been taken into account. <br/><br/> This map does NOT show: <br/><br/> •   Areas facing power outage <br/><br/> •   The capacity of the network to accept the connection of embedded or distributed generators <br/><br/> The green and yellow colours indicate a period when zones that have sufficient spare capacity (available capacity is around or above zero), while the orange and red colours (where available capacity is below zero) indicate periods where zones facing capacity-related constraints where investment will be needed to ensure reliability is maintained. <br/><br/> Polygons shown are approximate Zone Substation service regions. Clicking on a specific region will reveal the details of that location and time period, including the season of constraint and the exact available capacity value for each year."
+            },
+            {
+              "name": "Updates",
+              "content": "From 2016 onwards, this data is planned to be updated annually in June."
+            },
+            {
+              "name": "Data Supplier and Custodian",
+              "content": "The data was supplied by Network Service Providers. The data is stored and processed into mapping outputs by the Institute of Sustainable Futures (ISF) at the University of Technology Sydney (UTS)."
+            },
+            {
+              "name": "Licensing, Terms & Conditions",
+              "content": "Refer to Disclaimer. "
+            }
+          ],
+          "type": "czml",
+          "url": "datasets/dance2/availcap.geojson.czml",
+          "legendUrl": "datasets/dance2/AvailCap.png",
+          "rectangle": [
+            "134",
+            "-50",
+            "154",
+            "-8"
+          ]
+        },
+        {
+          "name": "Annual Deferral Value (ADV_det)",
+          "initialMessage": {
+            "title": "Disclaimer",
+            "content": "The 2015 release of these maps is a ‘sample’ version, designed to introduce Network Service Providers (data suppliers) and potential users to the tool, and obtain feedback to refine the mapping outputs. Datasets may be incomplete and figures indicative only and should NOT be relied be upon for planning purposes. The first full map iteration will be provided in mid 2016.",
+            "key": "DANCE2-ADV_det.geojson.czml.disclaimer"
+          },
+          "info" :[
+            {
+              "name": "Plain English Disclaimer",
+              "content": "These maps are intended to make data on electricity network planning and investment more accessible and consistent. These maps should not be used to make investment decisions, and should only be used to assist in discussions with the local Network Service Provider. You are free to use the data but do so at your own risk. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user agrees and accepts the terms of the Full Legal Disclaimer shown below."
+            },
+            {
+              "name": "Full Legal Disclaimer",
+              "content": "UTS, the authors and the Network Service Providers do not make any representations, guarantees or warranties as to the accuracy, reliability, completeness or currency of the data and content of the maps or that reasonable care has or will be taken by UTS, the authors and the Network Service Providers in compiling preparing or updating the maps.  Except to the extent not permitted by statute or any law, no liability (whether in negligence or tort, by contract or under statute or otherwise) for any error or omission is accepted by UTS, the authors and the Network Service Providers, and UTS, the authors and Network Service Providers specifically disclaim any liability for any costs, losses, claims, demands or liabilities of any kind suffered or incurred by any person by reason of or in connection with the maps or by any purported  reliance on information contained in the maps.  <br/><br/> While due care and attention has been taken in the presentation and transformation of available data and to verify the accuracy of the material published, the maps are not intended to be used as the basis for any investment decision. Users should make their own detailed investigations as to the reliability and suitability of the content of the maps for any use to which the user intends to put it, seek independent expert advice before using it or any information contained in it and initiate dialogue with the relevant Network Service Provider before considering any investment relating to the subject-matter of the maps. <br/><br/> In particular, users should note that Annual Deferral Values are indicative estimates which are subject to change as circumstances change, options are developed and more detailed investigation is done.    Annual Deferral Values are not what the Network Service Provider is willing to pay for demand management support.  Refer to the Network Service Provider’s Demand Side Engagement Document for details on how they assess non-network solutions and determine payment levels. <br/><br/> Data supplied by Network Service Providers and other parties used in the formulation of the maps has been provided, compiled and assessed in good faith, but may be incomplete and is subject to errors and to change over time as the network situation changes, load projections are amended and operational and technical matters affect network performance and investment. Such changes are likely but not guaranteed to have occurred both prior to and after publication of the maps. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise relating to the data.  <br/><br/> A “Network Service Provider” referred to above is a person who engages in the activity of owning, controlling or operating a transmission or distribution system in the National Electricity Market and who is registered by AEMO as a Network Service Provider under Chapter 2 of the National Electricity Rules, and includes Electranet, SA Power Networks, TasNetworks, AEMO, United Energy Distribution, Ausnet Services, Jemena, Citipower-Powercor, Transgrid, Ausgrid, Essential Energy, Endeavour Energy, Powerlink, Ergon Energy and Energex."
+            },
+            {
+              "name": "Description of Data",
+              "content": ""
+            },
+            {
+              "name": "Updates",
+              "content": "From 2016 onwards, this data is planned to be updated annually in June."
+            },
+            {
+              "name": "Data Supplier and Custodian",
+              "content": "The data was supplied by Network Service Providers. The data is stored and processed into mapping outputs by the Institute of Sustainable Futures (ISF) at the University of Technology Sydney (UTS)."
+            },
+            {
+              "name": "Licensing, Terms & Conditions",
+              "content": "Refer to Disclaimer. "
+            }
+          ],
+          "type": "czml",
+          "url": "datasets/dance2/ADV_det.geojson.czml",
+          "legendUrl": "datasets/dance2/ADV_det.png",
+          "rectangle": [
+            "134",
+            "-50",
+            "154",
+            "-8"
+          ]
+        },
+        {
+          "name": "Annual Deferral Value (ADV_prob)",
+          "initialMessage": {
+            "title": "Disclaimer",
+            "content": "The 2015 release of these maps is a ‘sample’ version, designed to introduce Network Service Providers (data suppliers) and potential users to the tool, and obtain feedback to refine the mapping outputs. Datasets may be incomplete and figures indicative only and should NOT be relied be upon for planning purposes. The first full map iteration will be provided in mid 2016.",
+            "key": "DANCE2-ADV_prob.geojson.czml.disclaimer"
+          },
+          "info" :[
+            {
+              "name": "Plain English Disclaimer",
+              "content": "These maps are intended to make data on electricity network planning and investment more accessible and consistent. These maps should not be used to make investment decisions, and should only be used to assist in discussions with the local Network Service Provider. You are free to use the data but do so at your own risk. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user agrees and accepts the terms of the Full Legal Disclaimer shown below."
+            },
+            {
+              "name": "Full Legal Disclaimer",
+              "content": "UTS, the authors and the Network Service Providers do not make any representations, guarantees or warranties as to the accuracy, reliability, completeness or currency of the data and content of the maps or that reasonable care has or will be taken by UTS, the authors and the Network Service Providers in compiling preparing or updating the maps.  Except to the extent not permitted by statute or any law, no liability (whether in negligence or tort, by contract or under statute or otherwise) for any error or omission is accepted by UTS, the authors and the Network Service Providers, and UTS, the authors and Network Service Providers specifically disclaim any liability for any costs, losses, claims, demands or liabilities of any kind suffered or incurred by any person by reason of or in connection with the maps or by any purported  reliance on information contained in the maps.  <br/><br/> While due care and attention has been taken in the presentation and transformation of available data and to verify the accuracy of the material published, the maps are not intended to be used as the basis for any investment decision. Users should make their own detailed investigations as to the reliability and suitability of the content of the maps for any use to which the user intends to put it, seek independent expert advice before using it or any information contained in it and initiate dialogue with the relevant Network Service Provider before considering any investment relating to the subject-matter of the maps. <br/><br/> In particular, users should note that Annual Deferral Values are indicative estimates which are subject to change as circumstances change, options are developed and more detailed investigation is done.    Annual Deferral Values are not what the Network Service Provider is willing to pay for demand management support.  Refer to the Network Service Provider’s Demand Side Engagement Document for details on how they assess non-network solutions and determine payment levels. <br/><br/> Data supplied by Network Service Providers and other parties used in the formulation of the maps has been provided, compiled and assessed in good faith, but may be incomplete and is subject to errors and to change over time as the network situation changes, load projections are amended and operational and technical matters affect network performance and investment. Such changes are likely but not guaranteed to have occurred both prior to and after publication of the maps. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise relating to the data.  <br/><br/> A “Network Service Provider” referred to above is a person who engages in the activity of owning, controlling or operating a transmission or distribution system in the National Electricity Market and who is registered by AEMO as a Network Service Provider under Chapter 2 of the National Electricity Rules, and includes Electranet, SA Power Networks, TasNetworks, AEMO, United Energy Distribution, Ausnet Services, Jemena, Citipower-Powercor, Transgrid, Ausgrid, Essential Energy, Endeavour Energy, Powerlink, Ergon Energy and Energex."
+            },
+            {
+              "name": "Description of Data",
+              "content": ""
+            },
+            {
+              "name": "Updates",
+              "content": "From 2016 onwards, this data is planned to be updated annually in June."
+            },
+            {
+              "name": "Data Supplier and Custodian",
+              "content": "The data was supplied by Network Service Providers. The data is stored and processed into mapping outputs by the Institute of Sustainable Futures (ISF) at the University of Technology Sydney (UTS)."
+            },
+            {
+              "name": "Licensing, Terms & Conditions",
+              "content": "Refer to Disclaimer. "
+            }
+          ],
+          "type": "czml",
+          "url": "datasets/dance2/ADV_prob.geojson.czml",
+          "legendUrl": "datasets/dance2/ADV_prob.png",
+          "rectangle": [
+            "134",
+            "-50",
+            "154",
+            "-8"
+          ]
+        },
+        {
+          "name": "Annual Deferral Value (ADV_prob_energy)",
+          "initialMessage": {
+            "title": "Disclaimer",
+            "content": "The 2015 release of these maps is a ‘sample’ version, designed to introduce Network Service Providers (data suppliers) and potential users to the tool, and obtain feedback to refine the mapping outputs. Datasets may be incomplete and figures indicative only and should NOT be relied be upon for planning purposes. The first full map iteration will be provided in mid 2016.",
+            "key": "DANCE2-ADV_prob_energy.geojson.czml.disclaimer"
+          },
+          "info" :[
+            {
+              "name": "Plain English Disclaimer",
+              "content": "These maps are intended to make data on electricity network planning and investment more accessible and consistent. These maps should not be used to make investment decisions, and should only be used to assist in discussions with the local Network Service Provider. You are free to use the data but do so at your own risk. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user agrees and accepts the terms of the Full Legal Disclaimer shown below."
+            },
+            {
+              "name": "Full Legal Disclaimer",
+              "content": "UTS, the authors and the Network Service Providers do not make any representations, guarantees or warranties as to the accuracy, reliability, completeness or currency of the data and content of the maps or that reasonable care has or will be taken by UTS, the authors and the Network Service Providers in compiling preparing or updating the maps.  Except to the extent not permitted by statute or any law, no liability (whether in negligence or tort, by contract or under statute or otherwise) for any error or omission is accepted by UTS, the authors and the Network Service Providers, and UTS, the authors and Network Service Providers specifically disclaim any liability for any costs, losses, claims, demands or liabilities of any kind suffered or incurred by any person by reason of or in connection with the maps or by any purported  reliance on information contained in the maps.  <br/><br/> While due care and attention has been taken in the presentation and transformation of available data and to verify the accuracy of the material published, the maps are not intended to be used as the basis for any investment decision. Users should make their own detailed investigations as to the reliability and suitability of the content of the maps for any use to which the user intends to put it, seek independent expert advice before using it or any information contained in it and initiate dialogue with the relevant Network Service Provider before considering any investment relating to the subject-matter of the maps. <br/><br/> In particular, users should note that Annual Deferral Values are indicative estimates which are subject to change as circumstances change, options are developed and more detailed investigation is done.    Annual Deferral Values are not what the Network Service Provider is willing to pay for demand management support.  Refer to the Network Service Provider’s Demand Side Engagement Document for details on how they assess non-network solutions and determine payment levels. <br/><br/> Data supplied by Network Service Providers and other parties used in the formulation of the maps has been provided, compiled and assessed in good faith, but may be incomplete and is subject to errors and to change over time as the network situation changes, load projections are amended and operational and technical matters affect network performance and investment. Such changes are likely but not guaranteed to have occurred both prior to and after publication of the maps. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise relating to the data.  <br/><br/> A “Network Service Provider” referred to above is a person who engages in the activity of owning, controlling or operating a transmission or distribution system in the National Electricity Market and who is registered by AEMO as a Network Service Provider under Chapter 2 of the National Electricity Rules, and includes Electranet, SA Power Networks, TasNetworks, AEMO, United Energy Distribution, Ausnet Services, Jemena, Citipower-Powercor, Transgrid, Ausgrid, Essential Energy, Endeavour Energy, Powerlink, Ergon Energy and Energex."
+            },
+            {
+              "name": "Description of Data",
+              "content": ""
+            },
+            {
+              "name": "Updates",
+              "content": "From 2016 onwards, this data is planned to be updated annually in June."
+            },
+            {
+              "name": "Data Supplier and Custodian",
+              "content": "The data was supplied by Network Service Providers. The data is stored and processed into mapping outputs by the Institute of Sustainable Futures (ISF) at the University of Technology Sydney (UTS)."
+            },
+            {
+              "name": "Licensing, Terms & Conditions",
+              "content": "Refer to Disclaimer. "
+            }
+          ],
+          "type": "czml",
+          "url": "datasets/dance2/ADV_prob_energy.geojson.czml",
+          "legendUrl": "datasets/dance2/ADV_prob_energy.png",
+          "rectangle": [
+            "134",
+            "-50",
+            "154",
+            "-8"
+          ]
+        },
+        {
+          "name": "Proposed Investment",
+          "initialMessage": {
+            "title": "Disclaimer",
+            "content": "The 2015 release of these maps is a ‘sample’ version, designed to introduce Network Service Providers (data suppliers) and potential users to the tool, and obtain feedback to refine the mapping outputs. Datasets may be incomplete and figures indicative only and should NOT be relied be upon for planning purposes. The first full map iteration will be provided in mid 2016.",
+            "key": "DANCE2-PropInv.png.disclaimer"
+          },
+          "info" :[
+            {
+              "name": "Plain English Disclaimer",
+              "content": "These maps are intended to make data on electricity network planning and investment more accessible and consistent. These maps should not be used to make investment decisions, and should only be used to assist in discussions with the local Network Service Provider. You are free to use the data but do so at your own risk. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user agrees and accepts the terms of the Full Legal Disclaimer shown below."
+            },
+            {
+              "name": "Full Legal Disclaimer",
+              "content": "UTS, the authors and the Network Service Providers do not make any representations, guarantees or warranties as to the accuracy, reliability, completeness or currency of the data and content of the maps or that reasonable care has or will be taken by UTS, the authors and the Network Service Providers in compiling preparing or updating the maps.  Except to the extent not permitted by statute or any law, no liability (whether in negligence or tort, by contract or under statute or otherwise) for any error or omission is accepted by UTS, the authors and the Network Service Providers, and UTS, the authors and Network Service Providers specifically disclaim any liability for any costs, losses, claims, demands or liabilities of any kind suffered or incurred by any person by reason of or in connection with the maps or by any purported  reliance on information contained in the maps.  <br/><br/> While due care and attention has been taken in the presentation and transformation of available data and to verify the accuracy of the material published, the maps are not intended to be used as the basis for any investment decision. Users should make their own detailed investigations as to the reliability and suitability of the content of the maps for any use to which the user intends to put it, seek independent expert advice before using it or any information contained in it and initiate dialogue with the relevant Network Service Provider before considering any investment relating to the subject-matter of the maps. <br/><br/> In particular, users should note that Annual Deferral Values are indicative estimates which are subject to change as circumstances change, options are developed and more detailed investigation is done.    Annual Deferral Values are not what the Network Service Provider is willing to pay for demand management support.  Refer to the Network Service Provider’s Demand Side Engagement Document for details on how they assess non-network solutions and determine payment levels. <br/><br/> Data supplied by Network Service Providers and other parties used in the formulation of the maps has been provided, compiled and assessed in good faith, but may be incomplete and is subject to errors and to change over time as the network situation changes, load projections are amended and operational and technical matters affect network performance and investment. Such changes are likely but not guaranteed to have occurred both prior to and after publication of the maps. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise relating to the data.  <br/><br/> A “Network Service Provider” referred to above is a person who engages in the activity of owning, controlling or operating a transmission or distribution system in the National Electricity Market and who is registered by AEMO as a Network Service Provider under Chapter 2 of the National Electricity Rules, and includes Electranet, SA Power Networks, TasNetworks, AEMO, United Energy Distribution, Ausnet Services, Jemena, Citipower-Powercor, Transgrid, Ausgrid, Essential Energy, Endeavour Energy, Powerlink, Ergon Energy and Energex."
+            },
+            {
+              "name": "Description of Data",
+              "content": "This layer shows the location of network investment currently planned to occur over the period 2016 to 2025. Depending on the Network Service Provider, this generally includes augmentation investment, but may also include the following investment categories: replacement/refurbishment connections, other capital investment, and major opex. The shape shown is dictated by the major dominant category of investment driver. Refer to the legend for more details. <br/><br/> The size of the shape at a given location reflects the magnitude of the investment, and the colour reflects the timing of the investment. Red shapes indicate investments that have already been made, while green investments are planned to occur closer to 2025. <br/><br/> Selecting a shape reveals information on the value and cause of the network investment, and how much of the investment is potentially deferrable."
+            },
+            {
+              "name": "Updates",
+              "content": "From 2016 onwards, this data is planned to be updated annually in June."
+            },
+            {
+              "name": "Data Supplier and Custodian",
+              "content": "The data was supplied by Network Service Providers. The data is stored and processed into mapping outputs by the Institute of Sustainable Futures (ISF) at the University of Technology Sydney (UTS)."
+            },
+            {
+              "name": "Licensing, Terms & Conditions",
+              "content": "Refer to Disclaimer. "
+            }
+          ],
+          "type": "czml",
+          "url": "datasets/dance2/",
+          "legendUrl": "datasets/dance2/PropInv.png",
+          "rectangle": [
+            "134",
+            "-50",
+            "154",
+            "-8"
+          ]
+        }
+      ]
+    },
+    {
       "name": "Energy Infrastructure",
       "type": "group",
       "items": [
