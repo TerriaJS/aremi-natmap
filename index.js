@@ -373,6 +373,7 @@ terria.start({
       if(defined(disclaimer.enabled) && disclaimer.enabled) {
           var options = {
               title: defined(disclaimer.title) ? disclaimer.title : 'Disclaimer',
+              confirmText: "I Agree",
               width: 600,
               height: 550,
               message: require('fs').readFileSync(__dirname + '/lib/Views/GlobalDisclaimer.html', 'utf8'),
