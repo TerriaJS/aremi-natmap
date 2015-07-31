@@ -9,6 +9,7 @@ DESCRIBE=$(git describe)
 
 rm -rf node_modules
 npm install
+npm install
 gulp release
 
 mkdir -p target
