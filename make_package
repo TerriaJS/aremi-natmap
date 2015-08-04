@@ -1,20 +1,25 @@
 #!/bin/bash
 
 if [ -n "$(git status --porcelain)" ]; then
-    echo "There are uncommitted modifications - not making a package!"
-    exit 1
+    echo
+    echo "There are uncommitted modifications - are you absolutely sure you want to make a package???"
+    echo
 fi
 
 DESCRIBE=$(git describe)
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+TARGET="target/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz"
 
 rm -rf node_modules
+npm install
 npm install
 gulp release
 
 mkdir -p target
-tar czf target/aremi-natmap-${DESCRIBE}.tar.gz \
+tar czf ${TARGET} \
   node_modules \
   wwwroot \
   run_server.sh \
   server.js \
-  proxyAuth.json
+  proxyAuth.json \
+&& echo && echo "Finished package: ${TARGET}"
