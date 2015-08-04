@@ -23,7 +23,10 @@
           "initialMessage": {
             "title": "Disclaimer",
             "content": "The 2015 release of these maps is a ‘sample’ version, designed to introduce Network Service Providers (data suppliers) and potential users to the tool, and obtain feedback to refine the mapping outputs. Datasets may be incomplete and figures indicative only and should NOT be relied be upon for planning purposes. The first full map iteration will be provided in mid 2016.",
-            "key": "DANCE2-availcap.czml.disclaimer"
+            "confirmation": true,
+            "width": 450,
+            "height": 280,
+            "confirmText": "I Agree"
           },
           "info" :[
             {
@@ -74,7 +77,10 @@
           "initialMessage": {
             "title": "Disclaimer",
             "content": "The 2015 release of these maps is a ‘sample’ version, designed to introduce Network Service Providers (data suppliers) and potential users to the tool, and obtain feedback to refine the mapping outputs. Datasets may be incomplete and figures indicative only and should NOT be relied be upon for planning purposes. The first full map iteration will be provided in mid 2016.",
-            "key": "DANCE2-PropInv.png.disclaimer"
+            "confirmation": true,
+            "width": 450,
+            "height": 280,
+            "confirmText": "I Agree"
           },
           "info" :[
             {
@@ -125,7 +131,10 @@
           "initialMessage": {
             "title": "Disclaimer",
             "content": "The 2015 release of these maps is a ‘sample’ version, designed to introduce Network Service Providers (data suppliers) and potential users to the tool, and obtain feedback to refine the mapping outputs. Datasets may be incomplete and figures indicative only and should NOT be relied be upon for planning purposes. The first full map iteration will be provided in mid 2016.",
-            "key": "DANCE2-ADV_det.czml.disclaimer"
+            "confirmation": true,
+            "width": 450,
+            "height": 280,
+            "confirmText": "I Agree"
           },
           "info" :[
             {
@@ -176,7 +185,10 @@
           "initialMessage": {
             "title": "Disclaimer",
             "content": "The 2015 release of these maps is a ‘sample’ version, designed to introduce Network Service Providers (data suppliers) and potential users to the tool, and obtain feedback to refine the mapping outputs. Datasets may be incomplete and figures indicative only and should NOT be relied be upon for planning purposes. The first full map iteration will be provided in mid 2016.",
-            "key": "DANCE2-ADV_prob.czml.disclaimer"
+            "confirmation": true,
+            "width": 450,
+            "height": 280,
+            "confirmText": "I Agree"
           },
           "info" :[
             {
