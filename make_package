@@ -6,13 +6,15 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 DESCRIBE=$(git describe)
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 rm -rf node_modules
+npm install
 npm install
 gulp release
 
 mkdir -p target
-tar czf target/aremi-natmap-${DESCRIBE}.tar.gz \
+tar czf target/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz \
   node_modules \
   wwwroot \
   run_server.sh \
