@@ -19,7 +19,7 @@
     "proj4js-defs": "^0.0.1",
     "request": "^2.55.0",
     "supervisor": "^0.6.0",
-    "terriajs": "git://github.com/TerriaJS/terriajs#fd304093001dcf17451d26fe25f1915c335c31bb",
+    "terriajs": "git://github.com/TerriaJS/terriajs#9b7b0a7ea6f5a1ec5c30e080e6d67b32366f1229",
     "terriajs-cesium": "1.11.1",
     "yargs": "^3.8.0"
   },
