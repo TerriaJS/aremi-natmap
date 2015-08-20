@@ -74,7 +74,7 @@
                     {
                       "name": "Demand met by PV",
                       "type": "csv",
-                      "url": "http://services.aremi.nicta.com.au/apvi/v2/contribution/csv",
+                      "url": "http://services.aremi.nicta.com.au/apvi/v3/contribution/csv",
                       "info": [
                         {
                           "name": "Description",
@@ -97,7 +97,7 @@
                     {
                       "name": "Performance of Installed PV",
                       "type": "csv",
-                      "url": "http://services.aremi.nicta.com.au/apvi/v2/performance/csv",
+                      "url": "http://services.aremi.nicta.com.au/apvi/v3/performance/csv",
                       "info": [
                         {
                           "name": "Description",
@@ -126,7 +126,7 @@
                     {
                       "name": "All",
                       "type": "csv",
-                      "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/all",
+                      "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/all",
                       "tableStyle": {
                         "dataVariable": "Most Recent % of Max Cap",
                         "minDisplayValue": 0,
@@ -154,7 +154,7 @@
                     {
                       "name": "Wind",
                       "type": "csv",
-                      "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/wind",
+                      "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/wind",
                       "tableStyle": {
                         "dataVariable": "Most Recent % of Max Cap",
                         "minDisplayValue": 0,
@@ -182,7 +182,7 @@
                     {
                       "name": "Solar",
                       "type": "csv",
-                      "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/solar",
+                      "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/solar",
                       "tableStyle": {
                         "dataVariable": "Most Recent % of Max Cap",
                         "minDisplayValue": 0,
@@ -210,7 +210,7 @@
                     {
                       "name": "Hydro",
                       "type": "csv",
-                      "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/hydro",
+                      "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/hydro",
                       "tableStyle": {
                         "dataVariable": "Most Recent % of Max Cap",
                         "minDisplayValue": 0,
@@ -238,7 +238,7 @@
                     {
                       "name": "Bioenergy",
                       "type": "csv",
-                      "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/bio",
+                      "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/bio",
                       "tableStyle": {
                         "dataVariable": "Most Recent % of Max Cap",
                         "minDisplayValue": 0,
@@ -266,7 +266,7 @@
                     {
                       "name": "Fossil",
                       "type": "csv",
-                      "url": "http://services.aremi.nicta.com.au/aemo/v2/csv/fossil",
+                      "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/fossil",
                       "tableStyle": {
                         "dataVariable": "Most Recent % of Max Cap",
                         "minDisplayValue": 0,
