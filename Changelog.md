@@ -1,3 +1,4 @@
+* Removed missing legend messages from GA and NICTA geothermal raster layers.
 * Update APVI layer look and feel now that apvi-webservice has new columns.
 * Updated the Waste Management Facilities layer since the WMS version seemed broken with Terria.
 * Merged in the latest changes from NationalMap tag 2015-08-18.
