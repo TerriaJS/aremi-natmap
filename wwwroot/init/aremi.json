@@ -75,6 +75,15 @@
                       "name": "Demand met by PV",
                       "type": "csv",
                       "url": "http://services.aremi.nicta.com.au/apvi/v3/contribution/csv",
+                      "tableStyle": {
+                        "dataVariable": "Contribution (%)",
+                        "featureInfoFields": {
+                          "Contribution (%)": "Contribution (%)",
+                          "Received at": "Received at",
+                          "State name": "State",
+                          "Contribution over time": "Contribution over time"
+                        }
+                      },
                       "info": [
                         {
                           "name": "Description",
@@ -98,6 +107,15 @@
                       "name": "Performance of Installed PV",
                       "type": "csv",
                       "url": "http://services.aremi.nicta.com.au/apvi/v3/performance/csv",
+                      "tableStyle": {
+                        "dataVariable": "Performance (%)",
+                        "featureInfoFields": {
+                          "Performance (%)": "Performance (%)",
+                          "Received at": "Received at",
+                          "State name": "State",
+                          "Performance over time": "Performance over time"
+                        }
+                      },
                       "info": [
                         {
                           "name": "Description",
