@@ -1,3 +1,4 @@
+#### Version 2015-08-25
 * Replaced the Geoscience Australia - Australian Solar Energy Information System (ASEIS) layers with the new Bureau of Meteorology Solar Climatology services.
 * Removed missing legend messages from GA and NICTA geothermal raster layers.
 * Update APVI layer look and feel now that apvi-webservice has new columns.
