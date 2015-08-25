@@ -19,6 +19,9 @@
     ],
     "parameters": {
         "bingMapsKey": null,
+        "googleUrlShortenerKey": null,
+        "googleAnalyticsKey": null,
+        "googleAnalyticsOptions": null,
         "disclaimer": {
             "text": "Disclaimer: AREMI must not be used for navigation or precise spatial analysis",
             "url": "about.html"
