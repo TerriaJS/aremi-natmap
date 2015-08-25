@@ -1,3 +1,5 @@
+* Updated the Waste Management Facilities layer since the WMS version seemed broken with Terria.
+* Merged in the latest changes from NationalMap tag 2015-08-18.
 * Improved Tasmanian Cadastral Parcels metadata.
 * Added Global Disclaimer that is optionally mandatory to accept before continuing.
 * Added the Feedback Survey link to the front page.
