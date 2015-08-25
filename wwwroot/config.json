@@ -24,7 +24,7 @@
         "googleAnalyticsOptions": null,
         "disclaimer": {
             "text": "Disclaimer: AREMI must not be used for navigation or precise spatial analysis",
-            "url": "about.html"
+            "url": "About.html"
         },
         "globalDisclaimer": {
             "enabled": true,

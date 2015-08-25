@@ -273,7 +273,7 @@ terria.start({
                 svgPathWidth: 18,
                 svgPathHeight: 18,
                 svgFillRule: 'evenodd',
-                href: 'about.html'
+                href: 'About.html'
             })
         ]
     });
