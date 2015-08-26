@@ -584,24 +584,17 @@
           "items": [
             {
               "name": "Waste Management Facilities",
-              "type": "esri-mapServer",
-              "url": "http://www.ga.gov.au/gis/rest/services/topography/National_Waste_Management_Facilities/MapServer",
+              "type": "wms",
+              "url": "http://www.ga.gov.au/gis/services/topography/National_Waste_Management_Facilities/MapServer/WMSServer",
               "layers": "National Waste Management Facilities",
               "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/National_Waste_Management_Facilities_Legend.png",
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "info": [
-                {
-                  "name": "Licence",
-                  "content": "[Licence](http://www.ga.gov.au/copyright)"
-                }
-              ],
               "opacity": "1.0",
               "clipToRectangle": true,
               "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
+                "112.0",
+                "-48.0",
+                "155.0",
+                "-5.0"
               ]
             }
           ]
