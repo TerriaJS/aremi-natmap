@@ -1,3 +1,4 @@
+* Improved look and feel, legend, of the CER Small Generation Unit data.
 * Tweaked the Waste Management Facilities layer further: switched back to WMS, removed info duplicated info we now harvest from the service metadata, adjusted rectangle to match home camera.
 
 
