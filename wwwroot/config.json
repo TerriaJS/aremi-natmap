@@ -1,5 +1,7 @@
 {
     "proxyDomains" : [
+        "www.aemo.com.au",
+        "landgate.wa.gov.au",
         "geofabric.bom.gov.au",
         "aurin.org.au",
         "nicta.com.au",
