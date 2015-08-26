@@ -43,6 +43,26 @@
                   ]
                 },
                 {
+                  "name": "Substations",
+                  "url": "http://www.ga.gov.au/gis/services/topography/National_Electricity_Transmission_Substations/MapServer/WMSServer",
+                  "layers": "National_Electricity_Transmission_Substations",
+                  "type": "wms",
+                  "dataUrl": "http://www.ga.gov.au/gis/services/topography/National_Electricity_Transmission_Substations/MapServer/WFSServer?service=WFS&request=GetFeature&typeName=topography_National_Electricity_Transmission_Substations:National_Electricity_Transmission_Substations&srsName=EPSG%3A4326&maxFeatures=10000",
+                  "dataUrlType": "wfs",
+                  "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/National_Electricity_Transmission_Substations.png",
+                  "clipToRectangle": true,
+                  "parameters": {
+                    "tiled": true
+                  },
+                  "opacity": "1.0",
+                  "rectangle": [
+                    "112.0",
+                    "-48.0",
+                    "155.0",
+                    "-5.0"
+                  ]
+                },
+                {
                   "name": "Distance to Transmission Lines",
                   "layers": "Distance To Translines 10km",
                   "description": "[Licence](http://www.ga.gov.au/copyright)",
