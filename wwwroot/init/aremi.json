@@ -26,8 +26,13 @@
                 {
                   "name": "Transmission Lines",
                   "layers": "National_Electricity_Transmission_Lines",
-                  "description": "[Licence](http://www.ga.gov.au/copyright)",
                   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+                  "info": [
+                    {
+                      "name": "Licensing, Terms & Conditions",
+                      "content": "[Licence](http://www.ga.gov.au/copyright)"
+                    }
+                  ],
                   "url": "http://www.ga.gov.au/gis/rest/services/topography/National_Electricity_Transmission_Lines/MapServer",
                   "type": "esri-mapServer",
                   "opacity": "1.0",
@@ -36,24 +41,28 @@
                   "dataUrl": "http://www.ga.gov.au/gis/services/topography/National_Electricity_Transmission_Lines/MapServer/WFSServer?service=WFS&version=1.1.0&request=GetFeature&typeName=National_Electricity_Transmission_Lines&srsName=EPSG%3A4326&maxFeatures=100000",
                   "dataUrlType": "wfs-complete",
                   "rectangle": [
-                    "100.0",
-                    "-44.0",
-                    "159.0",
-                    "-4.0"
+                    "112.0",
+                    "-48.0",
+                    "155.0",
+                    "-5.0"
                   ]
                 },
                 {
                   "name": "Substations",
-                  "url": "http://www.ga.gov.au/gis/services/topography/National_Electricity_Transmission_Substations/MapServer/WMSServer",
+                  "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+                  "info": [
+                    {
+                      "name": "Licensing, Terms & Conditions",
+                      "content": "[Licence](http://www.ga.gov.au/copyright)"
+                    }
+                  ],
+                  "url": "http://www.ga.gov.au/gis/rest/services/topography/National_Electricity_Transmission_Substations/MapServer",
                   "layers": "National_Electricity_Transmission_Substations",
-                  "type": "wms",
+                  "type": "esri-mapServer",
                   "dataUrl": "http://www.ga.gov.au/gis/services/topography/National_Electricity_Transmission_Substations/MapServer/WFSServer?service=WFS&request=GetFeature&typeName=topography_National_Electricity_Transmission_Substations:National_Electricity_Transmission_Substations&srsName=EPSG%3A4326&maxFeatures=10000",
-                  "dataUrlType": "wfs",
+                  "dataUrlType": "wfs-complete",
                   "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/National_Electricity_Transmission_Substations.png",
                   "clipToRectangle": true,
-                  "parameters": {
-                    "tiled": true
-                  },
                   "opacity": "1.0",
                   "rectangle": [
                     "112.0",
@@ -75,10 +84,10 @@
                     "tiled": true
                   },
                   "rectangle": [
-                    "100.0",
-                    "-44.0",
-                    "159.0",
-                    "-4.0"
+                    "112.0",
+                    "-48.0",
+                    "155.0",
+                    "-5.0"
                   ]
                 }
               ]
