@@ -1120,7 +1120,7 @@
           "items": [
             {
               "name": "Broadband Availability and Quality",
-              "layers": "MyBroadband_Availability",
+              "layers": "mybroadband:MyBroadband_Availability",
               "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
               "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
               "url": "https://programs.communications.gov.au/geoserver/ows",
@@ -1142,7 +1142,7 @@
               "description": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)<br/>[More Info](https://www.mybroadband.communications.gov.au)",
               "dataCustodian": "[Department of Communications](http://www.communications.gov.au/)",
               "url": "https://programs.communications.gov.au/geoserver/ows",
-              "layers": "public:MyBroadband_ADSL_Quality",
+              "layers": "mybroadband:MyBroadband_ADSL_Quality",
               "type": "wms",
               "dataUrlType": "none",
               "rectangle": [
