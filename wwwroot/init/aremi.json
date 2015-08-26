@@ -336,7 +336,33 @@
                         }
                       ],
                       "type": "csv",
-                      "url": "datasets/cer/CER_RET_SGU_Hydro.csv"
+                      "url": "datasets/cer/CER_RET_SGU_Hydro.csv",
+                      "tableStyle": {
+                        "minDisplayValue": 0,
+                        "legendTicks": 3,
+                        "colorMap": [
+                          {
+                            "color": "rgba(0,0,200,1.0)",
+                            "offset": 0
+                          },
+                          {
+                            "color": "rgba(0,255,255,1.00)",
+                            "offset": 0.25
+                          },
+                          {
+                            "color": "rgba(0,200,0,1.00)",
+                            "offset": 0.5
+                          },
+                          {
+                            "color": "rgba(255,255,0,1.00)",
+                            "offset": 0.75
+                          },
+                          {
+                            "color": "rgba(200,0,0,1.00)",
+                            "offset": 1
+                          }
+                        ]
+                      }
                     },
                     {
                       "name": "Solar PV",
@@ -359,7 +385,33 @@
                         }
                       ],
                       "type": "csv",
-                      "url": "datasets/cer/CER_RET_SGU_Solar_Panels.csv"
+                      "url": "datasets/cer/CER_RET_SGU_Solar_Panels.csv",
+                      "tableStyle": {
+                        "minDisplayValue": 0,
+                        "legendTicks": 3,
+                        "colorMap": [
+                          {
+                            "color": "rgba(0,0,200,1.0)",
+                            "offset": 0
+                          },
+                          {
+                            "color": "rgba(0,255,255,1.00)",
+                            "offset": 0.25
+                          },
+                          {
+                            "color": "rgba(0,200,0,1.00)",
+                            "offset": 0.5
+                          },
+                          {
+                            "color": "rgba(255,255,0,1.00)",
+                            "offset": 0.75
+                          },
+                          {
+                            "color": "rgba(200,0,0,1.00)",
+                            "offset": 1
+                          }
+                        ]
+                      }
                     },
                     {
                       "name": "Wind",
@@ -382,7 +434,33 @@
                         }
                       ],
                       "type": "csv",
-                      "url": "datasets/cer/CER_RET_SGU_Wind.csv"
+                      "url": "datasets/cer/CER_RET_SGU_Wind.csv",
+                      "tableStyle": {
+                        "minDisplayValue": 0,
+                        "legendTicks": 3,
+                        "colorMap": [
+                          {
+                            "color": "rgba(0,0,200,1.0)",
+                            "offset": 0
+                          },
+                          {
+                            "color": "rgba(0,255,255,1.00)",
+                            "offset": 0.25
+                          },
+                          {
+                            "color": "rgba(0,200,0,1.00)",
+                            "offset": 0.5
+                          },
+                          {
+                            "color": "rgba(255,255,0,1.00)",
+                            "offset": 0.75
+                          },
+                          {
+                            "color": "rgba(200,0,0,1.00)",
+                            "offset": 1
+                          }
+                        ]
+                      }
                     },
                     {
                       "name": "Air Source Heat Pumps",
@@ -405,7 +483,33 @@
                         }
                       ],
                       "type": "csv",
-                      "url": "datasets/cer/CER_RET_SWH_Air_Source_Heat_Pump.csv"
+                      "url": "datasets/cer/CER_RET_SWH_Air_Source_Heat_Pump.csv",
+                      "tableStyle": {
+                        "minDisplayValue": 0,
+                        "legendTicks": 3,
+                        "colorMap": [
+                          {
+                            "color": "rgba(0,0,200,1.0)",
+                            "offset": 0
+                          },
+                          {
+                            "color": "rgba(0,255,255,1.00)",
+                            "offset": 0.25
+                          },
+                          {
+                            "color": "rgba(0,200,0,1.00)",
+                            "offset": 0.5
+                          },
+                          {
+                            "color": "rgba(255,255,0,1.00)",
+                            "offset": 0.75
+                          },
+                          {
+                            "color": "rgba(200,0,0,1.00)",
+                            "offset": 1
+                          }
+                        ]
+                      }
                     },
                     {
                       "name": "Solar Water Heaters",
@@ -428,7 +532,33 @@
                         }
                       ],
                       "type": "csv",
-                      "url": "datasets/cer/CER_RET_SWH_Solar.csv"
+                      "url": "datasets/cer/CER_RET_SWH_Solar.csv",
+                      "tableStyle": {
+                        "minDisplayValue": 0,
+                        "legendTicks": 3,
+                        "colorMap": [
+                          {
+                            "color": "rgba(0,0,200,1.0)",
+                            "offset": 0
+                          },
+                          {
+                            "color": "rgba(0,255,255,1.00)",
+                            "offset": 0.25
+                          },
+                          {
+                            "color": "rgba(0,200,0,1.00)",
+                            "offset": 0.5
+                          },
+                          {
+                            "color": "rgba(255,255,0,1.00)",
+                            "offset": 0.75
+                          },
+                          {
+                            "color": "rgba(200,0,0,1.00)",
+                            "offset": 1
+                          }
+                        ]
+                      }
                     }
                   ]
                 },
