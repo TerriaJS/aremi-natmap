@@ -48,19 +48,14 @@
             {
               "name": "Data Supplier and Custodian",
               "content": "The data was supplied by Network Service Providers. The data is stored and processed into mapping outputs by the Institute of Sustainable Futures (ISF) at the University of Technology Sydney (UTS)."
-            },
-            {
-              "name": "Licensing, Terms & Conditions",
-              "content": "Refer to Disclaimer. "
             }
           ],
           "infoSectionOrder": [
-            "Plain English Disclaimer",
-            "Full Legal Disclaimer",
             "Description of Data",
-            "Data Supplier and Custodian",
             "Updates",
-            "Licensing, Terms & Conditions"
+            "Data Supplier and Custodian",
+            "Plain English Disclaimer",
+            "Full Legal Disclaimer"
           ],
           "type": "czml",
           "url": "datasets/dance2/availcap.czml",
@@ -102,19 +97,14 @@
             {
               "name": "Data Supplier and Custodian",
               "content": "The data was supplied by Network Service Providers. The data is stored and processed into mapping outputs by the Institute of Sustainable Futures (ISF) at the University of Technology Sydney (UTS)."
-            },
-            {
-              "name": "Licensing, Terms & Conditions",
-              "content": "Refer to Disclaimer. "
             }
           ],
           "infoSectionOrder": [
-            "Plain English Disclaimer",
-            "Full Legal Disclaimer",
             "Description of Data",
-            "Data Supplier and Custodian",
             "Updates",
-            "Licensing, Terms & Conditions"
+            "Data Supplier and Custodian",
+            "Plain English Disclaimer",
+            "Full Legal Disclaimer"
           ],
           "type": "czml",
           "url": "datasets/dance2/PropInv.czml",
@@ -127,7 +117,7 @@
           ]
         },
         {
-          "name": "Annual Deferral Value ($/kVAyr)",
+          "name": "Annual Deferral Value",
           "initialMessage": {
             "title": "Disclaimer",
             "content": "<strong>Plain English Disclaimer</strong> <br/><br/> These maps are intended to make data on electricity network planning and investment more accessible and consistent. These maps should not be used to make investment decisions, and should only be used to assist in discussions with the local Network Service Provider. You are free to use the data but do so at your own risk. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user agrees and accepts the terms of the Full Legal Disclaimer shown below. <br/><br/> The 2015 release of these maps is a ‘sample’ version, designed to introduce Network Service Providers (data suppliers) and potential users to the tool, and obtain feedback to refine the mapping outputs. Datasets may be incomplete and figures indicative only and should NOT be relied be upon for planning purposes. The first full map iteration will be provided in mid 2016. <br/><br/> <strong>Full Legal Disclaimer</strong> <br/><br/> UTS, the authors and the Network Service Providers do not make any representations, guarantees or warranties as to the accuracy, reliability, completeness or currency of the data and content of the maps or that reasonable care has or will be taken by UTS, the authors and the Network Service Providers in compiling preparing or updating the maps.  Except to the extent not permitted by statute or any law, no liability (whether in negligence or tort, by contract or under statute or otherwise) for any error or omission is accepted by UTS, the authors and the Network Service Providers, and UTS, the authors and Network Service Providers specifically disclaim any liability for any costs, losses, claims, demands or liabilities of any kind suffered or incurred by any person by reason of or in connection with the maps or by any purported  reliance on information contained in the maps.  <br/><br/> While due care and attention has been taken in the presentation and transformation of available data and to verify the accuracy of the material published, the maps are not intended to be used as the basis for any investment decision. Users should make their own detailed investigations as to the reliability and suitability of the content of the maps for any use to which the user intends to put it, seek independent expert advice before using it or any information contained in it and initiate dialogue with the relevant Network Service Provider before considering any investment relating to the subject-matter of the maps. <br/><br/> In particular, users should note that Annual Deferral Values are indicative estimates which are subject to change as circumstances change, options are developed and more detailed investigation is done.    Annual Deferral Values are not what the Network Service Provider is willing to pay for demand management support.  Refer to the Network Service Provider’s Demand Side Engagement Document for details on how they assess non-network solutions and determine payment levels. <br/><br/> Data supplied by Network Service Providers and other parties used in the formulation of the maps has been provided, compiled and assessed in good faith, but may be incomplete and is subject to errors and to change over time as the network situation changes, load projections are amended and operational and technical matters affect network performance and investment. Such changes are likely but not guaranteed to have occurred both prior to and after publication of the maps. By accessing or using the data the user agrees to irrevocably release Network Service Providers and UTS from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise relating to the data.  <br/><br/> A “Network Service Provider” referred to above is a person who engages in the activity of owning, controlling or operating a transmission or distribution system in the National Electricity Market and who is registered by AEMO as a Network Service Provider under Chapter 2 of the National Electricity Rules, and includes Electranet, SA Power Networks, TasNetworks, AEMO, United Energy Distribution, Ausnet Services, Jemena, Citipower-Powercor, Transgrid, Ausgrid, Essential Energy, Endeavour Energy, Powerlink, Ergon Energy and Energex.",
@@ -156,19 +146,14 @@
             {
               "name": "Data Supplier and Custodian",
               "content": "The data was supplied by Network Service Providers. The data is stored and processed into mapping outputs by the Institute of Sustainable Futures (ISF) at the University of Technology Sydney (UTS)."
-            },
-            {
-              "name": "Licensing, Terms & Conditions",
-              "content": "Refer to Disclaimer. "
             }
           ],
           "infoSectionOrder": [
-            "Plain English Disclaimer",
-            "Full Legal Disclaimer",
             "Description of Data",
-            "Data Supplier and Custodian",
             "Updates",
-            "Licensing, Terms & Conditions"
+            "Data Supplier and Custodian",
+            "Plain English Disclaimer",
+            "Full Legal Disclaimer"
           ],
           "type": "czml",
           "url": "datasets/dance2/ADV_det.czml",
@@ -210,22 +195,17 @@
             {
               "name": "Data Supplier and Custodian",
               "content": "The data was supplied by Network Service Providers. The data is stored and processed into mapping outputs by the Institute of Sustainable Futures (ISF) at the University of Technology Sydney (UTS)."
-            },
-            {
-              "name": "Licensing, Terms & Conditions",
-              "content": "Refer to Disclaimer. "
             }
           ],
           "infoSectionOrder": [
-            "Plain English Disclaimer",
-            "Full Legal Disclaimer",
             "Description of Data",
-            "Data Supplier and Custodian",
             "Updates",
-            "Licensing, Terms & Conditions"
+            "Data Supplier and Custodian",
+            "Plain English Disclaimer",
+            "Full Legal Disclaimer"
           ],
           "type": "czml",
-          "url": "datasets/dance2/Hourly_ADV_det.czml",
+          "url": "datasets/dance2/NICTA_Hourly.czml",
           "legendUrl": "datasets/dance2/NICTA_HourlyADV.png",
           "rectangle": [
             "134",
