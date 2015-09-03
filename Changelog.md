@@ -1,3 +1,4 @@
+* Moved License links when they were the only thing in Description sections to their own Licensing sections.
 * Tasmania Cadastral: Removed duplicated info page Data Description text, fixed order of info blocks.
 
 
