@@ -1,3 +1,6 @@
+* Tasmania Cadastral: Removed duplicated info page Data Description text, fixed order of info blocks.
+
+
 #### Version 2015-08-26
 * Added Geoscience Australia Substations layer, improved metadata for Transmission Lines layer.
 * Improved look and feel, legend, of the CER Small Generation Unit data.

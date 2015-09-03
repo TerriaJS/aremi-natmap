@@ -953,10 +953,6 @@
           "url": "http://services.thelist.tas.gov.au/arcgis/services/Public/CadastreParcels/MapServer/WMSServer",
           "info": [
             {
-              "name": "Description",
-              "content": "The LIST Cadastral Parcels is a spatial index of polygons forming Tasmania's Cadastral framework. These polygons have been formed from The LIST Boundary Segments and the layers of Authority Parcel, Casement, Water areas and Private Parcel from The LIST Cadastral Area spatial table within the Cadastral Data Model. Private parcels will represent an entitlement in fee simple. These layers combine to form a single layer of non-overlapping polygons (with the exception of vertical strata titles and user roads) for the whole of Tasmania. Attributes of the Cadastral Parcels include the PID (Property Identifier) and Volume and Folio, which are the key identifiers to the VISTAS (Valuation Information System for Tasmania and TASFOL (Tasmanian Folio of the Register) systems. These systems hold attributes including property details, valuation, ownership, title and address which can be linked to the cadastral area through these identifiers. <br/><br/> [LIST Cadastral Parcels datasheet](http://listdata.thelist.tas.gov.au/public/LIST_Cadastral_Parcels_information.pdf)"
-            },
-            {
               "name": "Data Custodian",
               "content": "[Land Information System Tasmania - Tasmanian Government](https://www.thelist.tas.gov.au/)"
             },
@@ -964,6 +960,11 @@
               "name": "Licensing, Terms & Conditions",
               "content": "Cadastre Parcels from the LIST © State of Tasmania <br/><br/> [The LIST Terms and Conditions](http://listdata.thelist.tas.gov.au/public/LISTWebServicesTermsConditions.pdf)"
             }
+          ],
+          "infoSectionOrder": [
+            "Data Description",
+            "Data Custodian",
+            "Licensing, Terms & Conditions"
           ]
         },
         {
