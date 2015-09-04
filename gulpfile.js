@@ -53,7 +53,7 @@ gulp.task('build-css', function() {
         .pipe(gulp.dest('./wwwroot/build/'));
 });
 
-gulp.task('build', ['build-css', 'merge-datasources', 'build-app', 'build-specs']);
+gulp.task('build', ['build-css', 'merge-datasources', 'merge-datasources-aremi', 'build-app', 'build-specs']);
 
 gulp.task('release-app', ['prepare'], function() {
     return build(appJSName, appEntryJSName, true);
@@ -63,7 +63,7 @@ gulp.task('release-specs', ['prepare'], function() {
     return build(specJSName, glob.sync(testGlob), true);
 });
 
-gulp.task('release', ['build-css', 'merge-datasources', 'release-app', 'release-specs']);
+gulp.task('release', ['build-css', 'merge-datasources', 'merge-datasources-aremi', 'release-app', 'release-specs']);
 
 gulp.task('watch-app', ['prepare'], function() {
     return watch(appJSName, appEntryJSName, false);
@@ -85,7 +85,11 @@ gulp.task('watch-datasource-catalog', ['merge-catalog'], function() {
     return gulp.watch('datasources/*.json', [ 'merge-catalog' ]);
 });
 
-gulp.task('watch-datasources', ['watch-datasource-groups','watch-datasource-catalog']);
+gulp.task('watch-datasource-aremi', function() {
+    return gulp.watch('datasources/aremi/*.json', [ 'merge-datasources-aremi' ]);
+});
+
+gulp.task('watch-datasources', ['watch-datasource-groups','watch-datasource-catalog','watch-datasource-aremi']);
 
 
 gulp.task('watch', ['watch-app', 'watch-specs', 'watch-css', 'watch-datasources']);
@@ -144,6 +148,22 @@ gulp.task('merge-catalog', ['merge-groups'], function() {
 });
 
 gulp.task('merge-datasources', ['merge-catalog', 'merge-groups']);
+
+// AREMI uses json-include to build the AREMI init file
+gulp.task('merge-datasources-aremi', function() {
+    // process include files
+    var result = spawnSync('json-include', ['datasources/aremi', 'root.json']);
+    // error handling
+    if (result.error || result.status !== 0) {
+        console.log('error:', result.error);
+        console.log('args:', result.args);
+        process.exit(1);
+    }
+    var json = result.stdout.toString().trim();
+    // eval JSON string into object and minify
+    var buf = new Buffer(JSON.stringify(eval('('+json+')'), null, 0));
+    fs.writeFileSync('wwwroot/init/aremi.json', buf);
+});
 
 gulp.task('default', ['lint', 'build']);
 
