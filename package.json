@@ -27,6 +27,7 @@
     "brfs": "^1.4.0",
     "browserify": "^9.0.8",
     "deamdify": "^0.1.1",
+    "ejs": "^2.3.3",
     "exorcist": "^0.3.0",
     "glob": "^5.0.5",
     "glob-all": "^3.0.1",

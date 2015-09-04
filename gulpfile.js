@@ -21,6 +21,7 @@ var source = require('vinyl-source-stream');
 var watchify = require('watchify');
 var NpmImportPlugin = require('less-plugin-npm-import');
 var jsoncombine = require('gulp-jsoncombine');
+var ejs = require('ejs');
 
 var appJSName = 'nationalmap.js';
 var appCssName = 'nationalmap.css';
@@ -149,19 +150,14 @@ gulp.task('merge-catalog', ['merge-groups'], function() {
 
 gulp.task('merge-datasources', ['merge-catalog', 'merge-groups']);
 
-// AREMI uses json-include to build the AREMI init file
+// AREMI uses the EJS template engine to build the AREMI init file
 gulp.task('merge-datasources-aremi', function() {
-    // process include files
-    var result = spawnSync('json-include', ['datasources/aremi', 'root.json']);
-    // error handling
-    if (result.error || result.status !== 0) {
-        console.log('error:', result.error);
-        console.log('args:', result.args);
-        process.exit(1);
-    }
-    var json = result.stdout.toString().trim();
+    var fn = 'datasources/aremi/root.ejs';
+    var template = fs.readFileSync(fn,'utf8');
+    // use EJS to process
+    var result = ejs.render(template, null, {'filename': fn});
     // eval JSON string into object and minify
-    var buf = new Buffer(JSON.stringify(eval('('+json+')'), null, 0));
+    var buf = new Buffer(JSON.stringify(eval('('+result+')'), null, 0));
     fs.writeFileSync('wwwroot/init/aremi.json', buf);
 });
 
