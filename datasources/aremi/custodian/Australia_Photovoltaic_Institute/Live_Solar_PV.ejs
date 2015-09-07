@@ -1,0 +1,70 @@
+{
+  "name": "Live Solar PV - APVI",
+  "type": "group",
+  "items": [
+    {
+      "name": "Demand met by PV",
+      "type": "csv",
+      "url": "http://services.aremi.nicta.com.au/apvi/v3/contribution/csv",
+      "tableStyle": {
+        "dataVariable": "Contribution (%)",
+        "featureInfoFields": {
+          "Contribution (%)": "Contribution (%)",
+          "Received at": "Received at",
+          "State name": "State",
+          "Contribution over time": "Contribution over time"
+        }
+      },
+      "info": [
+        {
+          "name": "Description",
+          "content": "The PV Solar Map was developed by the Australian Photovoltaics Institute (APVI), through a project funded by the Australian Renewable Energy Agency (ARENA). The data can be accessed from [http://pv-map.apvi.org.au/live](http://pv-map.apvi.org.au/live)<br/><br/>Live Solar PV – State Contribution represents the estimated percentage of electricity demand being met by photovoltaics in each state. Currently unavailable in the NT. <br/><br/>Data is sourced at up to 5 minute intervals from more than 5000 PV systems nationwide. The data is sourced from [PVOutput.org](PVOutput.org). <br/><br/>The output from ACT PV systems and the ACT load is included in the NSW State Performance and Contribution estimates. Although the postcode 0872 lies partly in NT, WA and SA, PV systems in 0872 are used only in the NT Performance and Contribution calculations on this map. As the majority of the PV systems in 0872 are in the NT, the error introduced by this simplification is expected to be very small.<br/><br/>For Australian users, data is displayed in the user's timezone, so PV Output from systems east of the users timezone will present with an earlier sunrise, and systems west of the users timezone, a later sunrise. For international users, Australian Eastern Standard Time (AEST) is used for all data, as per the convention in the National Electricity Market."
+        },
+        {
+          "name": "Updates",
+          "content": "This data is updated every 5 minutes."
+        },
+        {
+          "name": "Data Custodian",
+          "content": "The [Australian Photovoltaic Institute](http://pv-map.apvi.org.au/) comprises companies, agencies, individuals and academics with an interest in solar energy research, technology, manufacturing, systems, policies, programs and projects. The institute’s objective is to support the increased development and use of PV via research, analysis and information. APVI’s focus is on data analysis, independent and balanced information, and collaborative research, both nationally and internationally."
+        },
+        {
+          "name": "Licensing, Terms & Conditions",
+          "content": "All licensing, terms and conditions and copyrights are attributed to the Australian PV Institute, The Australian Solar Map was developed by APVI and funded by ARENA, accessed from [http://pv-map.apvi.org.au/](http://pv-map.apvi.org.au/)."
+        }
+      ]
+    },
+    {
+      "name": "Performance of Installed PV",
+      "type": "csv",
+      "url": "http://services.aremi.nicta.com.au/apvi/v3/performance/csv",
+      "tableStyle": {
+        "dataVariable": "Performance (%)",
+        "featureInfoFields": {
+          "Performance (%)": "Performance (%)",
+          "Received at": "Received at",
+          "State name": "State",
+          "Performance over time": "Performance over time"
+        }
+      },
+      "info": [
+        {
+          "name": "Description",
+          "content": "The PV Solar Map was developed by the Australian Photovoltaics Institute (APVI), through a project funded by the Australian Renewable Energy Agency (ARENA). The data can be accessed from [http://pv-map.apvi.org.au/live](http://pv-map.apvi.org.au/live)<br/><br/>Live Solar PV – performance of installed PV – by State represents the estimated photovoltaic output as a percentage of its maximum capacity in each state.<br/><br/>Performance data are sourced at up to 5 minute intervals from more than 5000 PV systems nationwide. The data are kindly contributed by [SMA Australia](http://www.sma-australia.com.au/)  via the SMA Sunny Portal database and sourced from [PVOutput.org](PVOutput.org). <br/><br/>The output from ACT PV systems and the ACT load is included in the NSW State Performance and Contribution estimates. Although the postcode 0872 lies partly in NT, WA and SA, PV systems in 0872 are used only in the NT Performance and Contribution calculations on this map. As the majority of the PV systems in 0872 are in the NT, the error introduced by this simplification is expected to be very small.<br/><br/>For Australian users, data is displayed in the user's timezone, so PV Output from systems east of the users timezone will present with an earlier sunrise, and systems west of the users timezone, a later sunrise. For international users, Australian Eastern Standard Time (AEST) is used for all data, as per the convention in the National Electricity Market."
+        },
+        {
+          "name": "Updates",
+          "content": "This data is updated every 5 minutes."
+        },
+        {
+          "name": "Data Custodian",
+          "content": "The [Australian Photovoltaic Institute](http://pv-map.apvi.org.au/) comprises companies, agencies, individuals and academics with an interest in solar energy research, technology, manufacturing, systems, policies, programs and projects. The institute’s objective is to support the increased development and use of PV via research, analysis and information. APVI’s focus is on data analysis, independent and balanced information, and collaborative research, both nationally and internationally."
+        },
+        {
+          "name": "Licensing, Terms & Conditions",
+          "content": "All licensing, terms and conditions and copyrights are attributed to the Australian PV Institute, The Australian Solar Map was developed by APVI and funded by ARENA, accessed from [http://pv-map.apvi.org.au/](http://pv-map.apvi.org.au/)"
+        }
+      ]
+    }
+  ]
+}

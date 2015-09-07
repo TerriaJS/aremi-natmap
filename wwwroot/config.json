@@ -1,5 +1,8 @@
 {
     "proxyDomains" : [
+        "www.aemo.com.au",
+        "landgate.wa.gov.au",
+        "www2.landgate.wa.gov.au",
         "geofabric.bom.gov.au",
         "aurin.org.au",
         "nicta.com.au",
@@ -19,9 +22,12 @@
     ],
     "parameters": {
         "bingMapsKey": null,
+        "googleUrlShortenerKey": null,
+        "googleAnalyticsKey": null,
+        "googleAnalyticsOptions": null,
         "disclaimer": {
             "text": "Disclaimer: AREMI must not be used for navigation or precise spatial analysis",
-            "url": "about.html"
+            "url": "About.html"
         },
         "globalDisclaimer": {
             "enabled": true,

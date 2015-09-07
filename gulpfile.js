@@ -21,6 +21,7 @@ var source = require('vinyl-source-stream');
 var watchify = require('watchify');
 var NpmImportPlugin = require('less-plugin-npm-import');
 var jsoncombine = require('gulp-jsoncombine');
+var ejs = require('ejs');
 
 var appJSName = 'nationalmap.js';
 var appCssName = 'nationalmap.css';
@@ -53,7 +54,7 @@ gulp.task('build-css', function() {
         .pipe(gulp.dest('./wwwroot/build/'));
 });
 
-gulp.task('build', ['build-css', 'merge-datasources', 'build-app', 'build-specs']);
+gulp.task('build', ['build-css', 'merge-datasources', 'merge-datasources-aremi', 'build-app', 'build-specs']);
 
 gulp.task('release-app', ['prepare'], function() {
     return build(appJSName, appEntryJSName, true);
@@ -63,7 +64,7 @@ gulp.task('release-specs', ['prepare'], function() {
     return build(specJSName, glob.sync(testGlob), true);
 });
 
-gulp.task('release', ['build-css', 'merge-datasources', 'release-app', 'release-specs']);
+gulp.task('release', ['build-css', 'merge-datasources', 'merge-datasources-aremi', 'release-app', 'release-specs']);
 
 gulp.task('watch-app', ['prepare'], function() {
     return watch(appJSName, appEntryJSName, false);
@@ -85,7 +86,11 @@ gulp.task('watch-datasource-catalog', ['merge-catalog'], function() {
     return gulp.watch('datasources/*.json', [ 'merge-catalog' ]);
 });
 
-gulp.task('watch-datasources', ['watch-datasource-groups','watch-datasource-catalog']);
+gulp.task('watch-datasource-aremi', function() {
+    return gulp.watch('datasources/aremi/*.json', [ 'merge-datasources-aremi' ]);
+});
+
+gulp.task('watch-datasources', ['watch-datasource-groups','watch-datasource-catalog','watch-datasource-aremi']);
 
 
 gulp.task('watch', ['watch-app', 'watch-specs', 'watch-css', 'watch-datasources']);
@@ -145,6 +150,17 @@ gulp.task('merge-catalog', ['merge-groups'], function() {
 
 gulp.task('merge-datasources', ['merge-catalog', 'merge-groups']);
 
+// AREMI uses the EJS template engine to build the AREMI init file
+gulp.task('merge-datasources-aremi', function() {
+    var fn = 'datasources/aremi/root.ejs';
+    var template = fs.readFileSync(fn,'utf8');
+    // use EJS to process
+    var result = ejs.render(template, null, {filename: fn});
+    // eval JSON string into object and minify
+    var buf = new Buffer(JSON.stringify(eval('('+result+')'), null, 0));
+    fs.writeFileSync('wwwroot/init/aremi.json', buf);
+});
+
 gulp.task('default', ['lint', 'build']);
 
 function bundle(name, bundler, minify, catchErrors) {
@@ -164,7 +180,7 @@ function bundle(name, bundler, minify, catchErrors) {
     if (catchErrors) {
         // Display errors to the user, and don't let them propagate.
         result = result.on('error', function(e) {
-            gutil.log('Browserify Error', e);
+            gutil.log('Browserify Error', e.message);
         });
     }
 
