@@ -6,10 +6,7 @@
   "url": "https://programs.communications.gov.au/geoserver/ows",
   "dataUrlType": "none",
   "type": "wms",
-  "clipToRectangle": true,
-  "parameters": {
-    "tiled": true
-  },
+  <%- include ../../common/wms_standard_properties %>,
   "rectangle": [
     "100.0",
     "-44.0",
@@ -31,8 +28,5 @@
     "159.0",
     "-4.0"
   ],
-  "parameters": {
-    "tiled": true
-  },
-  "clipToRectangle": true
+  <%- include ../../common/wms_standard_properties %>,
 }
