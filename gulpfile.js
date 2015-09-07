@@ -155,7 +155,7 @@ gulp.task('merge-datasources-aremi', function() {
     var fn = 'datasources/aremi/root.ejs';
     var template = fs.readFileSync(fn,'utf8');
     // use EJS to process
-    var result = ejs.render(template, null, {'filename': fn});
+    var result = ejs.render(template, null, {filename: fn});
     // eval JSON string into object and minify
     var buf = new Buffer(JSON.stringify(eval('('+result+')'), null, 0));
     fs.writeFileSync('wwwroot/init/aremi.json', buf);
