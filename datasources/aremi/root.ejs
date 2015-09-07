@@ -25,7 +25,7 @@
               "items": [
                 <%- include('custodian/Geoscience_Australia/National_Electricity_Transmission_Lines') %>,
                 <%- include('custodian/Geoscience_Australia/National_Electricity_Transmission_Substations') %>,
-                <%- include('custodian/Geoscience_Australia/Distance_To_Translines_10km') %>
+                <%- include('custodian/Geoscience_Australia/Distance_To_Translines_10km') %>,
               ]
             },
             {
@@ -35,7 +35,7 @@
                 <%- include('custodian/Australia_Photovoltaic_Institute/Live_Solar_PV') %>,
                 <%- include('custodian/Australian_Energy_Market_Operator/Live_NEM_Power_Generation') %>,
                 <%- include('custodian/Clean_Energy_Regulator/Small_Scale_Installations') %>,
-                <%- include('custodian/Geoscience_Australia/Power_Stations') %>
+                <%- include('custodian/Geoscience_Australia/Power_Stations') %>,
               ]
             }
           ]
@@ -74,54 +74,7 @@
           "name": "Solar",
           "type": "group",
           "items": [
-            {
-              "name": "Monthly climatology of daily exposure - Global Horizontal Exposure",
-              "layers": "mean_exposure",
-              "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
-              "type": "wms",
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ],
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              }
-            },
-            {
-              "name": "Monthly climatology of daily exposure - Direct Normal Exposure",
-              "layers": "mean_exposure",
-              "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_dirNorExp1Day.nc",
-              "type": "wms",
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ],
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              }
-            },
-            {
-              "name": "Annual climatology of daily exposure - Global Horizontal Exposure",
-              "layers": "mean_exposure",
-              "url": "http://neii.bom.gov.au/services/solarclim/wms/data/annClim_gloHorExp1Day.nc",
-              "type": "wms",
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ],
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              }
-            }
+            <%- include('custodian/Bureau_of_Meteorology/Solar_Climatology') %>,
           ]
         },
         {
@@ -133,291 +86,29 @@
           "name": "Wave",
           "type": "group",
           "items": [
-            {
-              "name": "Bathymetry topography",
-              "layers": "Australian_Bathymetry_Topography",
-              "info": [
-                {
-                  "name": "Licensing, Terms & Conditions",
-                  "content": "[Licence](http://www.ga.gov.au/copyright)"
-                }
-              ],
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/gis/rest/services/marine_coastal/Australian_Bathymetry_Topography/MapServer",
-              "type": "esri-mapServer",
-              "clipToRectangle": true,
-              "rectangle": [
-                "90.0",
-                "-62.0",
-                "174.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "Seabed features",
-              "layers": "Geomorphic_Features",
-              "info": [
-                {
-                  "name": "Licensing, Terms & Conditions",
-                  "content": "[Licence](http://www.ga.gov.au/copyright)"
-                }
-              ],
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/gis/services/marine_coastal/Australian_Seabed_Features/MapServer/WMSServer",
-              "type": "wms",
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              },
-              "rectangle": [
-                "90.0",
-                "-62.0",
-                "174.0",
-                "-4.0"
-              ]
-            }
+            <%- include('custodian/Geoscience_Australia/Bathymetry_Seabed') %>,
           ]
         },
         {
           "name": "Bioenergy",
           "type": "group",
           "items": [
-            {
-              "name": "Waste Management Facilities",
-              "type": "wms",
-              "url": "http://www.ga.gov.au/gis/services/topography/National_Waste_Management_Facilities/MapServer/WMSServer",
-              "layers": "National Waste Management Facilities",
-              "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/National_Waste_Management_Facilities_Legend.png",
-              "opacity": "1.0",
-              "clipToRectangle": true,
-              "rectangle": [
-                "112.0",
-                "-48.0",
-                "155.0",
-                "-5.0"
-              ]
-            }
+            <%- include('custodian/Geoscience_Australia/Waste_Management_Facilities') %>,
           ]
         },
         {
           "name": "Geothermal",
           "type": "group",
           "items": [
-            {
-              "name": "Temperature at 5km depth",
-              "layers": "energy/OZTemp_Interpreted_Temperature_at_5km_Depth_Image",
-              "info": [
-                {
-                  "name": "Licensing, Terms & Conditions",
-                  "content": "[Licence](http://www.ga.gov.au/copyright)"
-                }
-              ],
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/gisimg/services/energy/OZTemp_Interpreted_Temperature_at_5km_Depth_Image/ImageServer/WMSServer",
-              "type": "wms",
-              "legendUrl": "",
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              },
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "Thermal wells",
-              "layers": "ThermalWell",
-              "info": [
-                {
-                  "name": "Licensing, Terms & Conditions",
-                  "content": "[Licence](http://www.ga.gov.au/copyright)"
-                }
-              ],
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/gis/services/energy/OZTemp_Well_Data/MapServer/WMSServer",
-              "type": "wms",
-              "opacity": "1.0",
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              },
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "Radiation and Geophysics",
-              "url": "http://www.ga.gov.au/gisimg/services/earth_science/Geoscience_Australia_National_Geophysical_Grids/MapServer/WMSServer",
-              "type": "wms-getCapabilities",
-              "itemProperties": {
-                "info": [
-                  {
-                    "name": "Licensing, Terms & Conditions",
-                    "content": "[Licence](http://www.ga.gov.au/copyright)"
-                  }
-                ],
-                "clipToRectangle": true,
-                "parameters": {
-                  "tiled": true
-                },
-                "rectangle": [
-                  "100.0",
-                  "-44.0",
-                  "159.0",
-                  "-4.0"
-                ]
-              }
-            }
+            <%- include('custodian/Geoscience_Australia/Geothermal_layers') %>,
           ]
         },
         {
           "name": "Hydro",
           "type": "group",
           "items": [
-            {
-              "name": "Australian Hydrography",
-              "info": [
-                {
-                  "name": "Licensing, Terms & Conditions",
-                  "content": "[Licence](http://www.ga.gov.au/copyright)"
-                }
-              ],
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/gis/rest/services/topography/AusHydro_WM/MapServer",
-              "type": "esri-mapServer",
-              "clipToRectangle": true,
-              "opacity": "1.0",
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "Catchment",
-              "layers": "AHGFContractedCatchment",
-              "info": [
-                {
-                  "name": "Licensing, Terms & Conditions",
-                  "content": "[Licence](http://creativecommons.org/licenses/by/3.0/au/)"
-                }
-              ],
-              "dataCustodian": "[Australian Bureau of Meteorology](http://www.bom.gov.au/water/geofabric/)",
-              "url": "http://geofabric.bom.gov.au/simplefeatures/ows",
-              "type": "wms",
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              },
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "Lakes",
-              "layers": "lakes",
-              "info": [
-                {
-                  "name": "Licensing, Terms & Conditions",
-                  "content": "[Licence](http://www.ga.gov.au/copyright)"
-                }
-              ],
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
-              "type": "wms",
-              "opacity": "1.0",
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              },
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "Reservoirs",
-              "layers": "reservoirs",
-              "info": [
-                {
-                  "name": "Licensing, Terms & Conditions",
-                  "content": "[Licence](http://www.ga.gov.au/copyright)"
-                }
-              ],
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
-              "type": "wms",
-              "opacity": "1.0",
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              },
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "River Regions",
-              "layers": "RiverRegions",
-              "info": [
-                {
-                  "name": "Licensing, Terms & Conditions",
-                  "content": "[Licence](http://www.ga.gov.au/copyright)"
-                }
-              ],
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://www.ga.gov.au/gis/services/hazards/NFRIPCatchments/MapServer/WMSServer",
-              "type": "wms",
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              },
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            },
-            {
-              "name": "Dam Walls",
-              "layers": "damwalls",
-              "info": [
-                {
-                  "name": "Licensing, Terms & Conditions",
-                  "content": "[Licence](http://www.ga.gov.au/copyright)"
-                }
-              ],
-              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
-              "type": "wms",
-              "opacity": "1.0",
-              "clipToRectangle": true,
-              "parameters": {
-                "tiled": true
-              },
-              "rectangle": [
-                "100.0",
-                "-44.0",
-                "159.0",
-                "-4.0"
-              ]
-            }
+            <%- include('custodian/Bureau_of_Meteorology/Catchment') %>,
+            <%- include('custodian/Geoscience_Australia/Hydrography') %>,
           ]
         }
       ]
