@@ -1,3 +1,4 @@
+* Turn off autoplaying of timeseries data (requires Terria support).
 * Generate the AREMI init file using the EJS template engine.
 * Moved License links when they were the only thing in Description sections to their own Licensing sections.
 * Tasmania Cadastral: Removed duplicated info page Data Description text, fixed order of info blocks.
