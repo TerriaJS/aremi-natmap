@@ -1,6 +1,7 @@
 {
     "proxyDomains" : [
         "www.aemo.com.au",
+        "nci.org.au",
         "landgate.wa.gov.au",
         "www2.landgate.wa.gov.au",
         "geofabric.bom.gov.au",
