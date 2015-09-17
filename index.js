@@ -74,6 +74,7 @@ var SearchTabViewModel = require('terriajs/lib/ViewModels/SearchTabViewModel');
 var SettingsPanelViewModel = require('terriajs/lib/ViewModels/SettingsPanelViewModel');
 var SharePopupViewModel = require('terriajs/lib/ViewModels/SharePopupViewModel');
 var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateApplicationOnHashChange');
+var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 
 var BaseMapViewModel = require('terriajs/lib/ViewModels/BaseMapViewModel');
 var Terria = require('terriajs/lib/Models/Terria');
@@ -148,6 +149,7 @@ terria.start({
             link: 'http://www.nicta.com.au'
         }
     });
+    terria.viewerMode = ViewerMode.CesiumEllipsoid;
 
     // Create the various base map options.
     var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
