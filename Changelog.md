@@ -1,3 +1,4 @@
+* Default to 3D-smooth mode to increase performance, and to avoid current Cesium native feature parallax issues.
 * Turn off autoplaying of timeseries data (requires Terria support).
 * Generate the AREMI init file using the EJS template engine.
 * Moved License links when they were the only thing in Description sections to their own Licensing sections.
