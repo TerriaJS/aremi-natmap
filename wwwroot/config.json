@@ -11,7 +11,7 @@
     ],
     "initializationUrls" : [
         "aremi",
-        "http://aremi.nicta.com.au/proxy/_60s/http://static.aremi.nicta.com.au/extraInit.json"
+        "/proxy/_60s/http://static.aremi.nicta.com.au/extraInit.json"
     ],
     "parameters": {
         "bingMapsKey": null,
