@@ -154,6 +154,8 @@ terria.start({
     // Create the various base map options.
     var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
     var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
+
+    /* turn off the custom AREMI maps for now
     var aremiBaseMaps = [];
 
     var osmSimpleLight = new WebMapServiceCatalogItem(terria);
@@ -183,9 +185,10 @@ terria.start({
         image: 'images/osmDark.png',
         catalogItem: osmSimpleDark,
     }));
+    */
 
-    var allBaseMaps = aremiBaseMaps.concat(australiaBaseMaps).concat(globalBaseMaps);
-    selectBaseMap(terria, allBaseMaps, 'OpenStreeMaps Light (BETA)');
+    var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);//.concat(aremiBaseMaps);
+    selectBaseMap(terria, allBaseMaps, 'Positron (Light)');
 
     // Create the Settings / Map panel.
     var settingsPanel = SettingsPanelViewModel.create({
