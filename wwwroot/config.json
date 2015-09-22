@@ -1,6 +1,7 @@
 {
     "proxyDomains" : [
-        "www.aemo.com.au",
+        "services.thelist.tas.gov.au",
+        "aemo.com.au",
         "nci.org.au",
         "landgate.wa.gov.au",
         "bom.gov.au",
