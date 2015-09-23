@@ -1,3 +1,4 @@
+* Added the Geoscience Australia hosted Department of Environment Protected Areas services.
 * Switched the Tasmanian Cadastre layer to their public Esri MapServer as it has better layer metadata.
 * Switch default basemap to Positron (Light) in order to have some extra definition, remove OpenStreetMap simple basemaps from basemap controls.
 * Merged in the latest NationalMap [2015-09-17](https://github.com/NICTA/nationalmap/blob/2015-09-17/CHANGES.md) and Terria [1.0.43](https://github.com/TerriaJS/terriajs/blob/1.0.43/CHANGES.md) releases.
