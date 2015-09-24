@@ -1,11 +1,14 @@
 {
   "name": "Live NEM Power Generation - AEMO",
   "type": "group",
+  "isOpen": true,
   "items": [
     {
       "name": "All",
       "type": "csv",
       "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/all",
+      "isEnabled": true,
+      "cacheDuration": "5m",
       "tableStyle": {
         "dataVariable": "Most Recent % of Max Cap",
         "minDisplayValue": 0,
@@ -23,6 +26,7 @@
       "name": "Wind",
       "type": "csv",
       "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/wind",
+      "cacheDuration": "5m",
       "tableStyle": {
         "dataVariable": "Most Recent % of Max Cap",
         "minDisplayValue": 0,
@@ -40,6 +44,7 @@
       "name": "Solar",
       "type": "csv",
       "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/solar",
+      "cacheDuration": "5m",
       "tableStyle": {
         "dataVariable": "Most Recent % of Max Cap",
         "minDisplayValue": 0,
@@ -57,6 +62,7 @@
       "name": "Hydro",
       "type": "csv",
       "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/hydro",
+      "cacheDuration": "5m",
       "tableStyle": {
         "dataVariable": "Most Recent % of Max Cap",
         "minDisplayValue": 0,
@@ -74,6 +80,7 @@
       "name": "Bioenergy",
       "type": "csv",
       "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/bio",
+      "cacheDuration": "5m",
       "tableStyle": {
         "dataVariable": "Most Recent % of Max Cap",
         "minDisplayValue": 0,
@@ -91,6 +98,7 @@
       "name": "Fossil",
       "type": "csv",
       "url": "http://services.aremi.nicta.com.au/aemo/v3/csv/fossil",
+      "cacheDuration": "5m",
       "tableStyle": {
         "dataVariable": "Most Recent % of Max Cap",
         "minDisplayValue": 0,

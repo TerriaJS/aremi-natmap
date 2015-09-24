@@ -11,10 +11,7 @@
   "url": "http://www.ga.gov.au/gisimg/services/energy/OZTemp_Interpreted_Temperature_at_5km_Depth_Image/ImageServer/WMSServer",
   "type": "wms",
   "legendUrl": "",
-  "clipToRectangle": true,
-  "parameters": {
-    "tiled": true
-  },
+  <%- include ../../common/wms_standard_properties %>,
   "rectangle": [
     "100.0",
     "-44.0",
@@ -35,10 +32,7 @@
   "url": "http://www.ga.gov.au/gis/services/energy/OZTemp_Well_Data/MapServer/WMSServer",
   "type": "wms",
   "opacity": "1.0",
-  "clipToRectangle": true,
-  "parameters": {
-    "tiled": true
-  },
+  <%- include ../../common/wms_standard_properties %>,
   "rectangle": [
     "100.0",
     "-44.0",
@@ -57,10 +51,7 @@
         "content": "[Licence](http://www.ga.gov.au/copyright)"
       }
     ],
-    "clipToRectangle": true,
-    "parameters": {
-      "tiled": true
-    },
+    <%- include ../../common/wms_standard_properties %>,
     "rectangle": [
       "100.0",
       "-44.0",

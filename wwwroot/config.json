@@ -1,29 +1,23 @@
 {
     "proxyDomains" : [
-        "www.aemo.com.au",
+        "services.thelist.tas.gov.au",
+        "aemo.com.au",
+        "nci.org.au",
         "landgate.wa.gov.au",
-        "www2.landgate.wa.gov.au",
-        "geofabric.bom.gov.au",
+        "bom.gov.au",
         "aurin.org.au",
         "nicta.com.au",
-        "gov.au",
-        "csiro.au",
-        "arcgis.com",
-        "argo.jcommops.org",
-        "www.abc.net.au",
-        "geoserver.aurin.org.au",
-        "mapsengine.google.com",
-        "s3-ap-southeast-2.amazonaws.com",
-        "adelaidecitycouncil.com",
-        "www.dptiapps.com.au"
+        "ga.gov.au",
+        "csiro.au"
     ],
     "initializationUrls" : [
-        "aremi"
+        "aremi",
+        "/proxy/_60s/http://static.aremi.nicta.com.au/extraInit.json"
     ],
     "parameters": {
         "bingMapsKey": null,
         "googleUrlShortenerKey": null,
-        "googleAnalyticsKey": null,
+        "googleAnalyticsKey": "UA-61302891-1",
         "googleAnalyticsOptions": null,
         "disclaimer": {
             "text": "Disclaimer: AREMI must not be used for navigation or precise spatial analysis",

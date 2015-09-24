@@ -1,3 +1,9 @@
+* Added the Geoscience Australia hosted Department of Environment Protected Areas services.
+* Switched the Tasmanian Cadastre layer to their public Esri MapServer as it has better layer metadata.
+* Switch default basemap to Positron (Light) in order to have some extra definition, remove OpenStreetMap simple basemaps from basemap controls.
+* Merged in the latest NationalMap [2015-09-17](https://github.com/NICTA/nationalmap/blob/2015-09-17/CHANGES.md) and Terria [1.0.43](https://github.com/TerriaJS/terriajs/blob/1.0.43/CHANGES.md) releases.
+* Default to 3D-smooth mode to increase performance, and to avoid current Cesium native feature parallax issues.
+* Turn off autoplaying of timeseries data (requires Terria support).
 * Generate the AREMI init file using the EJS template engine.
 * Moved License links when they were the only thing in Description sections to their own Licensing sections.
 * Tasmania Cadastral: Removed duplicated info page Data Description text, fixed order of info blocks.
