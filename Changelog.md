@@ -1,3 +1,5 @@
+#### Version 2015-09-25
+* Added the Institute for Sustainable Futures DANCE modelling project.
 * Added the Geoscience Australia hosted Department of Environment Protected Areas services.
 * Switched the Tasmanian Cadastre layer to their public Esri MapServer as it has better layer metadata.
 * Switch default basemap to Positron (Light) in order to have some extra definition, remove OpenStreetMap simple basemaps from basemap controls.
