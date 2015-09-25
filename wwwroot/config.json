@@ -12,7 +12,7 @@
     ],
     "initializationUrls" : [
         "aremi",
-        "/proxy/_60s/http://static.aremi.nicta.com.au/extraInit.json"
+        "proxy/_60s/http://static.aremi.nicta.com.au/init.json"
     ],
     "parameters": {
         "bingMapsKey": null,

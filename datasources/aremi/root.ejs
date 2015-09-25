@@ -12,53 +12,37 @@
   "services": [],
   "catalog": [
     {
-      "name": "Energy Infrastructure",
+      "name": "Electricity Infrastructure",
       "type": "group",
+      "preserveOrder": true,
       "items": [
         {
-          "name": "Electricity",
+          "name": "Generation",
           "type": "group",
-          "isOpen": true,
           "items": [
-            {
-              "name": "Transmission",
-              "type": "group",
-              "isOpen": true,
-              "items": [
-                <%- include custodian/Geoscience_Australia/National_Electricity_Transmission_Lines %>,
-                <%- include custodian/Geoscience_Australia/National_Electricity_Transmission_Substations %>,
-                <%- include custodian/Geoscience_Australia/Distance_To_Translines_10km %>,
-              ]
-            },
-            {
-              "name": "Generation",
-              "type": "group",
-              "isOpen": true,
-              "items": [
-                <%- include custodian/Australian_Photovoltaic_Institute/Live_Solar_PV %>,
-                <%- include custodian/Australian_Energy_Market_Operator/Live_NEM_Power_Generation %>,
-                <%- include custodian/Clean_Energy_Regulator/Small_Scale_Installations %>,
-                <%- include custodian/Geoscience_Australia/Power_Stations %>,
-              ]
-            }
+            <%- include custodian/Australian_Photovoltaic_Institute/Live_Solar_PV %>,
+            <%- include custodian/Australian_Energy_Market_Operator/Live_NEM_Power_Generation %>,
+            <%- include custodian/Clean_Energy_Regulator/Small_Scale_Installations %>,
+            <%- include custodian/Geoscience_Australia/Power_Stations %>,
           ]
         },
         {
-          "name": "Gas Pipelines",
-          "layers": "pipelines",
-          "info": [
-            {
-              "name": "Licensing, Terms & Conditions",
-              "content": "[Licence](http://www.ga.gov.au/copyright)"
-            }
-          ],
-          "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-          "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
-          "type": "wms",
-          "opacity": "1.0",
-          <%- include common/wms_standard_properties %>,
-          <%- include common/home_camera_rectangle %>,
-        }
+          "name": "Transmission",
+          "type": "group",
+          "items": [
+            <%- include custodian/Geoscience_Australia/National_Electricity_Transmission_Lines %>,
+            <%- include custodian/Geoscience_Australia/National_Electricity_Transmission_Substations %>,
+            <%- include custodian/Geoscience_Australia/Distance_To_Translines_10km %>,
+          ]
+        },
+        {
+          "name": "Network Opportunities - ISF",
+          "type": "group",
+          "preserveOrder": true,
+          "items": [
+            <%- include custodian/Institute_for_Sustainable_Futures/DANCE2/DANCE2 %>,
+          ]
+        },
       ]
     },
     {
@@ -135,6 +119,22 @@
           "items": [
             <%- include custodian/Department_of_Communications/Broadband %>,
             <%- include custodian/Geoscience_Australia/Infrastructure_layers %>,
+            {
+              "name": "Gas Pipelines",
+              "layers": "pipelines",
+              "info": [
+                {
+                  "name": "Licensing, Terms & Conditions",
+                  "content": "[Licence](http://www.ga.gov.au/copyright)"
+                }
+              ],
+              "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
+              "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
+              "type": "wms",
+              "opacity": "1.0",
+              <%- include common/wms_standard_properties %>,
+              <%- include common/home_camera_rectangle %>,
+            }
           ]
         },
         {
@@ -188,16 +188,9 @@
           ]
         },
         {
-          "name": "DANCE - Institute for Sustainable Futures",
+          "name": "ISF Breaking the Solar Gridlock",
           "type": "group",
           "items": [
-            {
-              "name": "Series 1 - Potentially avoidable network investment",
-              "type": "group",
-              "items": [
-                <%- include custodian/Institute_for_Sustainable_Futures/Series1 %>,
-              ]
-            },
             {
               "name": "Series 2 - CSP Indicative Firm Capacity",
               "type": "group",
