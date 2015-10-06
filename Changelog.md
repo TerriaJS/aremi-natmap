@@ -1,3 +1,5 @@
+* Refactored DANCE2 info pages, fixing some problems masked by HTML-leniency.
+
 #### Version 2015-09-25
 * Added the Institute for Sustainable Futures DANCE modelling project.
 * Added the Geoscience Australia hosted Department of Environment Protected Areas services.
