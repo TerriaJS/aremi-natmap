@@ -203,8 +203,8 @@ terria.start({
         container: ui,
         elements: [
             '<div class="ausglobe-title-aremi">\
-                <img class="left"  src="images/ARENA-logo2.png"/>\
-                <img class="right" src="images/nicta.png"/>\
+                <img class="left"  src="images/ARENA-logo2.png" alt="Australian Renewable Energy Agency" />\
+                <img class="right" src="images/nicta.png" alt="NICTA" />\
                 <br/>\
                 <strong>Australian Renewable Energy</strong>\
                 <br/>\
