@@ -1,3 +1,4 @@
+* Reordered and refactored the Electricity -> Generation -> Live NEM layers in preparation for the new Renewable category.
 * Fixed Legends and info pages, set opacity=100 and ignoreUnknownTileErrors=true for Boundaries -> Defence Restricted Areas layers.
 * Refactored DANCE2 info pages, fixing some problems masked by HTML-leniency.
 
