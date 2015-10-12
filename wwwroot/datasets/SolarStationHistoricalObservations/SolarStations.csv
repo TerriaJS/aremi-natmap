@@ -1,0 +1,21 @@
+Station name,Bureau of Meteorology station number,WMO index number,Rainfall district code,Month/Year site closed (MM/YYYY),Latitute,Longitude,State,Height of station above mean sea level in metres,Height of barometer above sea level in metres,Download historical observations (CSV)
+ADELAIDE AIRPORT,023034,94672,23A,OPEN,-34.9524,138.5204,SA,2.0,8.2,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+ALICE SPRINGS AIRPORT,015590,94326,15B,OPEN,-23.7951,133.8890,NT,546.0,547.0,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+BROOME AIRPORT,003003,94203,03,OPEN,-17.9475,122.2353,WA,7.4,9.0,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+CAIRNS AERO,031011,94287,31,OPEN,-16.8736,145.7458,QLD,2.2,8.3,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+COBAR MO,048027,94711,48,OPEN,-31.4840,145.8294,NSW,260.0,263.6,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+COCOS ISLAND AIRPORT,200284,96996,200,OPEN,-12.1892,96.8344,WA,3.0,4.0,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+DARWIN AIRPORT,014015,94120,14GA,OPEN,-12.4239,130.8925,NT,30.4,35.0,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+GERALDTON AIRPORT,008315,94403,08,OPEN,-28.8047,114.6989,WA,29.7,30.2,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+GERALDTON AIRPORT COMPARISON,008051,95403,08,06/20144,-28.7953,114.6975,WA,33.0,35.0,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+KALGOORLIE-BOULDER AIRPORT,012038,94637,12,OPEN,-30.7847,121.4533,WA,365.3,366.0,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+LEARMONTH AIRPORT,005007,94302,05,OPEN,-22.2406,114.0967,WA,5.0,5.5,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+LONGREACH AERO,036031,94346,36,OPEN,-23.4397,144.2828,QLD,192.2,192.5,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+MELBOURNE AIRPORT,086282,94866,86,OPEN,-37.6655,144.8321,VIC,113.4,118.8,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+MILDURA AIRPORT,076031,94693,76,OPEN,-34.2358,142.0867,VIC,50.0,51.1,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+MOUNT GAMBIER AERO,026021,94821,26,OPEN,-37.7473,140.7739,SA,63.0,69.0,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+ROCKHAMPTON AERO,039083,94374,39,OPEN,-23.3753,150.4775,QLD,10.4,15.1,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+TENNANT CREEK AIRPORT,015135,94238,15A,OPEN,-19.6423,134.1833,NT,375.7,377.1,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+TOWNSVILLE AERO,032040,94294,32,OPEN,-19.2483,146.7661,QLD,4.3,9.1,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+WAGGA WAGGA AMO,072150,94910,72,OPEN,-35.1583,147.4575,NSW,212.0,213.0,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
+WOOMERA AERODROME,016001,94659,16,OPEN,-31.1558,136.8054,SA,166.6,168.5,<a href=datasets/SolarStationHistoricalObservations/stNum_averaged.csv>1995-10-12 to 2014-03-24</a>
