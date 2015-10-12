@@ -1,20 +1,47 @@
 {
   "name": "Defence Restricted Areas",
-  "url": "http://www.ga.gov.au/gis/services/topography/Defence_Restricted_Areas/MapServer/WMSServer",
-  "type": "wms-getCapabilities",
-  "itemProperties": {
-    "info": [
-      {
-        "name": "Licensing, Terms & Conditions",
-        "content": "[Licence](http://www.ga.gov.au/copyright)"
-      }
-    ],
-    <%- include ../../common/wms_standard_properties %>,
-    "rectangle": [
-      "100.0",
-      "-44.0",
-      "159.0",
-      "-4.0"
-    ]
-  }
+  "type": "group",
+  "items": [
+
+
+    {
+      "name": "Practice Areas",
+      "url": "http://www.ga.gov.au/gis/services/topography/Defence_Restricted_Areas/MapServer/WMSServer",
+      "layers": "Defence_Practice_Areas",
+      "type": "wms",
+      "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/Defence_Prohibited_Areas_PracticeArea_Legend.png",
+      "opacity": "1.0",
+      "ignoreUnknownTileErrors": true,
+      <%- include ../../common/wms_standard_properties %>,
+      <%- include ../../common/home_camera_rectangle %>,
+    },
+
+
+    {
+      "name": "Prohibited Areas",
+      "url": "http://www.ga.gov.au/gis/services/topography/Defence_Restricted_Areas/MapServer/WMSServer",
+      "layers": "Defence_Prohibited_Areas",
+      "type": "wms",
+      "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/Defence_Prohibited_Areas_ProhibitedArea_Legend.png",
+      "opacity": "1.0",
+      "ignoreUnknownTileErrors": true,
+      <%- include ../../common/wms_standard_properties %>,
+      <%- include ../../common/home_camera_rectangle %>,
+    },
+
+
+    {
+      "name": "Training Areas",
+      "url": "http://www.ga.gov.au/gis/services/topography/Defence_Restricted_Areas/MapServer/WMSServer",
+      "layers": "Defence_Training_Areas",
+      "type": "wms",
+      "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/Defence_Prohibited_Areas_TrainingArea_Legend.png",
+      "opacity": "1.0",
+      "ignoreUnknownTileErrors": true,
+      <%- include ../../common/wms_standard_properties %>,
+      <%- include ../../common/home_camera_rectangle %>,
+    },
+
+
+  ]
 }

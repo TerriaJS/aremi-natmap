@@ -1,3 +1,4 @@
+* Fixed Legends and info pages, set opacity to 100 for Boundaries -> Defence Restricted Areas layers.
 * Refactored DANCE2 info pages, fixing some problems masked by HTML-leniency.
 
 #### Version 2015-09-25
