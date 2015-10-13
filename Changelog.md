@@ -1,3 +1,4 @@
+* Replaced the old 'Topography -> Infrastructure -> Gas Pipelines' layer two separate new Geoscience Australia layers - Gas Pipelines and Oil Pipelines.
 * Added the layer 'Solar Station Historical Observations' to the 'Renewable Energy -> Solar' and the new 'Weather' categories.
 * Reordered, refactored, added Renewable layer to the Electricity -> Generation -> Live NEM category.
 * Fixed Legends and info pages, set opacity=100 and ignoreUnknownTileErrors=true for Boundaries -> Defence Restricted Areas layers.
