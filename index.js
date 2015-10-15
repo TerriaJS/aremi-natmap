@@ -39,6 +39,7 @@ checkBrowserCompatibility('ui');
 
 var knockout = require('terriajs-cesium/Source/ThirdParty/knockout');
 var defined = require('terriajs-cesium/Source/Core/defined');
+var fs = require('fs');
 
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
 var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
@@ -387,12 +388,17 @@ terria.start({
     if(defined(terria.configParameters.globalDisclaimer)) {
       var disclaimer = terria.configParameters.globalDisclaimer;
       if(defined(disclaimer.enabled) && disclaimer.enabled) {
+          var message = '';
+          if (location.hostname.indexOf('nationalmap.gov.au') === -1) {
+            message += fs.readFileSync(__dirname + '/lib/Views/DevelopmentDisclaimer.html', 'utf8');
+          }
+          message += fs.readFileSync(__dirname + '/lib/Views/GlobalDisclaimer.html', 'utf8');
           var options = {
               title: defined(disclaimer.title) ? disclaimer.title : 'Disclaimer',
               confirmText: "I Agree",
               width: 600,
               height: 550,
-              message: require('fs').readFileSync(__dirname + '/lib/Views/GlobalDisclaimer.html', 'utf8'),
+              message: message,
               horizontalPadding : 100
           };
 

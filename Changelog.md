@@ -1,3 +1,4 @@
+* Added a development system disclaimer when the app detects that it is not hosted on a nationalmap.gov.au host.
 * Replaced the old 'Topography -> Infrastructure -> Gas Pipelines' layer two separate new Geoscience Australia layers - Gas Pipelines and Oil Pipelines.
 * Added the layer 'Solar Station Historical Observations' to the 'Renewable Energy -> Solar' and the new 'Weather' categories.
 * Reordered, refactored, added Renewable layer to the Electricity -> Generation -> Live NEM category.
