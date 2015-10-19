@@ -1,3 +1,4 @@
+* Added the ABS 2011 Census layers to the Population category.
 * Adjusted the home view for all layers in the Boundary category.
 * Changed to the Data61 logo.
 * Added a development system disclaimer when the app detects that it is not hosted on a nationalmap.gov.au host.
