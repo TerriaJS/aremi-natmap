@@ -19,9 +19,10 @@
         {
           "name": "Generation",
           "type": "group",
+          "preserveOrder": true,
           "items": [
-            <%- include custodian/Australian_Photovoltaic_Institute/Live_Solar_PV %>,
             <%- include custodian/Australian_Energy_Market_Operator/Live_NEM_Power_Generation %>,
+            <%- include custodian/Australian_Photovoltaic_Institute/Live_Solar_PV %>,
             <%- include custodian/Clean_Energy_Regulator/Small_Scale_Installations %>,
             <%- include custodian/Geoscience_Australia/Power_Stations %>,
           ]
@@ -62,6 +63,7 @@
     {
       "name": "Renewable Energy",
       "type": "group",
+      "preserveOrder": true,
       "items": [
         {
           "name": "Solar",
@@ -72,16 +74,9 @@
           ]
         },
         {
-          "name": "Wind",
+          "name": "Wind (coming soon)",
           "type": "group",
           "items": []
-        },
-        {
-          "name": "Wave",
-          "type": "group",
-          "items": [
-            <%- include custodian/Geoscience_Australia/Bathymetry_Seabed %>,
-          ]
         },
         {
           "name": "Bioenergy",
@@ -104,16 +99,36 @@
             <%- include custodian/Bureau_of_Meteorology/Catchment %>,
             <%- include custodian/Geoscience_Australia/Hydrography %>,
           ]
-        }
+        },
+        {
+          "name": "Wave",
+          "type": "group",
+          "items": [
+            <%- include custodian/Geoscience_Australia/Bathymetry_Seabed %>,
+          ]
+        },
       ]
     },
     {
       "name": "Infrastructure",
       "type": "group",
       "items": [
-        <%- include custodian/Department_of_Communications/Broadband %>,
         <%- include custodian/Geoscience_Australia/Infrastructure_layers %>,
         <%- include custodian/Geoscience_Australia/Pipelines %>,
+        {
+          "name": "Communications",
+          "type": "group",
+          "items": [
+            <%- include custodian/Department_of_Communications/Broadband %>,
+          ]
+        },
+        {
+          "name": "Transport",
+          "type": "group",
+          "items": [
+            <%- include custodian/Geoscience_Australia/Transport_layers %>,
+          ]
+        },
       ]
     },
     {
@@ -136,13 +151,6 @@
           "type": "group",
           "items": [
             <%- include custodian/Geoscience_Australia/Elevation_layers %>,
-          ]
-        },
-        {
-          "name": "Transport",
-          "type": "group",
-          "items": [
-            <%- include custodian/Geoscience_Australia/Transport_layers %>,
           ]
         },
         {
