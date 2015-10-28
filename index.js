@@ -52,6 +52,7 @@ var AnimationViewModel = require('terriajs/lib/ViewModels/AnimationViewModel');
 var BingMapsSearchProviderViewModel = require('terriajs/lib/ViewModels/BingMapsSearchProviderViewModel');
 var BrandBarViewModel = require('terriajs/lib/ViewModels/BrandBarViewModel');
 var CatalogItemNameSearchProviderViewModel = require('terriajs/lib/ViewModels/CatalogItemNameSearchProviderViewModel');
+var ChartPanelViewModel = require('terriajs/lib/ViewModels/ChartPanelViewModel');
 var createAustraliaBaseMapOptions = require('terriajs/lib/ViewModels/createAustraliaBaseMapOptions');
 var createGlobalBaseMapOptions = require('terriajs/lib/ViewModels/createGlobalBaseMapOptions');
 var createToolsMenuItem = require('terriajs/lib/ViewModels/createToolsMenuItem');
@@ -353,6 +354,12 @@ terria.start({
 
     // Create the feature information popup.
     var featureInfoPanel = FeatureInfoPanelViewModel.create({
+        container: ui,
+        terria: terria
+    });
+
+    // Create the chart panel.
+    var chartPanel = ChartPanelViewModel.create({
         container: ui,
         terria: terria
     });
