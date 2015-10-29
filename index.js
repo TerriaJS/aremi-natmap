@@ -352,7 +352,7 @@ terria.start({
         ]
     });
 
-    // Create the feature information popup.
+    // Create the feature information panel.
     var featureInfoPanel = FeatureInfoPanelViewModel.create({
         container: ui,
         terria: terria
@@ -363,6 +363,9 @@ terria.start({
         container: ui,
         terria: terria
     });
+
+    // Register the chart panel with the feature information panel.
+    featureInfoPanel.registerChartPanelViewModel(chartPanel);
 
     // Handle the user dragging/dropping files onto the application.
     DragDropViewModel.create({
