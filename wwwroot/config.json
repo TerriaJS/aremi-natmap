@@ -8,7 +8,10 @@
         "aurin.org.au",
         "nicta.com.au",
         "ga.gov.au",
-        "csiro.au"
+        "csiro.au",
+        "localhost",
+        "localhost:8080",
+        "nt.gov.au"
     ],
     "initializationUrls" : [
         "aremi",

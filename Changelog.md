@@ -1,3 +1,4 @@
+* Added the ACMA Radio Licenses layer to the Infrastructure -> Communications category.
 * Added the Geoscience Australia Northern Australia Land Tenure layers to the Boundaries category.
 * Renamed and reorded some entries in the catalog.
 * Added the Landgate Western Australia Electricity and Cadastre layer.
