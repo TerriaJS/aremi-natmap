@@ -1,5 +1,9 @@
 * Added the ABS 2011 Census layers to the Population category.
 * Adjusted the home view for all layers in the Boundary category.
+* Added the ACMA Radio Licenses layer to the Infrastructure -> Communications category.
+* Added the Geoscience Australia Northern Australia Land Tenure layers to the Boundaries category.
+* Renamed and reorded some entries in the catalog.
+* Added the Landgate Western Australia Electricity and Cadastre layer.
 * Changed to the Data61 logo.
 * Added a development system disclaimer when the app detects that it is not hosted on a nationalmap.gov.au host.
 * Replaced the old 'Topography -> Infrastructure -> Gas Pipelines' layer two separate new Geoscience Australia layers - Gas Pipelines and Oil Pipelines.
