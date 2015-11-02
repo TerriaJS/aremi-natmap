@@ -19,7 +19,7 @@
     "proj4js-defs": "^0.0.1",
     "request": "^2.55.0",
     "supervisor": "^0.6.0",
-    "terriajs": "git://github.com/TerriaJS/terriajs#662_timeseries_2",
+    "terriajs": "git://github.com/TerriaJS/terriajs#662_timeseries2",
     "terriajs-cesium": "1.11.1",
     "yargs": "^3.8.0"
   },
