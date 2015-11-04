@@ -1,3 +1,4 @@
+* Updated the Electricity Inf. -> Generation -> Small Scale Installations data.
 * Added the Google URL Shortener for the Share feature.
 * Added the ABS 2011 Census layers to the Population category.
 * Adjusted the home view for all layers in the Boundary category.
