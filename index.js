@@ -81,6 +81,7 @@ var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var BaseMapViewModel = require('terriajs/lib/ViewModels/BaseMapViewModel');
 var Terria = require('terriajs/lib/Models/Terria');
 var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
+var registerCustomTagTypes = require('terriajs/lib/Models/registerCustomTagTypes');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
 var raiseErrorToUser = require('terriajs/lib/Models/raiseErrorToUser');
 var WebMapServiceCatalogItem = require('terriajs/lib/Models/WebMapServiceCatalogItem');
@@ -100,6 +101,10 @@ OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl
 
 // Register custom Knockout.js bindings.  If you're not using the TerriaJS user interface, you can remove this.
 registerKnockoutBindings();
+
+// Register custom tags in the core TerriaJS.  If you only want to register a subset of them, or to add your own,
+// insert your custom version of the code in the registerCustomTagTypes function here instead.
+registerCustomTagTypes();
 
 // Register all types of catalog members in the core TerriaJS.  If you only want to register a subset of them
 // (i.e. to reduce the size of your application if you don't actually use them all), feel free to copy a subset of
