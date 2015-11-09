@@ -12,12 +12,7 @@
   "type": "wms",
   "opacity": "1.0",
   <%- include ../../common/wms_standard_properties %>,
-  "rectangle": [
-    "100.0",
-    "-44.0",
-    "159.0",
-    "-4.0"
-  ]
+  <%- include ../../common/home_camera_rectangle %>,
 },
 {
   "name": "Native Vegetation Areas",
@@ -33,12 +28,7 @@
   "type": "wms",
   "opacity": "1.0",
   <%- include ../../common/wms_standard_properties %>,
-  "rectangle": [
-    "100.0",
-    "-44.0",
-    "159.0",
-    "-4.0"
-  ]
+  <%- include ../../common/home_camera_rectangle %>,
 },
 {
   "name": "Surface Geology",
@@ -50,12 +40,7 @@
   ],
   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
   "clipToRectangle": true,
-  "rectangle": [
-    "100.0",
-    "-44.0",
-    "159.0",
-    "-4.0"
-  ],
+  <%- include ../../common/home_camera_rectangle %>,
   "type": "esri-mapServer",
   "url": "http://www.ga.gov.au/gis/rest/services/earth_science/GA_Surface_Geology_of_Australia_WM/MapServer"
 },
@@ -69,12 +54,7 @@
   ],
   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
   "clipToRectangle": true,
-  "rectangle": [
-    "110",
-    "-45.0047975",
-    "155.00919",
-    "-7.92768801894694"
-  ],
+  <%- include ../../common/home_camera_rectangle %>,
   "type": "esri-mapServer",
   "url": "http://www.ga.gov.au/gis/rest/services/earth_observation/Landcover_WM/MapServer"
 }

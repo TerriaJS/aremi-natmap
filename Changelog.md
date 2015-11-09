@@ -1,3 +1,9 @@
+* Updated the Electricity Inf. -> Generation -> Small Scale Installations data and layer info pages.
+* Added the Google URL Shortener for the Share feature.
+* Added the ABS 2011 Census layers to the Population category.
+* Adjusted the home view for all layers in the Boundary category.
+* Added the ACMA Radio Licenses layer to the Infrastructure -> Communications category.
+* Added the Geoscience Australia Northern Australia Land Tenure layers to the Boundaries category.
 * Renamed and reorded some entries in the catalog.
 * Added the Landgate Western Australia Electricity and Cadastre layer.
 * Changed to the Data61 logo.

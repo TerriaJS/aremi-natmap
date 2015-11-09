@@ -1,5 +1,6 @@
 {
     "proxyDomains" : [
+        "environment.gov.au",
         "services.thelist.tas.gov.au",
         "aemo.com.au",
         "nci.org.au",
@@ -16,7 +17,7 @@
     ],
     "parameters": {
         "bingMapsKey": null,
-        "googleUrlShortenerKey": null,
+        "googleUrlShortenerKey": "AIzaSyDtUfMZKSUTLhHUGt8Jk6cTGNHAADx0xy8",
         "googleAnalyticsKey": "UA-61302891-1",
         "googleAnalyticsOptions": null,
         "disclaimer": {
