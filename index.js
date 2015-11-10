@@ -211,7 +211,7 @@ terria.start({
                 <br/>\
                 <small>Mapping Infrastructure</small>\
                 <br/>\
-                <span>Version: ' + version + '</span>\
+                <span><a target="_blank" href="https://github.com/NICTA/aremi-natmap/blob/master/Changelog.md#version-' + version + '">Version: ' + version + '</a></span>\
             </div>'
         ]
     });
