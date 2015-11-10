@@ -1,4 +1,5 @@
 #### In development for the next release:
+* Added the Land and Property Information NSW Cadastre service to Boundaries -> Cadastre and Land Tenure.
 * Made the version number in the AREMI banner link to the tagged version of the Changelog.
 * Created a Boundaries -> Cadastre and Land Tenure subcategory and moved layers into it.
 * Put in a simple feature info template for the Electricity Inf. -> Transmission -> Distance to Trans Lines layer to show a sentence with the distance.
