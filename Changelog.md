@@ -1,3 +1,6 @@
+### AREMI Changelog
+
+
 #### In development for the next release:
 * Added the Land and Property Information NSW Cadastre service to Boundaries -> Cadastre and Land Tenure.
 * Made the version number in the AREMI banner link to the tagged version of the Changelog.
@@ -18,6 +21,7 @@
 * Reordered, refactored, added Renewable layer to the Electricity -> Generation -> Live NEM category.
 * Fixed Legends and info pages, set opacity=100 and ignoreUnknownTileErrors=true for Boundaries -> Defence Restricted Areas layers.
 * Refactored DANCE2 info pages, fixing some problems masked by HTML-leniency.
+
 
 #### Version 2015-09-25
 * Added the Institute for Sustainable Futures DANCE modelling project.
@@ -47,3 +51,6 @@
 * Improved Tasmanian Cadastral Parcels metadata.
 * Added Global Disclaimer that is optionally mandatory to accept before continuing.
 * Added the Feedback Survey link to the front page.
+
+
+Changes older than this were not recorded in the changelog.
