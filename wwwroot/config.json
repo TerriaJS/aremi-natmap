@@ -1,5 +1,6 @@
 {
     "proxyDomains" : [
+        "nci.org.au",
         "environment.gov.au",
         "services.thelist.tas.gov.au",
         "aemo.com.au",
