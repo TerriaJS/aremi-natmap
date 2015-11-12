@@ -27,6 +27,8 @@ var appJSName = 'nationalmap.js';
 var appCssName = 'nationalmap.css';
 var specJSName = 'nationalmap-tests.js';
 var appEntryJSName = './index.js';
+var terriaJSSource = 'node_modules/terriajs/wwwroot';
+var terriaJSDest = 'wwwroot/build/TerriaJS';
 var testGlob = './test/**/*.js';
 
 // Create the build directory, because browserify flips out if the directory that might
@@ -92,8 +94,11 @@ gulp.task('watch-datasource-aremi', function() {
 
 gulp.task('watch-datasources', ['watch-datasource-groups','watch-datasource-catalog','watch-datasource-aremi']);
 
+gulp.task('watch-terriajs', ['prepare-terriajs'], function() {
+    return gulp.watch(terriaJSSource + '/**', [ 'prepare-terriajs' ]);
+});
 
-gulp.task('watch', ['watch-app', 'watch-specs', 'watch-css', 'watch-datasources']);
+gulp.task('watch', ['watch-app', 'watch-specs', 'watch-css', 'watch-datasources', 'watch-terriajs']);
 
 gulp.task('lint', function(){
     return gulp.src(['lib/**/*.js', 'test/**/*.js'])
@@ -112,10 +117,9 @@ gulp.task('docs', function(){
 gulp.task('prepare', ['prepare-terriajs']);
 
 gulp.task('prepare-terriajs', function() {
-    return gulp.src([
-            'node_modules/terriajs/wwwroot/**'
-        ], { base: 'node_modules/terriajs/wwwroot' })
-    .pipe(gulp.dest('wwwroot/build/TerriaJS'));
+    return gulp
+        .src([ terriaJSSource + '/**' ], { base: terriaJSSource })
+        .pipe(gulp.dest(terriaJSDest));
 });
 
 gulp.task('merge-groups', function() {

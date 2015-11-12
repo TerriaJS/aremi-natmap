@@ -21,10 +21,10 @@
           "type": "group",
           "preserveOrder": true,
           "items": [
-            <%- include custodian/Australian_Energy_Market_Operator/Live_NEM_Power_Generation %>,
-            <%- include custodian/Australian_Photovoltaic_Institute/Live_Solar_PV %>,
-            <%- include custodian/Clean_Energy_Regulator/Small_Scale_Installations %>,
-            <%- include custodian/Geoscience_Australia/Power_Stations %>,
+            <% include custodian/Australian_Energy_Market_Operator/Live_NEM_Power_Generation %>,
+            <% include custodian/Australian_Photovoltaic_Institute/Live_Solar_PV %>,
+            <% include custodian/Clean_Energy_Regulator/Small_Scale_Installations %>,
+            <% include custodian/Geoscience_Australia/Power_Stations %>,
           ]
         },
         {
@@ -39,15 +39,15 @@
                   "name": "Forecast Remaining Capacity",
                   "type": "group",
                   "items": [
-                    <%- include custodian/Landgate/ForecastRemainingCapacity %>,
+                    <% include custodian/Landgate/ForecastRemainingCapacity %>,
                   ]
                 },
-                <%- include custodian/Landgate/Electricity %>,
+                <% include custodian/Landgate/Electricity %>,
               ]
             },
-            <%- include custodian/Geoscience_Australia/National_Electricity_Transmission_Lines %>,
-            <%- include custodian/Geoscience_Australia/National_Electricity_Transmission_Substations %>,
-            <%- include custodian/Geoscience_Australia/Distance_To_Translines_10km %>,
+            <% include custodian/Geoscience_Australia/National_Electricity_Transmission_Lines %>,
+            <% include custodian/Geoscience_Australia/National_Electricity_Transmission_Substations %>,
+            <% include custodian/Geoscience_Australia/Distance_To_Translines_10km %>,
           ]
         },
         {
@@ -55,7 +55,7 @@
           "type": "group",
           "preserveOrder": true,
           "items": [
-            <%- include custodian/Institute_for_Sustainable_Futures/DANCE2/DANCE2 %>,
+            <% include custodian/Institute_for_Sustainable_Futures/DANCE2/DANCE2 %>,
           ]
         },
       ]
@@ -69,8 +69,8 @@
           "name": "Solar",
           "type": "group",
           "items": [
-            <%- include custodian/Bureau_of_Meteorology/Solar_Climatology %>,
-            <%- include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>
+            <% include custodian/Bureau_of_Meteorology/Solar_Climatology %>,
+            <% include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>
           ]
         },
         {
@@ -82,29 +82,29 @@
           "name": "Bioenergy",
           "type": "group",
           "items": [
-            <%- include custodian/Geoscience_Australia/Waste_Management_Facilities %>,
+            <% include custodian/Geoscience_Australia/Waste_Management_Facilities %>,
           ]
         },
         {
           "name": "Geothermal",
           "type": "group",
           "items": [
-            <%- include custodian/Geoscience_Australia/Geothermal_layers %>,
+            <% include custodian/Geoscience_Australia/Geothermal_layers %>,
           ]
         },
         {
           "name": "Hydro",
           "type": "group",
           "items": [
-            <%- include custodian/Bureau_of_Meteorology/Catchment %>,
-            <%- include custodian/Geoscience_Australia/Hydrography %>,
+            <% include custodian/Bureau_of_Meteorology/Catchment %>,
+            <% include custodian/Geoscience_Australia/Hydrography %>,
           ]
         },
         {
           "name": "Wave",
           "type": "group",
           "items": [
-            <%- include custodian/Geoscience_Australia/Bathymetry_Seabed %>,
+            <% include custodian/Geoscience_Australia/Bathymetry_Seabed %>,
           ]
         },
       ]
@@ -113,21 +113,21 @@
       "name": "Infrastructure",
       "type": "group",
       "items": [
-        <%- include custodian/Geoscience_Australia/Infrastructure_layers %>,
-        <%- include custodian/Geoscience_Australia/Pipelines %>,
+        <% include custodian/Geoscience_Australia/Infrastructure_layers %>,
+        <% include custodian/Geoscience_Australia/Pipelines %>,
         {
           "name": "Communications",
           "type": "group",
           "items": [
-            <%- include custodian/Department_of_Communications/Broadband %>,
-            <%- include custodian/Australian_Communications_and_Media_Authority/Radio_Licenses %>
+            <% include custodian/Department_of_Communications/Broadband %>,
+            <% include custodian/Australian_Communications_and_Media_Authority/Radio_Licenses %>
           ]
         },
         {
           "name": "Transport",
           "type": "group",
           "items": [
-            <%- include custodian/Geoscience_Australia/Transport_layers %>,
+            <% include custodian/Geoscience_Australia/Transport_layers %>,
           ]
         },
       ]
@@ -136,12 +136,25 @@
       "name": "Boundaries",
       "type": "group",
       "items": [
-        <%- include custodian/Landgate/Cadastre %>,
-        <%- include custodian/Geoscience_Australia/Northern_Australia_Land_Tenure %>,
-        <%- include custodian/Land_Information_System_Tasmania/Cadastral_Parcels %>,
-        <%- include custodian/Geoscience_Australia/Defence_Restricted_Areas %>,
-        <%- include custodian/Australian_Bureau_of_Statistics/Boundaries %>,
-        <%- include custodian/Department_of_Environment/Protected_Areas %>,
+        {
+          "name": "Cadastre and Land Tenure",
+          "type": "group",
+          "items": [
+            <% include custodian/Landgate/Cadastre %>,
+            <% include custodian/Land_and_Property_Information_NSW/Cadastre %>,
+            <% include custodian/Land_Information_System_Tasmania/Cadastral_Parcels %>,
+            {
+              "name": "Northern Australia",
+              "type": "group",
+              "items": [
+                <% include custodian/Geoscience_Australia/Northern_Australia_Land_Tenure %>,
+              ]
+            }
+          ]
+        },
+        <% include custodian/Geoscience_Australia/Defence_Restricted_Areas %>,
+        <% include custodian/Australian_Bureau_of_Statistics/Boundaries %>,
+        <% include custodian/Department_of_Environment/Protected_Areas %>,
       ]
     },
     {
@@ -152,14 +165,14 @@
           "name": "Elevation",
           "type": "group",
           "items": [
-            <%- include custodian/Geoscience_Australia/Elevation_layers %>,
+            <% include custodian/Geoscience_Australia/Elevation_layers %>,
           ]
         },
         {
           "name": "Land",
           "type": "group",
           "items": [
-            <%- include custodian/Geoscience_Australia/Land_layers %>,
+            <% include custodian/Geoscience_Australia/Land_layers %>,
           ]
         },
         {
@@ -170,12 +183,12 @@
               "name": "Water Observations from Space",
               "type": "group",
               "items": [
-                <%- include custodian/Geoscience_Australia/Water_Observations_from_Space %>,
+                <% include custodian/Geoscience_Australia/Water_Observations_from_Space %>,
               ]
             },
-            <%- include custodian/Geoscience_Australia/Water_layers %>,
-            <%- include custodian/Bureau_of_Meteorology/Water_layers %>,
-            <%- include custodian/Bureau_of_Meteorology/Catchment %>,
+            <% include custodian/Geoscience_Australia/Water_layers %>,
+            <% include custodian/Bureau_of_Meteorology/Water_layers %>,
+            <% include custodian/Bureau_of_Meteorology/Catchment %>,
           ]
         }
       ]
@@ -184,8 +197,8 @@
       "name": "Population",
       "type": "group",
       "items": [
-        <%- include custodian/Geoscience_Australia/Population_Density %>,
-        <%- include custodian/Australian_Bureau_of_Statistics/Census %>,
+        <% include custodian/Geoscience_Australia/Population_Density %>,
+        <% include custodian/Australian_Bureau_of_Statistics/Census %>,
       ]
     },
     {
@@ -196,7 +209,7 @@
           "name": "NICTA Geothermal model",
           "type": "group",
           "items": [
-            <%- include custodian/NICTA/Geothermal %>,
+            <% include custodian/NICTA/Geothermal %>,
           ]
         },
         {
@@ -207,14 +220,14 @@
               "name": "Series 2 - CSP Indicative Firm Capacity",
               "type": "group",
               "items": [
-                <%- include custodian/Institute_for_Sustainable_Futures/Series2 %>,
+                <% include custodian/Institute_for_Sustainable_Futures/Series2 %>,
               ]
             },
             {
               "name": "Series 3 - CSP Cost Benefit",
               "type": "group",
               "items": [
-                <%- include custodian/Institute_for_Sustainable_Futures/Series3 %>,
+                <% include custodian/Institute_for_Sustainable_Futures/Series3 %>,
               ]
             }
           ]
@@ -225,7 +238,7 @@
       "name": "Weather",
       "type": "group",
       "items": [
-        <%- include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>
+        <% include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>
       ]
     }
   ]

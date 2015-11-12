@@ -1,29 +1,61 @@
 {
-  "name": "Land Tenure - Northern Territory",
-  "url": "http://services.ga.gov.au/gis/services/Northern_Australia_Land_Tenure/MapServer/WMSServer",
-  "layers": "Northern_Territory",
-  "type": "wms",
-  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Northern_Australia_Land_Tenure_NT_Legend.png",
-  <%- include ../../common/wms_standard_properties %>,
-  "ignoreUnknownTileErrors": true
+  "name": "All Land Tenure types",
+  "layers": "CONVERTIBLE_LEASE,CROWN_LAND,FREEHOLD,NO_VALUE_IN_SOURCE_DATA,OTHER_LEASE,PASTORAL_LEASE,RESERVE,SECONDARY_TENURE_TYPE",
+  "info": [
+    {
+      "name": "Data Description",
+      "content": "All land tenure types shown together as a single layer."
+    }
+  ],
+  "legendUrl": "",
+  <%- include Northern_Australia_Land_Tenure-common %>
 },
 
 {
-  "name": "Land Tenure - Queensland",
-  "url": "http://services.ga.gov.au/gis/services/Northern_Australia_Land_Tenure/MapServer/WMSServer",
-  "layers": "Queensland",
-  "type": "wms",
-  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Northern_Australia_Land_Tenure_QLD_Legend.png",
-  <%- include ../../common/wms_standard_properties %>,
-  "ignoreUnknownTileErrors": true
+  "name": "Convertible Lease",
+  "layers": "CONVERTIBLE_LEASE",
+  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Northern_Australia_Land_Tenure_Convertible_Lease_Legend.png",
+  <%- include Northern_Australia_Land_Tenure-common %>
 },
-
 {
-  "name": "Land Tenure - Western Australia",
-  "url": "http://services.ga.gov.au/gis/services/Northern_Australia_Land_Tenure/MapServer/WMSServer",
-  "layers": "Western_Australia",
-  "type": "wms",
-  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Northern_Australia_Land_Tenure_WA_Legend.png",
-  <%- include ../../common/wms_standard_properties %>,
-  "ignoreUnknownTileErrors": true
+  "name": "Crown Land",
+  "layers": "CROWN_LAND",
+  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Northern_Australia_Land_Tenure_Crown_Land_Legend.png",
+  <%- include Northern_Australia_Land_Tenure-common %>
+},
+{
+  "name": "Freehold",
+  "layers": "FREEHOLD",
+  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Northern_Australia_Land_Tenure_Freehold_Legend.png",
+  <%- include Northern_Australia_Land_Tenure-common %>
+},
+{
+  "name": "No Value",
+  "layers": "NO_VALUE_IN_SOURCE_DATA",
+  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Northern_Australia_Land_Tenure_No_Value_Legend.png",
+  <%- include Northern_Australia_Land_Tenure-common %>
+},
+{
+  "name": "Other",
+  "layers": "OTHER_LEASE",
+  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Northern_Australia_Land_Tenure_Other_Legend.png",
+  <%- include Northern_Australia_Land_Tenure-common %>
+},
+{
+  "name": "Pastoral",
+  "layers": "PASTORAL_LEASE",
+  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Northern_Australia_Land_Tenure_Pastoral_Legend.png",
+  <%- include Northern_Australia_Land_Tenure-common %>
+},
+{
+  "name": "Reserve",
+  "layers": "RESERVE",
+  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Northern_Australia_Land_Tenure_Reserve_Legend.png",
+  <%- include Northern_Australia_Land_Tenure-common %>
+},
+{
+  "name": "Secondary Tenure",
+  "layers": "SECONDARY_TENURE_TYPE",
+  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Northern_Australia_Land_Tenure_Secondary_Legend.png",
+  <%- include Northern_Australia_Land_Tenure-common %>
 }
