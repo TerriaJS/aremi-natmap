@@ -10,7 +10,11 @@
         "aurin.org.au",
         "nicta.com.au",
         "ga.gov.au",
-        "csiro.au"
+        "csiro.au",
+        "geoserver.aurin.org.au",
+        "mapsengine.google.com",
+        "geoserver-123.aodn.org.au",
+        "geoserver.imos.org.au"
     ],
     "initializationUrls" : [
         "aremi",
