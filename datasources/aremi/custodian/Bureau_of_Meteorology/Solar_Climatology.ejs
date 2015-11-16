@@ -3,6 +3,10 @@
   "layers": "mean_exposure",
   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
   "type": "wms",
+  "featureInfoTemplate" : {
+    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}",
+    "name": "{{#value}}{{value}} MJ/m2{{/value}}"
+  },
   <%- include ../../common/home_camera_rectangle %>,
   <%- include ../../common/wms_standard_properties %>,
 },
@@ -11,6 +15,10 @@
   "layers": "mean_exposure",
   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_dirNorExp1Day.nc",
   "type": "wms",
+    "featureInfoTemplate" : {
+    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}",
+    "name": "{{#value}}{{value}} MJ/m2{{/value}}"
+  },
   <%- include ../../common/home_camera_rectangle %>,
   <%- include ../../common/wms_standard_properties %>,
 },
@@ -19,6 +27,10 @@
   "layers": "mean_exposure",
   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/annClim_gloHorExp1Day.nc",
   "type": "wms",
+  "featureInfoTemplate" : {
+    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}",
+    "name": "{{#value}}{{value}} MJ/m2{{/value}}"
+  },
   <%- include ../../common/home_camera_rectangle %>,
   <%- include ../../common/wms_standard_properties %>,
 }
