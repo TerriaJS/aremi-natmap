@@ -1,0 +1,26 @@
+{{#LICENCE_NO}}
+<strong><a href='http://web.acma.gov.au/pls/radcom/client_search.client_lookup?pCLIENT_NO={{CLIENT_NO}}'>{{LICENSEE}}</a></strong>
+<br/>
+<small><a href='http://web.acma.gov.au/pls/radcom/site_search.site_lookup?pSITE_ID={{SITE_ID}}'>{{LOCATION}}</a></small>
+<br/>
+<table>
+    <tr><td>Freq.</td>        		<td>{{PRETTY_FREQ}} {{#ANT_BAND}}({{ANT_BAND}} Band){{/ANT_BAND}}</td></tr>
+    {{#PRETTY_CAR}}
+    <tr><td>FM Carrier Freq.</td> 	<td>{{PRETTY_CAR}}</td></tr>
+    {{/PRETTY_CAR}}
+    <tr><td>TX Power</td>      		<td>{{TX_POWER}}W ({{MODE}}X)</td></tr>
+    <tr><td>Height</td>      		<td>{{ANT_HGT}}</td></tr>
+    <tr><td>Antenna type</td>       <td>{{ANT_TYPE}}</td></tr>
+    <tr><td>EIRP</td>        		<td>{{EIRP}}</td></tr>
+    <tr><td>Licence No.</td>    	<td><a href='http://web.acma.gov.au/pls/radcom/licence_search.licence_lookup?pSOURCE=RADCOM&pLICENCE_NO={{LICENCE_NO}}'>{{LICENCE_NO}}</a></td></tr>
+</table>
+{{/LICENCE_NO}}
+{{^LICENCE_NO}}
+<strong><a href='http://web.acma.gov.au/pls/radcom/site_search.site_lookup?pSITE_ID={{SITE_ID}}'>{{SITE_NAME}}</a></strong>
+<br/>
+Licences at site: {{Num_Licenses}}
+<br/>
+WGS84 Coords: {{WGS84_LAT}} {{WGS84_LON}}
+<br/>
+Precision: {{PRECISION}}
+{{/LICENCE_NO}}
