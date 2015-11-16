@@ -1,7 +1,7 @@
 ### AREMI Changelog
 
 
-#### In development for the next release:
+#### Version 2015-11-16
 * Merged in the latest [NationalMap 2015-11-16b](https://github.com/NICTA/nationalmap/blob/2015-11-16b/CHANGES.md) and [TerriaJS jsonTreeview-1.0.48](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-1.0.48/CHANGES.md) releases.
 * Added a number of Department of Environment layers in the Boundaries section.
 * Added the Land and Property Information NSW Cadastre service to Boundaries -> Cadastre and Land Tenure.
