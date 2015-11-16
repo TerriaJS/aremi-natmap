@@ -1,17 +1,18 @@
 {
   "name": "Radio Licenses - ACMA",
-  "layers": "acma_assign,acma_site",
+  "layers": "acma_licenses,acma_sites",
   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/acma/wms",
   "type": "wms",
   "opacity": "1.0",
+  "legendUrl": "http://geo-prototype1.aremi.nicta.com.au/geoserver/acma/ows?service=WMS&request=GetLegendGraphic&width=20&height=20&layer=acma_sites&format=image%2Fpng&.png",
   "parameters": {
-    "tiled": true,
     "feature_count":2000
   },
   "featureInfoTemplate" : {
     "template": "<% include assign_site_template %>",
     "name": "{{#LICENCE_NO}}Licence: {{{LICENSEE}}}, {{PRETTY_FREQ}}{{/LICENCE_NO}}{{^LICENCE_NO}}Site: {{{SITE_NAME}}}{{/LICENCE_NO}}"
   },
+  "ignoreUnknownTileErrors": true,
   <% include ../../common/home_camera_rectangle %>,
   <% include ../../common/wms_standard_properties %>,
 },
