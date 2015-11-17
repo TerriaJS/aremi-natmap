@@ -11,13 +11,8 @@
   "url": "http://www.ga.gov.au/gisimg/services/energy/OZTemp_Interpreted_Temperature_at_5km_Depth_Image/ImageServer/WMSServer",
   "type": "wms",
   "legendUrl": "",
-  <%- include ../../common/wms_standard_properties %>,
-  "rectangle": [
-    "100.0",
-    "-44.0",
-    "159.0",
-    "-4.0"
-  ]
+  <%- include ../../common/standard_properties %>,
+  <%- include ../../common/home_camera_rectangle %>
 },
 {
   "name": "Thermal wells",
@@ -32,13 +27,8 @@
   "url": "http://www.ga.gov.au/gis/services/energy/OZTemp_Well_Data/MapServer/WMSServer",
   "type": "wms",
   "opacity": "1.0",
-  <%- include ../../common/wms_standard_properties %>,
-  "rectangle": [
-    "100.0",
-    "-44.0",
-    "159.0",
-    "-4.0"
-  ]
+  <%- include ../../common/standard_properties %>,
+  <%- include ../../common/home_camera_rectangle %>
 },
 {
   "name": "Radiation and Geophysics",
@@ -51,12 +41,7 @@
         "content": "[Licence](http://www.ga.gov.au/copyright)"
       }
     ],
-    <%- include ../../common/wms_standard_properties %>,
-    "rectangle": [
-      "100.0",
-      "-44.0",
-      "159.0",
-      "-4.0"
-    ]
+    <%- include ../../common/standard_properties %>,
+    <%- include ../../common/home_camera_rectangle %>
   }
 }

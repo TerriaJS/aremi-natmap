@@ -6,13 +6,8 @@
   "url": "https://programs.communications.gov.au/geoserver/ows",
   "dataUrlType": "none",
   "type": "wms",
-  <%- include ../../common/wms_standard_properties %>,
-  "rectangle": [
-    "100.0",
-    "-44.0",
-    "159.0",
-    "-4.0"
-  ]
+  <%- include ../../common/standard_properties %>,
+  <%- include ../../common/home_camera_rectangle %>
 },
 {
   "name": "Broadband ADSL Quality",
@@ -22,11 +17,6 @@
   "layers": "mybroadband:MyBroadband_ADSL_Quality",
   "type": "wms",
   "dataUrlType": "none",
-  "rectangle": [
-    "100.0",
-    "-44.0",
-    "159.0",
-    "-4.0"
-  ],
-  <%- include ../../common/wms_standard_properties %>,
+  <%- include ../../common/standard_properties %>,
+  <%- include ../../common/home_camera_rectangle %>
 }

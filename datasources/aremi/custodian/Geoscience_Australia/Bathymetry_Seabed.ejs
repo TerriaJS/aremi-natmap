@@ -10,13 +10,8 @@
   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
   "url": "http://www.ga.gov.au/gis/rest/services/marine_coastal/Australian_Bathymetry_Topography/MapServer",
   "type": "esri-mapServer",
-  "clipToRectangle": true,
-  "rectangle": [
-    "90.0",
-    "-62.0",
-    "174.0",
-    "-4.0"
-  ]
+  "ignoreUnknownTileErrors": true,
+  <%- include ../../common/home_camera_rectangle %>
 },
 {
   "name": "Seabed features",
@@ -30,11 +25,6 @@
   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
   "url": "http://www.ga.gov.au/gis/services/marine_coastal/Australian_Seabed_Features/MapServer/WMSServer",
   "type": "wms",
-  <%- include ../../common/wms_standard_properties %>,
-  "rectangle": [
-    "90.0",
-    "-62.0",
-    "174.0",
-    "-4.0"
-  ]
+  "ignoreUnknownTileErrors": true,
+  <%- include ../../common/home_camera_rectangle %>
 }

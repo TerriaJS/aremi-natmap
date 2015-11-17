@@ -1,5 +1,8 @@
 ### AREMI Changelog
 
+* Added `ignoreUnknownTileErrors` to all WMS and ArcGIS layers in order to avoid one tile breaking the entire layer.
+* Added `clipToRectangle` and specified a `rectangle` with bounds for Australia for the majority of layers where this makes sense.
+
 
 #### Version 2015-11-16
 * Merged in the latest [NationalMap 2015-11-16b](https://github.com/NICTA/nationalmap/blob/2015-11-16b/CHANGES.md) and [TerriaJS jsonTreeview-1.0.48](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-1.0.48/CHANGES.md) releases.
