@@ -1,5 +1,7 @@
 ### AREMI Changelog
 
+
+#### Version 2015-11-17
 * Added `ignoreUnknownTileErrors` to all WMS and ArcGIS layers in order to avoid one tile breaking the entire layer.
 * Added `clipToRectangle` and specified a `rectangle` with bounds for Australia for the majority of layers where this makes sense.
 * Added feature info templates for Topography -> Water -> Water Observations from Space layers to make it easier to understand the data.
