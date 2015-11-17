@@ -14,11 +14,7 @@
         "geoserver.aurin.org.au",
         "mapsengine.google.com",
         "geoserver-123.aodn.org.au",
-        "geoserver.imos.org.au",
-        "data.nodc.noaa.gov",
-        "192.168.50.4:8080",
-        "192.168.50.4:8000",
-        "192.168.50.4"
+        "geoserver.imos.org.au"
     ],
     "initializationUrls" : [
         "aremi",
