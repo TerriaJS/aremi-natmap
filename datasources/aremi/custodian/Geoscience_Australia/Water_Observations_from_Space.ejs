@@ -4,6 +4,10 @@
   "url": "http://eos.ga.gov.au/geoserver/NFRIP-WOfS/wms",
   "type": "wms",
   "opacity": "1.0",
+  "featureInfoTemplate" : {
+    "name": "{{GRAY_INDEX}} Water Observations",
+    "template": "There have been observed {{GRAY_INDEX}} times at this location."
+  },
   <%- include ../../common/standard_properties %>,
   "info": [
     {
@@ -31,6 +35,10 @@
   "layers": "ClearObservations",
   "url": "http://eos.ga.gov.au/geoserver/NFRIP-WOfS/wms",
   "type": "wms",
+  "featureInfoTemplate" : {
+    "name": "{{GRAY_INDEX}} Clear Observations",
+    "template": "This area has been observed {{GRAY_INDEX}} times in total"
+  },
   <%- include ../../common/standard_properties %>,
   "info": [
     {
@@ -59,6 +67,10 @@
   "url": "http://eos.ga.gov.au/geoserver/NFRIP-WOfS/wms",
   "type": "wms",
   "opacity": "1.0",
+  "featureInfoTemplate" : {
+    "name": "Water detected in {{GRAY_INDEX}}% of observations",
+    "template": "Water detected in {{GRAY_INDEX}}% of observations"
+  },
   <%- include ../../common/standard_properties %>,
   "info": [
     {
@@ -87,6 +99,10 @@
   "url": "http://eos.ga.gov.au/geoserver/NFRIP-WOfS/wms",
   "type": "wms",
   "opacity": "1.0",
+  "featureInfoTemplate" : {
+    "name": "{{GRAY_INDEX}}% Confidence",
+    "template": "{{GRAY_INDEX}}% confidence of observations in summary layer"
+  },
   <%- include ../../common/standard_properties %>,
   "info": [
     {
@@ -115,6 +131,10 @@
   "url": "http://eos.ga.gov.au/geoserver/NFRIP-WOfS/wms",
   "type": "wms",
   "opacity": "1.0",
+  "featureInfoTemplate" : {
+    "name": "Water detected in {{GRAY_INDEX}}% of observations",
+    "template": "Water detected in {{GRAY_INDEX}}% of observations"
+  },
   <%- include ../../common/standard_properties %>,
   "info": [
     {
