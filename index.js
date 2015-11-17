@@ -102,10 +102,6 @@ OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl
 // Register custom Knockout.js bindings.  If you're not using the TerriaJS user interface, you can remove this.
 registerKnockoutBindings();
 
-// Register custom components in the core TerriaJS.  If you only want to register a subset of them, or to add your own,
-// insert your custom version of the code in the registerCustomComponentTypes function here instead.
-registerCustomComponentTypes();
-
 // Register all types of catalog members in the core TerriaJS.  If you only want to register a subset of them
 // (i.e. to reduce the size of your application if you don't actually use them all), feel free to copy a subset of
 // the code in the registerCatalogMembers function here instead.
@@ -369,8 +365,10 @@ terria.start({
         terria: terria
     });
 
-    // Register the chart panel with the feature information panel.
-    featureInfoPanel.registerChartPanelViewModel(chartPanel);
+    // Register custom components in the core TerriaJS.  If you only want to register a subset of them, or to add your own,
+    // insert your custom version of the code in the registerCustomComponentTypes function here instead.
+    registerCustomComponentTypes({chartPanelViewModel: chartPanel});
+
 
     // Handle the user dragging/dropping files onto the application.
     DragDropViewModel.create({
