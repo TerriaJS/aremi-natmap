@@ -1,5 +1,9 @@
 ### AREMI Changelog
 
+#### Changes to be included in the next version
+* Corrected the Data Custodian on the Infrastructure -> "Radio Licenses - ACMA" to be the ACMA.
+* Added a WFS data URL on the info page for the Infrastructure -> "Radio Licenses - ACMA" layer.
+
 
 #### Version 2015-11-17
 * Added `ignoreUnknownTileErrors` to all WMS and ArcGIS layers in order to avoid one tile breaking the entire layer.
