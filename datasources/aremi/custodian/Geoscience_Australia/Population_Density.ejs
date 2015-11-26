@@ -1,15 +1,17 @@
 {
   "name": "Population Density",
-  "layers": "0,1,2,3,4",
+  "layers": "NEXIS_PEOPLE_per_100m,NEXIS_PEOPLE_per_500m,NEXIS_PEOPLE_per_1000m,NEXIS_PEOPLE_per_5000m,NEXIS_PEOPLE_per_10000m",
+  "url": "http://services.ga.gov.au/gis/services/NEXIS_Residential_Population_Density/MapServer/WMSServer",
+  "type": "wms",
   "info": [
     {
-      "name": "Licensing, Terms & Conditions",
-      "content": "[Licence](http://www.ga.gov.au/copyright)"
+      "name": "Data Description",
+      "content": "This raster layer is a representation of the density of people across Australia derived from NEXIS residential building locations. It is calculated at 100 metre cell size."
     }
   ],
-  "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-  "url": "http://www.ga.gov.au/gis/services/hazards/NEXIS_National_Exposure_Information_System_Population_Density_Exposure/MapServer/WMSServer",
-  "type": "wms",
-  <%- include ../../common/standard_properties %>,
-  <%- include ../../common/home_camera_rectangle %>
+  "getFeatureInfoFormats": [
+    {"type": "json"}  <%# Disable feature info for this service (which doesn't support JSON) %>
+  ],
+  <% include ../../common/standard_properties %>,
+  <% include ../../common/home_camera_rectangle %>
 }

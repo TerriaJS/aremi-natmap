@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 #### Changes to be included in the next version
+* Updated the Population -> Population Density layer to use the new Geoscience Australia service for it.
 * Corrected the Data Custodian on the Infrastructure -> "Radio Licenses - ACMA" to be the ACMA.
 * Added a WFS data URL on the info page for the Infrastructure -> "Radio Licenses - ACMA" layer.
 
