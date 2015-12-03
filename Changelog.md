@@ -6,6 +6,10 @@
 * Added a WFS data URL on the info page for the Infrastructure -> "Radio Licenses - ACMA" layer.
 
 
+#### Version 2015-11-17b
+* Fix legends from Landgate not loading.
+
+
 #### Version 2015-11-17
 * Added `ignoreUnknownTileErrors` to all WMS and ArcGIS layers in order to avoid one tile breaking the entire layer.
 * Added `clipToRectangle` and specified a `rectangle` with bounds for Australia for the majority of layers where this makes sense.
