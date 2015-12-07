@@ -4,6 +4,7 @@
 * Updated the Population -> Population Density layer to use the new Geoscience Australia service for it.
 * Corrected the Data Custodian on the Infrastructure -> "Radio Licenses - ACMA" to be the ACMA.
 * Added a WFS data URL on the info page for the Infrastructure -> "Radio Licenses - ACMA" layer.
+* Upgraded to latest [TerriaJS release](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-1.0.49/CHANGES.md).
 
 
 #### Version 2015-11-17b
