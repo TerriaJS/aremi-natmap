@@ -5,7 +5,7 @@
 * Corrected the Data Custodian on the Infrastructure -> "Radio Licenses - ACMA" to be the ACMA.
 * Added a WFS data URL on the info page for the Infrastructure -> "Radio Licenses - ACMA" layer.
 * Upgraded to latest [TerriaJS release](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-1.0.49/CHANGES.md).
-
+* Added the new Department of Environment layer Boundaries -> Environmental Areas -> Conservation Management Zones.
 
 #### Version 2015-11-17b
 * Fix legends from Landgate not loading.
