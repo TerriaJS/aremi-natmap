@@ -43,7 +43,6 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.4",
     "gulp-watch": "^4.2.4",
-    "jsdoc": "^3.3.3",
     "less": "^2.5.0",
     "less-plugin-npm-import": "^2.0.0",
     "spawn-sync": "^1.0.11",
