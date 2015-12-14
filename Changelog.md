@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 #### Changes to be included in the next version
+* Added Zoom To boundaries for the Electricity Inf. -> Generation layers in "Current Power Generation - NEM", "Current Solar PV - APVI", and "Small Scale Installations - CER".
 * Updated the Population -> Population Density layer to use the new Geoscience Australia service for it.
 * Corrected the Data Custodian on the Infrastructure -> "Radio Licenses - ACMA" to be the ACMA.
 * Added a WFS data URL on the info page for the Infrastructure -> "Radio Licenses - ACMA" layer.
