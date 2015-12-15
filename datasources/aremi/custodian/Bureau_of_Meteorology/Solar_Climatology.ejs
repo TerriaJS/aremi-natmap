@@ -33,4 +33,16 @@
   },
   <%- include ../../common/home_camera_rectangle %>,
   <%- include ../../common/standard_properties %>
+},
+{
+  "name": "Annual climatology of daily exposure - Direct Normal Exposure",
+  "layers": "mean_exposure",
+  "url": "http://neii.bom.gov.au/services/solarclim/wms/data/annClim_dirNorExp1Day.nc",
+  "type": "wms",
+  "featureInfoTemplate" : {
+    "template": "{{#value}}{{value}} MJ/m<span style='vertical-align: super; font-size: smaller;'>2</span>{{/value}}",
+    "name": "{{#value}}{{value}} MJ/m2{{/value}}"
+  },
+  <%- include ../../common/home_camera_rectangle %>,
+  <%- include ../../common/standard_properties %>
 }

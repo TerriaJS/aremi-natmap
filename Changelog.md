@@ -1,12 +1,13 @@
 ### AREMI Changelog
 
 #### Changes to be included in the next version
-* Added Zoom To boundaries for the Electricity Inf. -> Generation layers in "Current Power Generation - NEM", "Current Solar PV - APVI", and "Small Scale Installations - CER".
-* Updated the Population -> Population Density layer to use the new Geoscience Australia service for it.
-* Corrected the Data Custodian on the Infrastructure -> "Radio Licenses - ACMA" to be the ACMA.
-* Added a WFS data URL on the info page for the Infrastructure -> "Radio Licenses - ACMA" layer.
+* Added the new layer "Renewable Energy -> Annual climatology of daily exposure - Direct Normal Exposure" from the Bureau of Meteorology.
+* Added Zoom To boundaries for the "Electricity Inf. -> Generation" layers in "Current Power Generation - NEM", "Current Solar PV - APVI", and "Small Scale Installations - CER".
+* Updated the "Population -> Population Density" layer to use the new Geoscience Australia service for it.
+* Corrected the Data Custodian on the "Infrastructure -> Radio Licenses - ACMA" to be the ACMA.
+* Added a WFS data URL on the info page for the "Infrastructure -> Radio Licenses - ACMA" layer.
 * Upgraded to latest [TerriaJS release](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-1.0.49/CHANGES.md).
-* Added the new Department of Environment layer Boundaries -> Environmental Areas -> Conservation Management Zones.
+* Added the new Department of Environment layer "Boundaries -> Environmental Areas -> Conservation Management Zones".
 
 #### Version 2015-11-17b
 * Fix legends from Landgate not loading.
