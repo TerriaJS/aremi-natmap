@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 #### Changes to be included in the next version
+* Improved feature info name and layout for layers in the group "Electricity Inf. -> Generation -> Current Power Generation - NEM".
 * Added the new layer "Renewable Energy -> Annual climatology of daily exposure - Direct Normal Exposure" from the Bureau of Meteorology.
 * Added Zoom To boundaries for the "Electricity Inf. -> Generation" layers in "Current Power Generation - NEM", "Current Solar PV - APVI", and "Small Scale Installations - CER".
 * Updated the "Population -> Population Density" layer to use the new Geoscience Australia service for it.
