@@ -162,7 +162,7 @@ gulp.task('merge-datasources-aremi', function() {
     // use EJS to process
     var result = ejs.render(template, null, {filename: fn});
     // remove all newlines - makes it possible to nicely format data descriptions etc
-    var noNewlines = result.replace(/\n/g, '');
+    var noNewlines = result.replace(/(?:\r\n|\r|\n)/g, '');
     // eval JSON string into object and minify
     var buf = new Buffer(JSON.stringify(eval('('+noNewlines+')'), null, 0));
     fs.writeFileSync('wwwroot/init/aremi.json', buf);
