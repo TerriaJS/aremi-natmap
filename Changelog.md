@@ -1,14 +1,17 @@
 ### AREMI Changelog
 
 #### Changes to be included in the next version
+
+### Version 2015-12-16
+* Merged in the latest [NationalMap 2015-12-15](https://github.com/NICTA/nationalmap/blob/2015-12-15/CHANGES.md) and [TerriaJS jsonTreeview-1.0.50](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-1.0.50/CHANGES.md) releases.
 * Improved feature info name and layout for layers in the group "Electricity Inf. -> Generation -> Current Power Generation - NEM".
 * Added the new layer "Renewable Energy -> Annual climatology of daily exposure - Direct Normal Exposure" from the Bureau of Meteorology.
 * Added Zoom To boundaries for the "Electricity Inf. -> Generation" layers in "Current Power Generation - NEM", "Current Solar PV - APVI", and "Small Scale Installations - CER".
 * Updated the "Population -> Population Density" layer to use the new Geoscience Australia service for it.
 * Corrected the Data Custodian on the "Infrastructure -> Radio Licenses - ACMA" to be the ACMA.
 * Added a WFS data URL on the info page for the "Infrastructure -> Radio Licenses - ACMA" layer.
-* Upgraded to latest [TerriaJS release](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-1.0.49/CHANGES.md).
 * Added the new Department of Environment layer "Boundaries -> Environmental Areas -> Conservation Management Zones".
+
 
 #### Version 2015-11-17b
 * Fix legends from Landgate not loading.
