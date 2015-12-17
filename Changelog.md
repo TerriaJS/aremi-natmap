@@ -1,8 +1,7 @@
 ### AREMI Changelog
 
 #### Changes to be included in the next version
-
-### Version 2015-12-16
+* Updated the "Topography -> Elevation -> SRTM 1 sec DEM Image" layer to a new version deployed by Geoscience Australia.
 * Merged in the latest [NationalMap 2015-12-15](https://github.com/NICTA/nationalmap/blob/2015-12-15/CHANGES.md) and [TerriaJS jsonTreeview-1.0.50](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-1.0.50/CHANGES.md) releases.
 * Improved feature info name and layout for layers in the group "Electricity Inf. -> Generation -> Current Power Generation - NEM".
 * Added the new layer "Renewable Energy -> Annual climatology of daily exposure - Direct Normal Exposure" from the Bureau of Meteorology.
