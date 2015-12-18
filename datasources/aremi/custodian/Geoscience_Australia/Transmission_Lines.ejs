@@ -1,25 +1,39 @@
 {
   "name": "Transmission Lines",
   "layers": "National_Electricity_Transmission_Lines",
-  "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
   "info": [
     {
       "name": "Licensing, Terms & Conditions",
       "content": "© Commonwealth of Australia (Geoscience Australia) 2015. This product is released under the [Creative Commons Attribution 4.0 International Licence](http://creativecommons.org/licenses/by/4.0/legalcode)."
     }
   ],
-  "infoSectionOrder": [
-    "Data Description",
-    "Data Custodian",
-    "Licensing, Terms & Conditions",
-    "Service Description"
-  ],
   "url": "http://www.ga.gov.au/gis/rest/services/topography/National_Electricity_Transmission_Lines/MapServer",
+  <%#
+    Why is this not a WMS service?
+    Because the feature picking of the WMS service fails with an internal server
+    error. We have notified GA about the error some time ago, but nothing is
+    likely to be fixed as these are being moved to their new service
+    infrastructure at some point in the future.
+  %>
   "type": "esri-mapServer",
   "opacity": "1.0",
   "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/National_Electricity_Transmission_Lines.png",
   "dataUrl": "http://www.ga.gov.au/gis/services/topography/National_Electricity_Transmission_Lines/MapServer/WFSServer?service=WFS&version=1.1.0&request=GetFeature&typeName=National_Electricity_Transmission_Lines&srsName=EPSG%3A4326&maxFeatures=100000",
   "dataUrlType": "wfs-complete",
   <%- include ../../common/standard_properties %>,
-  <%- include ../../common/home_camera_rectangle %>,
+  <%- include ../../common/home_camera_rectangle %>
+},
+{
+  "name": "Distance to Transmission Lines",
+  "url": "http://services.ga.gov.au/gis/services/Proximity_To_Transmission_Infrastructure_Lines_WM/MapServer/WMSServer",
+  "layers": "Distance_to_Transmission_Lines_Contours",
+  "type": "wms",
+  "opacity": "1.0",
+  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Proximity_to_Transmission_Infrastructure_Lines_Contour_Legend.png",
+  "featureInfoTemplate" : {
+    "template": "{{distance}} km from the nearest transmission line.",
+    "name": "{{distance}} km"
+  },
+  <%- include ../../common/standard_properties %>,
+  <%- include ../../common/home_camera_rectangle %>
 }

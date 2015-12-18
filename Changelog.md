@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 #### Changes to be included in the next version
+* Updated the "Electricity Inf. -> Transmission -> Distance to Transmission Lines" to the new better looking service from Geoscience Australia.
 * Added the new "Topography -> Elevation -> LiDAR 25m DEM" from Geoscience Australia.
 * Updated the "Topography -> Elevation -> SRTM 1 sec DEM Image" layer to a new version deployed by Geoscience Australia.
 * Merged in the latest [NationalMap 2015-12-15](https://github.com/NICTA/nationalmap/blob/2015-12-15/CHANGES.md) and [TerriaJS jsonTreeview-1.0.50](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-1.0.50/CHANGES.md) releases.
