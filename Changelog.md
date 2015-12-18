@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 #### Changes to be included in the next version
+* Added the new "Electricity Inf. -> Transmission -> Distance to Transmission Substations" layer from Geoscience Australia.
 * Updated the "Electricity Inf. -> Transmission -> Distance to Transmission Lines" to the new better looking service from Geoscience Australia.
 * Added the new "Topography -> Elevation -> LiDAR 25m DEM" from Geoscience Australia.
 * Updated the "Topography -> Elevation -> SRTM 1 sec DEM Image" layer to a new version deployed by Geoscience Australia.
