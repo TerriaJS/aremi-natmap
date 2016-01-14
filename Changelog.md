@@ -1,5 +1,9 @@
 ### AREMI Changelog
 
+#### In the next version
+* Updated the "Renewable Energy -> Solar -> Solar Station Historical Observations" (also available under the "Weather" category) data and Info description to the latest from `aremi-tmy` version 0.1.1.0.
+
+
 #### Version 2015-12-22
 * Merged in the latest [NationalMap 2015-12-15@835ab11](https://github.com/NICTA/nationalmap/blob/835ab116a60048aadd6fe5e94a186090b124557a/CHANGES.md) and [TerriaJS jsonTreeview-1.0.51](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-1.0.51/CHANGES.md) releases.
 * Updated the "Renewables -> Geothermal -> Radiation and Geophysics" layers to the new updated service from Geoscience Australia.
