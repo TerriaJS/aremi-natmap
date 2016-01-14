@@ -1,6 +1,6 @@
 ### AREMI Changelog
 
-#### In the next version
+#### Version 2016-01-14
 * Updated the "Renewable Energy -> Solar -> Solar Station Historical Observations" (also available under the "Weather" category) data and Info description to the latest from `aremi-tmy` version 0.1.1.0.
 
 
