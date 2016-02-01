@@ -1,5 +1,9 @@
 ### AREMI Changelog
 
+#### In the next version
+* Removed the "Benchmarks" and "Horizontal Control Points" from the "Topography -> Elevation" category as these have been decommissioned by the data custodian.
+
+
 #### Version 2016-01-15
 * Updated the "Renewable Energy -> Solar -> Solar Station Historical Observations" (also available under the "Weather" category) data and Info description to the latest from `aremi-tmy` version 0.1.1.0.
 * Added the new "Topography -> Elevation -> LiDAR 5m DEM" layer from Geoscience Australia.
