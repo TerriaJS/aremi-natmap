@@ -2,6 +2,7 @@
 
 #### In the next version
 * Removed the "Benchmarks" and "Horizontal Control Points" from the "Topography -> Elevation" category as these have been decommissioned by the data custodian.
+* Added "Contribute Data" link to the sidebar.
 
 
 #### Version 2016-01-15
