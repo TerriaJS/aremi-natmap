@@ -424,8 +424,8 @@ terria.start({
     surveyContainer.innerHTML =
       '<div class="feedback-request">\
         <p><a target="_blank" href="' + surveyLink + '">Give Feedback</a></p>\
-        <p><a target="_blank" href="' + contributeLink + '">Contribute Data</a></p>\
         <p>This site is still in development, so please <a target="_blank" href="' + surveyLink + '">tell us what you think</a>. Our survey will take 5 mins.</p>\
+        <p><a target="_blank" href="' + contributeLink + '">Contribute Data</a></p>\
       </div>';
 
     MapProgressBarViewModel.create({
