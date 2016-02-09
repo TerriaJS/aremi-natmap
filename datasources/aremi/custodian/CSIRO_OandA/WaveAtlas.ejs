@@ -1,77 +1,23 @@
 {
 	"name": "Australian Wave Atlas",
-  "url": "http://waveatlas.marine.csiro.au/geonetwork/srv/eng/csw",
-  "type": "csw",
-	"metadataGroups": [
-		{ 
-		  "field": "subject",
-			"value": "Wave Model Layer",
-		  "children": [
+	"url": "http://waveatlas.marine.csiro.au/geonetwork/srv/eng/csw",
+	"type": "group",
+	"items": [
+		{
+			"name": "Wave Model Layer",
+			"type": "group",
+			"items": [
 				{
-		  		"field": "title",
-					"value": "^ww3.aus_4m.CgE_avg",
-					"regex": true,
-					"group": "Wave Energy Flux"
+					"name": "Wave Energy Flux",
+					"type": "csw",
+					"url": "http://waveatlas.marine.csiro.au/geonetwork/srv/eng/csw",
+					"getRecordsTemplate": "<%- include('./custodian/CSIRO_OandA/WaveEnergyFlux.ejs').replace(/"/g, '\\"') -%>"
 				},
 				{
-		  		"field": "subject",
-					"value": "Earth Science | Oceans | Ocean Waves | Wave Height",
-					"group": "Wave Height"
-				},
-				{
-		  		"field": "subject",
-					"value": "Earth Science | Oceans | Ocean Waves | Wave Period",
-					"group": "Wave Period"
-				},
-				{
-		  		"field": "subject",
-					"value": "Earth Science | Oceans | Ocean Waves | Wave Speed/Direction",
-					"group": "Wave Direction"
-				}
-			]
-		},
-		{ 
-		  "field": "subject",
-			"value": "Multiple Use Layer",
-		  "children": [
-				{
-		  		"field": "contributor",
-					"value": "Western Australia",
-					"regex": true,
-					"group": "Western Australia"
-				},
-				{
-		  		"field": "contributor",
-					"value": "South Australia",
-					"regex": true,
-					"group": "South Australia"
-				},
-				{
-		  		"field": "custodian",
-					"value": "^Fisheries Victoria",
-					"regex": true,
-					"group": "Victoria"
-				},
-				{
-		  		"field": "custodian",
-					"value": "Geoscience Australia",
-					"group": "National"
-				},
-				{
-		  		"field": "contributor",
-					"value": "^NATIONAL GEOSPATIAL-INTELLIGENCE AGENCY",
-					"regex": true,
-					"group": "National"
-				},
-				{
-		  		"field": "contributor",
-					"value": "Australian Government, Department of the Environment",
-					"group": "National"
-				},
-				{
-		  		"field": "contributor",
-					"value": "www.nswwrecks.info",
-					"group": "New South Wales"
+					"name": "Wave Height",
+					"type": "csw",
+					"url": "http://waveatlas.marine.csiro.au/geonetwork/srv/eng/csw",
+					"getRecordsTemplate": "<%- include('./custodian/CSIRO_OandA/WaveHeight.ejs').replace(/"/g, '\\"') -%>"
 				}
 			]
 		}
