@@ -1,32 +1,16 @@
-/**
- * @license
- * Copyright(c) 2012-2015 National ICT Australia Limited (NICTA).
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- *
- */
-
 'use strict';
 
 /*global require*/
+var UserInterface = require('./UserInterface.jsx');
+var React = require('react');
+var ReactDOM = require('react-dom');
 
-var version = require('./version');
 
 var configuration = {
     terriaBaseUrl: 'build/TerriaJS',
     cesiumBaseUrl: undefined, // use default
     bingMapsKey: undefined, // use Cesium key
-    proxyBaseUrl: 'proxy/',
+    proxyBaseUrl: '/proxy/',
     conversionServiceBaseUrl: 'convert',
     regionMappingDefinitionsUrl: 'data/regionMapping.json'
 };
@@ -35,7 +19,8 @@ var configuration = {
 // A very old browser (e.g. Internet Explorer 8) will fail on requiring-in many of the modules below.
 // 'ui' is the name of the DOM element that should contain the error popup if the browser is not compatible
 var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCompatibility');
-checkBrowserCompatibility('ui');
+
+// checkBrowserCompatibility('ui');
 
 var knockout = require('terriajs-cesium/Source/ThirdParty/knockout');
 var defined = require('terriajs-cesium/Source/Core/defined');
@@ -44,7 +29,6 @@ var fs = require('fs');
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
 var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
-var corsProxy = require('terriajs/lib/Core/corsProxy');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 
 var AddDataPanelViewModel = require('terriajs/lib/ViewModels/AddDataPanelViewModel');
@@ -81,17 +65,20 @@ var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModel
 
 var BaseMapViewModel = require('terriajs/lib/ViewModels/BaseMapViewModel');
 var Terria = require('terriajs/lib/Models/Terria');
-var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
+var registerCustomComponentTypes = require('terriajs/lib/Models/registerCustomComponentTypes');
 var raiseErrorToUser = require('terriajs/lib/Models/raiseErrorToUser');
 var WebMapServiceCatalogItem = require('terriajs/lib/Models/WebMapServiceCatalogItem');
 var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
+var GoogleUrlShortener = require('terriajs/lib/Models/GoogleUrlShortener');
+var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
+var ViewerMode = require('terriajs/lib/Models/ViewerMode');
+var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 
-var svgInfo = require('terriajs/lib/SvgPaths/svgInfo');
-var svgPlus = require('terriajs/lib/SvgPaths/svgPlus');
-var svgRelated = require('terriajs/lib/SvgPaths/svgRelated');
-var svgShare = require('terriajs/lib/SvgPaths/svgShare');
-var svgWorld = require('terriajs/lib/SvgPaths/svgWorld');
+var TerriaViewer = require('terriajs/lib/ReactViews/TerriaViewer');
+var corsProxy = require('terriajs/lib/Core/corsProxy');
+var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
+
 
 // Configure the base URL for the proxy service used to work around CORS restrictions.
 corsProxy.baseProxyUrl = configuration.proxyBaseUrl;
@@ -102,12 +89,18 @@ OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl
 // Register custom Knockout.js bindings.  If you're not using the TerriaJS user interface, you can remove this.
 registerKnockoutBindings();
 
+
 // Register all types of catalog members in the core TerriaJS.  If you only want to register a subset of them
 // (i.e. to reduce the size of your application if you don't actually use them all), feel free to copy a subset of
 // the code in the registerCatalogMembers function here instead.
 registerCatalogMembers();
 
+// Register custom components in the core TerriaJS.  If you only want to register a subset of them, or to add your own,
+// insert your custom version of the code in the registerCustomComponentTypes function here instead.
+registerCustomComponentTypes();
+
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
+
 var terria = new Terria({
     appName: 'AREMI',
     supportEmail: 'aremi@nicta.com.au',
@@ -117,16 +110,10 @@ var terria = new Terria({
     analytics: new GoogleAnalytics()
 });
 
-// We'll put the entire user interface into a DOM element called 'ui'.
-var ui = document.getElementById('ui');
+// This is temporary
+var welcome = '<h3> Welcome to AREMI </h3> <p> AREMI is a website for map-based access to Australian spatial data relevant to the Renewable Energy industry - with a focus on Developers, Financiers, and Policy Makers. It is funded by the <a href="#">Australian Renewable Energy Agency</a> and developed by NICTA in partnership with the <a href="#">Clean Energy Council</a> with hosting being provided by <a href="#">Geoscience Australia</a>.</p><div class="getting-started"> <h4> Getting Started</h4> <div class="row"> <div class="col col-6 getting-started--alpha"><figure><img src="./images/solar.png"><figcaption>Solar</figcaption></figure></div> <div class="col col-6 getting-started--beta"><figure><img src="./images/wind.png"><figcaption>Wind</figcaption></figure></div></div>';
 
-
-terria.error.addEventListener(function(e) {
-    PopupMessageViewModel.open(ui, {
-        title: e.title,
-        message: e.message
-    });
-});
+terria.welcome = function welcomeText() { return {__html: welcome}; };
 
 terria.start({
     // If you don't want the user to be able to control catalog loading via the URL, remove the applicationUrl property below
@@ -140,298 +127,39 @@ terria.start({
 }).otherwise(function(e) {
     raiseErrorToUser(terria, e);
 }).always(function() {
-    configuration.bingMapsKey = terria.configParameters.bingMapsKey ? terria.configParameters.bingMapsKey : configuration.bingMapsKey;
+    try {
+        configuration.bingMapsKey = terria.configParameters.bingMapsKey ? terria.configParameters.bingMapsKey : configuration.bingMapsKey;
 
-    // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
-    updateApplicationOnHashChange(terria, window);
-    updateApplicationOnMessageFromParentWindow(terria, window);
+        // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
+        updateApplicationOnHashChange(terria, window);
+        updateApplicationOnMessageFromParentWindow(terria, window);
 
-    // Create the map/globe.
-    TerriaViewer.create(terria, {
-        developerAttribution: {
-            text: 'NICTA',
-            link: 'http://www.nicta.com.au'
-        }
-    });
-    terria.viewerMode = ViewerMode.CesiumEllipsoid;
+        // Create the map/globe.
+        var terriaViewer = TerriaViewer.create(terria, {
+            developerAttribution: {
+                text: 'NICTA',
+                link: 'http://www.nicta.com.au'
+            }
+        });
 
-    // Create the various base map options.
-    var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
-    var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
+        //temp
+        var createAustraliaBaseMapOptions = require('terriajs/lib/ViewModels/createAustraliaBaseMapOptions');
+        var createGlobalBaseMapOptions = require('terriajs/lib/ViewModels/createGlobalBaseMapOptions');
+        var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
+        // Create the various base map options.
+        var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
+        var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
 
-    /* turn off the custom AREMI maps for now
-    var aremiBaseMaps = [];
+        var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
+        selectBaseMap(terria, allBaseMaps, 'Bing Maps Aerial with Labels', true);
 
-    var osmSimpleLight = new WebMapServiceCatalogItem(terria);
-    osmSimpleLight.name = 'OpenStreeMaps Light (BETA)';
-    osmSimpleLight.url = 'https://maps.aurin.org.au/cgi-bin/tilecache.cgi';
-    osmSimpleLight.layers = 'austatesgrey';
-    osmSimpleLight.getFeatureInfoFormats = [];
-    osmSimpleLight.parameters = {
-        tiled: true
-    };
-    osmSimpleLight.opacity = 1.0;
-    aremiBaseMaps.push(new BaseMapViewModel({
-        image: 'images/osmLight.png',
-        catalogItem: osmSimpleLight,
-    }));
+        terriaViewer.updateBaseMap();
 
-    var osmSimpleDark = new WebMapServiceCatalogItem(terria);
-    osmSimpleDark.name = 'OpenStreeMaps Dark (BETA)';
-    osmSimpleDark.url = 'https://maps.aurin.org.au/cgi-bin/tilecache.cgi';
-    osmSimpleDark.layers = 'austatesdark';
-    osmSimpleDark.getFeatureInfoFormats = [];
-    osmSimpleDark.parameters = {
-        tiled: true
-    };
-    osmSimpleDark.opacity = 1.0;
-    aremiBaseMaps.push(new BaseMapViewModel({
-        image: 'images/osmDark.png',
-        catalogItem: osmSimpleDark,
-    }));
-    */
-
-    var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);//.concat(aremiBaseMaps);
-    selectBaseMap(terria, allBaseMaps, 'Positron (Light)');
-
-    // Create the Settings / Map panel.
-    var settingsPanel = SettingsPanelViewModel.create({
-        container: ui,
-        terria: terria,
-        isVisible: false,
-        baseMaps: allBaseMaps
-    });
-
-    // Create the brand bar.
-    BrandBarViewModel.create({
-        container: ui,
-        elements: [
-            '<div class="ausglobe-title-aremi">\
-                <a href="http://arena.gov.au/" target="_blank"><img class="left"  src="images/ARENA-logo2.png" alt="Australian Renewable Energy Agency" /></a>\
-                <a href="https://www.nicta.com.au/" target="_blank"><img class="right" src="images/DATA61_CSIRO.png" alt="NICTA" width="55px" height="33px"/></a>\
-                <br/>\
-                <strong>Australian Renewable Energy</strong>\
-                <br/>\
-                <small>Mapping Infrastructure</small>\
-                <br/>\
-                <span><a target="_blank" href="https://github.com/NICTA/aremi-natmap/blob/master/Changelog.md#version-' + version + '">Version: ' + version + '</a></span>\
-            </div>'
-        ]
-    });
-
-    // Create the menu bar.
-    MenuBarViewModel.create({
-        container: ui,
-        terria: terria,
-        items: [
-            // Add a Tools menu that only appears when "tools=1" is present in the URL.
-            createToolsMenuItem(terria, ui),
-            new MenuBarItemViewModel({
-                label: 'Add data',
-                tooltip: 'Add your own data to the map.',
-                svgPath: svgPlus,
-                svgPathWidth: 11,
-                svgPathHeight: 12,
-                callback: function() {
-                    AddDataPanelViewModel.open({
-                        container: ui,
-                        terria: terria
-                    });
-                }
-            }),
-            new MenuBarItemViewModel({
-                label: 'Base Maps',
-                tooltip: 'Change the map mode (2D/3D) and base map.',
-                svgPath: svgWorld,
-                svgPathWidth: 17,
-                svgPathHeight: 17,
-                observableToToggle: knockout.getObservable(settingsPanel, 'isVisible')
-            }),
-            new MenuBarItemViewModel({
-                label: 'Share',
-                tooltip: 'Share your map with others.',
-                svgPath: svgShare,
-                svgPathWidth: 11,
-                svgPathHeight: 13,
-                callback: function() {
-                    SharePopupViewModel.open({
-                        container: ui,
-                        terria: terria
-                    });
-                }
-            }),
-            new MenuBarItemViewModel({
-                label: 'Related Maps',
-                tooltip: 'View other maps in the NationalMap family.',
-                svgPath: svgRelated,
-                svgPathWidth: 14,
-                svgPathHeight: 13,
-                callback: function() {
-                    PopupMessageViewModel.open(ui, {
-                        title: 'Related Maps',
-                        message: require('fs').readFileSync(__dirname + '/lib/Views/RelatedMaps.html', 'utf8'),
-                        width: 600,
-                        height: 430
-                    });
-                }
-            }),
-            new MenuBarItemViewModel({
-                label: 'About',
-                tooltip: 'About AREMI.',
-                svgPath: svgInfo,
-                svgPathWidth: 18,
-                svgPathHeight: 18,
-                svgFillRule: 'evenodd',
-                href: 'About.html'
-            })
-        ]
-    });
-
-    // Create the lat/lon/elev and distance widgets.
-    LocationBarViewModel.create({
-        container: ui,
-        terria: terria,
-        mapElement: document.getElementById('cesiumContainer')
-    });
-
-    DistanceLegendViewModel.create({
-        container: ui,
-        terria: terria,
-        mapElement: document.getElementById('cesiumContainer')
-    });
-
-    // Create the navigation controls.
-    NavigationViewModel.create({
-        container: ui,
-        terria: terria
-    });
-
-    // Create the animation controls.
-    AnimationViewModel.create({
-        container: document.getElementById('cesiumContainer'),
-        terria: terria,
-        autoPlay: false,
-        mapElementsToDisplace: [
-            'cesium-widget-credits',
-            'leaflet-control-attribution',
-            'distance-legend',
-            'location-bar'
-        ]
-    });
-
-    var nowViewingTab = new NowViewingTabViewModel({
-        nowViewing: terria.nowViewing,
-        name: 'Legends'
-    });
-
-    var isSmallScreen = document.body.clientWidth <= 700 || document.body.clientHeight <= 420;
-
-    // Create the explorer panel.
-    ExplorerPanelViewModel.create({
-        container: ui,
-        terria: terria,
-        mapElementToDisplace: 'cesiumContainer',
-        isOpen: !isSmallScreen && !terria.userProperties.hideExplorerPanel,
-        tabs: [
-            new DataCatalogTabViewModel({
-                catalog: terria.catalog
-            }),
-            nowViewingTab,
-            new SearchTabViewModel({
-                searchProviders: [
-                    new CatalogItemNameSearchProviderViewModel({
-                        terria: terria
-                    }),
-                    new BingMapsSearchProviderViewModel({
-                        terria: terria,
-                        key: configuration.bingMapsKey
-                    }),
-                    new GazetteerSearchProviderViewModel({
-                        terria: terria
-                    })
-                ]
-            })
-        ]
-    });
-
-    // Create the feature information popup.
-    var featureInfoPanel = FeatureInfoPanelViewModel.create({
-        container: ui,
-        terria: terria
-    });
-
-    // Handle the user dragging/dropping files onto the application.
-    DragDropViewModel.create({
-        container: ui,
-        terria: terria,
-        dropTarget: document,
-        allowDropInitFiles: true,
-        allowDropDataFiles: true,
-        validDropElements: ['ui', 'cesiumContainer'],
-        invalidDropClasses: ['modal-background']
-    });
-
-    // Add a popup that appears the first time a catalog item is enabled,
-    // calling the user's attention to the Now Viewing tab.
-    NowViewingAttentionGrabberViewModel.create({
-        container: ui,
-        terria: terria,
-        nowViewingTabViewModel: nowViewingTab
-    });
-
-    // Make sure only one panel is open in the top right at any time.
-    MutuallyExclusivePanels.create({
-        panels: [
-            settingsPanel,
-            featureInfoPanel
-        ]
-    });
-
-    // Add the disclaimer, if specified
-    if(defined(terria.configParameters.globalDisclaimer)) {
-      var disclaimer = terria.configParameters.globalDisclaimer;
-      if(defined(disclaimer.enabled) && disclaimer.enabled) {
-          var message = '';
-          if (location.hostname.indexOf('nationalmap.gov.au') === -1) {
-            message += fs.readFileSync(__dirname + '/lib/Views/DevelopmentDisclaimer.html', 'utf8');
-          }
-          message += fs.readFileSync(__dirname + '/lib/Views/GlobalDisclaimer.html', 'utf8');
-          var options = {
-              title: defined(disclaimer.title) ? disclaimer.title : 'Disclaimer',
-              confirmText: "I Agree",
-              width: 600,
-              height: 550,
-              message: message,
-              horizontalPadding : 100
-          };
-
-          if(defined(disclaimer.confirmationRequired) && disclaimer.confirmationRequired) {
-              // To account for confirmation buttons
-              options.height += 30;
-              PopupMessageConfirmationViewModel.open(ui, options);
-          } else if(!defined(disclaimer.confirmationRequired) ||
-                    (defined(disclaimer.confirmationRequired) && !disclaimer.confirmationRequired)) {
-              PopupMessageViewModel.open(ui, options);
-          }
-      }
+        // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
+        // updateApplicationOnHashChange(terria, window);
+        ReactDOM.render(<UserInterface terria={terria} allBaseMaps={allBaseMaps}
+                                       terriaViewer={terriaViewer}/>, document.getElementById('ui'));
+    } catch (e) {
+        console.error(e.stack)
     }
-
-    // Add the survey link
-    var surveyLink = 'https://docs.google.com/forms/d/1ZQkNgSWA2mmxlsEICxlm7cOhJ2xVxRGScsvJ83i0F3M/viewform';
-    var contributeLink = 'http://goo.gl/forms/smvJVsRXPG';
-    var surveyContainer = document.createElement("div");
-    document.querySelector(".explorer-panel-body-pane").appendChild(surveyContainer);
-    surveyContainer.innerHTML =
-      '<div class="feedback-request">\
-        <p><a target="_blank" href="' + surveyLink + '">Give Feedback</a></p>\
-        <p>This site is still in development, so please <a target="_blank" href="' + surveyLink + '">tell us what you think</a>. Our survey will take 5 mins.</p>\
-        <p><a target="_blank" href="' + contributeLink + '">Contribute Data</a></p>\
-      </div>';
-
-    MapProgressBarViewModel.create({
-        container: document.getElementById('cesiumContainer'),
-        terria: terria
-    });
-
-    document.getElementById('loadingIndicator').style.display = 'none';
 });

@@ -3,8 +3,6 @@ node_modules/
 target
 wwwroot/build/
 wwwroot/doc/
-error.log
-output.log
 .DS_Store
 npm-debug.log
 version.js
@@ -13,3 +11,7 @@ datasources/00_National_Data_Sets.json
 .DS_Store
 .localized
 proxyAuth.json
+.sass-cache
+/terriajs.pid
+/error.log
+/output.log
