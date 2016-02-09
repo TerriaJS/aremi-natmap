@@ -1,6 +1,5 @@
 'use strict';
 
-import Branding from 'terriajs/lib/ReactViews/Branding.jsx';
 import ChartPanel from 'terriajs/lib/ReactViews/ChartPanel.jsx';
 import FeatureInfoPanel from 'terriajs/lib/ReactViews/FeatureInfoPanel.jsx';
 import MapNavigation from 'terriajs/lib/ReactViews/MapNavigation.jsx';
@@ -11,6 +10,7 @@ import ObserveModelMixin from 'terriajs/lib/ReactViews/ObserveModelMixin';
 import React from 'react';
 import SidePanel from 'terriajs/lib/ReactViews/SidePanel.jsx';
 import arrayContains from 'terriajs/lib/Core/arrayContains';
+import version from './version';
 
 var UserInterface = React.createClass({
     propTypes: {
@@ -236,8 +236,17 @@ var UserInterface = React.createClass({
         return (
             <div>
                 <header className='workbench'>
-                    <Branding onClick={this.showWelcome}/>
-                <nav>
+                  <div className="ausglobe-title-aremi">
+                      <a href="http://arena.gov.au/" target="_blank"><img className="left"  src="images/ARENA-logo2.png" alt="Australian Renewable Energy Agency" /></a>
+                      <a href="https://www.nicta.com.au/" target="_blank"><img className="right" src="images/DATA61_CSIRO.png" alt="NICTA" width="55px" height="33px"/></a>
+                      <br/>
+                      <strong>Australian Renewable Energy</strong>
+                      <br/>
+                      <small>Mapping Infrastructure</small>
+                      <br/>
+                      <span><a target="_blank" href="https://github.com/NICTA/aremi-natmap/blob/master/Changelog.md#version-{version}">Version: {version}</a></span>
+                  </div>
+                  <nav>
                     <SidePanel terria={terria}
                                mapSearchText={this.state.mapSearchText}
                                onMapSearchTextChanged={this.changeMapSearchText}
@@ -245,7 +254,7 @@ var UserInterface = React.createClass({
                                onActivateCatalogItemInfo={this.showCatalogItemInfo}
                                onSearchCatalog={this.searchCatalog}
                     />
-                </nav>
+                  </nav>
                 </header>
                 <main>
                     <ModalWindow terria={terria}
