@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 #### In the next version
+* Added the new layer "Infrastructure -> Major Ports" from Geoscience Australia.
 * Updated the "Electricity Inf. -> Transmission -> Transmission Lines/Substations" and "Electricity Inf. -> Generation -> All Power Stations" layers to use the new updated Geoscience Australia services.
 * Updated the "Infrastructure -> Gas/Oil Pipelines" layers to use the new updated Geoscience Australia services, and added WFS download URLs.
 * Removed the "Benchmarks" and "Horizontal Control Points" from the "Topography -> Elevation" category as these have been decommissioned by the data custodian.
