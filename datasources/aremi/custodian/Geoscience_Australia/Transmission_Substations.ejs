@@ -1,25 +1,11 @@
 {
   "name": "Substations",
-  "info": [
-    {
-      "name": "Licensing, Terms & Conditions",
-      "content": "© Commonwealth of Australia (Geoscience Australia) 2015. This product is released under the [Creative Commons Attribution 4.0 International Licence](http://creativecommons.org/licenses/by/4.0/legalcode)."
-    }
-  ],
-  "url": "http://www.ga.gov.au/gis/rest/services/topography/National_Electricity_Transmission_Substations/MapServer",
   "layers": "National_Electricity_Transmission_Substations",
-  <%#
-    Why is this not a WMS service?
-    Because the feature picking of the WMS service fails with an internal server
-    error. We have notified GA about the error some time ago, but nothing is
-    likely to be fixed as these are being moved to their new service
-    infrastructure at some point in the future.
-  %>
-  "type": "esri-mapServer",
-  "dataUrl": "http://www.ga.gov.au/gis/services/topography/National_Electricity_Transmission_Substations/MapServer/WFSServer?service=WFS&request=GetFeature&typeName=topography_National_Electricity_Transmission_Substations:National_Electricity_Transmission_Substations&srsName=EPSG%3A4326&maxFeatures=10000",
-  "dataUrlType": "wfs-complete",
-  "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/National_Electricity_Transmission_Substations.png",
+  "url": "http://services.ga.gov.au/gis/services/Electricity_Infrastructure/MapServer/WMSServer",
+  "type": "wms",
   "opacity": "1.0",
+  "dataUrl": "http://services.ga.gov.au/gis/services/Electricity_Infrastructure/MapServer/WFSServer?service=WFS&request=GetFeature&typeName=topography_National_Electricity_Transmission_Substations:National_Electricity_Transmission_Substations&srsName=EPSG%3A4326&maxFeatures=10000",
+  "dataUrlType": "wfs-complete",
   <%- include ../../common/standard_properties %>,
   <%- include ../../common/home_camera_rectangle %>
 },
@@ -29,7 +15,6 @@
   "layers": "Distance_to_Transmission_Substations_Contours",
   "type": "wms",
   "opacity": "1.0",
-  "legendUrl": "http://services.ga.gov.au/gis/rest/directories/capabilities/Proximity_to_Transmission_Infrastructure_Substations_Contour_Legend.png",
   "featureInfoTemplate" : {
     "template": "{{distance}} km from the nearest substation.",
     "name": "{{distance}} km"
