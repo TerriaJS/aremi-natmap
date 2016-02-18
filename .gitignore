@@ -16,3 +16,6 @@ proxyAuth.json
 /terriajs.pid
 /error.log
 /output.log
+
+# added by GitSavvy
+/wwwroot/editor/
