@@ -79,7 +79,8 @@ var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateAppli
 var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
 
-var BaseMapViewModel = require('terriajs/lib/ViewModels/BaseMapViewModel');
+// Not used until custom AREMI maps are below
+//var BaseMapViewModel = require('terriajs/lib/ViewModels/BaseMapViewModel');
 var Terria = require('terriajs/lib/Models/Terria');
 var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
