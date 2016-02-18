@@ -2,6 +2,7 @@
 
 #### In the next version
 * Update "Boundaries -> Defence restricted areas" layers to use new `services.ga.gov.au` server for WMS and legends.
+* Updated the look and feel of the legends for "Electriity Inf. -> Generation -> Current Power Generation" layers.
 
 #### Version 2016-02-18
 * Updated the "Electriity Inf. -> Generation -> Small Scale Installations" data to February 2016.
