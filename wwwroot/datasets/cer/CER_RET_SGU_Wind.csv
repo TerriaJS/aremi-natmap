@@ -90,6 +90,7 @@ Postcode,Total Installations,Total SGU Rated Output In kW
 3152,2,4.800
 3197,1,1.520
 3237,1,1.000
+3283,1,1.500
 3333,1,1.800
 3340,1,1.000
 3341,1,1.000
@@ -101,9 +102,10 @@ Postcode,Total Installations,Total SGU Rated Output In kW
 3373,1,1.000
 3437,1,1.100
 3442,1,3.000
-3444,1,1.680
+3444,2,3.180
 3461,3,5.300
-3523,1,0.600
+3490,1,3.000
+3523,2,3.900
 3551,1,1.000
 3610,2,1.600
 3659,1,0.400
@@ -121,6 +123,7 @@ Postcode,Total Installations,Total SGU Rated Output In kW
 3898,1,0.400
 3921,7,10.400
 3953,2,2.000
+3960,1,1.500
 3984,1,1.000
 3995,2,3.000
 4061,1,1.000
@@ -166,6 +169,7 @@ Postcode,Total Installations,Total SGU Rated Output In kW
 5238,1,0.800
 5250,1,1.800
 5254,1,1.800
+5291,1,5.100
 5351,1,0.900
 5353,1,0.400
 5354,1,3.240
@@ -231,4 +235,3 @@ Postcode,Total Installations,Total SGU Rated Output In kW
 7252,1,2.400
 7255,1,1.000
 7256,4,14.900
-7469,1,0.300
