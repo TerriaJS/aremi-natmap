@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 #### Version 2016-02-18
+* Updated the "Electriity Inf. -> Generation -> Small Scale Installations" data to February 2016.
 * Added the new layer "Infrastructure -> Major Ports" from Geoscience Australia.
 * Updated the "Electricity Inf. -> Transmission -> Transmission Lines/Substations" and "Electricity Inf. -> Generation -> All Power Stations" layers to use the new updated Geoscience Australia services.
 * Updated the "Infrastructure -> Gas/Oil Pipelines" layers to use the new updated Geoscience Australia services, and added WFS download URLs.
