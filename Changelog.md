@@ -1,9 +1,11 @@
 ### AREMI Changelog
 
 #### In the next version
+* Added the new "Renewable Energy -> Wind" layers with data produced by [DNV GL](https://www.dnvgl.com/)!
 * Migrated layers in "Boundaries -> Protected Areas" from using the soon to be decomissioned services from Geoscience Australia to new services from the Department of Environment.
 * Updated "Boundaries -> Defence restricted areas" layers to use new `services.ga.gov.au` server for WMS and legends.
 * Updated the look and feel of the legends for "Electriity Inf. -> Generation -> Current Power Generation" layers.
+
 
 #### Version 2016-02-18
 * Updated the "Electriity Inf. -> Generation -> Small Scale Installations" data to February 2016.
