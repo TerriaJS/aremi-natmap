@@ -5,6 +5,7 @@
 * Migrated layers in "Boundaries -> Protected Areas" from using the soon to be decomissioned services from Geoscience Australia to new services from the Department of Environment.
 * Updated "Boundaries -> Defence restricted areas" layers to use new `services.ga.gov.au` server for WMS and legends.
 * Updated the look and feel of the legends for "Electriity Inf. -> Generation -> Current Power Generation" layers.
+* Added links to GA's ELVIS elevation data download service to "Topography -> Elevation -> {LiDAR 5m DEM,LiDAR 25m DEM, SRTM 1 sec DEM image}"
 
 
 #### Version 2016-02-18
