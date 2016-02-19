@@ -3,27 +3,24 @@
   "type": "group",
   "items": [
     {
-      "name": "CAPAD 2014 Marine Areas",
-      "url": "http://www.ga.gov.au/gis/services/topography/Dept_of_Environment_Protected_Areas/MapServer/WMSServer",
+      "name": "Commonwealth Marine Reserves",
+      "url": "http://www.environment.gov.au/mapping/services/ogc_services/Commonwealth_Marine_Reserves/MapServer/WMSServer",
+      "layers": "0",
       "type": "wms",
-      "layers": "Protected_Areas_CAPAD_2014_Marine",
-      "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/Protected_Areas_CAPAD_2014_Marine_DeptEnvironment.jpg",
       <%- include ../../common/standard_properties %>
     },
     {
-      "name": "CAPAD 2014 Terrestrial Areas",
-      "url": "http://www.ga.gov.au/gis/services/topography/Dept_of_Environment_Protected_Areas/MapServer/WMSServer",
+      "name": "Collaborative Australian Protected Areas Database (CAPAD) 2014",
+      "url": "http://www.environment.gov.au/mapping/services/ogc_services/capad/MapServer/WMSServer",
+      "layers": "Protected_Areas_2014",
       "type": "wms",
-      "layers": "Protected_Areas_CAPAD_2014_Terrestrial",
-      "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/Protected_Areas_CAPAD_2014_Terrestrial_DeptEnvironment.jpg",
       <%- include ../../common/standard_properties %>
     },
     {
-      "name": "World Heritage Areas 2007",
-      "url": "http://www.ga.gov.au/gis/services/topography/Dept_of_Environment_Protected_Areas/MapServer/WMSServer",
+      "name": "Australian World Heritage Areas",
+      "url": "http://www.environment.gov.au/mapping/services/ogc_services/World_Heritage_Areas/MapServer/WMSServer",
+      "layers": "World_Heritage_Areas_Australia",
       "type": "wms",
-      "layers": "World_Heritage_Areas_2007",
-      "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/World_Heritage_Areas_2007_DeptEnvironment.jpg",
       <%- include ../../common/standard_properties %>
     },
   ]
