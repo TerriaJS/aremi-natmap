@@ -1,15 +1,26 @@
 {
   "id": "54a5597c",
   "name": "All Land Tenure types",
-  "layers": "CONVERTIBLE_LEASE,CROWN_LAND,FREEHOLD,NO_VALUE_IN_SOURCE_DATA,OTHER_LEASE,PASTORAL_LEASE,RESERVE,SECONDARY_TENURE_TYPE",
+  "url": "http://services.ga.gov.au/gis/rest/services/Northern_Australia_Land_Tenure/MapServer",
+  "type": "esri-mapServer",
+  "dataCustodian": "Geoscience Australia <br/> <a href='mailto:clientservices@ga.gov.au' target='_blank'>clientservices@ga.gov.au</a>",
   "info": [
     {
       "name": "Data Description",
       "content": "All land tenure types shown together as a single layer."
+    },
+    {
+      "name": "Access Constraints",
+      "content": "©PSMA Australia Limited. www.psma.com.au/psma-data-copyright-and-disclaimer"
     }
   ],
-  "legendUrl": "",
-  <%- include Northern_Australia_Land_Tenure-common %>
+  "rectangle": [
+    "114.1",
+    "-31.7",
+    "153.2",
+    "-5.9"
+  ],
+  <%- include ../../common/standard_properties %>
 },
 
 {
