@@ -13,8 +13,7 @@
         "mapsengine.google.com",
         "geoserver-123.aodn.org.au",
         "geoserver.imos.org.au",
-        "nci.org.au",
-        "localhost:8080"
+        "nci.org.au"
     ],
     "initializationUrls" : [
         "aremi",
