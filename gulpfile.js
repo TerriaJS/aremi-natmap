@@ -189,7 +189,7 @@ gulp.task('merge-datasources-aremi', function() {
 
 /**
  * Recurses through a tree of data sources and checks that all the items (not groups) have ids specified
- * @param {CatalogMember[]} children The children to check
+ * @param {Object[]} children The children to check in the format specified in the datasource json.
  * @param pathSoFar The path that the paths of offending children will be concatenated to.
  * @returns {String[]} The paths (names joined by '/') of items that had no id as a flat array.
  */
