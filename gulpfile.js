@@ -196,11 +196,10 @@ gulp.task('merge-datasources-aremi', function() {
 function getChildrenWithNoIds(children, pathSoFar) {
     return children.reduce(function(soFar, child) {
         var path = pathSoFar + '/' + (child.name || '[no name]');
-
-        var badChildren = child.id || child.type === 'group' ? [] : [path];
+        var childIsInvalid = !child.id && child.type !== 'group';
 
         return soFar
-            .concat(badChildren)
+            .concat(childIsInvalid ? [path] : [])
             .concat(getChildrenWithNoIds(child.items || [], path));
     }, []);
 }
