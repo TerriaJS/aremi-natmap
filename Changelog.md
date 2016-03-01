@@ -1,5 +1,7 @@
 ### AREMI Changelog
 
+### Version [NEXT]
+* Added a check to make sure all catalog items have ids specified on build.
 
 #### Version 2016-02-23
 * Small improvements to the DNV GL Wind layers.

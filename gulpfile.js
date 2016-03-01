@@ -173,10 +173,36 @@ gulp.task('merge-datasources-aremi', function() {
     var result = ejs.render(template, null, {filename: fn});
     // remove all newlines - makes it possible to nicely format data descriptions etc
     var noNewlines = result.replace(/(?:\r\n|\r|\n)/g, '');
+
+    var jsDatasources = eval('('+noNewlines+')');
+    var badChildrenPaths = getChildrenWithNoIds(jsDatasources.catalog, '');
+
+    if (badChildrenPaths.length) {
+        console.error('Datasources have catalog items without ids: \n' + badChildrenPaths.join('\n'));
+        process.exit(1);
+    }
+
     // eval JSON string into object and minify
-    var buf = new Buffer(JSON.stringify(eval('('+noNewlines+')'), null, 0));
+    var buf = new Buffer(JSON.stringify(jsDatasources, null, 0));
     fs.writeFileSync('wwwroot/init/aremi.json', buf);
 });
+
+/**
+ * Recurses through a tree of data sources and checks that all the items (not groups) have ids specified
+ * @param {Object[]} children The children to check in the format specified in the datasource json.
+ * @param pathSoFar The path that the paths of offending children will be concatenated to.
+ * @returns {String[]} The paths (names joined by '/') of items that had no id as a flat array.
+ */
+function getChildrenWithNoIds(children, pathSoFar) {
+    return children.reduce(function(soFar, child) {
+        var path = pathSoFar + '/' + (child.name || '[no name]');
+        var childIsInvalid = !child.id && child.type !== 'group';
+
+        return soFar
+            .concat(childIsInvalid ? [path] : [])
+            .concat(getChildrenWithNoIds(child.items || [], path));
+    }, []);
+}
 
 gulp.task('default', ['lint', 'build']);
 
