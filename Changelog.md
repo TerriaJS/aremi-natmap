@@ -2,6 +2,20 @@
 
 ### Version [NEXT]
 * Added a check to make sure all catalog items have ids specified on build.
+* Fixed missing links to GA ELVIS system in 
+* Added feature info templates for:
+    - Elec. Inf 
+        - Generation
+            - Live Power Generation layers
+            - Small Scale Installations layers
+        - Transmission
+            - Transmission Lines
+    - Renewable Energy
+        - Bioenergy
+            - Waste Management Fascilities
+    - Infrastructure
+        - Oil Pipelines
+        - Gas Pipelines
 
 #### Version 2016-02-23
 * Small improvements to the DNV GL Wind layers.
