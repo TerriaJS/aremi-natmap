@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 ### Version [NEXT]
+* Changed the "Boundaries -> Cadastre and Land Tenure -> Northern Australia" layers into a single "Boundaries -> Cadastre and Land Tenure -> Land Tenure - PSMA" hosted by Geoscience Australia that covers all of Australia.
 * Added a layer giving access to the [DNV GL](https://www.dnvgl.com/) WAsP LIB files in "Renewable Energy -> Wind -> WAsP LIB files".
 * Added a check to make sure all catalog items have ids specified on build.
 * Fixed missing links to GA ELVIS system in "Topography -> Elevation -> {LiDAR 5m DEM,LiDAR 25m DEM, SRTM 1 sec DEM image}".
