@@ -4,6 +4,9 @@
   "layers": "Cadastral_Parcels",
   "url": "http://services.ga.gov.au/gis/rest/services/Cadastral_Parcels/MapServer",
   "type": "esri-mapServer",
-  <%- include ../../common/standard_properties %>,
-  <%- include ../../common/home_camera_rectangle %>
+  "featureInfoTemplate" : {
+    "template": "Jurisdiction ID: <strong>{{JURISDICTION_ID}}</strong>"
+  },
+  <% include ../../common/standard_properties %>,
+  <% include ../../common/home_camera_rectangle %>
 }

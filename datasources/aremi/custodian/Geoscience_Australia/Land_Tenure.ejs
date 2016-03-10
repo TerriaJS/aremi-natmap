@@ -4,6 +4,10 @@
   "layers": "Land_Tenure",
   "url": "http://services.ga.gov.au/gis/services/Land_Tenure/MapServer/WMSServer",
   "type": "wms",
+  "featureInfoTemplate" : {
+    "name": "{{TENURE_TYPE_CODE}} {{TENURE_TYPE_NAME}}",
+    "template": "<% include Land_Tenure_template %>"
+  },
   "shareKeys": [
     "54071788",
     "54a55986",
@@ -14,6 +18,6 @@
     "54a559cc",
     "54a559e0",
   ],
-  <%- include ../../common/standard_properties %>,
-  <%- include ../../common/home_camera_rectangle %>
+  <% include ../../common/standard_properties %>,
+  <% include ../../common/home_camera_rectangle %>
 }
