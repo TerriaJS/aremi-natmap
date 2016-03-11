@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 ### Version [NEXT]
+* Added the new experimental layer "Renewable Energy -> Solar -> Solar Satellite DNI - 2014" based on Bureau of Meteorology data.
 * Added the new layer "Boundaries -> Cadastre and Land Tenure -> Cadastral Parcels - PSMA" from Geoscience Australia.
 * Changed the "Boundaries -> Cadastre and Land Tenure -> Northern Australia" layers into a single "Boundaries -> Cadastre and Land Tenure -> Land Tenure - PSMA" hosted by Geoscience Australia that covers all of Australia.
 * Added a layer giving access to the [DNV GL](https://www.dnvgl.com/) WAsP LIB files in "Renewable Energy -> Wind -> WAsP LIB files".
