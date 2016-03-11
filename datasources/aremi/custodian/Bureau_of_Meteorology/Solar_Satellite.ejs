@@ -4,7 +4,6 @@
   "layers": "Solar_Satellite_DNI_2014",
   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/bom/wms",
   "type": "wms",
-  "clipToRectangle": true,
   "maxRefreshIntervals":"9000",
   "featureInfoTemplate": {
     "name":"{{GRAY_INDEX}} W/m2",
@@ -28,5 +27,7 @@
       "name": "Licensing, Terms & Conditions",
       "content": "<% include Solar_Satellite-licensing %>"
     },
-  ]
+  ],
+  <% include ../../common/standard_properties %>,
+  <% include ../../common/home_camera_rectangle %>
 }
