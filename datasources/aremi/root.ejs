@@ -140,12 +140,19 @@
         {
           "name": "Cadastre and Land Tenure",
           "type": "group",
+          "preserveOrder": true,
           "items": [
-            <% include custodian/Landgate/Cadastre %>,
-            <% include custodian/Land_and_Property_Information_NSW/Cadastre %>,
-            <% include custodian/Land_Information_System_Tasmania/Cadastral_Parcels %>,
+            <% include custodian/Geoscience_Australia/Cadastral_Parcels %>,
             <% include custodian/Geoscience_Australia/Land_Tenure %>,
-            <% include custodian/Geoscience_Australia/Cadastral_Parcels %>
+            {
+              "name": "By State",
+              "type": "group",
+              "items": [
+                <% include custodian/Landgate/Cadastre %>,
+                <% include custodian/Land_and_Property_Information_NSW/Cadastre %>,
+                <% include custodian/Land_Information_System_Tasmania/Cadastral_Parcels %>,
+              ]
+            }
           ]
         },
         {
