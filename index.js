@@ -6,9 +6,10 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 
+var terriaOptions = {
+    baseUrl: 'build/TerriaJS'
+};
 var configuration = {
-    terriaBaseUrl: 'build/TerriaJS',
-    cesiumBaseUrl: undefined, // use default
     bingMapsKey: undefined, // use Cesium key
     proxyBaseUrl: 'proxy/',
     conversionServiceBaseUrl: 'convert',
@@ -27,6 +28,7 @@ var defined = require('terriajs-cesium/Source/Core/defined');
 var fs = require('fs');
 
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
+var TerriaViewer = require('terriajs/lib/ReactViews/TerriaViewer');
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
 var corsProxy = require('terriajs/lib/Core/corsProxy');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
@@ -76,13 +78,11 @@ var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform')
 var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 
-var TerriaViewer = require('terriajs/lib/ReactViews/TerriaViewer');
 var corsProxy = require('terriajs/lib/Core/corsProxy');
 var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
 
-
-// Configure the base URL for the proxy service used to work around CORS restrictions.
-corsProxy.baseProxyUrl = configuration.proxyBaseUrl;
+var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
+var defaultValue = require('terriajs-cesium/Source/Core/defaultValue');
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
 OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
@@ -102,11 +102,10 @@ registerKnockoutBindings();
 // the code in the registerCatalogMembers function here instead.
 registerCatalogMembers();
 
-// Register custom components in the core TerriaJS.  If you only want to register a subset of them, or to add your own,
-// insert your custom version of the code in the registerCustomComponentTypes function here instead.
-registerCustomComponentTypes();
+terriaOptions.analytics = new GoogleAnalytics();
 
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
+var terria = new Terria(terriaOptions);
 
 var terria = new Terria({
     appName: 'AREMI',
@@ -116,6 +115,9 @@ var terria = new Terria({
     regionMappingDefinitionsUrl: configuration.regionMappingDefinitionsUrl,
     analytics: new GoogleAnalytics()
 });
+// Register custom components in the core TerriaJS.  If you only want to register a subset of them, or to add your own,
+// insert your custom version of the code in the registerCustomComponentTypes function here instead.
+registerCustomComponentTypes(terria);
 
 
 // We'll put the entire user interface into a DOM element called 'ui'.
@@ -163,7 +165,6 @@ terria.start({
 
         var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
         selectBaseMap(terria, allBaseMaps, 'Positron (Light)', true);
-
 
         // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
         // updateApplicationOnHashChange(terria, window);
