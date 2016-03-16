@@ -22,7 +22,8 @@ var watchify = require('watchify');
 var NpmImportPlugin = require('less-plugin-npm-import');
 var jsoncombine = require('gulp-jsoncombine');
 var ejs = require('ejs');
-var childExec = require('child_process').exec;  // child_process is built in to node
+var child_exec = require('child_process').exec;  // child_process is built in to node
+var gutil = require('gulp-util');
 
 var appJSName = 'nationalmap.js';
 var appCssName = 'nationalmap.css';
@@ -32,8 +33,11 @@ var terriaJSSource = 'node_modules/terriajs/wwwroot';
 var terriaJSDest = 'wwwroot/build/TerriaJS';
 var testGlob = './test/**/*.js';
 
+var watching = false; // if we're in watch mode, we try to never quit.
+
 // Create the build directory, because browserify flips out if the directory that might
 // contain an existing source map doesn't exist.
+
 if (!fs.existsSync('wwwroot/build')) {
     fs.mkdirSync('wwwroot/build');
 }
@@ -48,6 +52,7 @@ gulp.task('build-specs', ['prepare-terriajs'], function() {
 
 gulp.task('build-css', function() {
     return gulp.src('./index.less')
+        .on('error', onError)
         .pipe(less({
             plugins: [
                 new NpmImportPlugin()
@@ -68,6 +73,17 @@ gulp.task('release-specs', ['prepare'], function() {
 });
 
 gulp.task('release', ['sass', 'merge-datasources', 'merge-datasources-aremi', 'release-app', 'release-specs']);
+// Generate new schema for editor, and copy it over whatever version came with editor.
+gulp.task('make-editor-schema', ['copy-editor'], function(done) {
+    child_exec('node node_modules/.bin/gen-schema --source node_modules/terriajs --dest wwwroot/editor --noversionsubdir', undefined, done);
+});
+
+gulp.task('copy-editor', function() {
+    return gulp.src('./node_modules/terriajs-catalog-editor/**')
+        .pipe(gulp.dest('./wwwroot/editor'));
+});
+
+gulp.task('release', ['build-css', 'merge-datasources', 'merge-datasources-aremi', 'release-app', 'release-specs', 'make-editor-schema']);
 
 gulp.task('watch-app', ['prepare'], function() {
     return watch(appJSName, appEntryJSName, false);
@@ -105,14 +121,15 @@ gulp.task('watch', ['watch-app', 'watch-specs', 'watch-datasources', 'watch-terr
 
 //to be updated
 gulp.task('lint', function(){
-    return gulp.src(['lib/**/*.js', 'test/**/*.js'])
+    return gulp.src(['index.js'])
+        .on('error', onError)
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('styleguide', function(done) {
-    childExec('./node_modules/kss/bin/kss-node ./node_modules/terriajs/lib/Sass ./wwwroot/styleguide --template ./wwwroot/styleguide-template --css ./../build/nationalmap.css', undefined, done);
+    child_exec('./node_modules/kss/bin/kss-node ./node_modules/terriajs/lib/Sass ./wwwroot/styleguide --template ./wwwroot/styleguide-template --css ./../build/nationalmap.css', undefined, done);
 });
 
 gulp.task('prepare', ['prepare-terriajs']);
@@ -124,9 +141,10 @@ gulp.task('prepare-terriajs', function() {
 });
 
 gulp.task('merge-groups', function() {
-    var jsonspacing = 0;
-    return gulp.src('./datasources/00_National_Data_Sets/*.json')
-    .pipe(jsoncombine('00_National_Data_Sets.json', function(data) {
+    var jsonspacing=0;
+    return gulp.src("./datasources/00_National_Data_Sets/*.json")
+    .on('error', onError)
+    .pipe(jsoncombine("00_National_Data_Sets.json", function(data) {
         // be absolutely sure we have the files in alphabetical order
         var keys = Object.keys(data).slice().sort();
         for (var i = 1; i < keys.length; i++) {
@@ -138,9 +156,10 @@ gulp.task('merge-groups', function() {
 });
 
 gulp.task('merge-catalog', ['merge-groups'], function() {
-    var jsonspacing = 0;
-    return gulp.src('./datasources/*.json')
-        .pipe(jsoncombine('nm.json', function(data) {
+    var jsonspacing=0;
+    return gulp.src("./datasources/*.json")
+        .on('error', onError)
+        .pipe(jsoncombine("nm.json", function(data) {
         // be absolutely sure we have the files in alphabetical order, with 000_settings first.
         var keys = Object.keys(data).slice().sort();
         data[keys[0]].catalog = [];
@@ -163,14 +182,55 @@ gulp.task('merge-datasources-aremi', function() {
     var result = ejs.render(template, null, {filename: fn});
     // remove all newlines - makes it possible to nicely format data descriptions etc
     var noNewlines = result.replace(/(?:\r\n|\r|\n)/g, '');
+
+    var jsDatasources = eval('('+noNewlines+')');
+    var badChildrenPaths = getChildrenWithNoIds(jsDatasources.catalog, '');
+
+    if (badChildrenPaths.length) {
+        console.error('Datasources have catalog items without ids: \n' + badChildrenPaths.join('\n'));
+        process.exit(1);
+    }
+
     // eval JSON string into object and minify
-    var buf = new Buffer(JSON.stringify(eval('('+noNewlines+')'), null, 0));
+    var buf = new Buffer(JSON.stringify(jsDatasources, null, 0));
     fs.writeFileSync('wwwroot/init/aremi.json', buf);
 });
 
+/**
+ * Recurses through a tree of data sources and checks that all the items (not groups) have ids specified
+ * @param {Object[]} children The children to check in the format specified in the datasource json.
+ * @param pathSoFar The path that the paths of offending children will be concatenated to.
+ * @returns {String[]} The paths (names joined by '/') of items that had no id as a flat array.
+ */
+function getChildrenWithNoIds(children, pathSoFar) {
+    return children.reduce(function(soFar, child) {
+        var path = pathSoFar + '/' + (child.name || '[no name]');
+        var childIsInvalid = !child.id && child.type !== 'group';
+
+        return soFar
+            .concat(childIsInvalid ? [path] : [])
+            .concat(getChildrenWithNoIds(child.items || [], path));
+    }, []);
+}
+
 gulp.task('default', ['lint', 'build']);
 
-function bundle(name, bundler, minify, catchErrors) {
+function onError(e) {
+    if (e.code === 'EMFILE') {
+        console.error('Too many open files. You should run this command:\n    ulimit -n 2048');
+        process.exit(1);
+    } else if (e.code === 'ENOSPC') {
+        console.error('Too many files to watch. You should run this command:\n' +
+                    '    echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p');
+        process.exit(1);
+    }
+    gutil.log(e.message);
+    if (!watching) {
+        process.exit(1);
+    }
+}
+
+var bundle = function(name, bundler, minify, catchErrors) {
     // Get a version string from "git describe".
     var version = spawnSync('git', ['describe']).stdout.toString().trim();
     var isClean = spawnSync('git', ['status', '--porcelain']).stdout.toString().length === 0;
@@ -181,15 +241,15 @@ function bundle(name, bundler, minify, catchErrors) {
     fs.writeFileSync('version.js', 'module.exports = \'' + version + '\';');
 
     // Combine main.js and its dependencies into a single file.
-    // The poorly-named "debug: true" causes Browserify to generate a source map.
     var result = bundler.bundle();
-
     if (catchErrors) {
         // Display errors to the user, and don't let them propagate.
         result = result.on('error', handleErrors);
     }
 
+
     result = result
+        .on('error', onError)
         .pipe(source(name))
         .pipe(buffer());
 
@@ -206,12 +266,11 @@ function bundle(name, bundler, minify, catchErrors) {
     result = result
         // Extract the embedded source map to a separate file.
         .pipe(transform(function () { return exorcist('wwwroot/build/' + name + '.map'); }))
-
         // Write the finished product.
         .pipe(gulp.dest('wwwroot/build'));
 
     return result;
-}
+};
 
 function build(name, files, minify) {
     return bundle(name, browserify({
@@ -222,9 +281,10 @@ function build(name, files, minify) {
 }
 
 function watch(name, files, minify) {
+    watching = true;
     var bundler = watchify(browserify({
         entries: files,
-        debug: true,
+        debug: true, // generate source map
         cache: {},
         extensions: ['.es6', '.jsx'],
         packageCache: {}
@@ -238,10 +298,10 @@ function watch(name, files, minify) {
 
         var start = new Date();
 
-        var result = bundle(name, bundler, minify, true);
+        var result = bundle(name, bundler, minify);
 
         result.on('end', function() {
-            console.log('Rebuilt ' + name + ' in ' + (new Date() - start) + ' milliseconds.');
+            gutil.log('Rebuilt \'' + gutil.colors.cyan(name) + '\' in', gutil.colors.magenta((new Date() - start)), 'milliseconds.');
         });
 
         return result;
@@ -274,3 +334,5 @@ gulp.task('sass', function(){
 gulp.task('sass-watch', ['sass'], function(){
   return gulp.watch(['./node_modules/terriajs/lib/Sass/**', 'nationalmap.scss'], ['sass']);
 });
+
+

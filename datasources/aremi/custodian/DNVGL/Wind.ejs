@@ -1,0 +1,23 @@
+{
+  "id": "21485082",
+  "name": "Average Wind Speed at 100 metres",
+  "layers": "wind_100m",
+  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/dnvgl/wms",
+  "type": "wms",
+  <% var initialMessageKey = "initialMessage.dnvgl.100m" %>
+  <% include Wind-metadata %>,
+  <% include ../../common/home_camera_rectangle %>,
+  <% include ../../common/standard_properties %>
+},
+{
+  "id": "291effe0",
+  "name": "Average Wind Speed at 150 metres",
+  "layers": "wind_150m",
+  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/dnvgl/wms",
+  "type": "wms",
+  <% var initialMessageKey = "initialMessage.dnvgl.150m" %>
+  <% include Wind-metadata %>,
+  <% include ../../common/home_camera_rectangle %>,
+  <% include ../../common/standard_properties %>
+},
+<% include WAsP-LIB-files %>

@@ -1,0 +1,42 @@
+{
+  "id": "90146db2",
+  "name": "WAsP LIB files",
+  "layers": "dnvgl_wasp_lib_files",
+  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/dnvgl/wms",
+  "type": "wms",
+  <%# For some reason Geoserver is very slow with the Shapefile/JSON feature info combination, so use the GML instead. %>
+  "getFeatureInfoFormats": [{ "type": "xml" }],
+  "featureInfoTemplate" : {
+    "template": "Download WAsP LIB file: <a href='http://static.aremi.nicta.com.au/datasets/DNVGL/WAsP/{{FileName}}'>{{FileName}}</a>"
+  },
+  "info" :[
+    {
+      "name": "Download Data",
+      "content": "<% include Wind-WaSP-details %>"
+    },
+    {
+      "name": "Data Currency and Updates",
+      "content": "<% include Wind-currency-updates %>"
+    },
+    {
+      "name": "Data Supplier",
+      "content": "<% include Wind-supplier %> <p> <% include Wind-logo %>"
+    },
+    {
+      "name": "Legal Disclaimer, Licensing, Terms & Conditions",
+      "content": "<% include Wind-licensing %>"
+    }
+  ],
+  "attribution": "DNV GL",
+  "initialMessage": {
+    "key": "initialMessage.dnvgl.wasp",
+    "title": "DNV GL Wind Atlas Disclaimer",
+    "content": "<% include Wind-logo %> <p> <% include Wind-licensing %>",
+    "confirmation": true,
+    "width": 600,
+    "height": 550,
+    "confirmText": "I Agree"
+  },
+  <% include ../../common/home_camera_rectangle %>,
+  <% include ../../common/standard_properties %>
+}

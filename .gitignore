@@ -3,6 +3,8 @@ node_modules/
 target
 wwwroot/build/
 wwwroot/doc/
+error.log
+output.log
 .DS_Store
 npm-debug.log
 version.js
@@ -15,3 +17,9 @@ proxyAuth.json
 /terriajs.pid
 /error.log
 /output.log
+/terriajs.pid
+/error.log
+/output.log
+
+# added by GitSavvy
+/wwwroot/editor/

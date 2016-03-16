@@ -10,7 +10,7 @@ var configuration = {
     terriaBaseUrl: 'build/TerriaJS',
     cesiumBaseUrl: undefined, // use default
     bingMapsKey: undefined, // use Cesium key
-    proxyBaseUrl: '/proxy/',
+    proxyBaseUrl: 'proxy/',
     conversionServiceBaseUrl: 'convert',
     regionMappingDefinitionsUrl: 'data/regionMapping.json'
 };
@@ -27,8 +27,8 @@ var defined = require('terriajs-cesium/Source/Core/defined');
 var fs = require('fs');
 
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
-var TerriaViewer = require('terriajs/lib/ReactViews/TerriaViewer');
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
+var corsProxy = require('terriajs/lib/Core/corsProxy');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 
 var AddDataPanelViewModel = require('terriajs/lib/ViewModels/AddDataPanelViewModel');
@@ -63,12 +63,13 @@ var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateAppli
 var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
 
-var BaseMapViewModel = require('terriajs/lib/ViewModels/BaseMapViewModel');
+// Not used until custom AREMI maps are below
+//var BaseMapViewModel = require('terriajs/lib/ViewModels/BaseMapViewModel');
 var Terria = require('terriajs/lib/Models/Terria');
+var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
 var registerCustomComponentTypes = require('terriajs/lib/Models/registerCustomComponentTypes');
 var raiseErrorToUser = require('terriajs/lib/Models/raiseErrorToUser');
-var WebMapServiceCatalogItem = require('terriajs/lib/Models/WebMapServiceCatalogItem');
 var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
 var GoogleUrlShortener = require('terriajs/lib/Models/GoogleUrlShortener');
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
@@ -79,6 +80,12 @@ var TerriaViewer = require('terriajs/lib/ReactViews/TerriaViewer');
 var corsProxy = require('terriajs/lib/Core/corsProxy');
 var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
 
+
+// Configure the base URL for the proxy service used to work around CORS restrictions.
+corsProxy.baseProxyUrl = configuration.proxyBaseUrl;
+
+// Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
+OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
 
 // Configure the base URL for the proxy service used to work around CORS restrictions.
 corsProxy.baseProxyUrl = configuration.proxyBaseUrl;
@@ -109,6 +116,10 @@ var terria = new Terria({
     regionMappingDefinitionsUrl: configuration.regionMappingDefinitionsUrl,
     analytics: new GoogleAnalytics()
 });
+
+
+// We'll put the entire user interface into a DOM element called 'ui'.
+var ui = document.getElementById('ui');
 
 // This is temporary
 var welcome = '<h3> Welcome to AREMI </h3> <p> AREMI is a website for map-based access to Australian spatial data relevant to the Renewable Energy industry - with a focus on Developers, Financiers, and Policy Makers. It is funded by the <a href="#">Australian Renewable Energy Agency</a> and developed by NICTA in partnership with the <a href="#">Clean Energy Council</a> with hosting being provided by <a href="#">Geoscience Australia</a>.</p><div class="getting-started"> <h4> Getting Started</h4> <div class="row"> <div class="col col-6 getting-started--alpha"><figure><img src="./images/solar.png"><figcaption>Solar</figcaption></figure></div> <div class="col col-6 getting-started--beta"><figure><img src="./images/wind.png"><figcaption>Wind</figcaption></figure></div></div>';
@@ -151,9 +162,8 @@ terria.start({
         var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
 
         var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
-        selectBaseMap(terria, allBaseMaps, 'Bing Maps Aerial with Labels', true);
+        selectBaseMap(terria, allBaseMaps, 'Positron (Light)', true);
 
-        terriaViewer.updateBaseMap();
 
         // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
         // updateApplicationOnHashChange(terria, window);

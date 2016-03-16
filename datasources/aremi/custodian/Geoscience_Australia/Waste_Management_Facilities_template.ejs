@@ -1,0 +1,30 @@
+<h3>{{NAME}}: {{FEATURETYPE}}</h3>
+<div style='float: right;'>
+Address:<br>
+<strong>
+    {{SITEADDRESS}}<br>
+    {{SITESUBURB}}<br>
+    {{STATE}}, {{POSTCODE}}<br>
+</strong>
+</div>
+<h4>{{OWNER}}</h4>
+{{#OPERATOR}}Operated by: <strong>{{.}}</strong><br>{{/OPERATOR}}
+
+<br>
+<strong>Status</strong><br>
+<table>
+    <thead>
+        <tr>
+            <th><strong>Landfil</strong></th>
+            <th><strong>Processing</strong></th>
+            <th><strong>Transfer Station</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{LANDFILL}}</td>
+            <td>{{REPROCESSING}}</td>
+            <td>{{TRANSFERSTATION}}</td>
+        </tr>
+    </tbody>
+</table>

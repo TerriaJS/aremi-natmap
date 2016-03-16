@@ -1,10 +1,8 @@
 {
     "proxyDomains" : [
-        "nci.org.au",
         "environment.gov.au",
         "services.thelist.tas.gov.au",
         "aemo.com.au",
-        "nci.org.au",
         "landgate.wa.gov.au",
         "bom.gov.au",
         "aurin.org.au",
@@ -22,6 +20,9 @@
         "proxy/_60s/http://static.aremi.nicta.com.au/init2.json"
     ],
     "parameters": {
+        "corsProxyBaseUrl": "proxy/",
+        "conversionServiceBaseUrl": "convert/",
+        "proj4ServiceBaseUrl": "proj4/",
         "bingMapsKey": null,
         "googleUrlShortenerKey": "AIzaSyDtUfMZKSUTLhHUGt8Jk6cTGNHAADx0xy8",
         "googleAnalyticsKey": "UA-61302891-1",

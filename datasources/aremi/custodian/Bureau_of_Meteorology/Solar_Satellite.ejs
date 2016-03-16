@@ -1,0 +1,33 @@
+{
+  "id": "31cf8abc",
+  "name": "Solar Satellite DNI - 2014",
+  "layers": "Solar_Satellite_DNI_2014",
+  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/bom/wms",
+  "type": "wms",
+  "maxRefreshIntervals":"9000",
+  "featureInfoTemplate": {
+    "name":"{{GRAY_INDEX}} W/m2",
+    "template":"DNI: <strong>{{GRAY_INDEX}} W/m&#178;</strong>"
+  },
+  "dataCustodian": "<% include Solar_Satellite-custodian %>",
+  "info": [
+    {
+      "name": "Disclaimer",
+      "content": "<% include BoM_Disclaimer %>"
+    },
+    {
+      "name": "Source Data",
+      "content": "<% include Solar_Satellite-sourceData %>"
+    },
+    {
+      "name": "Updates",
+      "content": "No updates to the Australian Hourly Solar Irradiance Gridded Data are currently planned."
+    },
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "<% include Solar_Satellite-licensing %>"
+    },
+  ],
+  <% include ../../common/standard_properties %>,
+  <% include ../../common/home_camera_rectangle %>
+}

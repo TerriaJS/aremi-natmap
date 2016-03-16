@@ -20,6 +20,5 @@ tar czf ${TARGET} \
   node_modules \
   wwwroot \
   run_server.sh \
-  server.js \
-  proxyAuth.json \
+  stop_server.sh \
 && echo && echo "Finished package: ${TARGET}"

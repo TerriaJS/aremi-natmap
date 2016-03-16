@@ -68,13 +68,16 @@
           "type": "group",
           "items": [
             <% include custodian/Bureau_of_Meteorology/Solar_Climatology %>,
+            <% include custodian/Bureau_of_Meteorology/Solar_Satellite %>,
             <% include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>
           ]
         },
         {
-          "name": "Wind (coming soon)",
+          "name": "Wind",
           "type": "group",
-          "items": []
+          "items": [
+            <% include custodian/DNVGL/Wind %>,
+          ]
         },
         {
           "name": "Bioenergy",
@@ -112,6 +115,7 @@
       "type": "group",
       "items": [
         <% include custodian/Geoscience_Australia/Infrastructure_layers %>,
+        <% include custodian/Geoscience_Australia/Major_Ports %>,
         <% include custodian/Geoscience_Australia/Pipelines %>,
         {
           "name": "Communications",
@@ -137,15 +141,17 @@
         {
           "name": "Cadastre and Land Tenure",
           "type": "group",
+          "preserveOrder": true,
           "items": [
-            <% include custodian/Landgate/Cadastre %>,
-            <% include custodian/Land_and_Property_Information_NSW/Cadastre %>,
-            <% include custodian/Land_Information_System_Tasmania/Cadastral_Parcels %>,
+            <% include custodian/Geoscience_Australia/Cadastral_Parcels %>,
+            <% include custodian/Geoscience_Australia/Land_Tenure %>,
             {
-              "name": "Northern Australia",
+              "name": "By State",
               "type": "group",
               "items": [
-                <% include custodian/Geoscience_Australia/Northern_Australia_Land_Tenure %>,
+                <% include custodian/Landgate/Cadastre %>,
+                <% include custodian/Land_and_Property_Information_NSW/Cadastre %>,
+                <% include custodian/Land_Information_System_Tasmania/Cadastral_Parcels %>,
               ]
             }
           ]
