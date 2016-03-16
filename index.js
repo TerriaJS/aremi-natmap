@@ -27,7 +27,7 @@ var defined = require('terriajs-cesium/Source/Core/defined');
 var fs = require('fs');
 
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
-var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
+var TerriaViewer = require('terriajs/lib/ReactViews/TerriaViewer');
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 
