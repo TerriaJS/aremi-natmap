@@ -1,37 +1,36 @@
-<h4>{{Name}}</h4>
-<h5>{{Network}}</h5>
+<div class='feature-info-panel-section-content-group'>
 
-Annual_deferral: <strong>{{Annual_deferral}}</strong><br/>
-Asset_name: <strong>{{Asset_name}}</strong><br/>
-Asset_type: <strong>{{Asset_type}}</strong><br/>
-Available_DM_perc: <strong>{{Available_DM_perc}}</strong><br/>
-Average_demand_growth: <strong>{{Average_demand_growth}}</strong><br/>
-Check: <strong>{{Check}}</strong><br/>
-Constraint_season: <strong>{{Constraint_season}}</strong><br/>
-Deferrable_investment: <strong>{{Deferrable_investment}}</strong><br/>
-Investment_year: <strong>{{Investment_year}}</strong><br/>
-Link_to_download: <a href='{{Link_to_download}}'>Download</a></strong><br/>
-NSP_info_link: <a href='{{NSP_info_link}}'>Download</a></strong><br/>
-Name: <strong>{{Name}}</strong><br/>
-Network: <strong>{{Network}}</strong><br/>
-Reactive_support: <strong>{{Reactive_support}}</strong><br/>
-Total_investment: <strong>{{Total_investment}}</strong><br/>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Network                             </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Network}}               </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Asset name                          </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Asset_name}}            </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Asset type                          </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Asset_type}}            </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Annual deferral pool (m$/yr)        </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Annual_deferral}}       </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>% Available to DM providers (%)     </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Available_DM_perc}}     </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Investment year                     </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Investment_year}}       </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Total investment value (m$)         </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Total_investment}}      </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Deferrable investment (m$)          </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Deferrable_investment}} </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Constraint season(s)                </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Constraint_season}}     </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Average demand growth rate (MVA/yr) </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Average_demand_growth}} </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Reactive support requirements       </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Reactive_support}}      </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Notes                               </td> <td class='feature-info-panel-section-content-kv-table-value'>                           </td> </tr></tbody></table>
+<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>                                    </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Check}}                 </td> </tr></tbody></table>
 
-<table>
-    <thead>
-        <tr style='font-weight: bold'>
-            <th>Year</th>
-            <th align='right'>ADV</th>
-            <th align='right'>Network Support</th>
-        </tr>
-    </thead>
+<table class='feature-info-panel-section-pivot-table'>
     <tbody>
+        <tr>
+            <td>Year</td>
+            <td>ADV ($/kVAyr)</td>
+            <td>Network Support (MVA)</td>
+        </tr>
 {{#adv}}
         <tr>
             <td>{{Year}}</td>
-            <td align='right'>{{ADV}}</td>
-            <td align='right'>{{Network_support}}</td>
+            <td>{{ADV}}</td>
+            <td>{{Network_support}}</td>
         </tr>
 {{/adv}}
     </tbody>
 </table>
+</div>
+
+<a href='{{NSP_info_link}}'>Download</a><br>
+<a href='{{Link_to_download}}'>Download</a>
