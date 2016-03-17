@@ -1,0 +1,29 @@
+<h4>{{Name}}</h4>
+<h5>{{Network}}</h5>
+
+Asset_type: <strong>{{Asset_type}}</strong><br/>
+Average_demand_growth: <strong>{{Average_demand_growth}}</strong><br/>
+Constraint_season: <strong>{{Constraint_season}}</strong><br/>
+Link_to_download: <strong><a href='{{Link_to_download}}'>Download</a></strong><br/>
+NSP_info_link: <strong><a href='{{NSP_info_link}}'>Download</a></strong><br/>
+Name: <strong>{{Name}}</strong><br/>
+Network: <strong>{{Network}}</strong><br/>
+Proposed_investment_year: <strong>{{Proposed_investment_year: }}</strong><br/>
+Short_name: <strong>{{Short_name}}</strong><br/>
+
+<table>
+    <thead>
+        <tr style='font-weight: bold'>
+            <th>Year</th>
+            <th align='right'>Available Capacity</th>
+        </tr>
+    </thead>
+    <tbody>
+{{#availcapinfo}}
+        <tr>
+            <td>{{Year}}</td>
+            <td align='right'>{{Availcap}}</td>
+        </tr>
+{{/availcapinfo}}
+    </tbody>
+</table>

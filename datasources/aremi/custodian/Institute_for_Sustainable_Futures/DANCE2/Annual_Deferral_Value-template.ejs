@@ -1,0 +1,37 @@
+<h4>{{Name}}</h4>
+<h5>{{Network}}</h5>
+
+Annual_deferral: <strong>{{Annual_deferral}}</strong><br/>
+Asset_name: <strong>{{Asset_name}}</strong><br/>
+Asset_type: <strong>{{Asset_type}}</strong><br/>
+Available_DM_perc: <strong>{{Available_DM_perc}}</strong><br/>
+Average_demand_growth: <strong>{{Average_demand_growth}}</strong><br/>
+Check: <strong>{{Check}}</strong><br/>
+Constraint_season: <strong>{{Constraint_season}}</strong><br/>
+Deferrable_investment: <strong>{{Deferrable_investment}}</strong><br/>
+Investment_year: <strong>{{Investment_year}}</strong><br/>
+Link_to_download: <a href='{{Link_to_download}}'>Download</a></strong><br/>
+NSP_info_link: <a href='{{NSP_info_link}}'>Download</a></strong><br/>
+Name: <strong>{{Name}}</strong><br/>
+Network: <strong>{{Network}}</strong><br/>
+Reactive_support: <strong>{{Reactive_support}}</strong><br/>
+Total_investment: <strong>{{Total_investment}}</strong><br/>
+
+<table>
+    <thead>
+        <tr style='font-weight: bold'>
+            <th>Year</th>
+            <th align='right'>ADV</th>
+            <th align='right'>Network Support</th>
+        </tr>
+    </thead>
+    <tbody>
+{{#adv}}
+        <tr>
+            <td>{{Year}}</td>
+            <td align='right'>{{ADV}}</td>
+            <td align='right'>{{Network_support}}</td>
+        </tr>
+{{/adv}}
+    </tbody>
+</table>
