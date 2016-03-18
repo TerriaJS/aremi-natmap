@@ -1,38 +1,49 @@
-<div class='feature-info-panel-section-content-group'>
+<style type='text/css' media='screen'>
+    .feature-info-panel-section-content-kv-table tr td:nth-child(1){
+        text-align: left;
+        font-weight: bold;
+        vertical-align: middle;
+    }
+    .feature-info-panel-section-content-kv-table tr td:nth-child(2){
+        text-align: right;
+        max-width: 300px;
+        vertical-align: middle;
+        padding-right: 10px;
+    }
+</style>
 
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Short name                                              </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Short_name}}                                  </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Asset_type                                              </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Asset_type}}                                  </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Network                                                 </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Network}}                                     </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Augmentation investment (m$)                            </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Augmentation}}                                </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Replacement/refurbishment investment (m$)               </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Replacement/refurbishment}}                   </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Connections investment (m$)                             </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Connections}}                                 </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>OPEX investment (m$)                                    </td> <td class='feature-info-panel-section-content-kv-table-value'> {{OPEX}}                                        </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Other investment (m$)                                   </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Other investment}}                            </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Total investment (m$)                                   </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Total_investment}}                            </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Deferrable amount (m$)                                  </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Deferrable_amount}}                           </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Proposed investment year                                </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Proposed_investment_year}}                    </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Constraint season(s)                                    </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Constraint_season}}                           </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Note                                                    </td> <td class='feature-info-panel-section-content-kv-table-value'>                                                 </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>                                                        </td> <td class='feature-info-panel-section-content-kv-table-value'> {{probtext}}                                    </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Annual deferral pool (m$/yr)                            </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Annual_deferral}}                             </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Percent avail. to DM providers (%)                      </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Percent_avail_to_DM}}                         </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Potential NPV of 10yr deferral in yr of investment (m$) </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Potential_NPV}}                               </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Average demand growth rate (MVA/yr)                     </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Average_demand_growth}}                       </td> </tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Reactive support requirements                           </td> <td class='feature-info-panel-section-content-kv-table-value'> {{Reactive_support}}                            </td> </tr></tbody></table>
+<div class='feature-info-panel-section-content-group feature-info-panel-section-content-kv-table'>
+<table><tr><td>Short name                                             </td><td>{{Short_name}}               </td> </tr></table>
+<table><tr><td>Asset_type                                             </td><td>{{Asset_type}}               </td> </tr></table>
+<table><tr><td>Network                                                </td><td>{{Network}}                  </td> </tr></table>
+<table><tr><td>Augmentation investment (m$)                           </td><td>{{Augmentation}}             </td> </tr></table>
+<table><tr><td>Replacement/refurbishment investment (m$)              </td><td>{{Replacement/refurbishment}}</td> </tr></table>
+<table><tr><td>Connections investment (m$)                            </td><td>{{Connections}}              </td> </tr></table>
+<table><tr><td>OPEX investment (m$)                                   </td><td>{{OPEX}}                     </td> </tr></table>
+<table><tr><td>Other investment (m$)                                  </td><td>{{Other investment}}         </td> </tr></table>
+<table><tr><td>Total investment (m$)                                  </td><td>{{Total_investment}}         </td> </tr></table>
+<table><tr><td>Deferrable amount (m$)                                 </td><td>{{Deferrable_amount}}        </td> </tr></table>
+<table><tr><td>Proposed investment year                               </td><td>{{Proposed_investment_year}} </td> </tr></table>
+<table><tr><td>Constraint season(s)                                   </td><td>{{Constraint_season}}        </td> </tr></table>
+<table><tr><td>Note                                                   </td><td>                             </td> </tr></table>
+<table><tr><td>                                                       </td><td>{{probtext}}                 </td> </tr></table>
+<table><tr><td>Annual deferral pool (m$/yr)                           </td><td>{{Annual_deferral}}          </td> </tr></table>
+<table><tr><td>Percent avail. to DM providers (%)                     </td><td>{{Percent_avail_to_DM}}      </td> </tr></table>
+<table><tr><td>Potential NPV of 10yr deferral in yr of investment (m$)</td><td>{{Potential_NPV}}            </td> </tr></table>
+<table><tr><td>Average demand growth rate (MVA/yr)                    </td><td>{{Average_demand_growth}}    </td> </tr></table>
+<table><tr><td>Reactive support requirements                          </td><td>{{Reactive_support}}         </td> </tr></table>
 
 <table class='feature-info-panel-section-pivot-table'>
-    <tbody>
-        <tr>
-            <td>Year</td>
-            <td>Network Support</td>
-        </tr>
+    <tr>
+        <td>Year</td>
+        <td>Network Support</td>
+    </tr>
 {{#Inv}}
-        <tr>
-            <td>{{Year}}</td>
-            <td>{{Network_support}}</td>
-        </tr>
+    <tr>
+        <td>{{Year}}</td>
+        <td>{{Network_support}}</td>
+    </tr>
 {{/Inv}}
-    </tbody>
 </table>
 
 <a href='{{NSP_info_link}}'>NSP demand management information</a><br>

@@ -1,18 +1,34 @@
-<div class='feature-info-panel-section-content-group'>
+<style type='text/css' media='screen'>
+    .feature-info-panel-section-content-kv-table tr td:nth-child(1){
+        text-align: left;
+        font-weight: bold;
+        vertical-align: middle;
+    }
+    .feature-info-panel-section-content-kv-table tr td:nth-child(2){
+        text-align: right;
+        max-width: 300px;
+        vertical-align: middle;
+        padding-right: 10px;
+    }
+</style>
 
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Short name               </td><td class='feature-info-panel-section-content-kv-table-value'>{{Short_name}}</td></tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Asset type               </td><td class='feature-info-panel-section-content-kv-table-value'>{{Asset_type}}</td></tr></tbody></table>
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Network                  </td><td class='feature-info-panel-section-content-kv-table-value'>{{Network}}</td></tr></tbody></table>
+<div class='feature-info-panel-section-content-group feature-info-panel-section-content-kv-table'>
+
+
+
+<table><tr><td>Short name                          </td> <td>{{Short_name}}                 </td> </tr></table>
+<table><tr><td>Asset type                          </td> <td>{{Asset_type}}                 </td> </tr></table>
+<table><tr><td>Network                             </td> <td>{{Network}}                    </td> </tr></table>
 {{#Constraint_season}}
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Constraint season(s)        </td><td class='feature-info-panel-section-content-kv-table-value'>{{Constraint_season}}</td></tr></tbody></table>
+<table><tr><td>Constraint season(s)                </td> <td>{{Constraint_season}}          </td> </tr></table>
 {{/Constraint_season}}
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Average demand growth rate (MVA/yr)</td><td class='feature-info-panel-section-content-kv-table-value'>{{Average_demand_growth}}</td></tr></tbody></table>
+<table><tr><td>Average demand growth rate (MVA/yr) </td> <td>{{Average_demand_growth}}      </td> </tr></table>
 {{#Proposed_investment_year: }}
-<table class='feature-info-panel-section-content-kv-table'><tbody><tr><td class='feature-info-panel-section-content-kv-table-key'>Proposed investment year </td><td class='feature-info-panel-section-content-kv-table-value'>{{Proposed_investment_year: }}</td></tr></tbody></table>
+<table><tr><td>Proposed investment year            </td> <td>{{Proposed_investment_year: }} </td> </tr></table>
 {{/Proposed_investment_year: }}
 
 <table class='feature-info-panel-section-pivot-table'>
-    <tbody>
+
         <tr>
             <td>Year</td>
             <td>Available Capacity</td>
@@ -23,8 +39,20 @@
             <td>{{Availcap}}</td>
         </tr>
 {{/availcapinfo}}
-    </tbody>
+
 </table>
+<table><tr><td>Note</td><td></td></tr></table>
+<table>
+    <tr>
+        <td></td>
+        <td>
+            Depending on NSP network security standards the Available Capacity may or may not take account of potential
+            load transfers to delay constraints. Consult with distributors for further details
+        </td>
+    </tr>
+</table>
+
+
 <a href='{{NSP_info_link}}'>NSP demand management information</a><br>
 <a href='{{Link_to_download}}'>Download data in spreadsheet format</a>
 </div>
