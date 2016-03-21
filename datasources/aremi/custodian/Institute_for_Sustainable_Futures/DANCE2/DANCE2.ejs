@@ -64,6 +64,10 @@
   "url": "datasets/dance2/Avail_Cap_Hourly.czml",
   "legendUrl": "datasets/dance2/Availcap_Hourly.png",
   "type": "czml",
+  "featureInfoTemplate": {
+    "name": "{{{Name}}}",
+    "template": "<%- include Peak_Day_Available_Capacity-template %>"
+  },
   "info" :[
     {
       "name": "Description of Data",
