@@ -68,6 +68,7 @@
           "type": "group",
           "items": [
             <% include custodian/Bureau_of_Meteorology/Solar_Climatology %>,
+            <% var sshoId = "5638a250" %>
             <% include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>
           ]
         },
@@ -96,6 +97,7 @@
           "name": "Hydro",
           "type": "group",
           "items": [
+            <% var catchmentId = "54a55472" %>
             <% include custodian/Bureau_of_Meteorology/Catchment %>,
             <% include custodian/Geoscience_Australia/Hydrography %>,
           ]
@@ -197,6 +199,7 @@
             },
             <% include custodian/Geoscience_Australia/Water_layers %>,
             <% include custodian/Bureau_of_Meteorology/Water_layers %>,
+            <% var catchmentId = "d3a111dc" %>
             <% include custodian/Bureau_of_Meteorology/Catchment %>,
           ]
         }
@@ -247,6 +250,7 @@
       "name": "Weather",
       "type": "group",
       "items": [
+        <% var sshoId = "54a554d6" %>
         <% include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>
       ]
     }
