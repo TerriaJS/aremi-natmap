@@ -27,6 +27,7 @@ var defined = require('terriajs-cesium/Source/Core/defined');
 var fs = require('fs');
 
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
+var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
 var corsProxy = require('terriajs/lib/Core/corsProxy');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
@@ -75,8 +76,6 @@ var GoogleUrlShortener = require('terriajs/lib/Models/GoogleUrlShortener');
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
 var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
-
-var TerriaViewer = require('terriajs/lib/ReactViews/TerriaViewer');
 var corsProxy = require('terriajs/lib/Core/corsProxy');
 var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
 
@@ -102,9 +101,7 @@ registerKnockoutBindings();
 // the code in the registerCatalogMembers function here instead.
 registerCatalogMembers();
 
-// Register custom components in the core TerriaJS.  If you only want to register a subset of them, or to add your own,
-// insert your custom version of the code in the registerCustomComponentTypes function here instead.
-registerCustomComponentTypes();
+
 
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
 
@@ -117,12 +114,16 @@ var terria = new Terria({
     analytics: new GoogleAnalytics()
 });
 
+// Register custom components in the core TerriaJS.  If you only want to register a subset of them, or to add your own,
+// insert your custom version of the code in the registerCustomComponentTypes function here instead.
+registerCustomComponentTypes(terria);
+
 
 // We'll put the entire user interface into a DOM element called 'ui'.
 var ui = document.getElementById('ui');
 
 // This is temporary
-var welcome = '<h3> Welcome to AREMI </h3> <p> AREMI is a website for map-based access to Australian spatial data relevant to the Renewable Energy industry - with a focus on Developers, Financiers, and Policy Makers. It is funded by the <a href="#">Australian Renewable Energy Agency</a> and developed by NICTA in partnership with the <a href="#">Clean Energy Council</a> with hosting being provided by <a href="#">Geoscience Australia</a>.</p><div class="getting-started"> <h4> Getting Started</h4> <div class="row"> <div class="col col-6 getting-started--alpha"><figure><img src="./images/solar.png"><figcaption>Solar</figcaption></figure></div> <div class="col col-6 getting-started--beta"><figure><img src="./images/wind.png"><figcaption>Wind</figcaption></figure></div></div>';
+var welcome = 'welcome text';
 
 terria.welcome = function welcomeText() { return {__html: welcome}; };
 

@@ -2,13 +2,13 @@
 
 import arrayContains from 'terriajs/lib/Core/arrayContains';
 import Branding from 'terriajs/lib/ReactViews/Branding.jsx';
-import ChartPanel from 'terriajs/lib/ReactViews/ChartPanel.jsx';
+import ChartPanel from 'terriajs/lib/ReactViews/Chart/ChartPanel.jsx';
 import DistanceLegend from 'terriajs/lib/ReactViews/DistanceLegend.jsx';
-import FeatureInfoPanel from 'terriajs/lib/ReactViews/FeatureInfoPanel.jsx';
+import FeatureInfoPanel from 'terriajs/lib/ReactViews/FeatureInfo/FeatureInfoPanel.jsx';
 import knockout from 'terriajs-cesium/Source/ThirdParty/knockout';
 import LocationBar from 'terriajs/lib/ReactViews/LocationBar.jsx';
 import MapNavigation from 'terriajs/lib/ReactViews/MapNavigation.jsx';
-import MobileHeader from 'terriajs/lib/ReactViews/MobileHeader.jsx';
+import MobileHeader from 'terriajs/lib/ReactViews/Mobile/MobileHeader.jsx';
 import ModalWindow from 'terriajs/lib/ReactViews/ModalWindow.jsx';
 import Notification from 'terriajs/lib/ReactViews/Notification.jsx';
 import ObserveModelMixin from 'terriajs/lib/ReactViews/ObserveModelMixin';
@@ -154,6 +154,7 @@ var UserInterface = React.createClass({
                 </div>
                 <ProgressBar terria={terria} />
                 <FeatureInfoPanel terria={terria}
+                                  viewState={this.viewState}
                                   isVisible={this.state.featureInfoPanelIsVisible}
                                   onClose={this.closeFeatureInfoPanel}
                                   isCollapsed ={this.state.featureInfoPanelIsCollapsed}
@@ -164,6 +165,7 @@ var UserInterface = React.createClass({
                   <DistanceLegend terria={terria}/>
                 </div>
                 <ChartPanel terria={terria}
+                            viewState={this.viewState}
                             isVisible={this.state.featureInfoPanelIsVisible}
                             onClose={this.closeFeatureInfoPanel}
                             isCollapsed ={this.state.featureInfoPanelIsCollapsed}
