@@ -68,6 +68,7 @@
           "type": "group",
           "items": [
             <% include custodian/Bureau_of_Meteorology/Solar_Climatology %>,
+            <% include custodian/Bureau_of_Meteorology/Solar_Satellite %>,
             <% var sshoId = "5638a250" %>
             <% include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>
           ]
@@ -142,15 +143,17 @@
         {
           "name": "Cadastre and Land Tenure",
           "type": "group",
+          "preserveOrder": true,
           "items": [
-            <% include custodian/Landgate/Cadastre %>,
-            <% include custodian/Land_and_Property_Information_NSW/Cadastre %>,
-            <% include custodian/Land_Information_System_Tasmania/Cadastral_Parcels %>,
+            <% include custodian/Geoscience_Australia/Cadastral_Parcels %>,
+            <% include custodian/Geoscience_Australia/Land_Tenure %>,
             {
-              "name": "Northern Australia",
+              "name": "By State",
               "type": "group",
               "items": [
-                <% include custodian/Geoscience_Australia/Northern_Australia_Land_Tenure %>,
+                <% include custodian/Landgate/Cadastre %>,
+                <% include custodian/Land_and_Property_Information_NSW/Cadastre %>,
+                <% include custodian/Land_Information_System_Tasmania/Cadastral_Parcels %>,
               ]
             }
           ]

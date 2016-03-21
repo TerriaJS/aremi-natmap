@@ -1,7 +1,25 @@
 ### AREMI Changelog
 
 ### Version [NEXT]
+* Added the new experimental layer "Renewable Energy -> Solar -> Solar Satellite DNI - 2014" based on Bureau of Meteorology data.
+* Added the new layer "Boundaries -> Cadastre and Land Tenure -> Cadastral Parcels - PSMA" from Geoscience Australia.
+* Changed the "Boundaries -> Cadastre and Land Tenure -> Northern Australia" layers into a single "Boundaries -> Cadastre and Land Tenure -> Land Tenure - PSMA" hosted by Geoscience Australia that covers all of Australia.
 * Added a check to make sure all catalog items have ids specified on build.
+* Fixed missing links to GA ELVIS system in "Topography -> Elevation -> {LiDAR 5m DEM,LiDAR 25m DEM, SRTM 1 sec DEM image}".
+* Added feature info templates for:
+    - Elec. Inf
+        - Generation
+            - Live Power Generation layers
+            - Small Scale Installations layers
+        - Transmission
+            - Transmission Lines
+    - Renewable Energy
+        - Bioenergy
+            - Waste Management Fascilities
+    - Infrastructure
+        - Oil Pipelines
+        - Gas Pipelines
+
 
 #### Version 2016-02-23
 * Small improvements to the DNV GL Wind layers.
