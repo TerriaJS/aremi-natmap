@@ -29,7 +29,7 @@
     "supervisor": "^0.6.0",
     "terriajs": "git://github.com/TerriaJS/terriajs.git#newui",
     "yargs": "^3.8.0",
-    "terriajs-cesium": "1.15.6",
+    "terriajs-cesium": "1.19.1",
     "terriajs-server": "1.3.0"
   },
   "devDependencies": {
