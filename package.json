@@ -8,7 +8,7 @@
     "url": "http://github.com/NICTA/nationalmap"
   },
   "dependencies": {
-    "terriajs": "git+https://github.com/terriajs/terriajs.git#be753d6115340136937bf79cdeb3c21a091dbd79",
+    "terriajs": "git+https://github.com/terriajs/terriajs.git#jsonTreeview",
     "terriajs-server": "^1.4.0",
     "terriajs-cesium": "1.18.1"
   },
@@ -32,11 +32,12 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.4",
     "gulp-watch": "^4.2.4",
+    "karma": "^0.13.22",
     "less": "^2.5.0",
     "less-plugin-npm-import": "^2.0.0",
     "spawn-sync": "^1.0.11",
-    "terriajs-schema": "latest",
     "terriajs-catalog-editor": "^0.1.0",
+    "terriajs-schema": "latest",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "vinyl-transform": "^1.0.0",
