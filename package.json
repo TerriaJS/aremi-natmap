@@ -58,6 +58,7 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.4",
     "gulp-watch": "^4.2.4",
+    "jsx-control-statements": "^3.1.0",
     "kss": "^2.4.0",
     "less": "^2.5.0",
     "less-plugin-npm-import": "^2.0.0",
