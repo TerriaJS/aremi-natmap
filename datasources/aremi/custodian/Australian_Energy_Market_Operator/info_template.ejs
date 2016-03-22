@@ -31,6 +31,5 @@ Most recent output: <strong>{{Current Output (MW)}}MW</strong><br/>
 </small>
 <br>
 <div style='text-align: center'>
-  {{{Latest 24h generation}}}
-  <p>Download CSV: Last 24h {{{CSV for last 24h}}}, All {{{CSV for all data}}}</p>
+  <chart sources='http://services.aremi.nicta.com.au/aemo/v4/duidcsv/{{DUID}}?offset=1D,http://services.aremi.nicta.com.au/aemo/v4/duidcsv/{{DUID}}?offset=5D,http://services.aremi.nicta.com.au/aemo/v4/duidcsv/{{DUID}}?offset=30D,http://services.aremi.nicta.com.au/aemo/v4/duidcsv/{{DUID}}?offset=3M' source-names='1d,5d,30d,3m' preview-x-label='Last 24 hours' column-names='Time,Power Generation' column-units='Date,MW'></chart>
 </div>
