@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "comments": "Matching takes place in the order defined in this file. Place code matches before name matches, and smaller regions before larger ones.",
   "regionWmsMap": {
     "SA1": {
@@ -1326,6 +1325,5 @@
             ],
             "regionIdsFile": "data/regionids/region_map-FID_AUS_2011_AUST_AUS_CODE.json"
         }
->>>>>>> master
     }
 }
