@@ -25,6 +25,9 @@ var version = require('./version');
 var terriaOptions = {
     baseUrl: 'build/TerriaJS'
 };
+var configuration = {
+    bingMapsKey: undefined // use Cesium key
+};
 
 // Check browser compatibility early on.
 // A very old browser (e.g. Internet Explorer 8) will fail on requiring-in many of the modules below.
@@ -39,7 +42,6 @@ var fs = require('fs');
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
 var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
-var corsProxy = require('terriajs/lib/Core/corsProxy');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 
 var AddDataPanelViewModel = require('terriajs/lib/ViewModels/AddDataPanelViewModel');
@@ -74,10 +76,7 @@ var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateAppli
 var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
 
-// Not used until custom AREMI maps are below
-//var BaseMapViewModel = require('terriajs/lib/ViewModels/BaseMapViewModel');
 var Terria = require('terriajs/lib/Models/Terria');
-var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
 var raiseErrorToUser = require('terriajs/lib/Models/raiseErrorToUser');
 var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
@@ -89,12 +88,6 @@ var svgRelated = require('terriajs/lib/SvgPaths/svgRelated');
 var svgShare = require('terriajs/lib/SvgPaths/svgShare');
 var svgWorld = require('terriajs/lib/SvgPaths/svgWorld');
 
-// Configure the base URL for the proxy service used to work around CORS restrictions.
-corsProxy.baseProxyUrl = configuration.proxyBaseUrl;
-
-// Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
-OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
-
 // Register custom Knockout.js bindings.  If you're not using the TerriaJS user interface, you can remove this.
 registerKnockoutBindings();
 
@@ -103,22 +96,13 @@ registerKnockoutBindings();
 // the code in the registerCatalogMembers function here instead.
 registerCatalogMembers();
 
+terriaOptions.analytics = new GoogleAnalytics();
+
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
-var terria = new Terria({
-    appName: 'AREMI',
-    supportEmail: 'aremi@nicta.com.au',
-    baseUrl: configuration.terriaBaseUrl,
-    cesiumBaseUrl: configuration.cesiumBaseUrl,
-    regionMappingDefinitionsUrl: configuration.regionMappingDefinitionsUrl,
-    analytics: new GoogleAnalytics()
-});
-
-// We'll put the entire user interface into a DOM element called 'ui'.
-var ui = document.getElementById('ui');
-
+var terria = new Terria(terriaOptions);
 
 terria.error.addEventListener(function(e) {
-    PopupMessageViewModel.open(ui, {
+    PopupMessageViewModel.open('ui', {
         title: e.title,
         message: e.message
     });
@@ -153,39 +137,7 @@ terria.start({
     var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
     var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
 
-    /* turn off the custom AREMI maps for now
-    var aremiBaseMaps = [];
-
-    var osmSimpleLight = new WebMapServiceCatalogItem(terria);
-    osmSimpleLight.name = 'OpenStreeMaps Light (BETA)';
-    osmSimpleLight.url = 'https://maps.aurin.org.au/cgi-bin/tilecache.cgi';
-    osmSimpleLight.layers = 'austatesgrey';
-    osmSimpleLight.getFeatureInfoFormats = [];
-    osmSimpleLight.parameters = {
-        tiled: true
-    };
-    osmSimpleLight.opacity = 1.0;
-    aremiBaseMaps.push(new BaseMapViewModel({
-        image: 'images/osmLight.png',
-        catalogItem: osmSimpleLight,
-    }));
-
-    var osmSimpleDark = new WebMapServiceCatalogItem(terria);
-    osmSimpleDark.name = 'OpenStreeMaps Dark (BETA)';
-    osmSimpleDark.url = 'https://maps.aurin.org.au/cgi-bin/tilecache.cgi';
-    osmSimpleDark.layers = 'austatesdark';
-    osmSimpleDark.getFeatureInfoFormats = [];
-    osmSimpleDark.parameters = {
-        tiled: true
-    };
-    osmSimpleDark.opacity = 1.0;
-    aremiBaseMaps.push(new BaseMapViewModel({
-        image: 'images/osmDark.png',
-        catalogItem: osmSimpleDark,
-    }));
-    */
-
-    var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);//.concat(aremiBaseMaps);
+    var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
     selectBaseMap(terria, allBaseMaps, 'Positron (Light)');
 
     // Create the Settings / Map panel.
@@ -201,7 +153,7 @@ terria.start({
             '<a target="_blank" href="http://terria.io"><img src="images/terria_logo.png" height="52" title="Version: {{ version }}" /></a>',
             ''
         ]);
-    brandBarElements = brandBarElements.map(function(s) { return s.replace(/\{\{\s*version\s*\}\}/, version);});
+    brandBarElements = brandBarElements.map(function(s) { return s.replace(/\{\{\s*version\s*\}\}/g, version);});
 
     // Create the brand bar.
     BrandBarViewModel.create({
