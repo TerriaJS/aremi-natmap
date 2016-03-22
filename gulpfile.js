@@ -22,6 +22,8 @@ var NpmImportPlugin = require('less-plugin-npm-import');
 var jsoncombine = require('gulp-jsoncombine');
 var ejs = require('ejs');
 var child_exec = require('child_process').exec;  // child_process is built in to node
+var generateSchema = require('generate-terriajs-schema');
+var validateSchema = require('terriajs-schema');
 
 var appJSName = 'nationalmap.js';
 var appCssName = 'nationalmap.css';
@@ -72,7 +74,13 @@ gulp.task('release-specs', ['prepare'], function() {
 
 // Generate new schema for editor, and copy it over whatever version came with editor.
 gulp.task('make-editor-schema', ['copy-editor'], function(done) {
-    child_exec('node node_modules/.bin/gen-schema --source node_modules/terriajs --dest wwwroot/editor --noversionsubdir', undefined, done);
+    generateSchema({
+        source: 'node_modules/terriajs',
+        dest: 'wwwroot/editor',
+        noversionsubdir: true,
+        editor: true,
+        quiet: true
+    }).then(done);
 });
 
 gulp.task('copy-editor', function() {
@@ -80,7 +88,29 @@ gulp.task('copy-editor', function() {
         .pipe(gulp.dest('./wwwroot/editor'));
 });
 
-gulp.task('release', ['build-css', 'merge-datasources', 'merge-datasources-aremi', 'release-app', 'release-specs', 'make-editor-schema']);
+gulp.task('release', ['build-css', 'merge-datasources', 'merge-datasources-aremi', 'release-app', 'release-specs', 'make-editor-schema', 'validate']);
+
+// Generate new schema for validator, and copy it over whatever version came with validator.
+gulp.task('make-validator-schema', function(done) {
+    generateSchema({
+        source: 'node_modules/terriajs',
+        dest: 'node_modules/terriajs-schema/schema',
+        quiet: true
+    }).then(done);
+});
+
+gulp.task('validate', ['merge-datasources', 'make-validator-schema'], function() {
+    return validateSchema({
+        terriajsdir: 'node_modules/terriajs',
+        _: glob.sync(['datasources/00_National_Data_Sets/*.json','datasources/*.json', '!datasources/00_National_Data_Sets.json', 'wwwroot/init/*.json', '!wwwroot/init/nm.json'])
+    }).then(function(result) {
+        if (result && !watching) {
+            // We should abort here. But currently we can't resolve the situation where a data source legitimately
+            // uses some new feature not present in the latest published TerriaJS.
+            //process.exit(result);
+        }
+    });
+});
 
 gulp.task('watch-app', ['prepare'], function() {
     return watch(appJSName, appEntryJSName, false);

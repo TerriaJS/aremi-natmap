@@ -22,13 +22,8 @@
 
 var version = require('./version');
 
-var configuration = {
-    terriaBaseUrl: 'build/TerriaJS',
-    cesiumBaseUrl: undefined, // use default
-    bingMapsKey: undefined, // use Cesium key
-    proxyBaseUrl: 'proxy/',
-    conversionServiceBaseUrl: 'convert',
-    regionMappingDefinitionsUrl: 'data/regionMapping.json'
+var terriaOptions = {
+    baseUrl: 'build/TerriaJS'
 };
 
 // Check browser compatibility early on.
@@ -86,6 +81,7 @@ var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
 var raiseErrorToUser = require('terriajs/lib/Models/raiseErrorToUser');
 var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
+var defaultValue = require('terriajs-cesium/Source/Core/defaultValue');
 
 var svgInfo = require('terriajs/lib/SvgPaths/svgInfo');
 var svgPlus = require('terriajs/lib/SvgPaths/svgPlus');
@@ -147,13 +143,11 @@ terria.start({
     updateApplicationOnMessageFromParentWindow(terria, window);
 
     // Create the map/globe.
-    TerriaViewer.create(terria, {
-        developerAttribution: {
-            text: 'NICTA',
-            link: 'http://www.nicta.com.au'
-        }
-    });
+    TerriaViewer.create(terria, { developerAttribution: terria.configParameters.developerAttribution });
     terria.viewerMode = ViewerMode.CesiumEllipsoid;
+
+    // We'll put the entire user interface into a DOM element called 'ui'.
+    var ui = document.getElementById('ui');
 
     // Create the various base map options.
     var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
@@ -202,21 +196,17 @@ terria.start({
         baseMaps: allBaseMaps
     });
 
+    var brandBarElements = defaultValue(terria.configParameters.brandBarElements, [
+            '',
+            '<a target="_blank" href="http://terria.io"><img src="images/terria_logo.png" height="52" title="Version: {{ version }}" /></a>',
+            ''
+        ]);
+    brandBarElements = brandBarElements.map(function(s) { return s.replace(/\{\{\s*version\s*\}\}/, version);});
+
     // Create the brand bar.
     BrandBarViewModel.create({
         container: ui,
-        elements: [
-            '<div class="ausglobe-title-aremi">\
-                <a href="http://arena.gov.au/" target="_blank"><img class="left"  src="images/ARENA-logo2.png" alt="Australian Renewable Energy Agency" /></a>\
-                <a href="https://www.nicta.com.au/" target="_blank"><img class="right" src="images/DATA61_CSIRO.png" alt="NICTA" width="55px" height="33px"/></a>\
-                <br/>\
-                <strong>Australian Renewable Energy</strong>\
-                <br/>\
-                <small>Mapping Infrastructure</small>\
-                <br/>\
-                <span><a target="_blank" href="https://github.com/NICTA/aremi-natmap/blob/master/Changelog.md#version-' + version + '">Version: ' + version + '</a></span>\
-            </div>'
-        ]
+        elements: brandBarElements
     });
 
     // Create the menu bar.
