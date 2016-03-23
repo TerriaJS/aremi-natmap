@@ -22,6 +22,8 @@ var NpmImportPlugin = require('less-plugin-npm-import');
 var jsoncombine = require('gulp-jsoncombine');
 var ejs = require('ejs');
 var child_exec = require('child_process').exec;  // child_process is built in to node
+var generateSchema = require('generate-terriajs-schema');
+var validateSchema = require('terriajs-schema');
 
 var appJSName = 'nationalmap.js';
 var appCssName = 'nationalmap.css';
@@ -72,7 +74,13 @@ gulp.task('release-specs', ['prepare'], function() {
 
 // Generate new schema for editor, and copy it over whatever version came with editor.
 gulp.task('make-editor-schema', ['copy-editor'], function(done) {
-    child_exec('node node_modules/.bin/gen-schema --source node_modules/terriajs --dest wwwroot/editor --noversionsubdir', undefined, done);
+    generateSchema({
+        source: 'node_modules/terriajs',
+        dest: 'wwwroot/editor',
+        noversionsubdir: true,
+        editor: true,
+        quiet: true
+    }).then(done);
 });
 
 gulp.task('copy-editor', function() {
@@ -80,7 +88,29 @@ gulp.task('copy-editor', function() {
         .pipe(gulp.dest('./wwwroot/editor'));
 });
 
-gulp.task('release', ['build-css', 'merge-datasources', 'merge-datasources-aremi', 'release-app', 'release-specs', 'make-editor-schema']);
+gulp.task('release', ['build-css', 'merge-datasources', 'merge-datasources-aremi', 'release-app', 'release-specs', 'make-editor-schema', 'validate']);
+
+// Generate new schema for validator, and copy it over whatever version came with validator.
+gulp.task('make-validator-schema', function(done) {
+    generateSchema({
+        source: 'node_modules/terriajs',
+        dest: 'node_modules/terriajs-schema/schema',
+        quiet: true
+    }).then(done);
+});
+
+gulp.task('validate', ['merge-datasources', 'make-validator-schema'], function() {
+    return validateSchema({
+        terriajsdir: 'node_modules/terriajs',
+        _: glob.sync(['datasources/00_National_Data_Sets/*.json','datasources/*.json', '!datasources/00_National_Data_Sets.json', 'wwwroot/init/*.json', '!wwwroot/init/nm.json'])
+    }).then(function(result) {
+        if (result && !watching) {
+            // We should abort here. But currently we can't resolve the situation where a data source legitimately
+            // uses some new feature not present in the latest published TerriaJS.
+            //process.exit(result);
+        }
+    });
+});
 
 gulp.task('watch-app', ['prepare'], function() {
     return watch(appJSName, appEntryJSName, false);
@@ -175,10 +205,23 @@ gulp.task('merge-datasources-aremi', function() {
     var noNewlines = result.replace(/(?:\r\n|\r|\n)/g, '');
 
     var jsDatasources = eval('('+noNewlines+')');
-    var badChildrenPaths = getChildrenWithNoIds(jsDatasources.catalog, '');
+    var noIdChildrenPaths = getChildrenWithNoIds(jsDatasources.catalog, '');
 
-    if (badChildrenPaths.length) {
-        console.error('Datasources have catalog items without ids: \n' + badChildrenPaths.join('\n'));
+    if (noIdChildrenPaths.length) {
+        console.error('Datasources have catalog items without ids: \n' + noIdChildrenPaths.join('\n'));
+        process.exit(1);
+    }
+
+    var idIndex = indexAgainstId(jsDatasources.catalog, '');
+    var duplicateIds = Object.keys(idIndex).filter(function(id) {
+        return idIndex[id].length > 1;
+    });
+
+    if (duplicateIds.length > 0) {
+        console.error('Datasources have duplicate ids for: ');
+        console.error(duplicateIds.reduce(function(soFar, id) {
+            return soFar + id + ': ' + JSON.stringify(idIndex[id]) + '\n';
+        }, ''));
         process.exit(1);
     }
 
@@ -202,6 +245,38 @@ function getChildrenWithNoIds(children, pathSoFar) {
             .concat(childIsInvalid ? [path] : [])
             .concat(getChildrenWithNoIds(child.items || [], path));
     }, []);
+}
+
+/**
+ * Recursively goes through a JSON catalog, indexing all the items, and all the items inside those items, in the form of
+ * the items' ids against an array of paths of items that had that id. E.g. { aergaerg: ['Group 1/Name, 'Group 1/Othername'].
+ *
+ * @param {Object[]} items The items to index
+ * @param {String} pathSoFar The path to append new paths to
+ * @returns {Object} An index of ids to paths.
+ */
+function indexAgainstId(items, pathSoFar) {
+    return items.reduce(function(soFar, child) {
+        var path = pathSoFar + '/' + (child.name || '[no name]');
+
+        if (child.id) {
+            if (!soFar[child.id]) {
+                soFar[child.id] = [];
+            }
+            soFar[child.id].push(path);
+        }
+
+        return combine(soFar, indexAgainstId(child.items || [], path));
+    }, {});
+}
+
+/** Combines two objects together - assumes all values in the object are arrays. If both objects have a value for a
+ * certain key, then the result object with have both of those values concatenated together */
+function combine(object1, object2) {
+    return Object.keys(object1).concat(Object.keys(object2)).reduce(function(soFar, key) {
+        soFar[key] = (object1[key] || []).concat(object2[key] || []);
+        return soFar;
+    }, {});
 }
 
 gulp.task('default', ['lint', 'build']);
