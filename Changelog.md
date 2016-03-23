@@ -1,5 +1,9 @@
 ### AREMI Changelog
 
+### In the next AREMI version
+* Added the CSIRO Australian Wave Atlas group of layers to the "Renewables -> Wave" category.
+
+
 ### Version 2016-03-22
 * Merged in the latest [NationalMap 2016-03-15](https://github.com/NICTA/nationalmap/blob/2016-03-15/CHANGES.md) and [TerriaJS jsonTreeview-2016-03-22](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-2016-03-22/CHANGES.md) releases.
 * Added the new experimental layer "Renewable Energy -> Solar -> Solar Satellite DNI - 2014" based on Bureau of Meteorology data.
