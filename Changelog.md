@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 ### In the next AREMI version
+* Added the Geoscience Australia layer "Population -> Buildings".
 * Added the CSIRO Australian Wave Atlas group of layers to the "Renewables -> Wave" category.
 
 

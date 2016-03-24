@@ -1,0 +1,13 @@
+{
+  "id": "e0e53a0c",
+  "name": "Buildings",
+  "url": "http://services.ga.gov.au/gis/rest/services/AREMI_Buildings_WM/MapServer",
+  "type": "esri-mapServer",
+  "featureInfoTemplate" : {
+    "name": "{{#FEATURETYPE}} {{FEATURETYPE}}: {{NAME}} {{/FEATURETYPE}} {{#FEATURE TYPE}} {{FEATURE TYPE}} {{/FEATURE TYPE}}",
+    "template": "<% include Buildings-template %>"
+  },
+  "opacity": 1.0,
+  <% include ../../common/standard_properties %>,
+  <% include ../../common/home_camera_rectangle %>
+}
