@@ -109,7 +109,7 @@ gulp.task('make-validator-schema', function(done) {
 gulp.task('validate', ['merge-datasources', 'make-validator-schema'], function() {
     return validateSchema({
         terriajsdir: 'node_modules/terriajs',
-        _: glob.sync(['datasources/00_National_Data_Sets/*.json', 'wwwroot/init/*.json', '!wwwroot/init/nm.json'])
+        _: glob.sync(['datasources/00_National_Data_Sets/*.json','datasources/*.json', '!datasources/00_National_Data_Sets.json', 'wwwroot/init/*.json', '!wwwroot/init/nm.json'])
     }).then(function(result) {
         if (result && !watching) {
             // We should abort here. But currently we can't resolve the situation where a data source legitimately
@@ -311,7 +311,7 @@ function build(name, files, minify) {
         entries: files,
         debug: true, // generate source map
         extensions: ['.es6', '.jsx']
-    }), minify, false);
+    }).plugin('browserify-resolutions', '*'), minify, false);
 }
 
 function watch(name, files, minify) {
@@ -322,7 +322,7 @@ function watch(name, files, minify) {
         cache: {},
         extensions: ['.es6', '.jsx'],
         packageCache: {}
-    }), { poll: 1000 } );
+    }).plugin('browserify-resolutions', '*'), { poll: 1000 } );
 
     function rebundle(ids) {
         // Don't rebundle if only the version changed.

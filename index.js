@@ -22,9 +22,6 @@ var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCom
 
 // checkBrowserCompatibility('ui');
 
-var knockout = require('terriajs-cesium/Source/ThirdParty/knockout');
-var defined = require('terriajs-cesium/Source/Core/defined');
-var fs = require('fs');
 
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
 var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
@@ -32,37 +29,12 @@ var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindin
 var corsProxy = require('terriajs/lib/Core/corsProxy');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 
-var AddDataPanelViewModel = require('terriajs/lib/ViewModels/AddDataPanelViewModel');
-var AnimationViewModel = require('terriajs/lib/ViewModels/AnimationViewModel');
-var BingMapsSearchProviderViewModel = require('terriajs/lib/ViewModels/BingMapsSearchProviderViewModel');
-var BrandBarViewModel = require('terriajs/lib/ViewModels/BrandBarViewModel');
-var CatalogItemNameSearchProviderViewModel = require('terriajs/lib/ViewModels/CatalogItemNameSearchProviderViewModel');
-var createAustraliaBaseMapOptions = require('terriajs/lib/ViewModels/createAustraliaBaseMapOptions');
-var createGlobalBaseMapOptions = require('terriajs/lib/ViewModels/createGlobalBaseMapOptions');
-var createToolsMenuItem = require('terriajs/lib/ViewModels/createToolsMenuItem');
-var DataCatalogTabViewModel = require('terriajs/lib/ViewModels/DataCatalogTabViewModel');
-var DistanceLegendViewModel = require('terriajs/lib/ViewModels/DistanceLegendViewModel');
-var DragDropViewModel = require('terriajs/lib/ViewModels/DragDropViewModel');
-var ExplorerPanelViewModel = require('terriajs/lib/ViewModels/ExplorerPanelViewModel');
-var FeatureInfoPanelViewModel = require('terriajs/lib/ViewModels/FeatureInfoPanelViewModel');
-var GazetteerSearchProviderViewModel = require('terriajs/lib/ViewModels/GazetteerSearchProviderViewModel');
 var GoogleUrlShortener = require('terriajs/lib/Models/GoogleUrlShortener');
-var LocationBarViewModel = require('terriajs/lib/ViewModels/LocationBarViewModel');
-var MenuBarItemViewModel = require('terriajs/lib/ViewModels/MenuBarItemViewModel');
-var MenuBarViewModel = require('terriajs/lib/ViewModels/MenuBarViewModel');
-var MutuallyExclusivePanels = require('terriajs/lib/ViewModels/MutuallyExclusivePanels');
-var NavigationViewModel = require('terriajs/lib/ViewModels/NavigationViewModel');
-var NowViewingAttentionGrabberViewModel = require('terriajs/lib/ViewModels/NowViewingAttentionGrabberViewModel');
-var NowViewingTabViewModel = require('terriajs/lib/ViewModels/NowViewingTabViewModel');
-var PopupMessageViewModel = require('terriajs/lib/ViewModels/PopupMessageViewModel');
-var PopupMessageConfirmationViewModel = require('terriajs/lib/ViewModels/PopupMessageConfirmationViewModel');
-var SearchTabViewModel = require('terriajs/lib/ViewModels/SearchTabViewModel');
-var SettingsPanelViewModel = require('terriajs/lib/ViewModels/SettingsPanelViewModel');
-var SharePopupViewModel = require('terriajs/lib/ViewModels/SharePopupViewModel');
-var MapProgressBarViewModel = require('terriajs/lib/ViewModels/MapProgressBarViewModel');
+
 var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateApplicationOnHashChange');
 var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
+var ViewState = require('terriajs/lib/ReactViewModels/ViewState').default;
 
 // Not used until custom AREMI maps are below
 //var BaseMapViewModel = require('terriajs/lib/ViewModels/BaseMapViewModel');
@@ -70,11 +42,11 @@ var Terria = require('terriajs/lib/Models/Terria');
 var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
 var registerCustomComponentTypes = require('terriajs/lib/Models/registerCustomComponentTypes');
+// var registerAnalytics = require('terriajs/lib/Models/registerAnalytics');
 var raiseErrorToUser = require('terriajs/lib/Models/raiseErrorToUser');
 var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
 var GoogleUrlShortener = require('terriajs/lib/Models/GoogleUrlShortener');
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
-var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 var corsProxy = require('terriajs/lib/Core/corsProxy');
 var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
@@ -88,6 +60,9 @@ OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl
 
 // Configure the base URL for the proxy service used to work around CORS restrictions.
 corsProxy.baseProxyUrl = configuration.proxyBaseUrl;
+
+var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
+
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
 OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
@@ -100,6 +75,9 @@ registerKnockoutBindings();
 // (i.e. to reduce the size of your application if you don't actually use them all), feel free to copy a subset of
 // the code in the registerCatalogMembers function here instead.
 registerCatalogMembers();
+
+
+// registerAnalytics();
 
 
 
@@ -127,6 +105,15 @@ var welcome = 'welcome text';
 
 terria.welcome = function welcomeText() { return {__html: welcome}; };
 
+const viewState = new ViewState();
+
+terria.error.addEventListener(e => {
+    viewState.notifications.push({
+        title: e.title,
+        message: e.message
+    });
+});
+
 terria.start({
     // If you don't want the user to be able to control catalog loading via the URL, remove the applicationUrl property below
     // as well as the call to "updateApplicationOnHashChange" further down.
@@ -149,8 +136,8 @@ terria.start({
         // Create the map/globe.
         var terriaViewer = TerriaViewer.create(terria, {
             developerAttribution: {
-                text: 'NICTA',
-                link: 'http://www.nicta.com.au'
+                text: 'Data61',
+                link: 'http://www.csiro.au/en/Research/D61'
             }
         });
 
@@ -169,8 +156,10 @@ terria.start({
         // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
         // updateApplicationOnHashChange(terria, window);
         ReactDOM.render(<UserInterface terria={terria} allBaseMaps={allBaseMaps}
-                                       terriaViewer={terriaViewer}/>, document.getElementById('ui'));
+                                       terriaViewer={terriaViewer}
+                                       viewState={viewState} />, document.getElementById('ui'));
     } catch (e) {
-        console.error(e.stack)
+        console.error(e);
+        console.error(e.stack);
     }
 });
