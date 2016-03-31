@@ -6,13 +6,11 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 
+var terriaOptions = {
+    baseUrl: 'build/TerriaJS'
+};
 var configuration = {
-    terriaBaseUrl: 'build/TerriaJS',
-    cesiumBaseUrl: undefined, // use default
     bingMapsKey: undefined, // use Cesium key
-    proxyBaseUrl: '/proxy/',
-    conversionServiceBaseUrl: 'convert',
-    regionMappingDefinitionsUrl: 'data/regionMapping.json'
 };
 
 // Check browser compatibility early on.
@@ -26,40 +24,22 @@ var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCom
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
 var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
-var corsProxy = require('terriajs/lib/Core/corsProxy');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 
 var GoogleUrlShortener = require('terriajs/lib/Models/GoogleUrlShortener');
-
 var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateApplicationOnHashChange');
-var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
 var ViewState = require('terriajs/lib/ReactViewModels/ViewState').default;
 
-// Not used until custom AREMI maps are below
-//var BaseMapViewModel = require('terriajs/lib/ViewModels/BaseMapViewModel');
 var Terria = require('terriajs/lib/Models/Terria');
-var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
 var registerCustomComponentTypes = require('terriajs/lib/Models/registerCustomComponentTypes');
 // var registerAnalytics = require('terriajs/lib/Models/registerAnalytics');
 var raiseErrorToUser = require('terriajs/lib/Models/raiseErrorToUser');
-var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
+
 var GoogleUrlShortener = require('terriajs/lib/Models/GoogleUrlShortener');
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
-var corsProxy = require('terriajs/lib/Core/corsProxy');
-var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
-
-
-// Configure the base URL for the proxy service used to work around CORS restrictions.
-corsProxy.baseProxyUrl = configuration.proxyBaseUrl;
-
-// Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
-OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
-
-// Configure the base URL for the proxy service used to work around CORS restrictions.
-corsProxy.baseProxyUrl = configuration.proxyBaseUrl;
 
 var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
 
@@ -76,34 +56,18 @@ registerKnockoutBindings();
 // the code in the registerCatalogMembers function here instead.
 registerCatalogMembers();
 
-
 // registerAnalytics();
 
-
+terriaOptions.analytics = new GoogleAnalytics();
 
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
-
-var terria = new Terria({
-    appName: 'AREMI',
-    supportEmail: 'aremi@nicta.com.au',
-    baseUrl: configuration.terriaBaseUrl,
-    cesiumBaseUrl: configuration.cesiumBaseUrl,
-    regionMappingDefinitionsUrl: configuration.regionMappingDefinitionsUrl,
-    analytics: new GoogleAnalytics()
-});
+var terria = new Terria(terriaOptions);
 
 // Register custom components in the core TerriaJS.  If you only want to register a subset of them, or to add your own,
 // insert your custom version of the code in the registerCustomComponentTypes function here instead.
 registerCustomComponentTypes(terria);
 
-
-// We'll put the entire user interface into a DOM element called 'ui'.
-var ui = document.getElementById('ui');
-
-// This is temporary
-var welcome = '<h3> Welcome to AREMI </h3> <p> AREMI is a website for map-based access to Australian spatial data relevant to the Renewable Energy industry - with a focus on Developers, Financiers, and Policy Makers. It is funded by the <a href="#">Australian Renewable Energy Agency</a> and developed by NICTA in partnership with the <a href="#">Clean Energy Council</a> with hosting being provided by <a href="#">Geoscience Australia</a>.</p><div class="getting-started"> <h4> Getting Started</h4> <div class="row"> <div class="col col-6 getting-started--alpha"><figure><img src="./images/solar.png"><figcaption>Solar</figcaption></figure></div> <div class="col col-6 getting-started--beta"><figure><img src="./images/wind.png"><figcaption>Wind</figcaption></figure></div></div>';
-
-terria.welcome = function welcomeText() { return {__html: welcome}; };
+terria.welcome = 'welcome text';
 
 const viewState = new ViewState();
 
@@ -150,8 +114,7 @@ terria.start({
         var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
 
         var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
-        selectBaseMap(terria, allBaseMaps, 'Positron (Light)', true);
-
+        selectBaseMap(terria, allBaseMaps, 'Bing Maps Aerial with Labels', true);
 
         // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
         // updateApplicationOnHashChange(terria, window);
