@@ -22,9 +22,6 @@ var source = require('vinyl-source-stream');
 var watchify = require('watchify');
 var NpmImportPlugin = require('less-plugin-npm-import');
 var jsoncombine = require('gulp-jsoncombine');
-var ejs = require('ejs');
-var child_exec = require('child_process').exec;  // child_process is built in to node
-var gutil = require('gulp-util');
 var childExec = require('child_process').exec;  // child_process is built in to node
 var generateSchema = require('generate-terriajs-schema');
 var validateSchema = require('terriajs-schema');
@@ -66,7 +63,7 @@ gulp.task('build-css', function() {
         .pipe(gulp.dest('./wwwroot/build/'));
 });
 
-gulp.task('build', ['sass', 'merge-datasources', 'merge-datasources-aremi', 'build-app', 'build-specs']);
+gulp.task('build', ['sass', 'merge-datasources', 'build-app', 'build-specs']);
 
 gulp.task('release-app', ['prepare'], function() {
     return build(appJSName, appEntryJSName, true);
@@ -75,8 +72,6 @@ gulp.task('release-app', ['prepare'], function() {
 gulp.task('release-specs', ['prepare'], function() {
     return build(specJSName, glob.sync(testGlob), true);
 });
-
-gulp.task('release', ['sass', 'merge-datasources', 'merge-datasources-aremi', 'release-app', 'release-specs']);
 
 // Generate new schema for editor, and copy it over whatever version came with editor.
 gulp.task('make-editor-schema', ['copy-editor'], function(done) {
@@ -94,7 +89,6 @@ gulp.task('copy-editor', function() {
         .pipe(gulp.dest('./wwwroot/editor'));
 });
 
-gulp.task('release', ['build-css', 'merge-datasources', 'merge-datasources-aremi', 'release-app', 'release-specs', 'make-editor-schema']);
 gulp.task('release', ['merge-datasources', 'release-app', 'release-specs', 'make-editor-schema', 'validate']);
 
 // Generate new schema for validator, and copy it over whatever version came with validator.
@@ -140,11 +134,7 @@ gulp.task('watch-datasource-catalog', ['merge-catalog'], function() {
     return gulp.watch('datasources/*.json', [ 'merge-catalog' ]);
 });
 
-gulp.task('watch-datasource-aremi', function() {
-    return gulp.watch('datasources/aremi/*.json', [ 'merge-datasources-aremi' ]);
-});
-
-gulp.task('watch-datasources', ['watch-datasource-groups','watch-datasource-catalog','watch-datasource-aremi']);
+gulp.task('watch-datasources', ['watch-datasource-groups','watch-datasource-catalog']);
 
 gulp.task('watch-terriajs', ['prepare-terriajs'], function() {
     return gulp.watch(terriaJSSource + '/**', [ 'prepare-terriajs' ]);
@@ -163,7 +153,7 @@ gulp.task('lint', function(){
 });
 
 gulp.task('styleguide', function(done) {
-    child_exec('./node_modules/kss/bin/kss-node ./node_modules/terriajs/lib/Sass ./wwwroot/styleguide --template ./wwwroot/styleguide-template --css ./../build/nationalmap.css', undefined, done);
+    childExec('./node_modules/kss/bin/kss-node ./node_modules/terriajs/lib/Sass ./wwwroot/styleguide --template ./wwwroot/styleguide-template --css ./../build/nationalmap.css', undefined, done);
 });
 
 gulp.task('prepare', ['prepare-terriajs']);
@@ -207,45 +197,6 @@ gulp.task('merge-catalog', ['merge-groups'], function() {
 });
 
 gulp.task('merge-datasources', ['merge-catalog', 'merge-groups']);
-
-// AREMI uses the EJS template engine to build the AREMI init file
-gulp.task('merge-datasources-aremi', function() {
-    var fn = 'datasources/aremi/root.ejs';
-    var template = fs.readFileSync(fn,'utf8');
-    // use EJS to process
-    var result = ejs.render(template, null, {filename: fn});
-    // remove all newlines - makes it possible to nicely format data descriptions etc
-    var noNewlines = result.replace(/(?:\r\n|\r|\n)/g, '');
-
-    var jsDatasources = eval('('+noNewlines+')');
-    var badChildrenPaths = getChildrenWithNoIds(jsDatasources.catalog, '');
-
-    if (badChildrenPaths.length) {
-        console.error('Datasources have catalog items without ids: \n' + badChildrenPaths.join('\n'));
-        process.exit(1);
-    }
-
-    // eval JSON string into object and minify
-    var buf = new Buffer(JSON.stringify(jsDatasources, null, 0));
-    fs.writeFileSync('wwwroot/init/aremi.json', buf);
-});
-
-/**
- * Recurses through a tree of data sources and checks that all the items (not groups) have ids specified
- * @param {Object[]} children The children to check in the format specified in the datasource json.
- * @param pathSoFar The path that the paths of offending children will be concatenated to.
- * @returns {String[]} The paths (names joined by '/') of items that had no id as a flat array.
- */
-function getChildrenWithNoIds(children, pathSoFar) {
-    return children.reduce(function(soFar, child) {
-        var path = pathSoFar + '/' + (child.name || '[no name]');
-        var childIsInvalid = !child.id && child.type !== 'group';
-
-        return soFar
-            .concat(childIsInvalid ? [path] : [])
-            .concat(getChildrenWithNoIds(child.items || [], path));
-    }, []);
-}
 
 gulp.task('default', ['lint', 'build']);
 
@@ -380,4 +331,3 @@ gulp.task('sass', function(){
 gulp.task('sass-watch', ['sass'], function(){
   return gulp.watch(['./node_modules/terriajs/lib/Sass/**', 'nationalmap.scss'], ['sass']);
 });
-
