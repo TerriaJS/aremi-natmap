@@ -67,7 +67,7 @@ var terria = new Terria(terriaOptions);
 // insert your custom version of the code in the registerCustomComponentTypes function here instead.
 registerCustomComponentTypes(terria);
 
-terria.welcome = '<h3>AREMI is a spatial data platform for the Australian Energy industry</h3><div>we are focused on supporting Developers, Financiers, and Policy Makers in evaluating spatial renewable energy information. AREMI is funded by the <a href="http://arena.gov.au">Australian Renewable Energy Agency</a> and developed by <a href="http://www.csiro.au/en/Research/D61">Data61</a> in partnership with <a href="http://www.ga.gov.au">Geoscience Australia</a> and <a href="https://www.cleanenergycouncil.org.au/cec.html">the Clean Energy Council</a></div>';
+terria.welcome = '<h3>AREMI - The Australian Renewable Energy Mapping Infrastructure</h3><div><p>We are focused on supporting Renewable Energy development in Australia by simplifying access to energy resource and infrastructure spatial data.</p><p>AREMI is developed by Data61, in partnership with Geoscience Australia and the Clean Energy Council, with funding support provided by the Australian Renewable Energy Agency (ARENA).</p></div>';
 
 const viewState = new ViewState();
 
