@@ -11,8 +11,9 @@ BRANCH=$(git rev-parse --abbrev-ref HEAD)
 TARGET="target/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz"
 
 rm -rf node_modules
+rm -rf wwwroot/build
 npm install
-npm install
+gulp sass
 gulp release
 
 mkdir -p target
