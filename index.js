@@ -42,6 +42,9 @@ var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform')
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 
 var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
+var fs = require('fs');
+import DisclaimerHandler from 'terriajs/lib/ReactViewModels/DisclaimerHandler';
+import defined from 'terriajs-cesium/Source/Core/defined';
 
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
@@ -77,6 +80,8 @@ terria.error.addEventListener(e => {
         message: e.message
     });
 });
+
+const disclaimerHandler = new DisclaimerHandler(terria, viewState);
 
 terria.start({
     // If you don't want the user to be able to control catalog loading via the URL, remove the applicationUrl property below
@@ -116,11 +121,32 @@ terria.start({
         var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
         selectBaseMap(terria, allBaseMaps, 'Positron (Light)', true);
 
+        // Add the disclaimer, if specified
+        if (defined(terria.configParameters.globalDisclaimer)) {
+            var disclaimer = terria.configParameters.globalDisclaimer;
+            if (defined(disclaimer.enabled) && disclaimer.enabled) {
+                var message = '';
+                if (location.hostname.indexOf('nationalmap.gov.au') === -1) {
+                    message += fs.readFileSync(__dirname + '/lib/Views/DevelopmentDisclaimer.html', 'utf8');
+                }
+                message += fs.readFileSync(__dirname + '/lib/Views/GlobalDisclaimer.html', 'utf8');
+                var options = {
+                    title: defined(disclaimer.title) ? disclaimer.title : 'Disclaimer',
+                    confirmText: 'I Agree',
+                    width: 600,
+                    height: 550,
+                    message: message
+                };
+
+                viewState.notifications.push(options);
+            }
+        }
+
         // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
         // updateApplicationOnHashChange(terria, window);
         ReactDOM.render(<UserInterface terria={terria} allBaseMaps={allBaseMaps}
                                        terriaViewer={terriaViewer}
-                                       viewState={viewState} />, document.getElementById('ui'));
+                                       viewState={viewState}/>, document.getElementById('ui'));
     } catch (e) {
         console.error(e);
         console.error(e.stack);

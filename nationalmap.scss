@@ -17,16 +17,13 @@
 // component styles
 @import "partial/branding";
 @import "partial/drop_zone";
-
 @import "partial/map_navigation";
 @import "partial/misc";
 @import "partial/modal_window";
 @import "partial/my_data";
 @import "partial/work_bench";
-
 //mobile only styles
 @import "component/mobile";
-
 @import "component/dropdown_panel";
 @import "component/loader";
 @import "component/location_bar";
@@ -45,22 +42,29 @@
 @import "component/timeline";
 @import "component/share_panel";
 
-
-
 // Getting started tab
-.panel--getting-started{
-  .panel__inner{
-    a{
+.panel--getting-started {
+  .panel__inner {
+    a {
       font-weight: 600;
       text-decoration: underline;
       color: #fff;
       &:hover,
-      &:focus{
+      &:focus {
         color: #f5f5f5;
       }
     }
   }
-  .panel-content{
+  .panel-content {
     background-position: right center;
   }
+}
+
+.notification {
+  background-image: url("../images/welcome-bg.jpg");
+  background-position: 600px 600px;
+}
+
+.notification__inner {
+  background-color: rgba(0, 0, 0, 0.5);
 }
