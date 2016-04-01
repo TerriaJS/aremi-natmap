@@ -126,9 +126,11 @@ terria.start({
             var disclaimer = terria.configParameters.globalDisclaimer;
             if (defined(disclaimer.enabled) && disclaimer.enabled) {
                 var message = '';
+                /* disabling the dev disclaimer for the UX testing
                 if (location.hostname.indexOf('nationalmap.gov.au') === -1) {
                     message += fs.readFileSync(__dirname + '/lib/Views/DevelopmentDisclaimer.html', 'utf8');
                 }
+                */
                 message += fs.readFileSync(__dirname + '/lib/Views/GlobalDisclaimer.html', 'utf8');
                 var options = {
                     title: defined(disclaimer.title) ? disclaimer.title : 'Disclaimer',
