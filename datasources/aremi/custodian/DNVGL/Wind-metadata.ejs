@@ -1,14 +1,18 @@
 "featureInfoTemplate" : {
   "name": "{{GRAY_INDEX}} m/s",
-  "template": "{{GRAY_INDEX}} m/s",
+  "template": "<% include Wind-template %>",
   "formats": {
     "GRAY_INDEX": {"maximumFractionDigits": 2}
   }
 },
 "info" :[
   {
-    "name": "Download Data",
+    "name": "Download Raw Wind Layer Data",
     "content": "<% include Wind-details %>"
+  },
+  {
+    "name": "Download WAsP LIB Files",
+    "content": "<% include Wind-WaSP-details %>"
   },
   {
     "name": "Data Currency and Updates",

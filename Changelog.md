@@ -1,10 +1,15 @@
 ### AREMI Changelog
 
-### Version [NEXT]
+### In the next AREMI version
+* Added the Geoscience Australia layer "Population -> Buildings".
+* Added the CSIRO Australian Wave Atlas group of layers to the "Renewables -> Wave" category.
+
+
+### Version 2016-03-22
+* Merged in the latest [NationalMap 2016-03-15](https://github.com/NICTA/nationalmap/blob/2016-03-15/CHANGES.md) and [TerriaJS jsonTreeview-2016-03-22](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-2016-03-22/CHANGES.md) releases.
 * Added the new experimental layer "Renewable Energy -> Solar -> Solar Satellite DNI - 2014" based on Bureau of Meteorology data.
-* Added the new layer "Boundaries -> Cadastre and Land Tenure -> Cadastral Parcels - PSMA" from Geoscience Australia.
-* Changed the "Boundaries -> Cadastre and Land Tenure -> Northern Australia" layers into a single "Boundaries -> Cadastre and Land Tenure -> Land Tenure - PSMA" hosted by Geoscience Australia that covers all of Australia.
-* Added a layer giving access to the [DNV GL](https://www.dnvgl.com/) WAsP LIB files in "Renewable Energy -> Wind -> WAsP LIB files".
+* Added the new layer "Boundaries -> Cadastre and Land Tenure -> Cadastral Parcels" from Geoscience Australia.
+* Changed the "Boundaries -> Cadastre and Land Tenure -> Northern Australia" layers into a single "Boundaries -> Cadastre and Land Tenure -> Land Tenure" layer hosted by Geoscience Australia that covers all of Australia.
 * Added a check to make sure all catalog items have ids specified on build.
 * Fixed missing links to GA ELVIS system in "Topography -> Elevation -> {LiDAR 5m DEM,LiDAR 25m DEM, SRTM 1 sec DEM image}".
 * Added feature info templates for:
@@ -20,6 +25,7 @@
     - Infrastructure
         - Oil Pipelines
         - Gas Pipelines
+
 
 #### Version 2016-02-23
 * Small improvements to the DNV GL Wind layers.

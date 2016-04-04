@@ -22,7 +22,8 @@ var source = require('vinyl-source-stream');
 var watchify = require('watchify');
 var NpmImportPlugin = require('less-plugin-npm-import');
 var jsoncombine = require('gulp-jsoncombine');
-var childExec = require('child_process').exec;  // child_process is built in to node
+var ejs = require('ejs');
+var child_exec = require('child_process').exec;  // child_process is built in to node
 var generateSchema = require('generate-terriajs-schema');
 var validateSchema = require('terriajs-schema');
 
@@ -198,6 +199,91 @@ gulp.task('merge-catalog', ['merge-groups'], function() {
 
 gulp.task('merge-datasources', ['merge-catalog', 'merge-groups']);
 
+
+// AREMI uses the EJS template engine to build the AREMI init file
+gulp.task('merge-datasources-aremi', function() {
+    var fn = 'datasources/aremi/root.ejs';
+    var template = fs.readFileSync(fn,'utf8');
+    // use EJS to process
+    var result = ejs.render(template, null, {filename: fn});
+    // remove all newlines - makes it possible to nicely format data descriptions etc
+    var noNewlines = result.replace(/(?:\r\n|\r|\n)/g, '');
+
+    var jsDatasources = eval('('+noNewlines+')');
+    var noIdChildrenPaths = getChildrenWithNoIds(jsDatasources.catalog, '');
+
+    if (noIdChildrenPaths.length) {
+        console.error('Datasources have catalog items without ids: \n' + noIdChildrenPaths.join('\n'));
+        process.exit(1);
+    }
+
+    var idIndex = indexAgainstId(jsDatasources.catalog, '');
+    var duplicateIds = Object.keys(idIndex).filter(function(id) {
+        return idIndex[id].length > 1;
+    });
+
+    if (duplicateIds.length > 0) {
+        console.error('Datasources have duplicate ids for: ');
+        console.error(duplicateIds.reduce(function(soFar, id) {
+            return soFar + id + ': ' + JSON.stringify(idIndex[id]) + '\n';
+        }, ''));
+        process.exit(1);
+    }
+
+    // eval JSON string into object and minify
+    var buf = new Buffer(JSON.stringify(jsDatasources, null, 0));
+    fs.writeFileSync('wwwroot/init/aremi.json', buf);
+});
+
+/**
+ * Recurses through a tree of data sources and checks that all the items (not groups) have ids specified
+ * @param {Object[]} children The children to check in the format specified in the datasource json.
+ * @param pathSoFar The path that the paths of offending children will be concatenated to.
+ * @returns {String[]} The paths (names joined by '/') of items that had no id as a flat array.
+ */
+function getChildrenWithNoIds(children, pathSoFar) {
+    return children.reduce(function(soFar, child) {
+        var path = pathSoFar + '/' + (child.name || '[no name]');
+        var childIsInvalid = !child.id && child.type !== 'group';
+
+        return soFar
+            .concat(childIsInvalid ? [path] : [])
+            .concat(getChildrenWithNoIds(child.items || [], path));
+    }, []);
+}
+
+/**
+ * Recursively goes through a JSON catalog, indexing all the items, and all the items inside those items, in the form of
+ * the items' ids against an array of paths of items that had that id. E.g. { aergaerg: ['Group 1/Name, 'Group 1/Othername'].
+ *
+ * @param {Object[]} items The items to index
+ * @param {String} pathSoFar The path to append new paths to
+ * @returns {Object} An index of ids to paths.
+ */
+function indexAgainstId(items, pathSoFar) {
+    return items.reduce(function(soFar, child) {
+        var path = pathSoFar + '/' + (child.name || '[no name]');
+
+        if (child.id) {
+            if (!soFar[child.id]) {
+                soFar[child.id] = [];
+            }
+            soFar[child.id].push(path);
+        }
+
+        return combine(soFar, indexAgainstId(child.items || [], path));
+    }, {});
+}
+
+/** Combines two objects together - assumes all values in the object are arrays. If both objects have a value for a
+ * certain key, then the result object with have both of those values concatenated together */
+function combine(object1, object2) {
+    return Object.keys(object1).concat(Object.keys(object2)).reduce(function(soFar, key) {
+        soFar[key] = (object1[key] || []).concat(object2[key] || []);
+        return soFar;
+    }, {});
+}
+
 gulp.task('default', ['lint', 'build']);
 
 function onError(e) {
@@ -331,3 +417,4 @@ gulp.task('sass', function(){
 gulp.task('sass-watch', ['sass'], function(){
   return gulp.watch(['./node_modules/terriajs/lib/Sass/**', 'nationalmap.scss'], ['sass']);
 });
+
