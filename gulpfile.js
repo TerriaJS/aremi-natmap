@@ -64,7 +64,7 @@ gulp.task('build-css', function() {
         .pipe(gulp.dest('./wwwroot/build/'));
 });
 
-gulp.task('build', ['sass', 'merge-datasources', 'build-app', 'build-specs']);
+gulp.task('build', ['sass', 'merge-datasources', 'merge-datasources-aremi', 'build-app', 'build-specs']);
 
 gulp.task('release-app', ['prepare'], function() {
     return build(appJSName, appEntryJSName, true);
@@ -90,7 +90,7 @@ gulp.task('copy-editor', function() {
         .pipe(gulp.dest('./wwwroot/editor'));
 });
 
-gulp.task('release', ['merge-datasources', 'release-app', 'release-specs', 'make-editor-schema', 'validate']);
+gulp.task('release', ['merge-datasources', 'merge-datasources-aremi', 'release-app', 'release-specs', 'make-editor-schema', 'validate']);
 
 // Generate new schema for validator, and copy it over whatever version came with validator.
 gulp.task('make-validator-schema', function(done) {
@@ -133,6 +133,10 @@ gulp.task('watch-datasource-groups', ['merge-groups'], function() {
 
 gulp.task('watch-datasource-catalog', ['merge-catalog'], function() {
     return gulp.watch('datasources/*.json', [ 'merge-catalog' ]);
+});
+
+gulp.task('watch-datasource-aremi', function() {
+    return gulp.watch('datasources/aremi/*.json', [ 'merge-datasources-aremi' ]);
 });
 
 gulp.task('watch-datasources', ['watch-datasource-groups','watch-datasource-catalog']);
