@@ -21,6 +21,7 @@
     "proj4js-defs": "^0.0.1",
     "react": "^0.14.3",
     "react-dom": "0.14.3",
+    "react-addons-pure-render-mixin": "0.14.7",
     "terriajs": "git://github.com/TerriaJS/terriajs.git#newui",
     "yargs": "^3.8.0",
     "terriajs-server": "^1.4.0",
