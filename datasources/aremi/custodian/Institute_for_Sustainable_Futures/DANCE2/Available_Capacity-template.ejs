@@ -6,9 +6,18 @@
 <table><tr><td>Constraint season(s)                </td> <td>{{Constraint_season}}          </td> </tr></table>
 {{/Constraint_season}}
 <table><tr><td>Average demand growth rate (MVA/yr) </td> <td>{{Average_demand_growth}}      </td> </tr></table>
+{{#Commit_inv_year: }}
+<table><tr><td>Proposed investment year            </td> <td>{{Commit_inv_year: }} </td> </tr></table>
+{{/Commit_inv_year: }}
 {{#Proposed_investment_year: }}
-<table><tr><td>Proposed investment year            </td> <td>{{Proposed_investment_year: }} </td> </tr></table>
+<table><tr><td>Commitment Year            </td> <td>{{Proposed_investment_year: }} </td> </tr></table>
 {{/Proposed_investment_year: }}
+{{#Curr}}
+<table><tr><td>Data Currency            </td> <td>{{Curr}} </td> </tr></table>
+{{/Curr}}
+{{#Next_update}}
+<table><tr><td>Next Update            </td> <td>{{Next_update}} </td> </tr></table>
+{{/Next_update}}
 
 <table class='feature-info-panel-section-pivot-table'>
         <tr>
@@ -34,7 +43,15 @@
     </tr>
 </table>
 
-
+{{#NSP_contact}}
+<table><tr><td>NSP Contact Email                </td> <td><a href='mailto:{{NSP_contact}}'>{{NSP_contact}}</a>          </td> </tr></table>
+{{/NSP_contact}}
+{{#NSP_phone}}
+<table><tr><td>NSP Contact Phone                </td> <td>{{NSP_phone}}          </td> </tr></table>
+{{/NSP_phone}}
+<br>
+{{#Weblink_DAPR}}<a href='{{Weblink_DAPR}}'>DAPR/TAPR web link</a><br>{{/Weblink_DAPR}}
+{{#Weblink_DSES}}<a href='{{Weblink_DSES}}'>DSES web link</a><br>{{/Weblink_DSES}}
 <a href='{{NSP_info_link}}'>NSP demand management information</a><br>
 <a href='{{Link_to_download}}'>Download data in spreadsheet format</a>
 </div>
