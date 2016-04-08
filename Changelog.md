@@ -1,6 +1,6 @@
 ### AREMI Changelog
 
-### Version 2016-03-22
+### Version 2016-03-22b
 * Merged in the latest [NationalMap 2016-03-15](https://github.com/NICTA/nationalmap/blob/2016-03-15/CHANGES.md) and [TerriaJS jsonTreeview-2016-03-22](https://github.com/TerriaJS/terriajs/blob/jsonTreeview-2016-03-22/CHANGES.md) releases.
 * Added the new experimental layer "Renewable Energy -> Solar -> Solar Satellite DNI - 2014" based on Bureau of Meteorology data.
 * Added the new layer "Boundaries -> Cadastre and Land Tenure -> Cadastral Parcels" from Geoscience Australia.
