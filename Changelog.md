@@ -6,6 +6,7 @@
         - Transmission
             - Western Australia
                 - Distribution Lines
+                - Overhead Transmission Lines
 * Added a feature info template to the "Electricity Inf. -> Generation -> All Power Stations" layer.
 * Added the Geoscience Australia layer "Population -> Buildings".
 * Added the CSIRO Australian Wave Atlas group of layers to the "Renewables -> Wave" category.

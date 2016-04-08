@@ -10,6 +10,10 @@
 {
   "id": "f600c818",
   "name": "Overhead Transmission Lines",
+  "featureInfoTemplate" : {
+    "name": "{{voltage_kv}} kV",
+    "template": "Voltage: <strong>{{voltage_kv}} kV</strong>"
+  },
   <% var layer = "WP-004" %>
   <%- include Landgate_wms %>,
 },
