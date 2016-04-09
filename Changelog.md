@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 ### In the next AREMI version
+* Correcting layer names for "Electricity Inf. -> Transmission -> Western Australia -> Forecast Remaining Capacity" to match actual forecast years of the data.
 * Added feature info templates for:
     - Electricity Inf.
         - Transmission
