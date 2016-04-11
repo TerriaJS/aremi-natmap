@@ -11,8 +11,13 @@
   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
   "url": "http://www.ga.gov.au/gis/rest/services/marine_coastal/Australian_Bathymetry_Topography/MapServer",
   "type": "esri-mapServer",
+  "legendUrl": "",
+  "featureInfoTemplate" : {
+    "name": "{{Pixel Value}} metres relative to sealevel",
+    "template": "{{Pixel Value}} metres relative to sealevel."
+  },
   "ignoreUnknownTileErrors": true,
-  <%- include ../../common/home_camera_rectangle %>
+  <% include ../../common/home_camera_rectangle %>
 },
 {
   "id": "54a55724",
@@ -25,8 +30,12 @@
     }
   ],
   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-  "url": "http://www.ga.gov.au/gis/services/marine_coastal/Australian_Seabed_Features/MapServer/WMSServer",
-  "type": "wms",
+  "url": "http://www.ga.gov.au/gis/rest/services/marine_coastal/Australian_Seabed_Features/MapServer",
+  "type": "esri-mapServer",
+  "featureInfoTemplate" : {
+    "name": "Feature: {{{FEATURE}}}",
+    "template": "<% include Seabed-template %>"
+  },
   "ignoreUnknownTileErrors": true,
-  <%- include ../../common/home_camera_rectangle %>
+  <% include ../../common/home_camera_rectangle %>
 }

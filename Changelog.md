@@ -5,6 +5,10 @@
 * Updated with the latest Clean Energy Regulator Small Scale Installations data for the layers in "Electricity Inf. -> Generation -> Small Scale Installations - CER".
 * Correcting layer names for "Electricity Inf. -> Transmission -> Western Australia -> Forecast Remaining Capacity" to match actual forecast years of the data.
 * Added feature info templates for:
+    - Renewable Energy
+        - Wave
+            - Bathymetry topography
+            - Seabed features
     - Electricity Inf.
         - Transmission
             - Western Australia
