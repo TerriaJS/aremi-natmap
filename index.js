@@ -122,7 +122,8 @@ terria.start({
     defaultTo2D: isCommonMobilePlatform(),
     urlShortener: new GoogleUrlShortener({
         terria: terria
-    })
+    }),
+    viewerMode: ViewerMode.CesiumEllipsoid
 }).otherwise(function(e) {
     raiseErrorToUser(terria, e);
 }).always(function() {
@@ -134,7 +135,6 @@ terria.start({
 
     // Create the map/globe.
     TerriaViewer.create(terria, { developerAttribution: terria.configParameters.developerAttribution });
-    terria.viewerMode = ViewerMode.CesiumEllipsoid;
 
     // We'll put the entire user interface into a DOM element called 'ui'.
     var ui = document.getElementById('ui');
