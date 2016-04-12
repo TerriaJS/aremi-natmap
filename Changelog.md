@@ -1,6 +1,7 @@
 ### AREMI Changelog
 
 ### In the next AREMI version
+* Updated the service endpoints for the layers "Aspect" and "Land slope in percent" in the category "Topography -> Elevation".
 * Updated the feature info template for the CER Small Scale Installation layers in "Electricity Inf. -> Generation -> Small Scale Installations - CER".
 * Updated with the latest Clean Energy Regulator Small Scale Installations data for the layers in "Electricity Inf. -> Generation -> Small Scale Installations - CER".
 * Correcting layer names for "Electricity Inf. -> Transmission -> Western Australia -> Forecast Remaining Capacity" to match actual forecast years of the data.
