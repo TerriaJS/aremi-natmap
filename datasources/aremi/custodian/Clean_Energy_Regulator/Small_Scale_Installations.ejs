@@ -6,30 +6,24 @@
       "id": "54a55544",
       "name": "Hydro",
       "url": "datasets/cer/CER_RET_SGU_Hydro.csv",
-      "featureInfoTemplate" : {
-        "name": "{{Total Installations}} in postcode {{Postcode}}",
-        "template": "{{Total Installations}} Hydro installations in the postcode {{Postcode}}."
-      },
+      <% var type = "Hydro" %>
+      <% include Small_Scale_Installations-template_with_kW %>
       <% include common-Small_Scale_Installations %>
     },
     {
       "id": "54a55558",
       "name": "Solar PV",
       "url": "datasets/cer/CER_RET_SGU_Solar_Panels.csv",
-      "featureInfoTemplate" : {
-        "name": "{{Total Installations}} in postcode {{Postcode}}",
-        "template": "{{Total Installations}} Solar PV installations in the postcode {{Postcode}}."
-      },
+      <% var type = "Solar PV" %>
+      <% include Small_Scale_Installations-template_with_kW %>
       <% include common-Small_Scale_Installations %>
     },
     {
       "id": "54a5556c",
       "name": "Wind",
       "url": "datasets/cer/CER_RET_SGU_Wind.csv",
-      "featureInfoTemplate" : {
-        "name": "{{Total Installations}} in postcode {{Postcode}}",
-        "template": "{{Total Installations}} Wind installations in the postcode {{Postcode}}."
-      },
+      <% var type = "Wind" %>
+      <% include Small_Scale_Installations-template_with_kW %>
       <% include common-Small_Scale_Installations %>
     },
     {
@@ -37,7 +31,7 @@
       "name": "Air Source Heat Pumps",
       "url": "datasets/cer/CER_RET_SWH_Air_Source_Heat_Pump.csv",
       "featureInfoTemplate" : {
-        "name": "{{Total Installations}} in postcode {{Postcode}}",
+        "name": "Postcode {{Postcode}}: {{Total Installations}} installations",
         "template": "{{Total Installations}} Air Source Heat Pump installations in the postcode {{Postcode}}."
       },
       <% include common-Small_Scale_Installations %>
@@ -47,7 +41,7 @@
       "name": "Solar Water Heaters",
       "url": "datasets/cer/CER_RET_SWH_Solar.csv",
       "featureInfoTemplate" : {
-        "name": "{{Total Installations}} in postcode {{Postcode}}",
+        "name": "Postcode {{Postcode}}: {{Total Installations}} installations",
         "template": "{{Total Installations}} Solar Water Heater installations in the postcode {{Postcode}}."
       },
       <% include common-Small_Scale_Installations %>

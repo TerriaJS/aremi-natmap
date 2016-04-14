@@ -1,5 +1,7 @@
 {
     "proxyDomains" : [
+        "noaa.gov",
+        "nasa.gov",
         "environment.gov.au",
         "services.thelist.tas.gov.au",
         "aemo.com.au",

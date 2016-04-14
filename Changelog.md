@@ -1,6 +1,23 @@
 ### AREMI Changelog
 
 ### In the next AREMI version
+* Updated the service endpoints for the layers "Aspect" and "Land slope in percent" in the category "Topography -> Elevation".
+* Updated the feature info template for the CER Small Scale Installation layers in "Electricity Inf. -> Generation -> Small Scale Installations - CER".
+* Updated with the latest Clean Energy Regulator Small Scale Installations data for the layers in "Electricity Inf. -> Generation -> Small Scale Installations - CER".
+* Correcting layer names for "Electricity Inf. -> Transmission -> Western Australia -> Forecast Remaining Capacity" to match actual forecast years of the data.
+* Added feature info templates for:
+    - Renewable Energy
+        - Wave
+            - Bathymetry topography
+            - Seabed features
+    - Electricity Inf.
+        - Transmission
+            - Western Australia
+                - Distribution Lines
+                - Overhead Transmission Lines
+                - Substation Connection Capacity
+                - Forecast Remaining Capacity layers
+* Added a feature info template to the "Electricity Inf. -> Generation -> All Power Stations" layer.
 * Added the Geoscience Australia layer "Population -> Buildings".
 * Added the CSIRO Australian Wave Atlas group of layers to the "Renewables -> Wave" category.
 
