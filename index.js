@@ -16,7 +16,7 @@ var configuration = {
 // Check browser compatibility early on.
 // A very old browser (e.g. Internet Explorer 8) will fail on requiring-in many of the modules below.
 // 'ui' is the name of the DOM element that should contain the error popup if the browser is not compatible
-var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCompatibility');
+//var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCompatibility');
 
 // checkBrowserCompatibility('ui');
 
@@ -42,7 +42,6 @@ var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform')
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 
 var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
-var fs = require('fs');
 import DisclaimerHandler from 'terriajs/lib/ReactViewModels/DisclaimerHandler';
 import defined from 'terriajs-cesium/Source/Core/defined';
 
@@ -131,7 +130,7 @@ terria.start({
                     message += fs.readFileSync(__dirname + '/lib/Views/DevelopmentDisclaimer.html', 'utf8');
                 }
                 */
-                message += fs.readFileSync(__dirname + '/lib/Views/GlobalDisclaimer.html', 'utf8');
+                message += require('./lib/Views/GlobalDisclaimer.html');
                 var options = {
                     title: defined(disclaimer.title) ? disclaimer.title : 'Disclaimer',
                     confirmText: 'I Agree',
