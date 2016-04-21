@@ -75,6 +75,7 @@ var MapProgressBarViewModel = require('terriajs/lib/ViewModels/MapProgressBarVie
 var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateApplicationOnHashChange');
 var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
+var DisclaimerViewModel = require('terriajs/lib/ViewModels/DisclaimerViewModel');
 
 var Terria = require('terriajs/lib/Models/Terria');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
@@ -106,6 +107,11 @@ terria.error.addEventListener(function(e) {
         title: e.title,
         message: e.message
     });
+});
+
+DisclaimerViewModel.create({
+    container: 'ui',
+    terria: terria
 });
 
 terria.start({
