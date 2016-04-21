@@ -1,6 +1,13 @@
 ### AREMI Changelog
 
+This is a list of changes of the Australian Renewable Energy Mapping Infrastructure (AREMI). To use AREMI to access the dataset layers and features mentioned below please go to:
+
+http://nationalmap.gov.au/renewables/
+
+
 ### In the next AREMI version
+* Added a new layer with Typical Meteorological Year data processed from the Bureau of Meteorology One Minute Solar observations. The layer has been added in the category "Renewable Energy -> Solar -> Typical Meteorological Year".
+* Updated the service endpoints for the layers "Aspect" and "Land slope in percent" in the category "Topography -> Elevation".
 * Updated the feature info template for the CER Small Scale Installation layers in "Electricity Inf. -> Generation -> Small Scale Installations - CER".
 * Updated with the latest Clean Energy Regulator Small Scale Installations data for the layers in "Electricity Inf. -> Generation -> Small Scale Installations - CER".
 * Correcting layer names for "Electricity Inf. -> Transmission -> Western Australia -> Forecast Remaining Capacity" to match actual forecast years of the data.
