@@ -1,5 +1,10 @@
 ### AREMI Changelog
 
+This is a list of changes of the Australian Renewable Energy Mapping Infrastructure (AREMI). To use AREMI to access the dataset layers and features mentioned below please go to:
+
+http://nationalmap.gov.au/renewables/
+
+
 ### In the next AREMI version
 * Updated the service endpoints for the layers "Aspect" and "Land slope in percent" in the category "Topography -> Elevation".
 * Updated the feature info template for the CER Small Scale Installation layers in "Electricity Inf. -> Generation -> Small Scale Installations - CER".
