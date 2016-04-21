@@ -2,7 +2,7 @@
 
 This is a list of changes of the Australian Renewable Energy Mapping Infrastructure (AREMI). To use AREMI to access the dataset layers and features mentioned below please go to:
 
-<a target="_blank" href="http://nationalmap.gov.au/renewables/">http://nationalmap.gov.au/renewables/</a>
+http://nationalmap.gov.au/renewables/
 
 
 ### In the next AREMI version
