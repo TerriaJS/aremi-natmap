@@ -1,5 +1,6 @@
 {
     "allowProxyFor" : [
+        "static.aremi.nicta.com.au",
         "industry.nsw.gov.au",
         "noaa.gov",
         "nasa.gov",
@@ -19,7 +20,6 @@
         "nci.org.au"
     ],
     "initPaths": [
-        "aremi",
-        "proxy/_60s/http://static.aremi.nicta.com.au/init2.json"
+        "aremi"
     ]
 }
