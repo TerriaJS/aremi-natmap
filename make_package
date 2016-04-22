@@ -20,6 +20,4 @@ tar czf ${TARGET} \
   package.json \
   node_modules \
   wwwroot \
-  run_server.sh \
-  stop_server.sh \
 && echo && echo "Finished package: ${TARGET}"
