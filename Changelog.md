@@ -5,7 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
-### In the next AREMI version
+### Version 2016-04-22
 * Added a new layer with Typical Meteorological Year data processed from the Bureau of Meteorology One Minute Solar observations. The layer has been added in the category "Renewable Energy -> Solar -> Typical Meteorological Year".
 * Updated the service endpoints for the layers "Aspect" and "Land slope in percent" in the category "Topography -> Elevation".
 * Updated the feature info template for the CER Small Scale Installation layers in "Electricity Inf. -> Generation -> Small Scale Installations - CER".
