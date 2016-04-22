@@ -98,6 +98,7 @@ registerKnockoutBindings();
 registerCatalogMembers();
 
 terriaOptions.analytics = new GoogleAnalytics();
+terriaOptions.viewerMode = ViewerMode.CesiumEllipsoid;
 
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
 var terria = new Terria(terriaOptions);
@@ -122,8 +123,7 @@ terria.start({
     defaultTo2D: isCommonMobilePlatform(),
     urlShortener: new GoogleUrlShortener({
         terria: terria
-    }),
-    viewerMode: ViewerMode.CesiumEllipsoid
+    })
 }).otherwise(function(e) {
     raiseErrorToUser(terria, e);
 }).always(function() {
