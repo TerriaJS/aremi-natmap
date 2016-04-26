@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version of AREMI
+* Added the layer "Topography -> Aerial/Satellite Imagery -> Queensland" from the Queensland Government - Department of Natural Resources and Mines.
 * Added an experimental CSV export service for clicked points to the "Renewable Energy -> Solar -> Solar Satellite DNI - 2014" layer.
 
 
