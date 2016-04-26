@@ -1,6 +1,28 @@
 {
+  "id": "ab852700",
+  "name": "Analytics area",
+  "layers": "awavea-interim:outline_ww3.aus_4m",
+  "url": "http://oa-gis.csiro.au/geoserver/ows",
+  "type": "wms",
+  "ignoreUnknownTileErrors": true,
+  "legendUrl": "",
+  "clipToRectangle": true,
+  "info": [
+    {
+      "name": "Data Description",
+      "content": "Add this layer to show where it is possible to use the analytical functions of the Australian Wave Energy Atlas - the analytics will only function inside the highlighted area."
+    }
+  ]
+},
+{
+  "id": "b766d7c6",
+  "name": "Analytical functions",
+  "type": "wps-getCapabilities",
+  "url": "http://oa-gis.csiro.au/wps"
+},
+{
   "id": "c2f37440",
-  "name": "Australian Wave Atlas",
+  "name": "Wave Model and Multiple Use layers",
   "url": "http://waveatlas.marine.csiro.au/geonetwork/srv/eng/csw",
   "type": "csw",
    "domainSpecification": {

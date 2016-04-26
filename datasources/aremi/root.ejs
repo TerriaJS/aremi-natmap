@@ -107,8 +107,15 @@
           "name": "Wave",
           "type": "group",
           "items": [
+            {
+              "name": "Australian Wave Energy Atlas",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                <% include custodian/CSIRO_OandA/WaveAtlas %>,
+              ]
+            },
             <% include custodian/Geoscience_Australia/Bathymetry_Seabed %>,
-            <% include custodian/CSIRO_OandA/WaveAtlas %>,
           ]
         },
       ]
