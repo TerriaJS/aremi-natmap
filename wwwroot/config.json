@@ -8,8 +8,8 @@
         "conversionServiceBaseUrl": "convert/",
         "proj4ServiceBaseUrl": "proj4/",
         "bingMapsKey": null,
-        "googleUrlShortenerKey": "AIzaSyDtUfMZKSUTLhHUGt8Jk6cTGNHAADx0xy8",
-        "googleAnalyticsKey": "UA-61302891-1",
+        "googleUrlShortenerKey": null,
+        "googleAnalyticsKey": null,
         "googleAnalyticsOptions": null,
         "disclaimer": {
             "text": "Disclaimer: AREMI must not be used for navigation or precise spatial analysis",
