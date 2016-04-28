@@ -1,5 +1,6 @@
 {
     "allowProxyFor" : [
+        "information.qld.gov.au",
         "static.aremi.nicta.com.au",
         "industry.nsw.gov.au",
         "noaa.gov",
