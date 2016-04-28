@@ -8,9 +8,9 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var path = require('path');
 
-gulp.task('build', ['sass', 'merge-datasources', 'copy-terriajs-assets', 'build-app']);
-gulp.task('release', ['sass', 'merge-datasources', 'copy-terriajs-assets', 'release-app', 'make-editor-schema', 'validate']);
-gulp.task('watch', ['watch-sass', 'watch-datasources', 'watch-terriajs-assets', 'watch-app']);
+gulp.task('build', ['copy-terriajs-assets', 'merge-datasources', 'build-app']);
+gulp.task('release', ['copy-terriajs-assets', 'merge-datasources', 'release-app', 'make-editor-schema']);
+gulp.task('watch', ['watch-terriajs-assets', 'watch-datasources', 'watch-app']);
 gulp.task('default', ['lint', 'build']);
 
 var watchOptions = {
@@ -20,7 +20,7 @@ var watchOptions = {
 gulp.task('build-app', ['write-version'], function(done) {
     var runWebpack = require('terriajs/buildprocess/runWebpack.js');
     var webpack = require('webpack');
-    var webpackConfig = require('./buildprocess/webpack.config.js');
+    var webpackConfig = require('./buildprocess/webpack.config.js')(true);
 
     runWebpack(webpack, webpackConfig, done);
 });
@@ -28,14 +28,14 @@ gulp.task('build-app', ['write-version'], function(done) {
 gulp.task('release-app', ['write-version'], function(done) {
     var runWebpack = require('terriajs/buildprocess/runWebpack.js');
     var webpack = require('webpack');
-    var webpackConfig = require('./buildprocess/webpack.config.js');
+    var webpackConfig = require('./buildprocess/webpack.config.js')(false);
 
     runWebpack(webpack, Object.assign({}, webpackConfig, {
         devtool: 'source-map',
         plugins: [
             new webpack.optimize.UglifyJsPlugin(),
             new webpack.optimize.DedupePlugin(),
-            new webpack.optimize.OccurrenceOrderPlugin()
+            new webpack.optimize.OccurrenceOrderPlugin(),
         ].concat(webpackConfig.plugins || [])
     }), done);
 });
@@ -44,7 +44,7 @@ gulp.task('watch-app', function(done) {
     var fs = require('fs');
     var watchWebpack = require('terriajs/buildprocess/watchWebpack');
     var webpack = require('webpack');
-    var webpackConfig = require('./buildprocess/webpack.config.js');
+    var webpackConfig = require('./buildprocess/webpack.config.js')(true);
 
     fs.writeFileSync('version.js', 'module.exports = \'Development Build\';');
     watchWebpack(webpack, webpackConfig, done);
@@ -87,32 +87,6 @@ gulp.task('copy-editor', function() {
         .pipe(gulp.dest('./wwwroot/editor'));
 });
 
-// Generate new schema for validator, and copy it over whatever version came with validator.
-gulp.task('make-validator-schema', function() {
-    var generateSchema = require('generate-terriajs-schema');
-
-    return generateSchema({
-        source: getPackageRoot('terriajs'),
-        dest: path.join(getPackageRoot('terriajs-schema'), 'schema'),
-        quiet: true
-    });
-});
-
-gulp.task('validate', ['merge-datasources', 'make-validator-schema'], function() {
-    var glob = require('glob-all');
-    var validateSchema = require('terriajs-schema');
-
-    return validateSchema({
-        terriajsdir: 'node_modules/terriajs',
-        _: glob.sync(['datasources/00_National_Data_Sets/*.json','datasources/*.json', '!datasources/00_National_Data_Sets.json', 'wwwroot/init/*.json', '!wwwroot/init/nm.json'])
-    }).then(function(result) {
-        if (result) {
-            // We should abort here. But currently we can't resolve the situation where a data source legitimately
-            // uses some new feature not present in the latest published TerriaJS.
-            //process.exit(result);
-        }
-    });
-});
 
 gulp.task('watch-datasources', ['merge-datasources'], function() {
     return gulp.watch([
@@ -137,42 +111,6 @@ gulp.task('lint', function() {
         'index.js',
         'lib'
     ]);
-});
-
-gulp.task('merge-groups', function() {
-    var jsoncombine = require('gulp-jsoncombine');
-
-    var jsonspacing = 0;
-    return gulp.src("./datasources/00_National_Data_Sets/*.json")
-        .on('error', onError)
-        .pipe(jsoncombine("00_National_Data_Sets.json", function(data) {
-            // be absolutely sure we have the files in alphabetical order
-            var keys = Object.keys(data).slice().sort();
-            for (var i = 1; i < keys.length; i++) {
-                data[keys[0]].catalog[0].items.push(data[keys[i]].catalog[0].items[0]);
-            }
-            return new Buffer(JSON.stringify(data[keys[0]], null, jsonspacing));
-        }))
-        .pipe(gulp.dest("./datasources"));
-});
-
-gulp.task('merge-catalog', ['merge-groups'], function() {
-    var jsoncombine = require('gulp-jsoncombine');
-
-    var jsonspacing = 0;
-    return gulp.src("./datasources/*.json")
-        .on('error', onError)
-        .pipe(jsoncombine("nm.json", function(data) {
-            // be absolutely sure we have the files in alphabetical order, with 000_settings first.
-            var keys = Object.keys(data).slice().sort();
-            data[keys[0]].catalog = [];
-
-            for (var i = 1; i < keys.length; i++) {
-                data[keys[0]].catalog.push(data[keys[i]].catalog[0]);
-            }
-            return new Buffer(JSON.stringify(data[keys[0]], null, jsonspacing));
-        }))
-        .pipe(gulp.dest("./wwwroot/init"));
 });
 
 gulp.task('write-version', function() {
@@ -287,25 +225,6 @@ function onError(e) {
     gutil.log(e.message);
     process.exit(1);
 }
-
-//compile sass, temp
-gulp.task('sass', function() {
-    var runExternalModule = require('terriajs/buildprocess/runExternalModule');
-
-    runExternalModule(require.resolve('node-sass/bin/node-sass'), [
-        '--quiet',
-        '--include-path', './node_modules/terriajs/lib/Sass',
-        '--output-style', 'expanded',
-        '--source-map', 'wwwroot/build/nationalmap.css.map',
-        'nationalmap.scss',
-        'wwwroot/build/nationalmap.css'
-    ]);
-});
-
-//watch sass compile and update doc
-gulp.task('watch-sass', ['sass'], function(){
-  return gulp.watch(['./node_modules/terriajs/lib/Sass/**', 'nationalmap.scss'], ['sass']);
-});
 
 function getPackageRoot(packageName) {
     return path.dirname(require.resolve(packageName + '/package.json'));
