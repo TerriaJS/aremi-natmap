@@ -1,0 +1,41 @@
+{
+  "id": "<%= ssTmyId %>",
+  "name": "Typical Meteorological Year",
+  "type": "csv",
+  "url": "datasets/TMY/SolarStationsTmy.csv",
+  "tableStyle": {
+    "dataVariable": "Years of data",
+  },
+  "featureInfoTemplate": {
+    "template": "<% include Solar_Station_Typical_Meteorological_Year-template %>"
+  },
+  "info": [
+    {
+      "name": "Description of Data",
+      "content": "<% include Solar_Station_Typical_Meteorological_Year-description %>"
+    },
+    {
+      "name": "Source Data",
+      "content": "<% include Solar_Station_Typical_Meteorological_Year-sourceData %>"
+    },
+    {
+      "name": "Updates",
+      "content": "<% include Solar_Station_Typical_Meteorological_Year-updates %>"
+    },
+    {
+      "name": "Data Custodian",
+      "content": "<% include Solar_Station_Typical_Meteorological_Year-custodian %>"
+    },
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "<% include Solar_Station_Typical_Meteorological_Year-licensing %>"
+    }
+  ],
+  "infoSectionOrder": [
+    "Description of Data",
+    "Source Data",
+    "Updates",
+    "Data Custodian",
+    "Licensing, Terms & Conditions"
+  ]
+}

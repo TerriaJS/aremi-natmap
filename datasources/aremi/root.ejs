@@ -70,7 +70,9 @@
             <% include custodian/Bureau_of_Meteorology/Solar_Climatology %>,
             <% include custodian/Bureau_of_Meteorology/Solar_Satellite %>,
             <% var sshoId = "5638a250" %>
-            <% include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>
+            <% include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>,
+            <% var ssTmyId = "e7b24a0c" %>
+            <% include custodian/Data61/Solar_Station_Typical_Meteorological_Year %>
           ]
         },
         {
@@ -162,6 +164,13 @@
                 <% include custodian/Landgate/Cadastre %>,
                 <% include custodian/Land_and_Property_Information_NSW/Cadastre %>,
                 <% include custodian/Land_Information_System_Tasmania/Cadastral_Parcels %>,
+                {
+                  "name": "Queensland",
+                  "type": "group",
+                  "items": [
+                    <% include custodian/Queensland_Government/Cadastre_Land_Tenure %>
+                  ]
+                }
               ]
             }
           ]
@@ -191,6 +200,14 @@
           ]
         },
         {
+          "name": "Aerial/Satellite Imagery",
+          "type": "group",
+          "items": [
+            <% include custodian/Land_and_Property_Information_NSW/Aerial %>,
+            <% include custodian/Queensland_Government/Public_Imagery %>,
+          ]
+        },
+        {
           "name": "Land",
           "type": "group",
           "items": [
@@ -201,6 +218,19 @@
           "name": "Water",
           "type": "group",
           "items": [
+            {
+              "name": "Floods",
+              "type": "group",
+              "items": [
+                {
+                  "name": "Queensland",
+                  "type": "group",
+                  "items": [
+                    <% include custodian/Queensland_Government/Floods %>,
+                  ]
+                }
+              ]
+            },
             {
               "name": "Water Observations from Space",
               "type": "group",
@@ -263,7 +293,9 @@
       "type": "group",
       "items": [
         <% var sshoId = "54a554d6" %>
-        <% include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>
+        <% include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>,
+        <% var ssTmyId = "17198a4e" %>
+        <% include custodian/Data61/Solar_Station_Typical_Meteorological_Year %>
       ]
     }
   ]

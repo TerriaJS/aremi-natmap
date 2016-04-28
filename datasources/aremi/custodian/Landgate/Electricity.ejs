@@ -1,30 +1,41 @@
 {
   "id": "b37bf01b",
   "name": "Distribution Lines",
+  "featureInfoTemplate" : {
+    "template": "<% include Distribution_Lines_template %>"
+  },
   <% var layer = "WP-003" %>
-  <%- include Landgate_wms %>,
+  <% include Landgate_wms %>,
 },
 {
   "id": "f600c818",
   "name": "Overhead Transmission Lines",
+  "featureInfoTemplate" : {
+    "name": "{{voltage_kv}} kV",
+    "template": "Voltage: <strong>{{voltage_kv}} kV</strong>"
+  },
   <% var layer = "WP-004" %>
-  <%- include Landgate_wms %>,
+  <% include Landgate_wms %>,
 },
 {
   "id": "b180b21e",
   "name": "Substation Connection Capacity",
+  "featureInfoTemplate" : {
+    "name": "{{substation_name}}: {{{generation_connection_capacity}}}",
+    "template": "<% include Substation_Connection_Capacity_template %>"
+  },
   <% var layer = "WP-006" %>
-  <%- include Landgate_wms %>,
+  <% include Landgate_wms %>,
 },
 {
   "id": "c44c2e5b",
   "name": "Substations/Terminals/Power Stations/APR Information",
   <% var layer = "WP-007" %>
-  <%- include Landgate_wms %>,
+  <% include Landgate_wms %>,
 },
 {
   "id": "488baee8",
   "name": "Future Substations/Terminals/Power Stations/APR Information",
   <% var layer = "WP-008" %>
-  <%- include Landgate_wms %>,
+  <% include Landgate_wms %>,
 }
