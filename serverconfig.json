@@ -1,7 +1,17 @@
 {
     "allowProxyFor" : [
+        "static.aremi.nicta.com.au",
+        "industry.nsw.gov.au",
+        "noaa.gov",
+        "nasa.gov",
+        "environment.gov.au",
+        "thelist.tas.gov.au",
+        "aemo.com.au",
+        "landgate.wa.gov.au",
+        "bom.gov.au",
+        "aurin.org.au",
         "nicta.com.au",
-        "gov.au",
+        "ga.gov.au",
         "csiro.au",
         "arcgis.com",
         "argo.jcommops.org",
@@ -15,8 +25,5 @@
         "geoserver.imos.org.au",
         "nci.org.au",
         "static.nationalmap.nicta.com.au"
-    ],
-    "initPaths": [
-        "node_modules/nationalmap-catalog/build"
     ]
 }
