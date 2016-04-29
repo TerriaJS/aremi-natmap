@@ -1,0 +1,27 @@
+{
+    "allowProxyFor" : [
+        "information.qld.gov.au",
+        "industry.nsw.gov.au",
+        "noaa.gov",
+        "nasa.gov",
+        "environment.gov.au",
+        "thelist.tas.gov.au",
+        "aemo.com.au",
+        "landgate.wa.gov.au",
+        "bom.gov.au",
+        "aurin.org.au",
+        "nicta.com.au",
+        "ga.gov.au",
+        "csiro.au",
+        "arcgis.com",
+        "argo.jcommops.org",
+        "www.abc.net.au",
+        "mapsengine.google.com",
+        "s3-ap-southeast-2.amazonaws.com",
+        "adelaidecitycouncil.com",
+        "www.dptiapps.com.au",
+        "nci.org.au",
+        "aodn.org.au",
+        "imos.org.au"
+    ]
+}

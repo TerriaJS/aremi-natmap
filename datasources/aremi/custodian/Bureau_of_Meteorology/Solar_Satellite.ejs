@@ -4,10 +4,10 @@
   "layers": "Solar_Satellite_DNI_2014",
   "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/bom/wms",
   "type": "wms",
-  "maxRefreshIntervals":"9000",
+  "maxRefreshIntervals": 9000,
   "featureInfoTemplate": {
     "name":"{{GRAY_INDEX}} W/m2",
-    "template":"DNI: <strong>{{GRAY_INDEX}} W/m&#178;</strong>"
+    "template":"<% include Solar_Satellite-template %>"
   },
   "dataCustodian": "<% include Solar_Satellite-custodian %>",
   "info": [
