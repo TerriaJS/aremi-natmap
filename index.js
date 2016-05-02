@@ -29,13 +29,13 @@ var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers
 var registerCustomComponentTypes = require('terriajs/lib/Models/registerCustomComponentTypes');
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
 var Terria = require('terriajs/lib/Models/Terria');
-var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
 var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateApplicationOnHashChange');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
-var UserInterface = require('./UserInterface.jsx');
 var ViewState = require('terriajs/lib/ReactViewModels/ViewState').default;
 import DisclaimerHandler from 'terriajs/lib/ReactViewModels/DisclaimerHandler';
 import defined from 'terriajs-cesium/Source/Core/defined';
+import BingMapsSearchProviderViewModel from 'terriajs/lib/ViewModels/BingMapsSearchProviderViewModel.js';
+import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerSearchProviderViewModel.js';
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
 OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
@@ -61,13 +61,16 @@ registerCustomComponentTypes(terria);
 
 terria.welcome = '<h3>AREMI - The Australian Renewable Energy Mapping Infrastructure</h3><div><p>We are focused on supporting Renewable Energy development in Australia by simplifying access to energy resource and infrastructure spatial data.</p><p>AREMI is developed by Data61, in partnership with Geoscience Australia and the Clean Energy Council, with funding support provided by the Australian Renewable Energy Agency (ARENA).</p></div>';
 
-const viewState = new ViewState();
+const viewState = new ViewState(terria, [
+    new BingMapsSearchProviderViewModel({terria}),
+    new GazetteerSearchProviderViewModel({terria})
+]);
 
-terria.error.addEventListener(e => {
-    viewState.notifications.push({
-        title: e.title,
-        message: e.message
-    });
+viewState.notifications.push({
+    title: 'Aremi is a spatial data platform for the Australian Energy industry',
+    message: 'We are focused on supporting Developer, Financiers, and Policy Makers in evaluating spatial renewable energy information.\n\nAREMI is funded by the *Australian Renewable Energy Agency* and developed by *Data61* in partnership with *GeoScience Australia* and the *Clean Energy Council*.',
+    confirmText: 'Got it! Take me to the map',
+    hideUi: true
 });
 
 // If we're running in dev mode, disable the built style sheet as we'll be using the webpack style loader.
@@ -94,14 +97,6 @@ terria.start({
         // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
         updateApplicationOnHashChange(terria, window);
         updateApplicationOnMessageFromParentWindow(terria, window);
-
-        // Create the map/globe.
-        var terriaViewer = TerriaViewer.create(terria, {
-            developerAttribution: {
-                text: 'Data61',
-                link: 'http://www.csiro.au/en/Research/D61'
-            }
-        });
 
         //temp
         var createAustraliaBaseMapOptions = require('terriajs/lib/ViewModels/createAustraliaBaseMapOptions');
@@ -137,12 +132,9 @@ terria.start({
             }
         }
 
-        // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
-        // updateApplicationOnHashChange(terria, window);
         let render = () => {
-            const UserInterface = require('./UserInterface.jsx');
-            ReactDOM.render(<UserInterface terria={terria} allBaseMaps={allBaseMaps}
-                                           terriaViewer={terriaViewer}
+            const StandardUserInterface = require('terriajs/lib/ReactViews/StandardUserInterface.jsx');
+            ReactDOM.render(<StandardUserInterface terria={terria} allBaseMaps={allBaseMaps}
                                            viewState={viewState}/>, document.getElementById('ui'));
         };
 
@@ -152,6 +144,8 @@ terria.start({
             const renderApp = render;
             const renderError = (error) => {
                 const RedBox = require('redbox-react');
+                console.error(error);
+                console.error(error.stack);
                 ReactDOM.render(
                     <RedBox error={error} />,
                     document.getElementById('ui')
@@ -164,7 +158,7 @@ terria.start({
                     renderError(error);
                 }
             };
-            module.hot.accept('./UserInterface.jsx', () => {
+            module.hot.accept('terriajs/lib/ReactViews/StandardUserInterface.jsx', () => {
                 setTimeout(render);
             });
         }
