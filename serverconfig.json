@@ -1,5 +1,8 @@
 {
     "allowProxyFor" : [
+        "data.wa.gov.au",
+        "slip.wa.gov.au",
+        "information.qld.gov.au",
         "static.aremi.nicta.com.au",
         "industry.nsw.gov.au",
         "noaa.gov",

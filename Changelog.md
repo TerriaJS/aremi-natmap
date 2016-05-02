@@ -5,7 +5,15 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
-### In the next AREMI version
+### In the next version of AREMI
+* Added the layer "Topography -> Aerial/Satellite Imagery -> New South Wales" from Land and Property Information NSW.
+* Added the layers in the category "Boundaries -> Cadastre and Land Tenure -> By State -> Queensland" from the Queensland Government - Department of Natural Resources and Mines.
+* Added the layers in the category "Topography -> Water -> Floods -> Queensland" from the Queensland Government.
+* Added the layer "Topography -> Aerial/Satellite Imagery -> Queensland" from the Queensland Government - Department of Natural Resources and Mines.
+* Added an experimental CSV export service for clicked points to the "Renewable Energy -> Solar -> Solar Satellite DNI - 2014" layer.
+
+
+### Version 2016-04-22
 * Added a new layer with Typical Meteorological Year data processed from the Bureau of Meteorology One Minute Solar observations. The layer has been added in the category "Renewable Energy -> Solar -> Typical Meteorological Year".
 * Updated the service endpoints for the layers "Aspect" and "Land slope in percent" in the category "Topography -> Elevation".
 * Updated the feature info template for the CER Small Scale Installation layers in "Electricity Inf. -> Generation -> Small Scale Installations - CER".
