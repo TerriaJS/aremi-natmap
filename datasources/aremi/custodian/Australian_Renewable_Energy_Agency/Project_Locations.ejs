@@ -1,16 +1,46 @@
-<div style='max-width: 40em'>
-  <h3><a href='{{link}}'>{{title}}</a></h3>
-  <h4>{{lead-organisation}}</h4>
+{
+  "id": "f3225b08",
+  "name": "ARENA Funded projects",
+  "type": "csv",
+  "url": "datasets/arena/may-2016.csv",
+  "featureInfoTemplate" : {
+    "name": "{{title}}",
+    "template": "<% include Project_Locations-template %>"
+  },
+  "tableStyle": {
+    "columns": {
+      "funding": {
+        "name": "ARENA Funding ($)",
+        "colorMap": "rgb(94,79,162)-rgb(50,136,189)-rgb(102,194,165)-rgb(171,221,164)-rgb(230,245,152)-rgb(254,224,139)-rgb(253,174,97)-rgb(244,109,67)",
+        "scaleByValue": true,
+        "scale": 2.5,
+        "format": {
+          "useGrouping": true
+        }
+      },
+      "project-value": {
+        "colorMap": "rgb(94,79,162)-rgb(50,136,189)-rgb(102,194,165)-rgb(171,221,164)-rgb(230,245,152)-rgb(254,224,139)-rgb(253,174,97)-rgb(244,109,67)-rgb(213,62,79)-rgb(158,1,66)",
+        "scaleByValue": true,
+        "scale": 2.5,
+        "name": "Project value ($)"
+      },
+      "technology": {
+        "type": "enum",
+        "name": "Technology",
+        "scale": 1.5,
+        "colorPalette": "9-class Set1"
+      },
+      "title":{"type":"TAG"},
+      "lead-organisation":{"type":"TAG"},
+      "abstract":{"type":"TAG"},
+      "startdate":{"type":"TAG"},
+      "finishdate":{"type":"TAG"},
+      "finishdate-additional-information":{"type":"TAG"},
+      "closed":{"type":"TAG"},
+      "link":{"type":"TAG"}
+    }
+  }
+}
 
-  <p>{{{abstract}}}</p>
-  <p>Technology: <strong>{{Technology}}</strong></p>
-  <p>Project value: <strong>${{Project value ($)}}</strong></p>
-  <p>ARENA Funding: <strong>${{ARENA Funding (%)}}</strong></p>
-  <p>Start date: <strong>{{startdate}}</strong></p>
-  {{#finishdate}}
-    <p>Finish date: <strong>{{finishdate}}</strong></p>
-  {{/finishdate}}
-  {{#finishdate-additional-information}}
-    <p>Finish information: <strong>{{finishdate-additional-information}}</strong></p>
-  {{/finishdate-additional-information}}
-</div>
+
+
