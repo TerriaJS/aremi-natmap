@@ -113,61 +113,7 @@
             <% include custodian/CSIRO_OandA/WaveAtlas %>,
           ]
         },
-        { <%# TODO: Move to  proper location %>
-          "id": "f3225b08",
-          "name": "ARENA Funded projects",
-          "type": "csv",
-          "url": "datasets/arena/may-2016.csv",
-          "info": [
-            {
-              "name": "Description",
-              <%# TODO: Add description from ARENA %>
-              "content": ""
-            }
-          ],
-          "featureInfoTemplate" : {
-            "name": "{{title}}",
-            "template": "<% include custodian/Australian_Renewable_Energy_Agency/Project_locations %>"
-          },
-
-          "tableStyle": {
-            "columns": {
-              "funding": {
-                "name": "ARENA Funding ($)",
-                "colorMap": "rgb(94,79,162)-rgb(50,136,189)-rgb(102,194,165)-rgb(171,221,164)-rgb(230,245,152)-rgb(254,224,139)-rgb(253,174,97)-rgb(244,109,67)",
-                "scaleByValue": true,
-                "scale": 2.5,
-                "format": {
-                  "useGrouping": true
-                }
-              },
-              "project-value": {
-                "colorMap": "rgb(94,79,162)-rgb(50,136,189)-rgb(102,194,165)-rgb(171,221,164)-rgb(230,245,152)-rgb(254,224,139)-rgb(253,174,97)-rgb(244,109,67)-rgb(213,62,79)-rgb(158,1,66)",
-                "scaleByValue": true,
-                "scale": 2.5,
-                "name": "Project value ($)",
-                "format": {
-                  "useGrouping": true
-                }
-              },
-              "technology": {
-                "type": "enum",
-                "name": "Technology",
-                "scale": 1.5,
-                "colorPalette": "9-class Set1"
-              },
-              "title":{"type":"TAG"},
-              "lead-organisation":{"type":"TAG"},
-              "abstract":{"type":"TAG"},
-              "startdate":{"type":"TAG"},
-              "finishdate":{"type":"TAG"},
-              "finishdate-additional-information":{"type":"TAG"},
-              "closed":{"type":"TAG"},
-              "link":{"type":"TAG"}
-            },
-
-          }
-        }
+        <% include custodian/Australian_Renewable_Energy_Agency/Project_Locations %>,
       ]
     },
     {

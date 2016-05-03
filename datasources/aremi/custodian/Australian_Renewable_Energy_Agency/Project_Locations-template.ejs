@@ -1,0 +1,34 @@
+<div style='max-width: 40em'>
+  <h3><a href='{{link}}'>{{title}}</a></h3>
+  <h4>{{lead-organisation}}</h4>
+
+  <p>{{{abstract}}}</p>
+  <table>
+    <tr><td>Technology:           </td><td><strong>{{Technology}}</strong></td></tr>
+    {{#Project value ($)}}
+      <tr><td>Project value:      </td><td><strong>${{Project value ($)}}</strong></td></tr>
+    {{/Project value ($)}}
+    {{^Project value ($)}}
+      <tr><td>Project value:      </td><td><strong>-</strong></td></tr>
+    {{/Project value ($)}}
+    {{#ARENA Funding ($)}}
+      <tr><td>ARENA Funding:      </td><td><strong>${{ARENA Funding ($)}}</strong></td></tr>
+    {{/ARENA Funding ($)}}
+    {{^ARENA Funding ($)}}
+      <tr><td>ARENA Funding:      </td><td><strong>$0</strong></td></tr>
+    {{/ARENA Funding ($)}}
+    <tr><td>Start date:           </td><td><strong>{{startdate}}</strong></td></tr>
+    {{#finishdate}}
+      <tr><td>Finish date:        </td><td><strong>{{finishdate}}</strong></td></tr>
+    {{/finishdate}}
+    {{#finishdate-additional-information}}
+      <tr>
+        <td colspan='2'><strong>Finish information:</strong><br/>
+          <p>{{finishdate-additional-information}}</p>
+        </td>
+      </tr>
+    {{/finishdate-additional-information}}
+  </table>
+  <p><a href='{{link}}'>ARENA Project information page</a></p>
+
+</div>
