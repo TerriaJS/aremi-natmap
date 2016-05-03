@@ -84,6 +84,10 @@
   background-image: url("./wwwroot/images/welcome-bg.jpg");
   background-position: center right;
   background-size: cover;
+
+ .btn {
+  background: rgba(0, 0, 0, 0.6);
+ }
 }
 
 @media print {
@@ -92,3 +96,4 @@
         display: block;
     }
 }
+
