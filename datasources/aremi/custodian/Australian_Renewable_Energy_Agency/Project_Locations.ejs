@@ -3,6 +3,13 @@
   "name": "ARENA Funded projects",
   "type": "csv",
   "url": "datasets/arena/may-2016.csv",
+  "info": [
+    {
+      "name": "Description",
+      <%# TODO: Add description from ARENA %>
+      "content": ""
+    }
+  ],
   "featureInfoTemplate" : {
     "name": "{{title}}",
     "template": "<% include Project_Locations-template %>"
@@ -22,7 +29,10 @@
         "colorMap": "rgb(94,79,162)-rgb(50,136,189)-rgb(102,194,165)-rgb(171,221,164)-rgb(230,245,152)-rgb(254,224,139)-rgb(253,174,97)-rgb(244,109,67)-rgb(213,62,79)-rgb(158,1,66)",
         "scaleByValue": true,
         "scale": 2.5,
-        "name": "Project value ($)"
+        "name": "Project value ($)",
+        "format": {
+          "useGrouping": true
+        }
       },
       "technology": {
         "type": "enum",
@@ -41,6 +51,3 @@
     }
   }
 }
-
-
-

@@ -3,14 +3,32 @@
   <h4>{{lead-organisation}}</h4>
 
   <p>{{{abstract}}}</p>
-  <p>Technology: <strong>{{Technology}}</strong></p>
-  <p>Project value: <strong>${{Project value ($)}}</strong></p>
-  <p>ARENA Funding: <strong>${{ARENA Funding (%)}}</strong></p>
-  <p>Start date: <strong>{{startdate}}</strong></p>
-  {{#finishdate}}
-    <p>Finish date: <strong>{{finishdate}}</strong></p>
-  {{/finishdate}}
-  {{#finishdate-additional-information}}
-    <p>Finish information: <strong>{{finishdate-additional-information}}</strong></p>
-  {{/finishdate-additional-information}}
+  <table>
+    <tr><td>Technology:           </td><td><strong>{{Technology}}</strong></td></tr>
+    {{#Project value ($)}}
+      <tr><td>Project value:      </td><td><strong>${{Project value ($)}}</strong></td></tr>
+    {{/Project value ($)}}
+    {{^Project value ($)}}
+      <tr><td>Project value:      </td><td><strong>-</strong></td></tr>
+    {{/Project value ($)}}
+    {{#ARENA Funding ($)}}
+      <tr><td>ARENA Funding:      </td><td><strong>${{ARENA Funding ($)}}</strong></td></tr>
+    {{/ARENA Funding ($)}}
+    {{^ARENA Funding ($)}}
+      <tr><td>ARENA Funding:      </td><td><strong>$0</strong></td></tr>
+    {{/ARENA Funding ($)}}
+    <tr><td>Start date:           </td><td><strong>{{startdate}}</strong></td></tr>
+    {{#finishdate}}
+      <tr><td>Finish date:        </td><td><strong>{{finishdate}}</strong></td></tr>
+    {{/finishdate}}
+    {{#finishdate-additional-information}}
+      <tr>
+        <td colspan='2'><strong>Finish information:</strong><br/>
+          <p>{{finishdate-additional-information}}</p>
+        </td>
+      </tr>
+    {{/finishdate-additional-information}}
+  </table>
+  <p><a href='{{link}}'>ARENA Project information page</a></p>
+
 </div>
