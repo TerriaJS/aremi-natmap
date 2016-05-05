@@ -12,6 +12,7 @@ http://nationalmap.gov.au/renewables/
 * Added the layers in the category "Topography -> Water -> Floods -> Queensland" from the Queensland Government.
 * Added the layer "Topography -> Aerial/Satellite Imagery -> Queensland" from the Queensland Government - Department of Natural Resources and Mines.
 * Added an experimental CSV export service for clicked points to the "Renewable Energy -> Solar -> Solar Satellite DNI - 2014" layer.
+* Points shown for Electricity Infrastructure -> Generation -> Current Power Generation - NEM are now scaled by their value when it makes sense, and columns which don't make sense to choropleth by have been removed as options.
 
 
 ### Version 2016-04-22
