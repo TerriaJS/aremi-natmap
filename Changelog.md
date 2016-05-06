@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version of AREMI
+* Added the layer "Electricity Inf. -> Generation -> Diesel generators - South Australia" from RenewablesSA.
 * Added the layer "Renewable Energy -> ARENA Funded projects" with public data from ARENA about the projects they fund.
 * Added the layer "Topography -> Aerial/Satellite Imagery -> New South Wales" from Land and Property Information NSW.
 * Added the layers in the category "Boundaries -> Cadastre and Land Tenure -> By State -> Queensland" from the Queensland Government - Department of Natural Resources and Mines.
