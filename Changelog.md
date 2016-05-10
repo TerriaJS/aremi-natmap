@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version of AREMI
+* Added the layers in "Renewable Energy -> Bioenergy -> Queensland -> Sugarcane" from the Department of Science, Information Technology and Innovation of the State of Queensland Government.
 * Added the layer "Boundaries -> Native Title Determinations" from the National Native Title Tribunal.
 * Added the layer "Electricity Inf. -> Generation -> Diesel generators - South Australia" from RenewablesSA.
 * Added the layer "Renewable Energy -> ARENA Funded projects" with public data from ARENA about the projects they fund.
