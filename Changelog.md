@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version of AREMI
+* Added the layers in the category "Renewable Energy -> Bioenergy -> Victoria" from Sustainability Victoria.
 * Moved the "Boundaries -> Environmental areas" to be its own "Environment" top level category.
 * Added the layers in "Renewable Energy -> Bioenergy -> Queensland -> Sugarcane" from the Department of Science, Information Technology and Innovation of the State of Queensland Government.
 * Added the layer "Boundaries -> Native Title Determinations" from the National Native Title Tribunal.
