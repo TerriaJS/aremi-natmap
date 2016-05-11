@@ -5,7 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
-### In the next version of AREMI
+### Version 2016-05-12
 * Added the layers in the category "Infrastructure -> Liquid Fuel Facilities" from Geoscience Australia.
 * Added the layer "Infrastructure -> National Major Desalination Plants" from Geoscience Australia.
 * Migrated the layers "Infrastructure -> Damwalls" and "Renewable Energy -> Hydro -> Dam Walls" to the new "National Major Dam Walls" service from Geoscience Australia.
