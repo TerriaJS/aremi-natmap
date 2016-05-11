@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version of AREMI
+* Added the layer "Renewable Energy -> Wave -> Hillshaded Bathymetry and Topography" from Geoscience Australia.
 * Migrated the Roads and Railways layers in the "Infrastructure -> Transport" to a new Geosience Australia service.
 * Added the layers in the category "Renewable Energy -> Bioenergy -> Victoria" from Sustainability Victoria.
 * Moved the "Boundaries -> Environmental areas" to be its own "Environment" top level category.

@@ -38,4 +38,16 @@
   },
   "ignoreUnknownTileErrors": true,
   <% include ../../common/home_camera_rectangle %>
+},
+{
+  "id": "bdb5df67",
+  "name": "Hillshaded Bathymetry and Topography",
+  "layers": "Hillshaded_Bathymetry_Topography",
+  "url": "http://services.ga.gov.au/gis/services/Bathymetry_Derivatives/MapServer/WMSServer",
+  "type": "wms",
+  "opacity": 1.0,
+  "legendUrl": "",
+  "ignoreUnknownTileErrors": true,
+  "getFeatureInfoFormats": [{"type": "json"}], <%# Disable feature info for this service since it is not useful %>
+  <% include ../../common/home_camera_rectangle %>
 }
