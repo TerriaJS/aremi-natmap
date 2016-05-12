@@ -5,6 +5,10 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
+### In the next version of AREMI
+* Added the layer "Renewable Energy -> Bioenergy -> Western Australia -> Cereal straw" from the Department of Agriculture and Food, Western Australia.
+
+
 ### Version 2016-05-11
 * Added the layers in the category "Infrastructure -> Liquid Fuel Facilities" from Geoscience Australia.
 * Added the layer "Infrastructure -> National Major Desalination Plants" from Geoscience Australia.
