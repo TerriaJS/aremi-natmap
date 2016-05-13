@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version of AREMI
+* Updated CER SGU data in the category "Electricity Inf. -> Generation -> Small Scale Installations" to be current as of May 2016.
 * Added the layer "Renewable Energy -> Bioenergy -> Western Australia -> Cereal straw" from the Department of Agriculture and Food, Western Australia.
 
 
