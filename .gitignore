@@ -19,3 +19,4 @@ proxyAuth.json
 
 # added by GitSavvy
 /wwwroot/editor/
+privateserverconfig.json
