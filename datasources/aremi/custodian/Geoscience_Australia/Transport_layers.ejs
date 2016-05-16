@@ -12,13 +12,8 @@
   "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
   "type": "wms",
   "opacity": 1.0,
-  <%- include ../../common/standard_properties %>,
-  "rectangle": [
-    "100.0",
-    "-44.0",
-    "159.0",
-    "-4.0"
-  ]
+  <% include ../../common/standard_properties %>,
+  <% include ../../common/home_camera_rectangle %>
 },
 {
   "id": "5407163e",
@@ -34,55 +29,27 @@
   "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
   "type": "wms",
   "opacity": 1.0,
-  <%- include ../../common/standard_properties %>,
-  "rectangle": [
-    "100.0",
-    "-44.0",
-    "159.0",
-    "-4.0"
-  ]
+  <% include ../../common/standard_properties %>,
+  <% include ../../common/home_camera_rectangle %>
 },
 {
   "id": "54071652",
   "name": "Railways",
-  "layers": "Railway_Crossing_Lines,Railways_3,Railways_2,Railways_1,Railway_Crossings,Railway_Stops",
-  "info": [
-    {
-      "name": "Licensing, Terms & Conditions",
-      "content": "[Licence](http://www.ga.gov.au/copyright)"
-    }
-  ],
-  "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-  "url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography_2014/MapServer/WMSServer",
+  "layers": "Railways_1,Railways_2,Railways_3,Railway_Stations,Railway_Crossing_Pts,Railway_Crossing_Lines",
+  "url": "http://services.ga.gov.au/gis/services/Topographic_Base_Map_WM/MapServer/WMSServer",
   "type": "wms",
   "opacity": 1.0,
-  <%- include ../../common/standard_properties %>,
-  "rectangle": [
-    "100.0",
-    "-44.0",
-    "159.0",
-    "-4.0"
-  ]
+  <% include ../../common/standard_properties %>,
+  <% include ../../common/home_camera_rectangle %>
 },
 {
   "id": "54071666",
   "name": "Roads",
-  "layers": "TOPO250K_Roads,Roads_1,Roads_2,Roads_3,Roads_4,TOPO250K_Road_Crossings",
-  "info": [
-    {
-      "name": "Licensing, Terms & Conditions",
-      "content": "[Licence](http://www.ga.gov.au/copyright)"
-    }
-  ],
-  "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-  "url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography_2014/MapServer/WMSServer",
+  "layers": "TOPO250K_Roads,Roads_1,Roads_2,Roads_3,Roads_4,TOPO250K_Road_Crossing_Lines",
+  "url": "http://services.ga.gov.au/gis/services/Topographic_Base_Map_WM/MapServer/WMSServer",
   "type": "wms",
   "opacity": 1.0,
-  <%- include ../../common/standard_properties %>,
-  "rectangle": [
-    "100.0",
-    "-44.0",
-    "159.0",
-    "-4.0"
-  ]
+  <% include ../../common/standard_properties %>,
+  <% include ../../common/home_camera_rectangle %>
 }
+

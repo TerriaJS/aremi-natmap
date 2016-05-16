@@ -1,0 +1,52 @@
+<div style='max-width: 40em'>
+  <h3><a href='{{link}}'>{{title}}</a></h3>
+  <h4>{{lead-organisation}}</h4>
+
+  <p>{{{abstract}}}</p>
+
+  <style type='text/css'>
+    table.arena-width tr td:nth-child(1) {
+      white-space: nowrap;
+      padding-right: 0.5em;
+    }
+  </style>
+
+  <p>
+    <table class='arena-width'>
+
+      <tr><td>Technology:           </td><td><strong>{{Technology}}</strong></td></tr>
+
+      {{#Project value ($)}}
+        <tr><td>Project value:      </td><td><strong>${{Project value ($)}}</strong></td></tr>
+      {{/Project value ($)}}
+      {{^Project value ($)}}
+        <tr><td>Project value:      </td><td><strong>-</strong></td></tr>
+      {{/Project value ($)}}
+
+      {{#ARENA Funding ($)}}
+        <tr><td>ARENA Funding:      </td><td><strong>${{ARENA Funding ($)}}</strong></td></tr>
+      {{/ARENA Funding ($)}}
+      {{^ARENA Funding ($)}}
+        <tr><td>ARENA Funding:      </td><td><strong>$0</strong></td></tr>
+      {{/ARENA Funding ($)}}
+
+      <tr><td>Start date:           </td><td><strong>{{startdate}}</strong></td></tr>
+
+      {{#finishdate}}
+        <tr><td>Finish date:        </td><td><strong>{{finishdate}}</strong></td></tr>
+      {{/finishdate}}
+
+      <tr><td>Project information page:</td><td><a href='{{link}}'>{{link}}</a></td></tr>
+
+    </table>
+  </p>
+
+    {{#finishdate-additional-information}}
+      <p>
+        <strong>Finish information:</strong>
+        <br/>
+        {{finishdate-additional-information}}
+      </p>
+    {{/finishdate-additional-information}}
+
+</div>

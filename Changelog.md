@@ -6,12 +6,29 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version of AREMI
+* Updated CER SGU data in the category "Electricity Inf. -> Generation -> Small Scale Installations" to be current as of May 2016.
+* Added the layer "Renewable Energy -> Bioenergy -> Western Australia -> Cereal straw" from the Department of Agriculture and Food, Western Australia.
+
+
+### Version 2016-05-11
+* Added the layers in the category "Infrastructure -> Liquid Fuel Facilities" from Geoscience Australia.
+* Added the layer "Infrastructure -> National Major Desalination Plants" from Geoscience Australia.
+* Migrated the layers "Infrastructure -> Damwalls" and "Renewable Energy -> Hydro -> Dam Walls" to the new "National Major Dam Walls" service from Geoscience Australia.
+* Added the layer "Renewable Energy -> Wave -> Hillshaded Bathymetry and Topography" from Geoscience Australia.
+* Migrated the Roads and Railways layers in the "Infrastructure -> Transport" to a new Geosience Australia service.
+* Added the layers in the category "Renewable Energy -> Bioenergy -> Victoria" from Sustainability Victoria.
+* Moved the "Boundaries -> Environmental areas" to be its own "Environment" top level category.
+* Added the layers in "Renewable Energy -> Bioenergy -> Queensland -> Sugarcane" from the Department of Science, Information Technology and Innovation of the State of Queensland Government.
+* Added the layer "Boundaries -> Native Title Determinations" from the National Native Title Tribunal.
+* Added the layer "Electricity Inf. -> Generation -> Diesel generators - South Australia" from RenewablesSA.
+* Added the layer "Renewable Energy -> ARENA Funded projects" with public data from ARENA about the projects they fund.
 * Added the layer "Topography -> Aerial/Satellite Imagery -> New South Wales" from Land and Property Information NSW.
 * Added the layers in the category "Boundaries -> Cadastre and Land Tenure -> By State -> Queensland" from the Queensland Government - Department of Natural Resources and Mines.
 * Added the layers in the category "Topography -> Water -> Floods -> Queensland" from the Queensland Government.
 * Added the layer "Topography -> Aerial/Satellite Imagery -> Queensland" from the Queensland Government - Department of Natural Resources and Mines.
 * Added the WPS functions and reference area for the "Renewable Energy -> Wave -> Australian Wave Energy Atlas" group.
 * Added an experimental CSV export service for clicked points to the "Renewable Energy -> Solar -> Solar Satellite DNI - 2014" layer.
+* Points shown for "Electricity Infrastructure -> Generation -> Current Power Generation - NEM" are now scaled by their value when it makes sense, and columns which don't make sense to choropleth by have been removed as options.
 
 
 ### Version 2016-04-22
