@@ -72,8 +72,17 @@ module.exports = function(devMode, hot) {
                 }
             }),
             new ExtractTextPlugin("nationalmap.css", {disable: hot, ignoreOrder: true})
-        ]
+        ],
+        resolve: {
+            alias: {}
+        }
     };
 
-    return configureWebpackForTerriaJS(path.dirname(require.resolve('terriajs/package.json')), config, devMode, hot, ExtractTextPlugin);
+    config.resolve.alias['terriajs-variables'] = require.resolve('../lib/Styles/variables.scss');
+
+    var config = configureWebpackForTerriaJS(path.dirname(require.resolve('terriajs/package.json')), config, devMode, hot, ExtractTextPlugin);
+
+    console.log(config.resolve);
+
+    return config;
 }
