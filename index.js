@@ -62,14 +62,6 @@ registerCustomComponentTypes(terria);
 
 terria.welcome = '<h3>AREMI - The Australian Renewable Energy Mapping Infrastructure</h3><div><p>We are focused on supporting Renewable Energy development in Australia by simplifying access to energy resource and infrastructure spatial data.</p><p>AREMI is developed by Data61, in partnership with Geoscience Australia and the Clean Energy Council, with funding support provided by the Australian Renewable Energy Agency (ARENA).</p></div>';
 
-const viewState = new ViewState({
-    terria: terria,
-    locationSearchProviders: [
-        new BingMapsSearchProviderViewModel({terria}),
-        new GazetteerSearchProviderViewModel({terria})
-    ]
-});
-
 // If we're running in dev mode, disable the built style sheet as we'll be using the webpack style loader.
 // Note that if the first stylesheet stops being nationalmap.css then this will have to change.
 if (process.env.NODE_ENV !== "production" && module.hot) {
@@ -90,6 +82,17 @@ terria.start({
 }).always(function() {
     try {
         configuration.bingMapsKey = terria.configParameters.bingMapsKey ? terria.configParameters.bingMapsKey : configuration.bingMapsKey;
+
+        const viewState = new ViewState({
+            terria: terria,
+            locationSearchProviders: [
+                new BingMapsSearchProviderViewModel({
+                    terria: terria,
+                    key: configuration.bingMapsKey
+                }),
+                new GazetteerSearchProviderViewModel({terria})
+            ]
+        });
 
         // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
         updateApplicationOnHashChange(terria, window);
