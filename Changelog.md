@@ -4,6 +4,9 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Coming up in the next release of AREMI
+* Renamed "Renewable Energy -> ARENA Funded projects" to ARENA Projects because some projects listed have not received ARENA funding.
+
 
 ### Version 2016-05-11
 * Added the layers in the category "Infrastructure -> Liquid Fuel Facilities" from Geoscience Australia.
