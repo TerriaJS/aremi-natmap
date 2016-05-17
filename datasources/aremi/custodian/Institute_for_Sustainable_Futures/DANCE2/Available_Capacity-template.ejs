@@ -1,0 +1,57 @@
+<div class='feature-info-panel-section-content-group feature-info-panel-section-content-kv-table'>
+<table><tr><td>Short name                          </td> <td>{{Short_name}}                 </td> </tr></table>
+<table><tr><td>Asset type                          </td> <td>{{Asset_type}}                 </td> </tr></table>
+<table><tr><td>Network                             </td> <td>{{Network}}                    </td> </tr></table>
+{{#Constraint_season}}
+<table><tr><td>Constraint season(s)                </td> <td>{{Constraint_season}}          </td> </tr></table>
+{{/Constraint_season}}
+<table><tr><td>Average demand growth rate (MVA/yr) </td> <td>{{Average_demand_growth}}      </td> </tr></table>
+{{#Commit_inv_year: }}
+<table><tr><td>Proposed investment year            </td> <td>{{Commit_inv_year: }} </td> </tr></table>
+{{/Commit_inv_year: }}
+{{#Proposed_investment_year: }}
+<table><tr><td>Commitment Year            </td> <td>{{Proposed_investment_year: }} </td> </tr></table>
+{{/Proposed_investment_year: }}
+{{#Curr}}
+<table><tr><td>Data Currency            </td> <td>{{Curr}} </td> </tr></table>
+{{/Curr}}
+{{#Next_update}}
+<table><tr><td>Next Update            </td> <td>{{Next_update}} </td> </tr></table>
+{{/Next_update}}
+
+<table class='feature-info-panel-section-pivot-table'>
+        <tr>
+            <td>Year</td>
+            <td>Available Capacity</td>
+        </tr>
+{{#availcapinfo}}
+        <tr>
+            <td>{{Year}}</td>
+            <td>{{Availcap}}</td>
+        </tr>
+{{/availcapinfo}}
+
+</table>
+<table><tr><td>Note</td><td></td></tr></table>
+<table>
+    <tr>
+        <td></td>
+        <td>
+            Depending on NSP network security standards the Available Capacity may or may not take account of potential
+            load transfers to delay constraints. Consult with distributors for further details
+        </td>
+    </tr>
+</table>
+
+{{#NSP_contact}}
+<table><tr><td>NSP Contact Email                </td> <td><a href='mailto:{{NSP_contact}}'>{{NSP_contact}}</a>          </td> </tr></table>
+{{/NSP_contact}}
+{{#NSP_phone}}
+<table><tr><td>NSP Contact Phone                </td> <td>{{NSP_phone}}          </td> </tr></table>
+{{/NSP_phone}}
+<br>
+{{#Weblink_DAPR}}<a href='{{Weblink_DAPR}}'>DAPR/TAPR web link</a><br>{{/Weblink_DAPR}}
+{{#Weblink_DSES}}<a href='{{Weblink_DSES}}'>DSES web link</a><br>{{/Weblink_DSES}}
+{{#NSP_info_link}}<a href='{{NSP_info_link}}'>NSP demand management information</a><br>{{/NSP_info_link}}
+{{#Link_to_download}}<a href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}
+</div>

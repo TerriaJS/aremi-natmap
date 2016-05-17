@@ -1,0 +1,48 @@
+
+<div class='feature-info-panel-section-content-group feature-info-panel-section-content-kv-table'>
+
+<table><tr><td>Network                             </td> <td> {{Network}}               </td> </tr></table>
+<table><tr><td>Asset name                          </td> <td> {{Asset_name}}            </td> </tr></table>
+<table><tr><td>Asset type                          </td> <td> {{Asset_type}}            </td> </tr></table>
+<table><tr><td>Annual deferral pool (m$/yr)        </td> <td> {{Annual_deferral}}       </td> </tr></table>
+<table><tr><td>% Available to DM providers (%)     </td> <td> {{Available_DM_perc}}     </td> </tr></table>
+<table><tr><td>Investment year                     </td> <td> {{Investment_year}}       </td> </tr></table>
+<table><tr><td>Total investment value (m$)         </td> <td> {{Total_investment}}      </td> </tr></table>
+<table><tr><td>Deferrable investment (m$)          </td> <td> {{Deferrable_investment}} </td> </tr></table>
+<table><tr><td>Constraint season(s)                </td> <td> {{Constraint_season}}     </td> </tr></table>
+<table><tr><td>Average demand growth rate (MVA/yr) </td> <td> {{Average_demand_growth}} </td> </tr></table>
+<table><tr><td>Reactive support requirements       </td> <td> {{Reactive_support}}      </td> </tr></table>
+<table><tr><td>Notes                               </td> <td>                           </td> </tr></table>
+<table><tr><td>                                    </td> <td> {{Check}}                 </td> </tr></table>
+
+<table class='feature-info-panel-section-pivot-table'>
+  <tbody>
+    <tr>
+      <td>Year</td>
+      <td>ADV ($/kVAyr)</td>
+      <td>Network Support (MVA)</td>
+    </tr>
+{{#adv}}
+    <tr>
+      <td>{{Year}}</td>
+      <td>{{ADV}}</td>
+      <td>{{Network_support}}</td>
+    </tr>
+{{/adv}}
+  </tbody>
+</table>
+
+<table><tr><td>Note</td> <td></td> </tr></table>
+<table>
+    <tr>
+        <td></td>
+        <td>
+            Depending on NSP network security standards the information shown may or may not take account
+            of potential load transfers to delay constraints. Consult with distributors for further details
+        </td>
+    </tr>
+</table>
+
+{{#NSP_info_link}}<a href='{{NSP_info_link}}'>NSP demand management information</a><br>{{/NSP_info_link}}
+{{#Link_to_download}}<a href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}
+</div>

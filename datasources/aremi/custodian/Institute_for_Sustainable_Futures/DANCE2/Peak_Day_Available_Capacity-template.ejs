@@ -1,0 +1,68 @@
+{{#value}}
+<div class='feature-info-panel-section-content-group feature-info-panel-section-content-kv-table'>
+<table><tr><td>Mapped asset </td> <td>                                </td> </tr></table>
+<table><tr><td>             </td> <td>{{Mapped_asset}}                </td> </tr></table>
+<hr>
+{{#Asset_name}}
+<table> <tr><td>Asset name                                      </td> <td>{{Asset_name}}                  </td> </tr></table>
+{{/Asset_name}}
+{{#Short_name}}
+<table> <tr><td>Short name                                      </td> <td>{{Short_name}}                  </td> </tr></table>
+{{/Short_name}}
+{{#Asset_type}}
+<table> <tr><td>Asset type                                      </td> <td>{{Asset_type}}                  </td> </tr></table>
+{{/Asset_type}}
+{{#Network}}
+<table> <tr><td>Network                                         </td> <td>{{Network}}                     </td> </tr></table>
+{{/Network}}
+{{#Constraint_season}}
+<table> <tr><td>Constraint season                               </td> <td>{{Constraint_season}}           </td> </tr></table>
+{{/Constraint_season}}
+{{#Proposed_investment_year}}
+<table> <tr><td>Propsed Investment Year                         </td> <td>{{Proposed_investment_year}}    </td> </tr></table>
+{{/Proposed_investment_year}}
+{{#Commit_inv_year}}
+<table> <tr><td>Commitment Year                                 </td> <td>{{Commit_inv_year}}             </td> </tr></table>
+{{/Commit_inv_year}}
+{{#Year_shown}}
+<table> <tr><td>Year shown in table                             </td> <td>{{Year_shown}}                  </td> </tr></table>
+{{/Year_shown}}
+{{#Asset_capacity}}
+<table> <tr><td>Asset_capacity (MVA)                            </td> <td>{{Asset_capacity}}              </td> </tr></table>
+{{/Asset_capacity}}
+{{#Maximum_capacity_exceedance}}
+<table> <tr><td>Maximum capacity exceedance in shown year (MVA) </td> <td>{{Maximum_capacity_exceedance}} </td> </tr></table>
+{{/Maximum_capacity_exceedance}}
+{{#MWh_exceedance}}
+<table> <tr><td>MWh exceedance in shown year (MWh)              </td> <td>{{MWh_exceedance}}              </td> </tr></table>
+{{/MWh_exceedance}}
+
+<hr>
+{{#HH.length}}
+<table class='feature-info-panel-section-pivot-table dance-peak-day-table'>
+    <tr>
+        <td>Hour                                        </td>
+        <td colspan='2'>Available Capacity              </td>
+        <td>Hourly exceedance share                     </td>
+    </tr>
+    <tr>
+        <td><small>Units</small>                        </td>
+        <td><small>MVA</small>                          </td>
+        <td><small>% of capacity</small>                </td>
+        <td><small>% of total annual exceedance</small> </td>
+    </tr>
+{{#HH}}
+    <tr>
+        <td>{{Hour}}                    </td>
+        <td>{{Available_capacity}}      </td>
+        <td>{{Available_capacity_perc}} </td>
+        <td>{{Hourly_exceedance_share}} </td>
+    </tr>
+{{/HH}}
+</table>
+{{/HH.length}}
+
+{{#NSP_info_link}}<a href='{{NSP_info_link}}'>NSP demand management information</a><br>{{/NSP_info_link}}
+{{#Link_to_download}}<a href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}
+</div>
+{{/value}}
