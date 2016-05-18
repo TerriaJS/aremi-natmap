@@ -1,0 +1,43 @@
+@import "./variables.scss";
+
+.ausglobe-title-aremi {
+    vertical-align: middle;
+    text-align: left;
+    color: #ffffff;
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 110%;
+    color: #02ACCC;
+    padding: 0;
+
+    strong {
+        font-weight: 700;
+        font-size: 14pt;
+    }
+
+    small {
+        font-size: 11pt;
+        font-weight: 500;
+    }
+
+    span a {
+        font-size: 7pt;
+        font-weight: 500;
+        color: gray;
+    }
+
+    .left {
+        max-width: $work-bench-width - 90px;
+        float: left;
+        padding-bottom: 10px;
+    }
+
+    .right {
+        float: right;
+        padding-top: 10px;
+    }
+}
+
+.map-progress-bar {
+    background: rgba(2, 172, 204, 0.8);
+}
