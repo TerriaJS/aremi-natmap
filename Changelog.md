@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### Coming up in the next release of AREMI
+* Added a link to the new prototype user interface so that people can try it out.
 * Added the layer "Renewable Energy -> Bioenergy -> New South Wales -> Harvest Residues Planted Softwoods Bathurst" from the Department of Primary Industries - New South Wales Government.
 * Renamed "Renewable Energy -> ARENA Funded projects" to ARENA Projects because some projects listed have not received ARENA funding.
 
