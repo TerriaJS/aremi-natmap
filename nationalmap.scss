@@ -1,6 +1,5 @@
 @import "~terriajs/lib/Sass/global/normalize";
 
-@import "~terriajs/lib/Sass/global/variables";
 @import "~terriajs/lib/Sass/global/icons";
 @import "~terriajs/lib/Sass/global/mixins";
 @import "~terriajs/lib/Sass/partial/base";
@@ -37,6 +36,8 @@
 @import "~terriajs/lib/Sass/component/analytics";
 
 @import "~terriajs/lib/Sass/print";
+
+@import "./lib/Styles/AREMI.scss";
 
 
 .panel--getting-started .panel-content{
@@ -77,4 +78,3 @@
         display: block;
     }
 }
-

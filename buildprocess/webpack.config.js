@@ -82,7 +82,5 @@ module.exports = function(devMode, hot) {
 
     var config = configureWebpackForTerriaJS(path.dirname(require.resolve('terriajs/package.json')), config, devMode, hot, ExtractTextPlugin);
 
-    console.log(config.resolve);
-
     return config;
 }

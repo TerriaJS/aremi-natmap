@@ -16,8 +16,8 @@ require('./nationalmap.scss');
 // A very old browser (e.g. Internet Explorer 8) will fail on requiring-in many of the modules below.
 // 'ui' is the name of the DOM element that should contain the error popup if the browser is not compatible
 //var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCompatibility');
-
 // checkBrowserCompatibility('ui');
+
 
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 var GoogleUrlShortener = require('terriajs/lib/Models/GoogleUrlShortener');
@@ -60,8 +60,6 @@ var terria = new Terria(terriaOptions);
 // insert your custom version of the code in the registerCustomComponentTypes function here instead.
 registerCustomComponentTypes(terria);
 
-terria.welcome = '<h3>AREMI - The Australian Renewable Energy Mapping Infrastructure</h3><div><p>We are focused on supporting Renewable Energy development in Australia by simplifying access to energy resource and infrastructure spatial data.</p><p>AREMI is developed by Data61, in partnership with Geoscience Australia and the Clean Energy Council, with funding support provided by the Australian Renewable Energy Agency (ARENA).</p></div>';
-
 // If we're running in dev mode, disable the built style sheet as we'll be using the webpack style loader.
 // Note that if the first stylesheet stops being nationalmap.css then this will have to change.
 if (process.env.NODE_ENV !== "production" && module.hot) {
@@ -92,6 +90,12 @@ terria.start({
                 }),
                 new GazetteerSearchProviderViewModel({terria})
             ]
+        });
+
+        viewState.notifications.push({
+            title: 'Aremi is a spatial data platform for the Australian Energy industry',
+            message: 'We are focused on supporting Developer, Financiers, and Policy Makers in evaluating spatial renewable energy information.\n\nAREMI is funded by the *Australian Renewable Energy Agency* and developed by *Data61* in partnership with *GeoScience Australia* and the *Clean Energy Council*.',
+            hideUi: true
         });
 
         // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
