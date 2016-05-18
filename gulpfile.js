@@ -10,7 +10,7 @@ var path = require('path');
 
 gulp.task('build', ['merge-datasources', 'build-app']);
 gulp.task('release', ['merge-datasources', 'release-app']);
-gulp.task('watch', ['watch-terriajs-assets', 'watch-datasources', 'watch-app']);
+gulp.task('watch', ['watch-datasource-aremi', 'watch-app']);
 gulp.task('default', ['lint', 'build']);
 
 var watchOptions = {
