@@ -37,7 +37,6 @@ checkBrowserCompatibility('ui');
 
 var knockout = require('terriajs-cesium/Source/ThirdParty/knockout');
 var defined = require('terriajs-cesium/Source/Core/defined');
-var fs = require('fs');
 
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
 var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
@@ -217,7 +216,7 @@ terria.start({
                 callback: function() {
                     PopupMessageViewModel.open(ui, {
                         title: 'Related Maps',
-                        message: require('fs').readFileSync(__dirname + '/lib/Views/RelatedMaps.html', 'utf8'),
+                        message: require('./lib/Views/RelatedMaps.html'),
                         width: 600,
                         height: 430
                     });
