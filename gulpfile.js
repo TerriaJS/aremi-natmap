@@ -86,18 +86,13 @@ gulp.task('copy-editor', function() {
         .pipe(gulp.dest('./wwwroot/editor'));
 });
 
-
-gulp.task('watch-datasources', ['merge-datasources'], function() {
-    return gulp.watch([
-        'datasources/*.json',
-        'datasources/00_National_Data_Sets/*.json',
-        'datasources/aremi/*.json'
-    ], ['merge-datasources']);
-});
-
 gulp.task('styleguide', function(done) {
     var childExec = require('child_process').exec;
     childExec('./node_modules/kss/bin/kss-node ./node_modules/terriajs/lib/Sass ./wwwroot/styleguide --template ./wwwroot/styleguide-template --css ./../build/nationalmap.css', undefined, done);
+});
+
+gulp.task('watch-datasource-aremi', function() {
+    return gulp.watch('datasources/aremi/*.json', [ 'merge-datasources-aremi' ]);
 });
 
 gulp.task('lint', function() {
@@ -211,6 +206,8 @@ function combine(object1, object2) {
         return soFar;
     }, {});
 }
+
+gulp.task('default', ['lint', 'build']);
 
 function onError(e) {
     if (e.code === 'EMFILE') {

@@ -16,8 +16,8 @@ require('./nationalmap.scss');
 // A very old browser (e.g. Internet Explorer 8) will fail on requiring-in many of the modules below.
 // 'ui' is the name of the DOM element that should contain the error popup if the browser is not compatible
 //var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCompatibility');
-
 // checkBrowserCompatibility('ui');
+
 
 var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
 var GoogleUrlShortener = require('terriajs/lib/Models/GoogleUrlShortener');

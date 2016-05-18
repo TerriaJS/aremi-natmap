@@ -4,6 +4,9 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Coming up in the next release of AREMI
+* Renamed "Renewable Energy -> ARENA Funded projects" to ARENA Projects because some projects listed have not received ARENA funding.
+
 
 ### In the next version of AREMI
 * Updated CER SGU data in the category "Electricity Inf. -> Generation -> Small Scale Installations" to be current as of May 2016.
