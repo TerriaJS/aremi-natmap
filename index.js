@@ -340,9 +340,9 @@ terria.start({
       if(defined(disclaimer.enabled) && disclaimer.enabled) {
           var message = '';
           if (location.hostname.indexOf('nationalmap.gov.au') === -1) {
-            message += fs.readFileSync(__dirname + '/lib/Views/DevelopmentDisclaimer.html', 'utf8');
+            message += require('./lib/Views/DevelopmentDisclaimer.html');
           }
-          message += fs.readFileSync(__dirname + '/lib/Views/GlobalDisclaimer.html', 'utf8');
+          message += require('./lib/Views/GlobalDisclaimer.html');
           var options = {
               title: defined(disclaimer.title) ? disclaimer.title : 'Disclaimer',
               confirmText: "I Agree",
@@ -366,6 +366,7 @@ terria.start({
     // Add the survey link
     var surveyLink = 'https://docs.google.com/forms/d/1ZQkNgSWA2mmxlsEICxlm7cOhJ2xVxRGScsvJ83i0F3M/viewform';
     var contributeLink = 'http://goo.gl/forms/smvJVsRXPG';
+    var newUiLink = 'http://newui.aremi.nicta.com.au/renewables/';
     var surveyContainer = document.createElement("div");
     document.querySelector(".explorer-panel-body-pane").appendChild(surveyContainer);
     surveyContainer.innerHTML =
@@ -373,6 +374,7 @@ terria.start({
         <p><a target="_blank" href="' + surveyLink + '">Give Feedback</a></p>\
         <p>This site is still in development, so please <a target="_blank" href="' + surveyLink + '">tell us what you think</a>. Our survey will take 5 mins.</p>\
         <p><a target="_blank" href="' + contributeLink + '">Contribute Data</a></p>\
+        <p>We are developing a new user experience for AREMI, would you like to <a target="_blank" href="' + newUiLink + '">try it out?</a></p>\
       </div>';
 
     MapProgressBarViewModel.create({
