@@ -18,7 +18,7 @@ var gutil = require('gulp-util');
 // var watchify = require('watchify');
 // var NpmImportPlugin = require('less-plugin-npm-import');
 // var jsoncombine = require('gulp-jsoncombine');
-// var ejs = require('ejs');
+var ejs = require('ejs');
 // var child_exec = require('child_process').exec;  // child_process is built in to node
 // var generateSchema = require('generate-terriajs-schema');
 //
@@ -174,6 +174,7 @@ gulp.task('write-version', function() {
 // AREMI uses the EJS template engine to build the AREMI init file
 gulp.task('merge-datasources-aremi', function() {
     var fn = 'datasources/aremi/root.ejs';
+    var fs = require('fs');
     var template = fs.readFileSync(fn,'utf8');
     // use EJS to process
     var result = ejs.render(template, null, {filename: fn});
