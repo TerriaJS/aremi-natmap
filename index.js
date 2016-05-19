@@ -373,7 +373,6 @@ terria.start({
       '<div class="feedback-request">\
         <p>We are developing a new user interface for AREMI, would you like to <a target="_blank" href="' + newUiLink + '">try it out?</a></p>\
         <p><a target="_blank" href="' + surveyLink + '">Give Feedback</a></p>\
-        <p>This site is still in development, so please <a target="_blank" href="' + surveyLink + '">tell us what you think</a>. Our survey will take 5 mins.</p>\
         <p><a target="_blank" href="' + contributeLink + '">Contribute Data</a></p>\
       </div>';
 
