@@ -6,6 +6,7 @@
 var fs = require('fs');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+var ejs = require('ejs');
 var path = require('path');
 
 gulp.task('build', ['merge-datasources', 'build-app']);
@@ -126,6 +127,7 @@ gulp.task('merge-datasources', function() {
     var ejs = require('ejs');
 
     var fn = 'datasources/aremi/root.ejs';
+    var fs = require('fs');
     var template = fs.readFileSync(fn,'utf8');
     // use EJS to process
     var result = ejs.render(template, null, {filename: fn});
