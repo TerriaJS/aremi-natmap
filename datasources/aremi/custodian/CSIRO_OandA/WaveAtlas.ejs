@@ -1,33 +1,37 @@
 {
   "id": "ab852700",
-  "name": "Analytics area",
+  "name": "Analysis Study Area",
+  "description": "Add this layer to show where it is possible to use the analytical functions of the Australian Wave Energy Atlas - the analytics will only function inside the highlighted area.",
   "layers": "awavea-interim:outline_ww3.aus_4m",
   "url": "http://oa-gis.csiro.au/geoserver/ows",
   "type": "wms",
-  "ignoreUnknownTileErrors": true,
   "legendUrl": "",
-  "clipToRectangle": true,
-  "info": [
-    {
-      "name": "Data Description",
-      "content": "Add this layer to show where it is possible to use the analytical functions of the Australian Wave Energy Atlas - the analytics will only function inside the highlighted area."
-    }
-  ]
-},
-{
-  "id": "b766d7c6",
-  "name": "Analytical functions",
-  "type": "wps-getCapabilities",
-  "url": "http://oa-gis.csiro.au/wps"
+  "rectangle": [
+    109.0,
+    -48.0,
+    158.0,
+    -5.0
+  ],
+  <% include ../../common/standard_properties %>
 },
 {
   "id": "c2f37440",
-  "name": "Wave Model and Multiple Use layers",
+  "name": "Wave Model and Context Layers",
+  "description": "This group contains the wave model layers and other layers that can be used for decisions relating to wave energy devices.",
   "url": "http://waveatlas.marine.csiro.au/geonetwork/srv/eng/csw",
   "type": "csw",
-   "domainSpecification": {
-     "domainPropertyName": "awavea",
-     "hierarchySeparator": " | ",
-     "queryPropertyName": "subject"
-   }
+  "domainSpecification": {
+    "domainPropertyName": "awavea",
+    "hierarchySeparator": " | ",
+    "queryPropertyName": "subject"
+  }
+},
+{
+  "id": "3732cbc5",
+  "name": "Analysis Tools",
+  "description": "This group contains the analysis tools that operate on wave data.",
+  "url": "http://waveatlas.marine.csiro.au/geonetwork/srv/eng/csw",
+  "type": "csw",
+  "includeWps": true,
+  "includeWms": false
 }
