@@ -289,7 +289,7 @@ gulp.task('make-package', function() {
     var fs = require('fs-extra');
     var spawnSync = require('child_process').spawnSync;
 
-    var packageName = argv.packageName || spawnSync('git', ['describe']).stdout.toString().trim();
+    var packageName = argv.packageName || (process.env.npm_package_name + '-' + spawnSync('git', ['describe']).stdout.toString().trim());
     var packagesDir = path.join('.', 'deploy', 'packages');
 
     if (!fs.existsSync(packagesDir)) {
@@ -358,13 +358,6 @@ function mergeConfigs(original, override) {
 
         if (Array.isArray(override[name])) {
             result[name] = override[name];
-            // var a = original[name].slice();
-            // override[name].forEach(function(item) {
-            //     if (original[name].indexOf(item) < 0) {
-            //         a.push(item);
-            //     }
-            // });
-            // result[name] = a;
         } else if (typeof override[name] === 'object') {
             result[name] = mergeConfigs(original[name], override[name]);
         } else {
