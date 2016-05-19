@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### Coming up in the next release of AREMI
+* Moved the layers "Renewable Energy -> Bioenergy -> Queensland -> Sugarcane" down to "Renewable Energy -> Bioenergy -> Sugarcane" as they also include NSW data.
 * Added a link to the new prototype user interface so that people can try it out.
 * Added the layer "Renewable Energy -> Bioenergy -> New South Wales -> Harvest Residues Planted Softwoods Bathurst" from the Department of Primary Industries - New South Wales Government.
 * Updated to the latest [NationalMap version 2016-05-13c](https://github.com/NICTA/nationalmap/blob/2016-05-13c/CHANGES.md).
