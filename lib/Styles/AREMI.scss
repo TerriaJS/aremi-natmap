@@ -1,3 +1,37 @@
+$isf-max-width: 400px;
+dl.isf-info {
+  text-align: right;
+  width: 100%;
+  max-width: $isf-max-width;
+  @extend .clearfix;
+
+  dt {
+    float: left;
+    text-align:left;
+    font-weight: bold;
+    padding-right: 10px;
+    margin-top: 3px;
+    clear: left;
+    max-width: 50%;
+    clear:both;
+  }
+  dd {
+     float:right;
+     text-align:right;
+     font-weight: lighter;
+     margin-top: 3px;
+     max-width: 90%;
+  }
+}
+
+.isf-note {
+  max-width: $isf-max-width;
+  font-weight: lighter;
+}
+
+.isf-table {
+
+}
 
 .ausglobe-title-aremi {
     vertical-align: middle;

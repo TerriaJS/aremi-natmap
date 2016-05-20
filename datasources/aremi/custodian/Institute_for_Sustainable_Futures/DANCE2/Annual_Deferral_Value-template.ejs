@@ -1,48 +1,52 @@
+<dl class='isf-info'>
+  <dt>Network                             </dt><dd> {{Network}}              </dd>
+  <dt>Asset name                          </dt><dd> {{Asset_name}}            </dd>
+  <dt>Asset type                          </dt><dd> {{Asset_type}}            </dd>
+  <dt>Annual deferral pool (m$/yr)        </dt><dd> {{Annual_deferral}}       </dd>
+  <dt>% Available to DM providers (%)     </dt><dd> {{Available_DM_perc}}     </dd>
+  <dt>Investment year                     </dt><dd> {{Investment_year}}       </dd>
+  <dt>Total investment value (m$)         </dt><dd> {{Total_investment}}      </dd>
+  <dt>Deferrable investment (m$)          </dt><dd> {{Deferrable_investment}} </dd>
+  <dt>Constraint season(s)                </dt><dd> {{Constraint_season}}     </dd>
+  <dt>Average demand growth rate (MVA/yr) </dt><dd> {{Average_demand_growth}} </dd>
+  <dt>Reactive support requirements       </dt><dd> {{Reactive_support}}      </dd>
+  <dt>Notes                               </dt><dd> {{Check}}                 </dd>
+</dl>
 
-<div class='feature-info-panel-section-content-group feature-info-panel-section-content-kv-table'>
+<br>
 
-<table><tr><td>Network                             </td> <td> {{Network}}               </td> </tr></table>
-<table><tr><td>Asset name                          </td> <td> {{Asset_name}}            </td> </tr></table>
-<table><tr><td>Asset type                          </td> <td> {{Asset_type}}            </td> </tr></table>
-<table><tr><td>Annual deferral pool (m$/yr)        </td> <td> {{Annual_deferral}}       </td> </tr></table>
-<table><tr><td>% Available to DM providers (%)     </td> <td> {{Available_DM_perc}}     </td> </tr></table>
-<table><tr><td>Investment year                     </td> <td> {{Investment_year}}       </td> </tr></table>
-<table><tr><td>Total investment value (m$)         </td> <td> {{Total_investment}}      </td> </tr></table>
-<table><tr><td>Deferrable investment (m$)          </td> <td> {{Deferrable_investment}} </td> </tr></table>
-<table><tr><td>Constraint season(s)                </td> <td> {{Constraint_season}}     </td> </tr></table>
-<table><tr><td>Average demand growth rate (MVA/yr) </td> <td> {{Average_demand_growth}} </td> </tr></table>
-<table><tr><td>Reactive support requirements       </td> <td> {{Reactive_support}}      </td> </tr></table>
-<table><tr><td>Notes                               </td> <td>                           </td> </tr></table>
-<table><tr><td>                                    </td> <td> {{Check}}                 </td> </tr></table>
-
-<table class='feature-info-panel-section-pivot-table'>
-  <tbody>
-    <tr>
-      <td>Year</td>
-      <td>ADV ($/kVAyr)</td>
-      <td>Network Support (MVA)</td>
-    </tr>
+<chart column-names='Year,adv,net_support'
+       x-column='Year'
+       y-columns='adv,net_support'
+       column-names='Year,ADV,Network Support'
+       column-units=',$/kVAyr,MVA'
+>
+Year,adv,net_support\n
 {{#adv}}
-    <tr>
-      <td>{{Year}}</td>
-      <td>{{ADV}}</td>
-      <td>{{Network_support}}</td>
-    </tr>
+{{Year}},{{ADV}},{{Network_support}}\n
 {{/adv}}
-  </tbody>
-</table>
+</chart>
 
-<table><tr><td>Note</td> <td></td> </tr></table>
-<table>
-    <tr>
-        <td></td>
-        <td>
-            Depending on NSP network security standards the information shown may or may not take account
-            of potential load transfers to delay constraints. Consult with distributors for further details
-        </td>
-    </tr>
+
+<table class='isf-table'>
+  <tr>
+    <th>Year</th>
+    <th>ADV ($/kVAyr)</th>
+    <th>Network Support (MVA)</th>
+  </tr>
+{{#adv}}
+  <tr>
+    <td>{{Year}}</td>
+    <td>{{ADV}}</td>
+    <td>{{Network_support}}</td>
+  </tr>
+{{/adv}}
 </table>
+<div class='isf-note'>
+  Depending on NSP network security standards the information shown may or may not take
+  account of potential load transfers to delay constraints. Consult with distributors for
+  further details
+</div>
 
 {{#NSP_info_link}}<a href='{{NSP_info_link}}'>NSP demand management information</a><br>{{/NSP_info_link}}
 {{#Link_to_download}}<a href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}
-</div>
