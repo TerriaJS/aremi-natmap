@@ -5,40 +5,6 @@
 // This matters if ever we have gulp tasks run from npm, especially post-install ones.
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-// var browserify = require('browserify');
-// var jshint = require('gulp-jshint');
-// var less = require('gulp-less');
-// var uglify = require('gulp-uglify');
-// var rename = require('gulp-rename');
-// var sourcemaps = require('gulp-sourcemaps');
-// var exorcist = require('exorcist');
-// var buffer = require('vinyl-buffer');
-// var transform = require('vinyl-transform');
-// var source = require('vinyl-source-stream');
-// var watchify = require('watchify');
-// var NpmImportPlugin = require('less-plugin-npm-import');
-// var jsoncombine = require('gulp-jsoncombine');
-var ejs = require('ejs');
-// var child_exec = require('child_process').exec;  // child_process is built in to node
-// var generateSchema = require('generate-terriajs-schema');
-//
-// var appJSName = 'nationalmap.js';
-// var appCssName = 'nationalmap.css';
-// var specJSName = 'nationalmap-tests.js';
-// var appEntryJSName = './index.js';
-// var terriaJSSource = 'node_modules/terriajs/wwwroot';
-// var terriaJSDest = 'wwwroot/build/TerriaJS';
-// var testGlob = './test/**/*.js';
-//
-// var watching = false; // if we're in watch mode, we try to never quit.
-// var watchOptions = { poll:1000, interval: 1000 }; // time between watch intervals. OSX hates short intervals. Different versions of Gulp use different options.
-//
-// // Create the build directory, because browserify flips out if the directory that might
-// // contain an existing source map doesn't exist.
-//
-// if (!fs.existsSync('wwwroot/build')) {
-//     fs.mkdirSync('wwwroot/build');
-// }
 var path = require('path');
 
 gulp.task('build', ['build-css', 'merge-datasources-aremi', 'copy-terriajs-assets', 'build-app']);
@@ -173,6 +139,8 @@ gulp.task('write-version', function() {
 
 // AREMI uses the EJS template engine to build the AREMI init file
 gulp.task('merge-datasources-aremi', function() {
+    var fs = require('fs');
+    var ejs = require('ejs');
     var fn = 'datasources/aremi/root.ejs';
     var fs = require('fs');
     var template = fs.readFileSync(fn,'utf8');
