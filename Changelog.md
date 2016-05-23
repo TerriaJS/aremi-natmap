@@ -5,16 +5,14 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
-### Coming up in the next release of AREMI
+### Version 2016-05-23
+* Added the layer "Renewable Energy -> Wind -> WAsP LIB files" from DNV GL.
 * Updated "Electricity Inf. -> Generation -> Diesel generators - South Australia" to use data from the Data.SA CKAN server.
 * Moved the layers "Renewable Energy -> Bioenergy -> Queensland -> Sugarcane" down to "Renewable Energy -> Bioenergy -> Sugarcane" as they also include NSW data.
 * Added a link to the new prototype user interface so that people can try it out.
 * Added the layer "Renewable Energy -> Bioenergy -> New South Wales -> Harvest Residues Planted Softwoods Bathurst" from the Department of Primary Industries - New South Wales Government.
 * Updated to the latest [NationalMap version 2016-05-13c](https://github.com/NICTA/nationalmap/blob/2016-05-13c/CHANGES.md).
 * Renamed "Renewable Energy -> ARENA Funded projects" to ARENA Projects because some projects listed have not received ARENA funding.
-
-
-### In the next version of AREMI
 * Updated CER SGU data in the category "Electricity Inf. -> Generation -> Small Scale Installations" to be current as of May 2016.
 * Added the layer "Renewable Energy -> Bioenergy -> Western Australia -> Cereal straw" from the Department of Agriculture and Food, Western Australia.
 
