@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### Coming up in the next release of AREMI
+* Updated "Electricity Inf. -> Generation -> Diesel generators - South Australia" to use data from the Data.SA CKAN server.
 * Moved the layers "Renewable Energy -> Bioenergy -> Queensland -> Sugarcane" down to "Renewable Energy -> Bioenergy -> Sugarcane" as they also include NSW data.
 * Added a link to the new prototype user interface so that people can try it out.
 * Added the layer "Renewable Energy -> Bioenergy -> New South Wales -> Harvest Residues Planted Softwoods Bathurst" from the Department of Primary Industries - New South Wales Government.

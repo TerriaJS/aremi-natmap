@@ -97,9 +97,7 @@ registerKnockoutBindings();
 registerCatalogMembers();
 
 terriaOptions.analytics = new GoogleAnalytics();
-
-// use 3D Terrain by default until we can fix terrain switching code
-// terriaOptions.viewerMode = ViewerMode.CesiumEllipsoid;
+terriaOptions.viewerMode = ViewerMode.CesiumEllipsoid;
 
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
 var terria = new Terria(terriaOptions);
