@@ -5,6 +5,10 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
+### In the next version of AREMI:
+* Added a prototype with layers from the ACT MapI.
+
+
 ### Version 2016-05-23
 * Added the layer "Renewable Energy -> Wind -> WAsP LIB files" from DNV GL.
 * Updated "Electricity Inf. -> Generation -> Diesel generators - South Australia" to use data from the Data.SA CKAN server.
