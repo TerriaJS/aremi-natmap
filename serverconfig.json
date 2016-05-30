@@ -1,7 +1,6 @@
 {
     "allowProxyFor" : [
         "gov.au",
-        "static.aremi.nicta.com.au",
         "noaa.gov",
         "nasa.gov",
         "aemo.com.au",
@@ -17,6 +16,6 @@
         "www.dptiapps.com.au",
         "nci.org.au",
         "aodn.org.au",
-        "imos.org.au"
+        "www.googleapis.com"
     ]
 }

@@ -32,6 +32,7 @@ var registerCustomComponentTypes = require('terriajs/lib/Models/registerCustomCo
 var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
 var Terria = require('terriajs/lib/Models/Terria');
 var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateApplicationOnHashChange');
+var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
 var ViewState = require('terriajs/lib/ReactViewModels/ViewState').default;
 import defined from 'terriajs-cesium/Source/Core/defined';
@@ -52,6 +53,7 @@ registerCatalogMembers();
 registerAnalytics();
 
 terriaOptions.analytics = new GoogleAnalytics();
+terriaOptions.viewerMode = ViewerMode.CesiumEllipsoid;
 
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
 var terria = new Terria(terriaOptions);
