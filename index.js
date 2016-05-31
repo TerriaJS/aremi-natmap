@@ -37,7 +37,6 @@ checkBrowserCompatibility('ui');
 
 var knockout = require('terriajs-cesium/Source/ThirdParty/knockout');
 var defined = require('terriajs-cesium/Source/Core/defined');
-var fs = require('fs');
 
 var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
 var TerriaViewer = require('terriajs/lib/ViewModels/TerriaViewer');
@@ -217,7 +216,7 @@ terria.start({
                 callback: function() {
                     PopupMessageViewModel.open(ui, {
                         title: 'Related Maps',
-                        message: require('fs').readFileSync(__dirname + '/lib/Views/RelatedMaps.html', 'utf8'),
+                        message: require('./lib/Views/RelatedMaps.html'),
                         width: 600,
                         height: 430
                     });
@@ -341,9 +340,9 @@ terria.start({
       if(defined(disclaimer.enabled) && disclaimer.enabled) {
           var message = '';
           if (location.hostname.indexOf('nationalmap.gov.au') === -1) {
-            message += fs.readFileSync(__dirname + '/lib/Views/DevelopmentDisclaimer.html', 'utf8');
+            message += require('./lib/Views/DevelopmentDisclaimer.html');
           }
-          message += fs.readFileSync(__dirname + '/lib/Views/GlobalDisclaimer.html', 'utf8');
+          message += require('./lib/Views/GlobalDisclaimer.html');
           var options = {
               title: defined(disclaimer.title) ? disclaimer.title : 'Disclaimer',
               confirmText: "I Agree",
@@ -367,12 +366,13 @@ terria.start({
     // Add the survey link
     var surveyLink = 'https://docs.google.com/forms/d/1ZQkNgSWA2mmxlsEICxlm7cOhJ2xVxRGScsvJ83i0F3M/viewform';
     var contributeLink = 'http://goo.gl/forms/smvJVsRXPG';
+    var newUiLink = 'http://newui.aremi.nicta.com.au/renewables/';
     var surveyContainer = document.createElement("div");
     document.querySelector(".explorer-panel-body-pane").appendChild(surveyContainer);
     surveyContainer.innerHTML =
       '<div class="feedback-request">\
+        <p>We are developing a new user interface for AREMI, would you like to <a target="_blank" href="' + newUiLink + '">try it out?</a></p>\
         <p><a target="_blank" href="' + surveyLink + '">Give Feedback</a></p>\
-        <p>This site is still in development, so please <a target="_blank" href="' + surveyLink + '">tell us what you think</a>. Our survey will take 5 mins.</p>\
         <p><a target="_blank" href="' + contributeLink + '">Contribute Data</a></p>\
       </div>';
 

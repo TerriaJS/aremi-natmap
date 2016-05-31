@@ -1,17 +1,16 @@
 {
     "allowProxyFor" : [
         "gov.au",
-        "static.aremi.nicta.com.au",
         "noaa.gov",
         "nasa.gov",
         "aemo.com.au",
         "aurin.org.au",
         "nicta.com.au",
         "csiro.au",
-        "aurin.org.au",
         "mapsengine.google.com",
         "aodn.org.au",
         "imos.org.au",
-        "nci.org.au"
+        "nci.org.au",
+        "www.googleapis.com"
     ]
 }
