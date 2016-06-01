@@ -82,6 +82,7 @@
           "type": "group",
           "items": [
             <% include custodian/DNVGL/Wind %>,
+            <% include custodian/DNVGL/WAsP-LIB-files %>,
           ]
         },
         {
@@ -376,6 +377,13 @@
         <% include custodian/Bureau_of_Meteorology/Solar_Station_Observations %>,
         <% var ssTmyId = "17198a4e" %>
         <% include custodian/Data61/Solar_Station_Typical_Meteorological_Year %>
+      ]
+    },
+    {
+      "name": "ACT (beta)",
+      "type": "group",
+      "items": [
+        <% include custodian/ACT_Environment_and_Planning_Directorate/ACTmapi %>
       ]
     }
   ]

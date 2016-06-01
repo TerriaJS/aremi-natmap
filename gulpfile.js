@@ -6,7 +6,6 @@
 var fs = require('fs');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var ejs = require('ejs');
 var path = require('path');
 
 gulp.task('build', ['merge-datasources', 'build-app']);
@@ -93,7 +92,7 @@ gulp.task('styleguide', function(done) {
 });
 
 gulp.task('watch-datasource-aremi', function() {
-    return gulp.watch('datasources/aremi/*.json', [ 'merge-datasources-aremi' ]);
+    return gulp.watch('datasources/aremi/*.json', [ 'merge-datasources' ]);
 });
 
 gulp.task('lint', function() {
@@ -124,8 +123,8 @@ gulp.task('write-version', function() {
 
 // AREMI uses the EJS template engine to build the AREMI init file
 gulp.task('merge-datasources', function() {
+    var fs = require('fs');
     var ejs = require('ejs');
-
     var fn = 'datasources/aremi/root.ejs';
     var fs = require('fs');
     var template = fs.readFileSync(fn,'utf8');
