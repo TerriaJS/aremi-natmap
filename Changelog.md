@@ -6,7 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version of AREMI:
-* Added a prototype with layers from the ACT MapI.
+*
 
 
 ### Version 2016-05-23
