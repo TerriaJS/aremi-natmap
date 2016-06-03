@@ -1,21 +1,27 @@
 {
     "allowProxyFor" : [
-        "gov.au",
-        "noaa.gov",
-        "nasa.gov",
+        "adelaidecitycouncil.com",
         "aemo.com.au",
-        "aurin.org.au",
-        "nicta.com.au",
-        "csiro.au",
+        "aodn.org.au",
         "arcgis.com",
         "argo.jcommops.org",
-        "www.abc.net.au",
+        "aurin.org.au",
+        "csiro.au",
+        "gov.au",
         "mapsengine.google.com",
-        "s3-ap-southeast-2.amazonaws.com",
-        "adelaidecitycouncil.com",
-        "www.dptiapps.com.au",
+        "nasa.gov",
         "nci.org.au",
-        "aodn.org.au",
+        "nicta.com.au",
+        "noaa.gov",
+        "s3-ap-southeast-2.amazonaws.com",
+        "www.abc.net.au",
+        "www.dptiapps.com.au",
         "www.googleapis.com"
-    ]
+    ],
+    "feedback": {
+        "userAgent": "TerriaBot (TerriaJS Feedback)",
+        "issuesUrl": "https://api.github.com/repos/TerriaJS/NationalMap-Feedback/issues",
+        "accessToken": "FEEDBACK_ACCESS_TOKEN"
+    },
+    "trustProxy": true
 }

@@ -4,6 +4,7 @@
         "proxy/_60s/http://static.aremi.nicta.com.au/init.json"
     ],
     "parameters": {
+        "feedbackUrl": "feedback",
         "corsProxyBaseUrl": "proxy/",
         "conversionServiceBaseUrl": "convert/",
         "proj4ServiceBaseUrl": "proj4/",
