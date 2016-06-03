@@ -1,29 +1,29 @@
-<div class='feature-info-panel-section-content-group feature-info-panel-section-content-kv-table'>
-<table><tr><td>Short name                                             </td><td>{{Short_name}}               </td> </tr></table>
-<table><tr><td>Asset_type                                             </td><td>{{Asset_type}}               </td> </tr></table>
-<table><tr><td>Network                                                </td><td>{{Network}}                  </td> </tr></table>
-<table><tr><td>Augmentation investment (m$)                           </td><td>{{Augmentation}}             </td> </tr></table>
-<table><tr><td>Replacement/refurbishment investment (m$)              </td><td>{{Replacement/refurbishment}}</td> </tr></table>
-<table><tr><td>Connections investment (m$)                            </td><td>{{Connections}}              </td> </tr></table>
-<table><tr><td>OPEX investment (m$)                                   </td><td>{{OPEX}}                     </td> </tr></table>
-<table><tr><td>Other investment (m$)                                  </td><td>{{Other investment}}         </td> </tr></table>
-<table><tr><td>Total investment (m$)                                  </td><td>{{Total_investment}}         </td> </tr></table>
-<table><tr><td>Deferrable amount (m$)                                 </td><td>{{Deferrable_amount}}        </td> </tr></table>
-<table><tr><td>Proposed investment year                               </td><td>{{Proposed_investment_year}} </td> </tr></table>
-<table><tr><td>Constraint season(s)                                   </td><td>{{Constraint_season}}        </td> </tr></table>
-<table><tr><td>Note                                                   </td><td>                             </td> </tr></table>
-<table><tr><td>                                                       </td><td>{{probtext}}                 </td> </tr></table>
-<table><tr><td>Annual deferral pool (m$/yr)                           </td><td>{{Annual_deferral}}          </td> </tr></table>
-<table><tr><td>Percent avail. to DM providers (%)                     </td><td>{{Percent_avail_to_DM}}      </td> </tr></table>
-<table><tr><td>Potential NPV of 10yr deferral in yr of investment (m$)</td><td>{{Potential_NPV}}            </td> </tr></table>
-<table><tr><td>Average demand growth rate (MVA/yr)                    </td><td>{{Average_demand_growth}}    </td> </tr></table>
-<table><tr><td>Reactive support requirements                          </td><td>{{Reactive_support}}         </td> </tr></table>
+<dl class='isf-info'>
+    <dt>Short name                                             </dt><dd>{{Short_name}}               </dd>
+    <dt>Asset type                                             </dt><dd>{{Asset_type}}               </dd>
+    <dt>Network                                                </dt><dd>{{Network}}                  </dd>
+    <dt>Augmentation investment (m$)                           </dt><dd>{{Augmentation}}             </dd>
+    <dt>Replacement/refurbishment investment (m$)              </dt><dd>{{Replacement/refurbishment}}</dd>
+    <dt>Connections investment (m$)                            </dt><dd>{{Connections}}              </dd>
+    <dt>OPEX investment (m$)                                   </dt><dd>{{OPEX}}                     </dd>
+    <dt>Other investment (m$)                                  </dt><dd>{{Other investment}}         </dd>
+    <dt>Total investment (m$)                                  </dt><dd>{{Total_investment}}         </dd>
+    <dt>Deferrable amount (m$)                                 </dt><dd>{{Deferrable_amount}}        </dd>
+    <dt>Proposed investment year                               </dt><dd>{{Proposed_investment_year}} </dd>
 {{#Commit_inv_year}}
-<table><tr><td>Commitment Year                                        </td><td>{{Commit_inv_year}}          </td> </tr></table>
+    <dt>Commitment Year                                        </dt><dd>{{Commit_inv_year}}          </dd>
 {{/Commit_inv_year}}
+    <dt>Constraint season(s)                                   </dt><dd>{{Constraint_season}}        </dd>
+    <dt>Note                                                   </dt><dd class='isf-note'>{{probtext}}</dd>
+    <dt>Annual deferral pool (m$/yr)                           </dt><dd>{{Annual_deferral}}          </dd>
+    <dt>Percent avail. to DM providers (%)                     </dt><dd>{{Percent_avail_to_DM}}      </dd>
+    <dt>Potential NPV of 10yr deferral in yr of investment (m$)</dt><dd>{{Potential_NPV}}            </dd>
+    <dt>Average demand growth rate (MVA/yr)                    </dt><dd>{{Average_demand_growth}}    </dd>
+    <dt>Reactive support requirements                          </dt><dd>{{Reactive_support}}         </dd>
 {{#Hours_exceed}}
-<table><tr><td>Commitment Year                                        </td><td>{{Hours_exceed}}             </td> </tr></table>
+    <dt>Hours exceeded                                         </dt><dd>{{Hours_exceed}}             </dd>
 {{/Hours_exceed}}
+</dl>
 
 
 
@@ -48,4 +48,3 @@
 
 {{#NSP_info_link}}<a href='{{NSP_info_link}}'>NSP demand management information</a><br>{{/NSP_info_link}}
 {{#Link_to_download}}<a href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}
-</div>

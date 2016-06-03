@@ -1,48 +1,49 @@
 {{#value}}
-<div class='feature-info-panel-section-content-group feature-info-panel-section-content-kv-table'>
-<table><tr><td>Mapped asset </td> <td>                                </td> </tr></table>
-<table><tr><td>             </td> <td>{{Mapped_asset}}                </td> </tr></table>
+<dl class='isf-info'>
+    <dt>Mapped asset                                    </dt><dd>{{Mapped_asset}}                </dd>
 <hr>
 {{#Asset_name}}
-<table> <tr><td>Asset name                                      </td> <td>{{Asset_name}}                  </td> </tr></table>
+    <dt>Asset name                                      </dt><dd>{{Asset_name}}                  </dd>
 {{/Asset_name}}
 {{#Short_name}}
-<table> <tr><td>Short name                                      </td> <td>{{Short_name}}                  </td> </tr></table>
+    <dt>Short name                                      </dt><dd>{{Short_name}}                  </dd>
 {{/Short_name}}
 {{#Asset_type}}
-<table> <tr><td>Asset type                                      </td> <td>{{Asset_type}}                  </td> </tr></table>
+    <dt>Asset type                                      </dt><dd>{{Asset_type}}                  </dd>
 {{/Asset_type}}
 {{#Network}}
-<table> <tr><td>Network                                         </td> <td>{{Network}}                     </td> </tr></table>
+    <dt>Network                                         </dt><dd>{{Network}}                     </dd>
 {{/Network}}
 {{#Constraint_season}}
-<table> <tr><td>Constraint season                               </td> <td>{{Constraint_season}}           </td> </tr></table>
+    <dt>Constraint season                               </dt><dd>{{Constraint_season}}           </dd>
 {{/Constraint_season}}
 {{#Proposed_investment_year}}
-<table> <tr><td>Propsed Investment Year                         </td> <td>{{Proposed_investment_year}}    </td> </tr></table>
+    <dt>Propsed Investment Year                         </dt><dd>{{Proposed_investment_year}}    </dd>
 {{/Proposed_investment_year}}
 {{#Commit_inv_year}}
-<table> <tr><td>Commitment Year                                 </td> <td>{{Commit_inv_year}}             </td> </tr></table>
+    <dt>Commitment Year                                 </dt><dd>{{Commit_inv_year}}             </dd>
 {{/Commit_inv_year}}
 {{#Year_shown}}
-<table> <tr><td>Year shown in table                             </td> <td>{{Year_shown}}                  </td> </tr></table>
+    <dt>Year shown in table                             </dt><dd>{{Year_shown}}                  </dd>
 {{/Year_shown}}
 {{#Asset_capacity}}
-<table> <tr><td>Asset_capacity (MVA)                            </td> <td>{{Asset_capacity}}              </td> </tr></table>
+    <dt>Asset_capacity (MVA)                            </dt><dd>{{Asset_capacity}}              </dd>
 {{/Asset_capacity}}
 {{#Maximum_capacity_exceedance}}
-<table> <tr><td>Maximum capacity exceedance in shown year (MVA) </td> <td>{{Maximum_capacity_exceedance}} </td> </tr></table>
+    <dt>Maximum capacity exceedance in shown year (MVA) </dt><dd>{{Maximum_capacity_exceedance}} </dd>
 {{/Maximum_capacity_exceedance}}
 {{#MWh_exceedance}}
-<table> <tr><td>MWh exceedance in shown year (MWh)              </td> <td>{{MWh_exceedance}}              </td> </tr></table>
+    <dt>MWh exceedance in shown year (MWh)              </dt><dd>{{MWh_exceedance}}              </dd>
 {{/MWh_exceedance}}
+</dl>
 
 <hr>
 {{#HH.length}}
 <table class='feature-info-panel-section-pivot-table dance-peak-day-table'>
     <tr>
         <td>Hour                                        </td>
-        <td colspan='2'>Available Capacity              </td>
+        <td>Available Capacity                          </td>
+        <td>Available Capacity                          </td>
         <td>Hourly exceedance share                     </td>
     </tr>
     <tr>
