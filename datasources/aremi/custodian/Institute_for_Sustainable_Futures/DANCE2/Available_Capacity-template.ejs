@@ -33,6 +33,19 @@
         </tr>
 {{/availcapinfo}}
 </table>
+
+<chart column-names='Year,avail_cap'
+       x-column='Year'
+       y-columns='avail_cap'
+       column-names='Year,Available Capacity'
+       column-units=',$/kVAyr'
+>
+Year,avail_cap\n
+{{#availcapinfo}}
+{{Year}},{{Availcap}}\n
+{{/availcapinfo}}
+</chart>
+
 <dl class='isf-info'>
     <dt>Note</dt> <dd class='isf-note'>Depending on NSP network security standards the Available Capacity may or may not take account of potential load transfers to delay constraints. Consult with distributors for further details</dd>
 {{#NSP_contact}}

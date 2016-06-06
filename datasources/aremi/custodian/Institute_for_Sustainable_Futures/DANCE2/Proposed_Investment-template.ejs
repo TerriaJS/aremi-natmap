@@ -46,5 +46,16 @@
 {{/Inv}}
 </table>
 
+<chart column-names='Year,Network_Support{{#Inv.0}}{{#Unserved_energy}},Unserved_energy{{/Unserved_energy}}{{#Value_unserved_energy}},Value of unserved energy{{/Value_unserved_energy}}{{/Inv.0}}'
+       x-column='Year'
+       y-columns='Network_Support{{#Inv.0}}{{#Unserved_energy}},Unserved_energy{{/Unserved_energy}}{{#Value_unserved_energy}},Value_unserved_energy{{/Value_unserved_energy}}{{/Inv.0}}'
+       column-names='Year,Network_Support{{#Inv.0}}{{#Unserved_energy}},Unserved_energy{{/Unserved_energy}}{{#Value_unserved_energy}},Value_unserved_energy{{/Value_unserved_energy}}{{/Inv.0}}'
+       column-units=',MVA{{#Inv.0}}{{#Unserved_energy}},MWh/yr{{/Unserved_energy}}{{#Value_unserved_energy}},$/yr{{/Value_unserved_energy}}{{/Inv.0}}'
+>
+Year,Network_Support{{#Inv.0}}{{#Unserved_energy}},Unserved_energy{{/Unserved_energy}}{{#Value_unserved_energy}},Value_unserved_energy{{/Value_unserved_energy}}{{/Inv.0}}\n
+{{#Inv}}{{Year}},{{Network_support}}{{#Unserved_energy}},{{Unserved_energy}}{{/Unserved_energy}}{{#Value_unserved_energy}},'{{Value_unserved_energy}}'{{/Value_unserved_energy}}\n{{/Inv}}
+</chart>
+
+
 {{#NSP_info_link}}<a href='{{NSP_info_link}}'>NSP demand management information</a><br>{{/NSP_info_link}}
 {{#Link_to_download}}<a href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}

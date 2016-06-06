@@ -61,7 +61,21 @@
     </tr>
 {{/HH}}
 </table>
+<!-- <chart column-names='Hour,av_cap_mva,av_cap_pct,hour_ex_share'
+       x-column='Hour'
+       y-columns='av_cap_mva,av_cap_pct,hour_ex_share'
+       column-names='Hour of day,Av. Cap MVA,Av. Cap %,Hourly ex. share'
+       column-units=',MVA,%,% total annual exceedance'
+>
+Hour,av_cap_mva,av_cap_pct,hour_ex_share\n
+{{#HH}}
+{{Hour}},{{Available_capacity}},{{Available_capacity_perc}},{{Hourly_exceedance_share}}\n
+{{/HH}}
+</chart> -->
 {{/HH.length}}
+
+
+
 
 {{#NSP_info_link}}<a href='{{NSP_info_link}}'>NSP demand management information</a><br>{{/NSP_info_link}}
 {{#Link_to_download}}<a href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}

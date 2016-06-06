@@ -10,24 +10,10 @@
   <dt>Constraint season(s)                </dt><dd> {{Constraint_season}}     </dd>
   <dt>Average demand growth rate (MVA/yr) </dt><dd> {{Average_demand_growth}} </dd>
   <dt>Reactive support requirements       </dt><dd> {{Reactive_support}}      </dd>
-  <dt>Notes                               </dt><dd class='isf-note'> {{Check}}                 </dd>
+  <dt>Notes                               </dt><dd class='isf-note'> {{Check}}</dd>
 </dl>
 
 <br>
-
-<!--
-<chart column-names='Year,adv,net_support'
-       x-column='Year'
-       y-columns='adv,net_support'
-       column-names='Year,ADV,Network Support'
-       column-units=',$/kVAyr,MVA'
->
-Year,adv,net_support\n
-{{#adv}}
-{{Year}},{{ADV}},{{Network_support}}\n
-{{/adv}}
-</chart>
- -->
 
 <table class='isf-table'>
   <tr>
@@ -43,6 +29,20 @@ Year,adv,net_support\n
   </tr>
 {{/adv}}
 </table>
+
+<chart column-names='Year,adv,net_support'
+       x-column='Year'
+       y-columns='adv,net_support'
+       column-names='Year,ADV,Network Support'
+       column-units=',$/kVAyr,MVA'
+>
+Year,adv,net_support\n
+{{#adv}}
+{{Year}},{{ADV}},{{Network_support}}\n
+{{/adv}}
+</chart>
+
+
 <div class='isf-note'>
   Depending on NSP network security standards the information shown may or may not take
   account of potential load transfers to delay constraints. Consult with distributors for
