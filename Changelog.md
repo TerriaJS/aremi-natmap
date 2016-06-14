@@ -7,6 +7,7 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version of AREMI:
 * Added more downloadable data formats on the Info pages for the "Renewable Energy -> Wind" layers.
+* Changed to show only filename and not the entire URL as the link in the feature info for "Renewable Energy -> Wind -> WAsP LIB files".
 
 
 ### Version 2016-05-23
