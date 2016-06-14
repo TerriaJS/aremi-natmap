@@ -4,7 +4,6 @@ DESCRIBE=$(git describe)
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 TARGET="target/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz"
 
-<<<<<<< HEAD
 rm -rf node_modules wwwroot/build wwwroot/init/aremi.json
 npm install
 npm install
