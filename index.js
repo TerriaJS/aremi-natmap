@@ -96,7 +96,7 @@ terria.start({
 
         viewState.notifications.push({
             title: 'Aremi is a spatial data platform for the Australian Energy industry',
-            message: 'We are focused on supporting Developer, Financiers, and Policy Makers in evaluating spatial renewable energy information.\n\nAREMI is funded by the *Australian Renewable Energy Agency* and developed by *Data61* in partnership with *GeoScience Australia* and the *Clean Energy Council*.',
+            message: 'We are focused on supporting Developers, Financiers, and Policy Makers in evaluating spatial renewable energy information.\n\nAREMI is funded by the *Australian Renewable Energy Agency* and developed by *Data61* in partnership with *Geoscience Australia* and the *Clean Energy Council*.',
             hideUi: true
         });
 
