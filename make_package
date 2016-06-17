@@ -1,21 +1,19 @@
 #!/bin/bash
 
+DESCRIBE=$(git describe)
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+TARGET="target/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz"
+
+rm -rf node_modules wwwroot/build wwwroot/init/aremi.json
+npm install
+npm install
+gulp release
+
 if [ -n "$(git status --porcelain)" ]; then
     echo
     echo "There are uncommitted modifications - are you absolutely sure you want to make a package???"
     echo
 fi
-
-DESCRIBE=$(git describe)
-BRANCH=$(git rev-parse --abbrev-ref HEAD)
-TARGET="target/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz"
-
-rm -rf node_modules
-rm -rf wwwroot/build
-npm install
-npm install
-npm install
-gulp release
 
 mkdir -p target
 tar czf ${TARGET} \

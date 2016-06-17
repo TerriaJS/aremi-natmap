@@ -1,15 +1,23 @@
 Presented are the wind maps of Australia at 100 m and 150 m height provided in Network Common Data Form (“netCDF – classic”) and XYZ text format.
 <p>
 Download raw data in NetCDF format:<br/>
-<a target='_blank' href='http://static.aremi.nicta.com.au/datasets/DNVGL/DNVGL_Australia_5km_windmap_nc.zip'>http://static.aremi.nicta.com.au/datasets/DNVGL/DNVGL_Australia_5km_windmap_nc.zip</a>
+<a target='_blank' href='http://static.aremi.nicta.com.au/datasets/DNVGL/DNVGL_Australia_5km_windmap_nc.zip'>DNVGL_Australia_5km_windmap_nc.zip</a>
 <p>
 Download raw data in XYZ format:<br/>
-<a target='_blank' href='http://static.aremi.nicta.com.au/datasets/DNVGL/DNVGL_Australia_5km_windmap_xyz.zip'>http://static.aremi.nicta.com.au/datasets/DNVGL/DNVGL_Australia_5km_windmap_xyz.zip</a>
+<a target='_blank' href='http://static.aremi.nicta.com.au/datasets/DNVGL/DNVGL_Australia_5km_windmap_xyz.zip'>DNVGL_Australia_5km_windmap_xyz.zip</a>
+<p>
+The data above is in a particular Lambert Conic Conformal projection. In order to use this data you may need to know the particular parameters used in this projection, which you can find here:<br/>
+<a target='_blank' href='http://static.aremi.nicta.com.au/datasets/DNVGL/DNVGL_Australia_5km_windmap_nc_projection.txt'>DNVGL_Australia_5km_windmap_nc_projection.txt</a>
+<p>
+Download the data extracted from the NetCDF and converted to GeoTIFF files:<br/>
+<a target='_blank' href='http://static.aremi.nicta.com.au/datasets/DNVGL/wind_100m.tif'>wind_100m.tif</a>
+<br/>
+<a target='_blank' href='http://static.aremi.nicta.com.au/datasets/DNVGL/wind_150m.tif'>wind_150m.tif</a>
 <p>
 Download resampled data in GeoTIFF format:<br/>
-<a target='_blank' href='http://static.aremi.nicta.com.au/datasets/DNVGL/wind_100m_4326.tif'>http://static.aremi.nicta.com.au/datasets/DNVGL/wind_100m_4326.tif</a>
+<a target='_blank' href='http://static.aremi.nicta.com.au/datasets/DNVGL/wind_100m_4326.tif'>wind_100m_4326.tif</a>
 <br/>
-<a target='_blank' href='http://static.aremi.nicta.com.au/datasets/DNVGL/wind_150m_4326.tif'>http://static.aremi.nicta.com.au/datasets/DNVGL/wind_150m_4326.tif</a>
+<a target='_blank' href='http://static.aremi.nicta.com.au/datasets/DNVGL/wind_150m_4326.tif'>wind_150m_4326.tif</a>
 <p>
 The netCDF map contains the latitude, longitude (WGS84 datum) and wind speed value for both of the required heights for every 5 km mesocale grid cell within and immediately surrounding Australia. Additionally, the files contain metadata that provide a definitive description of what the data in each variable represents, and the spatial and temporal properties of the data. Wind speed values of -999 are outside of the modelled domain and invalid, these are included only to fulfil the netCDF format gridding requirements. These values should not be displayed in the final representation of the data.
 <p>
