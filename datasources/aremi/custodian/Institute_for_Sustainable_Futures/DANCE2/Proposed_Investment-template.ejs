@@ -41,7 +41,9 @@
         <td>{{Year}}</td>
         <td>{{Network_support}}</td>
         {{#Unserved_energy}}<td>{{Unserved_energy}}</td>{{/Unserved_energy}}
-        {{#Value_unserved_energy}}<td>{{Value_unserved_energy}}</td>{{/Value_unserved_energy}}
+        {{#Value_unserved_energy}}
+        <td> {{#terria.formatNumber}}{useGrouping:true}{{Value_unserved_energy}}{{/terria.formatNumber}}</td>
+        {{/Value_unserved_energy}}
     </tr>
 {{/Inv}}
 </table>
