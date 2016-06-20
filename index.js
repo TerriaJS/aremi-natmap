@@ -38,6 +38,8 @@ var ViewState = require('terriajs/lib/ReactViewModels/ViewState').default;
 import defined from 'terriajs-cesium/Source/Core/defined';
 import BingMapsSearchProviderViewModel from 'terriajs/lib/ViewModels/BingMapsSearchProviderViewModel.js';
 import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerSearchProviderViewModel.js';
+import GNAFSearchProviderViewModel from 'terriajs/lib/ViewModels/GNAFSearchProviderViewModel.js';
+
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
 OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
@@ -90,7 +92,8 @@ terria.start({
                     terria: terria,
                     key: configuration.bingMapsKey
                 }),
-                new GazetteerSearchProviderViewModel({terria})
+                new GazetteerSearchProviderViewModel({terria}),
+                new GNAFSearchProviderViewModel({terria})
             ]
         });
 
