@@ -4,6 +4,10 @@
   "layers": "mean_exposure",
   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_gloHorExp1Day.nc",
   "type": "wms",
+  "dateFormat":{
+    "currentTime":"mmmm",
+    "timelineTic":"dd/mmm"
+  },
   "featureInfoTemplate" : {
     "template": "{{#value}}{{value}} MJ/m&#178;{{/value}}",
     "name": "{{#value}}{{value}} MJ/m2{{/value}}"
@@ -17,6 +21,10 @@
   "layers": "mean_exposure",
   "url": "http://neii.bom.gov.au/services/solarclim/wms/data/monClim_dirNorExp1Day.nc",
   "type": "wms",
+  "dateFormat":{
+    "currentTime":"mmmm",
+    "timelineTic":"dd/mmm"
+  },
   "featureInfoTemplate" : {
     "template": "{{#value}}{{value}} MJ/m&#178;{{/value}}",
     "name": "{{#value}}{{value}} MJ/m2{{/value}}"
