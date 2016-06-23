@@ -5,6 +5,10 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
+### In the next version of AREMI
+* Added the layers "Renewable Energy -> Bioenergy -> Biomass *" from the Rural Industries Research and Development Corporation.
+
+
 ### Version 2016-06-22
 * Added the layers "Electricity Inf. -> Residential -> Household Energy Consumption 2010-2012" visualised from the Australian Bureau of Statistics "4670.0 - Household Energy Consumption Survey, Australia: Summary of Results, 2012".
 * Added a more noticeable popup asking if the user would like to try the NewUI.
