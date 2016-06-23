@@ -19,19 +19,6 @@
 }
 </style>
 
-<chart column-names='Year,avail_cap'
-       x-column='Year'
-       y-columns='lowest,second,third,fourth,highest,mean'
-       column-names='Year,Lowest quintile,Second quintile,Third quintile,Fourth quintile,Highest quintile,Mean'
-       column-units=',kWh,kWh,kWh,kWh,kWh,kWh'
->
-Year,lowest,second,third,fourth,highest,mean\n
-2010,{{Lowest quintile - 2010 (kWh)}},{{Second quintile - 2010 (kWh)}},{{Third quintile - 2010 (kWh)}},{{Median - 2010 (kWh)}},{{Fourth quintile - 2010 (kWh)}},{{Highest quintile - 2010 (kWh)}},{{Mean - 2010 (kWh)}}\n
-2011,{{Lowest quintile - 2011 (kWh)}},{{Second quintile - 2011 (kWh)}},{{Third quintile - 2011 (kWh)}},{{Median - 2011 (kWh)}},{{Fourth quintile - 2011 (kWh)}},{{Highest quintile - 2011 (kWh)}},{{Mean - 2011 (kWh)}}\n
-2012,{{Lowest quintile - 2012 (kWh)}},{{Second quintile - 2012 (kWh)}},{{Third quintile - 2012 (kWh)}},{{Median - 2012 (kWh)}},{{Fourth quintile - 2012 (kWh)}},{{Highest quintile - 2012 (kWh)}},{{Mean - 2012 (kWh)}}\n
-</chart>
-
-
 
 <table class='abs-table'>
     <tr class='abs-header'><td></td><td>2010                </td><td>2011                              </td><td>2012                             </td></tr>
@@ -46,4 +33,14 @@ Year,lowest,second,third,fourth,highest,mean\n
     <tr><td>Highest     </td><td>{{Highest quintile - 2010 (kWh)}} </td><td>{{Highest quintile - 2011 (kWh)}} </td><td>{{Highest quintile - 2012 (kWh)}}</td></tr>
 </table>
 
-
+<chart x-column='Year'
+       y-columns='lowest,second,third,fourth,highest,mean,median'
+       column-names='Year,Lowest,Second,Third,Fourth,Highest,Mean,Median'
+       column-units=',kWh,kWh,kWh,kWh,kWh,kWh,kWh'
+       preview-x-label='Quintiles, Mean and Median'
+>
+Year,lowest,second,third,fourth,highest,mean,median\n
+2010,{{#Lowest quintile - 2010 (kWh)}}{{Lowest quintile - 2010 (kWh)}}{{/Lowest quintile - 2010 (kWh)}}{{^Lowest quintile - 2010 (kWh)}}0{{/Lowest quintile - 2010 (kWh)}},{{#Second quintile - 2010 (kWh)}}{{Second quintile - 2010 (kWh)}}{{/Second quintile - 2010 (kWh)}}{{^Second quintile - 2010 (kWh)}}0{{/Second quintile - 2010 (kWh)}},{{#Third quintile - 2010 (kWh)}}{{Third quintile - 2010 (kWh)}}{{/Third quintile - 2010 (kWh)}}{{^Third quintile - 2010 (kWh)}}0{{/Third quintile - 2010 (kWh)}},{{#Fourth quintile - 2010 (kWh)}}{{Fourth quintile - 2010 (kWh)}}{{/Fourth quintile - 2010 (kWh)}}{{^Fourth quintile - 2010 (kWh)}}0{{/Fourth quintile - 2010 (kWh)}},{{#Highest quintile - 2010 (kWh)}}{{Highest quintile - 2010 (kWh)}}{{/Highest quintile - 2010 (kWh)}}{{^Highest quintile - 2010 (kWh)}}0{{/Highest quintile - 2010 (kWh)}},{{#Mean - 2010 (kWh)}}{{Mean - 2010 (kWh)}}{{/Mean - 2010 (kWh)}}{{^Mean - 2010 (kWh)}}0{{/Mean - 2010 (kWh)}},{{#Median - 2010 (kWh)}}{{Median - 2010 (kWh)}}{{/Median - 2010 (kWh)}}{{^Median - 2010 (kWh)}}0{{/Median - 2010 (kWh)}}\n
+2011,{{#Lowest quintile - 2011 (kWh)}}{{Lowest quintile - 2011 (kWh)}}{{/Lowest quintile - 2011 (kWh)}}{{^Lowest quintile - 2011 (kWh)}}0{{/Lowest quintile - 2011 (kWh)}},{{#Second quintile - 2011 (kWh)}}{{Second quintile - 2011 (kWh)}}{{/Second quintile - 2011 (kWh)}}{{^Second quintile - 2011 (kWh)}}0{{/Second quintile - 2011 (kWh)}},{{#Third quintile - 2011 (kWh)}}{{Third quintile - 2011 (kWh)}}{{/Third quintile - 2011 (kWh)}}{{^Third quintile - 2011 (kWh)}}0{{/Third quintile - 2011 (kWh)}},{{#Fourth quintile - 2011 (kWh)}}{{Fourth quintile - 2011 (kWh)}}{{/Fourth quintile - 2011 (kWh)}}{{^Fourth quintile - 2011 (kWh)}}0{{/Fourth quintile - 2011 (kWh)}},{{#Highest quintile - 2011 (kWh)}}{{Highest quintile - 2011 (kWh)}}{{/Highest quintile - 2011 (kWh)}}{{^Highest quintile - 2011 (kWh)}}0{{/Highest quintile - 2011 (kWh)}},{{#Mean - 2011 (kWh)}}{{Mean - 2011 (kWh)}}{{/Mean - 2011 (kWh)}}{{^Mean - 2011 (kWh)}}0{{/Mean - 2011 (kWh)}},{{#Median - 2011 (kWh)}}{{Median - 2011 (kWh)}}{{/Median - 2011 (kWh)}}{{^Median - 2011 (kWh)}}0{{/Median - 2011 (kWh)}}\n
+2012,{{#Lowest quintile - 2012 (kWh)}}{{Lowest quintile - 2012 (kWh)}}{{/Lowest quintile - 2012 (kWh)}}{{^Lowest quintile - 2012 (kWh)}}0{{/Lowest quintile - 2012 (kWh)}},{{#Second quintile - 2012 (kWh)}}{{Second quintile - 2012 (kWh)}}{{/Second quintile - 2012 (kWh)}}{{^Second quintile - 2012 (kWh)}}0{{/Second quintile - 2012 (kWh)}},{{#Third quintile - 2012 (kWh)}}{{Third quintile - 2012 (kWh)}}{{/Third quintile - 2012 (kWh)}}{{^Third quintile - 2012 (kWh)}}0{{/Third quintile - 2012 (kWh)}},{{#Fourth quintile - 2012 (kWh)}}{{Fourth quintile - 2012 (kWh)}}{{/Fourth quintile - 2012 (kWh)}}{{^Fourth quintile - 2012 (kWh)}}0{{/Fourth quintile - 2012 (kWh)}},{{#Highest quintile - 2012 (kWh)}}{{Highest quintile - 2012 (kWh)}}{{/Highest quintile - 2012 (kWh)}}{{^Highest quintile - 2012 (kWh)}}0{{/Highest quintile - 2012 (kWh)}},{{#Mean - 2012 (kWh)}}{{Mean - 2012 (kWh)}}{{/Mean - 2012 (kWh)}}{{^Mean - 2012 (kWh)}}0{{/Mean - 2012 (kWh)}},{{#Median - 2012 (kWh)}}{{Median - 2012 (kWh)}}{{/Median - 2012 (kWh)}}{{^Median - 2012 (kWh)}}0{{/Median - 2012 (kWh)}}
+</chart>
