@@ -1,0 +1,25 @@
+"type": "csv",
+"featureInfoTemplate" : {
+    "name": "{{sa<%= absConsumpSARegion %>_name}}",
+    "template": "<% include consumption-template %>"
+},
+"tableStyle": {
+  "dataVariable": "Mean - 2012 (kWh)",
+  "timeColumn": null,
+  "replaceWithZeroValues": [],
+  "replaceWithNullValues": ["0"],
+  "nullColor": "rgba(255,255,255,0.1)",
+  "nullLabel": "No value",
+  "scaleByValue": true,
+  "scale": 1.5,
+  "colorBins": 10,
+  "colorMap": "rgb(94,79,162)-rgb(50,136,189)-rgb(102,194,165)-rgb(171,221,164)-rgb(230,245,152)-rgb(254,224,139)-rgb(253,174,97)-rgb(244,109,67)-rgb(213,62,79)-rgb(158,1,66)",
+  "columns": {
+    "sa4": {"type":"HIDDEN"},
+    "sa4_name": {"type":"HIDDEN"},
+    "sa3": {"type":"HIDDEN"},
+    "sa3_name": {"type":"HIDDEN"},
+    "sa2": {"type":"HIDDEN"},
+    "sa2_name": {"type":"HIDDEN"}
+  }
+}

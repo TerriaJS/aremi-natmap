@@ -57,6 +57,7 @@ var DragDropViewModel = require('terriajs/lib/ViewModels/DragDropViewModel');
 var ExplorerPanelViewModel = require('terriajs/lib/ViewModels/ExplorerPanelViewModel');
 var FeatureInfoPanelViewModel = require('terriajs/lib/ViewModels/FeatureInfoPanelViewModel');
 var GazetteerSearchProviderViewModel = require('terriajs/lib/ViewModels/GazetteerSearchProviderViewModel');
+var GNAFSearchProviderViewModel = require('terriajs/lib/ViewModels/GNAFSearchProviderViewModel.js');
 var GoogleUrlShortener = require('terriajs/lib/Models/GoogleUrlShortener');
 var LocationBarViewModel = require('terriajs/lib/ViewModels/LocationBarViewModel');
 var MenuBarItemViewModel = require('terriajs/lib/ViewModels/MenuBarItemViewModel');
@@ -75,6 +76,7 @@ var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateAppli
 var ViewerMode = require('terriajs/lib/Models/ViewerMode');
 var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
 var DisclaimerViewModel = require('terriajs/lib/ViewModels/DisclaimerViewModel');
+var PreviewLinkViewModel = require('./lib/ViewModels/PreviewLinkViewModel');
 
 var Terria = require('terriajs/lib/Models/Terria');
 var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
@@ -295,6 +297,9 @@ terria.start({
                     }),
                     new GazetteerSearchProviderViewModel({
                         terria: terria
+                    }),
+                    new GNAFSearchProviderViewModel({
+                        terria: terria
                     })
                 ]
             })
@@ -378,6 +383,11 @@ terria.start({
 
     MapProgressBarViewModel.create({
         container: document.getElementById('cesiumContainer'),
+        terria: terria
+    });
+
+    PreviewLinkViewModel.create({
+        container: 'cesiumContainer',
         terria: terria
     });
 

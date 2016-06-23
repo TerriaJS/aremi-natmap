@@ -1,0 +1,55 @@
+{
+  "name": "Household Energy Consumption 2010-2012",
+  "type": "group",
+  "preserveOrder": true,
+  "items": [
+    {
+      "id": "c34b3772",
+      "name": "Consumed energy by SA4",
+      "url": "http://static.aremi.nicta.com.au/datasets/abs-consumption/supplied-sa4s.csv",
+      <% var absConsumpSARegion = "4" %>
+      <% include consumption-common %>,
+      <% include Consumption-info %>
+    },
+    {
+      "id": "309efaa4",
+      "name": "Consumed energy by SA3",
+      "url": "http://static.aremi.nicta.com.au/datasets/abs-consumption/supplied-sa3s.csv",
+      <% var absConsumpSARegion = "3" %>
+      <% include consumption-common %>,
+      <% include Consumption-info %>
+    },
+    {
+      "id": "c261e022",
+      "name": "Consumed energy by SA2",
+      "url": "http://static.aremi.nicta.com.au/datasets/abs-consumption/supplied-sa2s.csv",
+      <% var absConsumpSARegion = "2" %>
+      <% include consumption-common %>,
+      <% include Consumption-info %>
+    },
+    {
+      "id": "cfdb2445",
+      "name": "Generated energy by SA4",
+      "url": "http://static.aremi.nicta.com.au/datasets/abs-consumption/generated-sa4s.csv",
+      <% var absConsumpSARegion = "4" %>
+      <% include consumption-common %>,
+      <% include Consumption-info %>
+    },
+    {
+      "id": "107c6207",
+      "name": "Generated energy by SA3",
+      "url": "http://static.aremi.nicta.com.au/datasets/abs-consumption/generated-sa3s.csv",
+      <% var absConsumpSARegion = "3" %>
+      <% include consumption-common %>,
+      <% include Consumption-info %>
+    },
+    {
+      "id": "02fd49c9",
+      "name": "Generated energy by SA2",
+      "url": "http://static.aremi.nicta.com.au/datasets/abs-consumption/generated-sa2s.csv",
+      <% var absConsumpSARegion = "2" %>
+      <% include consumption-common %>,
+      <% include Consumption-info %>
+    }
+  ]
+}

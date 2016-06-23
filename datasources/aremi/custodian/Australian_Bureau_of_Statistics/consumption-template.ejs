@@ -1,0 +1,36 @@
+<h3>{{sa<%= absConsumpSARegion %>_name}}</h3>
+
+<style type='text/css' media='screen'>
+.abs-table {
+    text-align: right;
+}
+.abs-table tr td {
+    padding 0.2em;
+}
+.abs-table tr td:nth-child(1) {
+    /*font-weight:bold;*/
+    text-align:left;
+}
+.abs-header{
+    font-weight: bold;
+}
+.abs-header td {
+    padding-right: 0.2em;
+}
+</style>
+
+
+<table class='abs-table'>
+    <tr class='abs-header'><td></td><td>2010                </td><td>2011                              </td><td>2012                             </td></tr>
+    <tr><td>Meter Count </td><td>{{Meter count - 2010 (no_)}}      </td><td>{{Meter count - 2011 (no_)}}      </td><td>{{Meter count - 2012 (no_)}}     </td></tr>
+    <tr><td>Median      </td><td>{{Median - 2010 (kWh)}}           </td><td>{{Median - 2011 (kWh)}}           </td><td>{{Median - 2012 (kWh)}}          </td></tr>
+    <tr><td>Mean        </td><td>{{Mean - 2010 (kWh)}}             </td><td>{{Mean - 2011 (kWh)}}             </td><td>{{Mean - 2012 (kWh)}}            </td></tr>
+    <tr><td colspan='4'><h4>Quintiles</h4></td></tr>
+    <tr><td>Lowest      </td><td>{{Lowest quintile - 2010 (kWh)}}  </td><td>{{Lowest quintile - 2011 (kWh)}}  </td><td>{{Lowest quintile - 2012 (kWh)}} </td></tr>
+    <tr><td>Second      </td><td>{{Second quintile - 2010 (kWh)}}  </td><td>{{Second quintile - 2011 (kWh)}}  </td><td>{{Second quintile - 2012 (kWh)}} </td></tr>
+    <tr><td>Third       </td><td>{{Third quintile - 2010 (kWh)}}   </td><td>{{Third quintile - 2011 (kWh)}}   </td><td>{{Third quintile - 2012 (kWh)}}  </td></tr>
+    <tr><td>Fourth      </td><td>{{Fourth quintile - 2010 (kWh)}}  </td><td>{{Fourth quintile - 2011 (kWh)}}  </td><td>{{Fourth quintile - 2012 (kWh)}} </td></tr>
+    <tr><td>Highest     </td><td>{{Highest quintile - 2010 (kWh)}} </td><td>{{Highest quintile - 2011 (kWh)}} </td><td>{{Highest quintile - 2012 (kWh)}}</td></tr>
+</table>
+
+

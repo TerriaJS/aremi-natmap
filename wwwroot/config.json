@@ -27,7 +27,7 @@
         "appName": "AREMI",
         "supportEmail": "aremi@nicta.com.au",
         "brandBarElements": [
-            "<div class='ausglobe-title-aremi'> <a href='http://arena.gov.au/' target='_blank'><img class='left'  src='images/ARENA-logo2.png' alt='Australian Renewable Energy Agency' /></a> <a href='https://www.nicta.com.au/' target='_blank'><img class='right' src='images/DATA61_CSIRO.png' alt='NICTA' width='55px' height='33px'/></a> <br/> <strong>Australian Renewable Energy</strong> <br/> <small>Mapping Infrastructure</small> <br/> <span><a target='_blank' href='https://github.com/NICTA/aremi-natmap/blob/master/Changelog.md#version-{{version}}'>Version: {{version}}</a></span> </div>"
+            "<div class='ausglobe-title-aremi'> <a href='http://arena.gov.au/' target='_blank'><img class='left'  src='images/ARENA-logo2.png' alt='Australian Renewable Energy Agency' /></a> <a href='https://www.nicta.com.au/' target='_blank'><img class='right' src='images/DATA61_CSIRO.png' alt='Data61' width='55px' height='33px'/></a> <br/> <strong>Australian Renewable Energy</strong> <br/> <small>Mapping Infrastructure</small> <br/> <span><a target='_blank' href='https://github.com/NICTA/aremi-natmap/blob/master/Changelog.md#version-{{version}}'>Version: {{version}}</a></span> </div>"
         ]
     }
 }
