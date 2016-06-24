@@ -1,11 +1,11 @@
 {
-  "name": "nationalmap",
+  "name": "aremi",
   "version": "0.1.0",
-  "description": "Geospatial visualization application for Australian government and open data.",
+  "description": "Geospatial visualization application for the Australian Renewable Energy Agency.",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "http://github.com/NICTA/nationalmap"
+    "url": "http://github.com/NICTA/aremi-natmap"
   },
   "dependencies": {
     "terriajs-server": "^2.2.0"
@@ -43,7 +43,6 @@
     "jsx-control-statements": "3.1.1",
     "less": "^2.6.1",
     "less-plugin-npm-import": "^2.1.0",
-    "nationalmap-catalog": "git://github.com/TerriaJS/NationalMap-Catalog",
     "node-notifier": "^4.5.0",
     "node-sass": "^3.4.2",
     "raw-loader": "^0.5.1",
