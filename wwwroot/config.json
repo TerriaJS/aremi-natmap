@@ -1,7 +1,7 @@
 {
     "initializationUrls" : [
         "aremi",
-        "proxy/_60s/http://static.aremi.nicta.com.au/init.json"
+        "proxy/_60s/http://static.aremi.nicta.com.au/init2.json"
     ],
     "parameters": {
         "corsProxyBaseUrl": "proxy/",
