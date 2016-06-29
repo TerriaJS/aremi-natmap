@@ -6,7 +6,7 @@
     "parameters": {
         "corsProxyBaseUrl": "proxy/",
         "conversionServiceBaseUrl": "convert/",
-        "proj4ServiceBaseUrl": "proj4/",
+        "proj4ServiceBaseUrl": "proj4def/",
         "bingMapsKey": null,
         "googleUrlShortenerKey": null,
         "googleAnalyticsKey": null,
