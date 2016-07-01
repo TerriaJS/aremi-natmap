@@ -31,5 +31,22 @@
   "name": "Analysis Tools",
   "description": "This group contains the analysis tools that operate on wave data.",
   "url": "http://oa-gis.csiro.au/wps",
-  "type": "wps-getCapabilities"
+  "type": "wps-getCapabilities",
+  "itemProperties": {
+    "contextItem": {
+      "name": "Analysis Study Area",
+      "description": "Show where it is possible to use the analytical functions of the Australian Wave Energy Atlas - the analytics will only function inside the highlighted area.",
+      "layers": "awavea-interim:outline_ww3.aus_4m",
+      "url": "http://oa-gis.csiro.au/geoserver/ows",
+      "type": "wms",
+      "legendUrl": "",
+      "rectangle": [
+        109.0,
+        -48.0,
+        158.0,
+        -5.0
+      ],
+      <% include ../../common/standard_properties %>
+    }
+  }
 }

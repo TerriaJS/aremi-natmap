@@ -97,12 +97,6 @@ terria.start({
             ]
         });
 
-        viewState.notifications.push({
-            title: 'Aremi is a spatial data platform for the Australian Energy industry',
-            message: 'We are focused on supporting Developers, Financiers, and Policy Makers in evaluating spatial renewable energy information.\n\nAREMI is funded by the *Australian Renewable Energy Agency* and developed by *Data61* in partnership with *Geoscience Australia* and the *Clean Energy Council*.',
-            hideUi: true
-        });
-
         // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
         updateApplicationOnHashChange(terria, window);
         updateApplicationOnMessageFromParentWindow(terria, window);
@@ -134,7 +128,8 @@ terria.start({
                     confirmText: 'I Agree',
                     width: 600,
                     height: 550,
-                    message: message
+                    message: message,
+                    hideUi: true
                 };
 
                 viewState.notifications.push(options);
