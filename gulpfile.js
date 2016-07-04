@@ -8,8 +8,8 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var path = require('path');
 
-gulp.task('build', ['merge-datasources', 'build-app']);
-gulp.task('release', ['merge-datasources', 'release-app']);
+gulp.task('build', ['clean', 'merge-datasources', 'copy-terriajs-assets', 'build-app']);
+gulp.task('release', ['clean', 'merge-datasources', 'copy-terriajs-assets', 'release-app']);
 gulp.task('watch', ['watch-datasource-aremi', 'watch-app']);
 gulp.task('default', ['lint', 'build']);
 
