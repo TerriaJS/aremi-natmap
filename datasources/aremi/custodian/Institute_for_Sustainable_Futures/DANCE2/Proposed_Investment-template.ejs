@@ -58,6 +58,14 @@ Year,Network_Support{{#Inv.0}}{{#Unserved_energy}},Unserved_energy{{/Unserved_en
 {{#Inv}}{{Year}},{{Network_support}}{{#Unserved_energy}},{{Unserved_energy}}{{/Unserved_energy}}{{#Value_unserved_energy}},'{{Value_unserved_energy}}'{{/Value_unserved_energy}}\n{{/Inv}}
 </chart>
 
+<dl class='isf-info'>
+{{#NSP_contact}}
+    <dt>NSP Contact Email                </dt><dd><a href='mailto:{{NSP_contact}}'>{{NSP_contact}}</a></dd>
+{{/NSP_contact}}
+{{#NSP_phone}}
+    <dt>NSP Contact Phone                </dt><dd>{{NSP_phone}}</dd>
+{{/NSP_phone}}
+</dl>
 
 {{#NSP_info_link}}<a target='_blank' href='{{NSP_info_link}}'>NSP demand management information</a><br>{{/NSP_info_link}}
 {{#Link_to_download}}<a target='_blank' href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}
