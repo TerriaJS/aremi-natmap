@@ -3,7 +3,8 @@ dl.isf-info {
   text-align: right;
   width: 100%;
   // max-width: 100%;//$isf-max-width;
-  @extend .clearfix;
+  // @extend .clearfix;
+  overflow: auto;
 
   dt {
     float: left;
