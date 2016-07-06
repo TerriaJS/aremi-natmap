@@ -20,7 +20,8 @@ module.exports = function(devMode, hot) {
         module: {
             loaders: [
                 {
-                    test: path.resolve(__dirname, '..', 'lib', 'Views'),
+                    test: /\.html$/,
+                    include: path.resolve(__dirname, '..', 'lib', 'Views'),
                     loader: require.resolve('raw-loader')
                 },
                 {
