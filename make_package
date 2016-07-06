@@ -16,7 +16,7 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 mkdir -p target
-tar czf ${TARGET} \
+gtar czf ${TARGET} \
   serverconfig.json \
   package.json \
   node_modules \
