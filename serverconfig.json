@@ -1,16 +1,16 @@
 {
     "allowProxyFor" : [
-        "gov.au",
-        "noaa.gov",
-        "nasa.gov",
         "aemo.com.au",
-        "aurin.org.au",
-        "nicta.com.au",
-        "csiro.au",
-        "mapsengine.google.com",
         "aodn.org.au",
+        "aurin.org.au",
+        "csiro.au",
+        "gov.au",
         "imos.org.au",
+        "mapsengine.google.com",
+        "nasa.gov",
         "nci.org.au",
+        "nicta.com.au",
+        "noaa.gov",
         "www.googleapis.com"
     ]
 }
