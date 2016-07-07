@@ -1,20 +1,17 @@
 {
     "allowProxyFor" : [
-        "adelaidecitycouncil.com",
         "aemo.com.au",
         "aodn.org.au",
         "arcgis.com",
-        "argo.jcommops.org",
         "aurin.org.au",
         "csiro.au",
         "gov.au",
+        "imos.org.au",
         "mapsengine.google.com",
         "nasa.gov",
         "nci.org.au",
         "nicta.com.au",
         "noaa.gov",
-        "s3-ap-southeast-2.amazonaws.com",
-        "www.abc.net.au",
         "www.dptiapps.com.au",
         "www.googleapis.com"
     ],
