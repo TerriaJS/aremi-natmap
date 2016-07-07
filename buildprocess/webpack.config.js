@@ -25,10 +25,9 @@ module.exports = function(devMode, hot) {
                     loader: require.resolve('raw-loader')
                 },
                 {
-                    test: /\.jsx?$/,
+                    test: /\.(js|jsx)$/,
                     include: [
                         path.resolve(__dirname, '..', 'index.js'),
-                        path.resolve(__dirname, '..', 'UserInterface.jsx'),
                         path.resolve(__dirname, '..', 'lib')
                     ],
                     loader: require.resolve('babel-loader'),
@@ -49,14 +48,15 @@ module.exports = function(devMode, hot) {
                     }
                 },
                 {
-                    test: /nationalmap\.scss$/,
+                    test: /\.scss$/,
+                    include: [path.resolve(__dirname, '..', 'lib'), path.resolve(__dirname, '..', 'nationalmap.scss')],
                     loader: hot ?
                         require.resolve('style-loader') + '!' +
-                        require.resolve('css-loader') + '?sourceMap!' +
+                        require.resolve('css-loader') + '?sourceMap&modules&camelCase&localIdentName=nm-[name]__[local]&importLoaders=2!' +
                         require.resolve('resolve-url-loader') + '?sourceMap!' +
                         require.resolve('sass-loader') + '?sourceMap'
                      : ExtractTextPlugin.extract(
-                        require.resolve('css-loader') + '?sourceMap!' +
+                        require.resolve('css-loader') + '?sourceMap&modules&camelCase&localIdentName=nm-[name]__[local]&importLoaders=2!' +
                         require.resolve('resolve-url-loader') + '?sourceMap!' +
                         require.resolve('sass-loader') + '?sourceMap',
                         {
