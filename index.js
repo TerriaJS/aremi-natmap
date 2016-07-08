@@ -18,28 +18,26 @@ require('./nationalmap.scss');
 //var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCompatibility');
 // checkBrowserCompatibility('ui');
 
-
-var GoogleAnalytics = require('terriajs/lib/Core/GoogleAnalytics');
-var GoogleUrlShortener = require('terriajs/lib/Models/GoogleUrlShortener');
-var isCommonMobilePlatform = require('terriajs/lib/Core/isCommonMobilePlatform');
-var OgrCatalogItem = require('terriajs/lib/Models/OgrCatalogItem');
-var raiseErrorToUser = require('terriajs/lib/Models/raiseErrorToUser');
-var React = require('react');
-var ReactDOM = require('react-dom');
-var registerAnalytics = require('terriajs/lib/Models/registerAnalytics');
-var registerCatalogMembers = require('terriajs/lib/Models/registerCatalogMembers');
-var registerCustomComponentTypes = require('terriajs/lib/Models/registerCustomComponentTypes');
-var registerKnockoutBindings = require('terriajs/lib/Core/registerKnockoutBindings');
-var Terria = require('terriajs/lib/Models/Terria');
-var updateApplicationOnHashChange = require('terriajs/lib/ViewModels/updateApplicationOnHashChange');
-var ViewerMode = require('terriajs/lib/Models/ViewerMode');
-var updateApplicationOnMessageFromParentWindow = require('terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow');
-var ViewState = require('terriajs/lib/ReactViewModels/ViewState').default;
-import defined from 'terriajs-cesium/Source/Core/defined';
+import GoogleAnalytics from 'terriajs/lib/Core/GoogleAnalytics';
+import ShareDataService from 'terriajs/lib/Models/ShareDataService';
+import isCommonMobilePlatform from 'terriajs/lib/Core/isCommonMobilePlatform';
+import OgrCatalogItem from 'terriajs/lib/Models/OgrCatalogItem';
+import raiseErrorToUser from 'terriajs/lib/Models/raiseErrorToUser';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import registerAnalytics from 'terriajs/lib/Models/registerAnalytics';
+import registerCatalogMembers from 'terriajs/lib/Models/registerCatalogMembers';
+import registerCustomComponentTypes from 'terriajs/lib/ReactViews/Custom/registerCustomComponentTypes';
+import registerKnockoutBindings from 'terriajs/lib/Core/registerKnockoutBindings';
+import Terria from 'terriajs/lib/Models/Terria';
+import updateApplicationOnHashChange from 'terriajs/lib/ViewModels/updateApplicationOnHashChange';
+import updateApplicationOnMessageFromParentWindow from 'terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow';
+import ViewState from 'terriajs/lib/ReactViewModels/ViewState';
 import BingMapsSearchProviderViewModel from 'terriajs/lib/ViewModels/BingMapsSearchProviderViewModel.js';
 import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerSearchProviderViewModel.js';
 import GNAFSearchProviderViewModel from 'terriajs/lib/ViewModels/GNAFSearchProviderViewModel.js';
-
+import AboutButton from './lib/Views/AboutButton';
+import RelatedMaps from './lib/Views/RelatedMaps';
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
 OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
@@ -83,7 +81,7 @@ terria.start({
     applicationUrl: window.location,
     configUrl: 'config.json',
     defaultTo2D: isCommonMobilePlatform(),
-    urlShortener: new GoogleUrlShortener({
+    shareDataService: new ShareDataService({
         terria: terria
     })
 }).otherwise(function(e) {
@@ -140,13 +138,21 @@ terria.start({
             }
         }
 
+        const customElements = {
+            mapTop: [<RelatedMaps viewState={viewState}/>, <AboutButton />]
+        };
+
         let render = () => {
             const StandardUserInterface = require('terriajs/lib/ReactViews/StandardUserInterface/StandardUserInterface.jsx');
-            ReactDOM.render(<StandardUserInterface
-                                terria={terria}
-                                allBaseMaps={allBaseMaps}
-                                viewState={viewState}
-                                version={version} />, document.getElementById('ui'));
+            ReactDOM.render((
+                <StandardUserInterface
+                    terria={terria}
+                    allBaseMaps={allBaseMaps}
+                    viewState={viewState}
+                    version={version}
+                    customElements={customElements}
+                />
+            ), document.getElementById('ui'));
         };
 
 
