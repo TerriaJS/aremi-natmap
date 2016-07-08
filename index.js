@@ -38,6 +38,8 @@ import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerS
 import GNAFSearchProviderViewModel from 'terriajs/lib/ViewModels/GNAFSearchProviderViewModel.js';
 import AboutButton from './lib/Views/AboutButton';
 import RelatedMaps from './lib/Views/RelatedMaps';
+import ViewerMode from 'terriajs/lib/Models/ViewerMode';
+import defined from 'terriajs-cesium/Source/Core/defined';
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
 OgrCatalogItem.conversionServiceBaseUrl = configuration.conversionServiceBaseUrl;
