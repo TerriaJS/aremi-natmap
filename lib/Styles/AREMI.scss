@@ -1,42 +1,63 @@
+:global {
+    .aremi {
+        .ausglobe-title-aremi {
+            vertical-align: middle;
+            text-align: left;
+            color: #ffffff;
+            font-size: 100%;
+            font-weight: 300;
+            line-height: 110%;
+            color: #02ACCC;
+            padding: 0;
 
-.ausglobe-title-aremi {
-    vertical-align: middle;
-    text-align: left;
-    color: #ffffff;
-    font-size: 100%;
-    font-weight: 300;
-    line-height: 110%;
-    color: #02ACCC;
-    padding: 0;
+            strong {
+                font-weight: 700;
+                font-size: 14pt;
+            }
 
-    strong {
-        font-weight: 700;
-        font-size: 14pt;
+            small {
+                font-size: 11pt;
+                font-weight: 500;
+            }
+
+            span a {
+                font-size: 7pt;
+                font-weight: 500;
+                color: gray;
+            }
+
+            .left {
+                max-width: $work-bench-width - 90px;
+                float: left;
+                padding-bottom: 10px;
+            }
+
+            .right {
+                float: right;
+                padding-top: 10px;
+            }
+        }
+
+        .ausglobe-title-aremi-md {
+            display: none;
+
+            @media screen and (min-width: $sm) {
+                display: block;
+            }
+        }
+
+        .ausglobe-title-aremi-sm {
+            display: block;
+            line-height: 40px;
+            margin-left: 3px;
+
+            @media screen and (min-width: $sm) {
+                display: none;
+            }
+        }
+
+        .tjs-progress-bar__progress-bar {
+            background: rgba(2, 172, 204, 0.8);
+        }
     }
-
-    small {
-        font-size: 11pt;
-        font-weight: 500;
-    }
-
-    span a {
-        font-size: 7pt;
-        font-weight: 500;
-        color: gray;
-    }
-
-    .left {
-        max-width: $work-bench-width - 90px;
-        float: left;
-        padding-bottom: 10px;
-    }
-
-    .right {
-        float: right;
-        padding-top: 10px;
-    }
-}
-
-:global(.aremi) .tjs-progress-bar__progress-bar {
-    background: rgba(2, 172, 204, 0.8);
 }
