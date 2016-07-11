@@ -32,7 +32,7 @@
                     "type": "group",
                     "items": [
                         {
-                            "name": "Chlorophyll-a concentration (monthly)",
+                            "name": "Chlorophyll-a concentration (WMS)",
                             "type": "wms",
                             "url": "http://ereeftds.bom.gov.au/ereefs/tds/wms/ereefs/mwq_gridAgg_P1M",
                             "description": "...",
@@ -53,7 +53,7 @@
                             }
                         },
                         {
-                            "name": "Pacific Earthquakes (CSV)",
+                            "name": "Pacific Earthquakes (CSV points)",
                             "type": "csv",
                             "url": "test/earthquakes.csv",
                             "disableUserChanges": true,
@@ -64,7 +64,7 @@
                             "displayDuration": 2880
                         },
                         {
-                            "name": "Auto Incidents (CSV)",
+                            "name": "Auto Incidents (CSV points)",
                             "type": "csv",
                             "url": "test/incidents.csv",
                             "tableStyle": {
@@ -93,6 +93,21 @@
                                     "incident_date": "Date",
                                     "incident_severity": "Severity"
                                 }
+                            }
+                        },
+                        {
+                            "name": "Droughts by Country (CSV regions)",
+                            "type": "csv",
+                            "url": "test/droughts.csv",
+                            "tableStyle": {
+                                "featureInfoFields": {
+                                    "Country name": "Country",
+                                    "date": "Date",
+                                    "Total deaths": "Deaths",
+                                    "Total damage": "Cost"
+                                },
+                                "dataVariable": "Total affected",
+                                "displayDuration": 525600
                             }
                         }
                     ]
@@ -291,260 +306,282 @@
                                     "content": "[Creative Commons Attribution 3.0 Australia (CC BY 3.0 AU)](http://creativecommons.org/licenses/by/3.0/au/)"
                                 }
                             ]
-                        }
-                    ]
-                },
-                {
-                    "name": "GeoJSON files",
-                    "type": "group",
-                    "items": [
-                        {
-                            "name": "Cemeteries (GeoJSON)",
-                            "type": "geojson",
-                            "url": "test/cemeteries.geojson",
-                            "initialMessage": {
-                                "title": "title",
-                                "content": "testing",
-                                "key": "MyTestingKey"
-                            }
                         },
                         {
-                            "name": "Centrelink Sites (GME->GeoJSON)",
-                            "type": "geojson",
-                            "url": "test/gme.geojson"
+                            "name": "Conversion service",
+                            "type": "group",
+                            "items": [
+                                {
+                                    "name": "Airports (zipped shapefile)",
+                                    "type": "ogr",
+                                    "url": "test/airports.zip"
+                                }
+                            ]
                         },
                         {
-                            "name": "Bike Racks (GeoJSON:reproj)",
-                            "type": "geojson",
-                            "url": "test/bike_racks.geojson"
-                        },
-                        {
-                            "name": "Ferry Routes (GeoJSON via WFS)",
-                            "type": "wfs",
-                            "url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography/MapServer/WFSServer",
-                            "typeNames": "topography_Australian_Topography:Ferry_Routes"
-                        },
-                        {
-                            "name": "Airports (OGR->GeoJSON, zipped)",
-                            "type": "ogr",
-                            "url": "test/airports.zip"
-                        }
-                    ]
-                },
-                {
-                    "name": "Miscellaneous files",
-                    "type": "group",
-                    "items": [
-                        {
-                            "name": "Auto Incidents No Time (CSV)",
-                            "type": "csv",
-                            "url": "test/incidents_notime.csv",
-                            "tableStyle": {
-                                "colorMap": [
-                                    {
-                                        "color": "hsla(60,80%,80%,1.00)",
-                                        "offset": 0
+                            "name": "GeoJSON files",
+                            "type": "group",
+                            "items": [
+                                {
+                                    "name": "Cemeteries (GeoJSON)",
+                                    "type": "geojson",
+                                    "url": "test/cemeteries.geojson",
+                                    "initialMessage": {
+                                        "title": "title",
+                                        "content": "testing",
+                                        "key": "MyTestingKey"
                                     }
-                                ]
-                            }
+                                },
+                                {
+                                    "name": "Centrelink Sites (GME->GeoJSON)",
+                                    "type": "geojson",
+                                    "url": "test/gme.geojson"
+                                },
+                                {
+                                    "name": "Bike Racks (EPSG:28356)",
+                                    "type": "geojson",
+                                    "url": "test/bike_racks.geojson"
+                                },
+                                {
+                                    "name": "Ferry Routes (GeoJSON via WFS)",
+                                    "type": "wfs",
+                                    "url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography/MapServer/WFSServer",
+                                    "typeNames": "topography_Australian_Topography:Ferry_Routes"
+                                },
+                                {
+                                    "name": "Airports (OGR->GeoJSON, zipped)",
+                                    "type": "ogr",
+                                    "url": "test/airports.zip"
+                                },
+                                {
+                                    "name": "Adelaide Dolphin Sanctuary (polygon)",
+                                    "type": "geojson",
+                                    "url": "http://www.waterconnect.sa.gov.au/Content/Downloads/DEWNR/CONSERVATION_DolphinSanctuary_geojson.zip"
+                                }
+                            ]
                         },
                         {
-                            "name": "Route in England (GPX)",
-                            "type": "gpx",
-                            "url": "test/sample.gpx"
+                            "name": "CSV (points)",
+                            "type": "group",
+                            "items": [
+                                {
+                                    "name": "Auto Incidents No Time (CSV)",
+                                    "type": "csv",
+                                    "url": "test/incidents_notime.csv",
+                                    "tableStyle": {
+                                        "colorMap": [
+                                            {
+                                                "color": "hsla(60,80%,80%,1.00)",
+                                                "offset": 0
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "GPX",
+                            "type": "group",
+                            "items": [
+                                {
+                                    "name": "Route in England (GPX)",
+                                    "type": "gpx",
+                                    "url": "test/sample.gpx"
+                                }
+                            ]
+                        }
+                    ],
+                    "isOpen": true
+                },
+                {
+                    "name": "Test Providers",
+                    "type": "group",
+                    "isOpen": true,
+                    "items": [
+                        {
+                            "name": "Topography (GA)",
+                            "type": "wfs-getCapabilities",
+                            "url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography/MapServer/WFSServer"
+                        },
+                        {
+                            "name": "data.gov.au",
+                            "type": "wfs-getCapabilities",
+                            "url": "http://data.gov.au/geoserver/ows"
+                        },
+                        {
+                            "name": "Western Australia",
+                            "type": "wfs-getCapabilities",
+                            "url": "http://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs"
                         }
                     ]
-                }
-            ],
-            "isOpen": true
-        },
-        {
-            "name": "Test Providers",
-            "type": "group",
-            "isOpen": true,
-            "items": [
-                {
-                    "name": "Topography (GA)",
-                    "type": "wfs-getCapabilities",
-                    "url": "http://www.ga.gov.au/gis/services/topography/Australian_Topography/MapServer/WFSServer"
                 },
                 {
-                    "name": "data.gov.au",
-                    "type": "wfs-getCapabilities",
-                    "url": "http://data.gov.au/geoserver/ows"
+                    "name": "TerriaJS test data",
+                    "type": "group",
+                    "isOpen": true,
+                    "items": [
+                        {
+                            "name": "GeoJSON",
+                            "type": "group",
+                            "items": [
+                                {
+                                    "name": "Test styled and unstyled features",
+                                    "type": "geojson",
+                                    "url": "build/TerriaJS/test/GeoJSON/test-styles.geojson"
+                                },
+                                {
+                                    "name": "Test overriding styled and unstyled features",
+                                    "type": "geojson",
+                                    "url": "build/TerriaJS/test/GeoJSON/test-styles.geojson",
+                                    "style": {
+                                        "marker-size": "200",
+                                        "marker-color": "#ff3333",
+                                        "marker-symbol": "rail"
+                                    }
+                                },
+                                {
+                                    "name": "Testing stroke styles applied to embedded unstyled point.",
+                                    "type": "geojson",
+                                    "url": "build/TerriaJS/test/GeoJSON/test-styles.geojson",
+                                    "style": {
+                                        "stroke-width": "20",
+                                        "stroke": "red",
+                                        "marker-size": 200
+                                    },
+                                    "data": {
+                                        "type": "FeatureCollection",
+                                        "features": [
+                                            {
+                                                "type": "Feature",
+                                                "properties": {
+                                                    "name": "Thick red border, unspecified centre"
+                                                },
+                                                "geometry": {
+                                                    "type": "Point",
+                                                    "coordinates": [
+                                                        146.469,
+                                                        -40.830
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Csv-geo-au",
+                            "type": "group",
+                            "items": [
+                                {
+                                    "name": "Commonwealth Electoral District (CED) 2011",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/ced_code_2011.csv"
+                                },
+                                {
+                                    "name": "Commonwealth Electoral District (CED) 2013",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/ced_code_2013.csv"
+                                },
+                                {
+                                    "name": "Greater capital city statistical area (GCCSA)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/gccsa.csv"
+                                },
+                                {
+                                    "name": "Indigenous area (IARE)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/iare.csv"
+                                },
+                                {
+                                    "name": "Indigenous location (ILOC)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/iloc.csv"
+                                },
+                                {
+                                    "name": "Indigenous region (IREG)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/ireg.csv"
+                                },
+                                {
+                                    "name": "Local government area 2011 (LGA_2011)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/lga_code_2011.csv"
+                                },
+                                {
+                                    "name": "Local government area 2013 (LGA_2013)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/lga_code_2013.csv"
+                                },
+                                {
+                                    "name": "Local government area 2015 (LGA_2015)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/lga_code_2015.csv"
+                                },
+                                {
+                                    "name": "Primary Health Network (PHN)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/phn.csv"
+                                },
+                                {
+                                    "name": "Remoteness area (RA)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/ra.csv"
+                                },
+                                {
+                                    "name": "Section of state (SOS)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/sos.csv"
+                                },
+                                {
+                                    "name": "Section of state range (SOSR)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/sosr.csv"
+                                },
+                                {
+                                    "name": "Significant urban area (SUA)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/sua.csv"
+                                },
+                                {
+                                    "name": "Significant urban area by name (SUA_NAME)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/sua_name.csv"
+                                },
+                                {
+                                    "name": "Tourism region (TR) 2015",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/tr_code_2015.csv"
+                                },
+                                {
+                                    "name": "Tourism region (TR) 2013",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/tr_code_2013.csv"
+                                },
+                                {
+                                    "name": "Urban centre and locality (UCL)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/ucl.csv"
+                                },
+                                {
+                                    "name": "Statistical local area (SLA, obsolete)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/sla.csv"
+                                },
+                                {
+                                    "name": "Census collection district (CD, obsolete)",
+                                    "type": "csv",
+                                    "url": "test/csv-geo-au/cd.csv"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "name": "Western Australia",
-                    "type": "wfs-getCapabilities",
-                    "url": "http://www2.landgate.wa.gov.au/ows/wfspublic_4326/wfs"
+                    "name": "Empty Group",
+                    "type": "group"
                 }
             ]
-        },
-        {
-            "name": "TerriaJS test data",
-            "type": "group",
-            "isOpen": true,
-            "items": [
-                {
-                    "name": "GeoJSON",
-                    "type": "group",
-                    "items": [
-                        {
-                            "name": "Test styled and unstyled features",
-                            "type": "geojson",
-                            "url": "build/TerriaJS/test/GeoJSON/test-styles.geojson"
-                        },
-                        {
-                            "name": "Test overriding styled and unstyled features",
-                            "type": "geojson",
-                            "url": "build/TerriaJS/test/GeoJSON/test-styles.geojson",
-                            "style": {
-                                "marker-size": "200",
-                                "marker-color": "#ff3333",
-                                "marker-symbol": "rail"
-                            }
-                        },
-                        {
-                            "name": "Testing stroke styles applied to embedded unstyled point.",
-                            "type": "geojson",
-                            "url": "build/TerriaJS/test/GeoJSON/test-styles.geojson",
-                            "style": {
-                                "stroke-width": "20",
-                                "stroke": "red",
-                                "marker-size": 200
-                            },
-                            "data": {
-                                "type": "FeatureCollection",
-                                "features": [
-                                    {
-                                        "type": "Feature",
-                                        "properties": {
-                                            "name": "Thick red border, unspecified centre"
-                                        },
-                                        "geometry": {
-                                            "type": "Point",
-                                            "coordinates": [
-                                                146.469,
-                                                -40.830
-                                            ]
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "Csv-geo-au",
-                    "type": "group",
-                    "items": [
-                        {
-                            "name": "Commonwealth Electoral District (CED) 2011",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/ced_code_2011.csv"
-                        },
-                        {
-                            "name": "Commonwealth Electoral District (CED) 2013",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/ced_code_2013.csv"
-                        },
-                        {
-                            "name": "Greater capital city statistical area (GCCSA)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/gccsa.csv"
-                        },
-                        {
-                            "name": "Indigenous area (IARE)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/iare.csv"
-                        },
-                        {
-                            "name": "Indigenous location (ILOC)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/iloc.csv"
-                        },
-                        {
-                            "name": "Indigenous region (IREG)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/ireg.csv"
-                        },
-                        {
-                            "name": "Local government area 2011 (LGA_2011)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/lga_code_2011.csv"
-                        },
-                        {
-                            "name": "Local government area 2013 (LGA_2013)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/lga_code_2013.csv"
-                        },
-                        {
-                            "name": "Local government area 2015 (LGA_2015)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/lga_code_2015.csv"
-                        },
-                        {
-                            "name": "Primary Health Network (PHN)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/phn.csv"
-                        },
-                        {
-                            "name": "Remoteness area (RA)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/ra.csv"
-                        },
-                        {
-                            "name": "Section of state (SOS)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/sos.csv"
-                        },
-                        {
-                            "name": "Section of state range (SOSR)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/sosr.csv"
-                        },
-                        {
-                            "name": "Significant urban area (SUA)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/sua.csv"
-                        },
-                        {
-                            "name": "Significant urban area by name (SUA_NAME)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/sua_name.csv"
-                        },
-                        {
-                            "name": "Tourism region (TR) 2015",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/tr_code_2015.csv"
-                        },
-                        {
-                            "name": "Tourism region (TR) 2013",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/tr_code_2013.csv"
-                        },
-                        {
-                            "name": "Urban centre and locality (UCL)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/ucl.csv"
-                        },
-                        {
-                            "name": "Statistical local area (SLA, obsolete)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/sla.csv"
-                        },
-                        {
-                            "name": "Census collection district (CD, obsolete)",
-                            "type": "csv",
-                            "url": "test/csv-geo-au/cd.csv"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Empty Group",
-            "type": "group"
         }
     ]
 }
