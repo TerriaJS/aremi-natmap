@@ -25,7 +25,7 @@ function RelatedMaps(props) {
 
             <div className={classNames(DropdownStyles.section, Styles.section)}>
                 <a target="_blank" href="http://nationalmap.gov.au/">
-                    <img className={Styles.image} src={require('../../wwwroot/images/aremi.jpg')}
+                    <img className={Styles.image} src={require('../../wwwroot/images/nationalmap.jpg')}
                          alt="NationalMap"/>
                 </a>
 
