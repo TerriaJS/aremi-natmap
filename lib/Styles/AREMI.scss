@@ -1,78 +1,100 @@
-$isf-max-width: 400px;
-dl.isf-info {
-  text-align: right;
-  width: 100%;
-  // max-width: 100%;//$isf-max-width;
-  // @extend .clearfix;
-  overflow: auto;
+:global {
+    .aremi {
+        .ausglobe-title-aremi {
+            vertical-align: middle;
+            text-align: left;
+            color: #ffffff;
+            font-size: 100%;
+            font-weight: 300;
+            line-height: 110%;
+            color: #02ACCC;
+            padding: 0;
 
-  dt {
-    float: left;
-    text-align:left;
-    font-weight: bold;
-    padding-right: 10px;
-    margin-top: 5px;
-    clear: left;
-    max-width: 50%;
-    clear:both;
-    // border-top: white 1px solid;
-  }
-  dd {
-     float:right;
-     text-align:right;
-     margin-top: 3px;
-     max-width: 90%;
-     // border-top: gray 1px solid;
-  }
-}
+            strong {
+                font-weight: 700;
+                font-size: 14pt;
+            }
 
-.isf-note, dl dd.isf-note {
-  max-width: $isf-max-width;
-  font-weight: lighter;
-}
+            small {
+                font-size: 11pt;
+                font-weight: 500;
+            }
 
-.isf-table {
+            span a {
+                font-size: 7pt;
+                font-weight: 500;
+                color: gray;
+            }
 
-}
+            .left {
+                max-width: $work-bench-width - 90px;
+                float: left;
+                padding-bottom: 10px;
+            }
 
-.ausglobe-title-aremi {
-    vertical-align: middle;
-    text-align: left;
-    color: #ffffff;
-    font-size: 100%;
-    font-weight: 300;
-    line-height: 110%;
-    color: #02ACCC;
-    padding: 0;
+            .right {
+                float: right;
+                padding-top: 10px;
+            }
+        }
 
-    strong {
-        font-weight: 700;
-        font-size: 14pt;
+        .ausglobe-title-aremi-md {
+            display: none;
+
+            @media screen and (min-width: $sm) {
+                display: block;
+            }
+        }
+
+        .ausglobe-title-aremi-sm {
+            display: block;
+            line-height: 40px;
+            margin-left: 3px;
+
+            @media screen and (min-width: $sm) {
+                display: none;
+            }
+        }
+
+        .tjs-progress-bar__progress-bar {
+            background: rgba(2, 172, 204, 0.8);
+        }
     }
+    
+    $isf-max-width: 400px;
+    dl.isf-info {
+      text-align: right;
+      width: 100%;
+      // max-width: 100%;//$isf-max-width;
+      // @extend .clearfix;
+      overflow: auto;
 
-    small {
-        font-size: 11pt;
-        font-weight: 500;
-    }
-
-    span a {
-        font-size: 7pt;
-        font-weight: 500;
-        color: gray;
-    }
-
-    .left {
-        max-width: $work-bench-width - 90px;
+      dt {
         float: left;
-        padding-bottom: 10px;
+        text-align:left;
+        font-weight: bold;
+        padding-right: 10px;
+        margin-top: 5px;
+        clear: left;
+        max-width: 50%;
+        clear:both;
+        // border-top: white 1px solid;
+      }
+      dd {
+         float:right;
+         text-align:right;
+         margin-top: 3px;
+         max-width: 90%;
+         // border-top: gray 1px solid;
+      }
     }
 
-    .right {
-        float: right;
-        padding-top: 10px;
+    .isf-note, dl dd.isf-note {
+      max-width: $isf-max-width;
+      font-weight: lighter;
     }
-}
 
-:global(.aremi) .tjs-progress-bar__progress-bar {
-    background: rgba(2, 172, 204, 0.8);
+    .isf-table {
+
+    }
 }

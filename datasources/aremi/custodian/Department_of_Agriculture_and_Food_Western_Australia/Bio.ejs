@@ -20,8 +20,39 @@
     "dataVariable": "Straw Yield /Ha Cereal Crop Average over 5 years"
   },
   "featureInfoTemplate": {
-    "name": "{{LGA_NAME_2015}}: {{Average Shire Yield of Cereal Residue in Tonnes}} tons",
+    "name": "{{LGA_NAME_2015}}: {{#terria.formatNumber}}{useGrouping:true}{{Average Shire Yield of Cereal Residue in Tonnes}}{{/terria.formatNumber}} tons",
     "template": "<% include Cereal_straw-template %>"
+  },
+  "rectangle": [
+    113.0,
+    -35.8,
+    125.0,
+    -26.8
+  ],
+  <% include ../../common/standard_properties %>
+},
+
+{
+  "id": "7dd49cd8",
+  "name": "Oil Mallee stems",
+  "url": "http://catalogue.beta.data.wa.gov.au/dataset/a93e9ea9-134d-49e9-9945-7515147fbcfb/resource/a600d6ff-e205-4cf6-9ab8-4c6ee0f11c02/download/oil-mallee-data.csv",
+  "type": "csv",
+  "showWarnings": false,
+  "dataCustodian": "[Department of Agriculture and Food, Western Australia](https://www.agric.wa.gov.au/)",
+  "description": "Data summarises numbers of stems of Oil Mallees planted per shire.  Oil Mallee data provided by the Oil Mallee Association of Australia (OMA). For more detailed information on volumes of biomass available in specific locations, please contact Simon Dawkins simon.dawkins@oilmallee.org.au",
+  "info": [
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "Copyright © Western Australia Agriculture Authority, 2016"
+    },
+    {
+      "name": "Disclaimer",
+      "content": "While all reasonable care has been taken in the preparation of the material in this file, the Western Australian Government and its officers accept no responsibility for any errors or omissions it may contain, whether caused by negligence, or otherwise, or for any loss, however caused, sustained by any person who relies on it."
+    }
+  ],
+  "featureInfoTemplate": {
+    "name": "{{LGA_NAME_2011}}: {{#terria.formatNumber}}{useGrouping:true}{{Number of Stems}}{{/terria.formatNumber}} stems",
+    "template": "<% include Oil_Mallee_stems-template %>"
   },
   "rectangle": [
     113.0,
