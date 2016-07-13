@@ -20,5 +20,19 @@
         "issuesUrl": "https://api.github.com/repos/TerriaJS/NationalMap-Feedback/issues",
         "accessToken": "FEEDBACK_ACCESS_TOKEN"
     },
-    "trustProxy": "uniquelocal"
+    "trustProxy": "uniquelocal",
+
+    "shareUrlPrefixes": {
+        "": {
+            "service": "googleUrlShortener",
+            "apikey": "GOOGLE_URL_SHAREKEY"
+        },
+        "s": {
+            "service": "s3",
+            "region": "ap-southeast-2",
+            "bucket": "aremi-sharedata",
+            "keyLength": 16
+        }
+    },
+    "newShareUrlPrefix": "s"
 }
