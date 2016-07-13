@@ -1,7 +1,7 @@
 import React from 'react';
 
-import DropdownPanel from 'terriajs/lib/ReactViews/Map/Panels/DropdownPanel.jsx';
-import DropdownStyles from 'terriajs/lib/ReactViews/Map/Panels/dropdown-panel.scss';
+import MenuPanel from 'terriajs/lib/ReactViews/StandardUserInterface/customizable/MenuPanel.jsx';
+import PanelStyles from 'terriajs/lib/ReactViews/Map/Panels/panel.scss';
 import Styles from './related-maps.scss';
 import classNames from 'classnames';
 
@@ -11,19 +11,20 @@ function RelatedMaps(props) {
     };
 
     return (
-        <DropdownPanel theme={dropdownTheme}
-                       btnText="Related Maps"
-                       viewState={props.viewState}
-                       btnTitle="See related maps">
-            <div className={classNames(DropdownStyles.header)}>
-                <label className={DropdownStyles.heading}>Related Maps</label>
+        <MenuPanel theme={dropdownTheme}
+                   btnText="Related Maps"
+                   smallScreen={props.smallScreen}
+                   viewState={props.viewState}
+                   btnTitle="See related maps">
+            <div className={classNames(PanelStyles.header)}>
+                <label className={PanelStyles.heading}>Related Maps</label>
             </div>
 
             <p>
                 Clicking on a map below will open it in a separate window or tab.
             </p>
 
-            <div className={classNames(DropdownStyles.section, Styles.section)}>
+            <div className={classNames(PanelStyles.section, Styles.section)}>
                 <a target="_blank" href="http://nationalmap.gov.au/">
                     <img className={Styles.image} src={require('../../wwwroot/images/nationalmap.jpg')}
                          alt="NationalMap"/>
@@ -36,7 +37,7 @@ function RelatedMaps(props) {
                 </p>
             </div>
 
-            <div className={classNames(DropdownStyles.section, Styles.section)}>
+            <div className={classNames(PanelStyles.section, Styles.section)}>
                 <a target="_blank" href="http://nationalmap.gov.au/northernaustralia/">
                     <img className={Styles.image} src={require('../../wwwroot/images/northernaustralia.jpg')}
 
@@ -56,7 +57,7 @@ function RelatedMaps(props) {
                 </p>
             </div>
 
-            <div className={classNames(DropdownStyles.section, Styles.section)}>
+            <div className={classNames(PanelStyles.section, Styles.section)}>
                 <a target="_blank" href="http://neiiviewer.nicta.com.au">
                     <img className={Styles.image} src={require('../../wwwroot/images/neii.jpg')}
                          alt="NEII Viewer"/>
@@ -71,7 +72,7 @@ function RelatedMaps(props) {
                 </p>
             </div>
 
-            <div className={classNames(DropdownStyles.section, Styles.section)}>
+            <div className={classNames(PanelStyles.section, Styles.section)}>
                 <a target="_blank" href="http://map.aurin.org.au">
                     <img className={Styles.image} src={require('../../wwwroot/images/aurin-map.jpg')}
                          alt="AURIN Map"/>
@@ -84,12 +85,13 @@ function RelatedMaps(props) {
                     decision makers.
                 </p>
             </div>
-        </DropdownPanel>
+        </MenuPanel>
     );
 }
 
 RelatedMaps.propTypes = {
-    viewState: React.PropTypes.object.isRequired
+    viewState: React.PropTypes.object.isRequired,
+    smallScreen: React.PropTypes.bool
 };
 
 export default RelatedMaps;
