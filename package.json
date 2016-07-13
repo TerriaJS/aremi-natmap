@@ -8,7 +8,7 @@
     "url": "http://github.com/NICTA/aremi-natmap"
   },
   "dependencies": {
-    "terriajs-server": "^2.2.0"
+    "terriajs-server": "^2.5.0"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.2",
@@ -16,7 +16,7 @@
     "babel-preset-react": "^6.5.0",
     "css-loader": "^0.23.1",
     "ejs": "^2.4.1",
-    "eslint": "^2.7.0",
+    "eslint": "^3.0.1",
     "eslint-plugin-jsx-control-statements": "2.1.1",
     "eslint-plugin-react": "^4.3.0",
     "extract-text-webpack-plugin": "git://github.com/TerriaJS/extract-text-webpack-plugin#order-undefined-error",
@@ -36,18 +36,19 @@
     "node-notifier": "^4.5.0",
     "node-sass": "^3.4.2",
     "raw-loader": "^0.5.1",
-    "react": "0.14.8",
-    "react-dom": "0.14.8",
+    "react": "15.2.0",
+    "react-dom": "15.2.0",
     "redbox-react": "^1.2.3",
     "sass-loader": "^3.2.0",
     "string-replace-webpack-plugin": "0.0.3",
-    "style-loader": "^0.13.1",
+    "style-loader": "git://github.com/TerriaJS/style-loader#chromeWorkaround",
     "svg-sprite-loader": "0.0.24",
-    "terriajs": "git://github.com/TerriaJS/terriajs.git#newui",
+    "terriajs": "4.0.0-preview2",
     "terriajs-catalog-editor": "^0.2.0",
-    "terriajs-cesium": "1.20.0",
+    "terriajs-cesium": "1.20.1",
     "terriajs-schema": "latest",
     "url-loader": "^0.5.7",
+    "urijs": "^1.17.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1",
     "yargs": "^4.7.0"
@@ -56,7 +57,7 @@
     "start": "bash ./node_modules/terriajs-server/run_server.sh --config-file serverconfig.json",
     "stop": "bash ./node_modules/terriajs-server/stop_server.sh",
     "postinstall": "echo 'Installation with NPM successful. What to do next:\\n  npm start       # Starts the server on port 3001\\n  gulp watch      # Builds NationalMap and dependencies, and rebuilds if files change.'",
-    "hot": "webpack-dev-server --inline --config buildprocess/webpack.config.hot.js --hot",
+    "hot": "webpack-dev-server --inline --config buildprocess/webpack.config.hot.js --hot --host 0.0.0.0",
     "deploy": "rm -rf node_modules && npm install && npm run deploy-without-reinstall",
     "deploy-without-reinstall": "gulp clean && gulp release && npm run deploy-current",
     "deploy-current": "npm run get-deploy-overrides && gulp make-package --serverConfigOverride ./privateserverconfig.json --clientConfigOverride ./wwwroot/privateconfig.json && cd deploy/aws && ./stack create",
