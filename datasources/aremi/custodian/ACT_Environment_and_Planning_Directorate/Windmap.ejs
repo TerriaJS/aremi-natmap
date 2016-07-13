@@ -1,0 +1,27 @@
+{
+  "id": "8d2ab7f7",
+  "name": "ACT - Mean Wind Speed at 80 metres",
+  "layers": "Mean Annual Wind Speed m\\s",
+  "url": "http://data.actmapi.act.gov.au/arcgis/rest/services/actmapi/windlab/MapServer",
+  "type": "esri-mapServer",
+  "dataCustodian": "Australian Capital Territory Environment and Planning Directorate",
+  "opacity": 0.8,
+  "featureInfoTemplate" : {
+    "name": "{{Pixel Value}} m/s",
+    "template": "<h3>Mean Wind Speed: {{Pixel Value}} m/s</h3> <p> Elevation over ground: 80 metres",
+    "formats": {
+      "Pixel Value": {"maximumFractionDigits": 2}
+    }
+  },
+  "info": [
+    {
+      "name": "Data Description",
+      "content": "The mean windspeed in metres per second at 80 metres above ground with a resolution of 100 metres horizontally."
+    },
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "&copy; Australian Capital Territory <p> <a href='https://creativecommons.org/licenses/by/4.0/'>Creative Commons CC-BY 4.0</a>"
+    }
+  ],
+  <%- include ../../common/standard_properties %>
+}
