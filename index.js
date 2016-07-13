@@ -82,7 +82,8 @@ terria.start({
     configUrl: 'config.json',
     defaultTo2D: isCommonMobilePlatform(),
     shareDataService: new ShareDataService({
-        terria: terria
+        terria: terria,
+        url: "share"
     })
 }).otherwise(function(e) {
     raiseErrorToUser(terria, e);
