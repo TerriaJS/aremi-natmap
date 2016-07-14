@@ -30,7 +30,7 @@
         "s": {
             "service": "s3",
             "region": "ap-southeast-2",
-            "bucket": "aremi-sharedata",
+            "bucket": "SHARE_BUCKET",
             "keyLength": 16
         }
     },
