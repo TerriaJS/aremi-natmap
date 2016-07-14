@@ -24,10 +24,11 @@
         }
     }
 
-    .notification {
-        background-image: url("../../wwwroot/images/welcome-bg.jpg");
+    .tjs-notification-window__notification {
+        background-image: url("../../wwwroot/images/disclaimer-bg.jpg");
         background-position: center right;
         background-size: cover;
+        background-blend-mode: hard-light;
 
         .btn {
             background: rgba(0, 0, 0, 0.6);
