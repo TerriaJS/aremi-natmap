@@ -103,7 +103,20 @@
               "name": "New South Wales",
               "type": "group",
               "items": [
-                <% include custodian/NSW_Department_of_Primary_Industries/Bathurst_Planted_Softwoods_Harvest_Residues %>,
+                {
+                  "name": "Forestry",
+                  "type": "group",
+                  "items": [
+                    <% include custodian/NSW_Department_of_Primary_Industries/Forestry %>,
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "South Australia",
+              "type": "group",
+              "items": [
+                <% include custodian/RenewablesSA/Bio %>,
               ]
             },
             {

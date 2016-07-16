@@ -338,7 +338,7 @@ gulp.task('make-package', function() {
     }
 
     var tarResult = spawnSync('tar', [
-        'czvf',
+        'czf',
         path.join('..', 'packages', packageName + '.tar.gz')
     ].concat(fs.readdirSync(workingDir)), {
         cwd: workingDir,
