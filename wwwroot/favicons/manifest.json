@@ -1,7 +1,5 @@
 {
- "name": "NationalMap",
- "start_url": "index.html",
- "display": "standalone",
+ "name": "App",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
