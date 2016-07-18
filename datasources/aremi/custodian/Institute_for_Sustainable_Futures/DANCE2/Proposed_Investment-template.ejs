@@ -1,0 +1,71 @@
+<dl class='isf-info'>
+    <dt>Short name                                        </dt><dd>{{Short_name}}               </dd>
+    <dt>Asset type                                        </dt><dd>{{Asset_type}}               </dd>
+    <dt>Network                                           </dt><dd>{{Network}}                  </dd>
+    <dt>Augmentation investment (m$)                      </dt><dd>{{Augmentation}}             </dd>
+    <dt>Replacement/refurbishment investment (m$)         </dt><dd>{{Replacement/refurbishment}}</dd>
+    <dt>Connections investment (m$)                       </dt><dd>{{Connections}}              </dd>
+    <dt>OPEX investment (m$)                              </dt><dd>{{OPEX}}                     </dd>
+    <dt>Other investment (m$)                             </dt><dd>{{Other investment}}         </dd>
+    <dt>Total investment (m$)                             </dt><dd>{{Total_investment}}         </dd>
+    <dt>Deferrable amount (m$)                            </dt><dd>{{Deferrable_amount}}        </dd>
+    <dt>Proposed investment year                          </dt><dd>{{Proposed_investment_year}} </dd>
+{{#Commit_inv_year}}
+    <dt>Commitment Year                                   </dt><dd>{{Commit_inv_year}}          </dd>
+{{/Commit_inv_year}}
+    <dt>Constraint season(s)                              </dt><dd>{{Constraint_season}}        </dd>
+    <dt>Note                                              </dt><dd class='isf-note'>{{probtext}}</dd>
+    <dt>Annual deferral pool (m$/yr)                      </dt><dd>{{Annual_deferral}}          </dd>
+    <dt>Proportion available to DM providers (%)          </dt><dd>{{Percent_avail_to_DM}}      </dd>
+    <dt>Potential value of 10 year deferral of investment </dt><dd>{{Potential_NPV}}            </dd>
+    <dt>Average demand growth rate (MVA/yr)               </dt><dd>{{Average_demand_growth}}    </dd>
+    <dt>Reactive support requirements                     </dt><dd>{{Reactive_support}}         </dd>
+{{#Hours_exceed}}
+    <dt>Hours exceeded                                    </dt><dd>{{Hours_exceed}}             </dd>
+{{/Hours_exceed}}
+</dl>
+
+
+
+<table class='feature-info-panel-section-pivot-table'>
+    <tr>
+        <td>Year</td>
+        <td>Network support Required</td>
+        {{#Inv.0}}
+        {{#Unserved_energy}}<td>Unserved Energy</td>{{/Unserved_energy}}
+        {{#Value_unserved_energy}}<td>Value of unserved energy</td>{{/Value_unserved_energy}}
+        {{/Inv.0}}
+    </tr>
+{{#Inv}}
+    <tr>
+        <td>{{Year}}</td>
+        <td>{{Network_support}}</td>
+        {{#Unserved_energy}}<td>{{Unserved_energy}}</td>{{/Unserved_energy}}
+        {{#Value_unserved_energy}}
+        <td> {{#terria.formatNumber}}{useGrouping:true}{{Value_unserved_energy}}{{/terria.formatNumber}}</td>
+        {{/Value_unserved_energy}}
+    </tr>
+{{/Inv}}
+</table>
+
+<chart column-names='Year,Network_Support{{#Inv.0}}{{#Unserved_energy}},Unserved_energy{{/Unserved_energy}}{{#Value_unserved_energy}},Value of unserved energy{{/Value_unserved_energy}}{{/Inv.0}}'
+       x-column='Year'
+       y-columns='Network_Support{{#Inv.0}}{{#Unserved_energy}},Unserved_energy{{/Unserved_energy}}{{#Value_unserved_energy}},Value_unserved_energy{{/Value_unserved_energy}}{{/Inv.0}}'
+       column-names='Year,Network_Support{{#Inv.0}}{{#Unserved_energy}},Unserved_energy{{/Unserved_energy}}{{#Value_unserved_energy}},Value_unserved_energy{{/Value_unserved_energy}}{{/Inv.0}}'
+       column-units=',MVA{{#Inv.0}}{{#Unserved_energy}},MWh/yr{{/Unserved_energy}}{{#Value_unserved_energy}},$/yr{{/Value_unserved_energy}}{{/Inv.0}}'
+>
+Year,Network_Support{{#Inv.0}}{{#Unserved_energy}},Unserved_energy{{/Unserved_energy}}{{#Value_unserved_energy}},Value_unserved_energy{{/Value_unserved_energy}}{{/Inv.0}}\n
+{{#Inv}}{{Year}},{{Network_support}}{{#Unserved_energy}},{{Unserved_energy}}{{/Unserved_energy}}{{#Value_unserved_energy}},'{{Value_unserved_energy}}'{{/Value_unserved_energy}}\n{{/Inv}}
+</chart>
+
+<dl class='isf-info'>
+{{#NSP_contact}}
+    <dt>NSP Contact Email                </dt><dd><a href='mailto:{{NSP_contact}}'>{{NSP_contact}}</a></dd>
+{{/NSP_contact}}
+{{#NSP_phone}}
+    <dt>NSP Contact Phone                </dt><dd>{{NSP_phone}}</dd>
+{{/NSP_phone}}
+</dl>
+
+{{#NSP_info_link}}<a target='_blank' href='{{NSP_info_link}}'>NSP demand management information</a><br>{{/NSP_info_link}}
+{{#Link_to_download}}<a target='_blank' href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}

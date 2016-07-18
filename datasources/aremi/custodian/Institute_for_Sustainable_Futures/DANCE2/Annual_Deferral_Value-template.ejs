@@ -1,0 +1,61 @@
+<dl class='isf-info'>
+  <dt>Network                             </dt><dd> {{Network}}              </dd>
+  <dt>Asset name                          </dt><dd> {{Asset_name}}            </dd>
+  <dt>Asset type                          </dt><dd> {{Asset_type}}            </dd>
+  <dt>Annual deferral pool (m$/yr)        </dt><dd> {{Annual_deferral}}       </dd>
+  <dt>% Available to DM providers (%)     </dt><dd> {{Available_DM_perc}}     </dd>
+  <dt>Investment year                     </dt><dd> {{Investment_year}}       </dd>
+  <dt>Total investment value (m$)         </dt><dd> {{Total_investment}}      </dd>
+  <dt>Deferrable investment (m$)          </dt><dd> {{Deferrable_investment}} </dd>
+  <dt>Constraint season(s)                </dt><dd> {{Constraint_season}}     </dd>
+  <dt>Average demand growth rate (MVA/yr) </dt><dd> {{Average_demand_growth}} </dd>
+  <dt>Reactive support requirements       </dt><dd> {{Reactive_support}}      </dd>
+  <dt>Notes                               </dt><dd class='isf-note'> {{Check}}</dd>
+</dl>
+
+<br>
+
+<table class='isf-table'>
+  <tr>
+    <th>Year</th>
+    <th>ADV ($/kVAyr)</th>
+    <th>Network Support (MVA)</th>
+  </tr>
+{{#adv}}
+  <tr>
+    <td>{{Year}}</td>
+    <td>{{ADV}}</td>
+    <td>{{Network_support}}</td>
+  </tr>
+{{/adv}}
+</table>
+
+<chart column-names='Year,adv,net_support'
+       x-column='Year'
+       y-columns='adv,net_support'
+       column-names='Year,ADV,Network Support'
+       column-units=',$/kVAyr,MVA'
+>
+Year,adv,net_support\n
+{{#adv}}
+{{Year}},{{ADV}},{{Network_support}}\n
+{{/adv}}
+</chart>
+
+
+<div class='isf-note'>
+  Depending on NSP network security standards the information shown may or may not take
+  account of potential load transfers to delay constraints. Consult with distributors for
+  further details
+</div>
+<dl class='isf-info'>
+{{#NSP_contact}}
+    <dt>NSP Contact Email                </dt><dd><a href='mailto:{{NSP_contact}}'>{{NSP_contact}}</a></dd>
+{{/NSP_contact}}
+{{#NSP_phone}}
+    <dt>NSP Contact Phone                </dt><dd>{{NSP_phone}}</dd>
+{{/NSP_phone}}
+</dl>
+
+{{#NSP_info_link}}<a target='_blank' href='{{NSP_info_link}}'>NSP demand management information</a><br>{{/NSP_info_link}}
+{{#Link_to_download}}<a target='_blank' href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}

@@ -1,11 +1,15 @@
 {
   "id": "5407174c",
-  "name": "Available Capacity",
+  "name": "Available Distribution Capacity",
   "url": "datasets/dance2/availcap.czml",
-  "legendUrl": "datasets/dance2/AvailCap.png",
+  "legendUrl": "http://static.aremi.nicta.com.au/datasets/dance/2016/Available_Distribution_Capacity.png",
   "type": "czml",
   "featureInfoTemplate": {
-    "template": "To see the Network Opportunities data please visit the current version of AREMI at: <p> http://nationalmap.gov.au/renewables/ <p> New data is coming in July 2016!"
+    "name": "{{{Name}}}",
+    "template": "<%- include Available_Capacity-template %>"
+  },
+  "dateFormat": {
+    "timelineTic": "yyyy"
   },
   "info" :[
     {
@@ -14,17 +18,17 @@
     },
     <% include common-Info %>,
   ],
-  <% var initialMessageKey = "initialMessage.dance2.availcap" %>
   <% include common %>,
 },
 {
   "id": "54071760",
   "name": "Proposed Investment",
   "url": "datasets/dance2/PropInv.czml",
-  "legendUrl": "datasets/dance2/PropInv.png",
+  "legendUrl": "http://static.aremi.nicta.com.au/datasets/dance/2016/Proposed_Investment.png",
   "type": "czml",
   "featureInfoTemplate": {
-    "template": "To see the Network Opportunities data please visit the current version of AREMI at: <p> http://nationalmap.gov.au/renewables/ <p> New data is coming in July 2016!"
+    "name": "{{{Name}}}",
+    "template": "<%- include Proposed_Investment-template %>"
   },
   "info" :[
     {
@@ -33,17 +37,20 @@
     },
     <% include common-Info %>,
   ],
-  <% var initialMessageKey = "initialMessage.dance2.PropInv" %>
   <% include common %>,
 },
 {
   "id": "5407176a",
   "name": "Annual Deferral Value",
   "url": "datasets/dance2/ADV_det.czml",
-  "legendUrl": "datasets/dance2/ADV_det.png",
+  "legendUrl": "http://static.aremi.nicta.com.au/datasets/dance/2016/Annual_Deferral_Value.png",
   "type": "czml",
   "featureInfoTemplate": {
-    "template": "To see the Network Opportunities data please visit the current version of AREMI at: <p> http://nationalmap.gov.au/renewables/ <p> New data is coming in July 2016!"
+    "name": "{{{Name}}}",
+    "template": "<%- include Annual_Deferral_Value-template %>"
+  },
+  "dateFormat": {
+    "timelineTic": "yyyy"
   },
   "info" :[
     {
@@ -52,17 +59,21 @@
     },
     <% include common-Info %>,
   ],
-  <% var initialMessageKey = "initialMessage.dance2.ADV_det" %>
   <% include common %>,
 },
 {
   "id": "5407177e",
   "name": "Peak Day Available Capacity",
   "url": "datasets/dance2/Avail_Cap_Hourly.czml",
-  "legendUrl": "datasets/dance2/Availcap_Hourly.png",
+  "legendUrl": "http://static.aremi.nicta.com.au/datasets/dance/2016/Hourly_available_capacity.png",
   "type": "czml",
   "featureInfoTemplate": {
-    "template": "To see the Network Opportunities data please visit the current version of AREMI at: <p> http://nationalmap.gov.au/renewables/ <p> New data is coming in July 2016!"
+    "name": "{{{Name}}}",
+    "template": "<%- include Peak_Day_Available_Capacity-template %>"
+  },
+  "dateFormat":{
+    "currentTime": "'Hour of day:' hh TT",
+    "timelineTic": " "
   },
   "info" :[
     {
@@ -71,6 +82,5 @@
     },
     <% include common-Info %>,
   ],
-  <% var initialMessageKey = "initialMessage.dance2.Avail_Cap_Hourly" %>
   <% include common %>,
 }

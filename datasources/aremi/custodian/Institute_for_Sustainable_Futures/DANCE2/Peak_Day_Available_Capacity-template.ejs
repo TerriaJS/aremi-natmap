@@ -1,0 +1,89 @@
+{{#value}}
+<dl class='isf-info'>
+    <dt>Mapped asset                                    </dt><dd>{{Mapped_asset}}                </dd>
+<hr>
+{{#Asset_name}}
+    <dt>Asset name                                      </dt><dd>{{Asset_name}}                  </dd>
+{{/Asset_name}}
+{{#Short_name}}
+    <dt>Short name                                      </dt><dd>{{Short_name}}                  </dd>
+{{/Short_name}}
+{{#Asset_type}}
+    <dt>Asset type                                      </dt><dd>{{Asset_type}}                  </dd>
+{{/Asset_type}}
+{{#Network}}
+    <dt>Network                                         </dt><dd>{{Network}}                     </dd>
+{{/Network}}
+{{#Constraint_season}}
+    <dt>Constraint season                               </dt><dd>{{Constraint_season}}           </dd>
+{{/Constraint_season}}
+{{#Proposed_investment_year}}
+    <dt>Propsed Investment Year                         </dt><dd>{{Proposed_investment_year}}    </dd>
+{{/Proposed_investment_year}}
+{{#Commit_inv_year}}
+    <dt>Commitment Year                                 </dt><dd>{{Commit_inv_year}}             </dd>
+{{/Commit_inv_year}}
+{{#Year_shown}}
+    <dt>Year shown in table                             </dt><dd>{{Year_shown}}                  </dd>
+{{/Year_shown}}
+{{#Asset_capacity}}
+    <dt>Asset capacity (MVA)                            </dt><dd>{{Asset_capacity}}              </dd>
+{{/Asset_capacity}}
+{{#Maximum_capacity_exceedance}}
+    <dt>Maximum capacity exceedance in shown year (MVA) </dt><dd>{{Maximum_capacity_exceedance}} </dd>
+{{/Maximum_capacity_exceedance}}
+{{#MWh_exceedance}}
+    <dt>MWh exceedance in shown year (MWh)              </dt><dd>{{MWh_exceedance}}              </dd>
+{{/MWh_exceedance}}
+</dl>
+
+<hr>
+{{#HH.length}}
+<table class='feature-info-panel-section-pivot-table dance-peak-day-table'>
+    <tr>
+        <td>Hour                                        </td>
+        <td colspan='2'>Available Capacity              </td>
+        <td>Hourly exceedance share                     </td>
+    </tr>
+    <tr>
+        <td><small>Units</small>                        </td>
+        <td><small>MVA</small>                          </td>
+        <td><small>% of capacity</small>                </td>
+        <td><small>% of total annual exceedance</small> </td>
+    </tr>
+{{#HH}}
+    <tr>
+        <td>{{Hour}}                    </td>
+        <td>{{Available_capacity}}      </td>
+        <td>{{Available_capacity_perc}} </td>
+        <td>{{Hourly_exceedance_share}} </td>
+    </tr>
+{{/HH}}
+</table>
+<!-- <chart column-names='Hour,av_cap_mva,av_cap_pct,hour_ex_share'
+       x-column='Hour'
+       y-columns='av_cap_mva,av_cap_pct,hour_ex_share'
+       column-names='Hour of day,Av. Cap MVA,Av. Cap %,Hourly ex. share'
+       column-units=',MVA,%,% total annual exceedance'
+>
+Hour,av_cap_mva,av_cap_pct,hour_ex_share\n
+{{#HH}}
+{{Hour}},{{Available_capacity}},{{Available_capacity_perc}},{{Hourly_exceedance_share}}\n
+{{/HH}}
+</chart> -->
+{{/HH.length}}
+
+<dl class='isf-info'>
+{{#NSP_contact}}
+    <dt>NSP Contact Email                </dt><dd><a href='mailto:{{NSP_contact}}'>{{NSP_contact}}</a></dd>
+{{/NSP_contact}}
+{{#NSP_phone}}
+    <dt>NSP Contact Phone                </dt><dd>{{NSP_phone}}</dd>
+{{/NSP_phone}}
+</dl>
+
+
+{{#NSP_info_link}}<a target='_blank' href='{{NSP_info_link}}'>NSP demand management information</a><br>{{/NSP_info_link}}
+{{#Link_to_download}}<a target='_blank' href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}
+</div>
+{{/value}}

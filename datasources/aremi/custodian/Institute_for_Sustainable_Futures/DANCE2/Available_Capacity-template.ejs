@@ -1,0 +1,63 @@
+
+<dl class='isf-info'>
+    <dt>Short name                          </dt><dd>{{Short_name}}                 </dd>
+    <dt>Asset type                          </dt><dd>{{Asset_type}}                 </dd>
+    <dt>Network                             </dt><dd>{{Network}}                    </dd>
+{{#Constraint_season}}
+    <dt>Constraint season(s)                </dt><dd>{{Constraint_season}}          </dd>
+{{/Constraint_season}}
+    <dt>Average demand growth rate (MVA/yr) </dt><dd>{{Average_demand_growth}}      </dd>
+{{#Commit_inv_year: }}
+    <dt>Proposed investment year            </dt><dd>{{Commit_inv_year: }}          </dd>
+{{/Commit_inv_year: }}
+{{#Proposed_investment_year: }}
+    <dt>Commitment Year                     </dt><dd>{{Proposed_investment_year: }} </dd>
+{{/Proposed_investment_year: }}
+{{#Curr}}
+    <dt>Data Currency                       </dt><dd>{{Curr}}                       </dd>
+{{/Curr}}
+{{#Next_update}}
+    <dt>Next Update                         </dt><dd>{{Next_update}}                </dd>
+{{/Next_update}}
+</dl>
+
+<table class='feature-info-panel-section-pivot-table'>
+        <tr>
+            <td>Year</td>
+            <td>Available Capacity</td>
+        </tr>
+{{#availcapinfo}}
+        <tr>
+            <td>{{Year}}</td>
+            <td>{{Availcap}}</td>
+        </tr>
+{{/availcapinfo}}
+</table>
+
+<chart column-names='Year,avail_cap'
+       x-column='Year'
+       y-columns='avail_cap'
+       column-names='Year,Available Capacity'
+       column-units=',$/kVAyr'
+>
+Year,avail_cap\n
+{{#availcapinfo}}
+{{Year}},{{Availcap}}\n
+{{/availcapinfo}}
+</chart>
+
+<dl class='isf-info'>
+    <dt>Note</dt> <dd class='isf-note'>Depending on NSP network security standards the Available Capacity may or may not take account of potential load transfers to delay constraints. Consult with distributors for further details</dd>
+{{#NSP_contact}}
+    <dt>NSP Contact Email                </dt><dd><a href='mailto:{{NSP_contact}}'>{{NSP_contact}}</a></dd>
+{{/NSP_contact}}
+{{#NSP_phone}}
+    <dt>NSP Contact Phone                </dt><dd>{{NSP_phone}}</dd>
+{{/NSP_phone}}
+</dl>
+
+<br>
+{{#Weblink_DAPR}}    <a target='_blank' href='{{Weblink_DAPR}}'>Annual Planning Report</a><br>             {{/Weblink_DAPR}}
+{{#Weblink_DSES}}    <a target='_blank' href='{{Weblink_DSES}}'>DSES web link</a><br>                      {{/Weblink_DSES}}
+{{#NSP_info_link}}   <a target='_blank' href='{{NSP_info_link}}'>NSP demand management information</a><br> {{/NSP_info_link}}
+{{#Link_to_download}}<a target='_blank' href='{{Link_to_download}}'>Download data in spreadsheet format</a>{{/Link_to_download}}
