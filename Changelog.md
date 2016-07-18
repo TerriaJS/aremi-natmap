@@ -5,7 +5,8 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
-### In the next version of AREMI
+### Version 2016-07-18
+* The NewUI has been released!
 * Added the layers "Harvest Residues Planted Softwoods Monaro" and "Harvest Residues Planted Softwoods Tumut" in the category "Renewable Energy -> Bioenergy -> New South Wales -> Forestry" from the Department of Primary Industries - New South Wales Government.
 * Added the layers "Crop Estimates by District", "Green Triangle Forestry", "Intensive Animal Husbandry and Production" and "Green Triangle Region Boundary" in the category "Renewable Energy -> Bioenergy -> South Australia" from RenewablesSA.
 * Merged in the latest [NationalMap 2016-07-15](https://github.com/NICTA/nationalmap/blob/2016-07-15/CHANGES.md) and [TerriaJS 4.0.2](https://github.com/TerriaJS/terriajs/blob/4.0.2/CHANGES.md) releases.
