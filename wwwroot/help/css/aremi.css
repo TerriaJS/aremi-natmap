@@ -1,0 +1,20 @@
+.ausglobe-title-aremi {
+  vertical-align: middle;
+  text-align: left;
+  color: #ffffff;
+  /*font-size: 100%;*/
+  font-weight: 300;
+  line-height: 90%;
+  color: #02ACCC;
+  padding: 10px 15px 0px 0px;
+}
+.ausglobe-title-aremi strong {
+  font-weight: 700;
+  font-size: 14pt;
+  display: block;
+  padding-top: 10px;
+}
+.ausglobe-title-aremi small {
+  font-size: 11pt;
+  font-weight: 500;
+}
