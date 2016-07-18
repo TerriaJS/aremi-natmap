@@ -7,7 +7,7 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version of AREMI
 * Added the layers "Harvest Residues Planted Softwoods Monaro" and "Harvest Residues Planted Softwoods Tumut" in the category "Renewable Energy -> Bioenergy -> New South Wales -> Forestry" from the Department of Primary Industries - New South Wales Government.
-* Added the layers "Crop Estimates by District" and "Green Triangle Forestry" in the category "Renewable Energy -> Bioenergy -> South Australia" from RenewablesSA.
+* Added the layers "Crop Estimates by District", "Green Triangle Forestry" and "Green Triangle Region Boundary" in the category "Renewable Energy -> Bioenergy -> South Australia" from RenewablesSA.
 * Merged in the latest [NationalMap 2016-07-15](https://github.com/NICTA/nationalmap/blob/2016-07-15/CHANGES.md) and [TerriaJS 4.0.2](https://github.com/TerriaJS/terriajs/blob/4.0.2/CHANGES.md) releases.
 * Added the layer "Renewable Energy -> Bioenergy -> Western Australia -> Oil Mallee stems" from the Department of Agriculture and Food, Western Australia.
 * Added the layer "Renewable Energy -> Wind -> ACT - Mean Wind Speed at 80 metres" from the ACT Environment and Planning Directorate.
