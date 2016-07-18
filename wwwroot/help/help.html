@@ -102,17 +102,12 @@
 
     <h1>Help & FAQ</h1>
 
-    <!-- 4:3 aspect ratio -->
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2E-u0gjz9Yw"></iframe>
-    </div>
+    <h2><a class="anchor" name="getting-started">How to get started with the AREMI</a></h2>
 
-    <h2><a class="anchor" name="getting-started">How to get started with the National Map</a></h2>
-
-    <p>To launch the National Map and display some basic data follow these steps.</p>
+    <p>To launch the AREMI and display some basic data follow these steps.</p>
 
     <ul>
-      <li>Display the NationalMap by using the URL <a href="http://nationalmap.gov.au">http://nationalmap.gov.au</a>.</li>
+      <li>Display the AREMI by using the URL <a href="http://nationalmap.gov.au/renewables/">http://nationalmap.gov.au/renewables/</a>.</li>
       <li>In the left hand panel click the <strong>Add Data</strong> button to launch the Data Catalogue.</li>
       <li>Browse through the Data Catalogue to find a data set of interest. Click on the title of your prefered data set to get a preview of that data, along with a description and other relevent metadata. To view your selected data set on a larger map, click the <strong>Add to the Map</strong> button. The spatial data will be immediately displayed in the map view, and a visual legend for that data will appear in the Data Workbench, located on the left hand side of the page.</li>
       <li>Note that it may not be immediately obvious where your selected spatial data has loaded on the map if does not cover a large part of Australia. To locate loaded data on the map, go to the Data Workbench (positioned on the left hand side of the page), and click the <strong>Zoom to extent</strong> link for your desired data set. From here you can also click <strong>About this data</strong> to get more information about your selected data set.</li>
@@ -136,49 +131,41 @@
 
     <h2><a class="anchor" name="add-data">How to display my own spreadsheet or spatial data</a></h2>
 
-    <p>National Map can display two kinds of spreadsheets:<p>
-    <ol><li>Spreadsheets with a <strong>point location (latitude and longitude)</strong> for each row, expressed as two columns: <code>lat</code> and <code>lon</code>. These will be displayed as points (circles).</li>
-    <li>Spreadsheets where each row refers to a <strong>region</strong> such as a local government area (council), state, postcode, or ABS statistical unit such as an SA2 or CED (Commonwealth Electoral Division). Columns must be named according to the <a href="https://github.com/NICTA/nationalmap/wiki/csv-geo-au">CSV-geo-au</a> standard. These will be displayed as regions, highlighting the actual shape of each area.</li>
+    <p>AREMI can display two kinds of spreadsheets:</p>
+    <ol style="list-style-type: decimal">
+      <li>Spreadsheets with a <strong>point location (latitude and longitude)</strong> for each row, expressed as two columns: lat andlon. These will be displayed as points (circles).</li>
+      <li>Spreadsheets where each row refers to a <strong>region</strong> such as a local government area (council), state, postcode, or ABS statistical unit such as an SA2 or CED (Commonwealth Electoral Division). Columns must be named according to the <a href="https://github.com/NICTA/nationalmap/wiki/csv-geo-au">CSV-geo-au</a> standard. These will be displayed as regions, highlighting the actual shape of each area.</li>
     </ol>
-    <p>Spreadsheets must be saved as CSV (comma-separated values). </p>
-
+    <p>Spreadsheets must be saved as CSV (comma-separated values).</p>
     <p>Other standard spatial data types such as GeoJSON and KML are also supported.</p>
-
     <p>There are two ways to load your data:</p>
-
     <ul>
-    <li>Drag your data file onto the NationalMap map view. The format of the data file will be auto-detected.</li>
-    <li>Click on the <strong>Add Data</strong> button in the left hand panel. This will launch the Data Catalogue. Select the <strong>My Data</strong> tab at the top of the modal window and follow the provided instructions.</li>
+      <li>
+        <p>Drag your data file onto the AREMI map view. The format of the data file will be auto-detected.</p>    </li>
+      <li>
+        <p>Click on the <strong>Add Data</strong> button in the left hand panel. This will launch the Data Catalogue. Select the <strong>My Data</strong> tab at the top of the modal window and follow the provided instructions.</p>    </li>
     </ul>
-
-    <p>As for NationalMap data sets, you can click on the regions or points to see the data available for that location. If the file is a CSV file, the data from all columns will be shown in the feature information dialogue when you click.</p>
-
-    <p>You can also use all of the features of the <a href="data-workbench.html">Data Workbench</a> on the data you have loaded as well.</p>
+    <p>As for AREMI data sets, you can click on the regions or points to see the data available for that location. If the file is a CSV file, the data from all columns will be shown in the feature information dialogue when you click.</p>
+    <p>You can also use all of the features of the <a href="data-workbench.html">Data Workbench</a> on the data you have loaded as well.</p>
     <p>To share a view of your data with others, you must first publish it to the web somewhere with a URL, and then load it from there.</p>
 
 
-    <h2><a class="anchor" name="share">How to share my National Map view with others</a></h2>
+    <h2><a class="anchor" name="share">How to share my AREMI view with others</a></h2>
 
-    <p>There are three ways:</p>
-
+      <p>There are three ways:</p>
     <ul>
-    <li>Click the Share button, copy the given URL (shown in the first text box) to the clipboard and paste it into an email which you send to the recipient. They can click on it in the email or paste it into their browser to see the same view as you.</li>
-    <li>Click the Share button, copy the HTML fragment (shown in the second text box) and paste it into an HTML file, which you then make available to the recipients. When the recipients display your web page, they will see the NationalMap view within that web page.</li>
-    <li>Take a screenshot and email it as an image (see your OS instructions on how to take a screenshot). This will share all information, even if loaded from a local file or URL.</li>
+      <li>
+        <p>Click the Share button, copy the given URL (shown in the first text box) to the clipboard and paste it into an email which you send to the recipient. They can click on it in the email or paste it into their browser to see the same view as you.</p>    </li>
+      <li>
+        <p>Click the Share button, copy the HTML fragment (shown in the second text box) and paste it into an HTML file, which you then make available to the recipients. When the recipients display your web page, they will see the AREMI view within that web page.</p>    </li>
+      <li>
+        <p>Take a screenshot and email it as an image (see your OS instructions on how to take a screenshot). This will share all information, even if loaded from a local file or URL.</p>    </li>
     </ul>
-
     <p><strong>Note that only the third method will show the data you have loaded from a local file</strong>.</p>
 
+    <h2><a class="anchor" name="contribute">How to contribute Data Sets to AREMI</a></h2>
 
-    <h2><a class="anchor" name="contribute">How to contribute Data Sets to National Map</a></h2>
-
-    <p>The NationalMap encourages data providers to publish their spatial data using this platform. There are two routes you can take to publishing.</p>
-
-    <ul>
-      <li><p>Any spatial data which is added to <a href="http://data.gov.au">data.gov.au</a> using a protocol or format supported by the NationalMap (such as WMS) will automatically appear in the <strong>data.gov.au</strong> section of the <strong>Data Catalogue</strong> tab for the NationalMap. See WMS Data Sets for a list of spatial data sets already on <a href="http://data.gov.au">data.gov.au</a>. See the <a href="https://toolkit.data.gov.au/index.php?title=How_to_use_data.gov.au">data.gov.au Toolkit</a> for a detailed reference on using <a href="http://data.gov.au">data.gov.au</a> and using it to publish your own data sets.</p></li>
-      <li><p>If you require your data set to appear under a separate category of the NationalMap Data Catalogue, you will need to contact the support for NationalMap by emailing to <a href="mailto:data@pmc.gov.au">data@pmc.gov.au</a> for more information. You will need to provide an internet accessible service in a standard protocol to access your data set on the internet and appropriate references must be added to the NationalMap configuration.</p></li>
-    </ul>
-
+    <p>The AREMI encourages data providers to publish their spatial data using this platform. Please contact us to discuss further by emailing <a href="mailto:aremi@data61.csiro.au">aremi@data61.csiro.au</a></p>
 
     </div>
 
