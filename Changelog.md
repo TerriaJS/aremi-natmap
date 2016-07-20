@@ -4,7 +4,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
-### Version 2016-07-20
+### Version 2016-07-18a
 * Merge in the latest [NationalMap 2016-07-20](https://github.com/NICTA/nationalmap/blob/2016-07-20/CHANGES.md) and use [TerriaJS 4.1.2](https://github.com/TerriaJS/terriajs/blob/4.1.2/CHANGES.md) releases.
 
 
