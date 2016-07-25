@@ -4,6 +4,10 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+# In the next version of AREMI
+* Added the layer "Renewable Energy -> Wind -> NSW - Wind Speed at 100 metres" with data from [DNV GL](https://www.dnvgl.com/) as sourced by the [Geological Survey of NSW, NSW Departmet of Industry](http://www.resourcesandenergy.nsw.gov.au/).
+
+
 ### Version 2016-07-18b
 * Merge in the latest [NationalMap 2016-07-20](https://github.com/NICTA/nationalmap/blob/2016-07-20/CHANGES.md) and use [TerriaJS 4.1.2](https://github.com/TerriaJS/terriajs/blob/4.1.2/CHANGES.md) releases.
 

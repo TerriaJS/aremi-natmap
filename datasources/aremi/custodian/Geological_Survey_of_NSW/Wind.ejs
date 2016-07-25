@@ -1,0 +1,46 @@
+{
+  "id": "46d91723",
+  "name": "NSW - Wind Speed at 100 metres",
+  "layers": "nsw_wind_speed",
+  "url": "http://geo-prototype1.aremi.nicta.com.au/geoserver/nsw/wms",
+  "type": "wms",
+  "featureInfoTemplate" : {
+    "name": "{{GRAY_INDEX}} m/s",
+    "template": "<% include Wind-template %>",
+    "formats": {
+      "GRAY_INDEX": {"maximumFractionDigits": 2}
+    }
+  },
+  "info" :[
+    {
+      "name": "Summary",
+      "content": "<% include Wind-summary %>"
+    },
+    {
+      "name": "Data Supplier",
+      "content": "<% include Wind-supplier %> <p> <% include Wind-logo %>"
+    },
+    {
+      "name": "DNV GL Disclaimer",
+      "content": "<% include Wind-DNVGL_disclaimer %>"
+    },
+    {
+      "name": "NSW Department of Industry Disclaimer",
+      "content": "<% include Wind-NSW_DoI_disclaimer %>"
+    },
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "<% include Wind-licensing %>"
+    }
+  ],
+  "infoSectionOrder": [
+    "Summary",
+    "Data Description",
+    "Licensing, Terms & Conditions",
+    "Data Supplier",
+    "NSW Department of Industry Disclaimer",
+    "DNV GL Disclaimer"
+  ],
+  <% include ../../common/nsw_camera_rectangle %>,
+  <% include ../../common/standard_properties %>
+}
