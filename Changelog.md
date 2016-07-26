@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 # In the next version of AREMI
+* Added the three layers "Renewable Energy -> Geothermal -> NSW - Geothermal Temperature at depth" from the [Geological Survey of NSW, NSW Departmet of Industry](http://www.resourcesandenergy.nsw.gov.au/).
 * Added the layer "Renewable Energy -> Wind -> NSW - Wind Speed at 100 metres" with data from [DNV GL](https://www.dnvgl.com/) as sourced by the [Geological Survey of NSW, NSW Departmet of Industry](http://www.resourcesandenergy.nsw.gov.au/).
 
 
