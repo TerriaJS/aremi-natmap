@@ -20,7 +20,7 @@
         "issuesUrl": "https://api.github.com/repos/TerriaJS/NationalMap-Feedback/issues",
         "accessToken": "FEEDBACK_ACCESS_TOKEN"
     },
-    "trustProxy": "uniquelocal",
+    "trustProxy": "loopback, uniquelocal",
 
     "shareUrlPrefixes": {
         "": {
