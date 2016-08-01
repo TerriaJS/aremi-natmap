@@ -7,6 +7,7 @@
   "opacity": 1.0,
   "dataUrl": "http://services.ga.gov.au/gis/services/Electricity_Infrastructure/MapServer/WFSServer?service=WFS&request=GetFeature&typeName=topography_National_Electricity_Transmission_Substations:National_Electricity_Transmission_Substations&srsName=EPSG%3A4326&maxFeatures=10000",
   "dataUrlType": "wfs-complete",
+  "keepOnTop": true,
   <%- include ../../common/standard_properties %>,
   <%- include ../../common/home_camera_rectangle %>
 },
@@ -17,6 +18,7 @@
   "layers": "Distance_to_Transmission_Substations_Contours",
   "type": "wms",
   "opacity": 1.0,
+  "keepOnTop": true,
   "featureInfoTemplate" : {
     "template": "{{distance}} km from the nearest substation.",
     "name": "{{distance}} km"

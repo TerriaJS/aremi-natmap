@@ -7,6 +7,7 @@
   "opacity": 1.0,
   "dataUrl": "http://services.ga.gov.au/gis/services/Electricity_Infrastructure/MapServer/WFSServer?service=WFS&version=1.1.0&request=GetFeature&typeName=National_Electricity_Transmission_Lines&srsName=EPSG%3A4326&maxFeatures=100000",
   "dataUrlType": "wfs-complete",
+  "keepOnTop": true,
   "featureInfoTemplate" : {
     "name": "{{NAME}} ({{CAPACITYKV}}kv)",
     "template": "<%- include Transmission_Lines_template %>"
@@ -21,6 +22,7 @@
   "layers": "Distance_to_Transmission_Lines_Contours",
   "type": "wms",
   "opacity": 1.0,
+  "keepOnTop": true,
   "featureInfoTemplate" : {
     "template": "{{distance}} km from the nearest transmission line.",
     "name": "{{distance}} km"
