@@ -1,23 +1,15 @@
 {
   "id": "54a55710",
   "name": "Bathymetry topography",
-  "layers": "Australian_Bathymetry_Topography",
-  "info": [
-    {
-      "name": "Licensing, Terms & Conditions",
-      "content": "[Licence](http://www.ga.gov.au/copyright)"
-    }
-  ],
+  "layers": "Australian_Bathymetry_and_Topography",
   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-  "url": "http://www.ga.gov.au/gis/rest/services/marine_coastal/Australian_Bathymetry_Topography/MapServer",
+  "url": "http://services.ga.gov.au/gis/rest/services/Bathymetry_Topography/MapServer",
   "type": "esri-mapServer",
-  "legendUrl": "",
   "featureInfoTemplate" : {
-    "name": "{{Pixel Value}} metres relative to sealevel",
+    "name": "Metres relative to sealevel: {{Pixel Value}}",
     "template": "{{Pixel Value}} metres relative to sealevel."
   },
-  "ignoreUnknownTileErrors": true,
-  <% include ../../common/home_camera_rectangle %>
+  "ignoreUnknownTileErrors": true
 },
 {
   "id": "54a55724",
