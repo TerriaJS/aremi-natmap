@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Version 2016-08-12
+* Upgrade to use latest [TerriaJS 4.2.0](https://github.com/TerriaJS/terriajs/blob/4.2.0/CHANGES.md) release.
 * Migrated all services previously hosted by Data61 to Geoscience Australia hosted infrastructure.
 * Migrated the "Renewable Energy -> Wave -> Bathymetry topography" layer to a new service URL on request from Geoscience Australia.
 * Added the layers in "Renewable Energy -> Bioenergy -> South Australia -> Existing Waste Stream" from RenewablesSA.
