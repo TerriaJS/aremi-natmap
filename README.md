@@ -8,3 +8,5 @@ AREMI is powered by [TerriaJS](https://github.com/TerriaJS/TerriaJS), a free, op
 
 ### Want to make your own Terria Map? ###
 Please don't clone **this** repo. Instead, start your map from https://github.com/TerriaJS/TerriaMap, which is maintained as a starting point for third-party maps, without the NationalMap branding.
+
+See the [TerriaMap documentation](http://terria.io/Documentation/) for more detailed information about Terria and how to build and run it.
