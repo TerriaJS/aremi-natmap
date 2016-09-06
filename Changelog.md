@@ -4,6 +4,9 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Next release
+* Updated color maps used for "Renewable Energy -> Bioenergy -> Western australia" layers.
+
 ### Version 2016-08-12
 * Upgrade to use latest [TerriaJS 4.2.0](https://github.com/TerriaJS/terriajs/blob/4.2.0/CHANGES.md) release.
 * Migrated all services previously hosted by Data61 to Geoscience Australia hosted infrastructure.
