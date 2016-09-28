@@ -14,6 +14,7 @@ http://nationalmap.gov.au/renewables/
     - "Renewable Energy -> Hydro -> River Regions"
     - "Topography -> Water -> Australian Hydrography"
     - "Topography -> Water -> River Regions"
+    - "Topography -> Land -> Land Cover"
     - "Topography -> Land -> Geology"
 
 ### Version 2016-08-12
