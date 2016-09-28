@@ -29,7 +29,7 @@ import updateApplicationOnMessageFromParentWindow from 'terriajs/lib/ViewModels/
 import ViewState from 'terriajs/lib/ReactViewModels/ViewState';
 import BingMapsSearchProviderViewModel from 'terriajs/lib/ViewModels/BingMapsSearchProviderViewModel.js';
 import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerSearchProviderViewModel.js';
-import GNAFSearchProviderViewModel from 'terriajs/lib/ViewModels/GNAFSearchProviderViewModel.js';
+import GnafSearchProviderViewModel from 'terriajs/lib/ViewModels/GnafSearchProviderViewModel.js';
 import ViewerMode from 'terriajs/lib/Models/ViewerMode';
 import defined from 'terriajs-cesium/Source/Core/defined';
 
@@ -98,7 +98,7 @@ terria.start({
                 key: configuration.bingMapsKey
             }),
             new GazetteerSearchProviderViewModel({terria}),
-            new GNAFSearchProviderViewModel({terria})
+            new GnafSearchProviderViewModel({terria})
         ];
 
         // Automatically update Terria (load new catalogs, etc.) when the hash part of the URL changes.
