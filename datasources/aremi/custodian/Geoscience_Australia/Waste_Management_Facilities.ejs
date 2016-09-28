@@ -1,15 +1,13 @@
 {
   "id": "54071670",
   "name": "Waste Management Facilities",
-  "type": "wms",
-  "url": "http://www.ga.gov.au/gis/services/topography/National_Waste_Management_Facilities/MapServer/WMSServer",
-  "layers": "National Waste Management Facilities",
+  "type": "esri-mapServer",
+  "url": "http://services.ga.gov.au/gis/rest/services/Waste_Management_Facilities/MapServer",
+  "layers": "0",
   "legendUrl": "http://www.ga.gov.au/gis/server/capabilities/National_Waste_Management_Facilities_Legend.png",
   "opacity": 1.0,
     "featureInfoTemplate" : {
     "name": "{{NAME}} ({{FEATURETYPE}})",
     "template": "<%- include Waste_Management_Facilities_template %>"
-  },
-  <%- include ../../common/standard_properties %>,
-  <%- include ../../common/home_camera_rectangle %>,
+  }
 }
