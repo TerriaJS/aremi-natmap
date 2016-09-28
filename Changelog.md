@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 ### Next release
 * Updated color maps used for "Renewable Energy -> Bioenergy -> Western australia" layers.
+* Add Cadastral parcels for NT ("Boundaries -> Cadastre and Land Tenure -> By state -> Northern Territory")
 
 ### Version 2016-08-12
 * Upgrade to use latest [TerriaJS 4.2.0](https://github.com/TerriaJS/terriajs/blob/4.2.0/CHANGES.md) release.
