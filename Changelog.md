@@ -10,6 +10,7 @@ http://nationalmap.gov.au/renewables/
 * Several services have been updated to point to Geoscience Australia's new services
     - "Renewable Energy -> Bio Energy -> Waste Management Facilities"
     - "Renewable Energy -> Hydro -> Australian Hydrography"
+    - "Renewable Energy -> Wave -> Seabed features"
     - "Renewable Energy -> Hydro -> River Regions"
     - "Topography -> Water -> Australian Hydrography"
     - "Topography -> Water -> River Regions"
