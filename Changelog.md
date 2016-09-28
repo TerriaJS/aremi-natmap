@@ -14,6 +14,7 @@ http://nationalmap.gov.au/renewables/
     - "Renewable Energy -> Hydro -> River Regions"
     - "Topography -> Water -> Australian Hydrography"
     - "Topography -> Water -> River Regions"
+    - "Topography -> Land -> Geology"
 
 ### Version 2016-08-12
 * Upgrade to use latest [TerriaJS 4.2.0](https://github.com/TerriaJS/terriajs/blob/4.2.0/CHANGES.md) release.
