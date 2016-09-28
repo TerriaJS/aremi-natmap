@@ -9,6 +9,10 @@ http://nationalmap.gov.au/renewables/
 * Add Cadastral parcels for NT ("Boundaries -> Cadastre and Land Tenure -> By state -> Northern Territory")
 * Several services have been updated to point to Geoscience Australia's new services
     - "Renewable Energy -> Bio Energy -> Waste Management Facilities"
+    - "Renewable Energy -> Hydro -> Australian Hydrography"
+    - "Renewable Energy -> Hydro -> River Regions"
+    - "Topography -> Water -> Australian Hydrography"
+    - "Topography -> Water -> River Regions"
 
 ### Version 2016-08-12
 * Upgrade to use latest [TerriaJS 4.2.0](https://github.com/TerriaJS/terriajs/blob/4.2.0/CHANGES.md) release.
