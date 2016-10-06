@@ -1,18 +1,19 @@
 'use strict';
 
-/*global require*/
+/*global require,window */
 
 var terriaOptions = {
     baseUrl: 'build/TerriaJS'
 };
 var configuration = {
-    bingMapsKey: undefined // use Cesium key
+    bingMapsKey: undefined, // use Cesium key
 };
 
 // Check browser compatibility early on.
 // A very old browser (e.g. Internet Explorer 8) will fail on requiring-in many of the modules below.
 // 'ui' is the name of the DOM element that should contain the error popup if the browser is not compatible
 //var checkBrowserCompatibility = require('terriajs/lib/ViewModels/checkBrowserCompatibility');
+
 // checkBrowserCompatibility('ui');
 import GoogleAnalytics from 'terriajs/lib/Core/GoogleAnalytics';
 import ShareDataService from 'terriajs/lib/Models/ShareDataService';
@@ -30,9 +31,7 @@ import ViewState from 'terriajs/lib/ReactViewModels/ViewState';
 import BingMapsSearchProviderViewModel from 'terriajs/lib/ViewModels/BingMapsSearchProviderViewModel.js';
 import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerSearchProviderViewModel.js';
 import GnafSearchProviderViewModel from 'terriajs/lib/ViewModels/GnafSearchProviderViewModel.js';
-import ViewerMode from 'terriajs/lib/Models/ViewerMode';
 import defined from 'terriajs-cesium/Source/Core/defined';
-
 import render from './lib/Views/render';
 
 // Tell the OGR catalog item where to find its conversion service.  If you're not using OgrCatalogItem you can remove this.
@@ -49,7 +48,6 @@ registerCatalogMembers();
 registerAnalytics();
 
 terriaOptions.analytics = new GoogleAnalytics();
-terriaOptions.viewerMode = ViewerMode.CesiumEllipsoid;
 
 // Construct the TerriaJS application, arrange to show errors to the user, and start it up.
 var terria = new Terria(terriaOptions);
@@ -82,8 +80,7 @@ terria.start({
     configUrl: 'config.json',
     defaultTo2D: isCommonMobilePlatform(),
     shareDataService: new ShareDataService({
-        terria: terria,
-        url: "share"
+        terria: terria
     })
 }).otherwise(function(e) {
     raiseErrorToUser(terria, e);
