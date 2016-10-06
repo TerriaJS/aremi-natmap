@@ -2,6 +2,11 @@
 @import "~terriajs/lib/Sass/global/global";
 @import "../Styles/AREMI.scss";
 
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
 :global {
     .panel--getting-started .panel-content {
         background-image: url("../../wwwroot/images/welcome-bg.jpg");
@@ -51,5 +56,10 @@
 				display: inline;
 			}
 		}
+	}
+  .tjs-feature-info-section__content {
+    table td {
+        padding: 5px;
+    }
 	}
 }
