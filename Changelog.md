@@ -4,7 +4,23 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
-# In the next version of AREMI
+### Next release
+* Updated color maps used for "Renewable Energy -> Bioenergy -> Western australia" layers.
+* Add Cadastral parcels for NT ("Boundaries -> Cadastre and Land Tenure -> By state -> Northern Territory")
+* Several services have been updated to point to Geoscience Australia's new services
+    - "Renewable Energy -> Bio Energy -> Waste Management Facilities"
+    - "Renewable Energy -> Hydro -> Australian Hydrography"
+    - "Renewable Energy -> Wave -> Seabed features"
+    - "Renewable Energy -> Hydro -> River Regions"
+    - "Topography -> Water -> Australian Hydrography"
+    - "Topography -> Water -> River Regions"
+    - "Topography -> Land -> Land Cover"
+    - "Topography -> Land -> Geology"
+
+### Version 2016-08-12
+* Upgrade to use latest [TerriaJS 4.2.0](https://github.com/TerriaJS/terriajs/blob/4.2.0/CHANGES.md) release.
+* Migrated all services previously hosted by Data61 to Geoscience Australia hosted infrastructure.
+* Migrated the "Renewable Energy -> Wave -> Bathymetry topography" layer to a new service URL on request from Geoscience Australia.
 * Added the layers in "Renewable Energy -> Bioenergy -> South Australia -> Existing Waste Stream" from RenewablesSA.
 * Improved the default colour ranges for the layers "Annual climatology of daily exposure" and "Monthly climatology of daily exposure" in the "Renewable Energy -> Solar" category.
 * Adding a distance measuring tool accessible by clicking the measuring icon on the right side of the map.
