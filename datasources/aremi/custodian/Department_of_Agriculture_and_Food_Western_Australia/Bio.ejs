@@ -97,7 +97,41 @@
     }
   },
   "featureInfoTemplate": {
-    "name": "{{Location}} {{Estimated Tonnes / year wet weight Grape Marc}} T/y"
+    "name": "{{Location}} {{Estimated Tonnes / year wet weight Grape Marc}} t/y"
+  },
+  <% include ../../common/standard_properties %>
+},
+{
+  "id": "0fb40f03",
+  "name": "Feedlots",
+  "url": "http://catalogue.beta.data.wa.gov.au/dataset/d9c54d3a-854e-40d8-8cc6-f77f3ce8a135/resource/dcc2e333-cfd4-4575-9d17-65cffe30b221/download/csv-1-feedlots.csv",
+  "type": "csv",
+  "showWarnings": false,
+  "dataCustodian": "[Department of Agriculture and Food, Western Australia](https://www.agric.wa.gov.au/)",
+  "description": "<% include Feedlot-description %>",
+  "info": [
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "Copyright © Western Australia Agriculture Authority, 2016"
+    },
+    {
+      "name": "Disclaimer",
+      "content": "While all reasonable care has been taken in the preparation of the material in this file, the Western Australian Government and its officers accept no responsibility for any errors or omissions it may contain, whether caused by negligence, or otherwise, or for any loss, however caused, sustained by any person who relies on it."
+    }
+  ],
+  "tableStyle": {
+    "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
+    "scaleByValue": true,
+    "scale": 2.0,
+    "columns": {
+      "Current Use": {"type":"HIDDEN"},
+      "Current Value": {"type":"HIDDEN"},
+      "Winery Name": {"type":"HIDDEN"},
+      "Location": {"type":"HIDDEN"}
+    }
+  },
+  "featureInfoTemplate": {
+    "name": "Manure dry weight: {{Manure dry weight (t/yr)}} t/y"
   },
   <% include ../../common/standard_properties %>
 }
