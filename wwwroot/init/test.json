@@ -62,6 +62,7 @@
               "name": "Auto Incidents (CSV)",
               "type": "csv",
               "url": "test/incidents.csv",
+              "idColumns": null,
               "tableStyle": {
                 "colorMap": [
                   {
@@ -316,6 +317,22 @@
               "type": "wps",
               "url": "http://sparrow.terria.io:5001/wps?service=wps",
               "identifier": "polygon_test",
+              "opacity" : 0.6,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "RegionTest",
+              "type": "wps",
+              "url": "http://sparrow.terria.io:5001/wps?service=wps",
+              "identifier": "region_test",
+              "opacity" : 0.6,
+              "ignoreUnknownTileErrors": true
+            },
+            {
+              "name": "GeoJsonTest",
+              "type": "wps",
+              "url": "http://sparrow.terria.io:5001/wps?service=wps",
+              "identifier": "geojson_test",
               "opacity" : 0.6,
               "ignoreUnknownTileErrors": true
             },

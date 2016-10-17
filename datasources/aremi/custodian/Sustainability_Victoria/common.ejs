@@ -1,0 +1,25 @@
+"type": "csv",
+"featureInfoTemplate": {
+  "name": "{{WRRG}}: {{Amount}} {{Unit}}",
+  "template": "<% include common-template %>"
+},
+"info": [
+   <% include common-description %>
+],
+"opacity": 0.8,
+"tableStyle": {
+    "dataVariable": "Amount",
+    "nullColor": "rgba(255,255,255,0.1)",
+    "nullLabel": "No value",
+    "colorBins": 10,
+    "colorPalette": "<%= colourMap %>",
+    "columns": {
+      "LGA_NAME_2011": {"type":"HIDDEN"},
+      "State": {"type":"HIDDEN"},
+      "Unit": {"type":"HIDDEN"},
+      "Residue Type": {"type":"HIDDEN"},
+      "Amount (t/y dry wt)": {"type":"HIDDEN"},
+      "MC %": {"type":"HIDDEN"},
+      "Note": {"type":"HIDDEN"}
+    }
+  }
