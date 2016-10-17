@@ -7,7 +7,7 @@ http://nationalmap.gov.au/renewables/
 ### Next release
 * Updated color maps used for "Renewable Energy -> Bioenergy -> Western australia" layers.
 * Updated  "Renewable Energy -> Bioenergy -> Victoria" layers to latest data.
-* Add Cadastral parcels for NT ("Boundaries -> Cadastre and Land Tenure -> By state -> Northern Territory")
+* Add Cadastral parcels for NT & ACT ("Boundaries -> Cadastre and Land Tenure -> By state -> ACT/ Northern Territory")
 * Several services have been updated to point to Geoscience Australia's new services
     - "Renewable Energy -> Bio Energy -> Waste Management Facilities"
     - "Renewable Energy -> Hydro -> Australian Hydrography"
