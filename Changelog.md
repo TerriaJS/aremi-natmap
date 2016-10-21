@@ -5,8 +5,8 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Next release
+* Updated layers for Vic, Qld, Tas, NSW and WA in "Renewable Energy -> Bioenergy" ahead of Bioenergy Australia conference.
 * Updated color maps used for "Renewable Energy -> Bioenergy -> Western australia" layers.
-* Updated  "Renewable Energy -> Bioenergy -> Victoria" layers to latest data.
 * Add Cadastral parcels for NT & ACT ("Boundaries -> Cadastre and Land Tenure -> By state -> ACT/ Northern Territory")
 * Several services have been updated to point to Geoscience Australia's new services
     - "Renewable Energy -> Bio Energy -> Waste Management Facilities"
