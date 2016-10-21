@@ -1,6 +1,6 @@
 "type": "csv",
 "featureInfoTemplate": {
-  "name": "{{WRRG}}: {{Amount}} {{Unit}}",
+  "name": "{{WRRG}}: {{Amount (dry wt)}} {{Unit}}",
   "template": "<% include LGA-template %>"
 },
 "info": [
@@ -26,7 +26,6 @@
     "nullColor": "rgba(255,255,255,0.1)",
     "nullLabel": "No value",
     "colorBins": 10,
-    "colorPalette": "<%= colourMap %>",
     "columns": {
       "LGA_NAME_2011": {"type":"HIDDEN"},
       "State": {"type":"HIDDEN"},

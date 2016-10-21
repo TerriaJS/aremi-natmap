@@ -1,9 +1,11 @@
-{{#LGA_NAME_2011}}
-<h3>{{WRRG}}</h3>
-<h4>(LGA: {{LGA_NAME_2011}})</h4>
-{{#terria.formatNumber}}{useGrouping:true}{{Amount}}{{/terria.formatNumber}} {{Unit}} of <b>{{Residue Type}}</b>
-<br>
-Amount (t/y dry wt): {{Amount (t/y dry wt)}}
-<br>
+{{#lga_name}}
+<h3>LGA: {{lga_name}}</h3>
+<h4>(WRRG: {{WRRG}})</h4>
+Amount ({{Unit}}): <b>{{#terria.formatNumber}}{useGrouping:true}{{Amount (dry wt)}}{{/terria.formatNumber}}</b> <br>
+Industry Type: {{Industry  Type}}<br>
+Industry Sector: {{Industry Sector}}<br>
 <small>{{Note}}</small>
-{{/LGA_NAME_2011}}
+{{/lga_name}}
+{{^lga_name}}
+No data found for this region
+{{/lga_name}}
