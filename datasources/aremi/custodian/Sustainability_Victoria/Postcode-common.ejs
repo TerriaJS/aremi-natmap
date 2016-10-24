@@ -1,0 +1,38 @@
+"type": "csv",
+"featureInfoTemplate": {
+  "name": "{{WRRG}}: {{Amount (dry wt)}} {{Unit}}",
+  "template": "<% include Postcode-template %>"
+},
+"info": [
+  {
+    "name": "Data Description",
+    "content": "Biomass datasets collected from the 2016 Biomass Survey of Victoria undertaken by Sustainability Victoria (SV). This data is industry specific data collected from a number of biomass producers, for the purposes of uploading to the AREMI platform. Survey participants have indicated that this data is not confidential and as such this dataset represents only those sources, aggregated to provide total biomass yields at postcode level. This dataset is likely to be updated with additional data as more participants complete the survey. "
+  },
+  {
+    "name": "Source Data",
+    "content":"2016 Biomass Survey of Victoria - Raw Data" },
+  {
+    "name": "Data Custodian",
+    "content":"Sustainability Victoria"
+  },
+  {
+    "name": "Licensing, Terms & Conditions",
+    "content":"These datasets have been made available for information purposes only. No claim is made as to the accuracy or authenticity of the data at any time. The Victorian Government and this agency (Sustainability Victoria) does not accept any liability to any person for the information or advice (or the use of such information or advice) which is provided on this web site or incorporated into it by reference."
+  }
+],
+"opacity": 0.8,
+"tableStyle": {
+    "dataVariable": "Amount",
+    "nullColor": "rgba(255,255,255,0.1)",
+    "nullLabel": "No value",
+    "colorBins": 10,
+    "columns": {
+      "LGA_NAME_2011": {"type":"HIDDEN"},
+      "State": {"type":"HIDDEN"},
+      "Unit": {"type":"HIDDEN"},
+      "Residue Type": {"type":"HIDDEN"},
+      "Amount (t/y dry wt)": {"type":"HIDDEN"},
+      "MC %": {"type":"HIDDEN"},
+      "Note": {"type":"HIDDEN"}
+    }
+  }

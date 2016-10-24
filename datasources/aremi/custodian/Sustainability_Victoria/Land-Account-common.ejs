@@ -1,0 +1,38 @@
+"type": "csv",
+"featureInfoTemplate": {
+  "name": "{{sa2_name}}: {{Amount (dry wt)}} {{Unit}}",
+  "template": "<% include Land-Account-template %>"
+},
+"info": [
+  {
+    "name": "Data Description",
+    "content": "This data has been modelled to represent the total estimate biomass yields from major agricultural sectors. ABS land use and socio-economic data is available at a range of levels. At the mesh block level, the area covered by the block is nominated into 6 broad land uses, of which Parkland and Agricultural have been extracted. At an SA1 level, more detailed land use data is available, with the % area covered by each of 26 Dynamic Land Covers (DLCs), of which Trees Closed, Irrigated Cropping, Irrigated Pastures and Rainfed Cropping have been extracted. Representative biomass yields for each of these DLCs have been obtained from an analysis of literature and industry contacts (including reviewing relevant datasets provided through ABARES), to determine the total biomass residue production and therefore potentially available at an SA2 level.\n\nThis methodology will be updated to include more recent data and to cover more specific waste types, as more information is uncovered and survey data is collected."
+  },
+  {
+    "name": "Source Data",
+    "content":"ABS 4609.0.55.002 Land Account: Victoria Experimental Estimates, 2012 \n\nABS 1270.0.55.001 - Australian Statistical Geography Standard (ASGS): Volume 1 - Main Structure and Greater Capital City \ntatistical Areas, July 2016 (Victoria Mesh Blocks ASGS Edition 2016)\n\nABARES Forest and Wood Product Statistics March-June quarters 2015\n\n71210DO003_201415 Agricultural \nCommodities, Australia- 2014-15\n\nO'Connell, D., O'Connor, M., Raison, J., Crawford, D.,  Herr, A., Taylor, J. et al. (2012) Assessment of Australia \niomass for producing bioelectricity and biofuel and reducing greenhouse gas emissions.\n\nCentral Highlands and Loddon Bioenergy Resource Audit\nPrepared by Landscape Energy for RDV Barrie May and Mark Feltrin" },
+  {
+    "name": "Data Custodian",
+    "content":"Sustainability Victoria"
+  },
+  {
+    "name": "Licensing, Terms & Conditions",
+    "content":"These datasets have been made available for information purposes only. No claim is made as to the accuracy or authenticity of the data at any time. The Victorian Government and this agency (Sustainability Victoria) does not accept any liability to any person for the information or advice (or the use of such information or advice) which is provided on this web site or incorporated into it by reference."
+  }
+],
+"opacity": 0.8,
+"tableStyle": {
+    "dataVariable": "Amount",
+    "nullColor": "rgba(255,255,255,0.1)",
+    "nullLabel": "No value",
+    "colorBins": 10,
+    "columns": {
+      "LGA_NAME_2011": {"type":"HIDDEN"},
+      "State": {"type":"HIDDEN"},
+      "Unit": {"type":"HIDDEN"},
+      "Residue Type": {"type":"HIDDEN"},
+      "Amount (t/y dry wt)": {"type":"HIDDEN"},
+      "MC %": {"type":"HIDDEN"},
+      "Note": {"type":"HIDDEN"}
+    }
+  }

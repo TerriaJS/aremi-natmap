@@ -1,0 +1,12 @@
+{{#WRRG}}
+<h3>{{WRRG}}</h3>
+<h4>(Postcode: {{Postcode}})</h4>
+Amount ({{Unit}}): <b>{{#terria.formatNumber}}{useGrouping:true}{{Amount (dry wt)}}{{/terria.formatNumber}}</b> <br><br>
+Industry Type: {{Industry  Type}}<br>
+Industry Sector: {{Industry Sector}}<br>
+<br>
+<small>{{Note}}</small>
+{{/WRRG}}
+{{^WRRG}}
+No data found for this region
+{{/WRRG}}

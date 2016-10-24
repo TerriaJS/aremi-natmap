@@ -1,0 +1,11 @@
+{{#lga_name}}
+<h3>LGA: {{lga_name}}</h3>
+<h4>(WRRG: {{WRRG}})</h4>
+Amount ({{Unit}}): <b>{{#terria.formatNumber}}{useGrouping:true}{{Amount (dry wt)}}{{/terria.formatNumber}}</b> <br>
+Industry Type: {{Industry  Type}}<br>
+Industry Sector: {{Industry Sector}}<br>
+<small>{{Note}}</small>
+{{/lga_name}}
+{{^lga_name}}
+No data found for this region
+{{/lga_name}}
