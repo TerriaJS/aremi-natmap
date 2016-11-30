@@ -4,6 +4,10 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Upcoming release
+* Add WA Seeweed Wrak layer to "Renewable Energy -> Bioenergy -> Western Australia"
+* Add project description to "Renewable Energy -> Bioenergy" for ABBA project
+
 ### 2016-10-21a
 * Updated layers for Vic, Qld, Tas, NSW and WA in "Renewable Energy -> Bioenergy" ahead of Bioenergy Australia conference.
 * Updated color maps used for "Renewable Energy -> Bioenergy -> Western australia" layers.
