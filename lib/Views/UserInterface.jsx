@@ -5,8 +5,7 @@ import version from '../../version';
 import StandardUserInterface from 'terriajs/lib/ReactViews/StandardUserInterface/StandardUserInterface.jsx';
 import MenuItem from 'terriajs/lib/ReactViews/StandardUserInterface/customizable/MenuItem';
 import RelatedMaps from './RelatedMaps';
-import { Menu } from 'terriajs/lib/ReactViews/StandardUserInterface/customizable/Groups';
-import { Nav } from 'terriajs/lib/ReactViews/StandardUserInterface/customizable/Groups';
+import { Menu, Nav } from 'terriajs/lib/ReactViews/StandardUserInterface/customizable/Groups';
 import MeasureTool from 'terriajs/lib/ReactViews/Map/Navigation/MeasureTool';
 
 import './global.scss';
