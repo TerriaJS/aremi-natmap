@@ -7,6 +7,8 @@ http://nationalmap.gov.au/renewables/
 ### Version 2016-12-12
 * Add WA Seeweed Wrak layer to "Renewable Energy -> Bioenergy -> Western Australia"
 * Add project description to "Renewable Energy -> Bioenergy" for ABBA project
+* Update to [TerriaJS 4.7.1](https://github.com/TerriaJS/terriajs/blob/4.7.1/CHANGES.md) release.
+* Update to [TerriaJS-server 4.6.2](https://github.com/TerriaJS/terriajs-server/blob/2.6.2/CHANGES.md) release.
 
 ### Version 2016-10-21a
 * Updated layers for Vic, Qld, Tas, NSW and WA in "Renewable Energy -> Bioenergy" ahead of Bioenergy Australia conference.
