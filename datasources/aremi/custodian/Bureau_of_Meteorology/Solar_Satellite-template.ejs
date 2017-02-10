@@ -1,24 +1,32 @@
-<p>DNI: <strong>{{GRAY_INDEX}} W/m&#178;</strong></p>
+<h3>DNI: <strong>{{GRAY_INDEX}} W/m&#178;</h3>
+
 <chart
-    sources='http://services.aremi.nicta.com.au/solar-satellite/v1/DNI/{{terria.coords.latitude}}/{{terria.coords.longitude}}?start=2014-01-01T00:00:00%2B1000&end=2014-12-31T23:00:00%2B1000,http://services.aremi.nicta.com.au/solar-satellite/v1/DNI/{{terria.coords.latitude}}/{{terria.coords.longitude}}'
+    sources='http://services.aremi.nicta.com.au/solar-satellite/v1/DNI/{{terria.coords.latitude}}/{{terria.coords.longitude}}?start=2014-01-01T00:00:00%2B1000&end=2014-01-07T23:00:00%2B1000,http://services.aremi.nicta.com.au/solar-satellite/v1/DNI/{{terria.coords.latitude}}/{{terria.coords.longitude}}?start=2014-01-01T00:00:00%2B1000&amp;end=2014-12-31T23:00:00%2B1000'
     title='DNI 2014 ({{#terria.formatNumber}}{maximumFractionDigits:3}{{terria.coords.latitude}}{{/terria.formatNumber}},{{#terria.formatNumber}}{maximumFractionDigits:3}{{terria.coords.longitude}}{{/terria.formatNumber}})'
-    source-names='2014,1990-2015'
+    source-names='1-7 Jan 2014,2014'
     preview-x-label='DNI'
     column-names='UTC Time,DNI'
     column-units='Date,DNI'>
 </chart>
-<p> Download hourly DNI timeseries for the clicked point as a CSV file: </p>
-<p> &nbsp;&nbsp;<strong><a href='http://services.aremi.nicta.com.au/solar-satellite/v1/DNI/{{terria.coords.latitude}}/{{terria.coords.longitude}}?start=2014-01-01T00:00:00%2B1000&amp;end=2014-12-31T23:00:00%2B1000'>2014 only</a></strong> </p>
-<p> &nbsp;&nbsp;<strong><a href='http://services.aremi.nicta.com.au/solar-satellite/v1/DNI/{{terria.coords.latitude}}/{{terria.coords.longitude}}'>1990 - 2015</a></strong> </p>
+
+<p> Download hourly DNI timeseries for the clicked point as a CSV file:
+<center>
+<strong><a href='http://services.aremi.nicta.com.au/solar-satellite/v1/DNI/{{terria.coords.latitude}}/{{terria.coords.longitude}}?start=2014-01-01T00:00:00%2B1000&amp;end=2014-12-31T23:00:00%2B1000'>2014 only</a></strong> or <strong><a href='http://services.aremi.nicta.com.au/solar-satellite/v1/DNI/{{terria.coords.latitude}}/{{terria.coords.longitude}}'>1990 - 2015</a></strong>
+</center>
+</p>
+
+<h3>GHI</h3>
 <chart
-    sources='http://services.aremi.nicta.com.au/solar-satellite/v1/GHI/{{terria.coords.latitude}}/{{terria.coords.longitude}}?start=2014-01-01T00:00:00%2B1000&end=2014-12-31T23:00:00%2B1000,http://services.aremi.nicta.com.au/solar-satellite/v1/GHI/{{terria.coords.latitude}}/{{terria.coords.longitude}}'
+    sources='http://services.aremi.nicta.com.au/solar-satellite/v1/GHI/{{terria.coords.latitude}}/{{terria.coords.longitude}}?start=2014-01-01T00:00:00%2B1000&end=2014-01-07T23:00:00%2B1000,http://services.aremi.nicta.com.au/solar-satellite/v1/GHI/{{terria.coords.latitude}}/{{terria.coords.longitude}}?start=2014-01-01T00:00:00%2B1000&amp;end=2014-12-31T23:00:00%2B1000'
     title='GHI 2014 ({{#terria.formatNumber}}{maximumFractionDigits:3}{{terria.coords.latitude}}{{/terria.formatNumber}},{{#terria.formatNumber}}{maximumFractionDigits:3}{{terria.coords.longitude}}{{/terria.formatNumber}})'
-    source-names='2014,1990-2015'
+    source-names='1-7 Jan 2014,2014'
     preview-x-label='GHI'
     column-names='UTC Time,GHI'
     column-units='Date,GHI'>
 </chart>
 
-<p> Download hourly GHI timeseries for the clicked point as a CSV file: </p>
-<p> &nbsp;&nbsp;<strong><a href='http://services.aremi.nicta.com.au/solar-satellite/v1/GHI/{{terria.coords.latitude}}/{{terria.coords.longitude}}?start=2014-01-01T00:00:00%2B1000&amp;end=2014-12-31T23:00:00%2B1000'>2014 only</a></strong> </p>
-<p> &nbsp;&nbsp;<strong><a href='http://services.aremi.nicta.com.au/solar-satellite/v1/GHI/{{terria.coords.latitude}}/{{terria.coords.longitude}}'>1990 - 2015</a></strong> </p>
+<p> Download hourly GHI timeseries for the clicked point as a CSV file:
+<center>
+<strong><a href='http://services.aremi.nicta.com.au/solar-satellite/v1/GHI/{{terria.coords.latitude}}/{{terria.coords.longitude}}?start=2014-01-01T00:00:00%2B1000&amp;end=2014-12-31T23:00:00%2B1000'>2014 only</a></strong> or <strong><a href='http://services.aremi.nicta.com.au/solar-satellite/v1/GHI/{{terria.coords.latitude}}/{{terria.coords.longitude}}'>1990 - 2015</a></strong>
+</centre>
+</p>
