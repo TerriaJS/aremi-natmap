@@ -6,7 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 ### Next Version
 * Fixed the link to the related map "NEII viewer" when the image is clicked.
-* Add GHI data to "Renewable Energy -> Solar -> Solar Satellite DNI & GHI" (-> click on map to see featrure info)
+* Add GHI data to "Renewable Energy -> Solar -> Solar Satellite DNI & GHI" (-> click on map to see feature info).
 
 ### Version 2016-12-12
 * Add WA Seeweed Wrak layer to "Renewable Energy -> Bioenergy -> Western Australia"
