@@ -1,14 +1,86 @@
 {
-  "id": "b707dc0a",
-  "name": "Forestry",
-  "layers": "Forestry_Harvest_Residues_Planted_Softwoods_Bathurst",
-  "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment",
-  "type": "esri-mapServer-group",
-  "info": [
+  "name": "Harvest Residues Native Hardwoods",
+  "type": "group",
+  "items": [
     {
-      "name": "Licensing, Terms & Use Conditions",
-      "content": "This dataset has been made available for information purposes only. No claim is made as to the accuracy or authenticity of the data. The NSW Government and this department (Department of Industry - Lands) does not accept any liability to any person for the information or advice (or the use of such information or advice) which has been provided in this dataset."
-    }
-  ],
+      "id": "03b201e1",
+      "name": "Batemans Bay",
+      "layers": "Forestry_Harvest_Residues_Native_Hardwoods_BatemansBay",
+      "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Forestry_Harvest_Residues_Native_Hardwoods/MapServer",
+      "type": "esri-mapServer",
+      <% include common %>,
+      <% include ../../common/standard_properties %>
+    },
+    {
+      "id": "1e73de8d",
+      "name": "Eden",
+      "layers": "Forestry_Harvest_Residues_Native_Hardwoods_Eden",
+      "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Forestry_Harvest_Residues_Native_Hardwoods/MapServer",
+      "type": "esri-mapServer",
+      <% include common %>,
+      <% include ../../common/standard_properties %>
+    },
+    {
+      "id": "ecb3b16e",
+      "name": "Tumut",
+      "layers": "Forestry_Harvest_Residues_Native_Hardwoods_Tumut",
+      "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Forestry_Harvest_Residues_Native_Hardwoods/MapServer",
+      "type": "esri-mapServer",
+      <% include common %>,
+      <% include ../../common/standard_properties %>
+    },
+
+  ]
+},
+{
+  "name": "Harvest Residues Planted Softwoods",
+  "type": "group",
+  "items": [
+    {
+      "id": "f3b387cf",
+      "name": "Bathurst",
+      "layers": "Forestry_Harvest_Residues_Planted_Softwoods_Bathurst",
+      "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Forestry_Harvest_Residues_Planted_Softwoods/MapServer",
+      "type": "esri-mapServer",
+      <% include common %>,
+      <% include ../../common/standard_properties %>
+    },
+    {
+      "id": "dfdf8e2b",
+      "name": "Monaro",
+      "layers": "Forestry_Harvest_Residues_Planted_Softwoods_Monaro",
+      "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Forestry_Harvest_Residues_Planted_Softwoods/MapServer",
+      "type": "esri-mapServer",
+      <% include common %>,
+      <% include ../../common/standard_properties %>
+    },
+    {
+      "id": "c287ec76",
+      "name": "Tumut",
+      "layers": "Forestry_Harvest_Residues_Planted_Softwoods_Tumut",
+      "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Forestry_Harvest_Residues_Planted_Softwoods/MapServer",
+      "type": "esri-mapServer",
+      <% include common %>,
+      <% include ../../common/standard_properties %>
+    },
+
+  ]
+},
+{
+  "id": "12568dd7",
+  "name": "Wood Processing Facilities",
+  "layers": "Forestry_NSW_Wood_Processing_Facilities",
+  "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Forestry_NSW_Wood_Processing_Facilities/MapServer",
+  "type": "esri-mapServer",
+  <% include common %>,
+  <% include ../../common/standard_properties %>
+},
+{
+  "id": "b1b3d5c2",
+  "name": "State Forests",
+  "layers": "Forestry_NSW_State_Forests",
+  "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/NSW_State_Forests/MapServer",
+  "type": "esri-mapServer",
+  <% include common %>,
   <% include ../../common/standard_properties %>
 }

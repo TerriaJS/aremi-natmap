@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Next Version
+* Added many new layers in the category "Renewable Energy -> Bioenergy -> New South Wales" from NSW Department of Industry - Lands.
 * Fixed the link to the related map "NEII viewer" when the image is clicked.
 * Add GHI data to "Renewable Energy -> Solar -> Solar Satellite DNI & GHI" (-> click on map to see feature info).
 
