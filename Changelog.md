@@ -8,6 +8,7 @@ http://nationalmap.gov.au/renewables/
 * Added many new layers in the category "Renewable Energy -> Bioenergy -> New South Wales" from NSW Department of Industry - Lands.
 * Fixed the link to the related map "NEII viewer" when the image is clicked.
 * Add GHI data to "Renewable Energy -> Solar -> Solar Satellite DNI & GHI" (-> click on map to see feature info).
+* Add NGERS Designated Generation Facilities data "Renewable Energy -> Generation -> NGERS Designated Generation Facilities (2014-15)" from CER
 
 ### Version 2016-12-12
 * Add WA Seeweed Wrak layer to "Renewable Energy -> Bioenergy -> Western Australia"
