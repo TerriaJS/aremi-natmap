@@ -1,0 +1,45 @@
+stages:
+  - build_tar
+  - upload_tar
+  - trigger_ami_build
+
+build_tar:
+  image: node:boron
+  cache:
+    paths:
+    - ~/.npm
+  stage: build_tar
+  script:
+    - DESCRIBE=$(git describe)
+    - echo ${DESCRIBE} >> describe
+    - npm install && npm install
+    - ./node_modules/gulp/bin/gulp.js release
+    - tar -czf aremi-natmap-${CI_BUILD_REF_NAME}-${DESCRIBE}.tar.gz serverconfig.json package.json node_modules wwwroot && echo
+  artifacts:
+    paths:
+      - "aremi-natmap-${CI_BUILD_REF_NAME}-*.tar.gz"
+      - describe
+
+upload_tar:
+  image: etd-docker01.it.csiro.au/nay019/aremi-s3-uploader
+  dependencies:
+    - build_tar
+  when: manual
+  stage: upload_tar
+  script:
+    - DESCRIBE=$(cat ./describe)
+    - aws configure set aws_access_key_id ${access_key}
+    - aws configure set aws_secret_access_key ${secret_key}
+    - aws s3 cp aremi-natmap-${CI_BUILD_REF_NAME}-${DESCRIBE}.tar.gz s3://aremi-ci-apps/aremi-natmap-${CI_BUILD_REF_NAME}-${DESCRIBE}.tar.gz
+
+trigger_ami_build:
+  image: etd-docker01.it.csiro.au/nay019/aremi-ami-builder
+  dependencies:
+    - build_tar
+  when: manual
+  stage: trigger_ami_build
+  script:
+    - DESCRIBE=$(cat ./describe)
+    - TAR=aremi-natmap-${CI_BUILD_REF_NAME}-${DESCRIBE}.tar.gz
+    - curl -s -X POST -F token=${aremi_cloud_token} -F ref=master -F variables[tar]=${TAR} -F variables[access_key]=${access_key} -F variables[secret_key]=${secret_key} "https://data61.githost.io/api/v3/projects/39/trigger/builds" > /dev/null
+    - echo "Triggered a build on another repository. Check https://data61.githost.io/TerriaJS/aremi-cloud/pipelines to find the build. Logs will continue there."
