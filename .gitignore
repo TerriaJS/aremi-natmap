@@ -25,3 +25,4 @@ privateserverconfig.json
 wwwroot/privateconfig.json
 deploy/packages/
 deploy/work/
+wwwroot/init/sdmx-abs-beta.json
