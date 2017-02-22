@@ -24,6 +24,7 @@ upload_tar:
   image: etd-docker01.it.csiro.au/nay019/aremi-s3-uploader
   dependencies:
     - build_tar
+  when: manual
   stage: upload_tar
   script:
     - DESCRIBE=$(cat ./describe)
