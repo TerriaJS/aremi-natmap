@@ -4,6 +4,10 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Version 2017-03-14
+* Update to [TerriaJS 4.10.4](https://github.com/TerriaJS/terriajs/blob/4.10.4/CHANGES.md) release to fix a problem affecting the "Electricity Infrastructure -> Generation -> Current Power Generation - NEM" layers.
+
+
 ### Version 2017-02-22
 * Added many new layers in the category "Renewable Energy -> Bioenergy -> New South Wales" from NSW Department of Industry - Lands.
 * Fixed the link to the related map "NEII viewer" when the image is clicked.
