@@ -11,9 +11,9 @@ build_tar:
   stage: build_tar
   script:
     - DESCRIBE=$(git describe)
-    - echo ${DESCRIBE} >> describe
+    - echo ${DESCRIBE} > describe
     - BRANCH=$(git rev-parse --abbrev-ref HEAD)
-    - echo ${BRANCH} >> branch
+    - echo ${BRANCH} > branch
     - npm install && npm install
     - ./node_modules/gulp/bin/gulp.js release
     - tar -czf aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz serverconfig.json package.json node_modules wwwroot && echo
