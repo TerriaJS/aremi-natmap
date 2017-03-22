@@ -1,0 +1,38 @@
+<h3>{{Facility name}}</h3>
+<p><small>{{Controlling corporation}}</small></p>
+<p><strong>Emission Intensity:</strong> {{Emission intensity (t/Mwh)}} t/Mwh</p>
+
+<h4>Emissions <small>(t CO<sub>2</sub>)</small></h4>
+<table>
+  <tr><td>Scope 1</td>                              <td>Scope 2</td>                              <td>Total</td>                        </tr>
+  <tr><td>{{Total scope 1 emissions (t CO2-e)}}</td><td>{{Total scope 2 emissions (t CO2-e)}}</td><td>{{Total emissions (t CO2-e)}}</td></tr>
+</table>
+
+<h4>Electricity Production</h4>
+<table>
+  <tbody>
+    <tr>
+      <td>GJ</td>
+      <td>Mwh</td>
+    </tr>
+    <tr class='strong'>
+      <td>
+        {{#Electricity production (GJ)}}{{.}}{{/Electricity production (GJ)}}
+        {{^Electricity production (GJ)}}withheld{{/Electricity production (GJ)}}
+      </td>
+      <td>
+        {{#Electricity production (Mwh)}}{{.}}{{/Electricity production (Mwh)}}
+        {{^Electricity production (Mwh)}}withheld{{/Electricity production (Mwh)}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<table>
+  <tbody>
+    <tr><td>Controlling Corporation     </td><td class='strong'>{{Controlling corporation}}            </td></tr>
+    <tr><td>Grid Connected              </td><td class='strong'>{{Grid connected}}              </td></tr>
+    <tr><td>Grid                        </td><td class='strong'>{{Grid}}                        </td></tr>
+    <tr><td>Primary Fuel                </td><td class='strong'>{{Primary fuel}}                </td></tr>
+  </tbody>
+</table>
