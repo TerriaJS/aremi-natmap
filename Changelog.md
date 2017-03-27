@@ -6,11 +6,10 @@ http://nationalmap.gov.au/renewables/
 
 ### Upcoming release
 * Add data for the 2015-16 NGERS Designated Generation Facilities
-
+* Update to [TerriaJS 5.0.1](https://github.com/TerriaJS/terriajs/blob/5.0.1/CHANGES.md)
 
 ### Version 2017-03-14
 * Update to [TerriaJS 4.10.4](https://github.com/TerriaJS/terriajs/blob/4.10.4/CHANGES.md) release to fix a problem affecting the "Electricity Infrastructure -> Generation -> Current Power Generation - NEM" layers.
-
 
 ### Version 2017-02-22
 * Added many new layers in the category "Renewable Energy -> Bioenergy -> New South Wales" from NSW Department of Industry - Lands.
