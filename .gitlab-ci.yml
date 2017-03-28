@@ -24,7 +24,7 @@ build_tar:
       - branch
 
 upload_tar:
-  image: etd-docker01.it.csiro.au/nay019/aremi-s3-uploader
+  image: snayler0/aremi-s3-uploader
   dependencies:
     - build_tar
   when: manual
@@ -37,7 +37,7 @@ upload_tar:
     - aws s3 cp aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz s3://aremi-ci-apps/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz
 
 trigger_ami_build:
-  image: etd-docker01.it.csiro.au/nay019/aremi-ami-builder
+  image: snayler0/aremi-ami-builder
   dependencies:
     - build_tar
   when: manual
