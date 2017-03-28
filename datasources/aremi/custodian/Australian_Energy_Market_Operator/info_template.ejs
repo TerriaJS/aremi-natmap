@@ -28,12 +28,12 @@
       <td class='strong'>{{Physical Unit No_}}</td>
     </tr>
     <tr>
-      <td>Aggregation</td>
-      <td class='strong'>{{Aggregation}}</td>
-    </tr>
-    <tr>
       <td>Unit Size (MW)</td>
       <td class='strong'>{{Unit Size (MW)}}</td>
+    </tr>
+    <tr>
+      <td>Aggregation</td>
+      <td class='strong'>{{Aggregation}}</td>
     </tr>
     <tr><td>Power generation</td><td><chart poll-seconds='300' poll-replace='true' sources='http://services.aremi.nationalmap.gov.au/aemo/v4/duidcsv/{{#terria.urlEncodeComponent}}{{DUID}}{{/terria.urlEncodeComponent}}?offset=1D,http://services.aremi.nationalmap.gov.au/aemo/v4/duidcsv/{{#terria.urlEncodeComponent}}{{DUID}}{{/terria.urlEncodeComponent}}?offset=5D,http://services.aremi.nationalmap.gov.au/aemo/v4/duidcsv/{{#terria.urlEncodeComponent}}{{DUID}}{{/terria.urlEncodeComponent}}?offset=30D,http://services.aremi.nationalmap.gov.au/aemo/v4/duidcsv/{{#terria.urlEncodeComponent}}{{DUID}}{{/terria.urlEncodeComponent}}?offset=3M' source-names='1d,5d,30d,3m' preview-x-label='Last 24 hours' column-names='Time,Power Generation' column-units='Date,MW'></chart></td></tr>
   </tbody>
