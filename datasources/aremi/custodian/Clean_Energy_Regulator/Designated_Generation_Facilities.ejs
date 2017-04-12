@@ -103,12 +103,14 @@
   "name": "NGERS Designated Generation Facilities (2014-16)",
   "url": "http://static.aremi.nicta.com.au/datasets/cer/NGERS%20-%20Designated%20generation%20facility%20data%202014-16.csv",
   "type": "csv",
+  "idColumns": ["Controlling corporation","Facility name"],
   "featureInfoTemplate" : {
     "name": "{{Facility name}}: {{Total emissions (t CO2-e)}} CO2(t)",
     "template": "<% include Designated_Generation_Facilities-template_15-16 %>"
   },
   "showWarnings": false,
   "tableStyle": {
+    "displayDuration": 525600,
     "scaleByValue": true,
     "scale": 1.5,
     "dataVariable": "Emission intensity (t/Mwh)",
