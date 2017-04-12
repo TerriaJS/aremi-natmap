@@ -1,0 +1,50 @@
+{
+  "id": "c69d63d1",
+  "name": "NGERS Designated Generation Facilities (2014-16)",
+  "url": "http://static.aremi.nicta.com.au/datasets/cer/NGERS%20-%20Designated%20generation%20facility%20data%202014-16.csv",
+  "type": "csv",
+  "idColumns": ["Controlling corporation","Facility name"],
+  "featureInfoTemplate" : {
+    "name": "{{Facility name}}: {{Total emissions (t CO2-e)}} CO2(t)",
+    "template": "<% include Designated_Generation_Facilities-template_15-16 %>"
+  },
+  "showWarnings": false,
+  "tableStyle": {
+    "displayDuration": 525600,
+    "scaleByValue": true,
+    "scale": 1.5,
+    "dataVariable": "Emission intensity (t/Mwh)",
+    "colorMap": [
+      { "color": "rgb(165,0,38)", "offset": 1 },
+      { "color": "rgb(215,48,39)", "offset": 0.9 },
+      { "color": "rgb(244,109,67)", "offset": 0.8 },
+      { "color": "rgb(253,174,97)", "offset": 0.7 },
+      { "color": "rgb(254,224,139)", "offset": 0.6 },
+      { "color": "rgb(255,255,191)", "offset": 0.5 },
+      { "color": "rgb(217,239,139)", "offset": 0.4 },
+      { "color": "rgb(166,217,106)", "offset": 0.3 },
+      { "color": "rgb(102,189,99)", "offset": 0.2 },
+      { "color": "rgb(26,152,80)", "offset": 0.1 },
+      { "color": "rgb(0,104,55)", "offset": 0 }
+    ],
+    "columns": {
+      "Type": {"type":"HIDDEN"},
+      "Controlling corporation": {"type":"HIDDEN"},
+      "Facility name": {"type":"HIDDEN"}
+    }
+  },
+  "info": [
+    {
+      "name": "Description",
+      "content": "<% include Designated_Generation_Facilities-description_2015-16 %>"
+    },
+    {
+      "name": "Licensing",
+      "content": "<% include Designated_Generation_Facilities-licensing %>"
+    },
+    {
+      "name": "Data Custodian",
+      "content": "<% include Designated_Generation_Facilities-dataCustodian %>"
+    }
+  ]
+}
