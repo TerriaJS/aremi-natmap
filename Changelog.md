@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Upcoming release
+* Add more Cropping layers from NSW Department of Industry - Lands to the "Renewable Energy -> Bioenergy -> New South Wales -> Cropping" category.
 * Update the CER SGU data available in "Electricity Infrastructure -> Generation -> Small Scale Installations - CER".
 * Add data for the 2015-16 NGERS Designated Generation Facilities
 * Update to [TerriaJS 5.0.1](https://github.com/TerriaJS/terriajs/blob/5.0.1/CHANGES.md)
