@@ -40,7 +40,6 @@ trigger_ami_build:
   image: snayler0/aremi-ami-builder
   dependencies:
     - build_tar
-  when: manual
   stage: trigger_ami_build
   script:
     - DESCRIBE=$(cat ./describe)
