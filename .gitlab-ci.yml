@@ -45,6 +45,7 @@ trigger_ami_build:
   dependencies:
     - upload_tar
   stage: trigger_ami_build
+  when: on_success
   script:
     - DESCRIBE=$(cat ./describe)
     - BRANCH=$(cat ./branch)
