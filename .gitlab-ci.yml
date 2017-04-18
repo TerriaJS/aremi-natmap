@@ -35,11 +35,15 @@ upload_tar:
     - aws configure set aws_access_key_id ${access_key}
     - aws configure set aws_secret_access_key ${secret_key}
     - aws s3 cp aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz s3://aremi-ci-apps/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz
+  artifacts:
+    paths:
+      - describe
+      - branch
 
 trigger_ami_build:
   image: snayler0/aremi-ami-builder
   dependencies:
-    - build_tar
+    - upload_tar
   stage: trigger_ami_build
   script:
     - DESCRIBE=$(cat ./describe)
