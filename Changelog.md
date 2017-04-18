@@ -5,10 +5,10 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Upcoming release
+* Update to [TerriaJS 5.1.0](https://github.com/TerriaJS/terriajs/blob/5.1.0/CHANGES.md).
 * Add more Cropping layers from NSW Department of Industry - Lands to the "Renewable Energy -> Bioenergy -> New South Wales -> Cropping" category.
 * Update the CER SGU data available in "Electricity Infrastructure -> Generation -> Small Scale Installations - CER".
-* Add data for the 2015-16 NGERS Designated Generation Facilities
-* Update to [TerriaJS 5.0.1](https://github.com/TerriaJS/terriajs/blob/5.0.1/CHANGES.md)
+* Add data for the 2015-16 NGERS Designated Generation Facilities.
 
 ### Version 2017-03-14
 * Update to [TerriaJS 4.10.4](https://github.com/TerriaJS/terriajs/blob/4.10.4/CHANGES.md) release to fix a problem affecting the "Electricity Infrastructure -> Generation -> Current Power Generation - NEM" layers.
