@@ -29,6 +29,7 @@ upload_tar:
     - build_tar
   when: manual
   stage: upload_tar
+  allow_failure: false
   script:
     - DESCRIBE=$(cat ./describe)
     - BRANCH=$(cat ./branch)
@@ -45,7 +46,6 @@ trigger_ami_build:
   dependencies:
     - upload_tar
   stage: trigger_ami_build
-  when: on_success
   script:
     - DESCRIBE=$(cat ./describe)
     - BRANCH=$(cat ./branch)
