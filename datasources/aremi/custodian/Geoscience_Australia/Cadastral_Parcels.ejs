@@ -7,7 +7,7 @@
   "opacity": 1,
   "hideSource": true,
   "featureInfoTemplate" : {
-    "template": "Jurisdiction ID: <strong>{{JURISDICTION_ID}}</strong>"
+    "template": "Jurisdiction ID: <strong>{{JURISDICTION_ID}}</strong><br/>Feature area: <strong>{{#terria.formatNumber}}{maximumFractionDigits:1,useGrouping:true}{{Feature_Area_ha}}{{/terria.formatNumber}} hectare</strong>"
   },
   <% include ../../common/standard_properties %>,
   <% include ../../common/home_camera_rectangle %>
