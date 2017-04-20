@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Upcoming release
+* Added the layers in "Renewable Energy -> Bioenergy -> Queensland -> Urban Waste" from the Department of Science, Information Technology and Innovation of the State of Queensland Government.
 * Added Feature Area in Hectares to the feature info for the "Boundaries -> Cadastre and Land Tenure -> Cadastral Parcels" data.
 * Update to [TerriaJS 5.1.0](https://github.com/TerriaJS/terriajs/blob/5.1.0/CHANGES.md).
 * Add more Cropping layers from NSW Department of Industry - Lands to the "Renewable Energy -> Bioenergy -> New South Wales -> Cropping" category.

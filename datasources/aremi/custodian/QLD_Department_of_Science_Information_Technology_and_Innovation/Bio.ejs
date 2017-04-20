@@ -1,19 +1,36 @@
 {
-  "id": "948a3657",
   "name": "Queensland",
-  "url": "https://gisservices.information.qld.gov.au/arcgis/services/AREMI/Forestry/MapServer/WmsServer",
-  "type": "wms-getCapabilities",
-  "info": [
-  ],
-  <% include ../../common/standard_properties %>
+  "type": "group",
+  "items": [
+
+    {
+      "id": "948a3657",
+      "name": "Forestry",
+      "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/AREMI/Forestry/MapServer",
+      "type": "esri-mapServer-group",
+      "itemProperties": {
+        <% include ../../common/standard_properties %>
+      }
+    },
+
+    {
+      "id": "e7992a50",
+      "name": "Urban Waste",
+      "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/AREMI/UrbanWaste/MapServer",
+      "type": "esri-mapServer-group",
+      "itemProperties": {
+        <% include ../../common/standard_properties %>
+      }
+    }
+  ]
 },
+
 {
   "id": "6337804c",
   "name": "Sugarcane",
   "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/AREMI/Sugarcane/MapServer",
   "type": "esri-mapServer-group",
   "itemProperties": {
-    "dataCustodian": "© State of Queensland (Department of Science, Information Technology and Innovation) 2016.",
     <% include ../../common/standard_properties %>
   }
 }
