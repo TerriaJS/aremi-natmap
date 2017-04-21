@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Upcoming release
+* Added a new Gas dataset to the "Electricity Infrastructure -> Generation -> Current Power Generation - NEM".
 * Added the layer "Renewable Energy -> Bioenergy -> Biogas Facilities" from the National Centre for Engineering in Agriculture, University of Southern Queensland.
 * Added the layers in "Renewable Energy -> Bioenergy -> Queensland -> Urban Waste" from the Department of Science, Information Technology and Innovation of the State of Queensland Government.
 * Added Feature Area in Hectares to the feature info for the "Boundaries -> Cadastre and Land Tenure -> Cadastral Parcels" data.
