@@ -58,6 +58,59 @@
 },
 
 {
+  "name": "Simulated Residual Straw",
+  "type": "group",
+  "items": [
+
+    {
+      "id": "5da53eda",
+      "name": "Average Rainfall",
+      "layers": "Simulated Residual Straw - Average Rainfall",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_Average_Rainfall/MapServer/",
+      "type": "esri-mapServer",
+      <% include ../../common/standard_properties %>
+    },
+
+    {
+      "id": "469a8590",
+      "name": "5% Reduced Rainfall",
+      "layers": "Simulated Residual Straw - 5% Reduced Rainfall",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_5pc_Reduced_Rainfall/MapServer",
+      "type": "esri-mapServer",
+      <% include ../../common/standard_properties %>
+    },
+
+    {
+      "id": "72d0b15c",
+      "name": "10% Reduced Rainfall",
+      "layers": "Simulated Residual Straw - 10% Reduced Rainfall",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_10pc_Reduced_Rainfall/MapServer/",
+      "type": "esri-mapServer",
+      <% include ../../common/standard_properties %>
+    },
+
+    {
+      "id": "46136a5b",
+      "name": "20% Reduced Rainfall",
+      "layers": "Simulated Residual Straw - 20% Reduced Rainfall",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_20pc_Reduced_Rainfall/MapServer/",
+      "type": "esri-mapServer",
+      <% include ../../common/standard_properties %>
+    }
+
+  ]
+},
+
+{
+  "id": "0c5700f4",
+  "name": "Cereal Straw Residues",
+  "layers": "SA4 Total Cereal Straw Residues",
+  "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Cereal_Straw/MapServer/",
+  "type": "esri-mapServer",
+  <% include ../../common/standard_properties %>
+},
+
+{
   "id": "9ac1a925",
   "name": "Crop Estimates by District",
   "url": "https://data.sa.gov.au/data",
@@ -72,6 +125,15 @@
       -31.0
     ]
   }
+},
+
+{
+  "id": "e219ba74",
+  "name": "Fruit & Nuts",
+  "layers": "SA4 Fruit & Nuts",
+  "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Fruit_Nuts/MapServer/",
+  "type": "esri-mapServer",
+  <% include ../../common/standard_properties %>
 },
 
 {
@@ -126,28 +188,10 @@
 },
 
 {
-  "id": "0c5700f4",
-  "name": "Cereal Straw Residues",
-  "layers": "SA4 Total Cereal Straw Residues",
-  "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Cereal_Straw/MapServer/",
-  "type": "esri-mapServer",
-  <% include ../../common/standard_properties %>
-},
-
-{
   "id": "54180344",
   "name": "Non Cereal Straw",
   "layers": "SA4 Total Non Cereal Straw",
   "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Non_Cereal_Straw/MapServer/",
-  "type": "esri-mapServer",
-  <% include ../../common/standard_properties %>
-},
-
-{
-  "id": "e219ba74",
-  "name": "Fruit & Nuts",
-  "layers": "SA4 Fruit & Nuts",
-  "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Fruit_Nuts/MapServer/",
   "type": "esri-mapServer",
   <% include ../../common/standard_properties %>
 },
@@ -159,49 +203,4 @@
   "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Vegetables/MapServer/",
   "type": "esri-mapServer",
   <% include ../../common/standard_properties %>
-},
-
-
-{
-  "name": "Simulated Residual Straw",
-  "type": "group",
-  "items": [
-
-    {
-      "id": "5da53eda",
-      "name": "Average Rainfall",
-      "layers": "Simulated Residual Straw - Average Rainfall",
-      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_Average_Rainfall/MapServer/",
-      "type": "esri-mapServer",
-      <% include ../../common/standard_properties %>
-    },
-
-    {
-      "id": "469a8590",
-      "name": "5% Reduced Rainfall",
-      "layers": "Simulated Residual Straw - 5% Reduced Rainfall",
-      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_5pc_Reduced_Rainfall/MapServer",
-      "type": "esri-mapServer",
-      <% include ../../common/standard_properties %>
-    },
-
-    {
-      "id": "72d0b15c",
-      "name": "10% Reduced Rainfall",
-      "layers": "Simulated Residual Straw - 10% Reduced Rainfall",
-      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_10pc_Reduced_Rainfall/MapServer/",
-      "type": "esri-mapServer",
-      <% include ../../common/standard_properties %>
-    },
-
-    {
-      "id": "46136a5b",
-      "name": "20% Reduced Rainfall",
-      "layers": "Simulated Residual Straw - 20% Reduced Rainfall",
-      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_20pc_Reduced_Rainfall/MapServer/",
-      "type": "esri-mapServer",
-      <% include ../../common/standard_properties %>
-    }
-
-  ]
 }
