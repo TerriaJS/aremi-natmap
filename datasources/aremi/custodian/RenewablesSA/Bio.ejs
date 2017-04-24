@@ -1,38 +1,86 @@
 {
-  "name": "Existing Waste Stream",
+  "name": "Agriculture",
   "type": "group",
+  "preserveOrder": true,
   "items": [
 
     {
-      "id": "9e78a40e",
-      "name": "Horticulture",
-      "url": "https://data.sa.gov.au/data",
-      "type": "ckan-resource",
-      "datasetId": "exisiting-waste-stream-horticulture",
+      "name": "Simulated Residual Straw",
+      "type": "group",
+      "items": [
+
+        {
+          "id": "5da53eda",
+          "name": "Average Rainfall",
+          "layers": "Simulated Residual Straw - Average Rainfall",
+          "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_Average_Rainfall/MapServer/",
+          "type": "esri-mapServer",
+          <% include ../../common/standard_properties %>
+        },
+
+        {
+          "id": "469a8590",
+          "name": "5% Reduced Rainfall",
+          "layers": "Simulated Residual Straw - 5% Reduced Rainfall",
+          "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_5pc_Reduced_Rainfall/MapServer",
+          "type": "esri-mapServer",
+          <% include ../../common/standard_properties %>
+        },
+
+        {
+          "id": "72d0b15c",
+          "name": "10% Reduced Rainfall",
+          "layers": "Simulated Residual Straw - 10% Reduced Rainfall",
+          "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_10pc_Reduced_Rainfall/MapServer/",
+          "type": "esri-mapServer",
+          <% include ../../common/standard_properties %>
+        },
+
+        {
+          "id": "46136a5b",
+          "name": "20% Reduced Rainfall",
+          "layers": "Simulated Residual Straw - 20% Reduced Rainfall",
+          "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_20pc_Reduced_Rainfall/MapServer/",
+          "type": "esri-mapServer",
+          <% include ../../common/standard_properties %>
+        }
+
+      ]
+    },
+
+    {
+      "id": "0c5700f4",
+      "name": "Cereal Straw",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Cereal_Straw/MapServer/",
+      "type": "esri-mapServer-group",
       "itemProperties": {
-        "legendUrl": "http://static.aremi.nicta.com.au/datasets/RenewablesSA/Existing_Waste_Streams_-_Horticulture.PNG",
-        "rectangle": [
-          134.5,
-          -38.4,
-          141.4,
-          -32.6
-        ]
+        <% include ../../common/standard_properties %>
       }
     },
 
     {
-      "id": "c0a74afe",
-      "name": "Processing Plants",
+      "id": "54180344",
+      "name": "Non Cereal Straw",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Non_Cereal_Straw/MapServer/",
+      "type": "esri-mapServer-group",
+      "itemProperties": {
+        <% include ../../common/standard_properties %>
+      }
+    },
+
+    {
+      "id": "9ac1a925",
+      "name": "Crop Estimates by District",
       "url": "https://data.sa.gov.au/data",
       "type": "ckan-resource",
-      "datasetId": "existing-waste-stream-processing-plants-abba-project",
+      "datasetId": "crop-estimates-by-district",
       "itemProperties": {
-        "legendUrl": "http://static.aremi.nicta.com.au/datasets/RenewablesSA/Existing_Waste_Streams_-_Processing_Plants.PNG",
+        "legendUrl": "http://static.aremi.nicta.com.au/datasets/RenewablesSA/Crop_Reporting.PNG",
         "rectangle": [
-          134.5,
-          -38.4,
-          141.4,
-          -32.6
+          131.7,
+          -38.6,
+          141.6,
+          -31.0
         ]
       }
     },
@@ -52,155 +100,156 @@
           -32.6
         ]
       }
-    },
-
+    }
   ]
 },
 
 {
-  "name": "Simulated Residual Straw",
+  "name": "Green Triangle",
   "type": "group",
   "items": [
 
     {
-      "id": "5da53eda",
-      "name": "Average Rainfall",
-      "layers": "Simulated Residual Straw - Average Rainfall",
-      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_Average_Rainfall/MapServer/",
+      "id": "69d466c3",
+      "name": "Green Triangle Forestry",
+      "layers": "Green Triangle Forestry",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Green_Triangle_Forestry/MapServer",
       "type": "esri-mapServer",
       <% include ../../common/standard_properties %>
     },
 
     {
-      "id": "469a8590",
-      "name": "5% Reduced Rainfall",
-      "layers": "Simulated Residual Straw - 5% Reduced Rainfall",
-      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_5pc_Reduced_Rainfall/MapServer",
-      "type": "esri-mapServer",
-      <% include ../../common/standard_properties %>
-    },
-
-    {
-      "id": "72d0b15c",
-      "name": "10% Reduced Rainfall",
-      "layers": "Simulated Residual Straw - 10% Reduced Rainfall",
-      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_10pc_Reduced_Rainfall/MapServer/",
-      "type": "esri-mapServer",
-      <% include ../../common/standard_properties %>
-    },
-
-    {
-      "id": "46136a5b",
-      "name": "20% Reduced Rainfall",
-      "layers": "Simulated Residual Straw - 20% Reduced Rainfall",
-      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Simulated_Residual_Straw_20pc_Reduced_Rainfall/MapServer/",
-      "type": "esri-mapServer",
-      <% include ../../common/standard_properties %>
+      "id": "6f070e2d",
+      "name": "Green Triangle Region Boundary",
+      "url": "https://data.sa.gov.au/data",
+      "type": "ckan-resource",
+      "datasetId": "national-plantation-industry-boundary-green-triangle",
+      "itemProperties": {
+        "legendUrl": "http://static.aremi.nicta.com.au/datasets/RenewablesSA/NPI_Boundary_-_Green_Triangle.PNG",
+        "rectangle": [
+          139.5,
+          -38.6,
+          142.4,
+          -36.2
+        ]
+      }
     }
-
   ]
 },
 
 {
-  "id": "0c5700f4",
-  "name": "Cereal Straw Residues",
-  "layers": "SA4 Total Cereal Straw Residues",
-  "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Cereal_Straw/MapServer/",
-  "type": "esri-mapServer",
-  <% include ../../common/standard_properties %>
+  "name": "Horticulture",
+  "type": "group",
+  "preserveOrder": true,
+  "items": [
+
+    {
+      "id": "e219ba74",
+      "name": "Fruit & Nuts",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Fruit_Nuts/MapServer/",
+      "type": "esri-mapServer-group",
+      "itemProperties": {
+        <% include ../../common/standard_properties %>
+      }
+    },
+
+    {
+      "id": "e47a176d",
+      "name": "Vegetables",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Vegetables/MapServer",
+      "type": "esri-mapServer-group",
+      "itemProperties": {
+        <% include ../../common/standard_properties %>
+      }
+    },
+
+    {
+      "id": "9e78a40e",
+      "name": "Horticulture",
+      "url": "https://data.sa.gov.au/data",
+      "type": "ckan-resource",
+      "datasetId": "exisiting-waste-stream-horticulture",
+      "itemProperties": {
+        "legendUrl": "http://static.aremi.nicta.com.au/datasets/RenewablesSA/Existing_Waste_Streams_-_Horticulture.PNG",
+        "rectangle": [
+          134.5,
+          -38.4,
+          141.4,
+          -32.6
+        ]
+      }
+    }
+  ]
 },
 
 {
-  "id": "9ac1a925",
-  "name": "Crop Estimates by District",
+  "name": "Livestock",
+  "type": "group",
+  "preserveOrder": true,
+  "items": [
+
+    {
+      "id": "fd5ed161",
+      "name": "Cattle",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Cattle_Meat_Dairy/MapServer",
+      "type": "esri-mapServer-group",
+      "itemProperties": {
+        <% include ../../common/standard_properties %>
+      }
+    },
+
+    {
+      "id": "4276e84d",
+      "name": "Poultry",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Poultry/MapServer",
+      "type": "esri-mapServer-group",
+      "itemProperties": {
+        <% include ../../common/standard_properties %>
+      }
+    },
+
+    {
+      "id": "d271102e",
+      "name": "Sheep",
+      "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Sheep/MapServer",
+      "type": "esri-mapServer-group",
+      "itemProperties": {
+        <% include ../../common/standard_properties %>
+      }
+    },
+
+    {
+      "id": "4c31f50d",
+      "name": "Intensive Animal Husbandry and Production",
+      "url": "https://data.sa.gov.au/data",
+      "type": "ckan-resource",
+      "datasetId": "intensive-animal-husbandry-production",
+      "itemProperties": {
+        "legendUrl": "http://static.aremi.nicta.com.au/datasets/RenewablesSA/Animal_Husbandry-Production.PNG",
+        "rectangle": [
+          132.2,
+          -38.4,
+          141.4,
+          -32.1
+        ]
+      }
+    }
+  ]
+},
+
+{
+  "id": "c0a74afe",
+  "name": "Processing Plants",
   "url": "https://data.sa.gov.au/data",
   "type": "ckan-resource",
-  "datasetId": "crop-estimates-by-district",
+  "datasetId": "existing-waste-stream-processing-plants-abba-project",
   "itemProperties": {
-    "legendUrl": "http://static.aremi.nicta.com.au/datasets/RenewablesSA/Crop_Reporting.PNG",
+    "legendUrl": "http://static.aremi.nicta.com.au/datasets/RenewablesSA/Existing_Waste_Streams_-_Processing_Plants.PNG",
     "rectangle": [
-      131.7,
-      -38.6,
-      141.6,
-      -31.0
-    ]
-  }
-},
-
-{
-  "id": "e219ba74",
-  "name": "Fruit & Nuts",
-  "layers": "SA4 Fruit & Nuts",
-  "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Fruit_Nuts/MapServer/",
-  "type": "esri-mapServer",
-  <% include ../../common/standard_properties %>
-},
-
-{
-  "id": "69d466c3",
-  "name": "Green Triangle Forestry",
-  "url": "https://data.sa.gov.au/data",
-  "type": "ckan-resource",
-  "datasetId": "green-triangle-forestry",
-  "itemProperties": {
-    "legendUrl": "http://static.aremi.nicta.com.au/datasets/RenewablesSA/GT_Forestry_Types_Legend.PNG",
-    "rectangle": [
-      139.5,
-      -38.6,
-      142.4,
-      -36.2
-    ]
-  }
-},
-
-{
-  "id": "6f070e2d",
-  "name": "Green Triangle Region Boundary",
-  "url": "https://data.sa.gov.au/data",
-  "type": "ckan-resource",
-  "datasetId": "national-plantation-industry-boundary-green-triangle",
-  "itemProperties": {
-    "legendUrl": "http://static.aremi.nicta.com.au/datasets/RenewablesSA/NPI_Boundary_-_Green_Triangle.PNG",
-    "rectangle": [
-      139.5,
-      -38.6,
-      142.4,
-      -36.2
-    ]
-  }
-},
-
-{
-  "id": "4c31f50d",
-  "name": "Intensive Animal Husbandry and Production",
-  "url": "https://data.sa.gov.au/data",
-  "type": "ckan-resource",
-  "datasetId": "intensive-animal-husbandry-production",
-  "itemProperties": {
-    "legendUrl": "http://static.aremi.nicta.com.au/datasets/RenewablesSA/Animal_Husbandry-Production.PNG",
-    "rectangle": [
-      132.2,
+      134.5,
       -38.4,
       141.4,
-      -32.1
+      -32.6
     ]
   }
-},
-
-{
-  "id": "54180344",
-  "name": "Non Cereal Straw",
-  "layers": "SA4 Total Non Cereal Straw",
-  "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Non_Cereal_Straw/MapServer/",
-  "type": "esri-mapServer",
-  <% include ../../common/standard_properties %>
-},
-
-{
-  "id": "a219e7c3",
-  "name": "Vegetable Residues",
-  "layers": "SA4 Vegetable Residues",
-  "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Vegetables/MapServer/",
-  "type": "esri-mapServer",
-  <% include ../../common/standard_properties %>
 }
