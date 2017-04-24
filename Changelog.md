@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Upcoming release
+* Added download links in the feature info of the "Renewable Energy -> Solar -> Solar Satellite DNI & GHI" that allows the user to download the full 25 year timeseries once they have clicked on a point.
 * Defaulting to 3D Smooth globe.
 * Added many new layers to the category "Renewable Energy -> Bioenergy -> South Australia" from RenewablesSA.
 * Fixed some problems with the chart and download links in the feature info of the "Electricity Infrastructure -> Generation -> Current Power Generation - NEM" data.
