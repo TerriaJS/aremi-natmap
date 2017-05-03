@@ -35,7 +35,7 @@ export default function UserInterface(props) {
                 <MeasureTool terria={props.viewState.terria} key="measure-tool"/>
             </Nav>
             <ExperimentalMenu>
-                <If condition={isBrowserSupportedAV() && this.props.terria.viewerMode !== ViewerMode.Leaflet}>
+                <If condition={isBrowserSupportedAV()}>
                     <SplitPoint loadComponent={loadAugmentedVirtuality} viewState={props.viewState} terria={props.viewState.terria} experimentalWarning={true}/>
                 </If>
             </ExperimentalMenu>
