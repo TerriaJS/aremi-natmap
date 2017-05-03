@@ -40,8 +40,8 @@
   "url": "http://services.ga.gov.au/gis/services/DEM_LiDAR_25m/MapServer/WMSServer",
   "type": "wms",
   "featureInfoTemplate" : {
-    "name": "{{PixelValue}} metres",
-    "template": "{{PixelValue}} metres",
+    "name": "{{#Stretchedvalue}}{{PixelValue}} metres{{/Stretchedvalue}}{{^Stretchedvalue}}No data{{/Stretchedvalue}}",
+    "template": "{{#Stretchedvalue}}{{PixelValue}} metres{{/Stretchedvalue}}{{^Stretchedvalue}}No data{{/Stretchedvalue}}",
     "formats": {
       "PixelValue": {"maximumFractionDigits": 0}
     }
@@ -62,8 +62,8 @@
   "url": "http://services.ga.gov.au/gis/services/DEM_LiDAR_5m/MapServer/WMSServer",
   "type": "wms",
   "featureInfoTemplate" : {
-    "name": "{{PixelValue}} metres",
-    "template": "{{PixelValue}} metres",
+    "name": "{{#Stretchedvalue}}{{PixelValue}} metres{{/Stretchedvalue}}{{^Stretchedvalue}}No data{{/Stretchedvalue}}",
+    "template": "{{#Stretchedvalue}}{{PixelValue}} metres{{/Stretchedvalue}}{{^Stretchedvalue}}No data{{/Stretchedvalue}}",
     "formats": {
       "PixelValue": {"maximumFractionDigits": 0}
     }
