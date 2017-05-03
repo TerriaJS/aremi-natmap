@@ -8,8 +8,6 @@ import RelatedMaps from './RelatedMaps';
 import { Menu, Nav, ExperimentalMenu } from 'terriajs/lib/ReactViews/StandardUserInterface/customizable/Groups';
 import MeasureTool from 'terriajs/lib/ReactViews/Map/Navigation/MeasureTool';
 import SplitPoint from 'terriajs/lib/ReactViews/SplitPoint';
-import ViewerMode from 'terriajs/lib/Models/ViewerMode';
-
 
 import './global.scss';
 
