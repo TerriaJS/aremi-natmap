@@ -13,7 +13,8 @@
         "nicta.com.au",
         "noaa.gov",
         "www.dptiapps.com.au",
-        "www.googleapis.com"
+        "www.googleapis.com",
+        "amazonaws.com"
     ],
     "feedback": {
         "userAgent": "TerriaBot (TerriaJS Feedback)",
