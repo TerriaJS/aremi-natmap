@@ -4,8 +4,9 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
-### In the next version
+### Version 2017-05-04
 * Remove some bioenergy layers that are no longer required in the "Renewable Energy -> Bioenergy -> South Australia".
+* Update to [TerriaJS 5.1.1](https://github.com/TerriaJS/terriajs/blob/5.1.1/CHANGES.md).
 
 ### Version 2017-04-24
 * Added download links in the feature info of the "Renewable Energy -> Solar -> Solar Satellite DNI & GHI" that allows the user to download the full 25 year timeseries once they have clicked on a point.
