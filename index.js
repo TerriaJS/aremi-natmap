@@ -107,7 +107,9 @@ terria.start({
     defaultTo2D: isCommonMobilePlatform(),
     shareDataService: new ShareDataService({
         terria: terria
-    })
+    }),
+    globalDisclaimerHtml: require('./lib/Views/GlobalDisclaimer.html'),
+    developmentDisclaimerPreambleHtml: require('./lib/Views/DevelopmentDisclaimerPreamble.html')
 }).otherwise(function(e) {
     raiseErrorToUser(terria, e);
 }).always(function() {
