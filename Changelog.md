@@ -4,6 +4,9 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Version 2017-05-30
+* Corrected the location of the Native Title Determinations layer.
+
 ### Version 2017-05-04
 * Remove some bioenergy layers that are no longer required in the "Renewable Energy -> Bioenergy -> South Australia".
 * Update to [TerriaJS 5.1.1](https://github.com/TerriaJS/terriajs/blob/5.1.1/CHANGES.md).
