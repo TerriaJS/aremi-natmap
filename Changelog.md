@@ -4,7 +4,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
-### Version 2017-05-30
+### Version 2017-05-30b
 * Corrected the location of the Native Title Determinations layer.
 
 ### Version 2017-05-04
