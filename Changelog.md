@@ -7,6 +7,7 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version
 * Added many new layers to the category "Renewable Energy -> Bioenergy -> South Australia" from RenewablesSA.
+* Corrected the location of the Native Title Determinations layer.
 
 ### Version 2017-05-04
 * Remove some bioenergy layers that are no longer required in the "Renewable Energy -> Bioenergy -> South Australia".
