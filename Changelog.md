@@ -5,7 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
-### In the next version
+### Version 2017-06-01
 * Added the new layer "Electricity Infrastructure -> Constraints -> United Energy Network Limitations 2016" from United Energy.
 * Added many new layers to the category "Renewable Energy -> Bioenergy -> South Australia" from RenewablesSA.
 
