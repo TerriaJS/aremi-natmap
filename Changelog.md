@@ -5,8 +5,10 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
+### In the next version
+* Added the new layer "Electricity Infrastructure -> Network Opportunities -> Localised Network Data -> United Energy Network Limitations 2016" from United Energy.
+
 ### Version 2017-06-01
-* Added the new layer "Electricity Infrastructure -> Constraints -> United Energy Network Limitations 2016" from United Energy.
 * Added many new layers to the category "Renewable Energy -> Bioenergy -> South Australia" from RenewablesSA.
 
 ### Version 2017-05-30b
