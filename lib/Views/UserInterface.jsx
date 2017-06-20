@@ -7,9 +7,22 @@ import MenuItem from 'terriajs/lib/ReactViews/StandardUserInterface/customizable
 import RelatedMaps from './RelatedMaps';
 import { Menu, Nav, ExperimentalMenu } from 'terriajs/lib/ReactViews/StandardUserInterface/customizable/Groups';
 import MeasureTool from 'terriajs/lib/ReactViews/Map/Navigation/MeasureTool';
-import AugmentedVirtualityTool from 'terriajs/lib/ReactViews/Map/Navigation/AugmentedVirtualityTool.jsx';
+import SplitPoint from 'terriajs/lib/ReactViews/SplitPoint';
+import ViewerMode from 'terriajs/lib/Models/ViewerMode';
+
 
 import './global.scss';
+
+function loadAugmentedVirtuality(callback) {
+    require.ensure('terriajs/lib/ReactViews/Map/Navigation/AugmentedVirtualityTool', () => {
+        const AugmentedVirtualityTool = require('terriajs/lib/ReactViews/Map/Navigation/AugmentedVirtualityTool');
+        callback(AugmentedVirtualityTool);
+    }, 'AugmentedVirtuality');
+}
+
+function isBrowserSupportedAV() {
+    return /Android|iPhone|iPad/i.test(navigator.userAgent);
+}
 
 export default function UserInterface(props) {
     return (
@@ -22,7 +35,10 @@ export default function UserInterface(props) {
                 <MeasureTool terria={props.viewState.terria} key="measure-tool"/>
             </Nav>
             <ExperimentalMenu>
-                <AugmentedVirtualityTool viewState={props.viewState} terria={props.viewState.terria} experimentalWarning={true} key="augmented-virtuality-tool"/>
+                <If condition={isBrowserSupportedAV() && this.props.terria.viewerMode !== ViewerMode.Leaflet}>
+                    <SplitPoint loadComponent={loadAugmentedVirtuality} viewState={props.viewState} terria={props.viewState.terria} experimentalWarning={true}/>
+                </If>
+                <MenuItem caption="About" href="about.html" key="about-link"/>
             </ExperimentalMenu>
         </StandardUserInterface>
     );
