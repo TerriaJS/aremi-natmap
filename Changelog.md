@@ -10,6 +10,7 @@ http://nationalmap.gov.au/renewables/
 * Combined Landuser layers in "Renewable Energy -> Bioenergy -> South Australia" together with their respective quantity layers.
 * Change deafult mobile view mode to a configuration parameter rather then hard coded to 2D.
 * Add Augmented Reality mode for iOS and Android devices with a compass and accelerometer, activated by enabling `experimentalFeatures` in `config.json` and adding the AugmentedVirtualityTool to the ExperimentalMenu in the customisable user interface.
+* Update to [TerriaJS 5.2.5](https://github.com/TerriaJS/terriajs/blob/5.2.5/CHANGES.md).
 
 ### Version 2017-06-01
 * Added many new layers to the category "Renewable Energy -> Bioenergy -> South Australia" from RenewablesSA.
