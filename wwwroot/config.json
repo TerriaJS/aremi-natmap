@@ -36,6 +36,10 @@
             "<div class='ausglobe-title-aremi'><div class='ausglobe-title-aremi-md'><a href='http://arena.gov.au/' target='_blank'><img class='left'  src='images/ARENA-logo2.png' alt='Australian Renewable Energy Agency' /></a> <a href='https://www.nicta.com.au/' target='_blank'><img class='right' src='images/DATA61_CSIRO.png' alt='Data61' style=\"width: 55px; height: 33px\"/></a> <br/> <strong>Australian Renewable Energy</strong> <br/> <small>Mapping Infrastructure</small> <br/> <span><a target='_blank' href='https://github.com/NICTA/aremi-natmap/blob/master/Changelog.md#version-{{version}}'>Version: {{version}}</a></span> </div><div class='ausglobe-title-aremi-sm'><strong>AREMI</strong></div></div>"
         ],
 
+        // Default mobile viewer mode when loading the map for the first time on mobile platforms.
+        // Options are: "3DTerrain", "3DSmooth", "2D"
+        "mobileDefaultViewerMode": "2d",
+
         // Enable experimental features, since its nice to have the bleeding edge.
         // Disable it if things go wrong with the experimental features or your users aren't robust to features which might change or disapear completly.
         "experimentalFeatures": true

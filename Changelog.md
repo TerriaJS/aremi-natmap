@@ -8,6 +8,7 @@ http://nationalmap.gov.au/renewables/
 ### In the next version
 * Added the new layer "Electricity Infrastructure -> Network Opportunities -> Localised Network Data -> United Energy Network Limitations 2016" from United Energy.
 * Combined Landuser layers in "Renewable Energy -> Bioenergy -> South Australia" together with their respective quantity layers.
+* Change deafult mobile view mode to a configuration parameter rather then hard coded to 2D.
 
 ### Version 2017-06-01
 * Added many new layers to the category "Renewable Energy -> Bioenergy -> South Australia" from RenewablesSA.
