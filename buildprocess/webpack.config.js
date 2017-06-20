@@ -90,7 +90,7 @@ module.exports = function(devMode, hot) {
                     'NODE_ENV': devMode ? '"development"' : '"production"'
                 }
             }),
-            new ExtractTextPlugin({filename: "nationalmap.css", disable: hot, ignoreOrder: true})
+            new ExtractTextPlugin({filename: "nationalmap.css", disable: hot, ignoreOrder: true, allChunks: true})
         ],
        resolve: {
             alias: {},
