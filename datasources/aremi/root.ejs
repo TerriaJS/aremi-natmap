@@ -58,14 +58,30 @@
           "preserveOrder": true,
           "items": [
             <% include custodian/Institute_for_Sustainable_Futures/DANCE2/DANCE2 %>,
-          ]
-        },
-        {
-          "name": "Network Opportunities - NEW",
-          "type": "group",
-          "preserveOrder": true,
-          "items": [
-            <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DANCE3 %>
+            {
+              "name": "New Generator Connection Capacity [new]",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Transmission",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items": [
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/ActewAGL-geojson %>
+                  ]
+                },
+                {
+                  "name": "Distribution",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items": [
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/Powerlink-csv %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/TransGrid-csv %>
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
