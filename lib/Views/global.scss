@@ -48,6 +48,10 @@ body {
 		}
 	}
 
+    .tjs-legend__legend__inner img {
+      max-height: 500px
+    }
+
 	.tjs-branding__branding {
 		a:first-child, a:last-child {
 			display: none;
