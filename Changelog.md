@@ -7,11 +7,11 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version
 * Many changes to the "Renewable Energy -> Bioenergy -> South Australia" group from RenewablesSA:
-** Added the new layer "Horticulture -> Nursery, Cut Flowers and Cultivated Turf"
-** Added the new layer "Agriculture -> Hay & Silage"
-** Added the new group of layers "Forestry"
-** Added the new group of layers "Urban Waste"
-** Removed the layer "Green Triangle Forestry"
+  * Added the new layer "Horticulture -> Nursery, Cut Flowers and Cultivated Turf"
+  * Added the new layer "Agriculture -> Hay & Silage"
+  * Added the new group of layers "Forestry"
+  * Added the new group of layers "Urban Waste"
+  * Removed the layer "Green Triangle Forestry"
 * Updated source data locations for the "Renewable Energy -> Bioenergy -> New South Wales" layers.
 * Updated to use the new 2016 CAPAD data for the "Environment -> Collaborative Australian Protected Areas Database (CAPAD)" layer.
 * Updated the data for the "Electricity Infrastructure -> Generation -> Small Scale Installations - CER" to the most recent 01/06/2017 release on the Clean Energy Regulator website.
