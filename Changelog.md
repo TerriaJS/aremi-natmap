@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
+* Removed the layer "Renewable Energy -> Bioenergy -> South Australia -> Green Triangle Forestry" on request from the data custodian.
 * Updated source data locations for the "Renewable Energy -> Bioenergy -> New South Wales" layers.
 * Updated to use the new 2016 CAPAD data for the "Environment -> Collaborative Australian Protected Areas Database (CAPAD)" layer.
 * Updated the data for the "Electricity Infrastructure -> Generation -> Small Scale Installations - CER" to the most recent 01/06/2017 release on the Clean Energy Regulator website.
