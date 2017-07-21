@@ -7,7 +7,6 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version
 * Many changes to the "Renewable Energy -> Bioenergy -> South Australia" group from RenewablesSA:
-  * Added the new layer "Horticulture -> Nursery, Cut Flowers and Cultivated Turf"
   * Added the new layer "Agriculture -> Hay & Silage"
   * Added the new group of layers "Forestry"
   * Added the new group of layers "Urban Waste"
