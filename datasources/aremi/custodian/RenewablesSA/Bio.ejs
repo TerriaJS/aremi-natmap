@@ -88,9 +88,9 @@
       "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Forestry_Residues/MapServer",
       "type": "esri-mapServer-group",
       "itemProperties": {
-        "opacity": 1.0
-      },
-      <% include ../../common/standard_properties %>
+        "opacity": 1.0,
+        <% include ../../common/standard_properties %>
+      }
     },
 
     {
@@ -184,7 +184,9 @@
       "name": "Municipal Organic Waste",
       "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Municipal_Organic_Waste/MapServer",
       "type": "esri-mapServer-group",
-      <% include ../../common/standard_properties %>
+      "itemProperties": {
+        <% include ../../common/standard_properties %>
+      }
     },
 
     {
@@ -192,7 +194,9 @@
       "name": "Commercial Industrial",
       "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Commercial_Industrial/MapServer",
       "type": "esri-mapServer-group",
-      <% include ../../common/standard_properties %>
+      "itemProperties": {
+        <% include ../../common/standard_properties %>
+      }
     },
 
     {
@@ -200,7 +204,9 @@
       "name": "Construction Demolition",
       "url": "http://location.sa.gov.au/arcgis3/rest/services/AREMI/Construction_Demolition/MapServer",
       "type": "esri-mapServer-group",
-      <% include ../../common/standard_properties %>
+      "itemProperties": {
+        <% include ../../common/standard_properties %>
+      }
     }
   ]
 },
