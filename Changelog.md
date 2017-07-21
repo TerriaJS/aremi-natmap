@@ -6,7 +6,8 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
-* Added the new layer "Renewable Energy -> Bioenergy -> South Australia -> Agriculture -> Hay Silage" from RenewablesSA.
+* Added the new layer "Renewable Energy -> Bioenergy -> South Australia -> Horticulture -> Nursery, Cut Flowers and Cultivated Turf" from RenewablesSA.
+* Added the new layer "Renewable Energy -> Bioenergy -> South Australia -> Agriculture -> Hay & Silage" from RenewablesSA.
 * Added a new group of layers in "Renewable Energy -> Bioenergy -> South Australia -> Forestry" from RenewablesSA.
 * Added a new group of layers in "Renewable Energy -> Bioenergy -> South Australia -> Urban Waste" from RenewablesSA.
 * Removed the layer "Renewable Energy -> Bioenergy -> South Australia -> Green Triangle Forestry" on request from the data custodian.
