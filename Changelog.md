@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
+* Update to [TerriaJS 5.2.7](https://github.com/TerriaJS/terriajs/blob/5.2.7/CHANGES.md).
 * Many changes to the "Renewable Energy -> Bioenergy -> South Australia" group from RenewablesSA:
   * Added the new layer "Agriculture -> Hay & Silage"
   * Added the new group of layers "Forestry"
