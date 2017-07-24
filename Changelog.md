@@ -6,9 +6,9 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
+* Update to [TerriaJS 5.2.8](https://github.com/TerriaJS/terriajs/blob/5.2.7/CHANGES.md).
 * Updated the source of the "Topography -> Land -> Land Cover" layer.
 * Corrected the sources for the layers "Temperature at 5km depth" and "Thermal wells" in the group "Renewable Energy -> Geothermal".
-* Update to [TerriaJS 5.2.7](https://github.com/TerriaJS/terriajs/blob/5.2.7/CHANGES.md).
 * Many changes to the "Renewable Energy -> Bioenergy -> Victoria" group from Sustainability Victoria, with new heirarchy.
 * Many changes to the "Renewable Energy -> Bioenergy -> South Australia" group from RenewablesSA:
   * Added the new layer "Agriculture -> Hay & Silage"
