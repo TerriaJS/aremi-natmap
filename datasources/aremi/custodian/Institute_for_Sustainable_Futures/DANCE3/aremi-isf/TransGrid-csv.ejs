@@ -1,0 +1,33 @@
+{
+  "id": "9a433d22",
+  "name": "TransGrid (NSW)",
+  "url": "https://s3-ap-southeast-2.amazonaws.com/network-opportunity-maps/capacity/test/assets-transgrid.csv",
+  <% var hideCapacity = true %>
+  <% include common-csv %>,
+  "info": [
+    {
+      "name": "Overview",
+      "content": "<% include DG-connection/init-fragments/transgrid/overview.html %>"
+    },
+    {
+      "name": "Description of Data",
+      "content": "<% include DG-connection/init-fragments/transgrid/description.html %>"
+    },
+    {
+      "name": "Data Currency",
+      "content": "<% include DG-connection/init-fragments/transgrid/data-currency.html %>"
+    },
+    {
+      "name": "Data Supplier and Custodian",
+      "content": "<% include DG-connection/init-fragments/transgrid/data-supplier-and-custodian.html %>"
+    },
+    {
+      "name": "Plain English Disclaimer",
+      "content": "<% include DG-connection/init-fragments/plain-english-disclaimer.html %>"
+    },
+    {
+      "name": "Full Legal Disclaimer",
+      "content": "<% include DG-connection/init-fragments/full-legal-disclaimer.html %>"
+    }
+  ]
+}

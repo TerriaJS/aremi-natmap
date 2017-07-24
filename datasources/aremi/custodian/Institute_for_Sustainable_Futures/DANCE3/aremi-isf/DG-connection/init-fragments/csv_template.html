@@ -1,0 +1,134 @@
+<dl class='isf-info'>
+  <dt>Asset name                       </dt><dd> {{asset_name}}  </dd>
+  <dt>Owner                            </dt><dd> {{network}}     </dd>
+  <dt>Asset type                       </dt><dd> {{asset_type}}  </dd>
+  <dt>Asset code                       </dt><dd> {{asset_code}}  </dd>
+  {{#notes}}
+   <dt>Notes                            </dt><dd> {{notes}}       </dd>
+  {{/notes}}
+  <dt>Data last updated                </dt><dd> {{data_issued}} </dd>
+</dl>
+
+<h2>Indicative new generation connection capacity information</h2>
+
+<dl class='isf-info'>
+  
+  <dt>Voltage Level (kV)</dt>
+  
+  <dd> 
+  {{#sub_voltage_level_display_string}}
+  {{sub_voltage_level_display_string}}
+  {{/sub_voltage_level_display_string}}
+
+  {{#line_voltage_level}}
+  {{line_voltage_level}}
+  {{/line_voltage_level}}
+  </dd>
+ 
+  {{#relevant_voltage_for_connection}}
+  <dt>Indicative substation new generation connection capacity relates to connections at</dt> 
+  <dd> {{relevant_voltage_for_connection}}</dd>
+  {{/relevant_voltage_for_connection}}
+
+  <dt>New generation connection capacity available (MW)     </dt><dd> {{existing_new_connection_capacity}}  </dd>
+
+  {{#potential_new_connection_capacity}}
+  <dt>Potential new generation connection capacity (MW)(allowing for cost effective network augmentation)</dt>
+  <dd> {{potential_new_connection_capacity}}</dd>
+  {{/potential_new_connection_capacity}}
+
+  {{#upgrades_required_to_achieve_potential_capacity}}
+  <dt>Upgrades required to achieve potential connection capacity                  </dt><dd> {{upgrades_required_to_achieve_potential_capacity}} </dd>
+  {{/upgrades_required_to_achieve_potential_capacity}}
+
+  {{#cap_of_ext_and_committed_gen}}
+  <dt>Capacity of pre-existing and committed generators (MW)                      </dt><dd>{{cap_of_ext_and_committed_gen}}</dd>
+  {{/cap_of_ext_and_committed_gen}}
+</dl>
+
+{{#chart_true_false}}
+<h2>Graph of connection size vs estimated access level achieved</h2>
+
+<chart column-names='Connection size,est. access level'
+       x-column='ext_cap_at_acc_percent'
+       y-columns='ext_access_percent'
+       column-units='MW, %'>ext_cap_at_acc_percent,ext_access_percent\n
+{{ext_cap_at_acc_percent_1}},{{ext_access_percent_1}}\n
+{{ext_cap_at_acc_percent_2}},{{ext_access_percent_2}}\n
+{{ext_cap_at_acc_percent_3}},{{ext_access_percent_3}}\n
+{{ext_cap_at_acc_percent_4}},{{ext_access_percent_4}}\n
+{{ext_cap_at_acc_percent_5}},{{ext_access_percent_5}}\n
+{{ext_cap_at_acc_percent_6}},{{ext_access_percent_6}}\n
+{{ext_cap_at_acc_percent_7}},{{ext_access_percent_7}}\n
+{{ext_cap_at_acc_percent_8}},{{ext_access_percent_8}}\n
+{{ext_cap_at_acc_percent_9}},{{ext_access_percent_9}}\n
+{{ext_cap_at_acc_percent_10}},{{ext_access_percent_10}}\n
+{{ext_cap_at_acc_percent_11}},{{ext_access_percent_11}}\n
+</chart>
+{{/chart_true_false}}
+
+
+<h2>Factors and constraints in assessing connection capacity</h2>
+
+ <table>
+ <tr>
+   <th>These types of constraints were considered </th>
+   <th>These types of constraints were not considered in detail</th>
+ </tr>
+ <tr>
+   <td>
+   {{#thermal_constraints_considered}}        <li> thermal                    </li> {{/thermal_constraints_considered}}
+   {{#voltage_constraints_considered}}        <li> voltage                    </li> {{/voltage_constraints_considered}}
+   {{#stability_constraints_considered}}      <li> stability                  </li> {{/stability_constraints_considered}}
+   {{#existing_load_profiles_considered}}     <li> existing load              </li> {{/existing_load_profiles_considered}}
+   {{#forecast_load_profiles_considered}}     <li> forecast load              </li> {{/forecast_load_profiles_considered}}
+   {{#dynamic_stability_considered}}          <li> dynamic stability          </li> {{/dynamic_stability_considered}}
+   {{#outage_stats_considered}}               <li> outage statisitics         </li> {{/outage_stats_considered}}
+   {{#seasonal_env_considered}} seasonal      <li> environment                </li> {{/seasonal_env_considered}}
+   {{#credible_contingencies_considered}}     <li> credible contingencies     </li> {{/credible_contingencies_considered}}
+   {{#other_generator_dispatch_considered}}   <li> other generator dispatch   </li> {{/other_generator_dispatch_considered}}
+   </td>
+   
+   <td>
+   {{^thermal_constraints_considered}}        <li> thermal                    </li> {{/thermal_constraints_considered}}
+   {{^voltage_constraints_considered}}        <li> voltage                    </li> {{/voltage_constraints_considered}}
+   {{^stability_constraints_considered}}      <li> stability                  </li> {{/stability_constraints_considered}}
+   </td>
+
+ </tr>
+</table> 
+
+<h2>Supporting information</h2>
+
+<dl class='isf-info'>
+  {{#min_fault_current_level}}{{#max_fault_current_level}}
+  <dt>Fault Current Level (MVA)          </dt><dd>Minimum:  {{min_fault_current_level}}  Maximum: {{max_fault_current_level}}</dd>
+  {{/max_fault_current_level}}{{/min_fault_current_level}}
+  
+  {{#min_load_datetime}}{{#max_load_datetime}}
+    <dt>Load                               </dt>
+    <dd>Minimum:  {{min_load_datetime}}  {{min_load_p}}  MW {{min_load_q}}  MVAR: {{max_load_datetime}} {{max_load_p}}  MW {{max_load_q}}  MVAR</dd>
+  {{/max_load_datetime}}{{/min_load_datetime}}
+  
+  {{#line_r1}}{{#line_x1}}
+  <dt>Line impedance                     </dt><dd> R1 {{line_r1}} Ω /km X1 {{line_x1}} Ω /km</dd>
+  {{/line_x1}}{{/line_r1}}
+  
+  {{#line_length}}
+  <dt>Line Length (km)                   </dt><dd>{{line_length}} km</dd>
+  {{/line_length}}
+  
+  {{#line_summer_thermal_rating}}{{#line_winter_thermal_rating}}
+  <dt>Line thermal rating (MVA)          </dt>Summer: {{line_summer_thermal_rating}} MVA, Winter: {{line_winter_thermal_rating}}</dd>
+  {{/line_winter_thermal_rating}}{{/line_summer_thermal_rating}}
+  
+  </dl>
+
+<h2>Further Information</h2>
+
+<dl class='isf-info'>
+  {{#url}}
+  <dt> <a href={{url}}>More information from {{network}} available here</a></dt><dd></dd>
+  {{/url}}
+
+</dl>

@@ -1,0 +1,7 @@
+  "type": "geojson",
+  "legendUrl": "http://static.aremi.nicta.com.au/datasets/dance/2017/geojson_legend.png",
+  <% include common.ejs %>,
+  "featureInfoTemplate": {
+    "name": "{{{asset_name}}}",
+    "template": "<% include DG-connection/init-fragments/geojson_template.html %>"
+  }
