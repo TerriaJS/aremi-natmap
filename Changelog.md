@@ -16,6 +16,7 @@ http://nationalmap.gov.au/renewables/
 * Updated to use the new 2016 CAPAD data for the "Environment -> Collaborative Australian Protected Areas Database (CAPAD)" layer.
 * Updated the data for the "Electricity Infrastructure -> Generation -> Small Scale Installations - CER" to the most recent 01/06/2017 release on the Clean Energy Regulator website.
 * Combined Landuser layers in "Renewable Energy -> Bioenergy -> South Australia" together with their respective quantity layers.
+* Add Augmented Reality mode for iOS and Android devices with a compass and accelerometer, activated by enabling `experimentalFeatures` in `config.json` and adding the AugmentedVirtualityTool to the ExperimentalMenu in the customisable user interface.
 * Added Clean Energy Regulator Emmisions Baseline Determinations data in "Electricity Infrastructure -> Generation -> Emissions Baseline Determinations - CER"
 
 ### Version 2017-06-01

@@ -34,6 +34,8 @@
         "brandBarElements": [
             "<div class='ausglobe-title-aremi'><div class='ausglobe-title-aremi-md'><a href='http://arena.gov.au/' target='_blank'><img class='left'  src='images/ARENA-logo2.png' alt='Australian Renewable Energy Agency' /></a> <a href='https://www.nicta.com.au/' target='_blank'><img class='right' src='images/DATA61_CSIRO.png' alt='Data61' style=\"width: 55px; height: 33px\"/></a> <br/> <strong>Australian Renewable Energy</strong> <br/> <small>Mapping Infrastructure</small> <br/> <span><a target='_blank' href='https://github.com/NICTA/aremi-natmap/blob/master/Changelog.md#version-{{version}}'>Version: {{version}}</a></span> </div><div class='ausglobe-title-aremi-sm'><strong>AREMI</strong></div></div>"
         ],
+        "mobileDefaultViewerMode": "3DSmooth",
+        "experimentalFeatures": true,
         "autoPlay": false,
         "feedbackPreamble": "Provide feedback to the AREMI software developers below. We would love to hear from you!\n\nIf you are commenting on the _actual data_ on the map, e.g. broadband availability in a specific area, please consider sending your comments to the custodian of the dataset you're viewing, instead of using this form. Contact information for most datasets can be found by clicking \"About this Data Set\"."
     }
