@@ -6,11 +6,18 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
-* Added the new layer "Electricity Infrastructure -> Network Opportunities -> Localised Network Data -> United Energy Network Limitations 2016" from United Energy.
+* Update to [TerriaJS 5.2.7](https://github.com/TerriaJS/terriajs/blob/5.2.7/CHANGES.md).
+* Many changes to the "Renewable Energy -> Bioenergy -> South Australia" group from RenewablesSA:
+  * Added the new layer "Agriculture -> Hay & Silage"
+  * Added the new group of layers "Forestry"
+  * Added the new group of layers "Urban Waste"
+  * Removed the layer "Green Triangle Forestry"
+* Updated source data locations for the "Renewable Energy -> Bioenergy -> New South Wales" layers.
+* Updated to use the new 2016 CAPAD data for the "Environment -> Collaborative Australian Protected Areas Database (CAPAD)" layer.
+* Updated the data for the "Electricity Infrastructure -> Generation -> Small Scale Installations - CER" to the most recent 01/06/2017 release on the Clean Energy Regulator website.
 * Combined Landuser layers in "Renewable Energy -> Bioenergy -> South Australia" together with their respective quantity layers.
-* Change deafult mobile view mode to a configuration parameter rather then hard coded to 2D.
 * Add Augmented Reality mode for iOS and Android devices with a compass and accelerometer, activated by enabling `experimentalFeatures` in `config.json` and adding the AugmentedVirtualityTool to the ExperimentalMenu in the customisable user interface.
-* Update to [TerriaJS 5.2.5](https://github.com/TerriaJS/terriajs/blob/5.2.5/CHANGES.md).
+* Added Clean Energy Regulator Emmisions Baseline Determinations data in "Electricity Infrastructure -> Generation -> Emissions Baseline Determinations - CER"
 
 ### Version 2017-06-01
 * Added many new layers to the category "Renewable Energy -> Bioenergy -> South Australia" from RenewablesSA.

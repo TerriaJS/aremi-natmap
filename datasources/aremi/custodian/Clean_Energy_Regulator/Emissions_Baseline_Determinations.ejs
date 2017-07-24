@@ -1,0 +1,40 @@
+{
+  "id": "EkeyO8HS7",
+  "name": "Emissions Baseline Determinations - CER",
+  "type": "csv",
+  "url": "http://static.aremi.nicta.com.au/datasets/cer/Emissions_baseline_determinations-2017.csv",
+  "tableStyle": {
+    "timeColumn": null,
+    "replaceWithNullValues": ["-","withheld"],
+    "colorMap": "rgb(94,79,162)-rgb(50,136,189)-rgb(102,194,165)-rgb(171,221,164)-rgb(230,245,152)-rgb(254,224,139)-rgb(253,174,97)-rgb(244,109,67)-rgb(213,62,79)-rgb(158,1,66)",
+    "columns": {
+      "Facility name": {"type":"HIDDEN"},
+      "Responsible emitter": {"type":"HIDDEN"},
+      "Notes": {"type":"HIDDEN"},
+      "Emission reduction measures undertaken/to be undertaken at a facility  (if applicable)": {"type":"HIDDEN"},
+      "Baseline number in force": {
+        "scaleByValue": true,
+        "scale": 1.5
+      }
+    }
+  },
+  "featureInfoTemplate" : {
+    "name": "{{Facility name}}: {{Baseline number in force}} CO2(t)",
+    "template": "<% include Emissions_Baseline_Determinations-template %>"
+  },
+  "info": [
+    {
+      "name": "Description",
+      "content": "<% include Emissions_Baseline_Determinations-description %>"
+    },
+    {
+      "name": "Licensing",
+      "content": "<% include Emissions_Baseline_Determinations-licensing %>"
+    },
+    {
+      "name": "Data Custodian",
+      "content": "<% include Emissions_Baseline_Determinations-custodian %>"
+    }
+  ]
+}
+
