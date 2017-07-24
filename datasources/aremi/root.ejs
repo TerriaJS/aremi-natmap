@@ -58,6 +58,31 @@
           "preserveOrder": true,
           "items": [
             <% include custodian/Institute_for_Sustainable_Futures/DANCE2/DANCE2 %>,
+            {
+              "name": "New Generator Connection Capacity",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Transmission",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items": [
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/Powerlink-csv %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/TransGrid-csv %>,
+                  ]
+                },
+                {
+                  "name": "Distribution",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items": [
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/ActewAGL-geojson %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/ActewAGL-csv %>,
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
