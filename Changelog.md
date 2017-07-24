@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
+* Updated the source of the "Topography -> Land -> Land Cover" layer.
 * Corrected the sources for the layers "Temperature at 5km depth" and "Thermal wells" in the group "Renewable Energy -> Geothermal".
 * Update to [TerriaJS 5.2.7](https://github.com/TerriaJS/terriajs/blob/5.2.7/CHANGES.md).
 * Many changes to the "Renewable Energy -> Bioenergy -> Victoria" group from Sustainability Victoria, with new heirarchy.
