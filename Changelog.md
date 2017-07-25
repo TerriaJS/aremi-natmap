@@ -9,6 +9,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### Version 2017-07-25
+* Added the new group of layers in "Renewable Energy -> Bioenergy -> Queensland -> Intensive Livestock" from the Department of Science, Information Technology and Innovation of the State of Queensland Government.
 * Added the new group of layers in "Electricity Infrastructure -> Network Opportunities -> New Generator Connection Capacity" from the UTS Institute of Sustainable Futures.
 * Update to [TerriaJS 5.2.8](https://github.com/TerriaJS/terriajs/blob/5.2.7/CHANGES.md).
 * Updated the source of the "Topography -> Land -> Land Cover" layer.
