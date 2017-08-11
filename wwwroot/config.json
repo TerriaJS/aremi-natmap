@@ -4,6 +4,11 @@
         "proxy/_60s/http://static.aremi.nicta.com.au/init2.json"
     ],
     "parameters": {
+
+
+        "regionMappingDefinitionsUrl": "aremi-isf/constraints/regionMapping.json",
+
+
         "feedbackUrl": "feedback",
         "corsProxyBaseUrl": "proxy/",
         "conversionServiceBaseUrl": "convert/",
