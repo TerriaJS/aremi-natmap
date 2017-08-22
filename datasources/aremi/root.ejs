@@ -54,15 +54,7 @@
           "type": "group",
           "preserveOrder": true,
           "items": [
-            <% include custodian/Institute_for_Sustainable_Futures/DANCE2/DANCE2 %>,
-            {
-              "name": "New Constraints",
-              "type": "group",
-              "preserveOrder": true,
-              "items": [
-                <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/constraints/ejs/constraints %>,
-              ]
-            },
+            <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/constraints/ejs/constraints %>,
             {
               "name": "New Generator Connection Capacity",
               "type": "group",
@@ -86,6 +78,14 @@
                     <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/ActewAGL-csv %>,
                   ]
                 }
+              ]
+            },
+            {
+              "name": "2016 Constraint Maps",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                <% include custodian/Institute_for_Sustainable_Futures/DANCE2/DANCE2 %>,
               ]
             }
           ]
