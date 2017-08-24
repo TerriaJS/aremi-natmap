@@ -62,6 +62,11 @@
         .tjs-mobile-header__group-left {
             right: auto;
         }
+
+        .tjs-feature-info-section__content table {
+            font-family: inherit;
+        }
+
     }
 
     $isf-max-width: 400px;
@@ -97,7 +102,7 @@
       font-weight: lighter;
     }
 
-    .isf-table {
-
+    .isf-table tbody th {
+        padding: 0px 10px 0px 10px;
     }
 }
