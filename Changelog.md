@@ -6,7 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
-
+* Update to [TerriaJS 5.2.11](https://github.com/TerriaJS/terriajs/blob/5.2.11/CHANGES.md).
 
 ### Version 2017-07-25
 * Added the new group of layers in "Renewable Energy -> Bioenergy -> Queensland -> Intensive Livestock" from the Department of Science, Information Technology and Innovation of the State of Queensland Government.
