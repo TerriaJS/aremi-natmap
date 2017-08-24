@@ -1,14 +1,15 @@
+<h2>Asset information</h2>
 <dl class='isf-info'>
   <dt>Asset name                       </dt><dd> {{asset_name}}  </dd>
   <dt>Owner                            </dt><dd> {{network}}     </dd>
   <dt>Asset type                       </dt><dd> {{asset_type}}  </dd>
   <dt>Asset code                       </dt><dd> {{asset_code}}  </dd>
-  {{#notes}}
-   <dt>Notes                            </dt><dd> {{notes}}       </dd>
-  {{/notes}}
   <dt>Data last updated                </dt><dd> {{data_issued}} </dd>
 </dl>
-
+  {{#notes}}
+	<h3>Notes:</h3>
+  {{notes}}
+  {{/notes}}
 <h2>Indicative new generation connection capacity information</h2>
 
 <dl class='isf-info'>
