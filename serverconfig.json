@@ -6,17 +6,19 @@
         "aurin.org.au",
         "csiro.au",
         "csiro.au:80",
-        "gov.au",
+        "aodn.org.au"
+        "aurin.org.au",
         "imos.org.au",
+        "gov.au",
+        "localdata.net.au",
         "mapsengine.google.com",
         "nasa.gov",
-        "nceastg.usq.edu.au",
         "nci.org.au",
         "nicta.com.au",
         "noaa.gov",
-        "www.dptiapps.com.au",
-        "www.googleapis.com",
-        "amazonaws.com"
+        "s3-ap-southeast-2.amazonaws.com",
+        "static.nationalmap.nicta.com.au",
+        "www.googleapis.com"
     ],
     "feedback": {
         "userAgent": "TerriaBot (TerriaJS Feedback)",
