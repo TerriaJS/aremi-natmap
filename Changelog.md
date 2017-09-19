@@ -7,6 +7,27 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version
 * Update to [TerriaJS 5.2.11](https://github.com/TerriaJS/terriajs/blob/5.2.11/CHANGES.md).
+* Update many layers provided by Geoscience Australia to use new NationalMap service URLs:
+    * Infrastructure
+        * Marine Infrastructure Points
+        * Mine Areas
+        * Vertical Obstructions
+        * Aircraft Facilities
+        * Ferry Routes
+        * Railways
+        * Roads layer
+    * Topography
+        * Contours
+        * Spot Elevations
+        * Cultivates Areas
+        * Land Cover
+        * Native Vegetation
+        * Flats, remove Foreshore Flats (merged into Flats)
+        * Lakes
+        * Reef Areas, remove Reef points
+        * Reservoirs
+        * Water Course
+    * Remove Infrastructure -> Fences
 
 ### Version 2017-07-25
 * Added the new group of layers in "Renewable Energy -> Bioenergy -> Queensland -> Intensive Livestock" from the Department of Science, Information Technology and Innovation of the State of Queensland Government.
