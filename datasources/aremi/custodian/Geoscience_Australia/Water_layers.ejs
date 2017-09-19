@@ -34,7 +34,7 @@
 {
   "id": "54071698",
   "name": "Flats",
-  "layers": "flats",
+  "layers": "Flats_LandSubjectToInundation,Flats_Swamps_Labels,Flats_MarineSwamps_Labels,Flats_Swamps,Flats_MarineSwamps,Flats_SalineCoastalFlats",
   "info": [
     {
       "name": "Licensing, Terms & Conditions",
@@ -42,25 +42,8 @@
     }
   ],
   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-  "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
-  "type": "wms",
-  "opacity": 1.0,
-  <%- include ../../common/standard_properties %>,
-  <%- include ../../common/home_camera_rectangle %>
-},
-{
-  "id": "540716ac",
-  "name": "Foreshore Flats",
-  "layers": "foreshoreflats",
-  "info": [
-    {
-      "name": "Licensing, Terms & Conditions",
-      "content": "[Licence](http://www.ga.gov.au/copyright)"
-    }
-  ],
-  "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-  "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
-  "type": "wms",
+  "url": "http://services.ga.gov.au/gis/rest/services/NM_Hydrology_and_Marine_Polygons/MapServer",
+  "type": "esri-mapServer",
   "opacity": 1.0,
   <%- include ../../common/standard_properties %>,
   <%- include ../../common/home_camera_rectangle %>
