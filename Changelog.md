@@ -18,7 +18,7 @@ http://nationalmap.gov.au/renewables/
     * Topography
         * Contours
         * Spot Elevations
-        * Cultivates Areas
+        * Cultivated Areas
         * Land Cover
         * Native Vegetation
         * Flats, remove Foreshore Flats (merged into Flats)
