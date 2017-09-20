@@ -35,21 +35,24 @@
 {
   "id": "54071652",
   "name": "Railways",
-  "layers": "Railways_1,Railways_2,Railways_3,Railway_Stations,Railway_Crossing_Pts,Railway_Crossing_Lines",
-  "url": "http://services.ga.gov.au/gis/services/Topographic_Base_Map_WM/MapServer/WMSServer",
-  "type": "wms",
-  "opacity": 1.0,
+  "type": "esri-mapServer",
+  "url": "http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer",
+  "layers": "Railways",
   <% include ../../common/standard_properties %>,
   <% include ../../common/home_camera_rectangle %>
 },
 {
   "id": "54071666",
   "name": "Roads",
-  "layers": "TOPO250K_Roads,Roads_1,Roads_2,Roads_3,Roads_4,TOPO250K_Road_Crossing_Lines",
-  "url": "http://services.ga.gov.au/gis/services/Topographic_Base_Map_WM/MapServer/WMSServer",
-  "type": "wms",
-  "opacity": 1.0,
+  "type": "esri-mapServer",
+  "url": "http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer",
+  "layers": "Major_Road_Network,Roads_Scale_7Million_to_600000,Roads_Scale_600000_to_300000,All_Roads",
+  "info": [
+    {
+      "name": "Licence",
+      "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+    }
+  ],
   <% include ../../common/standard_properties %>,
   <% include ../../common/home_camera_rectangle %>
 }
-
