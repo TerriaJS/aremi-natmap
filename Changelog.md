@@ -6,7 +6,8 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
-* Update to [TerriaJS 5.2.11](https://github.com/TerriaJS/terriajs/blob/5.2.11/CHANGES.md).
+* Update to [TerriaJS 5.3.0](https://github.com/TerriaJS/terriajs/blob/5.3.0/CHANGES.md).
+
 
 ### Version 2017-07-25
 * Added the new group of layers in "Renewable Energy -> Bioenergy -> Queensland -> Intensive Livestock" from the Department of Science, Information Technology and Innovation of the State of Queensland Government.
@@ -102,7 +103,7 @@ http://nationalmap.gov.au/renewables/
 * Merged in the latest [NationalMap 2016-07-15](https://github.com/NICTA/nationalmap/blob/2016-07-15/CHANGES.md) and [TerriaJS 4.0.2](https://github.com/TerriaJS/terriajs/blob/4.0.2/CHANGES.md) releases.
 * Added the layer "Renewable Energy -> Bioenergy -> Western Australia -> Oil Mallee stems" from the Department of Agriculture and Food, Western Australia.
 * Added the layer "Renewable Energy -> Wind -> ACT - Mean Wind Speed at 80 metres" from the ACT Environment and Planning Directorate.
-* Added the layers "Renewable Energy -> Bioenergy -> Biomass *" from the Rural Industries Research and Development Corporation.
+* Added the layers "Renewable Energy -> Bioenergy -> Biomass \*" from the Rural Industries Research and Development Corporation.
 
 
 ### Version 2016-06-22
