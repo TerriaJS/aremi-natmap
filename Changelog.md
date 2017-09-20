@@ -7,6 +7,7 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version
 * Update to [TerriaJS 5.3.0](https://github.com/TerriaJS/terriajs/blob/5.3.0/CHANGES.md).
+* Added 5 new layers in the "Renewable Energy -> Bioenergy -> New South Wales -> Forestry" group from the Department of Primary Industries - New South Wales Government.
 
 
 ### Version 2017-07-25
