@@ -1,7 +1,7 @@
 {
   "id": "54071634",
   "name": "Aircraft Facilites",
-  "layers": "aircraftfacilitypoints",
+  "layers": "Airports_Point_Features,Landing_Grounds_Point_Features,Airport_Runway_Centrelines_and_Landing_Grounds_Line_Features,Heliports",
   "info": [
     {
       "name": "Licensing, Terms & Conditions",
@@ -9,8 +9,8 @@
     }
   ],
   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-  "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
-  "type": "wms",
+  "url": "http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer",
+  "type": "esri-mapServer",
   "opacity": 1.0,
   <% include ../../common/standard_properties %>,
   <% include ../../common/home_camera_rectangle %>
@@ -18,7 +18,7 @@
 {
   "id": "5407163e",
   "name": "Ferry Routes",
-  "layers": "ferryroutelines",
+  "layers": "Ferry_Routes",
   "info": [
     {
       "name": "Licensing, Terms & Conditions",
@@ -26,8 +26,8 @@
     }
   ],
   "dataCustodian": "[Geoscience Australia](http://www.ga.gov.au/)",
-  "url": "http://geoserver.nationalmap.nicta.com.au/geotopo_250k/ows",
-  "type": "wms",
+  "url": "http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer",
+  "type": "esri-mapServer",
   "opacity": 1.0,
   <% include ../../common/standard_properties %>,
   <% include ../../common/home_camera_rectangle %>
@@ -35,24 +35,20 @@
 {
   "id": "54071652",
   "name": "Railways",
-  "type": "esri-mapServer",
+  "layers": "Railways,Railway_Stations,Railway_Bridges,Railway_Crossing_Lines",
   "url": "http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer",
-  "layers": "Railways",
+  "type": "esri-mapServer",
+  "opacity": 1.0,
   <% include ../../common/standard_properties %>,
   <% include ../../common/home_camera_rectangle %>
 },
 {
   "id": "54071666",
   "name": "Roads",
-  "type": "esri-mapServer",
+  "layers": "Road_Bridges_and_Fords,Road_Crossing_Lines,Major_Road_Network,Roads_Scale_7Million_to_600000,Roads_Scale_600000_to_300000,All_Roads",
   "url": "http://services.ga.gov.au/gis/rest/services/NM_Transport_Infrastructure/MapServer",
-  "layers": "Major_Road_Network,Roads_Scale_7Million_to_600000,Roads_Scale_600000_to_300000,All_Roads",
-  "info": [
-    {
-      "name": "Licence",
-      "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
-    }
-  ],
+  "type": "esri-mapServer",
+  "opacity": 1.0,
   <% include ../../common/standard_properties %>,
   <% include ../../common/home_camera_rectangle %>
 }
