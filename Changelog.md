@@ -6,7 +6,6 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
-* Update to [TerriaJS 5.2.11](https://github.com/TerriaJS/terriajs/blob/5.2.11/CHANGES.md).
 * Update many layers provided by Geoscience Australia to use new NationalMap service URLs:
     * Infrastructure
         * Marine Infrastructure Points
