@@ -9,6 +9,7 @@
   },
   "showWarnings": false,
   "tableStyle": {
+    "dataVariable": "Emission Intensity (t/Mwh)",
     "scaleByValue": true,
     "scale": 1.5,
     "colorMap": "rgb(0,104,55)-rgb(26,152,80)-rgb(102,189,99)-rgb(166,217,106)-rgb(217,239,139)-rgb(255,255,191)-rgb(254,224,139)-rgb(253,174,97)-rgb(244,109,67)-rgb(215,48,39)-rgb(165,0,38)",
@@ -68,26 +69,36 @@
   },
   "showWarnings": false,
   "tableStyle": {
+    "dataVariable": "Emission intensity (t/Mwh)",
     "scaleByValue": true,
     "scale": 1.5,
-    "dataVariable": "Emission intensity (t/Mwh)",
-    "colorMap": [
-      { "color": "rgb(165,0,38)", "offset": 1 },
-      { "color": "rgb(215,48,39)", "offset": 0.9 },
-      { "color": "rgb(244,109,67)", "offset": 0.8 },
-      { "color": "rgb(253,174,97)", "offset": 0.7 },
-      { "color": "rgb(254,224,139)", "offset": 0.6 },
-      { "color": "rgb(255,255,191)", "offset": 0.5 },
-      { "color": "rgb(217,239,139)", "offset": 0.4 },
-      { "color": "rgb(166,217,106)", "offset": 0.3 },
-      { "color": "rgb(102,189,99)", "offset": 0.2 },
-      { "color": "rgb(26,152,80)", "offset": 0.1 },
-      { "color": "rgb(0,104,55)", "offset": 0 }
-    ],
+    "colorMap": "rgb(0,104,55)-rgb(26,152,80)-rgb(102,189,99)-rgb(166,217,106)-rgb(217,239,139)-rgb(255,255,191)-rgb(254,224,139)-rgb(253,174,97)-rgb(244,109,67)-rgb(215,48,39)-rgb(165,0,38)",
     "columns": {
       "Type": {"type":"HIDDEN"},
-      "Controlling corporation": {"type":"HIDDEN"},
-      "Facility name": {"type":"HIDDEN"}
+      "Reporting Entity": {"type":"HIDDEN"},
+      "Facility Name": {"type":"HIDDEN"},
+      "Total Emissions (t CO2-e)": {
+        "colorBins": [0,1,10,100,1000,100000,1000000,100000000],
+        "type":"SCALAR"
+      },
+      "Electricity production (GJ)": {
+        "colorMap": "rgb(239,243,255)-rgb(198,219,239)-rgb(158,202,225)-rgb(107,174,214)-rgb(49,130,189)-rgb(8,81,156)",
+        "colorBinMethod": "quantile",
+        "type":"SCALAR"
+      },
+      "Electricity production (Mwh)": {
+        "colorMap": "rgb(239,243,255)-rgb(198,219,239)-rgb(158,202,225)-rgb(107,174,214)-rgb(49,130,189)-rgb(8,81,156)",
+        "colorBinMethod": "quantile",
+        "type":"SCALAR"
+      },
+      "Total scope 1 emissions (t CO2-e)": {
+        "colorBins": [0,1,10,100,1000,100000,1000000,100000000],
+        "type":"SCALAR"
+      },
+      "Total scope 2 emissions (t CO2-e)": {
+        "colorBins": [0,1,10,100,1000,100000,1000000],
+        "type":"SCALAR"
+      }
     }
   },
   "info": [
