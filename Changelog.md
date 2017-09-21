@@ -6,7 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
-* Added the new layer "Renewable Energy -> Bioenergy -> National -> Winery Residues" from RenewablesSA.
+* Added the new "Winery Residues" layers from RenewablesSA in the "Renewable Energy -> Bioenergy -> National" group.
 * Update many layers provided by Geoscience Australia to use new NationalMap service URLs:
     * Infrastructure
         * Marine Infrastructure Points
