@@ -31,6 +31,7 @@ http://nationalmap.gov.au/renewables/
 * Update the layer "Boundaries -> Natural Resource Management Regions" to use the up to date service from the Department and Environment and Energy.
 * Added 5 new layers in the "Renewable Energy -> Bioenergy -> New South Wales -> Forestry" group from the Department of Primary Industries - New South Wales Government.
 * Update to [TerriaJS 5.3.0](https://github.com/TerriaJS/terriajs/blob/5.3.0/CHANGES.md).
+* The colours used to display data for the Electricity Infrastructure -> Generation -> NGERS Designated Generation Facilities have been updated to better show the diversity of low values of generation, so large generators don't overpower the signal.
 
 ### Version 2017-07-25
 * Added the new group of layers in "Renewable Energy -> Bioenergy -> Queensland -> Intensive Livestock" from the Department of Science, Information Technology and Innovation of the State of Queensland Government.
