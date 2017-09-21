@@ -1,5 +1,14 @@
 {
-  "name": "All Straw, Hay & Silage Residues",
+  "id": "b9143192",
+  "name": "Soil Protection Zones",
+  "layers": "Cropping - Soil Protection Zones",
+  "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Cropping_Soil_Protection_Zones/MapServer",
+  "type": "esri-mapServer",
+  <% include ../../common/standard_properties %>
+},
+
+{
+  "name": "All Residues - Cropping Overview",
   "type": "group",
   "items": [
     {
@@ -37,29 +46,6 @@
 },
 
 {
-  "name": "Hay and Silage Residues",
-  "type": "group",
-  "items": [
-    {
-      "id": "bdea2f59",
-      "name": "SA2 Total Hay and Silage (t)",
-      "layers": "Cropping - SA2 Total Hay and Silage (t)",
-      "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Cropping_Hay_Silage_Residues/MapServer",
-      "type": "esri-mapServer",
-      <% include ../../common/standard_properties %>
-    },
-    {
-      "id": "c7b3ebb7",
-      "name": "SA4 Total Hay and Silage (t)",
-      "layers": "Cropping - SA4 Total Hay and Silage (t)",
-      "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Cropping_Hay_Silage_Residues/MapServer",
-      "type": "esri-mapServer",
-      <% include ../../common/standard_properties %>
-    }
-  ]
-},
-
-{
   "name": "Non Cereal Straw Residues",
   "type": "group",
   "items": [
@@ -83,10 +69,24 @@
 },
 
 {
-  "id": "b9143192",
-  "name": "Soil Protection Zones",
-  "layers": "Cropping - Soil Protection Zones",
-  "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Cropping_Soil_Protection_Zones/MapServer",
-  "type": "esri-mapServer",
-  <% include ../../common/standard_properties %>
+  "name": "Hay and Silage Residues",
+  "type": "group",
+  "items": [
+    {
+      "id": "bdea2f59",
+      "name": "SA2 Total Hay and Silage (t)",
+      "layers": "Cropping - SA2 Total Hay and Silage (t)",
+      "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Cropping_Hay_Silage_Residues/MapServer",
+      "type": "esri-mapServer",
+      <% include ../../common/standard_properties %>
+    },
+    {
+      "id": "c7b3ebb7",
+      "name": "SA4 Total Hay and Silage (t)",
+      "layers": "Cropping - SA4 Total Hay and Silage (t)",
+      "url": "https://spatial.industry.nsw.gov.au/arcgis/rest/services/Bioenergy_Assessment/Cropping_Hay_Silage_Residues/MapServer",
+      "type": "esri-mapServer",
+      <% include ../../common/standard_properties %>
+    }
+  ]
 }
