@@ -1,0 +1,11 @@
+{
+  "id": "5b0f5c6a",
+  "name": "Transmission Lines",
+  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/capacity/test/transmission-lines.geojson",
+  <% include init-fragments/ga-transmission-lines/common-info %>,
+  "type": "geojson",
+  "featureInfoTemplate": {
+     "name": "{{{asset_name}}}",
+     "template": "<% include init-fragments/transmission-line-template.html %>"
+   }
+}
