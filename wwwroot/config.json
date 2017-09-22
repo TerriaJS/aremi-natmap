@@ -5,10 +5,6 @@
     ],
     "parameters": {
 
-
-        "regionMappingDefinitionsUrl": "aremi-isf/constraints/regionMapping.json",
-
-
         "feedbackUrl": "feedback",
         "corsProxyBaseUrl": "proxy/",
         "conversionServiceBaseUrl": "convert/",
