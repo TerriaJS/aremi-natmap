@@ -3,7 +3,12 @@ stages:
   - upload_tar
   - trigger_ami_build
 
+.tags: &tags
+  tags:
+    - csiro-vm
+
 build_tar:
+  <<: *tags
   image: node:boron
   cache:
     paths:
@@ -24,6 +29,7 @@ build_tar:
       - branch
 
 upload_tar:
+  <<: *tags
   image: snayler0/aremi-s3-uploader
   dependencies:
     - build_tar
@@ -42,6 +48,7 @@ upload_tar:
       - branch
 
 trigger_ami_build:
+  <<: *tags
   image: snayler0/aremi-ami-builder
   dependencies:
     - upload_tar
