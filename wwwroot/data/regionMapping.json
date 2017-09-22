@@ -2291,6 +2291,27 @@
             ],
             "description": "Stats New Zealand Mesh Blocks 2017",
             "regionIdsFile": "data/regionids/region_map-NZ_MB2017_HD_Clipped_MB2017.json"
+        },
+        "AREMI_ISF_combined": {
+            "layerName": "aremi_isf_combined",
+            "server": "https://zz-aremi-isf8.terria.io/aremi_isf_combined/{z}/{x}/{y}.pbf",
+            "serverType": "MVT",
+            "serverMaxNativeZoom": 12,
+            "serverMaxZoom": 28,
+            "bbox": [
+                133.540042807,
+                -43.4484604171,
+                153.62177026,
+                -14.164452636
+            ],
+            "uniqueIdProp": "FID",
+            "regionProp": "asset_code",
+            "nameProp": "asset_name",
+            "aliases": [
+                "asset_code"
+            ],
+            "description": "AREMI ISF",
+            "regionIdsFile": "data/regionids/region_map-aremi_isf_combined_asset_code.json"
         }
     }
 }
