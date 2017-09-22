@@ -1,0 +1,134 @@
+<dl class='isf-info'>
+  <dt>Network   </dt><dd>{{network}}</dd>
+  <dt>Asset name</dt><dd>{{asset_name}}</dd>
+  <dt>Asset type</dt><dd>{{asset_type_str}}</dd>
+  <dt>Annual Deferral Value in {{year}} ($/kVAyr)</dt><dd>{{deferral_value}}</dd>
+
+{{#email}}
+  <dt>NSP Contact Email</dt><dd><a href='mailto:{{NSP_contact}}'>{{email}}</a></dd>
+{{/email}}
+{{#phone}}
+  <dt>NSP Contact Phone</dt><dd>{{phone}}</dd>
+{{/phone}}
+</dl>
+{{#apr_link}}<a target='_blank' href='{{apr_link}}'>Annual Planning Report</a><br>{{/apr_link}}
+{{#info_link}}<a target='_blank' href='{{info_link}}'>NSP demand management information</a><br>{{/info_link}}
+
+<br/>
+<br/>
+
+<table class='isf-table'>
+  <tr>
+    <th>Asset name</th>
+    <th>Asset type</th>
+    <th>Deferrable<br/>investment (m$)</th>
+    <th>Investment<br/>year</th>
+  </tr>
+{{#deferral_datasets}}
+  <tr>
+    <td>{{asset_name}}</td>
+    <td>{{asset_type}}</td>
+    <td>{{deferrable_invest}} {{^deferrable_invest}} 0 {{/deferrable_invest}}</td>
+    <td>{{invest_year}} {{^invest_year}} None {{/invest_year}}</td>
+  </tr>
+{{/deferral_datasets}}
+</table>
+
+<br/>
+
+<center>Deferral Value</center>
+<chart column-names='Year,ADV'
+       x-column='Year'
+       y-columns='ADV'
+       column-units=',$/kVAyr'
+>Year,ADV\n
+{{#deferral_table}}
+{{year}},{{deferral_value}}\n
+{{/deferral_table}}
+</chart>
+
+<br/>
+
+{{#deferral_datasets}}
+<hr/>
+
+<br/>
+
+<dl class='isf-info'>
+  <dt>Network                             </dt><dd>{{network}}</dd>
+  <dt>Asset name                          </dt><dd>{{asset_name}}</dd>
+  <dt>Asset type                          </dt><dd>{{asset_type_str}}</dd>
+  <dt>Total investment value (m$)         </dt><dd>{{total_invest}}</dd>
+{{^total_invest}}
+{{#email}}
+  <dt>NSP Contact Email</dt><dd><a href='mailto:{{NSP_contact}}'>{{email}}</a></dd>
+{{/email}}
+{{#phone}}
+  <dt>NSP Contact Phone</dt><dd>{{phone}}</dd>
+{{/phone}}
+</dl>
+{{#apr_link}}<a target='_blank' href='{{apr_link}}'>Annual Planning Report</a><br>{{/apr_link}}
+{{#info_link}}<a target='_blank' href='{{info_link}}'>NSP demand management information</a><br>{{/info_link}}
+{{/total_invest}}
+
+{{#total_invest}}
+  <dt>Deferrable investment (m$)          </dt><dd>{{deferrable_invest}}</dd>
+  <dt>Investment year                     </dt><dd>{{invest_year}}</dd>
+  <dt>Constraint season(s)                </dt><dd>{{constraint_season}}</dd>
+  <dt>Average demand growth rate (MVA/yr) </dt><dd>{{demand_growth}}</dd>
+  <dt>Reactive support requirements       </dt><dd>{{support_required}} {{^support_required}} None {{/support_required}}</dd>
+  <dt>Notes                               </dt><dd class='isf-note'>{{problem_context}}</dd>
+{{#email}}
+  <dt>NSP Contact Email</dt><dd><a href='mailto:{{NSP_contact}}'>{{email}}</a></dd>
+{{/email}}
+{{#phone}}
+  <dt>NSP Contact Phone</dt><dd>{{phone}}</dd>
+{{/phone}}
+</dl>
+{{#apr_link}}<a target='_blank' href='{{apr_link}}'>Annual Planning Report</a><br>{{/apr_link}}
+{{#info_link}}<a target='_blank' href='{{info_link}}'>NSP demand management information</a><br>{{/info_link}}
+
+<br/>
+<br/>
+
+<center>
+<table class='isf-table'>
+  <tr>
+    <th>Year</th>
+    <th>ADV ($/kVAyr)</th>
+    <th>Support required (MVA)</th>
+  </tr>
+{{#deferral_table}}
+  <tr>
+    <td>{{year}}</td>
+    <td>{{deferral_value}}</td>
+    <td>{{support_required}}</td>
+  </tr>
+{{/deferral_table}}
+</table>
+</center>
+
+<br/>
+<center>Deferral Value vs Support Required</center>
+<chart column-names='Year,ADV,Support Required'
+  id='{{asset_name}}'
+  x-column='Year'
+  y-columns='ADV,Support Required'
+  column-units=',$/kVAyr,MVA'
+>Year,ADV,Support Required\n
+{{#deferral_table}}
+{{year}},{{deferral_value}},{{support_required}}\n
+{{/deferral_table}}
+</chart>
+{{/total_invest}}
+
+<br/>
+{{/deferral_datasets}}
+<hr/>
+
+
+<div class='isf-note'>
+  Depending on NSP network security standards the information shown may or may not take
+  account of potential load transfers to delay constraints. Consult with distributors for
+  further details
+</div>

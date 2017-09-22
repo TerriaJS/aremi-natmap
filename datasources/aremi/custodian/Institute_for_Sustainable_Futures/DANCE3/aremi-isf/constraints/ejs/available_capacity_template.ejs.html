@@ -1,0 +1,81 @@
+<dl class='isf-info'>
+  <dt>Asset name</dt><dd>{{asset_name}}</dd>
+  <dt>Asset type</dt><dd>{{asset_type_str}}</dd>
+  <dt>Network   </dt><dd>{{network}}</dd>
+  <dt>Notes     </dt><dd>{{problem_context}}</dd>
+
+{{#constraint_season}}
+  <dt>Constraint season(s)       </dt><dd>{{constraint_season}}</dd>
+{{/constraint_season}}
+
+  <dt>Demand growth rate (MVA/yr)</dt><dd>{{demand_growth}}</dd>
+
+{{#commitment_year}}
+  <dt>Commitment Year            </dt><dd>{{commitment_year}}</dd>
+{{/commitment_year}}
+
+{{#invest_year}}
+  <dt>Proposed investment year   </dt><dd>{{invest_year}}</dd>
+{{/invest_year}}
+
+{{#data_currency}}
+  <dt>Data Currency              </dt><dd>{{data_currency}}</dd>
+{{/data_currency}}
+
+{{#next_update}}
+  <dt>Next Update                </dt><dd>{{next_update}}</dd>
+{{/next_update}}
+</dl>
+
+<br/>
+
+<table class='isf-table'>
+  <tr>
+    <th>Year</th>
+    <th>Load (MVA)</th>
+    <th>Capacity (MVA)</th>
+    <th>Available Capacity (MVA)</th>
+  </tr>
+{{#avail_cap_table}}
+  <tr>
+    <td>{{year}}</td>
+    <td>{{load}}</td>
+    <td>{{capacity}}</td>
+    <td>{{available_capacity}}</td>
+  </tr>
+{{/avail_cap_table}}
+</table>
+
+<br/>
+<br/>
+
+<center>Forecast load vs Asset Capacity (MVA)</center>
+<chart x-column='Year'
+y-columns='Load,Capacity'
+column-units=',MVA,MVA'
+column-names=',,'
+>Year,Load,Capacity\n
+{{#avail_cap_table}}
+{{year}},{{load}},{{capacity}}\n
+{{/avail_cap_table}}
+</chart>
+<br/>
+<br/>
+
+<dl class='isf-info'>
+  <dt>Note</dt> <dd class='isf-note'>Depending on NSP network security standards the Available Capacity and Annual Deferral Value may or may not take account of potential load transfers to delay constraints. Consult with distributors for further details</dd>
+
+{{#email}}
+  <dt>NSP Contact Email</dt><dd><a href='mailto:{{email}}'>{{email}}</a></dd>
+{{/email}}
+
+{{#phone}}
+  <dt>NSP Contact Phone</dt><dd>{{phone}}</dd>
+{{/phone}}
+</dl>
+
+<br>
+{{#apr_link}}<a target='_blank' href='{{apr_link}}'>Annual Planning Report</a><br/>{{/apr_link}}
+{{#dses_info_url}}<a target='_blank' href='{{dses_info_url}}'>DSES web link</a><br/>{{/dses_info_url}}
+{{#info_link}}<a target='_blank' href='{{info_link}}'>NSP demand management information</a><br/>{{/info_link}}
+{{#file_link}}<a target='_blank' href='{{file_link}}'>Download data in spreadsheet format</a>{{/file_link}}

@@ -1,0 +1,211 @@
+{
+  "id": "3aa89fcb",
+  "name": "Available Distribution Capacity",
+  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/test/available_capacity_timeseries.csv",
+  "type": "csv",
+  "cacheDuration": "1h",
+  "initialTimeSource": "start",
+  "tableStyle": {
+    "colorPalette": "9-class RdYlGn",
+    "colorBins": 0,
+    "dataVariable": "available_capacity",
+    "columns": {
+      "asset_name": {"type":"HIDDEN"},
+      "available_capacity": {
+        "name": "Available Capacity (MVA)",
+        "clampDisplayValue": true,
+        "minDisplayValue": -15,
+        "maxDisplayValue": 15
+      },
+      "capacity": {"name": "Capacity (MVA)"},
+      "load": {"name": "Load (MVA)"}
+    }
+  },
+  "dateFormat": {
+    "currentTime": "'Year: 'yyyy",
+    "timelineTic": "yyyy"
+  },
+  "featureInfoTemplate": {
+    "name": "{{{asset_name}}}",
+    "template": "<%- include available_capacity_template.ejs.html %>"
+  },
+  "info" :[
+    {
+      "name": "Description of Data",
+      "content": "<% include Available_Capacity-Description %>"
+    },
+    <% include common-Info %>,
+  ],
+  <% include common %>
+},
+
+{
+  "id": "2fb9cae8",
+  "name": "Proposed Investment",
+  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/test/proposed_investment.csv",
+  "type": "csv",
+  "cacheDuration": "1h",
+  "tableStyle": {
+    "dataVariable": "invest_year_str",
+    "columns": {
+      "apr_link": {"type":"HIDDEN"},
+      "asset_code": {"type":"HIDDEN"},
+      "asset_name": {"type":"HIDDEN"},
+      "asset_type": {"type":"HIDDEN"},
+      "asset_type_str": {"name": "Asset Type"},
+      "augmentation_invest": {
+        "name": "Augmentation Investment (m$)",
+        "colorPalette": "RdYlGn",
+        "colorBins": 0,
+        "scale": 2,
+        "clampDisplayValue": true,
+        "maxDisplayValue": 50
+      },
+      "commitment_year": {"type":"HIDDEN"},
+      "connections_invest": {"type":"HIDDEN"},
+      "constraint_season": {"name": "Constraint Season"},
+      "data_currency": {"type":"HIDDEN"},
+      "deferrable_invest": {
+        "name": "Deferable Investment (m$)",
+        "colorPalette": "RdYlGn",
+        "colorBins": 0,
+        "scale": 2,
+        "clampDisplayValue": true,
+        "maxDisplayValue": 50
+      },
+      "demand_growth": {"type":"HIDDEN"},
+      "email": {"type":"HIDDEN"},
+      "file_link": {"type":"HIDDEN"},
+      "info_link": {"type":"HIDDEN"},
+      "invest_year": {"type":"HIDDEN"},
+      "invest_year_str": {
+        "name": "Investment Year",
+        "nullColor": "rgba(177,178,177,1)",
+        "nullLabel": "Committed",
+        "replaceWithNullValues": ["2013 (committed)", "2014 (committed)", "2015 (committed)", "2016 (committed)", "2017 (committed)", "2018 (committed)", "2019 (committed)", "2020 (committed)", "2021 (committed)", "2022 (committed)", "2023 (committed)", "2024 (committed)", "2025 (committed)", "2026 (committed)"],
+        "colorPalette": "RdYlGn",
+        "colorBins": 0,
+        "scaleByValue": false,
+        "clampDisplayValue": true,
+        "minDisplayValue": 2016,
+        "maxDisplayValue": 2026
+      },
+      "max_DM_percent": {"type":"HIDDEN"},
+      "max_DM_percent_str": {"type":"HIDDEN"},
+      "network": {"type":"HIDDEN"},
+      "next_update": {"type":"HIDDEN"},
+      "opex": {"type":"HIDDEN"},
+      "other_invest": {"type":"HIDDEN"},
+      "phone": {"type":"HIDDEN"},
+      "problem_context": {"type":"HIDDEN"},
+      "replacement_invest": {
+        "name": "Replacement Investment (m$)",
+        "colorPalette": "RdYlGn",
+        "colorBins": 0,
+        "scale": 2,
+        "clampDisplayValue": true,
+        "maxDisplayValue": 50
+      },
+      "total_invest": {
+        "name": "Total Investment (m$)",
+        "colorPalette": "RdYlGn",
+        "colorBins": 0,
+        "scale": 2,
+        "clampDisplayValue": true,
+        "maxDisplayValue": 50
+      }
+    }
+  },
+  "featureInfoTemplate": {
+    "name": "{{{asset_name}}}",
+    "template": "<%- include proposed_investment.ejs.html %>"
+  },
+  "info" :[
+    {
+      "name": "Description of Data",
+      "content": "<% include Proposed_Investment-Description %>"
+    },
+    <% include common-Info %>,
+  ],
+  <% include common %>
+},
+
+{
+  "id": "9fe2927c",
+  "name": "Annual Deferral Value",
+  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/test/deferral_values_timeseries.csv",
+  "type": "csv",
+  "cacheDuration": "1h",
+  "initialTimeSource": "end",
+  "tableStyle": {
+    "dataVariable": "deferral_value",
+    "colorMap": "rgba(255,255,255,1.0)-rgba(255,255,115,1.0)-rgba(242,198,95,1.0)-rgba(222,112,68,1.0)-rgba(203,40,42,1.0)-rgba(154,31,75,1.0)-rgba(101,31,124,1.0)",
+    "colorBins": 0,
+    "clampDisplayValue": true,
+    "minDisplayValue": 0,
+    "maxDisplayValue": 500,
+    "columns": {
+      "deferral_value": {
+        "name": "Deferral Value ($/kVAyr)",
+        "nullColor": "rgba(3,154,206,1)",
+        "nullLabel": "MVAr support required",
+        "replaceWithNullValues": ["MVAR support required", "MVAR support requiredMVAR support required"],
+      }
+    }
+  },
+  "dateFormat": {
+    "currentTime": "'Year: 'yyyy",
+    "timelineTic": "yyyy"
+  },
+  "featureInfoTemplate": {
+    "name": "{{{asset_name}}}",
+    "template": "<%- include deferal_value_template.ejs.html %>"
+  },
+  "info" :[
+    {
+      "name": "Description of Data",
+      "content": "<% include Annual_Deferral_Value-Description %>"
+    },
+    <% include common-Info %>,
+  ],
+  <% include common %>
+},
+
+{
+  "id": "e16f1613",
+  "name": "Peak Day Available Capacity",
+  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/test/peak_day.csv",
+  "type": "csv",
+  "cacheDuration": "1h",
+  "initialTimeSource": "start",
+  "tableStyle": {
+    "dataVariable": "percent_available",
+    "colorMap": "rgba(26,152,80,1.0)-rgba(102,189,99,1.0)-rgba(166,217,106,1.0)-rgba(217,239,139,1.0)-rgba(255,255,191,1.0)-rgba(254,224,139,1.0)-rgba(253,174,97,1.0)-rgba(244,109,67,1.0)-rgba(215,48,39,1.0)",
+    "colorBins": 0,
+    "columns": {
+      "capacity": {"name": "Capacity (MVA)"},
+      "load": {"name": "Load (MVA)"},
+      "percent_available": {
+        "name": "Percent of capacity (%)",
+        "minDisplayValue": 0,
+        "maxDisplayValue": 120,
+      }
+    }
+  },
+  "dateFormat": {
+    "currentTime": "'Hour of day:' hh tt",
+    "timelineTic": "hh tt"
+  },
+  "featureInfoTemplate": {
+    "name": "{{{asset_name}}}",
+    "template": "<%- include peak_day_template.ejs.html %>"
+  },
+  "info" :[
+    {
+      "name": "Description of Data",
+      "content": "<% include Peak_Day-Description %>"
+    },
+    <% include common-Info %>
+  ],
+  <% include common %>
+}
