@@ -1,6 +1,33 @@
 Change Log
 ==========
 
+### 2017-09-15
+
+* Added more datasets from the 2016 Census.
+* Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) 5.3.0.  Changes include:
+  * Added the ability to use the analytics region picker with vector tile region mapping by specifiying a WMS server & layer for analytics only.
+  * Updated the client side validation to use the server-provided file size limit when drag/dropping a file requiring the conversion service.
+  * `zoomOnEnable` now works even for a catalog item that is initially enabled in the catalog.  Previously, it only worked for catalog items enabled via the user interface or otherwise outside of the load process.
+  * Added `initialTimeSource` property to `CsvCatalogItem` so it is possible to specify the value of the animation timeline at start from init files.
+  * Added to documentation for customizing data appearance.
+  * Added `CatalogShortcut` for creating tool items for linking to a `CatalogItem`.
+  * Renamed `ViewState.viewCatalogItem()` to `viewCatalogMember` to reflect that it can be used for all `CatalogMembers`, not just `CatalogItems`.
+  * Fixed a bug that could cause a crash when switching to 2D when the `initialView` was just a `Rectangle` instead of a `CameraView`.
+  * Fixed a bug that caused multiple layers with generated, gradient legends to all show the same legend on the Workbench.
+
+### 2017-08-15
+
+* Added adelaidemetro.com.au to the proxy whitelist.
+* Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) 5.2.11.  Changes include:
+  * The Share feature now includes the current time selected on the timeline, so that anyone visiting a share link will see the map at the intended time.
+  * Improved the conversion of Esri polygons to GeoJSON by `featureDataToGeoJson`.  It now correctly handles polygons with holes and with multiple outer rings.
+  * Added some fields to the dataset info page for `CkanCatalogItem`.
+  * A catalog item's `cacheDuration` property now takes precedence over the cache duration specified by the code.  Previously, the `cacheDuration` would only override the default duration (2 weeks).
+  * Added option to expand the HTML embed code and toggle URL shorting for the share link.
+  * Fixed a bug that could cause some layers, especially the Bing Maps basemap, to occasionally be missing from the 2D map.
+  * Fixed a bug that could cause the selected time to move to the end time when sharing a map with a time-dynamic layer.
+  * Pinned `urijs` to v1.18.10 to work around a breaking change in v1.18.11.
+
 ### 2017-07-21
 
 * Added new ASGS 2016 region definitions for use with region-mapped CSVs, ABS data, etc.

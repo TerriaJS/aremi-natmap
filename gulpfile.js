@@ -234,7 +234,7 @@ gulp.task('make-package', function() {
     fs.copySync('node_modules', path.join(workingDir, 'node_modules'), copyOptions);
 
     if (argv.serverConfigOverride) {
-        var serverConfig = json5.parse(fs.readFileSync('devserverconfig.json', 'utf8'));
+        var serverConfig = json5.parse(fs.readFileSync('serverconfig.json', 'utf8'));
         var serverConfigOverride = json5.parse(fs.readFileSync(argv.serverConfigOverride, 'utf8'));
         var productionServerConfig = mergeConfigs(serverConfig, serverConfigOverride);
         fs.writeFileSync(path.join(workingDir, 'productionserverconfig.json'), JSON.stringify(productionServerConfig, undefined, '  '));
