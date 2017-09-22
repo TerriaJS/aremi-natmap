@@ -5,7 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
-### In the next version
+### Version 2017-09-22
 * Added in the [2017 Network Opportunities Constraint maps](https://www.uts.edu.au/research-and-teaching/our-research/institute-sustainable-futures/our-research/energy-and-climate-2) in "Electricity Infrastructure -> Network Opportunities" from the Institute for Sustainable Futures, UTS.
 * Added the new "Winery Residues" layers from RenewablesSA in the "Renewable Energy -> Bioenergy -> National" group.
 * Update many layers provided by Geoscience Australia to use new NationalMap service URLs:
