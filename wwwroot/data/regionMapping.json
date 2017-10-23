@@ -2294,7 +2294,7 @@
         },
         "AREMI_ISF_combined": {
             "layerName": "aremi_isf_combined",
-            "server": "https://zz-aremi-isf8.terria.io/aremi_isf_combined/{z}/{x}/{y}.pbf",
+            "server": "https://zz-aremi-isf9.terria.io/aremi_isf_combined/{z}/{x}/{y}.pbf",
             "serverType": "MVT",
             "serverMaxNativeZoom": 12,
             "serverMaxZoom": 28,
