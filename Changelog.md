@@ -7,6 +7,7 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version
 * Added the new Carto Voyager basemap.
+* Fixed the "Infrastructure -> Communications -> Broadband" layers which were failing to load.
 
 ### Version 2017-09-22
 * Added in the [2017 Network Opportunities Constraint maps](https://www.uts.edu.au/research-and-teaching/our-research/institute-sustainable-futures/our-research/energy-and-climate-2) in "Electricity Infrastructure -> Network Opportunities" from the Institute for Sustainable Futures, UTS.
