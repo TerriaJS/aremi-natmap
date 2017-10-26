@@ -131,12 +131,14 @@ terria.start({
         //temp
         var createAustraliaBaseMapOptions = require('terriajs/lib/ViewModels/createAustraliaBaseMapOptions');
         var createGlobalBaseMapOptions = require('terriajs/lib/ViewModels/createGlobalBaseMapOptions');
+        var createExtraBaseMapOptions = require('./lib/ViewModels/createExtraBaseMapOptions');
         var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
         // Create the various base map options.
         var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
         var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
+        var extraBaseMaps = createExtraBaseMapOptions(terria);
 
-        var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
+        var allBaseMaps = extraBaseMaps.concat(globalBaseMaps.concat(australiaBaseMaps));
         selectBaseMap(terria, allBaseMaps, 'Positron (Light)', true);
 
         // Add the disclaimer, if specified
