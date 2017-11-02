@@ -1,7 +1,8 @@
-<h3>{{substation_name}}</h3>
+<h3>{{#SubstationName}}{{SubstationName}}{{/SubstationName}} {{#Substationname}}{{Substationname}}{{/Substationname}}</h3>
 <table>
-  <tr> <td>Forecast Remaining Capacity:&nbsp;</td> <td><strong>{{description}}</strong></td> </tr>
-  <tr> <td>Forecast Year:&nbsp;</td> <td><strong>{{forecast_year}}</strong></td> </tr>
-  <tr> <td>Abbreviation:&nbsp;</td> <td><strong>{{sub_abbrv}}</strong></td> </tr>
-  <tr> <td>Data current:&nbsp;</td> <td><strong>{{dat_crt_dt}}</strong></td> </tr>
+  <tr> <td>Forecast Remaining Capacity:&nbsp;</td> <td><strong>{{Description}}</strong></td> </tr>
+  <tr> <td>Forecast Year:&nbsp;</td> <td><strong>{{ForecastYear}}</strong></td> </tr>
+  <tr> <td>Abbreviation:&nbsp;</td> <td><strong>{{#SubstationAbbreviation}}{{SubstationAbbreviation}}{{/SubstationAbbreviation}} {{#SubAbbreviation}}{{SubAbbreviation}}{{/SubAbbreviation}}</strong></td> </tr>
+  <tr> <td>Forecast year:&nbsp;</td> <td><strong>{{ForecastYear}}</strong></td> </tr>
+  <tr> <td>Date created:&nbsp;</td> <td><strong>{{DateCreated}}</strong></td> </tr>
 </table>
