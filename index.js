@@ -138,7 +138,9 @@ terria.start({
         var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
         var extraBaseMaps = createExtraBaseMapOptions(terria);
 
-        var allBaseMaps = extraBaseMaps.concat(globalBaseMaps.concat(australiaBaseMaps));
+        var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps.concat(extraBaseMaps));
+        var toRemove = ["Bing Maps Roads", "Natural Earth II", "NASA Black Marble"];
+        allBaseMaps = allBaseMaps.filter(basemap => toRemove.indexOf(basemap.catalogItem.name) < 0);
         selectBaseMap(terria, allBaseMaps, 'Positron (Light)', true);
 
         // Add the disclaimer, if specified
