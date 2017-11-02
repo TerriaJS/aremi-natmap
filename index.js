@@ -141,7 +141,7 @@ terria.start({
         var toRemove = ["Bing Maps Roads", "Natural Earth II", "NASA Black Marble"];
         var matchBasemapName = function(basemap) {
             return !(toRemove.includes(basemap.catalogItem.name));
-        }
+        };
 
         var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps.concat(extraBaseMaps));
         allBaseMaps = allBaseMaps.filter(matchBasemapName);
