@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
+* Migrated all the Landgate SLIP based layers in "Electricity Infrastructure -> Transmission -> Western Australia" to use their new services listed in data.wa.gov.au.
 * Added the layer "Topography -> Aerial/Satellite Imagery -> Tasmania" from Land Information System Tasmania, Tasmanian Government.
 * Added the new Carto Voyager basemap.
 * Fixed the "Infrastructure -> Communications -> Broadband" layers which were failing to load.
