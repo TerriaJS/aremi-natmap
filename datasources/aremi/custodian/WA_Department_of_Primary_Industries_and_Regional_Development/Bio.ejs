@@ -172,8 +172,6 @@
     "tableStyle": {
       "timeColumn": null,
       "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
-      "scaleByValue": true,
-      "scale": 2.0,
       "columns": {
         "Residue_type": {"type":"HIDDEN"},
         "Residue_unit": {"type":"HIDDEN"},
@@ -184,5 +182,28 @@
     <% include ../../common/wa_camera_rectangle %>,
     <% include ../../common/standard_properties %>
   }
-}
+},
 
+{
+  "id": "da85ce08",
+  "name": "Broiler Litter Production",
+  "url": "https://catalogue.data.wa.gov.au",
+  "type": "ckan-resource",
+  "datasetId": "broiler-litter-production",
+  "csvResourceFormat": "CSV",
+  "itemProperties": {
+    "tableStyle": {
+      "timeColumn": null,
+      "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
+      "columns": {
+        "Biomass description": {"type":"HIDDEN"},
+        "Residue unit": {"type":"HIDDEN"},
+        "Residue_type": {"type":"HIDDEN"},
+        "Seasonality": {"type":"HIDDEN"},
+        "Update  frequency": {"type":"HIDDEN"}
+      }
+    },
+    <% include ../../common/wa_camera_rectangle %>,
+    <% include ../../common/standard_properties %>
+  }
+}
