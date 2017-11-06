@@ -133,6 +133,7 @@
     <% include ../../common/standard_properties %>
   }
 },
+
 {
   "id": "9f041004",
   "name": "Seaweed Wrack",
@@ -158,4 +159,30 @@
     "scale": 2.0,
     "columns": {}
   }
+},
+
+{
+  "id": "b8100137",
+  "name": "Dairy Effluent",
+  "url": "https://catalogue.data.wa.gov.au",
+  "type": "ckan-resource",
+  "datasetId": "dairy-effluent",
+  "csvResourceFormat": "CSV",
+  "itemProperties": {
+    "tableStyle": {
+      "timeColumn": null,
+      "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
+      "scaleByValue": true,
+      "scale": 2.0,
+      "columns": {
+        "Residue_type": {"type":"HIDDEN"},
+        "Residue_unit": {"type":"HIDDEN"},
+        "Seasonality": {"type":"HIDDEN"},
+        "Update_frequency": {"type":"HIDDEN"}
+      }
+    },
+    <% include ../../common/wa_camera_rectangle %>,
+    <% include ../../common/standard_properties %>
+  }
 }
+
