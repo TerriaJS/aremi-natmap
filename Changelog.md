@@ -6,7 +6,16 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
-* Updating layers in the "Renewable Energy -> Bioenergy -> Western Australia" from the Department of Primary Industries and Regional Development, Western Australia.
+* Updating and adding new layers in the "Renewable Energy -> Bioenergy -> Western Australia" from the Department of Primary Industries and Regional Development, Western Australia:
+    * Updated:
+        * Feedlot Waste Data
+    * New:
+        * Dairy Effluent
+        * Broiler Litter Production
+        * Horticulture
+            * Hand Harvested Vegetables Residue Estimates
+            * Mechanically Harvested Vegetable Residue
+            * Olive Residue Estimate
 * Migrated all the Landgate SLIP based layers in "Electricity Infrastructure -> Transmission -> Western Australia" to use their new services listed in data.wa.gov.au.
 * Added the layer "Topography -> Aerial/Satellite Imagery -> Tasmania" from Land Information System Tasmania, Tasmanian Government.
 * Added the new Carto Voyager basemap, and removed the basemaps Bing Maps Roads, Natural Earth II, and NASA Black Marble.
