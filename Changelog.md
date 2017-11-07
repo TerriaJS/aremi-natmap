@@ -28,6 +28,7 @@ http://nationalmap.gov.au/renewables/
 * Migrate ancillary services to Data61 hosted infrastructure:
     * services.aremi.nationalmap.gov.au -> services.aremi.data61.io
     * gis.aremi.nationalmap.gov.au -> gis.aremi.data61.io
+* Removed the layer "Topograpy -> Elevation -> Land slope in percent" due to problems with the visualisation.
 
 ### Version 2017-09-22
 * Added in the [2017 Network Opportunities Constraint maps](https://www.uts.edu.au/research-and-teaching/our-research/institute-sustainable-futures/our-research/energy-and-climate-2) in "Electricity Infrastructure -> Network Opportunities" from the Institute for Sustainable Futures, UTS.
