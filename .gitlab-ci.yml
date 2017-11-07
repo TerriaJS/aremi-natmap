@@ -33,7 +33,6 @@ upload_tar:
   image: snayler0/aremi-s3-uploader
   dependencies:
     - build_tar
-  when: manual
   stage: upload_tar
   allow_failure: false
   script:
