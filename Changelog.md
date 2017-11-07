@@ -25,6 +25,9 @@ http://nationalmap.gov.au/renewables/
 * Added the layer "Topography -> Aerial/Satellite Imagery -> Tasmania" from Land Information System Tasmania, Tasmanian Government.
 * Added the new Carto Voyager basemap, and removed the basemaps Bing Maps Roads, Natural Earth II, and NASA Black Marble.
 * Fixed the "Infrastructure -> Communications -> Broadband" layers which were failing to load.
+* Migrate ancillary services to Data61 hosted infrastructure:
+    * services.aremi.nationalmap.gov.au -> services.aremi.data61.io
+    * gis.aremi.nationalmap.gov.au -> gis.aremi.data61.io
 
 ### Version 2017-09-22
 * Added in the [2017 Network Opportunities Constraint maps](https://www.uts.edu.au/research-and-teaching/our-research/institute-sustainable-futures/our-research/energy-and-climate-2) in "Electricity Infrastructure -> Network Opportunities" from the Institute for Sustainable Futures, UTS.
