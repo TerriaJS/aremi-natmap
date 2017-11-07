@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
+* Added the new "Renewable Energy -> Bioenergy -> National -> National Piggery Residues" group of layers from Department of the Premier and Cabinet, South Australia.
 * Updating and adding new layers in the "Renewable Energy -> Bioenergy -> Western Australia" from the Department of Primary Industries and Regional Development, Western Australia:
     * Updated:
         * Feedlot Waste Data
