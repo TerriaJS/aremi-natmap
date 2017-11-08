@@ -28,6 +28,8 @@ http://nationalmap.gov.au/renewables/
 * Migrate ancillary services to Data61 hosted infrastructure:
     * services.aremi.nationalmap.gov.au -> services.aremi.data61.io
     * gis.aremi.nationalmap.gov.au -> gis.aremi.data61.io
+    * static.aremi.nationalmap.gov.au -> static.aremi.data61.io
+
 * Removed the layer "Topograpy -> Elevation -> Land slope in percent" due to problems with the visualisation.
 
 ### Version 2017-09-22
