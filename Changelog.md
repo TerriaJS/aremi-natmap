@@ -29,8 +29,8 @@ http://nationalmap.gov.au/renewables/
     * services.aremi.nationalmap.gov.au -> services.aremi.data61.io
     * gis.aremi.nationalmap.gov.au -> gis.aremi.data61.io
     * static.aremi.nationalmap.gov.au -> static.aremi.data61.io
-
 * Removed the layer "Topograpy -> Elevation -> Land slope in percent" due to problems with the visualisation.
+* Update to [TerriaJS 5.5.0](https://github.com/TerriaJS/terriajs/blob/5.5.0/CHANGES.md).
 
 ### Version 2017-09-22
 * Added in the [2017 Network Opportunities Constraint maps](https://www.uts.edu.au/research-and-teaching/our-research/institute-sustainable-futures/our-research/energy-and-climate-2) in "Electricity Infrastructure -> Network Opportunities" from the Institute for Sustainable Futures, UTS.
