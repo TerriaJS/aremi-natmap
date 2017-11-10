@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 
 ### In the next version
+* Updated the Clean Energy Regulator Small Scale Installation data in the group "Electricity Infrastructure -> Generation -> Small Scale Installations - CER".
 * Added the new group of layers in "Renewable Energy -> Bioenergy -> New South Wales -> Waste" from the NSW Forest Science unit, Department of Primary Industries:
     * C&D - Organic Waste (t)
     * C&I - Organic Waste (t)
