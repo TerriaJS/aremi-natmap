@@ -11,7 +11,10 @@ http://nationalmap.gov.au/renewables/
     * C&I - Organic Waste (t)
     * MSW - Organic Waste (t)
     * Total MSW, C&I, C&D - Organic Waste (t)
-* Added the new "Renewable Energy -> Bioenergy -> National -> National Piggery Residues" group of layers from Department of the Premier and Cabinet, South Australia.
+* Added the new "Renewable Energy -> Bioenergy -> National -> National Piggery Residues" group of layers from the Department of the Premier and Cabinet, South Australia.
+* Added more layers to the group "Renewable Energy -> Bioenergy -> National -> Winery Residues" from the Department of the Premier and Cabinet, South Australia:
+    * Percent of National Crush by GI Region
+    * Wine Processing Facilities - > 20,000 t/pa
 * Updating and adding new layers in the "Renewable Energy -> Bioenergy -> Western Australia" from the Department of Primary Industries and Regional Development, Western Australia:
     * Updated:
         * Feedlot Waste Data
