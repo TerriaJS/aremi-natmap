@@ -39,6 +39,12 @@ http://nationalmap.gov.au/renewables/
     * gis.aremi.nationalmap.gov.au -> gis.aremi.data61.io
     * static.aremi.nationalmap.gov.au -> static.aremi.data61.io
 * Removed the layer "Topograpy -> Elevation -> Land slope in percent" due to problems with the visualisation.
+* Update the services from the sollowing data providers to use HTTPS:
+    * data.stategrowth.tas.gov.au
+    * location.sa.gov.au
+    * maps.six.nsw.gov.au
+    * services.thelist.tas.gov.au
+    * www.environment.gov.au
 * Update to [TerriaJS 5.5.0](https://github.com/TerriaJS/terriajs/blob/5.5.0/CHANGES.md).
 
 ### Version 2017-09-22
