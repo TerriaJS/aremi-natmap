@@ -5,7 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
-### In the next version
+### Version 2017-11-13
 * Updated the Clean Energy Regulator Small Scale Installation data in the group "Electricity Infrastructure -> Generation -> Small Scale Installations - CER".
 * Added the new group of layers in "Renewable Energy -> Bioenergy -> New South Wales -> Waste" from the NSW Forest Science unit, Department of Primary Industries:
     * C&D - Organic Waste (t)
@@ -39,7 +39,7 @@ http://nationalmap.gov.au/renewables/
     * gis.aremi.nationalmap.gov.au -> gis.aremi.data61.io
     * static.aremi.nationalmap.gov.au -> static.aremi.data61.io
 * Removed the layer "Topograpy -> Elevation -> Land slope in percent" due to problems with the visualisation.
-* Update the services from the sollowing data providers to use HTTPS:
+* Update the services from the following data providers to use HTTPS:
     * data.stategrowth.tas.gov.au
     * location.sa.gov.au
     * maps.six.nsw.gov.au
