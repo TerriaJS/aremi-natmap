@@ -104,38 +104,36 @@
 
 {
   "id": "0fb40f03",
-  "name": "Feedlots",
-  "url": "http://catalogue.beta.data.wa.gov.au/dataset/d9c54d3a-854e-40d8-8cc6-f77f3ce8a135/resource/dcc2e333-cfd4-4575-9d17-65cffe30b221/download/csv-1-feedlots.csv",
-  "type": "csv",
-  "showWarnings": false,
-  "dataCustodian": "[Department of Agriculture and Food, Western Australia](https://www.agric.wa.gov.au/)",
-  "description": "<% include Feedlot-description %>",
-  "info": [
-    {
-      "name": "Licensing, Terms & Conditions",
-      "content": "Copyright © Western Australia Agriculture Authority, 2016"
+  "name": "Feedlot Waste Data",
+  "url": "https://catalogue.data.wa.gov.au",
+  "type": "ckan-resource",
+  "datasetId": "feedlot-waste-data",
+  "csvResourceFormat": "CSV",
+  "itemProperties": {
+    "tableStyle": {
+      "timeColumn": null,
+      "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
+      "scaleByValue": true,
+      "scale": 2.0,
+      "columns": {
+        "Biomass_description": {"type":"HIDDEN"},
+        "Component": {"type":"HIDDEN"},
+        "Currency": {"type":"HIDDEN"},
+        "Current_use": {"type":"HIDDEN"},
+        "Industry": {"type":"HIDDEN"},
+        "Livestock_type": {"type":"HIDDEN"},
+        "Residue_class": {"type":"HIDDEN"},
+        "Technology": {"type":"HIDDEN"},
+        "Update_frequency": {"type":"HIDDEN"}
+      }
     },
-    {
-      "name": "Disclaimer",
-      "content": "While all reasonable care has been taken in the preparation of the material in this file, the Western Australian Government and its officers accept no responsibility for any errors or omissions it may contain, whether caused by negligence, or otherwise, or for any loss, however caused, sustained by any person who relies on it."
-    }
-  ],
-  "tableStyle": {
-    "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
-    "scaleByValue": true,
-    "scale": 2.0,
-    "columns": {
-      "Current Use": {"type":"HIDDEN"},
-      "Current Value": {"type":"HIDDEN"},
-      "Winery Name": {"type":"HIDDEN"},
-      "Location": {"type":"HIDDEN"}
-    }
-  },
-  "featureInfoTemplate": {
-    "name": "Manure dry weight: {{Manure dry weight (t/yr)}} t/y"
-  },
-  <% include ../../common/standard_properties %>
+    "featureInfoTemplate": {
+      "name": "Manure dry weight: {{Manure dry weight (t/yr)}} t/y"
+    },
+    <% include ../../common/standard_properties %>
+  }
 },
+
 {
   "id": "9f041004",
   "name": "Seaweed Wrack",
@@ -161,4 +159,107 @@
     "scale": 2.0,
     "columns": {}
   }
+},
+
+{
+  "id": "b8100137",
+  "name": "Dairy Effluent",
+  "url": "https://catalogue.data.wa.gov.au",
+  "type": "ckan-resource",
+  "datasetId": "dairy-effluent",
+  "csvResourceFormat": "CSV",
+  "itemProperties": {
+    "tableStyle": {
+      "timeColumn": null,
+      "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
+      "columns": {
+        "Residue_type": {"type":"HIDDEN"},
+        "Residue_unit": {"type":"HIDDEN"},
+        "Seasonality": {"type":"HIDDEN"},
+        "Update_frequency": {"type":"HIDDEN"}
+      }
+    },
+    <% include ../../common/wa_camera_rectangle %>,
+    <% include ../../common/standard_properties %>
+  }
+},
+
+{
+  "id": "da85ce08",
+  "name": "Broiler Litter Production",
+  "url": "https://catalogue.data.wa.gov.au",
+  "type": "ckan-resource",
+  "datasetId": "broiler-litter-production",
+  "csvResourceFormat": "CSV",
+  "itemProperties": {
+    "tableStyle": {
+      "timeColumn": null,
+      "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
+      "columns": {
+        "Biomass description": {"type":"HIDDEN"},
+        "Residue unit": {"type":"HIDDEN"},
+        "Residue_type": {"type":"HIDDEN"},
+        "Seasonality": {"type":"HIDDEN"},
+        "Update  frequency": {"type":"HIDDEN"}
+      }
+    },
+    <% include ../../common/wa_camera_rectangle %>,
+    <% include ../../common/standard_properties %>
+  }
+},
+
+{
+  "name": "Horticulture",
+  "type": "group",
+  "items": [
+
+    {
+      "id": "8c9f801c",
+      "name": "Hand Harvested Vegetables Residue Estimates",
+      "datasetId": "hand-harvested-vegetables-residue-estimates",
+      <% include Bio_common_data_wa_gov_au %>
+    },
+
+    {
+      "id": "46f7a107",
+      "name": "Mechanically Harvested Vegetable Residue",
+      "datasetId": "mechanically-harvested-vegetable-residue",
+      <% include Bio_common_data_wa_gov_au %>
+    },
+
+    {
+      "id": "80025e7a",
+      "name": "Olive Residue Estimate",
+      "datasetId": "estimated-olive-residue",
+      <% include Bio_common_data_wa_gov_au %>
+    },
+
+    {
+      "id": "48d0086c",
+      "name": "Avocado Residue",
+      "datasetId": "avocado-residue",
+      <% include Bio_common_data_wa_gov_au %>
+    },
+
+    {
+      "id": "f3e778d4",
+      "name": "Citrus Fruit Residue",
+      "datasetId": "citrus-fruit-residue",
+      <% include Bio_common_data_wa_gov_au %>
+    },
+
+    {
+      "id": "29c2e4cb",
+      "name": "Pome Fruit Residue",
+      "datasetId": "pome-fruit-residue",
+      <% include Bio_common_data_wa_gov_au %>
+    },
+
+    {
+      "id": "fa8500de",
+      "name": "Stone Fruit Residue",
+      "datasetId": "stone-fruit-residue",
+      <% include Bio_common_data_wa_gov_au %>
+    }
+  ]
 }

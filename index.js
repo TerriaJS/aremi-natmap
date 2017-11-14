@@ -131,12 +131,16 @@ terria.start({
         //temp
         var createAustraliaBaseMapOptions = require('terriajs/lib/ViewModels/createAustraliaBaseMapOptions');
         var createGlobalBaseMapOptions = require('terriajs/lib/ViewModels/createGlobalBaseMapOptions');
+        var createExtraBaseMapOptions = require('./lib/ViewModels/createExtraBaseMapOptions');
         var selectBaseMap = require('terriajs/lib/ViewModels/selectBaseMap');
         // Create the various base map options.
         var australiaBaseMaps = createAustraliaBaseMapOptions(terria);
         var globalBaseMaps = createGlobalBaseMapOptions(terria, configuration.bingMapsKey);
+        var extraBaseMaps = createExtraBaseMapOptions(terria);
 
-        var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps);
+        var allBaseMaps = australiaBaseMaps.concat(globalBaseMaps.concat(extraBaseMaps));
+        var toRemove = ["Bing Maps Roads", "Natural Earth II", "NASA Black Marble"];
+        allBaseMaps = allBaseMaps.filter(basemap => toRemove.indexOf(basemap.catalogItem.name) < 0);
         selectBaseMap(terria, allBaseMaps, 'Positron (Light)', true);
 
         // Add the disclaimer, if specified

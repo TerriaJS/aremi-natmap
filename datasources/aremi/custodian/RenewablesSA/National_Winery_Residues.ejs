@@ -1,14 +1,37 @@
 {
-  "id": "7cae8633",
-  "name": "Winery Residues by Postcode",
-  "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/National_Winery_Residues_by_Postcode/MapServer",
-  "type": "esri-mapServer",
-  <% include ../../common/standard_properties %>
-},
-{
-  "id": "c4c103c1",
-  "name": "Winery Residues by GI Region",
-  "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/National_Winery_Residues_by_GI_Region/MapServer",
-  "type": "esri-mapServer",
-  <% include ../../common/standard_properties %>
+  "name": "Winery Residues",
+  "type": "group",
+  "items": [
+    {
+      "id": "7cae8633",
+      "name": "Winery Residues by Postcode",
+      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/National_Winery_Residues_by_Postcode/MapServer",
+      "type": "esri-mapServer",
+      <% include ../../common/standard_properties %>
+    },
+    {
+      "id": "c4c103c1",
+      "name": "Winery Residues by GI Region",
+      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/National_Winery_Residues_by_GI_Region/MapServer",
+      "type": "esri-mapServer",
+      <% include ../../common/standard_properties %>
+    },
+    {
+      "id": "3fd01f17",
+      "name": "Wine Processing Facilities - > 20,000 t/pa",
+      "layers": "0",
+      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/National_Winery_Residues_Processing_Facilities/MapServer",
+      "type": "esri-mapServer",
+      "clipToRectangle": false,
+      "ignoreUnknownTileErrors": true
+    },
+    {
+      "id": "6d991733",
+      "name": "Percent of National Crush by GI Region",
+      "layers": "Percent of National Crush by GI Region",
+      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/National_Winery_Residues_Processing_Facilities/MapServer",
+      "type": "esri-mapServer",
+      <% include ../../common/standard_properties %>
+    }
+  ]
 }

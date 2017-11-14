@@ -5,6 +5,48 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
+### Version 2017-11-13
+* Updated the Clean Energy Regulator Small Scale Installation data in the group "Electricity Infrastructure -> Generation -> Small Scale Installations - CER".
+* Added the new group of layers in "Renewable Energy -> Bioenergy -> New South Wales -> Waste" from the NSW Forest Science unit, Department of Primary Industries:
+    * C&D - Organic Waste (t)
+    * C&I - Organic Waste (t)
+    * MSW - Organic Waste (t)
+    * Total MSW, C&I, C&D - Organic Waste (t)
+* Added the new "Renewable Energy -> Bioenergy -> National -> National Piggery Residues" group of layers from the Department of the Premier and Cabinet, South Australia.
+* Added more layers to the group "Renewable Energy -> Bioenergy -> National -> Winery Residues" from the Department of the Premier and Cabinet, South Australia:
+    * Percent of National Crush by GI Region
+    * Wine Processing Facilities - > 20,000 t/pa
+* Updating and adding new layers in the "Renewable Energy -> Bioenergy -> Western Australia" from the Department of Primary Industries and Regional Development, Western Australia:
+    * Updated:
+        * Feedlot Waste Data
+    * New:
+        * Dairy Effluent
+        * Broiler Litter Production
+        * Horticulture
+            * Hand Harvested Vegetables Residue Estimates
+            * Mechanically Harvested Vegetable Residue
+            * Olive Residue Estimate
+            * Avocado Residue
+            * Citrus Fruit Residue
+            * Pome Fruit Residue
+            * Stone Fruit Residue
+* Migrated all the Landgate SLIP based layers in "Electricity Infrastructure -> Transmission -> Western Australia" to use their new services listed in data.wa.gov.au.
+* Added the layer "Topography -> Aerial/Satellite Imagery -> Tasmania" from Land Information System Tasmania, Tasmanian Government.
+* Added the new Carto Voyager basemap, and removed the basemaps Bing Maps Roads, Natural Earth II, and NASA Black Marble.
+* Fixed the "Infrastructure -> Communications -> Broadband" layers which were failing to load.
+* Migrate ancillary services to Data61 hosted infrastructure:
+    * services.aremi.nationalmap.gov.au -> services.aremi.data61.io
+    * gis.aremi.nationalmap.gov.au -> gis.aremi.data61.io
+    * static.aremi.nationalmap.gov.au -> static.aremi.data61.io
+* Removed the layer "Topograpy -> Elevation -> Land slope in percent" due to problems with the visualisation.
+* Update the services from the following data providers to use HTTPS:
+    * data.stategrowth.tas.gov.au
+    * location.sa.gov.au
+    * maps.six.nsw.gov.au
+    * services.thelist.tas.gov.au
+    * www.environment.gov.au
+* Update to [TerriaJS 5.5.0](https://github.com/TerriaJS/terriajs/blob/5.5.0/CHANGES.md).
+
 ### Version 2017-09-22
 * Added in the [2017 Network Opportunities Constraint maps](https://www.uts.edu.au/research-and-teaching/our-research/institute-sustainable-futures/our-research/energy-and-climate-2) in "Electricity Infrastructure -> Network Opportunities" from the Institute for Sustainable Futures, UTS.
 * Added the new "Winery Residues" layers from RenewablesSA in the "Renewable Energy -> Bioenergy -> National" group.

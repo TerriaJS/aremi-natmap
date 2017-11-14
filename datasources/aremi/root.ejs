@@ -1,5 +1,7 @@
 {
-  "corsDomains": [],
+  "corsDomains": [
+    "programs.communications.gov.au"
+  ],
   "homeCamera": {
     "west": 112,
     "south": -48,
@@ -164,7 +166,8 @@
                 <% include custodian/RIRDC/Biomass %>,
                 <% include custodian/Geoscience_Australia/Waste_Management_Facilities %>,
                 <% include custodian/QLD_Department_of_Science_Information_Technology_and_Innovation/Sugarcane %>,
-                <% include custodian/RenewablesSA/National_Winery_Residues %>
+                <% include custodian/RenewablesSA/National_Winery_Residues %>,
+                <% include custodian/RenewablesSA/National_Piggery_Residues %>,
               ]
             },
             {
@@ -185,6 +188,14 @@
                   "preserveOrder": true,
                   "items": [
                     <% include custodian/NSW_Department_of_Primary_Industries/Forestry %>,
+                  ]
+                },
+                {
+                  "name": "Waste",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items": [
+                    <% include custodian/NSW_Department_of_Primary_Industries/Waste %>,
                   ]
                 }
               ]
@@ -208,7 +219,7 @@
               "name": "Western Australia",
               "type": "group",
               "items": [
-                <% include custodian/Department_of_Agriculture_and_Food_Western_Australia/Bio %>,
+                <% include custodian/WA_Department_of_Primary_Industries_and_Regional_Development/Bio %>,
               ]
             }
           ]
@@ -351,6 +362,7 @@
           "items": [
             <% include custodian/Land_and_Property_Information_NSW/Aerial %>,
             <% include custodian/Queensland_Government/Public_Imagery %>,
+            <% include custodian/Land_Information_System_Tasmania/Orthophoto %>,
           ]
         },
         {
