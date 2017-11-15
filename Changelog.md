@@ -5,6 +5,9 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
+### In the next version
+* Removing the old, rarely used, and not very informative layers in "Research -> NICTA Geothermal model".
+
 ### Version 2017-11-13
 * Updated the Clean Energy Regulator Small Scale Installation data in the group "Electricity Infrastructure -> Generation -> Small Scale Installations - CER".
 * Added the new group of layers in "Renewable Energy -> Bioenergy -> New South Wales -> Waste" from the NSW Forest Science unit, Department of Primary Industries:
