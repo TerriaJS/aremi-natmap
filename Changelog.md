@@ -4,11 +4,11 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
-### Version 2017-11-13b
-* Fix AREMI Vector Tiles server HTTPS URL issue.
-
 ### In the next version
 * Removing the old, rarely used, and not very informative layers in "Research -> NICTA Geothermal model".
+
+### Version 2017-11-13b
+* Fix AREMI Vector Tiles server HTTPS URL issue.
 
 ### Version 2017-11-13
 * Updated the Clean Energy Regulator Small Scale Installation data in the group "Electricity Infrastructure -> Generation -> Small Scale Installations - CER".
