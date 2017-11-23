@@ -132,6 +132,35 @@
               ]
             },
             {
+              "name": "ISF Staging Environment",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Staging test",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items": [
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/stag-test-distribution-substations-csv %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/stag-test-distribution-powerlines-geojson %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/stag-test-transmission-substations-csv %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/stag-test-transmission-powerlines-geojson %>,
+                  ]
+                },
+                {
+                  "name": "Staging 'approved'",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items": [
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/stag-pub-distribution-substations-csv %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/stag-pub-distribution-powerlines-geojson %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/stag-pub-transmission-substations-csv %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/stag-pub-transmission-powerlines-geojson %>,
+                  ]
+                }
+              ]
+            },
+            {
               "name": "2016 Constraint Maps",
               "type": "group",
               "preserveOrder": true,
