@@ -68,12 +68,46 @@
                   "type": "group",
                   "preserveOrder": true,
                   "items": [
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Transmission-powerlines-geojson %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Transmission-substations-csv %>,
+                  ]
+                },
+                {
+                  "name": "Distribution",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items": [
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Distribution-powerlines-geojson %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Distribution-substations-csv %>,
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Supporting Information",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Distribution-boundaries %>,
+                <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/transmission-lines %>,
+              ]
+            },
+            {
+              "name": "ISF test bucket",
+              "type": "group",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Transmission",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items": [
                     <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/AEMO-csv %>,
                     <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/AEMO-csv %>,
                     <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/Electranet-csv %>,
                     <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/TransGrid-csv %>,
-                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Transmission-powerlines-geojson %>,
-                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Transmission-substations-csv %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/Transmission-powerlines-geojson %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/Transmission-substations-csv %>,
                   ]
                 },
                 {
@@ -91,19 +125,10 @@
                     <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/Essential-geojson %>,
                     <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/Powercor-csv %>,
                     <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/Powercor-geojson %>,
-                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Distribution-powerlines-geojson %>,
-                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Distribution-substations-csv %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/Distribution-powerlines-geojson %>,
+                    <% include custodian/Institute_for_Sustainable_Futures/DANCE3/region-mapping/DG-connection/Distribution-substations-csv %>,
                   ]
                 }
-              ]
-            },
-            {
-              "name": "Supporting Information",
-              "type": "group",
-              "preserveOrder": true,
-              "items": [
-                <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Distribution-boundaries %>,
-                <% include custodian/Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/transmission-lines %>,
               ]
             },
             {
