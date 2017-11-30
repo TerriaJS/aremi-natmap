@@ -7,6 +7,9 @@ http://nationalmap.gov.au/renewables/
 ### In the next version
 * Removing the old, rarely used, and not very informative layers in "Research -> NICTA Geothermal model".
 
+### Version 2017-11-13c
+* Update to [TerriaJS 5.5.4](https://github.com/TerriaJS/terriajs/blob/5.5.4/CHANGES.md) to fix IE11 functionality.
+
 ### Version 2017-11-13b
 * Fix AREMI Vector Tiles server HTTPS URL issue.
 
