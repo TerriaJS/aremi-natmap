@@ -4,6 +4,9 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Version 2017-11-13c
+* Update to [TerriaJS 5.5.4](https://github.com/TerriaJS/terriajs/blob/5.5.4/CHANGES.md) to fix IE11 functionality.
+
 ### Version 2017-11-13b
 * Fix AREMI Vector Tiles server HTTPS URL issue.
 
