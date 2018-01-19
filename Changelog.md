@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### In the next version
+* Removing the layer "Renewable Energy -> Bioenergy -> National -> Winery Residues -> Winery Residues by Postcode" as it is no longer available.
 * Removing the old, rarely used, and not very informative layers in "Research -> NICTA Geothermal model".
 
 ### Version 2017-11-13c
