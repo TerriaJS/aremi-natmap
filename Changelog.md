@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### In the next version
+* Updated to all new layers in the "Renewable Energy -> Bioenergy -> Tasmania" group from the Department of State Growth, Tasmania.
 * Removing the layer "Renewable Energy -> Bioenergy -> National -> Winery Residues -> Winery Residues by Postcode" as it is no longer available.
 * Removing the old, rarely used, and not very informative layers in "Research -> NICTA Geothermal model".
 
