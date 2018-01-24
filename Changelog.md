@@ -4,7 +4,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
-### In the next version
+### Version 2018-01-24
 * Update to [TerriaJS 5.5.7](https://github.com/TerriaJS/terriajs/blob/5.5.7/CHANGES.md).
 * Updated to all new layers in the "Renewable Energy -> Bioenergy -> Tasmania" group from the Department of State Growth, Tasmania.
 * Removing the layer "Renewable Energy -> Bioenergy -> National -> Winery Residues -> Winery Residues by Postcode" as it is no longer available.
