@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version
 * Remove layers from the ABS Data Service for which ABS return no data.
+* Removed the layer "Renewable Energy -> Hydro -> River Regions" as the data custodian has removed the layer.
 
 ### Version 2018-01-24
 * Update to [TerriaJS 5.5.7](https://github.com/TerriaJS/terriajs/blob/5.5.7/CHANGES.md).
