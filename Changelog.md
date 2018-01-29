@@ -4,6 +4,9 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### In the next version
+* Remove layers from the ABS Data Service for which ABS return no data.
+
 ### Version 2018-01-24
 * Update to [TerriaJS 5.5.7](https://github.com/TerriaJS/terriajs/blob/5.5.7/CHANGES.md).
 * Updated to all new layers in the "Renewable Energy -> Bioenergy -> Tasmania" group from the Department of State Growth, Tasmania.
