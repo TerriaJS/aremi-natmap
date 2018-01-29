@@ -4,7 +4,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
-### In the next version
+### Version 2018-01-30
 * Remove layers from the ABS Data Service for which ABS return no data.
 * Removed the layer "Renewable Energy -> Hydro -> River Regions" as the data custodian has removed the layer.
 * Fixed an issue with the group "Renewable Energy -> Wave -> Australian Wave Energy Atlas -> Wave Model and Context Layers" not displaying.
