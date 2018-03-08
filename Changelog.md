@@ -4,6 +4,9 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### In the next version
+* Added the "Research -> Australia Upper Reservoir Locations - ANU STORES" layer from ANU 100% Renewable Energy team.
+
 ### Version 2018-01-30b
 ### Version 2018-01-30
 * Remove layers from the ABS Data Service for which ABS return no data.
