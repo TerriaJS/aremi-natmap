@@ -21,7 +21,8 @@
         "network-opportunity-maps.s3-ap-southeast-2.amazonaws.com",
         "nicta.com.au",
         "noaa.gov",
-        "static.nationalmap.nicta.com.au"
+        "static.nationalmap.nicta.com.au",
+        "d28rz98at9flks.cloudfront.net"
     ],
     "feedback": {
         "userAgent": "TerriaBot (TerriaJS Feedback)",
