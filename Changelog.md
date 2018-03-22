@@ -8,6 +8,7 @@ http://nationalmap.gov.au/renewables/
 * Updated the "Renewable Energy -> Bioenergy -> Victoria" layers from Sustainability Victoria.
 * Added the group of layers in "Renewables -> Bioenergy -> New South Wales -> Livestock" from the NSW Department of Primary Industries.
 * Added the "Research -> Australia Upper Reservoir Locations - ANU STORES" layer from ANU 100% Renewable Energy team.
+* Update to [TerriaJS 5.6.4](https://github.com/TerriaJS/terriajs/blob/5.6.4/CHANGES.md).
 
 ### Version 2018-01-30b
 ### Version 2018-01-30
