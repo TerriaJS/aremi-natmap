@@ -4,7 +4,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
-### In the next version
+### Version 2018-03-26
 * Updated the "Renewable Energy -> Bioenergy -> Victoria" layers from Sustainability Victoria.
 * Added the group of layers in "Renewables -> Bioenergy -> New South Wales -> Livestock" from the NSW Department of Primary Industries.
 * Added the "Research -> Australia Upper Reservoir Locations - ANU STORES" layer from ANU 100% Renewable Energy team.
