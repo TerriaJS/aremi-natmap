@@ -4,6 +4,9 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### In the next version
+* Updated Transmission Lines, Substations, and Power Stations from using WMS to using ArcGIS MapServer services.
+
 ### Version 2018-03-26
 * Updated the "Renewable Energy -> Bioenergy -> Victoria" layers from Sustainability Victoria.
 * Added the group of layers in "Renewables -> Bioenergy -> New South Wales -> Livestock" from the NSW Department of Primary Industries.
