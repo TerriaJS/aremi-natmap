@@ -1,7 +1,6 @@
 {
     "initializationUrls" : [
-        "aremi",
-        "proxy/_60s/http://static.aremi.data61.io/init.json"
+        "aremi"
     ],
     "parameters": {
 
