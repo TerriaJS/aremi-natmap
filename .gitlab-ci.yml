@@ -56,6 +56,6 @@ trigger_ami_build:
     - DESCRIBE=$(cat ./describe)
     - BRANCH=$(cat ./branch)
     - TAR=aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz
-    - curl -s -X POST -F token=${aremi_cloud_token} -F ref=master -F variables[tar]=${TAR} -F variables[access_key]=${access_key} -F variables[secret_key]=${secret_key} -F variables[tag]=${DESCRIBE} "https://data61.githost.io/api/v3/projects/39/trigger/builds" > /dev/null
+    - curl -s -X POST -F token=${aremi_cloud_token} -F ref=dev-snayler0-include-tag -F variables[tar]=${TAR} -F variables[access_key]=${access_key} -F variables[secret_key]=${secret_key} -F variables[tag]=${DESCRIBE} "https://data61.githost.io/api/v3/projects/39/trigger/builds" > /dev/null
     - echo "Triggered a build on another repository. Check https://data61.githost.io/TerriaJS/aremi-cloud/pipelines to find the build. Logs will continue there."
 
