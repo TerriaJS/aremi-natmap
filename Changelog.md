@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version
 * Updated Transmission Lines, Substations, and Power Stations from using WMS to using ArcGIS MapServer services.
+* Update to [TerriaJS 5.7.0](https://github.com/TerriaJS/terriajs/blob/5.7.0/CHANGES.md).
 
 ### Version 2018-03-26
 * Updated the "Renewable Energy -> Bioenergy -> Victoria" layers from Sustainability Victoria.
