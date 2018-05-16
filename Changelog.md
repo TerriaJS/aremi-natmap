@@ -6,6 +6,7 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version:
 * Move "Renewable Energy -> Geothermal -> NSW \*" layers into their own "New South Wales" group.
+* Add description to the "Renewable Energy -> Wave -> Australian Wave Energy Atlas" group.
 
 ### Version 2018-04-18
 * Updated Transmission Lines, Substations, and Power Stations from using WMS to using ArcGIS MapServer services.
