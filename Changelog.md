@@ -4,6 +4,9 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### In the next version:
+* Move "Renewable Energy -> Geothermal -> NSW \*" layers into their own "New South Wales" group.
+
 ### Version 2018-04-18
 * Updated Transmission Lines, Substations, and Power Stations from using WMS to using ArcGIS MapServer services.
 * Update to [TerriaJS 5.7.0](https://github.com/TerriaJS/terriajs/blob/5.7.0/CHANGES.md).
