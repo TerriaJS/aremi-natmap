@@ -1035,35 +1035,69 @@
     "preserveOrder": true,
     "info": [
       {
-        "content": "This information is presented to support the AREMI datasets on biomass residues, providing details on locations of existing bioenergy projects and potential co-location sites. <p>For more information on the modelling methodology, or if you are a generator and would like to provide feedback to improve the assumptions, please contact Kelly Wickham at kelly.wickham@sustainability.vic.gov.au. <p>If you have queries about using the data for your project or would like more information about how Sustainability Victoria may be able to assist you, please contact the Investment Facilitation Services team at invest@sustainability.vic.gov.au, +61 3 8626 8746. ",
+        "content": "This information is presented to support the AREMI datasets on biomass residues, providing details on locations of existing bioenergy projects and potential co-location sites. <p> For more information on the modelling methodology, or if you are a generator and would like to provide feedback to improve the assumptions, please contact Kelly Wickham at kelly.wickham@sustainability.vic.gov.au. </p> <p> If you have queries about using the data for your project or would like more information about how Sustainability Victoria may be able to assist you, please contact the Investment Facilitation Services team at invest@sustainability.vic.gov.au, +61 3 8626 8746. </p>",
         "name": "Project Information"
       }
     ],
     "items": [
       {
+        "name": "Potential Co-Location Sites",
+        "type": "group",
+        "preserveOrder": true,
         "items": [
           {
             "url": "http://calculators.sustainability.vic.gov.au/biomass2018/WWTPs_list.csv",
-            "name": "Wastewater Treatment Plants (WWTP)",
+            "name": "WWTPs",
             "type": "csv",
             <% include ../../common/vic_camera_rectangle %>,
             "info": [
               {
-                "content": "The listing of waste water treatment plants aligns with the Victorian Organic Resource Recovery Strategy from where the ABBA project originates for Sustainability Victoria: To identify appropriate co-location sites that have the appropriate buffers and social licence to operate to receive, process or treat organic waste.",
+                "content": "<% include info/Facilities-Description.html %>",
                 "name": "Data Description"
               },
               {
-                "content": "Victorian Environment Protection Authority (EPA) – further update in 2018 <p>Could we also change the name ‘Garden Organics’ under Construction and Demolition WasteFor further information on EPA licenced facilities please refer to the following link http://www.epa.vic.gov.au/our-work/licences-and-approvals/licences <p>The list will be updated in time for the subsequent data upload scheduled for May 2018.",
+                "content": "Victorian Environment Protection Authority (EPA)",
+                "name": "Source Data"
+              },
+              <% include common-custodian-licensing %>
+            ]
+          },
+          {
+            "url": "http://calculators.sustainability.vic.gov.au/biomass2018/Landfill_facilities.csv",
+            "name": "Landfill Facilities",
+            "type": "csv",
+            <% include ../../common/vic_camera_rectangle %>,
+            "info": [
+              {
+                "content": "<% include info/Facilities-Description.html %>",
+                "name": "Data Description"
+              },
+              {
+                "content": "Victorian Environment Protection Authority (EPA)",
+                "name": "Source Data"
+              },
+              <% include common-custodian-licensing %>
+            ]
+          },
+          {
+            "url": "http://calculators.sustainability.vic.gov.au/biomass2018/Bioenergy_Facilities.csv",
+            "name": "Bioenergy facilities",
+            "type": "csv",
+            <% include ../../common/vic_camera_rectangle %>,
+            "info": [
+              {
+                "content": "<% include info/Facilities-Description.html %>",
+                "name": "Data Description"
+              },
+              {
+                "content": "Sustainability Victoria",
                 "name": "Source Data"
               },
               <% include common-custodian-licensing %>
             ]
           }
-        ],
-        "name": "Potential Co-Location Sites",
-        "type": "group",
-        "preserveOrder": true
-      }
+        ]
+      },
     ],
   }
 ]
