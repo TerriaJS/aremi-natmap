@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### In the next version:
+* Update all layers in "Renewable Energy -> Bioenergy -> Victoria".
 * Move "Renewable Energy -> Geothermal -> NSW \*" layers into their own "New South Wales" group.
 * Add description to the "Renewable Energy -> Wave -> Australian Wave Energy Atlas" group.
 * Update to [TerriaJS 6.0.1](https://github.com/TerriaJS/terriajs/blob/6.0.1/CHANGES.md).
