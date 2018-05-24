@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### In the next version:
+* Adding the group "Renewable Energy -> Bioenergy -> Western Australia -> Plantations" from Department of Primary Industries and Regional Development, Western Australia.
 * Update all layers in "Renewable Energy -> Bioenergy -> Victoria".
 * Move "Renewable Energy -> Geothermal -> NSW \*" layers into their own "New South Wales" group.
 * Add description to the "Renewable Energy -> Wave -> Australian Wave Energy Atlas" group.
