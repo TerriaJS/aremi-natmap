@@ -1,0 +1,68 @@
+            {
+              "name": "Landsat 16 day aggregate terrain corrected surface reflectance",
+              "type": "group",
+              "description": "<% include DigitalEarthAustralia-description %>",
+              "preserveOrder": true,
+              "items": [
+                {
+                  "name": "Landsat 8 - March 2013 - onwards",
+                  "type": "group",
+                  "items": [
+                    {
+                      "name": "Landsat 8 False colour",
+                      "url": "http://gsky.nci.org.au/ows",
+                      "layers": "LS8:NBART:FALSE",
+                      "type": "wms",
+                      "useOwnClock": true
+                    },
+                    {
+                      "name": "Landsat 8 True colour",
+                      "url": "http://gsky.nci.org.au/ows",
+                      "layers": "LS8:NBART:TRUE",
+                      "type": "wms",
+                      "useOwnClock": true
+                    }
+                  ]
+                },
+                {
+                  "name": "Landsat 7 - May 1999 - onwards",
+                  "type": "group",
+                  "items": [
+                    {
+                      "name": "Landsat 7 False colour",
+                      "url": "http://gsky.nci.org.au/ows",
+                      "layers": "LS7:NBART:FALSE",
+                      "type": "wms",
+                      "useOwnClock": true
+                    },
+                    {
+                      "name": "Landsat 7 True colour",
+                      "url": "http://gsky.nci.org.au/ows",
+                      "layers": "LS7:NBART:TRUE",
+                      "type": "wms",
+                      "useOwnClock": true
+                    }
+                  ]
+                },
+                {
+                  "name": "Landsat 5 - August 1986 - November 2011",
+                  "type": "group",
+                  "items": [
+                    {
+                      "name": "Landsat 5 False colour",
+                      "url": "http://gsky.nci.org.au/ows",
+                      "layers": "LS5:NBART:FALSE",
+                      "type": "wms",
+                      "useOwnClock": true
+                    },
+                    {
+                      "name": "Landsat 5 True colour",
+                      "url": "http://gsky.nci.org.au/ows",
+                      "layers": "LS5:NBART:TRUE",
+                      "type": "wms",
+                      "useOwnClock": true
+                    }
+                  ]
+                }
+              ]
+            }
