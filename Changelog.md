@@ -4,7 +4,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
-### In the next version:
+### Version 2018-05-25
 * Added the group "Topography -> Aerial/Satellite Imagery -> Australian Capital Territory" from Geoscience Australia.
 * Added the group "Topography -> Aerial/Satellite Imagery -> Landsat 16 day aggregate terrain corrected surface reflectance" from Digital Earth Australia.
 * Adding the group "Renewable Energy -> Bioenergy -> Western Australia -> Plantations" from Department of Primary Industries and Regional Development, Western Australia.
