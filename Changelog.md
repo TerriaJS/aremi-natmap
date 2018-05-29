@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### In the next version
+* Added the group of layers in "Renewable Energy -> Bioenergy -> National -> Catchment Scale Land Use" from ABARES.
 * Moved the layer "Research -> Australia Upper Reservoir Locations - ANU STORES" to the "Renewable Energy -> Hydro" group in the catalogue.
 
 ### Version 2018-05-25

@@ -1,0 +1,18 @@
+{
+  "id": "99fc7473",
+  "name": "Catchment Scale Land Use",
+  "url": "http://www.data.gov.au",
+  "type": "ckan",
+  "filterQuery": [
+    { "fq": "+(res_format:(wms OR WMS)) organization:abares ACLUMP" }
+  ],
+  "groupBy": "none",
+  "ungroupedTitle": null,
+  "itemProperties": {
+    "featureInfoTemplate" : {
+      "name": "Classification: {{GRAY_INDEX}}",
+      "template": "Australian Land Use and Management (ALUM) Classification: {{GRAY_INDEX}}",
+    },
+    <% include ../../common/standard_properties %>,
+  }
+}
