@@ -248,7 +248,14 @@
           "name": "Hydro",
           "type": "group",
           "items": [
-            <% include custodian/ANU/ANU_STORES %>,
+            {
+              "name": "Storage",
+              "type": "group",
+              "isPromoted": true,
+              "items": [
+                <% include custodian/ANU/ANU_STORES %>,
+              ]
+            },
             <% var catchmentId = "54a55472" %>
             <% include custodian/Bureau_of_Meteorology/Catchment %>,
             <% include custodian/Geoscience_Australia/Hydrography %>,
