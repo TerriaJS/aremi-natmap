@@ -9,6 +9,7 @@ http://nationalmap.gov.au/renewables/
 * Temporarily remove layers in "Renewable Energy -> Bioenergy -> National -> Sugarcane" and "Renewable Energy -> Bioenergy -> Queensland" on the request of the data custodian while they are in the process of being updated.
 * Added the group of layers in "Renewable Energy -> Bioenergy -> National -> Catchment Scale Land Use" from ABARES.
 * Moved the layer "Research -> Australia Upper Reservoir Locations - ANU STORES" to the "Renewable Energy -> Hydro" group in the catalogue.
+* Added Sentinal-2 to "Topography -> Aerial/Satellite Imagery" from Geoscience Australia.
 
 ### In the next version
 
