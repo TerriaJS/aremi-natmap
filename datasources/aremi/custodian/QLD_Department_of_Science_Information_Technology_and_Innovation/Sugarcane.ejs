@@ -1,9 +1,27 @@
 {
-  "id": "6337804c",
   "name": "Sugarcane",
-  "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/AREMI/Sugarcane/MapServer",
-  "type": "esri-mapServer-group",
-  "itemProperties": {
-    <% include ../../common/standard_properties %>
-  }
+  "type": "group",
+  "preserveOrder": true,
+  "items": [
+    {
+      "id": "b8e9f770",
+      "name": "Sugarcane Bagasse",
+      "url": "https://data.qld.gov.au/",
+      "type": "ckan-resource",
+      "catalogMaintainerMetadataDatasetName": "Cropping - sugarcane bagasse (estimated available)",
+      "resourceId": "d89e4650-38ff-499a-b1ae-1d22b9313ca7",
+      "csvResourceFormat": "^csv",
+      <% include ../../common/standard_properties %>
+    },
+    {
+      "id": "b90c33da",
+      "name": "Sugarcane Trash",
+      "url": "https://data.qld.gov.au/",
+      "type": "ckan-resource",
+      "catalogMaintainerMetadataDatasetName": "Cropping - sugarcane trash",
+      "resourceId": "9e37e1ed-57aa-428b-a863-d1ad650ade7e",
+      "csvResourceFormat": "^csv",
+      <% include ../../common/standard_properties %>
+    }
+  ]
 }

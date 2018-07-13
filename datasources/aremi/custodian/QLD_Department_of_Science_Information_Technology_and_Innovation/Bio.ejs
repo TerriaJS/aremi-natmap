@@ -1,36 +1,303 @@
 {
   "name": "Queensland",
   "type": "group",
+  "preserveOrder": true,
   "items": [
-
     {
-      "id": "948a3657",
+      "name": "Agriculture",
+      "type": "group",
+      "preserveOrder": true,
+      "items": [
+        {
+          "id": "b0326d38",
+          "name": "Cotton Straw",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Cropping - cotton straw",
+          "resourceId": "314b870e-e591-4d06-94ff-a3227690e390",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b0b3cec8",
+          "name": "Cotton Seed",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Cropping - cotton seed",
+          "resourceId": "ae0fbc76-f61a-42bb-a30d-c396c5cbd611",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b1306078",
+          "name": "Cotton Gin Trash",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Cropping - cotton seed",
+          "resourceId": "09576eef-3d00-4a62-a279-f324d5fa0055",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b1ae1068",
+          "name": "Sorghum Straw",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Cropping - sorghum straw",
+          "resourceId": "329f21ee-f201-4636-8f80-e99e87040ce0",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b22a9e26",
+          "name": "Wheat Straw",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Cropping - wheat straw",
+          "resourceId": "e89b00c2-65a7-4ee3-9108-e43db0a8e6bb",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        }
+      ]
+    },
+    {
       "name": "Forestry",
-      "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/AREMI/Forestry/MapServer",
-      "type": "esri-mapServer-group",
-      "itemProperties": {
-        <% include ../../common/standard_properties %>
-      }
+      "type": "group",
+      "preserveOrder": true,
+      "items": [
+      {
+        "name": "Forest Harvest Residues",
+        "type": "group",
+        "preserveOrder": true,
+        "items": [
+          {
+            "id": "b299ae4c",
+            "name": "Plantation Softwood",
+            "url": "https://data.qld.gov.au/",
+            "type": "ckan-resource",
+            "catalogMaintainerMetadataDatasetName": "Forestry - plantation (softwood) harvest residues",
+            "resourceId": "90c2fd04-b0e4-44bc-a124-d529cce867a8",
+            "csvResourceFormat": "^csv",
+            <% include ../../common/standard_properties %>
+          },
+          {
+            "id": "b3128196",
+            "name": "Plantation Softwood - Pulplog",
+            "url": "https://data.qld.gov.au/",
+            "type": "ckan-resource",
+            "catalogMaintainerMetadataDatasetName": "Forestry - plantation (softwood) pulplog",
+            "resourceId": "e3cbe3ad-f7d8-4a8d-9317-b9c08589b6c2",
+            "csvResourceFormat": "^csv",
+            <% include ../../common/standard_properties %>
+          },
+          {
+            "id": "b37309da",
+            "name": "Native Forest - Cypress",
+            "url": "https://data.qld.gov.au/",
+            "type": "ckan-resource",
+            "catalogMaintainerMetadataDatasetName": "Forestry - native forest (cypress) harvest ...",
+            "resourceId": "62a1d0cb-1ab6-4299-8dd7-e22fb43bf605",
+            "csvResourceFormat": "^csv",
+            <% include ../../common/standard_properties %>
+          },
+          {
+            "id": "b6ac59d0",
+            "name": "Native Forest - Hardwood",
+            "url": "https://data.qld.gov.au/",
+            "type": "ckan-resource",
+            "catalogMaintainerMetadataDatasetName": "Forestry - native forest (hardwood) harvest ...",
+            "resourceId": "9c2bc77c-5a30-4dae-bd6b-909a3d9d179f",
+            "csvResourceFormat": "^csv",
+            <% include ../../common/standard_properties %>
+          }
+        ]
+      },
+      {
+        "name": "Wood Processing Residues",
+        "type": "group",
+        "preserveOrder": true,
+        "items": [
+          {
+            "id": "b6f1c77c",
+            "name": "Plantation Softwood",
+            "url": "https://data.qld.gov.au/",
+            "type": "ckan-resource",
+            "catalogMaintainerMetadataDatasetName": "Forestry - plantation (softwood) wood processing ...",
+            "resourceId": "af775564-f493-4c82-9242-c7baf6c4469f",
+            "csvResourceFormat": "^csv",
+            <% include ../../common/standard_properties %>
+          },
+          {
+            "id": "b71a48f0",
+            "name": "Native Forest - Cypress",
+            "url": "https://data.qld.gov.au/",
+            "type": "ckan-resource",
+            "catalogMaintainerMetadataDatasetName": "Forestry - native forest (cypress) wood ...",
+            "resourceId": "545d7846-6a7d-47bd-9a14-3a574f1eebfb",
+            "csvResourceFormat": "^csv",
+            <% include ../../common/standard_properties %>
+          },
+          {
+            "id": "b73ebcb2",
+            "name": "Native Forest - Hardwood",
+            "url": "https://data.qld.gov.au/",
+            "type": "ckan-resource",
+            "catalogMaintainerMetadataDatasetName": "Forestry - native forest (hardwood) wood ...",
+            "resourceId": "8215ca0d-2c72-40f8-9ba4-507e5d19439a",
+            "csvResourceFormat": "^csv",
+            <% include ../../common/standard_properties %>
+          }
+        ]
+      },
+      ]
     },
-
     {
-      "id": "e7992a50",
+      "name": "Livestock",
+      "type": "group",
+      "preserveOrder": true,
+      "items": [
+        {
+          "id": "b760fa48",
+          "name": "Feedlot Cattle - Manure",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Livestock – feedlot cattle manure",
+          "resourceId": "83abe102-014c-4b7b-b2e5-fcefd90a0643",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b780a712",
+          "name": "Pigs - Manure",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Livestock – piggery manure",
+          "resourceId": "43e8f8d8-567e-4a83-8394-58dfb3efd55e",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b7a07c68",
+          "name": "Poultry - Manure",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Livestock – poultry manure",
+          "resourceId": "66f38f9b-98b0-45f7-b723-1555bdfe0168",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        }
+      ]
+    },
+    {
       "name": "Urban Waste",
-      "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/AREMI/UrbanWaste/MapServer",
-      "type": "esri-mapServer-group",
-      "itemProperties": {
-        <% include ../../common/standard_properties %>
-      }
+      "type": "group",
+      "preserveOrder": true,
+      "items": [
+        {
+          "id": "b7bf0070",
+          "name": "Biosolids",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Urban waste - biosolids",
+          "resourceId": "5aecc2af-d198-4776-8cfc-759c4995a398",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b7e46482",
+          "name": "Solid Waste - Food",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Urban waste – food",
+          "resourceId": "bd80fe0b-017c-4ca4-adb6-889ac6118864",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b8033f7e",
+          "name": "Solid Waste - Paper",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Urban waste - paper",
+          "resourceId": "e75c16ed-48e3-4267-92df-eb602dee7e02",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b81e3374",
+          "name": "Solid Waste - Green",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Urban waste - green",
+          "resourceId": "2a94a709-6372-4590-bc0b-a30ce7df7a7f",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b843e556",
+          "name": "Solid Waste - Timber",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Urban waste - timber",
+          "resourceId": "5ee92974-8b2f-4eb9-8cb9-0dbde7eeace2",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b85dc908",
+          "name": "Solid Waste - Grease Trap",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Urban waste - grease trap",
+          "resourceId": "8aaef411-26a4-41a6-8e1b-bf76195816f2",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        },
+        {
+          "id": "b87fea9c",
+          "name": "Solid Waste - Other Organics",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Urban waste - other",
+          "resourceId": "ffbcb5f8-cd2c-48c5-a78d-1c55fbb21f27",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        }
+      ]
     },
-
     {
-      "id": "f142897e",
-      "name": "Intensive Livestock",
-      "url": "https://gisservices.information.qld.gov.au/arcgis/rest/services/AREMI/IntensiveLivestock/MapServer",
-      "type": "esri-mapServer-group",
-      "itemProperties": {
-        <% include ../../common/standard_properties %>
-      }
-    }
+      "name": "Food Processing",
+      "type": "group",
+      "preserveOrder": true,
+      "items": [
+        {
+          "id": "b8a0b312",
+          "name": "Meat Processing",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Food processing – meat",
+          "resourceId": "e7e00f2b-d8a1-41c7-8328-f3154d4bf412",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        }
+      ]
+    },
+    {
+      "name": "Horticulture",
+      "type": "group",
+      "preserveOrder": true,
+      "items": [
+        {
+          "id": "b8c2f68e",
+          "name": "Bananas",
+          "url": "https://data.qld.gov.au/",
+          "type": "ckan-resource",
+          "catalogMaintainerMetadataDatasetName": "Horticulture - bananas",
+          "resourceId": "13e18e04-e504-43f5-983f-c8ab8dc7e9f6",
+          "csvResourceFormat": "^csv",
+          <% include ../../common/standard_properties %>
+        }
+      ]
+    },
   ]
 }
