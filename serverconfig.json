@@ -18,12 +18,9 @@
         "mapsengine.google.com",
         "nasa.gov",
         "nci.org.au",
-        "network-opportunity-maps.s3-ap-southeast-2.amazonaws.com",
         "nicta.com.au",
         "noaa.gov",
-        "static.nationalmap.nicta.com.au",
-        "uts-nom-stag.herokuapp.com",
-        "uts-nom.herokuapp.com"
+        "static.nationalmap.nicta.com.au"
     ],
     "feedback": {
         "userAgent": "TerriaBot (TerriaJS Feedback)",
