@@ -4,8 +4,47 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Inter-release catalogue updates
+* Minor updates to the "Electricity Infrastructure -> Network Opportunities" feature info data.
+* Temporarily remove layers in "Renewable Energy -> Bioenergy -> National -> Sugarcane" and "Renewable Energy -> Bioenergy -> Queensland" on the request of the data custodian while they are in the process of being updated.
+* Added the group of layers in "Renewable Energy -> Bioenergy -> National -> Catchment Scale Land Use" from ABARES.
+* Moved the layer "Research -> Australia Upper Reservoir Locations - ANU STORES" to the "Renewable Energy -> Hydro" group in the catalogue.
+
 ### In the next version
+
+### Version 2018-05-25
+* Added the group "Topography -> Aerial/Satellite Imagery -> Australian Capital Territory" from Geoscience Australia.
+* Added the group "Topography -> Aerial/Satellite Imagery -> Landsat 16 day aggregate terrain corrected surface reflectance" from Digital Earth Australia.
+* Adding the group "Renewable Energy -> Bioenergy -> Western Australia -> Plantations" from Department of Primary Industries and Regional Development, Western Australia.
+* Update all layers in "Renewable Energy -> Bioenergy -> Victoria".
+* Move "Renewable Energy -> Geothermal -> NSW \*" layers into their own "New South Wales" group.
+* Add description to the "Renewable Energy -> Wave -> Australian Wave Energy Atlas" group.
+* Update to [TerriaJS 6.0.2](https://github.com/TerriaJS/terriajs/blob/6.0.2/CHANGES.md).
+
+### Version 2018-04-18
+* Updated Transmission Lines, Substations, and Power Stations from using WMS to using ArcGIS MapServer services.
+* Update to [TerriaJS 5.7.0](https://github.com/TerriaJS/terriajs/blob/5.7.0/CHANGES.md).
+
+### Version 2018-03-26
+* Updated the "Renewable Energy -> Bioenergy -> Victoria" layers from Sustainability Victoria.
+* Added the group of layers in "Renewables -> Bioenergy -> New South Wales -> Livestock" from the NSW Department of Primary Industries.
+* Added the "Research -> Australia Upper Reservoir Locations - ANU STORES" layer from ANU 100% Renewable Energy team.
+* Update to [TerriaJS 5.6.4](https://github.com/TerriaJS/terriajs/blob/5.6.4/CHANGES.md).
+
+### Version 2018-01-30b
+### Version 2018-01-30
+* Remove layers from the ABS Data Service for which ABS return no data.
+* Removed the layer "Renewable Energy -> Hydro -> River Regions" as the data custodian has removed the layer.
+* Fixed an issue with the group "Renewable Energy -> Wave -> Australian Wave Energy Atlas -> Wave Model and Context Layers" not displaying.
+
+### Version 2018-01-24
+* Update to [TerriaJS 5.5.7](https://github.com/TerriaJS/terriajs/blob/5.5.7/CHANGES.md).
+* Updated to all new layers in the "Renewable Energy -> Bioenergy -> Tasmania" group from the Department of State Growth, Tasmania.
+* Removing the layer "Renewable Energy -> Bioenergy -> National -> Winery Residues -> Winery Residues by Postcode" as it is no longer available.
 * Removing the old, rarely used, and not very informative layers in "Research -> NICTA Geothermal model".
+
+### Version 2017-11-13c
+* Update to [TerriaJS 5.5.4](https://github.com/TerriaJS/terriajs/blob/5.5.4/CHANGES.md) to fix IE11 functionality.
 
 ### Version 2017-11-13b
 * Fix AREMI Vector Tiles server HTTPS URL issue.

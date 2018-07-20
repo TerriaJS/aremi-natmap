@@ -1,7 +1,11 @@
 {
   "corsDomains": [
-    "programs.communications.gov.au",
-    "aremi.data61.io"
+    "aremi.d61.io",
+    "aremi.data61.io",
+    "datacube.org.au",
+    "dea.ga.gov.au",
+    "gsky.nci.org.au",
+    "programs.communications.gov.au"
   ],
   "homeCamera": {
     "west": 112,
@@ -217,12 +221,17 @@
               "name": "National",
               "type": "group",
               "items": [
+                <% include custodian/ABARES/DGA_Catchment_Scale_Land_Use %>,
                 <% include custodian/USQ_National_Centre_for_Engineering_in_Agriculture/Biogas_Facilities %>,
                 <% include custodian/RIRDC/Biomass %>,
                 <% include custodian/Geoscience_Australia/Waste_Management_Facilities %>,
-                <% include custodian/QLD_Department_of_Science_Information_Technology_and_Innovation/Sugarcane %>,
                 <% include custodian/RenewablesSA/National_Winery_Residues %>,
                 <% include custodian/RenewablesSA/National_Piggery_Residues %>,
+                {
+                  "name": "Sugarcane",
+                  "type": "group",
+                  "description": "Sugarcane data is currently being updated. <p> Any enquiries about sugarcane biomass data can be directed to: Kelly.Bryant@des.qld.gov.au </p>"
+                },
               ]
             },
             {
@@ -246,6 +255,14 @@
                   ]
                 },
                 {
+                  "name": "Livestock",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items": [
+                    <% include custodian/NSW_Department_of_Primary_Industries/Livestock %>,
+                  ]
+                },
+                {
                   "name": "Waste",
                   "type": "group",
                   "preserveOrder": true,
@@ -255,7 +272,11 @@
                 }
               ]
             },
-            <% include custodian/QLD_Department_of_Science_Information_Technology_and_Innovation/Bio %>,
+            {
+              "name": "Queensland",
+              "type": "group",
+              "description": "Data for Queensland is currently being updated. <p> Any enquiries about Queensland biomass data can be directed to: Kelly.Bryant@des.qld.gov.au </p>"
+            },
             {
               "name": "South Australia",
               "type": "group",
@@ -264,7 +285,7 @@
                 <% include custodian/RenewablesSA/Bio %>,
               ]
             },
-            <% include custodian/TAS_Department_of_State_Growth/Harvest_Residue %>,
+            <% include custodian/TAS_Department_of_State_Growth/Bio %>,
             {
               "name": "Victoria",
               "type": "group",
@@ -282,15 +303,30 @@
         {
           "name": "Geothermal",
           "type": "group",
+          "preserveOrder": true,
           "items": [
-            <% include custodian/Geological_Survey_of_NSW/Geothermal %>,
             <% include custodian/Geoscience_Australia/Geothermal_layers %>,
+            {
+              "name": "New South Wales",
+              "type": "group",
+              "items": [
+                <% include custodian/Geological_Survey_of_NSW/Geothermal %>,
+              ]
+            },
           ]
         },
         {
           "name": "Hydro",
           "type": "group",
           "items": [
+            {
+              "name": "Storage",
+              "type": "group",
+              "isPromoted": true,
+              "items": [
+                <% include custodian/ANU/ANU_STORES %>,
+              ]
+            },
             <% var catchmentId = "54a55472" %>
             <% include custodian/Bureau_of_Meteorology/Catchment %>,
             <% include custodian/Geoscience_Australia/Hydrography %>,
@@ -305,6 +341,7 @@
             {
               "name": "Australian Wave Energy Atlas",
               "type": "group",
+              "description": "<% include custodian/CSIRO_OandA/WaveAtlas-description.html %>",
               "items": [
                 <% include custodian/CSIRO_OandA/WaveAtlas %>,
               ]
@@ -415,9 +452,11 @@
           "name": "Aerial/Satellite Imagery",
           "type": "group",
           "items": [
+            <% include custodian/Geoscience_Australia/ACT_Aerial_Imagery %>,
             <% include custodian/Land_and_Property_Information_NSW/Aerial %>,
             <% include custodian/Queensland_Government/Public_Imagery %>,
             <% include custodian/Land_Information_System_Tasmania/Orthophoto %>,
+            <% include custodian/Digital_Earth_Australia/Satellite_Imagery %>,
           ]
         },
         {

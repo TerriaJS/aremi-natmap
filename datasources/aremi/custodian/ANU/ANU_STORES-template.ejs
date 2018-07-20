@@ -1,0 +1,43 @@
+<h3>{{#Dam_volume}}Reservoir:{{/Dam_volume}} {{^Dam_volume}}Dam wall:{{/Dam_volume}} {{Index}}</h3>
+<table>
+
+{{#Dam_volume}}
+  <tr>
+    <th>Stored energy:</th>
+    <td>{{Stored_Ene}} GWh</td>
+  </tr>
+{{/Dam_volume}}
+
+  <tr>
+    <th>Elevation:</th>
+    <td>{{Elevation_}} metres</td>
+  </tr>
+
+{{#Dam_volume}}
+  <tr>
+    <th>Water area:</th>
+    <td>{{Water_area}} hectares</td>
+  </tr>
+  <tr>
+    <th>Reservoir volume:&nbsp;</th>
+    <td>{{Reservoir_}} gigalitres</td>
+  </tr>
+  <tr>
+    <th>Dam length:</th>
+    <td>{{Dam_length}} metres</td>
+  </tr>
+  <tr>
+    <th>Dam area:</th>
+    <td>{{Dam_area_h}} hectares</td>
+  </tr>
+  <tr>
+    <th>Dam volume:</th>
+    <td>{{Dam_volume}} gigalitres</td>
+  </tr>
+  <tr>
+    <th>Water to rock ratio:</th>
+    <td>{{Water_rock}}</td>
+  </tr>
+{{/Dam_volume}}
+
+</table>

@@ -1,0 +1,27 @@
+{
+  "name": "Australia Upper Reservoir Locations - ANU STORES",
+  "layers": "all_reservoirs",
+  "url": "https://gis.aremi.data61.io/ANU_STORES/wms",
+  "type": "wms",
+  "opacity": 1,
+  "info" :[
+    {
+      "name": "Disclaimer",
+      "content": "<% include ANU_STORES-disclaimer %>",
+    }
+  ],
+  "initialMessage": {
+    "title": "Australia Upper Reservoir Locations Disclaimer",
+    "content": "<% include ANU_STORES-disclaimer %>",
+    "confirmation": true,
+    "width": 600,
+    "height": 550,
+    "confirmText": "I Agree"
+  },
+  "featureInfoTemplate": {
+    "name": "{{Index}}{{#Dam_volume}}: {{Stored_Ene}} GWh {{/Dam_volume}}",
+    "template": "<% include ANU_STORES-template %>"
+  },
+  <% include ../../common/standard_properties %>,
+  <% include ../../common/home_camera_rectangle %>
+}

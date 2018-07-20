@@ -1,21 +1,10 @@
-<h2>Asset information</h2>
+<h2>Asset Information</h2>
 <dl class='isf-info'>
   <dt>Asset name                       </dt><dd> {{asset_name}}  </dd>
   <dt>Owner                            </dt><dd> {{network}}     </dd>
   <dt>Asset type                       </dt><dd> {{asset_type}}  </dd>
   <dt>Asset code                       </dt><dd> {{asset_code}}  </dd>  
   <dt>Data last updated                </dt><dd> {{data_issued}} </dd>
-</dl>
-  {{#notes}}
-	<h3>Notes:</h3>
-  {{notes}}
-  {{/notes}}
-
-
-<h2>Indicative new generation connection capacity information</h2>
-
-<dl class='isf-info'>
-  
   <dt>Voltage Level (kV)</dt>
   
   <dd> 
@@ -33,7 +22,16 @@
   <dd> {{relevant_voltage_for_connection}}</dd>
   {{/relevant_voltage_for_connection}}
 
-  <dt>New generation connection capacity available (MW)     </dt><dd> {{existing_new_connection_capacity}}  </dd>
+  <dt>Indicative new generation connection capacity available (MW)     </dt><dd> {{existing_new_connection_capacity}}  </dd>
+	
+</dl>
+  {{#notes}}
+	<h3>Notes:</h3>
+  {{notes}}
+  {{/notes}}
+
+<dl class='isf-info'>
+  
 
   {{#potential_new_connection_capacity}}
   <dt>Potential new generation connection capacity (MW)(allowing for cost effective network augmentation)</dt>
@@ -59,13 +57,13 @@
 </chart>
 {{/chart_true_false}}
 
-
+{{#existing_new_connection_capacity}}
 <h2>Factors and constraints in assessing connection capacity</h2>
 
  <table>
  <tr>
-   <th>These types of constraints were considered </th>
-   <th>These types of constraints were not considered in detail</th>
+   <th style='padding: 10px;'>These types of constraints were considered </th>
+   <th style='padding: 10px;'>These types of constraints were not considered in detail</th>
  </tr>
  <tr>
    <td>
@@ -75,7 +73,7 @@
    {{#existing_load_profiles_considered}}     <li> existing load              </li> {{/existing_load_profiles_considered}}
    {{#forecast_load_profiles_considered}}     <li> forecast load              </li> {{/forecast_load_profiles_considered}}
    {{#dynamic_stability_considered}}          <li> dynamic stability          </li> {{/dynamic_stability_considered}}
-   {{#outage_stats_considered}}               <li> outage statisitics         </li> {{/outage_stats_considered}}
+   {{#outage_stats_considered}}               <li> outage statistics          </li> {{/outage_stats_considered}}
    {{#seasonal_env_considered}} seasonal      <li> environment                </li> {{/seasonal_env_considered}}
    {{#credible_contingencies_considered}}     <li> credible contingencies     </li> {{/credible_contingencies_considered}}
    {{#other_generator_dispatch_considered}}   <li> other generator dispatch   </li> {{/other_generator_dispatch_considered}}
@@ -89,38 +87,46 @@
 
  </tr>
 </table> 
+{{/existing_new_connection_capacity}}
 
-<h2>Supporting information</h2>
+<h2>Further supporting information</h2>
+{{#supplementary_info_on_calc_considerations}}
+<p>{{supplementary_info_on_calc_considerations}}</p>
+{{/supplementary_info_on_calc_considerations}}
 
 <dl class='isf-info'>
-  {{#min_fault_current_level}}{{#max_fault_current_level}}
-  <dt>Fault Current Level (MVA)          </dt><dd>Minimum:  {{min_fault_current_level}}  Maximum: {{max_fault_current_level}}</dd>
-  {{/max_fault_current_level}}{{/min_fault_current_level}}
+  {{#max_fault_current_level}}
+  <dt>Fault Level (MVA)          </dt><dd>{{#min_fault_current_level}}Minimum:  {{min_fault_current_level}}{{/min_fault_current_level}}  Maximum: {{max_fault_current_level}}</dd>
+  {{/max_fault_current_level}}
   
-  {{#min_load_datetime}}{{#max_load_datetime}}
+  {{#min_load_p}}
     <dt>Load                               </dt>
-    <dd>Minimum:  {{min_load_datetime}}  {{min_load_p}}  MW {{min_load_q}}  MVAR: {{max_load_datetime}} {{max_load_p}}  MW {{max_load_q}}  MVAR</dd>
-  {{/max_load_datetime}}{{/min_load_datetime}}
+    <dd>Minimum: {{min_load_p}} MW, {{min_load_q}} MVAR {{#min_load_datetime}}at {{min_load_datetime}} {{/min_load_datetime}}| Maximum: {{max_load_p}} MW, {{max_load_q}} MVAR {{#max_load_datetime}}at {{max_load_datetime}}{{/max_load_datetime}}</dd>
+  {{/min_load_p}}
   
-  {{#line_r1}}{{#line_x1}}
-  <dt>Line impedance                     </dt><dd> R1 {{line_r1}} Ω /km X1 {{line_x1}} Ω /km</dd>
-  {{/line_x1}}{{/line_r1}}
+  {{#line_r1}}
+  <dt>Line impedance                     </dt><dd> R1: {{line_r1}} Ω /km {{#line_x1}}, X1: {{line_x1}} Ω /km{{/line_x1}}</dd>
+  {{/line_r1}}
   
   {{#line_length}}
   <dt>Line Length (km)                   </dt><dd>{{line_length}} km</dd>
   {{/line_length}}
   
   {{#line_summer_thermal_rating}}{{#line_winter_thermal_rating}}
-  <dt>Line thermal rating (MVA)          </dt>Summer: {{line_summer_thermal_rating}} MVA, Winter: {{line_winter_thermal_rating}}</dd>
-  {{/line_winter_thermal_rating}}{{/line_summer_thermal_rating}}
+  <dt>Line thermal rating (MVA)          </dt><dd>Summer: {{line_summer_thermal_rating}} MVA, Winter: {{line_winter_thermal_rating}}</dd>
+  {{/line_winter_thermal_rating}}{{/line_summer_thermal_rating}}</dd>
   
   </dl>
 
-<h2>Further Information</h2>
-
 <dl class='isf-info'>
   {{#url}}
-  <dt> <a href={{url}}>More information from {{network}} available here</a></dt><dd></dd>
+  <dt> <a href={{url}}> For more information from {{network}} click here</a></dt><dd></dd>
   {{/url}}
+  {{#contact_email}}
+  <dt> New connections contact email: </dt><dd><a target='_blank' href=mailto:{{contact_email}} >{{contact_email}}   </a></dd>
+  {{/contact_email}}
+  {{#contact_phone_number}}
+  <dt> New connections contact phone number:  </dt><dd>{{contact_phone_number}}</dd>
+  {{/contact_phone_number}}
 
 </dl>

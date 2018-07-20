@@ -44,5 +44,13 @@
             "keyLength": 16
         }
     },
-    "newShareUrlPrefix": "s"
+    "newShareUrlPrefix": "s",
+    "maxConversionSize": 20000000,
+
+    "esriTokenAuth": {
+        "postSizeLimit": 1024,
+        "servers": {
+            "SERVER": "CREDENTIALS"
+        }
+    }
 }
