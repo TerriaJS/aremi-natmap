@@ -4,14 +4,16 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+
+### In the next version
+
+* Added Sentinal-2 to "Topography -> Aerial/Satellite Imagery" from Geoscience Australia.
+
 ### Inter-release catalogue updates
 * Minor updates to the "Electricity Infrastructure -> Network Opportunities" feature info data.
 * Temporarily remove layers in "Renewable Energy -> Bioenergy -> National -> Sugarcane" and "Renewable Energy -> Bioenergy -> Queensland" on the request of the data custodian while they are in the process of being updated.
 * Added the group of layers in "Renewable Energy -> Bioenergy -> National -> Catchment Scale Land Use" from ABARES.
 * Moved the layer "Research -> Australia Upper Reservoir Locations - ANU STORES" to the "Renewable Energy -> Hydro" group in the catalogue.
-* Added Sentinal-2 to "Topography -> Aerial/Satellite Imagery" from Geoscience Australia.
-
-### In the next version
 
 ### Version 2018-05-25
 * Added the group "Topography -> Aerial/Satellite Imagery -> Australian Capital Territory" from Geoscience Australia.
