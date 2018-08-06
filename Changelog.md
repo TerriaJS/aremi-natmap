@@ -9,6 +9,7 @@ http://nationalmap.gov.au/renewables/
 
 * Added Sentinel-2 satellite imagery to "Topography -> Aerial/Satellite Imagery" from Digital Earth Australia.
 * Added Landsat Geomedian satellite imagery to "Topography -> Aerial/Satellite Imagery" from Digital Earth Australia.
+* Added three new Sawmill Residue layers to "Renewable Energy -> Bioenergy -> New South Wales" from NSW Forest Science, Department of Primary Industries - Forestry.
 * Update to [TerriaJS 6.0.5](https://github.com/TerriaJS/terriajs/blob/6.0.5/CHANGES.md).
 
 ### Inter-release catalogue updates
