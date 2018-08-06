@@ -7,7 +7,7 @@ http://nationalmap.gov.au/renewables/
 
 ### In the next version
 
-* Added Sentinal-2 to "Topography -> Aerial/Satellite Imagery" from Geoscience Australia.
+* Added Sentinel-2 satellite imagery to "Topography -> Aerial/Satellite Imagery" from Geoscience Australia.
 * Update to [TerriaJS 6.0.5](https://github.com/TerriaJS/terriajs/blob/6.0.5/CHANGES.md).
 
 ### Inter-release catalogue updates
