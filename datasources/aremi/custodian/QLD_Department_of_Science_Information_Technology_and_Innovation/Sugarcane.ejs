@@ -11,7 +11,13 @@
       "catalogMaintainerMetadataDatasetName": "Cropping - sugarcane bagasse (estimated available)",
       "resourceId": "d89e4650-38ff-499a-b1ae-1d22b9313ca7",
       "csvResourceFormat": "^csv",
-      <% include ../../common/standard_properties %>
+      "itemProperties": {
+        "tableStyle": {
+          "timeColumn": null
+        },
+        <% include ../../common/qld_camera_rectangle %>,
+        <% include ../../common/standard_properties %>
+      }
     },
     {
       "id": "b90c33da",
@@ -21,7 +27,13 @@
       "catalogMaintainerMetadataDatasetName": "Cropping - sugarcane trash",
       "resourceId": "9e37e1ed-57aa-428b-a863-d1ad650ade7e",
       "csvResourceFormat": "^csv",
-      <% include ../../common/standard_properties %>
+      "itemProperties": {
+        "tableStyle": {
+          "timeColumn": null
+        },
+        <% include ../../common/qld_camera_rectangle %>,
+        <% include ../../common/standard_properties %>
+      }
     }
   ]
 }
