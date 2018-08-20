@@ -20,7 +20,7 @@ wwwroot/init/aremi.json
 describe
 branch
 *.tar.gz
-
+package-lock.json
 /wwwroot/editor/
 /error.log
 /error.log
