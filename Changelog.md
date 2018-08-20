@@ -4,6 +4,8 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Version 2018-08-06b
+* Special release.
 
 ### Version 2018-08-06
 * Added Sentinel-2 satellite imagery to "Topography -> Aerial/Satellite Imagery" from Digital Earth Australia.
