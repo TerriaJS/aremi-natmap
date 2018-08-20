@@ -4,6 +4,8 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Version 2018-08-06b
+* Special release.
 
 
 ### In the next version:
