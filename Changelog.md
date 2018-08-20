@@ -5,6 +5,11 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 
+
+### In the next version:
+* Re-add all layers in "Renewable Energy -> Bioenergy -> National -> Sugarcane" and "Renewable Energy -> Bioenergy -> Queensland" following all new data services.
+
+
 ### Version 2018-08-06
 * Added Sentinel-2 satellite imagery to "Topography -> Aerial/Satellite Imagery" from Digital Earth Australia.
 * Added Landsat Geomedian satellite imagery to "Topography -> Aerial/Satellite Imagery" from Digital Earth Australia.
