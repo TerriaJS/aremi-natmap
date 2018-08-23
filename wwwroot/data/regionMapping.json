@@ -2312,6 +2312,27 @@
             ],
             "description": "AREMI ISF",
             "regionIdsFile": "data/regionids/region_map-aremi_isf_combined_asset_code.json"
+        },
+        "AUSTRALIAN_ENERGY_REGIONS": {
+            "layerName": "western_power",
+            "server": "http://aremi-wp.terria.io/western_power/{z}/{x}/{y}.pbf",
+            "serverType": "MVT",
+            "serverMaxNativeZoom": 12,
+            "serverMaxZoom": 28,
+            "bbox": [
+                114.10704205150327,
+                -43.4484604171,
+                153.63906769,
+                -14.164452636
+            ],
+            "uniqueIdProp": "FID",
+            "regionProp": "asset_code",
+            "nameProp": "name",
+            "aliases": [
+                "energy_asset"
+            ],
+            "description": "Western Power and ISF",
+            "regionIdsFile": "data/regionids/region_map-western_power_asset_code.json"
         }
     }
 }
