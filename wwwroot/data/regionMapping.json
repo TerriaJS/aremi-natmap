@@ -2315,7 +2315,7 @@
         },
         "AUSTRALIAN_ENERGY_REGIONS": {
             "layerName": "western_power",
-            "server": "http://aremi-wp.terria.io/western_power/{z}/{x}/{y}.pbf",
+            "server": "https://aremi-wp.terria.io/western_power/{z}/{x}/{y}.pbf",
             "serverType": "MVT",
             "serverMaxNativeZoom": 12,
             "serverMaxZoom": 28,
