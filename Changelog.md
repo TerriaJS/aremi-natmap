@@ -4,13 +4,13 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
-### Version 2018-08-06b
-* Special release.
-
-
 ### In the next version:
 * Re-add all layers in "Renewable Energy -> Bioenergy -> National -> Sugarcane" and "Renewable Energy -> Bioenergy -> Queensland" following all new data services.
+* Update to [TerriaJS 6.1.2](https://github.com/TerriaJS/terriajs/blob/6.1.2/CHANGES.md).
 
+
+### Version 2018-08-06b
+* Special release to fix a security issue.
 
 ### Version 2018-08-06
 * Added Sentinel-2 satellite imagery to "Topography -> Aerial/Satellite Imagery" from Digital Earth Australia.
