@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### In the next version:
+* Replace "NFI Yields" layers with "Plantation Residues" layers in the "Renewable Energy -> Bioenergy -> Western Australia -> Plantations group on request from the data custodian.
 * Re-add all layers in "Renewable Energy -> Bioenergy -> National -> Sugarcane" and "Renewable Energy -> Bioenergy -> Queensland" following all new data services.
 * Update to [TerriaJS 6.1.2](https://github.com/TerriaJS/terriajs/blob/6.1.2/CHANGES.md).
 
