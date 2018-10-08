@@ -16,7 +16,6 @@ proxyAuth.json
 .sass-cache
 /terriajs.pid
 /terriajs-server.log
-wwwroot/init/aremi.json
 describe
 branch
 *.tar.gz
