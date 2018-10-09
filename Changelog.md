@@ -4,6 +4,10 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Inter-release catalogue updates
+* Renamed the two identical layers "Australian Hydrography" to "Surface Hydrology" to reflect the new service data.
+* Removed the layer "Topography -> Water -> River regions" as the service is no longer available.
+
 ### Version 2018-09-28
 * Replace "NFI Yields" layers with "Plantation Residues" layers in the "Renewable Energy -> Bioenergy -> Western Australia -> Plantations group on request from the data custodian.
 * Re-add all layers in "Renewable Energy -> Bioenergy -> National -> Sugarcane" and "Renewable Energy -> Bioenergy -> Queensland" following all new data services.
