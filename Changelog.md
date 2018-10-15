@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Inter-release catalogue updates
+* Update layers in "Renewable Energy -> Bioenergy -> South Australia" to use new service URL's.
 * Replace all layers in "Topography -> Water -> Water Observations From Space" with a single layer from Digital Earth Australia.
 * Update "Topography -> Aerial/Satellite Imagery -> Landsat geomedian" to a new production service.
 * Update "Topography -> Aerial/Satellite Imagery -> Sentinel-2 A/B Near Real-Time (NRT) terrain corrected surface reflectance" layers to use new service with 90-day sliding window of imagery.
