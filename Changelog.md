@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Inter-release catalogue updates
+* Update "Topography -> Aerial/Satellite Imagery -> Landsat geomedian" to a new production service.
 * Update "Topography -> Aerial/Satellite Imagery -> Sentinel-2 A/B Near Real-Time (NRT) terrain corrected surface reflectance" layers to use new service with 90-day sliding window of imagery.
 * Renamed the two identical layers "Australian Hydrography" to "Surface Hydrology" to reflect the new service data.
 * Removed the layer "Topography -> Water -> River regions" as the service is no longer available.
