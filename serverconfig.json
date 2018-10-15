@@ -29,6 +29,7 @@
         "accessToken": "FEEDBACK_ACCESS_TOKEN"
     },
     "trustProxy": "loopback, linklocal, uniquelocal",
+    "redirectToHttps": true,
 
     "shareUrlPrefixes": {
         "": {
