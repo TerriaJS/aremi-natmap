@@ -1,7 +1,22 @@
 {
-  "id": "0b3d3db4",
   "name": "National Piggery Residues",
-  "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/National_Piggery_Residues/MapServer",
-  "type": "esri-mapServer-group",
-  <% include ../../common/standard_properties %>
+  "type": "group",
+  "items": [
+    {
+      "id": "0b3d3db4",
+      "name": "Conventional Flush Manure",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Nat_Piggery_Conventional_Flush_Manure/MapServer",
+      "type": "esri-mapServer",
+      "opacity": 0.8,
+      <% include ../../common/standard_properties %>
+    },
+    {
+      "id": "77279688",
+      "name": "Spent Bedding",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Nat_Piggery_Spent_Bedding/MapServer",
+      "type": "esri-mapServer",
+      "opacity": 0.8,
+      <% include ../../common/standard_properties %>
+    }
+  ]
 }

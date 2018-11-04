@@ -1,0 +1,37 @@
+{
+  "name": "Landsat geomedian",
+  "type": "group",
+  "preserveOrder": true,
+  "items": [
+    {
+      "id": "43590f65",
+      "name": "Surface Reflectance 25m Annual Geomedian (Landsat 8)",
+      "url": "https://ows.services.dea.ga.gov.au/",
+      "layers": "ls8_nbart_geomedian_annual",
+      "type": "wms",
+      "useOwnClock": true,
+      <% include ../../common/standard_properties %>,
+      "opacity": 1
+    },
+    {
+      "id": "4b34cde5",
+      "name": "Surface Reflectance 25m Annual Geomedian (Landsat 7)",
+      "url": "https://ows.services.dea.ga.gov.au/",
+      "layers": "ls7_nbart_geomedian_annual",
+      "type": "wms",
+      <% include ../../common/standard_properties %>,
+      "useOwnClock": true,
+      "opacity": 1
+    },
+    {
+      "id": "7ee21a4d",
+      "name": "Surface Reflectance 25m Annual Geomedian (Landsat 5)",
+      "url": "https://ows.services.dea.ga.gov.au/",
+      "layers": "ls5_nbart_geomedian_annual",
+      "type": "wms",
+      <% include ../../common/standard_properties %>,
+      "useOwnClock": true,
+      "opacity": 1
+    }
+  ]
+}

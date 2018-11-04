@@ -16,11 +16,9 @@ proxyAuth.json
 .sass-cache
 /terriajs.pid
 /terriajs-server.log
-wwwroot/init/aremi.json
 describe
 branch
 *.tar.gz
-
 /wwwroot/editor/
 /error.log
 /error.log
@@ -30,3 +28,4 @@ wwwroot/privateconfig.json
 deploy/packages/
 deploy/work/
 wwwroot/init/sdmx-abs-beta.json
+/wwwroot/init/abs-itt.json

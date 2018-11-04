@@ -1,0 +1,24 @@
+{
+  "name": "Sentinel-2 A/B Near Real-Time (NRT) terrain corrected surface reflectance",
+  "type": "group",
+  "items": [
+    {
+      "id": "55921c56",
+      "name": "Near Real-Time Surface Reflectance (Sentinel 2A)",
+      "layers": "s2a_nrt_granule_nbar_t",
+      "url": "https://ows.services.dea.ga.gov.au",
+      "type": "wms",
+      <% include ../../common/standard_properties %>,
+      "opacity": 1
+    },
+    {
+      "id": "eef9ae2c",
+      "name": "Near Real-Time Surface Reflectance (Sentinel 2B)",
+      "layers": "s2b_nrt_granule_nbar_t",
+      "url": "https://ows.services.dea.ga.gov.au",
+      "type": "wms",
+      <% include ../../common/standard_properties %>,
+      "opacity": 1
+    }
+  ]
+}

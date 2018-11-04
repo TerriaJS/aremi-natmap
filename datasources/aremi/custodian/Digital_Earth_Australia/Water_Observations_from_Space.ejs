@@ -1,0 +1,14 @@
+{
+  "id": "54071706",
+  "name": "Water Observations from Space",
+  "layers": "wofs_summary_wet",
+  "url": "https://ows.services.dea.ga.gov.au/",
+  "type": "wms",
+  "useOwnClock": true,
+  "ignoreUnknownTileErrors": true,
+  "opacity": 1,
+  "featureInfoTemplate" : {
+    "name": "Wet {{bands.count_wet}} of {{bands.count_clear}}",
+    "template": "Water has been observed at this location {{bands.count_wet}} times out of a total {{bands.count_clear}} clear satellite observations."
+  },
+}

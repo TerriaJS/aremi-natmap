@@ -7,11 +7,11 @@
         "feedbackUrl": "feedback",
         "corsProxyBaseUrl": "proxy/",
         "conversionServiceBaseUrl": "convert/",
-        "proj4ServiceBaseUrl": "proj4def/",
         "bingMapsKey": null,
         "googleUrlShortenerKey": null,
         "googleAnalyticsKey": null,
         "googleAnalyticsOptions": null,
+        "cesiumIonAccessToken": null,
         "disclaimer": {
             "text": "Disclaimer: AREMI must not be used for navigation or precise spatial analysis",
             "url": "about.html"
@@ -34,6 +34,7 @@
         "brandBarElements": [
             "<div class='ausglobe-title-aremi'><div class='ausglobe-title-aremi-md'><a href='http://arena.gov.au/' target='_blank'><img class='left'  src='images/ARENA-logo2.png' alt='Australian Renewable Energy Agency' /></a> <a href='https://data61.csiro.au/' target='_blank'><img class='right' src='images/DATA61_CSIRO.png' alt='Data61' style=\"width: 55px; height: 33px\"/></a> <br/> <strong>Australian Renewable Energy</strong> <br/> <small>Mapping Infrastructure</small> <br/> <span><a target='_blank' href='https://github.com/TerriaJS/aremi-natmap/blob/master/Changelog.md#version-{{version}}'>Version: {{version}}</a></span> </div><div class='ausglobe-title-aremi-sm'><strong>AREMI</strong></div></div>"
         ],
+        "proj4ServiceBaseUrl": "proj4def/",
         "mobileDefaultViewerMode": "3DSmooth",
         "experimentalFeatures": true,
         "autoPlay": false,

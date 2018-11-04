@@ -51,8 +51,7 @@
     {
       "id": "0c5700f4",
       "name": "Cereal Straw",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Cereal_Straw/MapServer/",
-      "layers": "1,0",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Cereal_Straw/MapServer",
       "type": "esri-mapServer",
       <% include ../../common/standard_properties %>
     },
@@ -60,8 +59,7 @@
     {
       "id": "cf754dde",
       "name": "Hay & Silage",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Hay_Silage/MapServer",
-      "layers": "1,0",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Hay_Silage/MapServer",
       "type": "esri-mapServer",
       <% include ../../common/standard_properties %>
     },
@@ -69,8 +67,7 @@
     {
       "id": "54180344",
       "name": "Non Cereal Straw",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Non_Cereal_Straw/MapServer/",
-      "layers": "1,0",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Non_Cereal_Straw/MapServer",
       "type": "esri-mapServer",
       <% include ../../common/standard_properties %>
     }
@@ -83,12 +80,42 @@
   "items": [
 
     {
-      "id": "e87cecb8",
-      "name": "Residues",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Forestry_Residues/MapServer",
+      "id": "5385671a",
+      "name": "Plantation Softwood Pulplogs",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Plantation_Softwood_Pulplogs/MapServer",
       "type": "esri-mapServer-group",
       "itemProperties": {
-        "opacity": 1.0,
+        "opacity": 0.8,
+        <% include ../../common/standard_properties %>
+      }
+    },
+    {
+      "id": "a88c63e7",
+      "name": "Plantation Softwood Processing",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Plantation_Softwood_Processing/MapServer",
+      "type": "esri-mapServer-group",
+      "itemProperties": {
+        "opacity": 0.8,
+        <% include ../../common/standard_properties %>
+      }
+    },
+    {
+      "id": "d75d319f",
+      "name": "Plantation Softwood Harvest",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Plantation_Softwood_Harvest/MapServer",
+      "type": "esri-mapServer-group",
+      "itemProperties": {
+        "opacity": 0.8,
+        <% include ../../common/standard_properties %>
+      }
+    },
+    {
+      "id": "c3c2dffd",
+      "name": "Plantation Hardwood Pulplog",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Plantation_Hardwood_Pulplog/MapServer",
+      "type": "esri-mapServer-group",
+      "itemProperties": {
+        "opacity": 0.8,
         <% include ../../common/standard_properties %>
       }
     },
@@ -96,7 +123,7 @@
     {
       "id": "2813c7ee",
       "name": "Green Triangle Biomass Potential",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Green_Triangle_Biomass_Potential/MapServer",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Green_Triangle_Biomass_Potential/MapServer",
       "type": "esri-mapServer",
       "opacity": 1.0,
       <% include ../../common/standard_properties %>
@@ -113,8 +140,7 @@
     {
       "id": "e219ba74",
       "name": "Fruit & Nuts",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Fruit_Nuts/MapServer/",
-      "layers": "1,0",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Fruit_Nuts/MapServer",
       "type": "esri-mapServer",
       <% include ../../common/standard_properties %>
     },
@@ -122,8 +148,7 @@
     {
       "id": "e47a176d",
       "name": "Vegetables",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Vegetables/MapServer",
-      "layers": "1,0",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Vegetables/MapServer",
       "type": "esri-mapServer",
       <% include ../../common/standard_properties %>
     }
@@ -139,8 +164,7 @@
     {
       "id": "fd5ed161",
       "name": "Cattle",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Cattle_Meat_Dairy/MapServer",
-      "layers": "1,0",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Cattle_Meat_Dairy/MapServer",
       "type": "esri-mapServer",
       <% include ../../common/standard_properties %>
     },
@@ -148,8 +172,7 @@
     {
       "id": "4276e84d",
       "name": "Poultry",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Poultry/MapServer",
-      "layers": "1,0",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Poultry/MapServer",
       "type": "esri-mapServer",
       <% include ../../common/standard_properties %>
     },
@@ -157,8 +180,7 @@
     {
       "id": "d271102e",
       "name": "Sheep",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Sheep/MapServer",
-      "layers": "1,0",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Sheep/MapServer",
       "type": "esri-mapServer",
       <% include ../../common/standard_properties %>
     }
@@ -173,9 +195,10 @@
     {
       "id": "2e2933ad",
       "name": "Municipal Organic Waste",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Municipal_Organic_Waste/MapServer",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Municipal_Solid_Waste/MapServer",
       "type": "esri-mapServer-group",
       "itemProperties": {
+        "opacity": 0.8,
         <% include ../../common/standard_properties %>
       }
     },
@@ -183,9 +206,10 @@
     {
       "id": "a55661d1",
       "name": "Commercial Industrial",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Commercial_Industrial/MapServer",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Commercial_Industrial/MapServer",
       "type": "esri-mapServer-group",
       "itemProperties": {
+        "opacity": 0.8,
         <% include ../../common/standard_properties %>
       }
     },
@@ -193,9 +217,10 @@
     {
       "id": "214a1983",
       "name": "Construction Demolition",
-      "url": "https://location.sa.gov.au/arcgis3/rest/services/AREMI/Construction_Demolition/MapServer",
+      "url": "https://lsa.geohub.sa.gov.au/server/rest/services/AREMI/Construction_Demolition/MapServer",
       "type": "esri-mapServer-group",
       "itemProperties": {
+        "opacity": 0.8,
         <% include ../../common/standard_properties %>
       }
     }

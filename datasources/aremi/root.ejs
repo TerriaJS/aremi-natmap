@@ -6,7 +6,9 @@
     "dea.ga.gov.au",
     "gsky.nci.org.au",
     "network-opportunity-maps.s3-ap-southeast-2.amazonaws.com",
-    "programs.communications.gov.au"
+    "programs.communications.gov.au",
+    "spatial.industry.nsw.gov.au",
+    "lsa.geohub.sa.gov.au"
   ],
   "homeCamera": {
     "west": 112,
@@ -226,13 +228,9 @@
                 <% include custodian/USQ_National_Centre_for_Engineering_in_Agriculture/Biogas_Facilities %>,
                 <% include custodian/RIRDC/Biomass %>,
                 <% include custodian/Geoscience_Australia/Waste_Management_Facilities %>,
+                <% include custodian/QLD_Department_of_Science_Information_Technology_and_Innovation/Sugarcane %>,
                 <% include custodian/RenewablesSA/National_Winery_Residues %>,
                 <% include custodian/RenewablesSA/National_Piggery_Residues %>,
-                {
-                  "name": "Sugarcane",
-                  "type": "group",
-                  "description": "Sugarcane data is currently being updated. <p> Any enquiries about sugarcane biomass data can be directed to: Kelly.Bryant@des.qld.gov.au </p>"
-                },
               ]
             },
             {
@@ -273,11 +271,7 @@
                 }
               ]
             },
-            {
-              "name": "Queensland",
-              "type": "group",
-              "description": "Data for Queensland is currently being updated. <p> Any enquiries about Queensland biomass data can be directed to: Kelly.Bryant@des.qld.gov.au </p>"
-            },
+            <% include custodian/QLD_Department_of_Science_Information_Technology_and_Innovation/Bio %>,
             {
               "name": "South Australia",
               "type": "group",
@@ -392,6 +386,7 @@
       "name": "Boundaries",
       "type": "group",
       "items": [
+        <% include custodian/Australian_Bureau_of_Statistics/All_ABS_Boundaries %>,
         {
           "name": "Cadastre and Land Tenure",
           "type": "group",
@@ -457,7 +452,9 @@
             <% include custodian/Land_and_Property_Information_NSW/Aerial %>,
             <% include custodian/Queensland_Government/Public_Imagery %>,
             <% include custodian/Land_Information_System_Tasmania/Orthophoto %>,
-            <% include custodian/Digital_Earth_Australia/Satellite_Imagery %>,
+            <% include custodian/Digital_Earth_Australia/Landsat %>,
+            <% include custodian/Digital_Earth_Australia/Sentinel2 %>,
+            <% include custodian/Digital_Earth_Australia/Geomedian %>,
           ]
         },
         {
@@ -471,26 +468,7 @@
           "name": "Water",
           "type": "group",
           "items": [
-            {
-              "name": "Floods",
-              "type": "group",
-              "items": [
-                {
-                  "name": "Queensland",
-                  "type": "group",
-                  "items": [
-                    <% include custodian/Queensland_Government/Floods %>,
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Water Observations from Space",
-              "type": "group",
-              "items": [
-                <% include custodian/Geoscience_Australia/Water_Observations_from_Space %>,
-              ]
-            },
+            <% include custodian/Digital_Earth_Australia/Water_Observations_from_Space %>,
             <% include custodian/Geoscience_Australia/Water_layers %>,
             <% include custodian/Bureau_of_Meteorology/Water_layers %>,
             <% var catchmentId = "d3a111dc" %>
