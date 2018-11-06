@@ -1,7 +1,7 @@
 <dl class='isf-info'>
   <dt>Network   </dt><dd>{{network}}</dd>
   <dt>Asset name</dt><dd>{{asset_name}}</dd>
-  <dt>Asset type</dt><dd>{{asset_type_str}}</dd>
+  <dt>Asset type</dt><dd>{{network_element_str}}</dd>
   <dt>Annual Deferral Value in {{year}} ($/kVAyr)</dt><dd>{{deferral_value}}</dd>
 
 {{#email}}
@@ -27,7 +27,7 @@
 {{#deferral_datasets}}
   <tr>
     <td>{{asset_name}}</td>
-    <td>{{asset_type}}</td>
+    <td>{{network_element}}</td>
     <td>{{deferrable_invest}} {{^deferrable_invest}} 0 {{/deferrable_invest}}</td>
     <td>{{invest_year}} {{^invest_year}} None {{/invest_year}}</td>
   </tr>
@@ -57,7 +57,7 @@
 <dl class='isf-info'>
   <dt>Network                             </dt><dd>{{network}}</dd>
   <dt>Asset name                          </dt><dd>{{asset_name}}</dd>
-  <dt>Asset type                          </dt><dd>{{asset_type_str}}</dd>
+  <dt>Asset type                          </dt><dd>{{network_element_str}}</dd>
   <dt>Total investment value (m$)         </dt><dd>{{total_invest}}</dd>
 {{^total_invest}}
 {{#email}}
@@ -76,8 +76,8 @@
   <dt>Investment year                     </dt><dd>{{invest_year}}</dd>
   <dt>Constraint season(s)                </dt><dd>{{constraint_season}}</dd>
   <dt>Average demand growth rate (MVA/yr) </dt><dd>{{demand_growth}}</dd>
-  <dt>Reactive support requirements       </dt><dd>{{support_required}} {{^support_required}} None {{/support_required}}</dd>
-  <dt>Notes                               </dt><dd class='isf-note'>{{problem_context}}</dd>
+  <dt>Reactive support requirements       </dt><dd>{{reactive_support_details}}</dd>
+  <dt>Notes                               </dt><dd class='isf-note'>{{investment_description}}</dd>
 {{#email}}
   <dt>NSP Contact Email</dt><dd><a href='mailto:{{NSP_contact}}'>{{email}}</a></dd>
 {{/email}}
