@@ -63,7 +63,14 @@
       },
       "commitment_year": {"type":"HIDDEN"},
       "connections_invest": {"type":"HIDDEN"},
-      "constraint_season": {"name": "Constraint Season"},
+      "constraint_season": {
+        "name": "Constraint Season",
+        "colorBins": [
+          {"color": "red",   "value": "Summer"},
+          {"color": "green", "value": "Summer, Winter"},
+          {"color": "blue",  "value": "Winter"}
+        ]
+      },
       "data_currency": {"type":"HIDDEN"},
       "deferrable_invest": {
         "name": "Deferable Investment (m$)",
