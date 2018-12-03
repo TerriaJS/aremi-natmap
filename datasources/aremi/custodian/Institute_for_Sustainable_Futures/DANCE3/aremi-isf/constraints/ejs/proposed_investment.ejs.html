@@ -20,10 +20,18 @@
   <dt>Other investment (m$)       </dt><dd>{{other_invest}}</dd>
 {{/other_invest}}
 
-  <dt>Total investment value (m$)</dt><dd> {{total_invest}}</dd>
-  <dt>Deferrable investment (m$) </dt><dd> {{deferrable_invest}}{{^deferrable_invest}} 0 {{/deferrable_invest}}</dd>
-  <dt>Investment year            </dt><dd> {{invest_year_str}}</dd>
-  <dt>Commitment year            </dt><dd> {{commitment_year}} {{^commitment_year}} Not specified {{/commitment_year}}</dd>
+  <dt>Total investment value (m$) </dt><dd>{{total_invest}}</dd>
+  <dt>Deferrable investment (m$)  </dt><dd>{{deferrable_invest}}{{^deferrable_invest}} 0 {{/deferrable_invest}}</dd>
+  <dt>Investment year             </dt><dd>{{invest_year_str}}</dd>
+  <dt>Commitment year             </dt><dd>{{commitment_year}} {{^commitment_year}} Not specified {{/commitment_year}}</dd>
+
+{{#data_currency}}
+  <dt>Data Currency               </dt><dd>{{data_currency}}</dd>
+{{/data_currency}}
+
+{{#next_update}}
+  <dt>Next Update                 </dt><dd>{{next_update}}</dd>
+{{/next_update}}
 </dl>
 
 <br>
