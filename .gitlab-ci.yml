@@ -30,7 +30,7 @@ build_tar:
 
 upload_tar:
   <<: *tags
-  image: snayler0/aremi-s3-uploader
+  image: docker-registry.it.csiro.au/aremi/aremi-s3-uploader
   dependencies:
     - build_tar
   stage: upload_tar
@@ -48,7 +48,7 @@ upload_tar:
 
 trigger_ami_build:
   <<: *tags
-  image: snayler0/aremi-ami-builder
+  image: docker-registry.it.csiro.au/aremi/aremi-ami-builder
   dependencies:
     - upload_tar
   stage: trigger_ami_build
