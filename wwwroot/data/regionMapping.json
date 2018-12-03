@@ -2429,14 +2429,14 @@
         },
         "AREMI_ISF_combined": {
             "layerName": "aremi_isf_combined",
-            "server": "https://aremi-vector-tiles.terria.io/aremi_isf_combined/{z}/{x}/{y}.pbf",
+            "server": "https://vt-aremi-v11.terria.io/aremi_isf_combined/{z}/{x}/{y}.pbf",
             "serverType": "MVT",
             "serverMaxNativeZoom": 12,
             "serverMaxZoom": 28,
             "bbox": [
-                133.540042807,
+                132.086814916,
                 -43.4484604171,
-                153.62177026,
+                153.60875542,
                 -14.164452636
             ],
             "uniqueIdProp": "FID",
@@ -2450,7 +2450,7 @@
         },
         "AUSTRALIAN_ENERGY_REGIONS": {
             "layerName": "western_power",
-            "server": "https://aremi-wp.terria.io/western_power/{z}/{x}/{y}.pbf",
+            "server": "https://vt-aremi-v11.terria.io/western_power/{z}/{x}/{y}.pbf",
             "serverType": "MVT",
             "serverMaxNativeZoom": 12,
             "serverMaxZoom": 28,
