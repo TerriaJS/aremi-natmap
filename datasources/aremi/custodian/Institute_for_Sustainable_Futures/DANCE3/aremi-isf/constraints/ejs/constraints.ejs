@@ -63,7 +63,14 @@
       },
       "commitment_year": {"type":"HIDDEN"},
       "connections_invest": {"type":"HIDDEN"},
-      "constraint_season": {"name": "Constraint Season"},
+      "constraint_season": {
+        "name": "Constraint Season",
+        "colorBins": [
+          {"color": "red",   "value": "Summer"},
+          {"color": "green", "value": "Summer, Winter"},
+          {"color": "blue",  "value": "Winter"}
+        ]
+      },
       "data_currency": {"type":"HIDDEN"},
       "deferrable_invest": {
         "name": "Deferable Investment (m$)",
@@ -76,6 +83,7 @@
       "email": {"type":"HIDDEN"},
       "file_link": {"type":"HIDDEN"},
       "info_link": {"type":"HIDDEN"},
+      "investment_description": {"type":"HIDDEN"},
       "invest_year": {"type":"HIDDEN"},
       "invest_year_str": {
         "name": "Investment Year",
@@ -94,6 +102,7 @@
       "network": {"type":"HIDDEN"},
       "network_element": {"type":"HIDDEN"},
       "network_element_str": {"type":"HIDDEN"},
+      "network_element_str": {"name": "Network Element"},
       "next_update": {"type":"HIDDEN"},
       "opex": {"type":"HIDDEN"},
       "other_invest": {"type":"HIDDEN"},
