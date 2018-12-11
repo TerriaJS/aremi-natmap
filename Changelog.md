@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Inter-release catalogue updates
+* Add 3 new Waste layers to "Renewable Energy -> Bioenergy -> Western Australia" from Department of Primary Industries and Regional Development, Western Australia.
 * Update regions for "Electricity Infrastructure -> Network Opportunities".
 * Update layers in "Renewable Energy -> Bioenergy -> South Australia" to use new service URL's.
 * Replace all layers in "Topography -> Water -> Water Observations From Space" with a single layer from Digital Earth Australia.
