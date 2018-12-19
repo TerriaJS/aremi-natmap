@@ -4,7 +4,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
-### Version 2018-12-11
+### Version 2018-12-19
 * Update regions and data for "Electricity Infrastructure -> Network Opportunities".
 * Update to [TerriaJS 6.3.5](https://github.com/TerriaJS/terriajs/blob/6.3.5/CHANGES.md).
 * Add 3 new Waste layers to "Renewable Energy -> Bioenergy -> Western Australia" from Department of Primary Industries and Regional Development, Western Australia.
