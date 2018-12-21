@@ -12,7 +12,7 @@
     "url": "http://github.com/TerriaJS/aremi-natmap"
   },
   "dependencies": {
-    "terriajs-server": "^2.7.4"
+    "terriajs-server": "^2.9.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",

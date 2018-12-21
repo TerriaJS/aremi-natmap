@@ -155,12 +155,7 @@ terria.start({
                 */
                 message += require('./lib/Views/GlobalDisclaimer.html');
                 var options = {
-                    title: defined(disclaimer.title) ? disclaimer.title : 'Disclaimer',
-                    confirmText: 'I Agree',
-                    width: 600,
-                    height: 550,
-                    message: message,
-                    hideUi: true
+                    message: message
                 };
 
                 viewState.notifications.push(options);
