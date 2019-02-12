@@ -1,0 +1,55 @@
+"tableStyle": {
+    "dataVariable": "Type - Wood/Coal",
+    <% include energise_tableStyle %>
+},
+
+"featureInfoTemplate": {
+  "name": "{{State}}",
+  "template": "
+  <div>
+  <% include ../near.css %>
+
+  <h3>{{State}} Staying Warm Summary</h3>
+
+  <h4 class='csiro-near-h4'> Type of Heating Appliance</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Type - Wood/Coal: </td> <td class='csiro-near-td-value'> {{Type - Wood/Coal}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Type - Ducted: </td> <td class='csiro-near-td-value'> {{Type - Ducted}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Type - Under Floor: </td> <td class='csiro-near-td-value'> {{Type - Under Floor}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Type - Air Conditioner: </td> <td class='csiro-near-td-value'> {{Type - Air Conditioner}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Type - Other: </td> <td class='csiro-near-td-value'> {{Type - Other}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Type - None: </td> <td class='csiro-near-td-value'> {{Type - None}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Heating usage in the past week</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Usage - 0 Days: </td> <td class='csiro-near-td-value'> {{Usage - 0 Days}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Usage - 1-2 Days: </td> <td class='csiro-near-td-value'> {{Usage - 1-2 Days}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Usage - 3-4 Days: </td> <td class='csiro-near-td-value'> {{Usage - 3-4 Days}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Usage - 5-6 Days: </td> <td class='csiro-near-td-value'> {{Usage - 5-6 Days}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Usage - 7 Days: </td> <td class='csiro-near-td-value'> {{Usage - 7 Days}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Comfort with Heating</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Comfort with Heating - Much Colder: </td> <td class='csiro-near-td-value'> {{Comfort with Heating - Much Colder}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Comfort with Heating - Slightly Colder: </td> <td class='csiro-near-td-value'> {{Comfort with Heating - Slightly Colder}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Comfort with Heating - Comfortable: </td> <td class='csiro-near-td-value'> {{Comfort with Heating - Comfortable}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Comfort with Heating - Slightly Hotter: </td> <td class='csiro-near-td-value'> {{Comfort with Heating - Slightly Hotter}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Comfort with Heating - Much Hotter: </td> <td class='csiro-near-td-value'> {{Comfort with Heating - Much Hotter}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Comfort with Heating - N/A: </td> <td class='csiro-near-td-value'> {{Comfort with Heating - N/A}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Comfort without Heating</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Comfort without Heating - Much Colder: </td> <td class='csiro-near-td-value'> {{Comfort without Heating - Much Colder}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Comfort without Heating - Slightly Colder: </td> <td class='csiro-near-td-value'> {{Comfort without Heating - Slightly Colder}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Comfort without Heating - Comfortable: </td> <td class='csiro-near-td-value'> {{Comfort without Heating - Comfortable}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Comfort without Heating - Slightly Hotter: </td> <td class='csiro-near-td-value'> {{Comfort without Heating - Slightly Hotter}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Comfort without Heating - Much Hotter: </td> <td class='csiro-near-td-value'> {{Comfort without Heating - Much Hotter}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Comfort without Heating - N/A: </td> <td class='csiro-near-td-value'> {{Comfort without Heating - N/A}} </td></tr>
+  </table>
+
+  </div>
+  "
+},

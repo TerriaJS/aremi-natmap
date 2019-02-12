@@ -1,0 +1,57 @@
+
+{
+  "name": "DNSP Zone Substation Yearly Summaries",
+  "url": "https://near.csiro.au/public/aremi/dataset/dnsp_yearly_summary.csv",
+
+  <% include ../near_dataset_common %>
+  <% include dnsp_yearly_summary_visualisation %>
+
+  "info": [
+    {
+      "name": "Dataset Description",
+      "content": "
+      <div>
+        <% include ../near.css %>
+      
+        <p class='csiro-near-p'>
+        Here we present yearly summaries of Zone Substation Load Data, including estimated total active energy, maximum and minimum supply, and standard deviation of interval measurements. </p>
+
+        <p class='csiro-near-p'>
+        The dataset spans the year range 2003 to 2018. An individual DNSP or zone substation may not have data available for every year in this range. This is indicated by a grey colouring on the map. A zone substation may not have data for a complete year. This can be determined by the Start and End Delivery Time. The summary statistics are calculated between between Start and End Delivery Time for the specified calendar year.  Where data was provided in apparent power units, a simple conversion to real power units was applied, assuming a constant power factor of 0.9. </p>
+
+        <ul class='csiro-near-ul'>
+          <li class='csiro-near-li'><strong>Utility Name: </strong>DNSP name</li>
+          <li class='csiro-near-li'><strong>Supply Region Name: </strong>Zone Substation name</li>
+          <li class='csiro-near-li'><strong>Supply Region ID: </strong>DNSP's identifier for the Zone Substation</li>
+          <li class='csiro-near-li'><strong>Year: </strong>Calendar year</li>
+          <li class='csiro-near-li'><strong>Start Delivery Time: </strong>Timestamp of first supply recorded for the year. </li>
+          <li class='csiro-near-li'><strong>End Delivery Time: </strong>Timestamp of last supply recorded for the year. 'year+1'-01-01 00:00:00 indicates the end of the calendar year.</li>
+          <li class='csiro-near-li'><strong>Total Active Energy (MWh): </strong>Total energy supplied by the Zone Substation</li>
+          <li class='csiro-near-li'><strong>Minimum Power (MW): </strong>Minimum power supplied by the Zone Substation </li>
+          <li class='csiro-near-li'><strong>Maximum Power (MW): </strong>Maximum power supplied by the Zone Substation</li>
+          <li class='csiro-near-li'><strong>Mean Power (MW): </strong>Mean of interval measurements</li>
+          <li class='csiro-near-li'><strong>Median Power (MW): </strong>Median of interval measurements</li>
+          <li class='csiro-near-li'li><strong>Standard Deviation (MW): </strong>Standard Deviation of interval measurements</li>
+          <li class='csiro-near-li'><strong>Coefficient of Variation: </strong>Standard Deviation / Mean Power</li>
+        </ul>
+      </div>      
+      "
+    },
+    {
+      "name": "Dataset Custodian",
+      "content": "National Energy Analytics Research Program (NEAR), from data provided by Australian distribution network businesses.  "
+    }
+    ,
+    {
+      "name": "Data Currency and Updates",
+      "content": "Spatial data as at 2016; electrical load data as specified."
+    },
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "The original zone substation information was provided to CSIRO as raw data. CSIRO has cleaned and translated the raw data, but the Distribution Network Service Provider has not analysed, assessed or validated the quality or accuracy of the original, cleaned, modified or geospatially visualised datasets. The Distribution Network Service Provider makes no warranty or guarantee as to the quality, accuracy or suitability for any particular purpose of the zone substation information.
+      For full terms and conditions, please see: https://near.csiro.au/termsOfUse"
+    }
+
+  ],
+},
+

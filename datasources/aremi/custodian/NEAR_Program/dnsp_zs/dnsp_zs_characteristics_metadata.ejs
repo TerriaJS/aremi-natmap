@@ -1,0 +1,65 @@
+{
+  "name": "DNSP Zone Substation Characteristics",
+  "url": "https://near.csiro.au/public/aremi/dataset/dnsp_zs_characteristics.csv",
+
+  <% include ../near_dataset_common %>
+  <% include dnsp_zs_characteristics_visualisation %>
+
+  "info": [
+    {
+    "name": "Dataset Description",
+    "content": 
+      "
+      <div>
+      <% include ../near.css %>
+
+      <p class='csiro-near-p'>
+      Here we present a characterisation of Zone Substations in terms of Australian Bureau of Statistics (ABS) Mesh Block (MB) land use categories, dwellings and persons. Areal interpolation has been used to reaggregate data from the ABS Mesh Block geometry to the Zone Substation geometry, using the intersection of polygons. This method has a number of limitations: </p>
+
+      <ul class='csiro-near-ul'>
+        <li><strong>Assumption of distribution: </strong>MBs areas are small, but there may be instances where a MB intersects with multiple Zone Substations. Statistics have been calculated using the proportionality of the area of intersection. This may not reflect the physical distribution, such as the location of dwellings and persons.</li>
+        <li><strong>Accuracy of spatial data: </strong>The ABS geometry is generally accurate than the DNSP geometry.</li>
+      </ul>
+      <p>
+      <a href='http://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.001~July%202016~Main%20Features~Mesh%20Blocks%20(MB)~10012'>Mesh Block Categories</a> are expressed as percentages - Area given to Category  / Zone Substation area.</p>
+
+      <p class='csiro-near-p'>
+      Estimation of Persons and Dwellings according to <a href='http://www.abs.gov.au/ausstats/abs@.nsf/mf/2074.0'>ABS 2016 Mesh Block Counts</a>. Display variables:</p>
+
+      <ul class='csiro-near-ul'>
+        <li><strong>DNSP: </strong>Name of the Distribution Network Service Provider</li>
+        <li><strong>State/Territory: </strong>State or Territory of the Distribution Network Service Provider</li>
+        <li><strong>Zone Substation Name: </strong>Name of the Zone Substation</li>
+        <li><strong>Zone Substation ID: </strong>DNSP's identifier for the Zone Substation</li>
+        <li><strong>Zone Substation Area (km2): </strong>Zone Substation area in square kilometres</li>
+        <li><strong>Dwellings: </strong>Approximate number of dwellings in the Zone Substation area</li>
+        <li><strong>Persons: </strong>Approximate population of the Zone Substation area</li>
+        <li><strong>Residential: </strong>Houses, apartments, duplexes, etc</li>
+        <li><strong>Commercial: </strong>Businesses, shops, etc, generally zero population count</li>
+        <li><strong>Industrial: </strong>Businesses, generally zero population count</li>
+        <li><strong>Primary Production: </strong>> 50% primary production, formerly known as Agricultural</li>
+        <li><strong>Education: </strong>Schools, universities, etc</li>
+        <li><strong>Hospital/Medical: </strong>Hospital or medical facilities, aged care</li>
+        <li><strong>Transport: </strong>Road and rail features</li>
+        <li><strong>Parkland: </strong>Parkland, nature reserves, public open space, etc</li>
+        <li><strong>Water: </strong>Water bodies, lakes, etc</li>
+        <li><strong>Other: </strong>Not easily categorised, high mixed use</li>
+      </ul>
+
+      </div>
+      "
+    },
+    {
+      "name": "Data Currency and Updates",
+      "content": "Spatial data for Zone Substation Boundaries and ABS Mesh Blocks as at 2016. "
+    },
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "<a href='http://www.abs.gov.au/websitedbs/D3310114.nsf/Home/Creative%20Commons%20licensing'>ABS Data</a>"
+    },
+    {
+      "name": "Dataset Custodian",
+      "content": "National Energy Analytics Research Program (NEAR), from data provided by Australian distribution network businesses.  "
+    }
+  ],
+},
