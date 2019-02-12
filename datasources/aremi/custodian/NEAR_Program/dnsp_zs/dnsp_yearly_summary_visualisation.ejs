@@ -1,0 +1,121 @@
+"idColumns": ["energy_asset"],
+
+"timeColumn": "Year",
+"initialTimeSource": "2003",
+"useOwnClock": true,
+"isSampled": true,
+"dateFormat": {
+    "currentTime": "'Year: ' yyyy",
+    "timelineTic": "yyyy"
+},
+
+"tableStyle": {
+  "regionVariable": "energy_asset",
+  "dataVariable": "TotalActiveEnergy_MWh",
+
+  "replaceWithNullValues": ['', '-'],
+  "nullColor": "rgba(150,135,135, 0.3)",
+  "nullLabel": "No Data",
+  "opacity": 0.75,
+  format: {"useGrouping": true},
+
+  "columns": {
+    "UtilityName": {
+      "name": "Utility Name"
+    },
+    "TotalActiveEnergy_MWh": {
+      "name": "Total Active Energy (MWh)",
+      "units": "MWh",
+      "maxDisplayValue": 100000,
+      <% include dnsp_zs_vis_column_options %>
+    },
+    "MinimumPower_MW": {
+      "name": "Minimum Power (MW)",
+      "units": "MW",
+      "maxDisplayValue": 50,
+      <% include dnsp_zs_vis_column_options %>
+    },
+    "MaximumPower_MW": {
+      "name": "Maximum Power (MW)",
+      "units": "MW",
+      "maxDisplayValue": 100,
+      <% include dnsp_zs_vis_column_options %>
+    },
+    "MeanPower_MW": {
+      "name": "Mean Power (MW)",
+      "units": "MW",
+      "maxDisplayValue": 100,
+      <% include dnsp_zs_vis_column_options %>
+    },
+    "MedianPower_MW": {
+      "name": "Median Power (MW)",
+      "units": "MW",
+      "maxDisplayValue": 100,
+      <% include dnsp_zs_vis_column_options %>    
+    },
+    "StdDeviation": {
+      "name": "Standard Deviation (MW)",
+      "units": "MW",
+      "maxDisplayValue": 50,
+      <% include dnsp_zs_vis_column_options %>
+    },
+    "coefficient_variation": {
+      "name": "Coefficient of Variation",
+      "maxDisplayValue": 50,
+      <% include dnsp_zs_vis_column_options %>
+    },        
+    "SupplyRegionName": {"type": "HIDDEN", "name": "Supply Region Name"},
+    "SupplyRegionID": {"type": "HIDDEN", "name": "Supply Region ID"},
+    "StartDeliveryTime": {"type": "HIDDEN", "name": "Start Delivery Time"},
+    "EndDeliveryTime": {"type": "HIDDEN", "name": "End Delivery Time" }
+  }
+},
+
+
+"featureInfoTemplate": {
+  "name": "{{SupplyRegionName}}",
+  "template": "
+  <div>
+  <% include ../near.css %>
+
+  <h3>{{SupplyRegionName}} Zone Substation Summary for {{Year}}</h3>
+
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Distribution Network Service Provider: </td> <td> {{UtilityName}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Supply Region: </td> <td> {{SupplyRegionName}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Supply Region ID: </td> <td> {{SupplyRegionID}} </td></tr>
+  </table>
+
+  <h4>Period of Coverage<h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Start Delivery Time: </td> <td> {{#StartDeliveryTime}} {{StartDeliveryTime}}{{/StartDeliveryTime}}
+    {{^StartDeliveryTime}} No data for {{Year}}{{/StartDeliveryTime}}</td></tr>
+    <tr><td class='csiro-near-td-label'>End Delivery Time: </td> <td> {{EndDeliveryTime}} </td></tr>
+  </table>
+
+  <h4>Descriptive Statistics<h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Total Active Energy (MWh): </td> <td class='csiro-near-td-value'> {{TotalActiveEnergy_MWh}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Minimum Power (MW): </td> <td class='csiro-near-td-value'> {{MinimumPower_MW}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Maximum Power (MW): </td> <td class='csiro-near-td-value'> {{MaximumPower_MW}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Mean Power (MW): </td> <td class='csiro-near-td-value'> {{MeanPower_MW}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Median Power (MW): </td> <td class='csiro-near-td-value'> {{MedianPower_MW}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Standard Deviation (MW): </td> <td class='csiro-near-td-value'> {{StdDeviation}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Coefficient of Variation: </td> <td class='csiro-near-td-value'> {{coefficient_variation}} </td></tr>
+  </table>
+
+  <h4>Time Series for {{terria.timeSeries.title}}<h4>
+  {{terria.timeSeries.chart}}
+  <br>
+  </div>
+  ",
+  "formats": {
+    "Total Active Energy (MWh)": {"maximumFractionDigits": 3, "minimumFractionDigits": 3, "useGrouping": true},
+    "Minimum Power (MW)": {"maximumFractionDigits": 3, "minimumFractionDigits": 3, "useGrouping": true},
+    "Maximum Power (MW)": {"maximumFractionDigits": 3, "minimumFractionDigits": 3, "useGrouping": true},
+    "Mean Power (MW)": {"maximumFractionDigits": 3, "minimumFractionDigits": 3, "useGrouping": true},
+    "Median Power (MW)": {"maximumFractionDigits": 3, "minimumFractionDigits": 3, "useGrouping": true},
+    "Standard Deviation (MW)": {"maximumFractionDigits": 3, "minimumFractionDigits": 3, "useGrouping": true},
+    "Coefficient of Variation": {"maximumFractionDigits": 3, "minimumFractionDigits": 3, "useGrouping": true}
+  }
+},

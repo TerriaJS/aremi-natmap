@@ -1,0 +1,54 @@
+"tableStyle": {
+  "dataVariable": "Tariff - Flat Rate",
+  <% include energise_tableStyle %>
+},
+
+"featureInfoTemplate": {
+  "name": "{{State}}",
+  "template": "
+  <div>
+  <% include ../near.css %>
+
+  <h3>{{State}} Household Bills Summary</h3>
+
+  <h4 class='csiro-near-h4'>Electricity Tariff</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Tariff - Flat Rate: </td> <td class='csiro-near-td-value'> {{Tariff - Flat Rate}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Tariff - Flexible Pricing: </td> <td class='csiro-near-td-value'> {{Tariff - Flexible Pricing}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Tariff - Demand: </td> <td class='csiro-near-td-value'> {{Tariff - Demand}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Tariff - Controlled Load: </td> <td class='csiro-near-td-value'> {{Tariff - Controlled Load}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Tariff - Other: </td> <td class='csiro-near-td-value'> {{Tariff - Other}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Tariff - Unknown: </td> <td class='csiro-near-td-value'> {{Tariff - Unknown}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Rebates and Discounts</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Rebate - On-Time Payment: </td> <td class='csiro-near-td-value'> {{Rebate - On-Time Payment}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Rebate - Paperless Billing: </td> <td class='csiro-near-td-value'> {{Rebate - Paperless Billing}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Rebate - Direct Debit Discount: </td> <td class='csiro-near-td-value'> {{Rebate - Direct Debit Discount}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Rebate - Bundled: </td> <td class='csiro-near-td-value'> {{Rebate - Bundled}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Rebate - Government Concession: </td> <td class='csiro-near-td-value'> {{Rebate - Government Concession}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Rebate - Other: </td> <td class='csiro-near-td-value'> {{Rebate - Other}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Rebate - Unknown: </td> <td class='csiro-near-td-value'> {{Rebate - Unknown}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Rebate - None: </td> <td class='csiro-near-td-value'> {{Rebate - None}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Monthly Energy Cost</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Cost - less than $100: </td> <td class='csiro-near-td-value'> {{Cost - less than $100}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Cost - $100-200: </td> <td class='csiro-near-td-value'> {{Cost - $100-200}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Cost - $200-300: </td> <td class='csiro-near-td-value'> {{Cost - $200-300}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Cost - over $300: </td> <td class='csiro-near-td-value'> {{Cost - over $300}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Average Daily Usage (kWh)</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Usage - 0-10 kWh: </td> <td class='csiro-near-td-value'> {{Usage - 0-10 kWh}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Usage - 10-20 kWh: </td> <td class='csiro-near-td-value'> {{Usage - 10-20 kWh}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Usage - 20-30 kWh: </td> <td class='csiro-near-td-value'> {{Usage - 20-30 kWh}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Usage - 30+ kWh: </td> <td class='csiro-near-td-value'> {{Usage - 30+ kWh}} </td></tr>
+  </table>
+
+  </div>
+  "
+},

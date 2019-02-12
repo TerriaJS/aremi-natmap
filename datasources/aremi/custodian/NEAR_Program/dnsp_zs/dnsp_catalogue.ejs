@@ -1,0 +1,51 @@
+
+{
+  "name": "DNSP Zone Substations",
+  "type": "group",
+  "preserveOrder": true,
+  "info": [
+    {
+      "name": "Distribution Network Service Provider (DNSP) Zone Substation Data Overview",
+      "content": "
+      <div>
+        <p class='csiro-near-p'>
+        The National Energy Analytics Research (NEAR) Program has brought together up to a decade of half-hourly electricity consumption data for more than one thousand zone substations across Australia’s electricity distribution systems. Including data that has never before been publicly released, the zone substation dataset is a rich view into the longitudinal load consumption behaviour of Australian electricity users. The data is presented in a consistent format across distribution businesses and available for free on the <a href=https://near.csiro.au>NEAR platform</a>.</p>
+
+        <p class='csiro-near-p'>
+        Note that Distribution Network Service Providers (DNSPs) have not analysed, assessed or validated the quality or accuracy of the original, cleaned, modified or geospatially visualised datasets. Distribution Network Service Providers make no warranty or guarantee as to the quality, accuracy or suitability for any particular purpose of the zone substation information.  </p>
+  
+        <p class='csiro-near-p'>
+        DNSPs represented: </p>
+
+        <ul class='csiro-near-ul'>
+          <li class='csiro-near-li'><strong>ActewAGL: </strong>ACT, now Evoenergy</li>
+          <li class='csiro-near-li'><strong>Ausgrid: </strong>New South Wales</li>
+          <li class='csiro-near-li'><strong>AusNet Services: </strong>Victoria</li>
+          <li class='csiro-near-li'><strong>CitiPower: </strong>Victoria</li>
+          <li class='csiro-near-li'><strong>Endeavour Energy: </strong>New South Wales</li>
+          <li class='csiro-near-li'><strong>Energex: </strong>Queensland</li>
+          <li class='csiro-near-li'><strong>Ergon Energy: </strong>Queensland</li>
+          <li class='csiro-near-li'><strong>Essential Energy: </strong>New South Wales</li>
+          <li class='csiro-near-li'><strong>Powercor: </strong>Victoria</li>
+          <li class='csiro-near-li'><strong>SA Power Networks: </strong>South Australia</li>
+          <li class='csiro-near-li'><strong>TasNetworks: </strong>Tasmania</li>
+          <li class='csiro-near-li'><strong>United Energy: </strong>Victoria</li>
+          <li class='csiro-near-li'><strong>Western Power: </strong>Western Australia</li>
+        </ul>
+
+        <p class='csiro-near-p'>
+        DNSPs not represented: </p>
+
+        <ul class='csiro-near-ul'>
+          <li class='csiro-near-li'><strong>Horizon Power: </strong>Western Australia, no region mapping data available at this time.</li>
+          <li class='csiro-near-li'><strong>Power and Water Corporation: </strong>Northern Territory, no load or region mapping data available at this time.</li>
+        </ul>
+      </div>
+      "
+    }
+  ],
+  "items": [
+    <% include dnsp_yearly_summary_metadata %>
+    <% include dnsp_zs_characteristics_metadata %>
+  ]
+}

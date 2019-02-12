@@ -1,0 +1,90 @@
+{
+  "name": "Household Bills",
+  "url": "https://near.csiro.au/public/aremi/dataset/energise_household_bills.csv",
+
+  <% include ../near_dataset_common %>
+  <% include energise_household_bills_visualisation %>
+
+  "info": [
+    {
+      "name": "Dataset Description",
+      "content": "
+      <div>
+      <% include ../near.css %>
+      
+      <p class='csiro-near-p'>
+      CSIRO Energise participants were surveyed on their household bills, such as electricity tariffs, rebates, monthly cost and daily usage. Here we present a summary of their responses.</p>
+      
+      <h4 class='csiro-near-h4'>Electricity Tariff</h4>
+      <p class='csiro-near-p'>
+      What type of electricity tariff are you on? (select all that apply).  </p>
+      <p class='csiro-near-p'>
+      This should appear on your bill where the electricity charges are listed. </p>
+      <ul class='csiro-near-ul'>
+        <li><strong>Tariff - Flat Rate: </strong> Single or flat rate tariff – electricity price is fixed, so you pay the same rate whatever time of day you use electricity</li>
+        <li><strong>Tariff - Flexible Pricing: </strong> Time of use or flexible pricing tariff – electricity price varies depending on the time of day, so you pay different rates for peak and off-peak times </li>
+        <li><strong>Tariff - Demand: </strong> Bill includes a daily ‘demand’ or ‘capacity’ charge, based on your maximum electricity use (i.e. your highest power demand) at a point in time, typically during peak periods</li>
+        <li><strong>Tariff - Controlled Load: </strong>One or more appliances (e.g. hot water system, underfloor heating, pool pump) have separate meters, and you usually pay a lower rate for the electricity used by such appliances.</li>
+        <li><strong>Tariff - Other: </strong> Other tariff</li>
+        <li><strong>Tariff - Unknown: </strong> Don't know</li>
+      </ul>
+      
+      <h4 class='csiro-near-h4'>Rebates and Discounts</h4>
+      <p class='csiro-near-p'>
+      What type of discount, rebate or concession do you receive? (select all that apply)</p>
+      <ul class='csiro-near-ul'>
+        <li><strong>Rebate - On-Time Payment: </strong> Pay on time discount – when you pay your bill by the due date</li>
+        <li><strong>Rebate - Paperless Billing: </strong> Paperless billing discount – when you receive your bill electronically (e.g. email) rather than by post</li>
+        <li><strong>Rebate - Direct Debit Discount: </strong> PDirect debit discount – when money is automatically deducted from your bank account or credit card to pay your bill</li>
+        <li><strong>Rebate - Bundled: </strong> Bundled discount – when you buy both electricity and gas from the same retailer</li>
+        <li><strong>Rebate - Government Concession: </strong> Government energy concession – available to pensioners, low income earners, customers with certain medical conditions, and other eligible concession card holders</li>
+        <li><strong>Rebate - Other: </strong> Other rebate, discount and/or concession</li>
+        <li><strong>Rebate - Unknown: </strong> Don't know</li>
+        <li><strong>Rebate - None: </strong> Don't receive any rebate or discount</li>
+      </ul>
+      
+      <h4 class='csiro-near-h4'>Monthly Energy Cost</h4>
+      <p class='csiro-near-p'>
+      Bill: In dollars, how much is your household’s most recent electricity bill? Please give the total amount payable.</p>
+      <p class='csiro-near-p'>
+      Contextual help: Please give the total amount payable. This should be listed as the ‘amount due’ on your bill. If you don’t know the answer, please leave the question blank. </p>
+      <p class='csiro-near-p'>
+      Period: Looking at your household’s most recent electricity bill, over what period of time does this bill cover?</p>
+      <p class='csiro-near-p'>
+      Monthly energy cost has been calculated as Bill / Period</p>
+      <ul class='csiro-near-ul'>
+        <li><strong>Cost - less than $100: </strong> </li>
+        <li><strong>Cost - $100-200: </strong> </li>
+        <li><strong>Cost - $200-300: </strong> </li>
+        <li><strong>Cost - over $300: </strong> </li>
+      </ul>
+      
+      <h4 class='csiro-near-h4'>Average Daily Usage (kWh)</h4>
+      <p class='csiro-near-p'>
+      According to your most recent bill, what is your household’s average daily electricity usage (in kWh)? 
+      <p class='csiro-near-p'>
+      Contextual help: The average daily usage should be displayed in a chart or table on your bill. kWh stands for kilowatt hour. It is the unit of measurement for your electricity usage.</p>
+       <ul class='csiro-near-ul'>
+        <li><strong>Usage - 0-10 kWh: </strong> </li>
+        <li><strong>Usage - 10-20 kWh: </strong> </li>
+        <li><strong>Usage - 20-30 kWh: </strong> </li>
+        <li><strong>Usage - 30+ kWh: </strong> </li>
+       </ul>
+      
+      </div>
+      "
+    },
+    {
+      "name": "Dataset Custodian",
+      "content": "<% include energise_custodian %>"
+    },
+    {
+      "name": "Data Currency and Updates",
+      "content": "<% include energise_data_currency %>"
+    },
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "<% include energise_licensing %>"
+    }
+  ],
+},

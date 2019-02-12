@@ -1,0 +1,49 @@
+"tableStyle": {
+  "dataVariable": "Size - 1",
+  <% include energise_tableStyle %>
+},
+
+"featureInfoTemplate": {
+  "name": "{{State}}",
+  "template": 
+  "
+  <div>
+  <% include ../near.css %>
+
+  <h3>{{State}} Demographics Summary</h3>
+
+  <h4 class='csiro-near-h4'>Household Size</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Size - 1: </td> <td class='csiro-near-td-value'> {{Size - 1}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Size - 2: </td> <td class='csiro-near-td-value'> {{Size - 2}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Size - 3: </td> <td class='csiro-near-td-value'> {{Size - 3}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Size - 4: </td> <td class='csiro-near-td-value'> {{Size - 4}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Size - 5 or more: </td> <td class='csiro-near-td-value'> {{Size - 5 or more}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Household Type</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Type - Lone Person: </td> <td class='csiro-near-td-value'> {{Type - Lone Person}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Type - Family with Children: </td> <td class='csiro-near-td-value'> {{Type - Family with Children}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Type - Family no Children: </td> <td class='csiro-near-td-value'> {{Type - Family no Children}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Type - Single Parent: </td> <td class='csiro-near-td-value'> {{Type - Single Parent}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Type - Other: </td> <td class='csiro-near-td-value'> {{Type - Other}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Tenure Type</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Tenure - Owned: </td> <td class='csiro-near-td-value'> {{Tenure - Owned or Partly Owned}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Tenure - Rental Property: </td> <td class='csiro-near-td-value'> {{Tenure - Rental Property}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Tenure - Other: </td> <td class='csiro-near-td-value'> {{Tenure - Other}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Household Income</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Income less than $33,800: </td> <td class='csiro-near-td-value'> {{Income - Less than $33,800}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Income between $33,800 and $78,000: </td> <td class='csiro-near-td-value'> {{Income - $33,800 to $78,000}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Income - Greater than $78,000: </td> <td class='csiro-near-td-value'> {{Income - Greater than $78,000}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Income not stated: </td> <td class='csiro-near-td-value'> {{Income - Prefer not to say}} </td></tr>
+  </table>
+  </div>
+  "
+},

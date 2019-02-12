@@ -1,0 +1,84 @@
+{
+  "name": "Staying Warm",
+  "url": "https://near.csiro.au/public/aremi/dataset/energise_staying_warm.csv",
+
+  <% include ../near_dataset_common %>
+  <% include energise_staying_warm_visualisation %>
+
+  "info": [
+    {
+      "name": "Dataset Description",
+      "content": "
+      <div>
+      <% include ../near.css %>
+      
+      <p class='csiro-near-p'>
+      CSIRO Energise survey participants were asked a number of questions about the type and usage of heating appliances, and their level of comfort with and without heating.
+      </p>
+      
+      <h4 class='csiro-near-h4'>Type of Heating Appliance</h4>
+      <p class='csiro-near-p'>
+      What type(s) of heating does your household have? (select all that apply)</p>
+      
+       <ul class='csiro-near-ul'>
+        <li><strong>Type - Wood/Coal: </strong> Wood or coal fire</li>
+        <li><strong>Type - Ducted: </strong> Gas or electric central heating</li>
+        <li><strong>Type - Under Floor: </strong> Gas or electric under floor heating</li>
+        <li><strong>Type - Air Conditioner: </strong> Air conditioning unit(s) that are used as heater(s)</li>
+        <li><strong>Type - Other: </strong> Other type(s) of heating</li>
+        <li><strong>Type - None: </strong> N/A – do not have any heating</li>
+      </ul>
+      
+      <h4 class='csiro-near-h4'>Heating in the past week</h4>
+      <p class='csiro-near-p'>
+      Thinking about the past seven days, how many days did your household use at least one heater or heating system? </p>
+      <p class='csiro-near-p'>
+      Contextual help: If your household did not use any heating in the past seven days, please answer ‘0’. </p>
+      <ul class='csiro-near-ul'>
+        <li><strong>Usage - 0 Days: </strong> Not used</li>
+        <li><strong>Usage - 1-2 Days: </strong> 1-2 Days</li>
+        <li><strong>Usage - 3-4 Days: </strong> 3-4 Days </li>
+        <li><strong>Usage - 5-6 Days: </strong> 4-5 Days </li>
+        <li><strong>Usage - 7 Days: </strong> Every day </li>
+      </ul>
+      
+      <h4 class='csiro-near-h4'>Comfort with Heating</h4>
+      <p class='csiro-near-p'>
+      Thinking about the past seven days, how did you feel at home when the heating was on?</p>
+      <ul class='csiro-near-ul'>
+        <li><strong>Comfort with Heating - Much Colder: </strong> A lot colder than I would have liked</li>
+        <li><strong>Comfort with Heating - Slightly Colder: </strong> A little colder than I would have liked</li>
+        <li><strong>Comfort with Heating - Comfortable: </strong> Comfortable</li>
+        <li><strong>Comfort with Heating - Slightly Hotter: </strong> A little hotter than I would have liked</li>
+        <li><strong>Comfort with Heating - Much Hotter: </strong> A lot hotter than I would have liked</li>
+        <li><strong>Comfort with Heating - N/A: </strong> Not at home, not in the room(s) being heated, or heating was always off</li>
+      </ul>
+      
+      <h4 class='csiro-near-h4'>Comfort without Heating</h4>
+      <p class='csiro-near-p'>
+      Thinking about the past seven days, how did you feel at home when the heating was off?</p>
+       <ul class='csiro-near-ul'>
+        <li><strong>Comfort without Heating - Much Colder: </strong> A lot colder than I would have liked</li>
+        <li><strong>Comfort without Heating - Slightly Colder: </strong> A little colder than I would have liked</li>
+        <li><strong>Comfort without Heating - Comfortable: </strong> Comfortable</li>
+        <li><strong>Comfort without Heating - Slightly Hotter: </strong> A little hotter than I would have liked</li>
+        <li><strong>Comfort without Heating - Much Hotter: </strong> A lot hotter than I would have liked</li>
+        <li><strong>Comfort without Heating - N/A: </strong> Not at home, or heating was always on</li>
+      </ul>
+      "
+    },
+    {
+      "name": "Dataset Custodian",
+      "content": "<% include energise_custodian %>"
+    },
+    {
+      "name": "Data Currency and Updates",
+      "content": "<% include energise_data_currency %>"
+    },
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "<% include energise_licensing %>"
+    }
+
+  ],
+},
