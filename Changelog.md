@@ -4,6 +4,10 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### In the next version
+* Added a new group of layers from the National Energy Analytics Research (NEAR) Program in "Research -> National Energy Analytics Research (NEAR) Program".
+* Update to [TerriaJS 6.4.0](https://github.com/TerriaJS/terriajs/blob/6.4.0/CHANGES.md).
+
 ### Version 2018-12-19
 * Update regions and data for "Electricity Infrastructure -> Network Opportunities".
 * Update to [TerriaJS 6.3.5](https://github.com/TerriaJS/terriajs/blob/6.3.5/CHANGES.md).

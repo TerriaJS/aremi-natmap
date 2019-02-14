@@ -1,0 +1,86 @@
+{
+  "name": "Building Characteristics",
+  "url": "https://near.csiro.au/public/aremi/dataset/energise_building_characteristics.csv",
+
+  <% include ../near_dataset_common %>
+  <% include energise_building_characteristics_visualisation %>
+  
+  "info": [
+    {
+      "name": "Dataset Description",
+      "content": "
+      <div>
+      <% include ../near.css %>
+      
+      <p class='csiro-near-p'>
+      A number of CSIRO Energise surveys have included questions about building characteristics, such as dwelling age and the number of bedrooms, and the use of gas and solar generation.
+       Here we present some key items.</p>
+      
+      <h4 class='csiro-near-h4'>Dwelling Type</h4>
+      <p class='csiro-near-p'>
+      What type of dwelling do you live in?</p>
+       <ul class='csiro-near-ul'>
+        <li><strong>Dwelling - House: </strong> Separate House</li>
+        <li><strong>Dwelling - Semi-detached: </strong> Semi-detached, row or terrace house or townhouse (e.g. duplex or villa)</li>
+        <li><strong>Dwelling - Multi-dwelling building: </strong>  Flat, unit or apartment</li>
+        <li><strong>Dwelling - Other: </strong> Other type of dwelling</li>
+      </ul>
+      
+      <h4 class='csiro-near-h4'>Bedrooms</h4>
+      <p class='csiro-near-p'>
+      How many bedrooms does your home have?</p>
+      <p class='csiro-near-p'>
+      Contextual help: If you live in a studio apartment or another type of dwelling without any separate bedrooms, please answer '0' (numerical range limit: 0 to 20).</p>
+      <ul class='csiro-near-ul'>
+        <li><strong>Bedrooms - 0-1: </strong> 0 or 1 bedroom</li>
+        <li><strong>Bedrooms - 2: </strong> 2 bedrooms</li>
+        <li><strong>Bedrooms - 3: </strong> 3 bedrooms</li>
+        <li><strong>Bedrooms - 4: </strong> 4 bedrooms</li>
+        <li><strong>Bedrooms - 5 or more: </strong> 5 or more bedrooms, numerical limit 20 </li>
+      </ul>
+      
+      <h4 class='csiro-near-h4'>Dwelling Age</h4>
+      <p class='csiro-near-p'>
+      Approximately, in what year was your home constructed?</p>
+      <ul class='csiro-near-ul'>
+        <li><strong>Age - Pre-1970: </strong> </li>
+        <li><strong>Age - 1970-1989: </strong> </li>
+        <li><strong>Age - 1990-2009: </strong> </li>
+        <li><strong>Age - 2010-2015: </strong> </li>
+        <li><strong>Age - 2016+: </strong> </li>
+        <li><strong>Age - Unknown: </strong> Don't know</li>
+      </ul>
+      
+      <h4 class='csiro-near-h4'>Homes with Gas</h4>
+      <p class='csiro-near-p'>
+      Does your household use mains gas or bottled gas/LPG as an energy source?</p>
+      <p class='csiro-near-p'>
+      Contextual help: LPG stands for Liquefied Petroleum Gas, but it may be referred to as propane or butane. It is sometimes used as fuel for heating, hot water, cooking and for other appliances. Respondents could choose both mains and bottled gas, hence a total greater than 100% is possible.</p>
+       <ul class='csiro-near-ul'>
+        <li><strong>Gas - Percentage: </strong> Percentage of homes with gas, including mains or bottled gas</li>
+      </ul>
+      
+      <h4 class='csiro-near-h4'>Homes with Solar</h4>
+      <p class='csiro-near-p'>
+      Does your household have solar panels to generate electricity?</p>
+      <ul class='csiro-near-ul'>
+        <li><strong>Solar - Percentage: </strong> Percentage of homes with solar - count of 'yes' / total respondents.</li>
+      </ul>
+      
+      </div>
+      "
+    },
+    {
+      "name": "Dataset Custodian",
+      "content": "<% include energise_custodian %>"
+    },
+    {
+      "name": "Data Currency and Updates",
+      "content": "<% include energise_data_currency %>"
+    },
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "<% include energise_licensing %>"
+    }
+  ],
+},

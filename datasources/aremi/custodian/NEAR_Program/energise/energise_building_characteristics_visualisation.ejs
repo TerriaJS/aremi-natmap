@@ -1,0 +1,54 @@
+"tableStyle": {
+    "dataVariable": "Dwelling - House",
+    <% include energise_tableStyle %>
+},
+
+"featureInfoTemplate": {
+  "name": "{{State}}",
+  "template": "
+  <div>
+  <% include ../near.css %>
+
+  <h3>{{State}} Building Characteristics Summary</h3>
+
+  <h4 class='csiro-near-h4'>Dwelling Type</h4>
+
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Dwelling - House: </td> <td class='csiro-near-td-value'> {{Dwelling - House}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Dwelling - Semi-detached: </td> <td class='csiro-near-td-value'> {{Dwelling - Semi-detached}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Dwelling - Multi-dwelling building: </td> <td class='csiro-near-td-value'> {{Dwelling - Multi-dwelling building}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Dwelling - Other: </td> <td class='csiro-near-td-value'> {{Dwelling - Other}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Number of Bedrooms</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Bedrooms - 0-1: </td> <td class='csiro-near-td-value'> {{Bedrooms - 0-1}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Bedrooms - 2: </td> <td class='csiro-near-td-value'> {{Bedrooms - 2}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Bedrooms - 3: </td> <td class='csiro-near-td-value'> {{Bedrooms - 3}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Bedrooms - 4: </td> <td class='csiro-near-td-value'> {{Bedrooms - 4}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Bedrooms - 5 or more: </td> <td class='csiro-near-td-value'> {{Bedrooms - 5 or more}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Dwelling Age</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Age - Pre-1970: </td> <td class='csiro-near-td-value'> {{Age - Pre-1970}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Age - 1970-1989: </td> <td class='csiro-near-td-value'> {{Age - 1970-1989}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Age - 1990-2009: </td> <td class='csiro-near-td-value'> {{Age - 1990-2009}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Age - 2010-2015: </td> <td class='csiro-near-td-value'> {{Age - 2010-2015}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Age - 2016 to present: </td> <td class='csiro-near-td-value'> {{Age - 2016+}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Age - Unknown: </td> <td class='csiro-near-td-value'> {{Age - Unknown}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Gas Usage - Mains and/or Bottled</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Gas - Percentage: </td> <td class='csiro-near-td-value'> {{Gas - Percentage}} </td></tr>
+  </table>
+
+  <h4 class='csiro-near-h4'>Solar Panels</h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Solar - Percentage: </td> <td class='csiro-near-td-value'> {{Solar - Percentage}} </td></tr>
+  </table>
+
+  </div>
+  "
+},

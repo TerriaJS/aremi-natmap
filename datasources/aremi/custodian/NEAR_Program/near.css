@@ -1,0 +1,45 @@
+<style>
+
+  ul.csiro-near-ul {
+    padding: 0px; 
+    margin-left: 30px; 
+    margin-top: 0; 
+    margin-bottom: 0;
+  } 
+  p.csiro-near-li {
+    margin-top: 0; 
+    margin-bottom: 3px;
+  } 
+  p.csiro-near-p {
+    margin-top: 0; 
+    margin-bottom: 6px;
+  } 
+  h4.csiro-near-h4 {
+    margin-bottom: 3px;
+  }
+  table.csiro-near-table {
+    margin-left: 20px;
+    text-align: left;
+    vertical-align: middle;
+    border-collapse: collapse;
+
+  }
+  table.csiro-near-table tr {
+    padding: 1px;
+  }
+  table.csiro-near-table th {
+      padding: 3px;
+  }
+  td.csiro-near-td-label {
+    width: 300px;
+    padding: 0;
+    margin-top: 0; 
+    margin-bottom: 0;
+  }
+  td.csiro-near-td-value {
+    text-align: right;
+    padding: 0;
+    margin-top: 0; 
+    margin-bottom: 0;
+  }
+</style>

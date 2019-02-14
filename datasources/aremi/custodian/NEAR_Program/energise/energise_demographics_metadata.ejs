@@ -1,0 +1,83 @@
+{
+  "name": "Demographics",
+  "url": "https://near.csiro.au/public/aremi/dataset/energise_demographics.csv",
+
+  <% include ../near_dataset_common %>
+  <% include energise_demographics_visualisation %>
+  
+  "info": [
+    {
+      "name": "Dataset Description",
+      "content": "
+      <div>
+      <% include ../near.css %>
+
+      <p class='csiro-near-p'>
+      A number of CSIRO Energise surveys have included demographics questions, such as household composition and income.
+      Here we present some key items.</p>
+
+      <h4 class='csiro-near-h4'>Household Size</h4>
+      Including yourself, how many people usually live in your household?
+      <p class='csiro-near-p'>
+      Contextual help: In some households, the number of occupants can vary from time to time.
+      Please answer this question in terms of the number of people who live in your home at least half of the time.</p>
+
+      <ul class='csiro-near-ul'>
+        <li><strong>Size - 1: </strong> 1 person</li>
+        <li><strong>Size - 2: </strong> 2 persons</li>
+        <li><strong>Size - 3: </strong> 3 persons</li>
+        <li><strong>Size - 4: </strong> 4 persons</li>
+        <li><strong>Size - 5 or more: </strong> 5 or more persons </li>
+      </ul>
+
+      <h4 class='csiro-near-h4'>Household Type</h4>
+      <p class='csiro-near-p'>
+      Which of the following best describes your household?</p>
+      <ul class='csiro-near-ul'>
+        <li><strong>Type - Lone Person: </strong>  Lone person household - single person living alone</li>
+        <li><strong>Type - Family with Children: </strong> One family household - couple with children (including adult children)</li>
+        <li><strong>Type - Family no Children: </strong> One family household - couple with no children</li>
+        <li><strong>Type - Single Parent: </strong> One family household - one parent family with children (including adult children)</li>
+        <li><strong>Type - Other: </strong> Includes multiple family households and share houses</li>
+      </ul>
+
+      <h4 class='csiro-near-h4'>Tenure</h4>
+      <p class='csiro-near-p'>
+      In terms of home ownership, is your dwelling:</p>
+      <ul class='csiro-near-ul'>
+        <li><strong>Tenure - Owned: </strong> Owned or partly owned by someone in your household</li>
+        <li><strong>Tenure - Rental Property: </strong> Being rented by your household</li>
+        <li><strong>Tenure - Other: </strong> Other (e.g. occupied rent-free)</li>
+      </ul>
+
+      <h4 class='csiro-near-h4'>Household Income</h4>
+      <p class='csiro-near-p'>
+      What is your total household income per year, before tax? </p>
+      <p class='csiro-near-p'>
+      Contextual help: That is, the total of all wages/salaries, government benefits, pensions, allowances and other income (e.g. dividends, interest) your household usually receives.
+      Do not deduct tax.</p>
+
+      <ul class='csiro-near-ul'>
+        <li><strong>Income - Less than $33,800: </strong> Total household income less than $33,800 per year</li>
+        <li><strong>Income - $33,800-$78,000: </strong> Total household income between $33,800 and $78,000 per year</li>
+        <li><strong>Income - Greater than $78,000: </strong> Total household income over $78,000 per year</li>
+        <li><strong>Income - Prefer not to say: </strong> No response offered</li>
+      </ul>
+
+      </div>
+      "
+    },
+    {
+      "name": "Dataset Custodian",
+      "content": "<% include energise_custodian %>"
+    },
+    {
+      "name": "Data Currency and Updates",
+      "content": "<% include energise_data_currency %>"
+    },
+    {
+      "name": "Licensing, Terms & Conditions",
+      "content": "<% include energise_licensing %>"
+    }
+  ],
+},

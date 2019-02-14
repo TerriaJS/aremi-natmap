@@ -1,0 +1,120 @@
+"idColumns": ["energy_asset"],
+
+"tableStyle": {
+  "regionVariable": "energy_asset",
+  "dataVariable": "Dwellings",
+
+  "replaceWithNullValues": ['-', '0', 0],
+  "nullColor": "rgba(150,135,135, 0.3)",
+  "nullLabel": "N/A",
+  "opacity": 0.7,
+  format: {"useGrouping": true},
+  
+  "columns": {
+    "DNSP": {
+      "name": "Distribution Network Service Provider",
+    },
+    "Dwellings": {   
+      "maxDisplayValue": 40000,
+      <% include dnsp_zs_vis_column_options %>
+    },
+    "Persons": {
+      "maxDisplayValue": 100000,
+      <% include dnsp_zs_vis_column_options %>
+    },
+    "Residential": {
+      "maxDisplayValue": 1,
+      <% include dnsp_zs_vis_column_options %>
+    },
+    "Commercial": {
+      "maxDisplayValue": 1,
+      <% include dnsp_zs_vis_column_options %>
+    },
+    "Industrial": {
+      "maxDisplayValue": 1,     
+      <% include dnsp_zs_vis_column_options %>
+    },
+    "Primary Production": {
+      "maxDisplayValue": 1,
+      <% include dnsp_zs_vis_column_options %>
+    },
+    "Education": {
+      "maxDisplayValue": 1,
+      <% include dnsp_zs_vis_column_options %>
+    },        
+    "Hospital/Medical": {
+      "maxDisplayValue": 1,
+      <% include dnsp_zs_vis_column_options %>
+    },        
+    "Transport": {
+      "maxDisplayValue": 1,
+      <% include dnsp_zs_vis_column_options %>
+    },        
+    "Parkland": {
+      "maxDisplayValue": 1,
+      <% include dnsp_zs_vis_column_options %>
+    },        
+    "Water": {
+      "maxDisplayValue": 1,
+      <% include dnsp_zs_vis_column_options %>
+    },   
+    "Other": {
+      "maxDisplayValue": 1,
+      <% include dnsp_zs_vis_column_options %>
+    },             
+    "Zone Substation Name": {"type":"HIDDEN"},
+    "Zone Substation ID": {"type":"HIDDEN"},
+    "Zone Substation Area (km2)": {"type":"HIDDEN"}
+
+  }
+},
+"featureInfoTemplate": {
+  "name": "{{SupplyRegionName}}",
+  "template": "
+  <div>
+  <% include ../near.css %>
+
+  <h3>{{SupplyRegionName}} Zone Substation Summary</h3>
+
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Distribution Network Service Provider: </td> <td> {{DNSP}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Zone Substation Name: </td> <td> {{Zone Substation Name}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Zone Substation ID: </td> <td> {{Zone Substation ID}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Zone Substation Area (km2): </td> <td> {{Zone Substation Area (km2)}} </td></tr>
+  </table>
+
+  <h4>Demographics<h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Dwellings: </td> <td class='csiro-near-td-value'> {{Dwellings}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Persons: </td> <td class='csiro-near-td-value'> {{Persons}} </td></tr>
+  </table>
+
+  <h4>Mesh Block Characteristics - Land Use<h4>
+  <table class='csiro-near-table'>
+    <tr><td class='csiro-near-td-label'>Residential: </td> <td class='csiro-near-td-value'> {{Residential}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Commercial: </td> <td class='csiro-near-td-value'> {{Commercial}} </td></tr>    <tr><td class='csiro-near-td-label'>Industrial: </td> <td class='csiro-near-td-value'> {{Industrial}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Primary Production: </td> <td class='csiro-near-td-value'> {{Primary Production}} 
+    <tr><td class='csiro-near-td-label'>Education: </td> <td class='csiro-near-td-value'> {{Education}} </td></tr>    <tr><td class='csiro-near-td-label'>Hospital/Medical: </td> <td class='csiro-near-td-value'> {{Hospital/Medical}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Transport: </td> <td class='csiro-near-td-value'> {{Transport}} </td></tr>    <tr><td class='csiro-near-td-label'>Parkland: </td> <td class='csiro-near-td-value'> {{Parkland}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Water: </td> <td class='csiro-near-td-value'> {{Water}} </td></tr>
+    <tr><td class='csiro-near-td-label'>Other: </td> <td class='csiro-near-td-value'> {{Other}} </td></tr>
+  </table>
+
+  </div>
+  ",
+  "formats": {
+    "Dwellings": {"useGrouping": true},
+    "Persons": {"useGrouping": true},
+    "Zone Substation Area (km2)": {"useGrouping": true},
+    "Residential": {"maximumFractionDigits": 2, "minimumFractionDigits": 2, "style": "percent"},
+    "Commercial": {"maximumFractionDigits": 2, "minimumFractionDigits": 2, "style": "percent"},
+    "Industrial": {"maximumFractionDigits": 2, "minimumFractionDigits": 2, "style": "percent"},
+    "Primary Production": {"maximumFractionDigits": 2, "minimumFractionDigits": 2, "style": "percent"},
+    "Education": {"maximumFractionDigits": 2, "minimumFractionDigits": 2, "style": "percent"},
+    "Hospital/Medical": {"maximumFractionDigits": 2, "minimumFractionDigits": 2, "style": "percent"},
+    "Transport": {"maximumFractionDigits": 2, "minimumFractionDigits": 2, "style": "percent"},
+    "Parkland": {"maximumFractionDigits": 2, "minimumFractionDigits": 2, "style": "percent"},
+    "Water": {"maximumFractionDigits": 2, "minimumFractionDigits": 2, "style": "percent"},
+    "Other": {"maximumFractionDigits": 2, "minimumFractionDigits": 2, "style": "percent"}
+  }
+},
