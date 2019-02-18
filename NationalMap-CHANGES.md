@@ -1,9 +1,61 @@
 Change Log
 ==========
 
+* Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) 6.3.6.  Changes include:
+  * Dragging/dropping files now displays a more subtle notification rather than opening the large Add Data / My Data panel.
+  * The `sendFeedback` function can now be used to send additional information if the server is configured to receive it (i.e. `devserverconfig.json`).
+  * Made custom feedback controls stay in the lower-right corner of the map.
+  * Improved the look of the toolbar icons in the top right, and added an icon for the About page.
+  * Changed the title text for the new button next to "Add Data" on the workbench to "Load local/web data".
+  * Fixed a bug that caused the area to the right of the Terria log on the 2D map to be registered as a click on the logo instead of a click on the map.
+  * Fixed a bug that caused the standard "Give Feedback" button to fail to open the feedback panel.
+  * Swapped the positions of the group expand/collapse icon and the "Remove from catalogue" icon on the My Data panel, for more consistent alignment.
+  * Made notifications honor the `width` and `height` properties. Previously, these values were ignored.
+
+* Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) 6.3.4.  Changes include:
+  * Changed the "My Data" interface to be much more intuitive and tweaked the visual style of the catalog.
+  * Removed the Terria logo from the preview map and made the credit there smaller.
+  * Added the ability to add custom components to the feedback area (lower right) of the user interface.
+  * Upgraded to Cesium v1.51.
+  * Added "filterByProcedures" property to "sos" item (default: true). When false, the list of procedures is not passed as a filter to GetFeatureOfInterest request, which works better for BoM Water Data Online services.
+  * Fixed a bug that caused the compass control to be misaligned in Internet Explorer 11.
+  * Added `CartoMapCatalogItem` to connect to layers using the [Carto Maps API](https://carto.com/developers/maps-api/).
+  * Made it possible to configure the compass control's colors using CSS.
+  * Fall back to the style name in the workbench styles dropdown when no title is given for a style in WMS GetCapabilities.
+
+### 2018-10-15
+
+* Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) 6.2.1.  Changes include:
+  * Added a simple WCS "clip and ship" functionality for WMS layers with corresponding a WCS endpoint and coverage.
+  * Fixed problems canceling drag-and-drop when using some web browsers.
+  * Fixed a bug that created a time period where no data is shown at the end of a time-varying CSV.
+  * Fixed a bug that could cause endless tile requests with certain types of incorrect server responses.
+  * Fixed a bug that could cause endless region tile requests when loading a CSV with a time column where none of the column values could actually be interpreted as a time.
+  * Added automatic retry with jittered, exponential backoff for tile requests that result in a 5xx HTTP status code. This is especially useful for servers that return 503 or 504 under load. Previously, TerriaJS would frequently disable the layer and hit the user with an error message when accessing such servers.
+  * Updated British National Grid transform in `Proj4Definitions` to a more accurate (~2 m) 7 parameter version https://epsg.io/27700.
+  * Distinguished between 3D Terrain and 3D Smooth in share links and init files.
+  * We now use Cesium Ion for the Bing Maps basemaps, unless a `bingMapsKey` is provided in [config.json](https://docs.terria.io/guide/customizing/client-side-config/#parameters). You can control this behavior with the `useCesiumIonBingImagery` property. Please note that if a `bingMapsKey` is not provided, the Bing Maps geocoder will always return no results.
+  * Added a Terria logo in the lower left of the map. It can be disabled by setting `"hideTerriaLogo": true` in `config.json`.
+  * Improved the credits display on the 2D map to be more similar to the 3D credits.
+  * Fixed a bug that caused some legends to be missing or incomplete in Apple Safari.
+  * Upgraded to Cesium v1.50.
+
+### 2018-09-21
+
+* Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) 6.1.4.  Changes include:
+  * Fixed a bug that could cause the workbench to appear narrower than expected on some systems, and the map to be off-center when collapsing the workbench on all systems.
+
+### 2018-09-14
+
+* Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) 6.1.3.  Changes include:
+  * When clicking a `Split` button on the workbench, the new catalog item will no longer be attached to the timeline even if the original was. This avoids a confusing situation where both catalog items would be locked to the same time.
+  * Added KMZ to the whitelisted formats for `MagdaCatalogItem`.
+  * Fixed a bug that caused a crash when switching to 2D with vector data already on the map, including when visiting a share link with vector data when the map ends up being 2D.
+  * The "Hide Workbench" button is now attached to the side of the Workbench, instead of on the opposite side of the screen from it.
+
 ### 2018-09-03
 
-* Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) 6.1.1.  Changes include:
+* Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) 6.1.2.  Changes include:
   * Fixed a bug that prevented `BingMapsSearchProviderViewModel` and other uses of `loadJsonp` from working correctly.
 
 ### 2018-08-30
