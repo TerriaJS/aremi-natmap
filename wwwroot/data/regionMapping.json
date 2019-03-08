@@ -2474,15 +2474,15 @@
         },
         "AREMI_ISF_combined": {
             "layerName": "aremi_isf_combined",
-            "server": "https://aremi-vector-tiles2.terria.io/aremi_isf_combined/{z}/{x}/{y}.pbf",
+            "server": "https://vt-aremi-v14.terria.io/aremi_isf_combined/{z}/{x}/{y}.pbf",
             "serverType": "MVT",
             "serverMaxNativeZoom": 12,
             "serverMaxZoom": 28,
             "bbox": [
-                132.086814916,
+                137.997319662153,
                 -43.4484604171,
                 153.63906769,
-                -14.164452636
+                -14.7509465365
             ],
             "uniqueIdProp": "FID",
             "regionProp": "asset_code",
