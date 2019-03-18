@@ -34,7 +34,8 @@
       "name": "Description of Data",
       "content": "<% include Available_Capacity-Description %>"
     },
-    <% include common-Info %>,
+    <%#NOTE: this section uses its own info because the info given by the custodian for this layer was different from the rest. Otherwise, use the same common info%>
+    <% include Available_Capacity-Info %>,
   ],
   <% include common %>
 },
