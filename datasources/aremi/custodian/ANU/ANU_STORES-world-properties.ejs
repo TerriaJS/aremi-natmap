@@ -1,0 +1,31 @@
+"url": "https://gis.aremi.data61.io/anu/wms",
+"type": "wms",
+"opacity": 1,
+"ignoreUnknownTileErrors": true,
+"infoSectionOrder": [
+  "Disclaimer",
+  "Description",
+  "Access and acknowledgements",
+  "Source Data"
+],
+"info" :[
+  {
+    "name": "Description",
+    "content": "<% include ANU_STORES-world-description %>"
+  },
+  {
+    "name": "Disclaimer",
+    "content": "<% include ANU_STORES-world-disclaimer %>"
+  },
+  {
+    "name": "Access and acknowledgements",
+    "content": "In publications that use this information please acknowledge the RE100 Group, Australian National University, http://re100.eng.anu.edu.au/"
+  },
+  {
+    "name": "Source Data",
+    "content": "Digital Terrain Model (DTM) https://earthexplorer.usgs.gov/ <p>World Database Protected Areas: https://www.protectedplanet.net/</p> <p>Urban extent:  HBASE http://sedac.ciesin.columbia.edu/data/set/ulandsat-hbase-v1/data-download</p> "
+  }
+],
+"featureInfoTemplate": {
+  "template": "<% include ANU_STORES-world-template.ejs %>"
+}
