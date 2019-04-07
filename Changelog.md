@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### In the next version
+* Updated "New Generator Connection Capacity" and "Supporting Information" layers in the group "Electricity Infrastructure -> Network Opportunities" from the Institute for Sustainable Futures, UTS.
 * Added the ANU STORES Worldwide layers in "Renewable Energy -> Hydro -> Storage -> ANU STORES Worldwide" from the ANU 100% Renewable Energy project: http://re100.eng.anu.edu.au/
 
 ### Version 2019-02-18
