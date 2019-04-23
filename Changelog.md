@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### In the next version
+* Update to [TerriaJS 7.2.1](https://github.com/TerriaJS/terriajs/blob/7.2.1/CHANGES.md).
 * Add Commonwealth Electoral Divisions for 2018 (ABS) and 2019 (AEC).
 * Updated "New Generator Connection Capacity" and "Supporting Information" layers in the group "Electricity Infrastructure -> Network Opportunities" from the Institute for Sustainable Futures, UTS.
 * Added the ANU STORES Worldwide layers in "Renewable Energy -> Hydro -> Storage -> ANU STORES Worldwide" from the ANU 100% Renewable Energy project: http://re100.eng.anu.edu.au/
