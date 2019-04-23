@@ -26,7 +26,13 @@
   ],
   "tableStyle": {
     "dataVariable": "Straw Yield /Ha Cereal Crop Average over 5 years",
-    "colorMap": "rgb(254,232,200)-rgb(239,101,72)-rgb(127,0,0)"
+    "colorMap": "rgb(254,232,200)-rgb(239,101,72)-rgb(127,0,0)",
+    "columns": {
+      "RESIDUE_TYPE": {"type":"HIDDEN"},
+      "RESIDUE_DESCRIPTION": {"type":"HIDDEN"},
+      "RESIDUE_UNIT": {"type":"HIDDEN"},
+      "PERIOD": {"type":"HIDDEN"}
+    }
   },
   "featureInfoTemplate": {
     "name": "{{LGA_NAME_2015}}: {{#terria.formatNumber}}{useGrouping:true}{{Average Shire Yield of Cereal Residue in Tonnes}}{{/terria.formatNumber}} tonnes",
@@ -60,7 +66,19 @@
     }
   ],
   "tableStyle": {
-    "colorMap": "rgb(247,252,185)-rgb(120,198,121)-rgb(0,69,41)"
+    "colorMap": "rgb(247,252,185)-rgb(120,198,121)-rgb(0,69,41)",    
+    "columns": {
+      "REGION_TYPE": {"type":"HIDDEN"},
+      "RESIDUE_TYPE": {"type":"HIDDEN"},
+      "FOREST_TYPE": {"type":"HIDDEN"},
+      "WOOD_TYPE": {"type":"HIDDEN"},
+      "KEY_SPECIES": {"type":"HIDDEN"},
+      "TENURE": {"type":"HIDDEN"},
+      "BIOMASS_DESCRIPTION": {"type":"HIDDEN"},
+      "PLANTING_YR": {"type":"HIDDEN"},
+      "RESIDUE_UNIT": {"type":"HIDDEN"},
+      "UPDATE_FREQUENCY": {"type":"HIDDEN"}
+    }
   },
   "featureInfoTemplate": {
     "name": "{{LGA_NAME_2011}}: {{#terria.formatNumber}}{useGrouping:true}{{Number of Stems}}{{/terria.formatNumber}} stems",
@@ -98,10 +116,9 @@
     "scaleByValue": true,
     "scale": 2.0,
     "columns": {
-      "Current Use": {"type":"HIDDEN"},
-      "Current Value": {"type":"HIDDEN"},
-      "Winery Name": {"type":"HIDDEN"},
-      "Location": {"type":"HIDDEN"}
+      "PERIOD": {"type":"HIDDEN"},
+      "RESIDUE_UNIT": {"type":"HIDDEN"},
+      "LOCATION": {"type":"HIDDEN"}
     }
   },
   "featureInfoTemplate": {
@@ -130,6 +147,7 @@
         "Current_use": {"type":"HIDDEN"},
         "Industry": {"type":"HIDDEN"},
         "Livestock_type": {"type":"HIDDEN"},
+        "PERIOD": {"type":"HIDDEN"},
         "Residue_class": {"type":"HIDDEN"},
         "Technology": {"type":"HIDDEN"},
         "Update_frequency": {"type":"HIDDEN"}
@@ -165,7 +183,16 @@
     "scaleByValue": true,
     "dataVariable": "Dry Weight Tonnes Per Year",
     "scale": 2.0,
-    "columns": {}
+    "columns": {
+      "Town": {"type":"HIDDEN"},
+      "Current Use": {"type":"HIDDEN"},
+      "RESIDUE_UNIT": {"type":"HIDDEN"},
+      "RESIDUE_DESCRIPTION": {"type":"HIDDEN"},
+      "Species of Seaweed": {"type":"HIDDEN"},
+      "PERIOD": {"type":"HIDDEN"},
+      "SEASONALITY": {"type":"HIDDEN"},
+      "Reliability": {"type":"HIDDEN"}
+    }
   }
 },
 
@@ -181,6 +208,7 @@
       "timeColumn": null,
       "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
       "columns": {
+        "PERIOD": {"type":"HIDDEN"},
         "Residue_type": {"type":"HIDDEN"},
         "Residue_unit": {"type":"HIDDEN"},
         "Seasonality": {"type":"HIDDEN"},
@@ -204,11 +232,13 @@
       "timeColumn": null,
       "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
       "columns": {
-        "Biomass description": {"type":"HIDDEN"},
-        "Residue unit": {"type":"HIDDEN"},
-        "Residue_type": {"type":"HIDDEN"},
-        "Seasonality": {"type":"HIDDEN"},
-        "Update  frequency": {"type":"HIDDEN"}
+        "BIOMASS_DESCRIPTION": {"type":"HIDDEN"},
+        "PROUCTION_PERIOD": {"type":"HIDDEN"},
+        "PERIOD": {"type":"HIDDEN"},
+        "SEASONALITY": {"type":"HIDDEN"},
+        "RESIDUE_TYPE": {"type":"HIDDEN"},
+        "RESIDUE_UNIT": {"type":"HIDDEN"},
+        "UPDATE_FREQUENCY": {"type":"HIDDEN"}
       }
     },
     <% include ../../common/wa_camera_rectangle %>,
@@ -246,7 +276,27 @@
       "id": "48d0086c",
       "name": "Avocado Residue",
       "datasetId": "avocado-residue",
-      <% include common_data_wa_gov_au %>
+      "url": "https://catalogue.data.wa.gov.au",
+      "type": "ckan-resource",
+      "csvResourceFormat": "CSV",
+      "itemProperties": {
+        "tableStyle": {
+          "timeColumn": null,
+          "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
+          "columns": {
+            "BIOMASS _ DESCRIPTION": {"type":"HIDDEN"},
+            "CROP _ TYPE": {"type":"HIDDEN"},
+            "PERIOD": {"type":"HIDDEN"},
+            "REGION": {"type":"HIDDEN"},
+            "RESIDUE _ TYPE": {"type":"HIDDEN"},
+            "RESIDUE _ UNIT": {"type":"HIDDEN"},
+            "SEASONALITY": {"type":"HIDDEN"},
+            "TIMEFRAME": {"type":"HIDDEN"}
+          }
+        },
+        <% include ../../common/wa_camera_rectangle %>,
+        <% include ../../common/standard_properties %>
+      }
     },
 
     {
@@ -284,10 +334,10 @@
       "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
       "columns": {
         "TOTAL_RESIDUES": { "name": "Total residues" },
-        "TOTAL_POPULATION": {"type":"HIDDEN"},
+        "TOTAL_POPULATION": { "name":"Total population" },
         "RESIDUE_UNIT": {"type":"HIDDEN"},
         "BIOMASS_DESCRIPTION": {"type":"HIDDEN"},
-        "DATA_YR": {"type":"HIDDEN"},
+        "PERIOD": {"type":"HIDDEN"},
         "SEASONALITY": {"type":"HIDDEN"},
         "INDUSTRY": {"type":"HIDDEN"},
         "TECHNOLOGY": {"type":"HIDDEN"},
@@ -315,10 +365,10 @@
       "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
       "columns": {
         "TOTAL_RESIDUES": { "name": "Total residues" },
-        "TOTAL_POPULATION": {"type":"HIDDEN"},
+        "TOTAL_POPULATION": { "name":"Total population" },
         "RESIDUE_UNIT": {"type":"HIDDEN"},
         "BIOMASS_DESCRIPTION": {"type":"HIDDEN"},
-        "DATA_YR": {"type":"HIDDEN"},
+        "PERIOD": {"type":"HIDDEN"},
         "SEASONALITY": {"type":"HIDDEN"},
         "INDUSTRY": {"type":"HIDDEN"},
         "TECHNOLOGY": {"type":"HIDDEN"},
@@ -346,10 +396,10 @@
       "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
       "columns": {
         "TOTAL_RESIDUES": { "name": "Total residues" },
-        "TOTAL_POPULATION": {"type":"HIDDEN"},
+        "TOTAL_POPULATION": { "name":"Total population" },
         "RESIDUE_UNIT": {"type":"HIDDEN"},
         "BIOMASS_DESCRIPTION": {"type":"HIDDEN"},
-        "DATA_YR": {"type":"HIDDEN"},
+        "PERIOD": {"type":"HIDDEN"},
         "SEASONALITY": {"type":"HIDDEN"},
         "INDUSTRY": {"type":"HIDDEN"},
         "TECHNOLOGY": {"type":"HIDDEN"},
