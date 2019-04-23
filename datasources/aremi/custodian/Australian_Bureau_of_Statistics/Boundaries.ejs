@@ -47,6 +47,55 @@
   <%- include ../../common/home_camera_rectangle %>,
 },
 {
+  "id": "5d1c2ada",
+  "name": "Commonwealth Electoral Divisions (2018) (ABS)",
+  "url": "https://tiles.terria.io/CED_2018/{z}/{x}/{y}.pbf",
+  "type": "mvt",
+  "layer": "CED_2018",
+  "lineColor": "#33f",
+  "maximumNativeZoom": 12,
+  "minimumZoom": 0,
+  "description": "The ASGS Commonwealth Electoral Divisions are an ABS approximation of Australian Electoral Commission (AEC) electoral division boundaries. An AEC electoral division boundary is an area legally prescribed for the purpose of returning one member to the House of Representatives, Australia's Federal Lower House of Parliament.\n\nThe 2018 Australian Statistical Geography Standard (ASGS) edition of the Commonwealth Electoral Divisions (CED) structure includes updates to the definition of electoral divisions that have occurred prior to 31 July 2018. This updates the 2017 edition of Commonwealth Electoral Divisions released in the [ASGS Volume 3 - Non ABS Structures, July 2017](https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202017~Main%20Features~Overview~1). It includes gazetted changes to electoral divisions in Victoria, Queensland, South Australia, Tasmania and the Australian Capital Territory.",
+  "dataCustodian": "[Australian Bureau of Statistics](https://www.abs.gov.au/)",
+  "info": [
+      {
+          "name": "Licence",
+          "content": "[Create Commons Attribution 4.0 International](https://www.abs.gov.au/websitedbs/D3310114.nsf/Home/%A9+Copyright?opendocument)"
+      },
+      {
+          "name": "More information",
+          "content": "[1270.0.55.003 - Australian Statistical Geography Standard (ASGS): Volume 3 - Non ABS Structures, July 2018  ](https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.003~July%202018~Main%20Features~Commonwealth%20Electoral%20Divisions%20(CEDs)~3)",
+      }
+  ],
+  "dataUrl": "https://www.abs.gov.au/ausstats/subscriber.nsf/log?openagent&1270055003_ced_2018_aust_shp.zip&1270.0.55.003&Data%20Cubes&BF4D23C712D492CFCA2582F600180556&0&July%202018&28.08.2018&Latest",
+  "dataUrlType": "direct",
+  <%- include ../../common/standard_properties %>,
+  <%- include ../../common/home_camera_rectangle %>,
+},
+{
+  "id": "0f47dc2d",
+  "name": "Commonwealth Electoral Divisions (2019) (AEC)",
+  "layer": "ELB_2019",
+  "description": "Federal electoral boundaries which will apply at the 2019 federal election. Produced by combining boundary datasets provided by AEC for each state.",
+  "dataCustodian": "[Australian Electoral Commission](https://www.aec.gov.au/)",
+  "url": "https://tiles.terria.io/ELB_2019/{z}/{x}/{y}.pbf",
+  "type": "mvt",
+  "opacity": 1.0,
+  "lineColor": "hsl(180,80%,30%)",
+  "maximumNativeZoom": 12,
+  "minimumZoom": 0,
+  "treat403AsError": false,
+  "dataUrl": "https://www.aec.gov.au/electorates/gis/index.htm",
+  "info": [
+    {
+      "name": "Licence",
+      "content": "[Australian Electoral Commission Data download licence](http://www.aec.gov.au/Electorates/gis/GIS_Data_Download_Data_Licence.htm)"
+    }
+  ],
+  <%- include ../../common/standard_properties %>,
+  <%- include ../../common/home_camera_rectangle %>
+},
+{
   "id": "54a5526a",
   "name": "State Electoral Divisions",
   "layers": "admin_bnds:SED_2011_AUST",
