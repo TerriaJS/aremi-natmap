@@ -6,7 +6,7 @@ TARGET="target/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz"
 
 rm -rf node_modules wwwroot/build wwwroot/init/aremi.json
 npm install
-gulp release
+npm run gulp release
 
 if [ -n "$(git status --porcelain)" ]; then
     echo
