@@ -4,6 +4,10 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+
+### Version 2019-04-29
+* Update to [TerriaJS 7.3.0](https://github.com/TerriaJS/terriajs/blob/7.3.0/CHANGES.md).
+
 ### Version 2019-04-24
 * Update to [TerriaJS 7.2.1](https://github.com/TerriaJS/terriajs/blob/7.2.1/CHANGES.md).
 * Add Commonwealth Electoral Divisions for 2018 (ABS) and 2019 (AEC).
