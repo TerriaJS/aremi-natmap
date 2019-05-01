@@ -25,13 +25,14 @@
     }
   ],
   "tableStyle": {
-    "dataVariable": "Straw Yield /Ha Cereal Crop Average over 5 years",
+    "dataVariable": "TOTAL_RESIDUES",
     "colorMap": "rgb(254,232,200)-rgb(239,101,72)-rgb(127,0,0)",
     "columns": {
       "RESIDUE_TYPE": {"type":"HIDDEN"},
       "RESIDUE_DESCRIPTION": {"type":"HIDDEN"},
       "RESIDUE_UNIT": {"type":"HIDDEN"},
-      "PERIOD": {"type":"HIDDEN"}
+      "PERIOD": {"type":"HIDDEN"},
+      "TOTAL_RESIDUES": {"name": "Total Residues"}
     }
   },
   "featureInfoTemplate": {
@@ -66,7 +67,8 @@
     }
   ],
   "tableStyle": {
-    "colorMap": "rgb(247,252,185)-rgb(120,198,121)-rgb(0,69,41)",    
+    "dataVariable": "TOTAL_BIOMASS",
+    "colorMap": "rgb(247,252,185)-rgb(120,198,121)-rgb(0,69,41)",
     "columns": {
       "REGION_TYPE": {"type":"HIDDEN"},
       "RESIDUE_TYPE": {"type":"HIDDEN"},
@@ -77,7 +79,8 @@
       "BIOMASS_DESCRIPTION": {"type":"HIDDEN"},
       "PLANTING_YR": {"type":"HIDDEN"},
       "RESIDUE_UNIT": {"type":"HIDDEN"},
-      "UPDATE_FREQUENCY": {"type":"HIDDEN"}
+      "UPDATE_FREQUENCY": {"type":"HIDDEN"},
+      "TOTAL_BIOMASS": {"name": "Total Biomass"}
     }
   },
   "featureInfoTemplate": {
@@ -205,6 +208,7 @@
   "csvResourceFormat": "CSV",
   "itemProperties": {
     "tableStyle": {
+      "dataVariable": "TOTAL_RESIDUES",
       "timeColumn": null,
       "colorMap": "rgb(255,255,204)-rgb(253,141,60)-rgb(128,0,38)",
       "columns": {
@@ -212,7 +216,8 @@
         "Residue_type": {"type":"HIDDEN"},
         "Residue_unit": {"type":"HIDDEN"},
         "Seasonality": {"type":"HIDDEN"},
-        "Update_frequency": {"type":"HIDDEN"}
+        "Update_frequency": {"type":"HIDDEN"},
+        "TOTAL_RESIDUES": {"name": "Total Residues"}
       }
     },
     <% include ../../common/wa_camera_rectangle %>,
