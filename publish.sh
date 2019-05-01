@@ -17,6 +17,7 @@ TARGET_VERSION=$1
 # Publish the catalog to an S3 bucket on AWS.
 gzip --keep ${SOURCE_FILE}
 aws s3 --profile aremi \
+  --region ap-southeast-2 \
   cp --content-encoding gzip --content-type "application/json" \
   ${SOURCE_FILE}.gz \
   s3://static.aremi.data61.io/init/aremi-${TARGET_VERSION}.json
