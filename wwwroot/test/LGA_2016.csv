@@ -1,0 +1,546 @@
+LGA_CODE_2016,LGA_NAME_2016, PV_MW , AnnualEnergy_GWH 
+35780,Northern Peninsula Area (R),0,0
+36950,Torres (S),0,0
+36960,Torres Strait Island (R),0,0
+55250,Meekatharra (S),0,0
+58470,Upper Gascoyne (S),0,0
+62010,Flinders (M) (Tas.),0,0
+37550,Woorabinda (S),0,0
+56860,Nungarin (S),0,0
+59030,Westonia (S),0,0
+72330,MacDonnell (R),0,0
+44000,Maralinga Tjarutja (AC),1,1
+70620,Central Desert (R),1,1
+70540,Belyuen (S),1,2
+40250,Anangu Pitjantjatjara (AC),2,3
+34830,Mapoon (S),2,3
+37570,Wujal Wujal (S),2,3
+74560,Wagait (S),2,3
+32600,Croydon (S),2,3
+31950,Burke (S),2,4
+34570,Lockhart River (S),3,5
+32770,Doomadgee (S),3,5
+99399,Unincorp. Other Territories,4,5
+36070,Pormpuraaw (S),4,6
+54480,Kent (S),4,6
+44620,Mount Gambier (C),5,7
+31750,Bulloo (S),5,7
+56160,Murchison (S),5,8
+57630,Sandstone (S),5,8
+33100,Etheridge (S),6,9
+32750,Diamantina (S),6,9
+34420,Kowanyama (S),7,10
+30900,Boulia (S),6,10
+35670,Napranum (S),7,10
+35250,Mornington (S),7,11
+33830,Hope Vale (S),8,11
+30250,Aurukun (S),8,12
+52380,Cue (S),8,13
+19399,Unincorporated NSW,8,13
+56930,Peppermint Grove (S),10,14
+70700,Coomalie (S),10,15
+30450,Barcoo (S),10,15
+55390,Menzies (S),10,16
+74550,Victoria Daly (R),11,17
+55040,Leonora (S),11,18
+74680,West Daly (R),12,18
+58680,Wandering (S),13,18
+29399,Unincorporated Vic,14,18
+56620,Ngaanyatjarraku (S),12,19
+32330,Cherbourg (S),15,21
+73600,Roper Gulf (R),14,22
+74050,Tiwi Islands (R),15,22
+55810,Mount Magnet (S),14,23
+37600,Yarrabah (S),16,23
+53920,Halls Creek (S),15,23
+59320,Woodanilling (S),17,23
+58190,Tammin (S),16,23
+59250,Wiluna (S),16,25
+59350,Yalgoo (S),17,26
+58400,Trayning (S),18,27
+55530,Mingenew (S),18,28
+54690,Koorda (S),19,29
+61010,Central Highlands (M) (Tas.),24,29
+53080,Dundas (S),21,29
+36300,Richmond (S),20,29
+59100,Wickepin (S),21,30
+57770,Shark Bay (S),18,30
+59330,Wyalkatchem (S),21,31
+53710,Goomalling (S),22,33
+53010,Dumbleyung (S),24,34
+55950,Mukinbudin (S),23,34
+58260,Three Springs (S),22,35
+52100,Corrigin (S),26,37
+63410,King Island (M),30,38
+37300,Weipa (T),27,40
+45400,Orroroo/Carrieton (DC),28,40
+41330,Coober Pedy (DC),25,40
+52940,Dowerin (S),27,40
+32250,Carpentaria (S),25,40
+51470,Carnamah (S),26,41
+47490,Streaky Bay (DC),55,41
+52310,Cuballing (S),29,41
+36150,Quilpie (S),26,41
+41960,Franklin Harbour (DC),31,42
+35790,Palm Island (S),28,43
+11200,Brewarrina (A),29,44
+58890,West Arthur (S),31,44
+62210,George Town (M),33,44
+54970,Laverton (S),28,45
+52030,Coorow (S),29,45
+56300,Nannup (S),31,45
+32500,Cook (S),31,45
+46860,Robe (DC),36,45
+55880,Mount Marshall (S),30,45
+51610,Chapman Valley (S),29,46
+41750,Elliston (DC),35,46
+55670,Morawa (S),30,47
+54410,Kellerberrin (S),32,47
+41010,Ceduna (DC),63,48
+10300,Balranald (A),34,49
+57350,Quairading (S),34,49
+57140,Pingelly (S),35,50
+51120,Bruce Rock (S),36,50
+65210,Tasman (M),43,50
+45540,Peterborough (DC),36,50
+56370,Narembeen (S),36,50
+43080,Karoonda East Murray (DC),37,51
+50910,Brookton (S),36,51
+51080,Broomehill-Tambellup (S),37,52
+57000,Perenjori (S),33,52
+37400,Winton (S),33,53
+26080,Queenscliffe (B),43,53
+43220,Kimba (DC),40,54
+59170,Williams (S),38,54
+34800,McKinlay (S),35,55
+41830,Flinders Ranges (DC),36,55
+52450,Cunderdin (S),39,56
+70420,Barkly (R),34,56
+65610,West Coast (M),50,56
+79399,Unincorporated NT,37,57
+54760,Kulin (S),41,57
+52240,Cranbrook (S),43,58
+50630,Boddington (S),41,58
+54620,Kondinin (S),42,58
+48640,Wudinna (DC),49,59
+53360,Exmouth (S),36,59
+33200,Flinders (S) (Qld),39,61
+74660,West Arnhem (R),40,61
+71300,East Arnhem (R),40,61
+52800,Derby-West Kimberley (S),40,62
+53150,East Fremantle (T),42,62
+54130,Jerramungup (S),47,63
+50770,Boyup Brook (S),47,63
+30760,Blackall-Tambo (R),41,65
+43360,Kingston (DC) (SA),52,66
+58540,Victoria Plains (S),45,66
+53640,Gnowangerup (S),48,66
+16100,Oberon (A),50,66
+35800,Paroo (S),43,67
+51960,Coolgardie (S),45,67
+50560,Beverley (S),49,71
+52170,Cottesloe (T),48,71
+14100,Hunters Hill (A),56,72
+11700,Central Darling (A),46,72
+48260,Walkerville (M),53,72
+32450,Cloncurry (S),45,72
+10950,Bogan (A),48,72
+58610,Wagin (S),52,73
+57420,Ravensthorpe (S),54,74
+52520,Dalwallinu (S),48,75
+55740,Mosman Park (T),51,75
+46970,Roxby Downs (M),49,76
+47910,Tumby Bay (DC),58,78
+59360,Yilgarn (S),52,78
+41190,Cleve (DC),59,80
+59310,Wongan-Ballidu (S),54,80
+14950,Lockhart (A),60,81
+40430,Barunga West (DC),58,81
+54900,Lake Grace (S),59,82
+15800,Narrandera (A),56,83
+17950,Warren (A),56,83
+18100,Weddin (A),58,84
+11150,Bourke (A),55,85
+62410,Glamorgan/Spring Bay (M),70,85
+54060,Irwin (S),58,90
+12150,Coonamble (A),61,91
+54550,Kojonup (S),65,92
+35600,Murweh (S),59,92
+63210,Kentish (M),75,93
+10850,Blayney (A),65,93
+14300,Junee (A),70,94
+51750,Claremont (T),64,94
+65010,Southern Midlands (M),79,95
+13850,Hay (A),65,96
+11750,Cobar (A),64,96
+30410,Barcaldine (R),62,97
+12000,Coolamon (A),66,97
+47290,Southern Mallee (DC),70,98
+59340,Wyndham-East Kimberley (S),67,99
+17850,Walcha (A),68,100
+11600,Carrathool (A),68,100
+54340,Katanning (S),73,103
+56790,Northampton (S),66,103
+44830,Mount Remarkable (DC),75,104
+58820,Waroona (S),73,105
+55460,Merredin (S),72,105
+60210,Break O'Day (M),85,106
+50840,Bridgetown-Greenbushes (S),80,106
+55600,Moora (S),69,106
+63810,Latrobe (M) (Tas.),86,110
+12950,Gilgandra (A),78,114
+17650,Uralla (A),78,115
+52730,Denmark (S),91,115
+59370,York (S),79,115
+15560,Murrumbidgee (A),79,116
+58330,Toodyay (S),83,123
+56460,Narrogin (S),87,123
+34710,Longreach (R),79,123
+51540,Carnarvon (S),75,125
+15350,Mosman (A),97,125
+32810,Douglas (S),86,126
+42750,Kangaroo Island (DC),99,129
+61810,Dorset (M),103,130
+64810,Sorell (M),111,130
+57080,Perth (C),88,130
+26670,Towong (S),99,131
+61510,Derwent Valley (M),109,131
+26890,West Wimmera (S),100,132
+25990,Pyrenees (S),102,132
+20740,Bass Coast (S),109,134
+22980,Hindmarsh (S),100,135
+52590,Dandaragan (S),89,138
+30300,Balonne (S),91,138
+52870,Donnybrook-Balingup (S),96,139
+42250,Grant (DC),112,140
+61210,Circular Head (M),116,141
+17400,Tenterfield (A),98,141
+48750,Yankalilla (DC),101,142
+14920,Liverpool Plains (A),104,142
+57210,Plantagenet (S),113,142
+14700,Lane Cove (A),111,143
+10130,Armidale Regional (A),100,145
+24250,Mansfield (S),110,146
+72200,Katherine (T),93,147
+51680,Chittering (S),101,150
+14600,Lachlan (A),103,152
+12870,Federation (A),111,153
+60410,Brighton (M),133,160
+10800,Bland (A),110,162
+13660,Gwydir (A),108,163
+57980,Subiaco (C),110,163
+18710,Yass Valley (A),118,163
+14550,Kyogle (A),119,164
+11300,Burwood (A),128,165
+45120,Northern Areas (DC),119,166
+20110,Alpine (S),126,168
+17640,Upper Lachlan Shire (A),124,169
+12700,Dungog (A),128,170
+49399,Unincorporated SA,117,170
+18200,Wentworth (A),118,173
+25620,Murrindindi (S),135,176
+50350,Bassendean (T),118,176
+53570,Gingin (S),119,177
+65410,Waratah/Wynyard (M),145,178
+15850,Narromine (A),123,182
+42110,Goyder (DC),132,183
+22250,Gannawarra (S),128,184
+10600,Bellingen (A),133,186
+43710,Lower Eyre Peninsula (DC),139,187
+17350,Temora (A),128,188
+13010,Glen Innes Severn (A),131,190
+10650,Berrigan (A),136,191
+46510,Prospect (C),142,195
+25150,Moorabool (S),152,196
+14400,Kiama (A),149,196
+17080,Snowy Valleys (A),149,197
+47630,Tatiara (DC),157,198
+15950,North Sydney (A),155,199
+18500,Woollahra (A),155,200
+63010,Huon Valley (M),177,201
+51890,Collie (S),137,201
+46300,Port Lincoln (C),149,202
+46670,Renmark Paringa (DC),140,204
+18050,Waverley (A),159,205
+17900,Walgett (A),137,206
+23940,Loddon (S),153,206
+56580,Nedlands (C),140,208
+22910,Hepburn (S),162,209
+47800,The Coorong (DC),155,209
+17100,Strathfield (A),162,210
+45090,Naracoorte and Lucindale (DC),169,212
+23350,Indigo (S),160,217
+26430,Strathbogie (S),160,217
+15520,Murray River (A),154,220
+21670,Central Goldfields (S),169,220
+60610,Burnie (C),179,221
+65810,West Tamar (M),173,222
+13510,Gundagai (A),168,223
+21270,Buloke (S),159,223
+33800,Hinchinbrook (S),144,223
+26260,Southern Grampians (S),176,225
+40520,Berri and Barmera (DC),158,228
+32310,Charters Towers (R),148,230
+12730,Edward River (A),164,232
+64610,Northern Midlands (M),183,232
+46090,Port Augusta (C),153,235
+53220,East Pilbara (S),148,236
+14750,Leeton (A),160,236
+52660,Dardanup (S),162,238
+50980,Broome (S),151,239
+51310,Cambridge (T),162,240
+48050,Victor Harbor (C),177,240
+18020,Warrumbungle Shire (A),165,241
+55180,Manjimup (S),181,241
+20260,Ararat (RC),183,246
+41140,Clare and Gilbert Valleys (DC),177,247
+27630,Yarriambiack (S),181,247
+11400,Cabonne (A),174,249
+15700,Nambucca (A),178,249
+56730,Northam (S),172,250
+12900,Forbes (A),172,252
+12350,Cowra (A),177,252
+14870,Lithgow (C),190,252
+50250,Ashburton (S),154,252
+13340,Greater Hume Shire (A),188,252
+48130,Wakefield (DC),182,253
+35760,North Burnett (R),169,253
+21830,Corangamite (S),210,258
+48340,Wattle Range (DC),206,259
+60810,Central Coast (M) (Tas.),210,260
+51260,Busselton (C),180,261
+51400,Capel (S),181,264
+48540,Whyalla (C),194,268
+40070,Adelaide (C),198,271
+22490,Golden Plains (S),213,272
+64210,Meander Valley (M),218,272
+50280,Augusta-Margaret River (S),195,276
+44210,Mid Murray (DC),198,276
+24850,Mitchell (S),213,282
+57280,Port Hedland (T),172,283
+13550,Gunnedah (A),192,284
+25430,Mount Alexander (S),214,285
+43650,Light (RegC),205,286
+25810,Northern Grampians (S),213,286
+33610,Goondiwindi (R),192,288
+42030,Gawler (T),207,288
+58570,Vincent (C),197,292
+15650,Muswellbrook (A),216,293
+21010,Benalla (RC),210,294
+70200,Alice Springs (T),179,295
+61610,Devonport (C),238,296
+63610,Kingborough (M),240,299
+25490,Moyne (S),240,300
+13910,Hilltops (A),209,300
+17620,Upper Hunter Shire (A),223,300
+17040,Snowy Monaro Regional (A),220,301
+26490,Surf Coast (S),241,302
+11250,Broken Hill (C),192,303
+43920,Mallala (DC),220,305
+35300,Mount Isa (C),192,307
+46450,Port Pirie City and Dists (M),225,313
+21750,Colac-Otway (S),266,317
+41560,Copper Coast (DC),228,317
+42600,Holdfast Bay (C),225,318
+72800,Palmerston (C),213,320
+43790,Loxton Waikerie (DC),229,320
+14200,Inverell (A),221,323
+53430,Fremantle (C),218,325
+26170,South Gippsland (S),266,326
+58510,Victoria Park (T),220,328
+16490,Queanbeyan-Palerang Regional (A),238,329
+24130,Macedon Ranges (S),257,331
+16610,Richmond Valley (A),241,331
+31900,Burdekin (S),218,338
+15270,Mid-Western Regional (A),238,338
+15300,Moree Plains (A),228,344
+57840,South Perth (C),232,345
+56230,Murray (S),234,347
+34860,Maranoa (R),226,347
+16200,Parkes (A),237,348
+17000,Singleton (A),268,348
+18250,Willoughby (C),273,354
+11520,Canada Bay (A),276,356
+72300,Litchfield (M),236,356
+62810,Hobart (C),287,357
+30370,Banana (S),236,357
+11100,Botany Bay (C),280,362
+45290,Norwood Payneham St Peters (C),265,363
+22410,Glenelg (S),292,366
+53290,Esperance (S),272,371
+47980,Unley (C),270,372
+15750,Narrabri (A),246,372
+26730,Warrnambool (C),304,381
+14350,Kempsey (A),282,382
+11350,Byron (A),278,387
+62610,Glenorchy (C),317,397
+45040,Murray Bridge (RC),298,404
+53990,Harvey (S),282,410
+23190,Horsham (RC),306,414
+21370,Campaspe (S),298,417
+34880,Mareeba (S),282,417
+61410,Clarence (C),355,417
+48830,Yorke Peninsula (DC),313,424
+32260,Cassowary Coast (R),285,425
+36580,Somerset (R),311,430
+24900,Moira (S),305,433
+40700,Burnside (C),321,441
+54280,Kalgoorlie/Boulder (C),291,442
+54310,Karratha (C),262,443
+26610,Swan Hill (RC),309,447
+27350,Yarra (C),362,447
+34530,Livingstone (S),306,457
+10550,Bega Valley (A),359,462
+44550,Mount Barker (DC),343,467
+33980,Isaac (R),328,470
+16650,Rockdale (C),366,473
+40220,Alexandrina (DC),351,475
+51190,Bunbury (C),326,478
+10250,Ballina (A),352,487
+36660,Southern Downs (R),337,490
+12750,Eurobodalla (A),382,492
+36820,Tablelands (R),333,494
+13310,Goulburn Mulwaree (A),369,503
+56090,Mundaring (S),350,513
+16900,Shellharbour (C),392,516
+40310,Barossa (DC),370,516
+26810,Wellington (S),408,517
+27170,Wodonga (C),382,517
+25900,Port Phillip (C),420,520
+26700,Wangaratta (RC),378,528
+36630,South Burnett (R),369,529
+14850,Lismore (C),388,531
+25710,Nillumbik (S),435,535
+16550,Randwick (C),416,538
+57700,Serpentine-Jarrahdale (S),364,545
+24650,Melton (C),440,547
+13450,Griffith (C),372,552
+26350,Stonnington (C),449,553
+16380,Port Macquarie-Hastings (A),417,566
+50490,Belmont (C),379,566
+37340,Whitsunday (R),377,570
+50080,Albany (C),451,571
+16700,Ryde (C),444,572
+32270,Central Highlands (R) (Qld),378,574
+54830,Kwinana (C),386,584
+35740,Noosa (S),424,598
+24600,Melbourne (C),483,598
+11720,Cessnock (C),460,599
+16150,Orange (C),421,601
+40120,Adelaide Hills (DC),443,609
+18400,Wollondilly (A),477,622
+10900,Blue Mountains (C),493,636
+17200,Sydney (C),496,639
+10470,Bathurst Regional (A),459,642
+20830,Baw Baw (S),543,648
+64010,Launceston (C),516,651
+36510,Scenic Rim (R),466,657
+20910,Bayside (C),532,666
+10050,Albury (C),495,670
+50420,Bayswater (C),454,674
+34580,Lockyer Valley (R),464,674
+14500,Ku-ring-gai (A),527,679
+22110,East Gippsland (S),537,680
+48410,West Torrens (C),486,682
+44340,Mitcham (C),493,690
+12930,Georges River (A),535,691
+11730,Clarence Valley (A),497,692
+24330,Maribyrnong (C),568,709
+18350,Wingecarribee (A),561,742
+33620,Gympie (R),531,747
+54200,Kalamunda (S),524,767
+53800,Greater Geraldton (C),502,783
+18230,Western Plains Regional (A),530,784
+11450,Camden (A),616,799
+71000,Darwin (C),537,809
+16400,Port Stephens (A),605,814
+22310,Glen Eira (C),658,818
+14170,Inner West (A),639,827
+44060,Marion (C),585,827
+25060,Moonee Valley (C),671,829
+24210,Manningham (C),699,852
+50210,Armadale (C),580,863
+11800,Coffs Harbour (C),617,864
+20660,Banyule (C),708,875
+13800,Hawkesbury (C),688,893
+14000,Hornsby (A),695,896
+17550,Tweed (A),631,898
+37310,Western Downs (R),605,899
+24410,Maroondah (C),767,908
+23810,Latrobe (C) (Vic.),726,928
+47700,Tea Tree Gully (C),674,929
+17750,Wagga Wagga (C),686,934
+15050,Maitland (C),721,951
+23110,Hobsons Bay (C),766,963
+33360,Gladstone (R),632,967
+24780,Mildura (RC),668,976
+21450,Cardinia (S),851,1008
+21890,Darebin (C),836,1036
+25250,Moreland (C),853,1055
+55320,Melville (C),711,1059
+21110,Boroondara (C),862,1063
+17310,Tamworth Regional (A),718,1064
+36370,Rockhampton (R),721,1077
+22830,Greater Shepparton (C),757,1079
+55110,Mandurah (C),743,1107
+17420,The Hills Shire (A),863,1112
+26980,Whitehorse (C),936,1138
+22170,Frankston (C),942,1164
+20570,Ballarat (C),914,1187
+16950,Shoalhaven (C),944,1222
+15240,Mid-Coast (A),911,1231
+41060,Charles Sturt (C),920,1286
+16260,Parramatta (C),998,1292
+53780,Gosnells (C),885,1326
+33220,Fraser Coast (R),915,1334
+51330,Canning (C),883,1334
+23670,Knox (C),1136,1346
+12380,Cumberland (A),1044,1356
+15990,Northern Beaches (A),1052,1359
+17150,Sutherland Shire (A),1071,1384
+15900,Newcastle (C),1061,1432
+22620,Greater Bendigo (C),1078,1442
+31820,Bundaberg (R),969,1444
+51820,Cockburn (C),967,1454
+27450,Yarra Ranges (S),1239,1460
+36250,Redland (C),1010,1473
+24970,Monash (C),1209,1495
+45680,Playford (C),1085,1511
+57490,Rockingham (C),1038,1551
+23430,Kingston (C) (Vic.),1224,1553
+21180,Brimbank (C),1252,1554
+12850,Fairfield (C),1205,1568
+45890,Port Adelaide Enfield (C),1147,1588
+47140,Salisbury (C),1152,1600
+54170,Joondalup (C),1086,1608
+14900,Liverpool (C),1243,1613
+18450,Wollongong (C),1238,1636
+34770,Mackay (R),1087,1643
+32080,Cairns (R),1159,1688
+11500,Campbelltown (C) (NSW),1274,1691
+40910,Campbelltown (C) (SA),1274,1691
+27070,Whittlesea (C),1355,1693
+14650,Lake Macquarie (C),1312,1747
+16350,Penrith (C),1369,1776
+45340,Onkaparinga (C),1310,1838
+33960,Ipswich (C),1335,1859
+22670,Greater Dandenong (C),1492,1898
+58050,Swan (C),1301,1936
+25340,Mornington Peninsula (S),1631,2001
+11570,Canterbury-Bankstown (A),1547,2005
+57910,Stirling (C),1407,2093
+23270,Hume (C),1819,2262
+22750,Greater Geelong (C),1797,2271
+21610,Casey (C),1896,2272
+37010,Townsville (C),1469,2283
+58760,Wanneroo (C),1550,2307
+27260,Wyndham (C),1826,2309
+10750,Blacktown (C),1861,2415
+36910,Toowoomba (R),1680,2509
+11650,Central Coast (C) (NSW),2216,2874
+36720,Sunshine Coast (R),2233,3150
+34590,Logan (C),2219,3223
+89399,Unincorporated ACT,2368,3313
+35010,Moreton Bay (R),2933,4204
+33430,Gold Coast (C),3418,4880
+31000,Brisbane (C),7075,10330
