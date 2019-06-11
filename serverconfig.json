@@ -22,7 +22,8 @@
         "nicta.com.au",
         "noaa.gov",
         "static.nationalmap.nicta.com.au",
-        "uts-nom.herokuapp.com"
+        "uts-nom.herokuapp.com",
+        "cefc-rooftop-solar-potential.s3-ap-southeast-2.amazonaws.com"
     ],
     "feedback": {
         "userAgent": "TerriaBot (TerriaJS Feedback)",
