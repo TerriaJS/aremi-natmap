@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### In the next version
+* Updated "Electricity Infrastructure -> Network Opportunities" layers from the Institute for Sustainable Futures, UTS.
 * Added the new layers "Rooftop Solar PV, Total Potential" and "Rooftop Solar PV, Zone potential" in the "Renewable Energy -> Solar" group from the Institute for Sustainable Futures, UTS.
 
 ### Version 2019-04-29
