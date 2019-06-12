@@ -4,6 +4,8 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### In the next version
+* Added the new layers "Rooftop Solar PV, Total Potential" and "Rooftop Solar PV, Zone potential" in the "Renewable Energy -> Solar" group from the Institute for Sustainable Futures, UTS.
 
 ### Version 2019-04-29
 * Update to [TerriaJS 7.3.0](https://github.com/TerriaJS/terriajs/blob/7.3.0/CHANGES.md).
