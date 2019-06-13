@@ -4,8 +4,8 @@ DESCRIBE=$(git describe)
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 TARGET="target/aremi-natmap-${BRANCH}-${DESCRIBE}.tar.gz"
 
-rm -rf node_modules wwwroot/build wwwroot/init/aremi.json
-npm install
+rm -rf wwwroot/build wwwroot/init/aremi.json
+npm ci
 npm run gulp release
 
 if [ -n "$(git status --porcelain)" ]; then
