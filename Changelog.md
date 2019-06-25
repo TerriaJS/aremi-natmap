@@ -4,8 +4,11 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Version 2019-06-25
+* Update to [TerriaJS 7.6.3](https://github.com/TerriaJS/terriajs/blob/7.6.3/CHANGES.md).
+
 ### Version 2019-06-17
-* Update to [TerriaJS 7.6.0](https://github.com/TerriaJS/terriajs/blob/7.6.2/CHANGES.md).
+* Update to [TerriaJS 7.6.2](https://github.com/TerriaJS/terriajs/blob/7.6.2/CHANGES.md).
 * Removed "Electricity Infrastructure -> Network Opportunities -> 2016 Constraint Maps".
 
 ### Version 2019-06-13
