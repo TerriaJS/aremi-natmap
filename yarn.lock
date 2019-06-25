@@ -5372,9 +5372,9 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-"jsonschema@git+https://github.com/terriajs/jsonschema":
+jsonschema@terriajs/jsonschema:
   version "1.0.3"
-  resolved "git+https://github.com/terriajs/jsonschema#55cedb27a265bbae2b366a3824863c586c5d34cf"
+  resolved "https://codeload.github.com/terriajs/jsonschema/tar.gz/55cedb27a265bbae2b366a3824863c586c5d34cf"
 
 jsprim@^1.2.2:
   version "1.4.1"
@@ -6915,13 +6915,8 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-"pell@git://github.com/TerriaJS/pell#master":
-  version "1.0.6"
-  resolved "git://github.com/TerriaJS/pell#7cd23a55cdfd130fedf3679433991bb7d958fc42"
-
 "pell@git://github.com/TerriaJS/pell.git#master":
   version "1.0.6"
-  uid "7cd23a55cdfd130fedf3679433991bb7d958fc42"
   resolved "git://github.com/TerriaJS/pell.git#7cd23a55cdfd130fedf3679433991bb7d958fc42"
 
 performance-now@^2.1.0:
@@ -9084,10 +9079,10 @@ terriajs-server@^3.0.0:
     when "^3.7.7"
     yargs "^13.2.4"
 
-terriajs@7.6.2:
-  version "7.6.2"
-  resolved "https://registry.yarnpkg.com/terriajs/-/terriajs-7.6.2.tgz#03f58854d588d42697dfcfc75ce780c6cd5c6364"
-  integrity sha512-MsX9EPaGR25wbhdQpQFIj8fiYK8jlUb5jSEu4upbFkBq/PozwYOcpArfzLQHX38wzcl0YSddro9PRYXtSyNsVA==
+terriajs@7.6.3:
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/terriajs/-/terriajs-7.6.3.tgz#cc97038c13500c7e87c5b478c522dbbd790777cf"
+  integrity sha512-5/EvNdqOxVc8E9BYsgFlvxPYCsTxczpb0W+oKEI05/67gbkHFyCG78M1giap06c+kPJXWIisDzsBhcoOlYqYvQ==
   dependencies:
     "@babel/core" "^7.3.3"
     "@babel/plugin-transform-modules-commonjs" "^7.2.0"
