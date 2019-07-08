@@ -63,8 +63,8 @@ terria.filterStartDataCallback = function(startData) {
         // are included in the initSources.
         startData.initSources = startData.initSources.filter(function(initSource) {
             if (typeof initSource === 'string') {
-                return initSource.indexOf('static.nationalmap.nicta.com.au/init') < 0 &&
-                    initSource.indexOf('init/nm.json') < 0;
+                return initSource.indexOf('static.aremi.data61.io/init') < 0 &&
+                    initSource.indexOf('init/aremi.json') < 0;
             }
             return true;
         });
