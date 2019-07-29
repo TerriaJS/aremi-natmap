@@ -3,67 +3,68 @@
 @import "../Styles/AREMI.scss";
 
 body {
-    margin: 0;
-    overflow: hidden;
+  margin: 0;
+  overflow: hidden;
 }
 
 :global {
-    .panel--getting-started .panel-content {
-        background-image: url("../../wwwroot/images/welcome-bg.jpg");
-    }
+  .panel--getting-started .panel-content {
+    background-image: url("../../wwwroot/images/welcome-bg.jpg");
+  }
 
-    // Getting started tab
-    .panel--getting-started {
-        .panel__inner {
-            a {
-                font-weight: 600;
-                text-decoration: underline;
-                color: #fff;
-                &:hover,
-                &:focus {
-                    color: #f5f5f5;
-                }
-            }
+  // Getting started tab
+  .panel--getting-started {
+    .panel__inner {
+      a {
+        font-weight: 600;
+        text-decoration: underline;
+        color: #fff;
+        &:hover,
+        &:focus {
+          color: #f5f5f5;
         }
-        .panel-content {
-            background-position: right center;
-        }
+      }
     }
-
-    .tjs-notification-window__notification {
-        background-image: url("../../wwwroot/images/disclaimer-bg.jpg");
-        background-position: center right;
-        background-size: cover;
-        background-blend-mode: hard-light;
-
-        .btn {
-            background: rgba(0, 0, 0, 0.6);
-        }
+    .panel-content {
+      background-position: right center;
     }
+  }
 
-	@media print {
-		.nationalmap-print-disclaimer {
-			color: #000;
-			display: block;
-		}
-	}
+  .tjs-notification-window__notification {
+    background-image: url("../../wwwroot/images/disclaimer-bg.jpg");
+    background-position: center right;
+    background-size: cover;
+    background-blend-mode: hard-light;
 
-    .tjs-legend__legend__inner img {
-      max-height: 500px
+    .btn {
+      background: rgba(0, 0, 0, 0.6);
     }
+  }
 
-	.tjs-branding__branding {
-		a:first-child, a:last-child {
-			display: none;
+  @media print {
+    .nationalmap-print-disclaimer {
+      color: #000;
+      display: block;
+    }
+  }
 
-			@media screen and (min-width: $sm) {
-				display: inline;
-			}
-		}
-	}
-  	.tjs-feature-info-section__content {
-    	table td {
-        	padding: 5px;
-    	}
-  	}
+  .tjs-legend__legend__inner img {
+    max-height: 500px;
+  }
+
+  .tjs-branding__branding {
+    a:first-child,
+    a:last-child {
+      display: none;
+
+      @media screen and (min-width: $sm) {
+        display: inline;
+      }
+    }
+  }
+  .tjs-feature-info-section__content {
+    table td {
+      padding: 5px;
+    }
+  }
 }
