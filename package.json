@@ -36,6 +36,8 @@
     "node-sass": "^4.11.0",
     "pell": "git://github.com/TerriaJS/pell.git#master",
     "plugin-error": "^1.0.1",
+    "prettier": "1.17.0",
+    "pretty-quick": "^1.10.0",
     "prop-types": "^15.6.0",
     "raw-loader": "^1.0.0",
     "react": "^16.3.2",
@@ -63,6 +65,9 @@
     "pm2": "pm2",
     "gulp": "gulp",
     "postinstall": "echo 'Installation successful. What to do next:\\n  npm start       # Starts the server on port 3001\\n  gulp watch      # Builds TerriaMap and dependencies, and rebuilds if files change.'",
-    "hot": "webpack-dev-server --inline --config buildprocess/webpack.config.hot.js --hot --host 0.0.0.0"
+    "hot": "webpack-dev-server --inline --config buildprocess/webpack.config.hot.js --hot --host 0.0.0.0",
+    "prettier": "prettier --write \"**/*\"",
+    "pretty-quick": "pretty-quick",
+    "prettier-check": "prettier --check \"**/*\""
   }
 }
