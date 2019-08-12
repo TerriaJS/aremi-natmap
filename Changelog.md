@@ -4,6 +4,12 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Version 2019-07-30
+* Update to [TerriaJS 7.6.6](https://github.com/TerriaJS/terriajs/blob/7.6.6/CHANGES.md).
+* Including terriajs-server update to 3.0.1
+* Reorganised NSW Renewable Energy under "Renewable Energy -> Bioenergy -> New South Wales"
+* Merges & applies prettier to the codebase
+
 ### Version 2019-06-25
 * Update to [TerriaJS 7.6.3](https://github.com/TerriaJS/terriajs/blob/7.6.3/CHANGES.md).
 
