@@ -2468,13 +2468,13 @@
         },
         "AREMI_ISF_combined": {
             "layerName": "aremi_isf_combined",
-            "server": "https://tiles.terria.io/aremi_isf_combined-v15/{z}/{x}/{y}.pbf",
+            "server": "https://tile-test.terria.io/aremi_isf_combined-v16/{z}/{x}/{y}.pbf",
             "serverType": "MVT",
             "serverMaxNativeZoom": 12,
             "serverMaxZoom": 28,
             "bbox": [
                 132.086814916,
-                -43.51885,
+                -43.53558664876051,
                 153.63906769,
                 -14.164452636
             ],
