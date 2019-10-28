@@ -163,6 +163,9 @@
             {
               "name": "New South Wales",
               "type": "group",
+              "itemProperties": {
+                "opacity": 0.8
+              },
               "items": [
                 {
                   "name": "Cropping",
@@ -178,6 +181,14 @@
                   "preserveOrder": true,
                   "items": [
                     <% include custodian/NSW_Department_of_Primary_Industries/Forestry %>,
+                  ]
+                },
+                {
+                  "name": "Horticulture",
+                  "type": "group",
+                  "preserveOrder": true,
+                  "items": [
+                    <% include custodian/NSW_Department_of_Primary_Industries/Bio %>,
                   ]
                 },
                 {
@@ -380,9 +391,7 @@
             <% include custodian/Land_and_Property_Information_NSW/Aerial %>,
             <% include custodian/Queensland_Government/Public_Imagery %>,
             <% include custodian/Land_Information_System_Tasmania/Orthophoto %>,
-            <% include custodian/Digital_Earth_Australia/Landsat %>,
-            <% include custodian/Digital_Earth_Australia/Sentinel2 %>,
-            <% include custodian/Digital_Earth_Australia/Geomedian %>,
+            <% include custodian/Digital_Earth_Australia/Satellite_Images %>,
           ]
         },
         {

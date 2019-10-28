@@ -4,6 +4,18 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Version 2019-09-13
+
+* Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) v7.6.11
+ * Added a workaround for a bug in Google Chrome v76 and v77 that caused problems with sizing of the bottom dock, such as cutting off the timeline and flickering on and off over the map.
+ * Set cesium rendering resolution to CSS pixel resolution. This is required because Cesium renders in native device resolution since 1.61.0.
+
+### Version 2019-08-13
+* Update to [TerriaJS 7.6.8](https://github.com/TerriaJS/terriajs/blob/7.6.8/CHANGES.md).
+* Including terriajs-server update to 3.0.1
+* Reorganised NSW Renewable Energy under "Renewable Energy -> Bioenergy -> New South Wales"
+* Merges & applies prettier to the codebase
+
 ### Version 2019-06-25
 * Update to [TerriaJS 7.6.3](https://github.com/TerriaJS/terriajs/blob/7.6.3/CHANGES.md).
 
