@@ -1434,7 +1434,79 @@
             ],
             "nameProp": "STE_NAME16",
             "description": "States and Territories 2016 (ABS)",
-            "regionIdsFile": "build/TerriaJS/data/regionids/region_map-STE_2016_AUST_STE_CODE16.json"
+            "regionIdsFile": "build/TerriaJS/data/regionids/region_map-STE_2016_AUST_STE_CODE16.json",
+            "dataReplacements": [
+                [
+                    "^Vic[.]?$",
+                    "Victoria"
+                ],
+                [
+                    "^N[ .]?S[ .]?W[ .]?$",
+                    "New South Wales"
+                ],
+                [
+                    "^S[ .]?A[ .]?$",
+                    "South Australia"
+                ],
+                [
+                    "^N[ .]?T[ .]?$",
+                    "Northern Territory"
+                ],
+                [
+                    "^W[ .]?A[ .]?$",
+                    "Western Australia"
+                ],
+                [
+                    "^Tas[.]?$",
+                    "Tasmania"
+                ],
+                [
+                    "^Q[ .]?L[ .]?D[ .]?$",
+                    "Queensland"
+                ],
+                [
+                    "^A[ .]?C[ .]?T[ .]?$",
+                    "Australian Capital Territory"
+                ],
+                [
+                    "^1$",
+                    "New South Wales"
+                ],
+                [
+                    "^2$",
+                    "Victoria"
+                ],
+                [
+                    "^3$",
+                    "Queensland"
+                ],
+                [
+                    "^4$",
+                    "South Australia"
+                ],
+                [
+                    "^5$",
+                    "Western Australia"
+                ],
+                [
+                    "^6$",
+                    "Northern Territory"
+                    "Tasmania"
+                ],
+                [
+                    "^7$",
+                    "Australian Capital Territory"
+                    "Northern Territory"
+                ],
+                [
+                    "^8$",
+                    "Australian Capital Territory"
+                ],
+                [
+                    "^9$",
+                    "Other Territories"
+                ]
+            ]
         },
         "SOS": {
             "layerName": "FID_SOS_2011_AUST",
@@ -1918,14 +1990,18 @@
                 ],
                 [
                     "^6$",
-                    "Northern Territory"
+                    "Tasmania"
                 ],
                 [
                     "^7$",
-                    "Australian Capital Territory"
+                    "Northern Territory"
                 ],
                 [
                     "^8$",
+                    "Australian Capital Territory"
+                ],
+                [
+                    "^9$",
                     "Other Territories"
                 ]
             ],
