@@ -1490,12 +1490,10 @@
                 ],
                 [
                     "^6$",
-                    "Northern Territory",
                     "Tasmania"
                 ],
                 [
                     "^7$",
-                    "Australian Capital Territory",
                     "Northern Territory"
                 ],
                 [
@@ -2096,14 +2094,18 @@
                 ],
                 [
                     "^6$",
-                    "Northern Territory"
+                    "Tasmania"
                 ],
                 [
                     "^7$",
-                    "Australian Capital Territory"
+                    "Northern Territory"
                 ],
                 [
                     "^8$",
+                    "Australian Capital Territory"
+                ],
+                [
+                    "^9$",
                     "Other Territories"
                 ]
             ],
