@@ -5,6 +5,7 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 http://nationalmap.gov.au/renewables/
 
 ### Version 2020-05-25
+* Replaced two layers under "Renewable Energy > Bioenergy > National > National Piggery Residues" with a single layer
 * Added CLUM datasets under "Topography > Land"
 * Updated "Boundaries > Local Government Areas" to use 2019 ArcGis MapServer version.
 * Renamed "Waste" to "Organic Waste" under "Renewable Energy > BioEnergy > New South Wales"
