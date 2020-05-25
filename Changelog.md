@@ -4,6 +4,11 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Version 2020-05-25
+* Added CLUM datasets under "Topography > Land"
+* Updated "Boundaries > Local Government Areas" to use 2019 ArcGis MapServer version.
+* Renamed "Waste" to "Organic Waste" under "Renewable Energy > BioEnergy > New South Wales"
+
 ### Version 2019-09-13
 
 * Updated to [TerriaJS](https://github.com/TerriaJS/terriajs) v7.6.11
