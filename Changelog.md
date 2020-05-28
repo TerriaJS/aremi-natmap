@@ -4,6 +4,11 @@ This is a list of changes of the Australian Renewable Energy Mapping Infrastruct
 
 http://nationalmap.gov.au/renewables/
 
+### Version 2020-05-28
+* Added "Hoptspots" under "Topography > Aerial/Satellite Imagery"
+* Grouped 3 items under "Renewable Energy > Bioenergy > Western Australia" into a new "Waste" group
+* Updated contact details for "Renewable Energy > Bioenergy"
+
 ### Version 2020-05-25
 * Replaced two layers under "Renewable Energy > Bioenergy > National > National Piggery Residues" with a single layer
 * Added CLUM datasets under "Topography > Land"
