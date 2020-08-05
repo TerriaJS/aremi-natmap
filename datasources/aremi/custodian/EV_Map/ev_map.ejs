@@ -3,999 +3,996 @@
   "name": "Electric Vehicle",
   "preserveOrder": true,
   "items": [
-  {
-    "name": "EV charger locations",
-    "type": "csv",
-    "url": "https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/ev_evc_prototype.csv",
-    "tableStyle": {
-      "dataVariable": "stations",
-      "scale": 1,
-      "columns": {
-        "Postcode": {
-          "type": "HIDDEN"
-        },
-        "Address": {
-          "type": "HIDDEN"
-        },
-        "stations": {
-          "name": "Number of charging stations",
-          "colorMap": "rgba(252,251,253,1.0)-rgba(239,237,245,1.0)-rgba(218,218,235,1.0)-rgba(188,189,220,1.0)-rgba(158,154,200,1.0)-rgba(128,125,186,1.0)-rgba(106,81,163,1.0)-rgba(74,20,134,1.0)",
-          "minDisplayValue": 1,
-          "colorBinMethod": "ckmeans",
-          "clampDisplayValue": true
-        },
-        "Power (kW)": {
-          "name": "Power (kW)",
-          "colorMap": "rgba(252,251,253,1.0)-rgba(239,237,245,1.0)-rgba(218,218,235,1.0)-rgba(188,189,220,1.0)-rgba(158,154,200,1.0)-rgba(128,125,186,1.0)-rgba(106,81,163,1.0)-rgba(74,20,134,1.0)",
-          "minDisplayValue": 1,
-          "colorBinMethod": "ckmeans",
-          "clampDisplayValue": true
-        },
-        "State": {
-          "type": "HIDDEN"
-        },
-        "Name": {
-          "type": "HIDDEN"
-        },
-        "Charging Network": {
-          "name": "Charging network"
-        },
-        "Charger type": {
-          "name": "Charger Type",
-          "colorPalette": "RdYlGn",
-          "clampDisplayValue": true,
-          "maxDisplayValue": 50
+    {
+      "name": "EV charger locations",
+      "type": "csv",
+      "url": "https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/ev_evc_prototype.csv",
+      "tableStyle": {
+        "dataVariable": "stations",
+        "scale": 1,
+        "columns": {
+          "Postcode": {
+            "type": "HIDDEN"
+          },
+          "Address": {
+            "type": "HIDDEN"
+          },
+          "stations": {
+            "name": "Number of charging stations",
+            "colorMap": "rgba(252,251,253,1.0)-rgba(239,237,245,1.0)-rgba(218,218,235,1.0)-rgba(188,189,220,1.0)-rgba(158,154,200,1.0)-rgba(128,125,186,1.0)-rgba(106,81,163,1.0)-rgba(74,20,134,1.0)",
+            "minDisplayValue": 1,
+            "colorBinMethod": "ckmeans",
+            "clampDisplayValue": true
+          },
+          "Power (kW)": {
+            "name": "Power (kW)",
+            "colorMap": "rgba(252,251,253,1.0)-rgba(239,237,245,1.0)-rgba(218,218,235,1.0)-rgba(188,189,220,1.0)-rgba(158,154,200,1.0)-rgba(128,125,186,1.0)-rgba(106,81,163,1.0)-rgba(74,20,134,1.0)",
+            "minDisplayValue": 1,
+            "colorBinMethod": "ckmeans",
+            "clampDisplayValue": true
+          },
+          "State": {
+            "type": "HIDDEN"
+          },
+          "Name": {
+            "type": "HIDDEN"
+          },
+          "Charging Network": {
+            "name": "Charging network"
+          },
+          "Charger type": {
+            "name": "Charger Type",
+            "colorPalette": "RdYlGn",
+            "clampDisplayValue": true,
+            "maxDisplayValue": 50
+          }
         }
-      }
-    },
-    "featureInfoTemplate": "\n\n<h2>{{Charging Network}} Charging Station</h2>\n<dl class='isf-info'>\n{{#Charger type}}                 <dt>Charger type:       </dt><dd>{{Charger type}}                </dd>{{/Charger type}} \n{{#Plug types}}                   <dt>Plug type:          </dt><dd>{{Plug types}}                  </dd>{{/Plug types}} \n{{#Power (kW)}}                   <dt>Power (kW):         </dt><dd>{{Power (kW)}}                  </dd>{{/Power (kW)}}\n{{#stations}}                     <dt>No. of charging stations        </dt><dd>{{stations}}                    </dd>{{/stations}}\n{{#Hardware brand}}               <dt>Hardware brand:     </dt><dd>{{Hardware brand}}              </dd>{{/Hardware brand}}\n{{#Charging Network}}             <dt>Network:            </dt><dd>{{Charging Network}}             </dd>{{/Charging Network}}\n</dl>\n\n<h3>Location details</h3>\n{{Name}} {{#Name}}<br>{{/Name}} \n{{Address}}  {{#Address}}<br>{{/Address}}\n\n<dl class='isf-info'>\n{{#latitude}}         <dt>Latitude:       </dt><dd>{{latitude}}           </dd>{{/latitude}} \n{{#longitude}}        <dt>Longitude:      </dt><dd>{{longitude}}         </dd>{{/longitude}}\n</dl>\n\n\n\n\n\n",
-    "info": [
-    {
-      "name": "Data Supplier and Processing",
-      "content": "<p>The data is supplied by the Electric Vehicle Council. Data is processed and by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
-    },
-    {
-      "name": "Data Updates",
-      "content": "<p>Data is updated 6-monthly in June and December.</p>"
-    },
-    {
-      "name": "A Description of the Data",
-      "content": "<p>This is an Australia-wide map of the number and location of current Electric Vehicle (EV) charging stations. The \u2018Number of charging stations\u2019 displayed refers to the number of vehicles that can be charged simultaneously.</p><p>The following additional \u2018display variables\u2019 can also be selected in the legend panel: charger type, plug type, charging network, power (kW) and Hardware brand. In the context of Electric Vehicle charging infrastructure planning, these variables are important to understand gaps in the existing charging infrastructure provision.</p><p>Click on a charging station to reveal the following information:</p><ul><li><strong>Name</strong></li><li><strong>Location details</strong> such as address, latitude and longitude</li><li><strong>Charger type:</strong> AC (Level 2) / DC (Level 3) information on power level and whether the charger uses Alternating Current (AC) or Direct Current (DC)</li><li><strong>Plug types: </strong>Specifies the relevant plug type compatibility, as each charging station will only be capable of connecting certain electric vehicle models.</li><li><strong>Charging network:</strong> The charging network to which the station belongs. Non-networked stations refer to those openly accessible to all EV owners, not only those that are part of a given charging network.</li><li><strong>Power (kW):</strong> Where available, the total kW power output of the station (all connections).</li><li><strong>Hardware brand:</strong> Where available, the manufacturer of charging station hardware.</li></ul>"
-    },
-    {
-      "name": "Disclaimer",
-      "content": "<p>This data layer provides information on locations and characteristics of current Electric Vehicle Charging infrastructure, to inform potential gaps in the network and opportunities for extending the charging network. You are free to use the data but do so at your own risk. While due care and attention has been taken in the compilation and presentation of the data, the Providers of these maps do not make any representations, guarantees or warranties as to the accuracy, reliability, completeness or currency of the data and content of the maps.</p><p>By viewing or downloading the data the user agrees to irrevocably release the creators, authors, publishers and contributors to the maps, who include the Electric Vehicle Council and its members, and UTS (\u2018the \u2018Providers\u2019), from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer.</p>"
-    }
-    ]
-  },
-  {
-    "name": "EV registrations by postcode",
-    "type": "csv",
-    "url": "https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/chargers_by_postcode_prototype.csv",
-    "tableStyle": {
-      "dataVariable": "Registrations",
-      "regionVariable": "Postcode",
-      "regionType": "POA_2016",
-      "columns": {
-        "RNAULT": {
-          "type": "hidden"
-        },
-        "RNAULT_under_3": {
-          "type": "hidden"
-        },
-        "census_quickstats_link": {
-          "type": "hidden"
-        },
-        "TESLA": {
-          "type": "hidden"
-        },
-        "TESLA_under_3": {
-          "type": "hidden"
-        },
-        "HINO": {
-          "type": "hidden"
-        },
-        "HINO_under_3": {
-          "type": "hidden"
-        },
-        "BEVHYU": {
-          "type": "hidden"
-        },
-        "BEVHYU_under_3": {
-          "type": "hidden"
-        },
-        "UBCO": {
-          "type": "hidden"
-        },
-        "UBCO_under_3": {
-          "type": "hidden"
-        },
-        "CARBRI": {
-          "type": "hidden"
-        },
-        "CARBRI_under_3": {
-          "type": "hidden"
-        },
-        "CLUBCR": {
-          "type": "hidden"
-        },
-        "CLUBCR_under_3": {
-          "type": "hidden"
-        },
-        "SUZUKI": {
-          "type": "hidden"
-        },
-        "SUZUKI_under_3": {
-          "type": "hidden"
-        },
-        "BMW": {
-          "type": "hidden"
-        },
-        "BMW_under_3": {
-          "type": "hidden"
-        },
-        "MITSU": {
-          "type": "hidden"
-        },
-        "MITSU_under_3": {
-          "type": "hidden"
-        },
-        "LEX": {
-          "type": "hidden"
-        },
-        "LEX_under_3": {
-          "type": "hidden"
-        },
-        "SWAP": {
-          "type": "hidden"
-        },
-        "SWAP_under_3": {
-          "type": "hidden"
-        },
-        "VOLKSW": {
-          "type": "hidden"
-        },
-        "VOLKSW_under_3": {
-          "type": "hidden"
-        },
-        "BZOOMA": {
-          "type": "hidden"
-        },
-        "BZOOMA_under_3": {
-          "type": "hidden"
-        },
-        "BYD": {
-          "type": "hidden"
-        },
-        "BYD_under_3": {
-          "type": "hidden"
-        },
-        "SMART": {
-          "type": "hidden"
-        },
-        "SMART_under_3": {
-          "type": "hidden"
-        },
-        "DAIHAT": {
-          "type": "hidden"
-        },
-        "DAIHAT_under_3": {
-          "type": "hidden"
-        },
-        "TAILG": {
-          "type": "hidden"
-        },
-        "TAILG_under_3": {
-          "type": "hidden"
-        },
-        "HOLDEN": {
-          "type": "hidden"
-        },
-        "HOLDEN_under_3": {
-          "type": "hidden"
-        },
-        "FRETER": {
-          "type": "hidden"
-        },
-        "FRETER_under_3": {
-          "type": "hidden"
-        },
-        "ELECTR": {
-          "type": "hidden"
-        },
-        "ELECTR_under_3": {
-          "type": "hidden"
-        },
-        "KWSAKI": {
-          "type": "hidden"
-        },
-        "KWSAKI_under_3": {
-          "type": "hidden"
-        },
-        "SANYOU": {
-          "type": "hidden"
-        },
-        "SANYOU_under_3": {
-          "type": "hidden"
-        },
-        "GEMILA": {
-          "type": "hidden"
-        },
-        "GEMILA_under_3": {
-          "type": "hidden"
-        },
-        "E-MAX": {
-          "type": "hidden"
-        },
-        "E-MAX_under_3": {
-          "type": "hidden"
-        },
-        "HONDA": {
-          "type": "hidden"
-        },
-        "HONDA_under_3": {
-          "type": "hidden"
-        },
-        "CTROEN": {
-          "type": "hidden"
-        },
-        "CTROEN_under_3": {
-          "type": "hidden"
-        },
-        "EVT": {
-          "type": "hidden"
-        },
-        "EVT_under_3": {
-          "type": "hidden"
-        },
-        "JAGUAR": {
-          "type": "hidden"
-        },
-        "JAGUAR_under_3": {
-          "type": "hidden"
-        },
-        "VOLVO": {
-          "type": "hidden"
-        },
-        "VOLVO_under_3": {
-          "type": "hidden"
-        },
-        "HYUNDA": {
-          "type": "hidden"
-        },
-        "HYUNDA_under_3": {
-          "type": "hidden"
-        },
-        "KYBURZ": {
-          "type": "hidden"
-        },
-        "KYBURZ_under_3": {
-          "type": "hidden"
-        },
-        "FORD": {
-          "type": "hidden"
-        },
-        "FORD_under_3": {
-          "type": "hidden"
-        },
-        "TUKTUA": {
-          "type": "hidden"
-        },
-        "TUKTUA_under_3": {
-          "type": "hidden"
-        },
-        "PORSC": {
-          "type": "hidden"
-        },
-        "PORSC_under_3": {
-          "type": "hidden"
-        },
-        "FONZAR": {
-          "type": "hidden"
-        },
-        "FONZAR_under_3": {
-          "type": "hidden"
-        },
-        "ERIDER": {
-          "type": "hidden"
-        },
-        "ERIDER_under_3": {
-          "type": "hidden"
-        },
-        "SUR-RO": {
-          "type": "hidden"
-        },
-        "SUR-RO_under_3": {
-          "type": "hidden"
-        },
-        "HUASHA": {
-          "type": "hidden"
-        },
-        "HUASHA_under_3": {
-          "type": "hidden"
-        },
-        "VICTOA": {
-          "type": "hidden"
-        },
-        "VICTOA_under_3": {
-          "type": "hidden"
-        },
-        "YUTONG": {
-          "type": "hidden"
-        },
-        "YUTONG_under_3": {
-          "type": "hidden"
-        },
-        "VMOTOA": {
-          "type": "hidden"
-        },
-        "VMOTOA_under_3": {
-          "type": "hidden"
-        },
-        "ECOSPI": {
-          "type": "hidden"
-        },
-        "ECOSPI_under_3": {
-          "type": "hidden"
-        },
-        "CITRON": {
-          "type": "hidden"
-        },
-        "CITRON_under_3": {
-          "type": "hidden"
-        },
-        "LEYLND": {
-          "type": "hidden"
-        },
-        "LEYLND_under_3": {
-          "type": "hidden"
-        },
-        "IVECO": {
-          "type": "hidden"
-        },
-        "IVECO_under_3": {
-          "type": "hidden"
-        },
-        "LIFAN": {
-          "type": "hidden"
-        },
-        "LIFAN_under_3": {
-          "type": "hidden"
-        },
-        "VECTRI": {
-          "type": "hidden"
-        },
-        "VECTRI_under_3": {
-          "type": "hidden"
-        },
-        "DELRAN": {
-          "type": "hidden"
-        },
-        "DELRAN_under_3": {
-          "type": "hidden"
-        },
-        "MER": {
-          "type": "hidden"
-        },
-        "MER_under_3": {
-          "type": "hidden"
-        },
-        "MAZDA": {
-          "type": "hidden"
-        },
-        "MAZDA_under_3": {
-          "type": "hidden"
-        },
-        "LANBAG": {
-          "type": "hidden"
-        },
-        "LANBAG_under_3": {
-          "type": "hidden"
-        },
-        "SUB": {
-          "type": "hidden"
-        },
-        "SUB_under_3": {
-          "type": "hidden"
-        },
-        "TOYOTA": {
-          "type": "hidden"
-        },
-        "TOYOTA_under_3": {
-          "type": "hidden"
-        },
-        "ISUZU": {
-          "type": "hidden"
-        },
-        "ISUZU_under_3": {
-          "type": "hidden"
-        },
-        "SURRON": {
-          "type": "hidden"
-        },
-        "SURRON_under_3": {
-          "type": "hidden"
-        },
-        "ALFROM": {
-          "type": "hidden"
-        },
-        "ALFROM_under_3": {
-          "type": "hidden"
-        },
-        "UNEEDA": {
-          "type": "hidden"
-        },
-        "UNEEDA_under_3": {
-          "type": "hidden"
-        },
-        "ZERO": {
-          "type": "hidden"
-        },
-        "ZERO_under_3": {
-          "type": "hidden"
-        },
-        "NISSAN": {
-          "type": "hidden"
-        },
-        "NISSAN_under_3": {
-          "type": "hidden"
-        },
-        "KTM": {
-          "type": "hidden"
-        },
-        "KTM_under_3": {
-          "type": "hidden"
-        },
-        "KIA": {
-          "type": "hidden"
-        },
-        "KIA_under_3": {
-          "type": "hidden"
-        },
-        "PANEL VAN WITH SIDE WINDOWS": {
-          "type": "hidden"
-        },
-        "PANEL VAN WITH SIDE WINDOWS_under_3": {
-          "type": "hidden"
-        },
-        "TIPPER": {
-          "type": "hidden"
-        },
-        "TIPPER_under_3": {
-          "type": "hidden"
-        },
-        "AGRICULTURAL PLANT": {
-          "type": "hidden"
-        },
-        "AGRICULTURAL PLANT_under_3": {
-          "type": "hidden"
-        },
-        "TABLE TOP WITHOUT FITTINGS": {
-          "type": "hidden"
-        },
-        "TABLE TOP WITHOUT FITTINGS_under_3": {
-          "type": "hidden"
-        },
-        "MOTOR CYCLE": {
-          "type": "hidden"
-        },
-        "MOTOR CYCLE_under_3": {
-          "type": "hidden"
-        },
-        "CONVERTIBLE": {
-          "type": "hidden"
-        },
-        "CONVERTIBLE_under_3": {
-          "type": "hidden"
-        },
-        "COUPE": {
-          "type": "hidden"
-        },
-        "COUPE_under_3": {
-          "type": "hidden"
-        },
-        "TABLE TOP WITH FITTINGS": {
-          "type": "hidden"
-        },
-        "TABLE TOP WITH FITTINGS_under_3": {
-          "type": "hidden"
-        },
-        "FORK-LIFT": {
-          "type": "hidden"
-        },
-        "FORK-LIFT_under_3": {
-          "type": "hidden"
-        },
-        "REFRIGERATED VAN": {
-          "type": "hidden"
-        },
-        "REFRIGERATED VAN_under_3": {
-          "type": "hidden"
-        },
-        "LOW LOADER TRAILER": {
-          "type": "hidden"
-        },
-        "LOW LOADER TRAILER_under_3": {
-          "type": "hidden"
-        },
-        "PANEL VAN WITH WINDOWS & SEAT/S - 4WD": {
-          "type": "hidden"
-        },
-        "PANEL VAN WITH WINDOWS & SEAT/S - 4WD_under_3": {
-          "type": "hidden"
-        },
-        "INDUSTRIAL PLANT": {
-          "type": "hidden"
-        },
-        "INDUSTRIAL PLANT_under_3": {
-          "type": "hidden"
-        },
-        "ANIMAL CARRIER TRAILER": {
-          "type": "hidden"
-        },
-        "ANIMAL CARRIER TRAILER_under_3": {
-          "type": "hidden"
-        },
-        "THREE WHEEL CAR": {
-          "type": "hidden"
-        },
-        "THREE WHEEL CAR_under_3": {
-          "type": "hidden"
-        },
-        "UTILITY": {
-          "type": "hidden"
-        },
-        "UTILITY_under_3": {
-          "type": "hidden"
-        },
-        "VAN": {
-          "type": "hidden"
-        },
-        "VAN_under_3": {
-          "type": "hidden"
-        },
-        "PANEL VAN": {
-          "type": "hidden"
-        },
-        "PANEL VAN_under_3": {
-          "type": "hidden"
-        },
-        "BUS": {
-          "type": "hidden"
-        },
-        "BUS_under_3": {
-          "type": "hidden"
-        },
-        "STATION WAGON": {
-          "type": "hidden"
-        },
-        "STATION WAGON_under_3": {
-          "type": "hidden"
-        },
-        "PANEL VAN WITH WINDOWS & SEAT/S": {
-          "type": "hidden"
-        },
-        "PANEL VAN WITH WINDOWS & SEAT/S_under_3": {
-          "type": "hidden"
-        },
-        "SEDAN": {
-          "type": "hidden"
-        },
-        "SEDAN_under_3": {
-          "type": "hidden"
-        },
-        "0-254Kg": {
-          "type": "hidden"
-        },
-        "0-254Kg_under_3": {
-          "type": "hidden"
-        },
-        "255-764Kg": {
-          "type": "hidden"
-        },
-        "255-764Kg_under_3": {
-          "type": "hidden"
-        },
-        "765-975Kg": {
-          "type": "hidden"
-        },
-        "765-975Kg_under_3": {
-          "type": "hidden"
-        },
-        "976-1154Kg": {
-          "type": "hidden"
-        },
-        "976-1154Kg_under_3": {
-          "type": "hidden"
-        },
-        "1155-1504Kg": {
-          "type": "hidden"
-        },
-        "1155-1504Kg_under_3": {
-          "type": "hidden"
-        },
-        "1505-2504Kg": {
-          "type": "hidden"
-        },
-        "1505-2504Kg_under_3": {
-          "type": "hidden"
-        },
-        "2505-3500Kg": {
-          "type": "hidden"
-        },
-        "2505-3500Kg_under_3": {
-          "type": "hidden"
-        },
-        "3501-4500Kg": {
-          "type": "hidden"
-        },
-        "3501-4500Kg_under_3": {
-          "type": "hidden"
-        },
-        "4500+Kg": {
-          "type": "hidden"
-        },
-        "4500+Kg_under_3": {
-          "type": "hidden"
-        },
-        "BUSINESS - GENERAL": {
-          "type": "hidden"
-        },
-        "BUSINESS - GENERAL_under_3": {
-          "type": "hidden"
-        },
-        "HIRE CAR": {
-          "type": "hidden"
-        },
-        "HIRE CAR_under_3": {
-          "type": "hidden"
-        },
-        "CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE": {
-          "type": "hidden"
-        },
-        "CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE_under_3": {
-          "type": "hidden"
-        },
-        "HELD FOR RE-SALE BY A LICENSED MOTOR DEALER": {
-          "type": "hidden"
-        },
-        "HELD FOR RE-SALE BY A LICENSED MOTOR DEALER_under_3": {
-          "type": "hidden"
-        },
-        "PRIMARY PRODUCER GENERAL": {
-          "type": "hidden"
-        },
-        "PRIMARY PRODUCER GENERAL_under_3": {
-          "type": "hidden"
-        },
-        "ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD": {
-          "type": "hidden"
-        },
-        "ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD_under_3": {
-          "type": "hidden"
-        },
-        "GENERAL PRIVATE": {
-          "type": "hidden"
-        },
-        "GENERAL PRIVATE_under_3": {
-          "type": "hidden"
-        },
-        "GENERAL PURPOSE PLANT": {
-          "type": "hidden"
-        },
-        "GENERAL PURPOSE PLANT_under_3": {
-          "type": "hidden"
-        },
-        "RENTAL VEHICLE": {
-          "type": "hidden"
-        },
-        "RENTAL VEHICLE_under_3": {
-          "type": "hidden"
-        },
-        "PENSIONER CONCESSION": {
-          "type": "hidden"
-        },
-        "PENSIONER CONCESSION_under_3": {
-          "type": "hidden"
-        },
-        "BUS/TOURIST VEHICLE USED FOR HIRE": {
-          "type": "hidden"
-        },
-        "BUS/TOURIST VEHICLE USED FOR HIRE_under_3": {
-          "type": "hidden"
-        },
-        "DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER": {
-          "type": "hidden"
-        },
-        "DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER_under_3": {
-          "type": "hidden"
-        },
-        "USED FOR CHARITABLE PURPOSES": {
-          "type": "hidden"
-        },
-        "USED FOR CHARITABLE PURPOSES_under_3": {
-          "type": "hidden"
-        },
-        "2003": {
-          "type": "hidden"
-        },
-        "2003_under_3": {
-          "type": "hidden"
-        },
-        "2007": {
-          "type": "hidden"
-        },
-        "2007_under_3": {
-          "type": "hidden"
-        },
-        "2005": {
-          "type": "hidden"
-        },
-        "2005_under_3": {
-          "type": "hidden"
-        },
-        "2002": {
-          "type": "hidden"
-        },
-        "2002_under_3": {
-          "type": "hidden"
-        },
-        "2008": {
-          "type": "hidden"
-        },
-        "2008_under_3": {
-          "type": "hidden"
-        },
-        "2017": {
-          "type": "hidden"
-        },
-        "2017_under_3": {
-          "type": "hidden"
-        },
-        "1998": {
-          "type": "hidden"
-        },
-        "1998_under_3": {
-          "type": "hidden"
-        },
-        "2011": {
-          "type": "hidden"
-        },
-        "2011_under_3": {
-          "type": "hidden"
-        },
-        "1984": {
-          "type": "hidden"
-        },
-        "1984_under_3": {
-          "type": "hidden"
-        },
-        "2013": {
-          "type": "hidden"
-        },
-        "2013_under_3": {
-          "type": "hidden"
-        },
-        "1994": {
-          "type": "hidden"
-        },
-        "1994_under_3": {
-          "type": "hidden"
-        },
-        "1990": {
-          "type": "hidden"
-        },
-        "1990_under_3": {
-          "type": "hidden"
-        },
-        "1982": {
-          "type": "hidden"
-        },
-        "1982_under_3": {
-          "type": "hidden"
-        },
-        "1993": {
-          "type": "hidden"
-        },
-        "1993_under_3": {
-          "type": "hidden"
-        },
-        "1995": {
-          "type": "hidden"
-        },
-        "1995_under_3": {
-          "type": "hidden"
-        },
-        "2012": {
-          "type": "hidden"
-        },
-        "2012_under_3": {
-          "type": "hidden"
-        },
-        "2015": {
-          "type": "hidden"
-        },
-        "2015_under_3": {
-          "type": "hidden"
-        },
-        "2014": {
-          "type": "hidden"
-        },
-        "2014_under_3": {
-          "type": "hidden"
-        },
-        "2016": {
-          "type": "hidden"
-        },
-        "2016_under_3": {
-          "type": "hidden"
-        },
-        "1971": {
-          "type": "hidden"
-        },
-        "1971_under_3": {
-          "type": "hidden"
-        },
-        "1992": {
-          "type": "hidden"
-        },
-        "1992_under_3": {
-          "type": "hidden"
-        },
-        "2009": {
-          "type": "hidden"
-        },
-        "2009_under_3": {
-          "type": "hidden"
-        },
-        "1986": {
-          "type": "hidden"
-        },
-        "1986_under_3": {
-          "type": "hidden"
-        },
-        "1987": {
-          "type": "hidden"
-        },
-        "1987_under_3": {
-          "type": "hidden"
-        },
-        "1980": {
-          "type": "hidden"
-        },
-        "1980_under_3": {
-          "type": "hidden"
-        },
-        "2006": {
-          "type": "hidden"
-        },
-        "2006_under_3": {
-          "type": "hidden"
-        },
-        "1991": {
-          "type": "hidden"
-        },
-        "1991_under_3": {
-          "type": "hidden"
-        },
-        "1996": {
-          "type": "hidden"
-        },
-        "1996_under_3": {
-          "type": "hidden"
-        },
-        "2001": {
-          "type": "hidden"
-        },
-        "2001_under_3": {
-          "type": "hidden"
-        },
-        "1964": {
-          "type": "hidden"
-        },
-        "1964_under_3": {
-          "type": "hidden"
-        },
-        "2000": {
-          "type": "hidden"
-        },
-        "2000_under_3": {
-          "type": "hidden"
-        },
-        "1999": {
-          "type": "hidden"
-        },
-        "1999_under_3": {
-          "type": "hidden"
-        },
-        "2018": {
-          "type": "hidden"
-        },
-        "2018_under_3": {
-          "type": "hidden"
-        },
-        "2010": {
-          "type": "hidden"
-        },
-        "2010_under_3": {
-          "type": "hidden"
-        },
-        "2004": {
-          "type": "hidden"
-        },
-        "2004_under_3": {
-          "type": "hidden"
-        },
-        "1981": {
-          "type": "hidden"
-        },
-        "1981_under_3": {
-          "type": "hidden"
-        },
-        "2019": {
-          "type": "hidden"
-        },
-        "2019_under_3": {
-          "type": "hidden"
-        },
-        "1985": {
-          "type": "hidden"
-        },
-        "1985_under_3": {
-          "type": "hidden"
-        },
-        "Registrations": {
-          "name": "Total Registrations per postcode",
-          "colorMap": "FloralWhite-blue",
-          "colorBins": [
-          3,
-          18,
-          33,
-          48,
-          63,
-          78,
-          93,
-          108,
-          123,
-          138,
-          153,
-          168,
-          183,
-          198
-          ],
-          "clampDisplayValue": true,
-          "minDisplayValue": 3
-        },
-        "Postcode": {
-          "type": "hidden"
+      },
+      "featureInfoTemplate": "\n\n<h2>{{Charging Network}} Charging Station</h2>\n<dl class='isf-info'>\n{{#Charger type}}                 <dt>Charger type:       </dt><dd>{{Charger type}}                </dd>{{/Charger type}} \n{{#Plug types}}                   <dt>Plug type:          </dt><dd>{{Plug types}}                  </dd>{{/Plug types}} \n{{#Power (kW)}}                   <dt>Power (kW):         </dt><dd>{{Power (kW)}}                  </dd>{{/Power (kW)}}\n{{#stations}}                     <dt>No. of charging stations        </dt><dd>{{stations}}                    </dd>{{/stations}}\n{{#Hardware brand}}               <dt>Hardware brand:     </dt><dd>{{Hardware brand}}              </dd>{{/Hardware brand}}\n{{#Charging Network}}             <dt>Network:            </dt><dd>{{Charging Network}}             </dd>{{/Charging Network}}\n</dl>\n\n<h3>Location details</h3>\n{{Name}} {{#Name}}<br>{{/Name}} \n{{Address}}  {{#Address}}<br>{{/Address}}\n\n<dl class='isf-info'>\n{{#latitude}}         <dt>Latitude:       </dt><dd>{{latitude}}           </dd>{{/latitude}} \n{{#longitude}}        <dt>Longitude:      </dt><dd>{{longitude}}         </dd>{{/longitude}}\n</dl>\n\n\n\n\n\n",
+      "info": [
+        {
+          "name": "Data Supplier and Processing",
+          "content": "<p>The data is supplied by the Electric Vehicle Council. Data is processed and by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
+        },
+        {
+          "name": "Data Updates",
+          "content": "<p>Data is updated 6-monthly in June and December.</p>"
+        },
+        {
+          "name": "A Description of the Data",
+          "content": "<p>This is an Australia-wide map of the number and location of current Electric Vehicle (EV) charging stations. The \u2018Number of charging stations\u2019 displayed refers to the number of vehicles that can be charged simultaneously.</p><p>The following additional \u2018display variables\u2019 can also be selected in the legend panel: charger type, plug type, charging network, power (kW) and Hardware brand. In the context of Electric Vehicle charging infrastructure planning, these variables are important to understand gaps in the existing charging infrastructure provision.</p><p>Click on a charging station to reveal the following information:</p><ul><li><strong>Name</strong></li><li><strong>Location details</strong> such as address, latitude and longitude</li><li><strong>Charger type:</strong> AC (Level 2) / DC (Level 3) information on power level and whether the charger uses Alternating Current (AC) or Direct Current (DC)</li><li><strong>Plug types: </strong>Specifies the relevant plug type compatibility, as each charging station will only be capable of connecting certain electric vehicle models.</li><li><strong>Charging network:</strong> The charging network to which the station belongs. Non-networked stations refer to those openly accessible to all EV owners, not only those that are part of a given charging network.</li><li><strong>Power (kW):</strong> Where available, the total kW power output of the station (all connections).</li><li><strong>Hardware brand:</strong> Where available, the manufacturer of charging station hardware.</li></ul>"
+        },
+        {
+          "name": "Disclaimer",
+          "content": "<p>This data layer provides information on locations and characteristics of current Electric Vehicle Charging infrastructure, to inform potential gaps in the network and opportunities for extending the charging network. You are free to use the data but do so at your own risk. While due care and attention has been taken in the compilation and presentation of the data, the Providers of these maps do not make any representations, guarantees or warranties as to the accuracy, reliability, completeness or currency of the data and content of the maps.</p><p>By viewing or downloading the data the user agrees to irrevocably release the creators, authors, publishers and contributors to the maps, who include the Electric Vehicle Council and its members, and UTS (\u2018the \u2018Providers\u2019), from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer.</p>"
         }
-      }
-    },
-    "initialTimeSource": "end",
-    "infoSectionOrder": [
-    "Data Description",
-    "Data Updates",
-    "Data Supplier and Processing",
-    "Disclaimer"
-    ],
-    "info": [{
-      "name": "Data Description",
-      "content": "<p>This is a NSW map of total number of Electric Vehicle (EV) registrations by postcode for a specified year. Use the time slider bar at the bottom to explore how registrations have changed since 2016.</p> <p>The following additional display variables can also be used:</p> <ul> <li>Use type: Business general &ndash; registration count specified as primarily for business use.</li> <li>Use type: General private &ndash; registration count specified as primarily for private use.</li> </ul> <p>In the context of Electric Vehicle charging infrastructure planning, this is a critical variable that indicates growth areas for EV uptake and potential demand for charging services.</p> <p>Click on a postcode region to reveal the following information:</p> <ul> <li><strong>Postcode</strong></li> <li><strong>LGA:</strong> Local Government Area name where EVs are registered</li> <li><strong>Registration count broken down by:</strong></li> <ul> <li>body type (sedans vs coupes)</li> <li>make</li> <li>(primary) use</li> <li>year of manufacture</li> </ul> <li><strong>Link to ABS Census Quickstats</strong> <strong>for this postcode:</strong> to get a rapid appraisal of socio-demographic characteristics.</li> </ul>"
+      ]
     },
     {
-      "name": "Data Updates",
-      "content": "<p>Data is updated 6-monthly in June and December./p>"
+      "name": "EV registrations by postcode",
+      "type": "csv",
+      "showWarnings": false,
+      "url": "https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/chargers_by_postcode_prototype.csv",
+      "tableStyle": {
+        "dataVariable": "Registrations",
+        "regionVariable": "Postcode",
+        "regionType": "POA_2016",
+        "columns": {
+          "RNAULT": {
+            "type": "hidden"
+          },
+          "RNAULT_under_3": {
+            "type": "hidden"
+          },
+          "census_quickstats_link": {
+            "type": "hidden"
+          },
+          "TESLA": {
+            "type": "hidden"
+          },
+          "TESLA_under_3": {
+            "type": "hidden"
+          },
+          "HINO": {
+            "type": "hidden"
+          },
+          "HINO_under_3": {
+            "type": "hidden"
+          },
+          "BEVHYU": {
+            "type": "hidden"
+          },
+          "BEVHYU_under_3": {
+            "type": "hidden"
+          },
+          "UBCO": {
+            "type": "hidden"
+          },
+          "UBCO_under_3": {
+            "type": "hidden"
+          },
+          "CARBRI": {
+            "type": "hidden"
+          },
+          "CARBRI_under_3": {
+            "type": "hidden"
+          },
+          "CLUBCR": {
+            "type": "hidden"
+          },
+          "CLUBCR_under_3": {
+            "type": "hidden"
+          },
+          "SUZUKI": {
+            "type": "hidden"
+          },
+          "SUZUKI_under_3": {
+            "type": "hidden"
+          },
+          "BMW": {
+            "type": "hidden"
+          },
+          "BMW_under_3": {
+            "type": "hidden"
+          },
+          "MITSU": {
+            "type": "hidden"
+          },
+          "MITSU_under_3": {
+            "type": "hidden"
+          },
+          "LEX": {
+            "type": "hidden"
+          },
+          "LEX_under_3": {
+            "type": "hidden"
+          },
+          "SWAP": {
+            "type": "hidden"
+          },
+          "SWAP_under_3": {
+            "type": "hidden"
+          },
+          "VOLKSW": {
+            "type": "hidden"
+          },
+          "VOLKSW_under_3": {
+            "type": "hidden"
+          },
+          "BZOOMA": {
+            "type": "hidden"
+          },
+          "BZOOMA_under_3": {
+            "type": "hidden"
+          },
+          "BYD": {
+            "type": "hidden"
+          },
+          "BYD_under_3": {
+            "type": "hidden"
+          },
+          "SMART": {
+            "type": "hidden"
+          },
+          "SMART_under_3": {
+            "type": "hidden"
+          },
+          "DAIHAT": {
+            "type": "hidden"
+          },
+          "DAIHAT_under_3": {
+            "type": "hidden"
+          },
+          "TAILG": {
+            "type": "hidden"
+          },
+          "TAILG_under_3": {
+            "type": "hidden"
+          },
+          "HOLDEN": {
+            "type": "hidden"
+          },
+          "HOLDEN_under_3": {
+            "type": "hidden"
+          },
+          "FRETER": {
+            "type": "hidden"
+          },
+          "FRETER_under_3": {
+            "type": "hidden"
+          },
+          "ELECTR": {
+            "type": "hidden"
+          },
+          "ELECTR_under_3": {
+            "type": "hidden"
+          },
+          "KWSAKI": {
+            "type": "hidden"
+          },
+          "KWSAKI_under_3": {
+            "type": "hidden"
+          },
+          "SANYOU": {
+            "type": "hidden"
+          },
+          "SANYOU_under_3": {
+            "type": "hidden"
+          },
+          "GEMILA": {
+            "type": "hidden"
+          },
+          "GEMILA_under_3": {
+            "type": "hidden"
+          },
+          "E-MAX": {
+            "type": "hidden"
+          },
+          "E-MAX_under_3": {
+            "type": "hidden"
+          },
+          "HONDA": {
+            "type": "hidden"
+          },
+          "HONDA_under_3": {
+            "type": "hidden"
+          },
+          "CTROEN": {
+            "type": "hidden"
+          },
+          "CTROEN_under_3": {
+            "type": "hidden"
+          },
+          "EVT": {
+            "type": "hidden"
+          },
+          "EVT_under_3": {
+            "type": "hidden"
+          },
+          "JAGUAR": {
+            "type": "hidden"
+          },
+          "JAGUAR_under_3": {
+            "type": "hidden"
+          },
+          "VOLVO": {
+            "type": "hidden"
+          },
+          "VOLVO_under_3": {
+            "type": "hidden"
+          },
+          "HYUNDA": {
+            "type": "hidden"
+          },
+          "HYUNDA_under_3": {
+            "type": "hidden"
+          },
+          "KYBURZ": {
+            "type": "hidden"
+          },
+          "KYBURZ_under_3": {
+            "type": "hidden"
+          },
+          "FORD": {
+            "type": "hidden"
+          },
+          "FORD_under_3": {
+            "type": "hidden"
+          },
+          "TUKTUA": {
+            "type": "hidden"
+          },
+          "TUKTUA_under_3": {
+            "type": "hidden"
+          },
+          "PORSC": {
+            "type": "hidden"
+          },
+          "PORSC_under_3": {
+            "type": "hidden"
+          },
+          "FONZAR": {
+            "type": "hidden"
+          },
+          "FONZAR_under_3": {
+            "type": "hidden"
+          },
+          "ERIDER": {
+            "type": "hidden"
+          },
+          "ERIDER_under_3": {
+            "type": "hidden"
+          },
+          "SUR-RO": {
+            "type": "hidden"
+          },
+          "SUR-RO_under_3": {
+            "type": "hidden"
+          },
+          "HUASHA": {
+            "type": "hidden"
+          },
+          "HUASHA_under_3": {
+            "type": "hidden"
+          },
+          "VICTOA": {
+            "type": "hidden"
+          },
+          "VICTOA_under_3": {
+            "type": "hidden"
+          },
+          "YUTONG": {
+            "type": "hidden"
+          },
+          "YUTONG_under_3": {
+            "type": "hidden"
+          },
+          "VMOTOA": {
+            "type": "hidden"
+          },
+          "VMOTOA_under_3": {
+            "type": "hidden"
+          },
+          "ECOSPI": {
+            "type": "hidden"
+          },
+          "ECOSPI_under_3": {
+            "type": "hidden"
+          },
+          "CITRON": {
+            "type": "hidden"
+          },
+          "CITRON_under_3": {
+            "type": "hidden"
+          },
+          "LEYLND": {
+            "type": "hidden"
+          },
+          "LEYLND_under_3": {
+            "type": "hidden"
+          },
+          "IVECO": {
+            "type": "hidden"
+          },
+          "IVECO_under_3": {
+            "type": "hidden"
+          },
+          "LIFAN": {
+            "type": "hidden"
+          },
+          "LIFAN_under_3": {
+            "type": "hidden"
+          },
+          "VECTRI": {
+            "type": "hidden"
+          },
+          "VECTRI_under_3": {
+            "type": "hidden"
+          },
+          "DELRAN": {
+            "type": "hidden"
+          },
+          "DELRAN_under_3": {
+            "type": "hidden"
+          },
+          "MER": {
+            "type": "hidden"
+          },
+          "MER_under_3": {
+            "type": "hidden"
+          },
+          "MAZDA": {
+            "type": "hidden"
+          },
+          "MAZDA_under_3": {
+            "type": "hidden"
+          },
+          "LANBAG": {
+            "type": "hidden"
+          },
+          "LANBAG_under_3": {
+            "type": "hidden"
+          },
+          "SUB": {
+            "type": "hidden"
+          },
+          "SUB_under_3": {
+            "type": "hidden"
+          },
+          "TOYOTA": {
+            "type": "hidden"
+          },
+          "TOYOTA_under_3": {
+            "type": "hidden"
+          },
+          "ISUZU": {
+            "type": "hidden"
+          },
+          "ISUZU_under_3": {
+            "type": "hidden"
+          },
+          "SURRON": {
+            "type": "hidden"
+          },
+          "SURRON_under_3": {
+            "type": "hidden"
+          },
+          "ALFROM": {
+            "type": "hidden"
+          },
+          "ALFROM_under_3": {
+            "type": "hidden"
+          },
+          "UNEEDA": {
+            "type": "hidden"
+          },
+          "UNEEDA_under_3": {
+            "type": "hidden"
+          },
+          "ZERO": {
+            "type": "hidden"
+          },
+          "ZERO_under_3": {
+            "type": "hidden"
+          },
+          "NISSAN": {
+            "type": "hidden"
+          },
+          "NISSAN_under_3": {
+            "type": "hidden"
+          },
+          "KTM": {
+            "type": "hidden"
+          },
+          "KTM_under_3": {
+            "type": "hidden"
+          },
+          "KIA": {
+            "type": "hidden"
+          },
+          "KIA_under_3": {
+            "type": "hidden"
+          },
+          "PANEL VAN WITH SIDE WINDOWS": {
+            "type": "hidden"
+          },
+          "PANEL VAN WITH SIDE WINDOWS_under_3": {
+            "type": "hidden"
+          },
+          "TIPPER": {
+            "type": "hidden"
+          },
+          "TIPPER_under_3": {
+            "type": "hidden"
+          },
+          "AGRICULTURAL PLANT": {
+            "type": "hidden"
+          },
+          "AGRICULTURAL PLANT_under_3": {
+            "type": "hidden"
+          },
+          "TABLE TOP WITHOUT FITTINGS": {
+            "type": "hidden"
+          },
+          "TABLE TOP WITHOUT FITTINGS_under_3": {
+            "type": "hidden"
+          },
+          "MOTOR CYCLE": {
+            "type": "hidden"
+          },
+          "MOTOR CYCLE_under_3": {
+            "type": "hidden"
+          },
+          "CONVERTIBLE": {
+            "type": "hidden"
+          },
+          "CONVERTIBLE_under_3": {
+            "type": "hidden"
+          },
+          "COUPE": {
+            "type": "hidden"
+          },
+          "COUPE_under_3": {
+            "type": "hidden"
+          },
+          "TABLE TOP WITH FITTINGS": {
+            "type": "hidden"
+          },
+          "TABLE TOP WITH FITTINGS_under_3": {
+            "type": "hidden"
+          },
+          "FORK-LIFT": {
+            "type": "hidden"
+          },
+          "FORK-LIFT_under_3": {
+            "type": "hidden"
+          },
+          "REFRIGERATED VAN": {
+            "type": "hidden"
+          },
+          "REFRIGERATED VAN_under_3": {
+            "type": "hidden"
+          },
+          "LOW LOADER TRAILER": {
+            "type": "hidden"
+          },
+          "LOW LOADER TRAILER_under_3": {
+            "type": "hidden"
+          },
+          "PANEL VAN WITH WINDOWS & SEAT/S - 4WD": {
+            "type": "hidden"
+          },
+          "PANEL VAN WITH WINDOWS & SEAT/S - 4WD_under_3": {
+            "type": "hidden"
+          },
+          "INDUSTRIAL PLANT": {
+            "type": "hidden"
+          },
+          "INDUSTRIAL PLANT_under_3": {
+            "type": "hidden"
+          },
+          "ANIMAL CARRIER TRAILER": {
+            "type": "hidden"
+          },
+          "ANIMAL CARRIER TRAILER_under_3": {
+            "type": "hidden"
+          },
+          "THREE WHEEL CAR": {
+            "type": "hidden"
+          },
+          "THREE WHEEL CAR_under_3": {
+            "type": "hidden"
+          },
+          "UTILITY": {
+            "type": "hidden"
+          },
+          "UTILITY_under_3": {
+            "type": "hidden"
+          },
+          "VAN": {
+            "type": "hidden"
+          },
+          "VAN_under_3": {
+            "type": "hidden"
+          },
+          "PANEL VAN": {
+            "type": "hidden"
+          },
+          "PANEL VAN_under_3": {
+            "type": "hidden"
+          },
+          "BUS": {
+            "type": "hidden"
+          },
+          "BUS_under_3": {
+            "type": "hidden"
+          },
+          "STATION WAGON": {
+            "type": "hidden"
+          },
+          "STATION WAGON_under_3": {
+            "type": "hidden"
+          },
+          "PANEL VAN WITH WINDOWS & SEAT/S": {
+            "type": "hidden"
+          },
+          "PANEL VAN WITH WINDOWS & SEAT/S_under_3": {
+            "type": "hidden"
+          },
+          "SEDAN": {
+            "type": "hidden"
+          },
+          "SEDAN_under_3": {
+            "type": "hidden"
+          },
+          "0-254Kg": {
+            "type": "hidden"
+          },
+          "0-254Kg_under_3": {
+            "type": "hidden"
+          },
+          "255-764Kg": {
+            "type": "hidden"
+          },
+          "255-764Kg_under_3": {
+            "type": "hidden"
+          },
+          "765-975Kg": {
+            "type": "hidden"
+          },
+          "765-975Kg_under_3": {
+            "type": "hidden"
+          },
+          "976-1154Kg": {
+            "type": "hidden"
+          },
+          "976-1154Kg_under_3": {
+            "type": "hidden"
+          },
+          "1155-1504Kg": {
+            "type": "hidden"
+          },
+          "1155-1504Kg_under_3": {
+            "type": "hidden"
+          },
+          "1505-2504Kg": {
+            "type": "hidden"
+          },
+          "1505-2504Kg_under_3": {
+            "type": "hidden"
+          },
+          "2505-3500Kg": {
+            "type": "hidden"
+          },
+          "2505-3500Kg_under_3": {
+            "type": "hidden"
+          },
+          "3501-4500Kg": {
+            "type": "hidden"
+          },
+          "3501-4500Kg_under_3": {
+            "type": "hidden"
+          },
+          "4500+Kg": {
+            "type": "hidden"
+          },
+          "4500+Kg_under_3": {
+            "type": "hidden"
+          },
+          "BUSINESS - GENERAL": {
+            "type": "hidden"
+          },
+          "BUSINESS - GENERAL_under_3": {
+            "type": "hidden"
+          },
+          "HIRE CAR": {
+            "type": "hidden"
+          },
+          "HIRE CAR_under_3": {
+            "type": "hidden"
+          },
+          "CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE": {
+            "type": "hidden"
+          },
+          "CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE_under_3": {
+            "type": "hidden"
+          },
+          "HELD FOR RE-SALE BY A LICENSED MOTOR DEALER": {
+            "type": "hidden"
+          },
+          "HELD FOR RE-SALE BY A LICENSED MOTOR DEALER_under_3": {
+            "type": "hidden"
+          },
+          "PRIMARY PRODUCER GENERAL": {
+            "type": "hidden"
+          },
+          "PRIMARY PRODUCER GENERAL_under_3": {
+            "type": "hidden"
+          },
+          "ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD": {
+            "type": "hidden"
+          },
+          "ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD_under_3": {
+            "type": "hidden"
+          },
+          "GENERAL PRIVATE": {
+            "type": "hidden"
+          },
+          "GENERAL PRIVATE_under_3": {
+            "type": "hidden"
+          },
+          "GENERAL PURPOSE PLANT": {
+            "type": "hidden"
+          },
+          "GENERAL PURPOSE PLANT_under_3": {
+            "type": "hidden"
+          },
+          "RENTAL VEHICLE": {
+            "type": "hidden"
+          },
+          "RENTAL VEHICLE_under_3": {
+            "type": "hidden"
+          },
+          "PENSIONER CONCESSION": {
+            "type": "hidden"
+          },
+          "PENSIONER CONCESSION_under_3": {
+            "type": "hidden"
+          },
+          "BUS/TOURIST VEHICLE USED FOR HIRE": {
+            "type": "hidden"
+          },
+          "BUS/TOURIST VEHICLE USED FOR HIRE_under_3": {
+            "type": "hidden"
+          },
+          "DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER": {
+            "type": "hidden"
+          },
+          "DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER_under_3": {
+            "type": "hidden"
+          },
+          "USED FOR CHARITABLE PURPOSES": {
+            "type": "hidden"
+          },
+          "USED FOR CHARITABLE PURPOSES_under_3": {
+            "type": "hidden"
+          },
+          "2003": {
+            "type": "hidden"
+          },
+          "2003_under_3": {
+            "type": "hidden"
+          },
+          "2007": {
+            "type": "hidden"
+          },
+          "2007_under_3": {
+            "type": "hidden"
+          },
+          "2005": {
+            "type": "hidden"
+          },
+          "2005_under_3": {
+            "type": "hidden"
+          },
+          "2002": {
+            "type": "hidden"
+          },
+          "2002_under_3": {
+            "type": "hidden"
+          },
+          "2008": {
+            "type": "hidden"
+          },
+          "2008_under_3": {
+            "type": "hidden"
+          },
+          "2017": {
+            "type": "hidden"
+          },
+          "2017_under_3": {
+            "type": "hidden"
+          },
+          "1998": {
+            "type": "hidden"
+          },
+          "1998_under_3": {
+            "type": "hidden"
+          },
+          "2011": {
+            "type": "hidden"
+          },
+          "2011_under_3": {
+            "type": "hidden"
+          },
+          "1984": {
+            "type": "hidden"
+          },
+          "1984_under_3": {
+            "type": "hidden"
+          },
+          "2013": {
+            "type": "hidden"
+          },
+          "2013_under_3": {
+            "type": "hidden"
+          },
+          "1994": {
+            "type": "hidden"
+          },
+          "1994_under_3": {
+            "type": "hidden"
+          },
+          "1990": {
+            "type": "hidden"
+          },
+          "1990_under_3": {
+            "type": "hidden"
+          },
+          "1982": {
+            "type": "hidden"
+          },
+          "1982_under_3": {
+            "type": "hidden"
+          },
+          "1993": {
+            "type": "hidden"
+          },
+          "1993_under_3": {
+            "type": "hidden"
+          },
+          "1995": {
+            "type": "hidden"
+          },
+          "1995_under_3": {
+            "type": "hidden"
+          },
+          "2012": {
+            "type": "hidden"
+          },
+          "2012_under_3": {
+            "type": "hidden"
+          },
+          "2015": {
+            "type": "hidden"
+          },
+          "2015_under_3": {
+            "type": "hidden"
+          },
+          "2014": {
+            "type": "hidden"
+          },
+          "2014_under_3": {
+            "type": "hidden"
+          },
+          "2016": {
+            "type": "hidden"
+          },
+          "2016_under_3": {
+            "type": "hidden"
+          },
+          "1971": {
+            "type": "hidden"
+          },
+          "1971_under_3": {
+            "type": "hidden"
+          },
+          "1992": {
+            "type": "hidden"
+          },
+          "1992_under_3": {
+            "type": "hidden"
+          },
+          "2009": {
+            "type": "hidden"
+          },
+          "2009_under_3": {
+            "type": "hidden"
+          },
+          "1986": {
+            "type": "hidden"
+          },
+          "1986_under_3": {
+            "type": "hidden"
+          },
+          "1987": {
+            "type": "hidden"
+          },
+          "1987_under_3": {
+            "type": "hidden"
+          },
+          "1980": {
+            "type": "hidden"
+          },
+          "1980_under_3": {
+            "type": "hidden"
+          },
+          "2006": {
+            "type": "hidden"
+          },
+          "2006_under_3": {
+            "type": "hidden"
+          },
+          "1991": {
+            "type": "hidden"
+          },
+          "1991_under_3": {
+            "type": "hidden"
+          },
+          "1996": {
+            "type": "hidden"
+          },
+          "1996_under_3": {
+            "type": "hidden"
+          },
+          "2001": {
+            "type": "hidden"
+          },
+          "2001_under_3": {
+            "type": "hidden"
+          },
+          "1964": {
+            "type": "hidden"
+          },
+          "1964_under_3": {
+            "type": "hidden"
+          },
+          "2000": {
+            "type": "hidden"
+          },
+          "2000_under_3": {
+            "type": "hidden"
+          },
+          "1999": {
+            "type": "hidden"
+          },
+          "1999_under_3": {
+            "type": "hidden"
+          },
+          "2018": {
+            "type": "hidden"
+          },
+          "2018_under_3": {
+            "type": "hidden"
+          },
+          "2010": {
+            "type": "hidden"
+          },
+          "2010_under_3": {
+            "type": "hidden"
+          },
+          "2004": {
+            "type": "hidden"
+          },
+          "2004_under_3": {
+            "type": "hidden"
+          },
+          "1981": {
+            "type": "hidden"
+          },
+          "1981_under_3": {
+            "type": "hidden"
+          },
+          "2019": {
+            "type": "hidden"
+          },
+          "2019_under_3": {
+            "type": "hidden"
+          },
+          "1985": {
+            "type": "hidden"
+          },
+          "1985_under_3": {
+            "type": "hidden"
+          },
+          "Registrations": {
+            "name": "Total Registrations per postcode",
+            "colorMap": "FloralWhite-blue",
+            "colorBins": [
+            3,
+            10,
+            15,
+            20,
+            25,
+            30,
+            50,
+            75,
+            100
+            ],
+            "clampDisplayValue": true,
+            "minDisplayValue": 3
+          },
+          "Postcode": {
+            "type": "hidden"
+          }
+        }
       },
-      {
-        "name": "Data Supplier and Processing",
-        "content": "<p>The data is supplied by the NSW Government Roads and Maritime Services. Data is processed and hosted by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
-      },
-      {
-        "name": "Disclaimer",
-        "content": "<p>Transport for NSW publishes statistical registration Data for information purposes only.</p> <p>The Data presented is derived from third party Address Data provided by the registered owners of electric powered vehicles. You acknowledge that the Address Data provided by the registered owner of a vehicle may not always accurately represent the geographical location of that vehicle, and that the Address Data is subject to change from time to time. Transport for NSW has not independently verified the Address Data the Data relies on.</p> <p>Transport for NSW does not warrant, represent or guarantee the accuracy or suitability for any purpose of the information (including the Data) published at this website.</p> <p>Transport for NSW does not accept any legal liability for any loss or damage arising directly or indirectly from any person’s use of information (including the Data) published at this website. You hereby release Transport for NSW, including its officers, agents and contractors, from all actions, suits, claims, demands, costs, damages and expenses which You might have against Transport for NSW, including its officers, agents and contractors, for any loss or damage of whatsoever nature and howsoever arising in connection with Your use of the information (including the Data) published at this website.</p> <p>Use of information (including the Data) published at this website is at Your sole risk. Transport for NSW recommends that You exercise Your own skill, care and judgment with respect to Your use of information (including the Data) published. You must seek Your own appropriate independent professional advice before making any decision based on information (including the Data) published at this website.</p>"
-      }
+      "initialTimeSource": "end",
+      "infoSectionOrder": [
+        "Data Description",
+        "Data Updates",
+        "Data Supplier and Processing",
+        "Disclaimer"
       ],
-      "featureInfoTemplate": "<h2>Registrations by Postcode</h2>\n<dl class='isf-info'>\n<dt>Postcode</dt>   <dd>{{Postcode}}</dd>\n<dt>Year</dt>   <dd>{{Year}}</dd>\n\n{{#Registrations}}\n\n{{#Registrations_under_3}}\n<dt>Number of registrations</dt> <dd> 3 or fewer </dd>\n{{/Registrations_under_3}}\n\n{{^Registrations_under_3}}\n<dt>Number of registrations</dt> <dd> {{Registrations}} </dd>\n{{/Registrations_under_3}}\n</dl>\n\n<h3>Make</h3>\n<dl class='isf-info'>\n{{#RNAULT_under_3}}\n{{#RNAULT}}<dt> Rnault </dt><dd> 3 or fewer </dd> {{/RNAULT}}\n{{/RNAULT_under_3}}\n{{^RNAULT_under_3}}\n{{#RNAULT}}<dt> Rnault  </dt><dd> {{RNAULT}} </dd> {{/RNAULT}}\n{{/RNAULT_under_3}}\n{{#TESLA_under_3}}\n{{#TESLA}}<dt> Tesla </dt><dd> 3 or fewer </dd> {{/TESLA}}\n{{/TESLA_under_3}}\n{{^TESLA_under_3}}\n{{#TESLA}}<dt> Tesla  </dt><dd> {{TESLA}} </dd> {{/TESLA}}\n{{/TESLA_under_3}}\n{{#HINO_under_3}}\n{{#HINO}}<dt> Hino </dt><dd> 3 or fewer </dd> {{/HINO}}\n{{/HINO_under_3}}\n{{^HINO_under_3}}\n{{#HINO}}<dt> Hino  </dt><dd> {{HINO}} </dd> {{/HINO}}\n{{/HINO_under_3}}\n{{#BEVHYU_under_3}}\n{{#BEVHYU}}<dt> Bevhyu </dt><dd> 3 or fewer </dd> {{/BEVHYU}}\n{{/BEVHYU_under_3}}\n{{^BEVHYU_under_3}}\n{{#BEVHYU}}<dt> Bevhyu  </dt><dd> {{BEVHYU}} </dd> {{/BEVHYU}}\n{{/BEVHYU_under_3}}\n{{#UBCO_under_3}}\n{{#UBCO}}<dt> Ubco </dt><dd> 3 or fewer </dd> {{/UBCO}}\n{{/UBCO_under_3}}\n{{^UBCO_under_3}}\n{{#UBCO}}<dt> Ubco  </dt><dd> {{UBCO}} </dd> {{/UBCO}}\n{{/UBCO_under_3}}\n{{#CARBRI_under_3}}\n{{#CARBRI}}<dt> Carbri </dt><dd> 3 or fewer </dd> {{/CARBRI}}\n{{/CARBRI_under_3}}\n{{^CARBRI_under_3}}\n{{#CARBRI}}<dt> Carbri  </dt><dd> {{CARBRI}} </dd> {{/CARBRI}}\n{{/CARBRI_under_3}}\n{{#CLUBCR_under_3}}\n{{#CLUBCR}}<dt> Clubcr </dt><dd> 3 or fewer </dd> {{/CLUBCR}}\n{{/CLUBCR_under_3}}\n{{^CLUBCR_under_3}}\n{{#CLUBCR}}<dt> Clubcr  </dt><dd> {{CLUBCR}} </dd> {{/CLUBCR}}\n{{/CLUBCR_under_3}}\n{{#SUZUKI_under_3}}\n{{#SUZUKI}}<dt> Suzuki </dt><dd> 3 or fewer </dd> {{/SUZUKI}}\n{{/SUZUKI_under_3}}\n{{^SUZUKI_under_3}}\n{{#SUZUKI}}<dt> Suzuki  </dt><dd> {{SUZUKI}} </dd> {{/SUZUKI}}\n{{/SUZUKI_under_3}}\n{{#BMW_under_3}}\n{{#BMW}}<dt> Bmw </dt><dd> 3 or fewer </dd> {{/BMW}}\n{{/BMW_under_3}}\n{{^BMW_under_3}}\n{{#BMW}}<dt> Bmw  </dt><dd> {{BMW}} </dd> {{/BMW}}\n{{/BMW_under_3}}\n{{#MITSU_under_3}}\n{{#MITSU}}<dt> Mitsu </dt><dd> 3 or fewer </dd> {{/MITSU}}\n{{/MITSU_under_3}}\n{{^MITSU_under_3}}\n{{#MITSU}}<dt> Mitsu  </dt><dd> {{MITSU}} </dd> {{/MITSU}}\n{{/MITSU_under_3}}\n{{#LEX_under_3}}\n{{#LEX}}<dt> Lex </dt><dd> 3 or fewer </dd> {{/LEX}}\n{{/LEX_under_3}}\n{{^LEX_under_3}}\n{{#LEX}}<dt> Lex  </dt><dd> {{LEX}} </dd> {{/LEX}}\n{{/LEX_under_3}}\n{{#SWAP_under_3}}\n{{#SWAP}}<dt> Swap </dt><dd> 3 or fewer </dd> {{/SWAP}}\n{{/SWAP_under_3}}\n{{^SWAP_under_3}}\n{{#SWAP}}<dt> Swap  </dt><dd> {{SWAP}} </dd> {{/SWAP}}\n{{/SWAP_under_3}}\n{{#VOLKSW_under_3}}\n{{#VOLKSW}}<dt> Volksw </dt><dd> 3 or fewer </dd> {{/VOLKSW}}\n{{/VOLKSW_under_3}}\n{{^VOLKSW_under_3}}\n{{#VOLKSW}}<dt> Volksw  </dt><dd> {{VOLKSW}} </dd> {{/VOLKSW}}\n{{/VOLKSW_under_3}}\n{{#BZOOMA_under_3}}\n{{#BZOOMA}}<dt> Bzooma </dt><dd> 3 or fewer </dd> {{/BZOOMA}}\n{{/BZOOMA_under_3}}\n{{^BZOOMA_under_3}}\n{{#BZOOMA}}<dt> Bzooma  </dt><dd> {{BZOOMA}} </dd> {{/BZOOMA}}\n{{/BZOOMA_under_3}}\n{{#BYD_under_3}}\n{{#BYD}}<dt> Byd </dt><dd> 3 or fewer </dd> {{/BYD}}\n{{/BYD_under_3}}\n{{^BYD_under_3}}\n{{#BYD}}<dt> Byd  </dt><dd> {{BYD}} </dd> {{/BYD}}\n{{/BYD_under_3}}\n{{#SMART_under_3}}\n{{#SMART}}<dt> Smart </dt><dd> 3 or fewer </dd> {{/SMART}}\n{{/SMART_under_3}}\n{{^SMART_under_3}}\n{{#SMART}}<dt> Smart  </dt><dd> {{SMART}} </dd> {{/SMART}}\n{{/SMART_under_3}}\n{{#DAIHAT_under_3}}\n{{#DAIHAT}}<dt> Daihat </dt><dd> 3 or fewer </dd> {{/DAIHAT}}\n{{/DAIHAT_under_3}}\n{{^DAIHAT_under_3}}\n{{#DAIHAT}}<dt> Daihat  </dt><dd> {{DAIHAT}} </dd> {{/DAIHAT}}\n{{/DAIHAT_under_3}}\n{{#TAILG_under_3}}\n{{#TAILG}}<dt> Tailg </dt><dd> 3 or fewer </dd> {{/TAILG}}\n{{/TAILG_under_3}}\n{{^TAILG_under_3}}\n{{#TAILG}}<dt> Tailg  </dt><dd> {{TAILG}} </dd> {{/TAILG}}\n{{/TAILG_under_3}}\n{{#HOLDEN_under_3}}\n{{#HOLDEN}}<dt> Holden </dt><dd> 3 or fewer </dd> {{/HOLDEN}}\n{{/HOLDEN_under_3}}\n{{^HOLDEN_under_3}}\n{{#HOLDEN}}<dt> Holden  </dt><dd> {{HOLDEN}} </dd> {{/HOLDEN}}\n{{/HOLDEN_under_3}}\n{{#FRETER_under_3}}\n{{#FRETER}}<dt> Freter </dt><dd> 3 or fewer </dd> {{/FRETER}}\n{{/FRETER_under_3}}\n{{^FRETER_under_3}}\n{{#FRETER}}<dt> Freter  </dt><dd> {{FRETER}} </dd> {{/FRETER}}\n{{/FRETER_under_3}}\n{{#ELECTR_under_3}}\n{{#ELECTR}}<dt> Electr </dt><dd> 3 or fewer </dd> {{/ELECTR}}\n{{/ELECTR_under_3}}\n{{^ELECTR_under_3}}\n{{#ELECTR}}<dt> Electr  </dt><dd> {{ELECTR}} </dd> {{/ELECTR}}\n{{/ELECTR_under_3}}\n{{#KWSAKI_under_3}}\n{{#KWSAKI}}<dt> Kwsaki </dt><dd> 3 or fewer </dd> {{/KWSAKI}}\n{{/KWSAKI_under_3}}\n{{^KWSAKI_under_3}}\n{{#KWSAKI}}<dt> Kwsaki  </dt><dd> {{KWSAKI}} </dd> {{/KWSAKI}}\n{{/KWSAKI_under_3}}\n{{#SANYOU_under_3}}\n{{#SANYOU}}<dt> Sanyou </dt><dd> 3 or fewer </dd> {{/SANYOU}}\n{{/SANYOU_under_3}}\n{{^SANYOU_under_3}}\n{{#SANYOU}}<dt> Sanyou  </dt><dd> {{SANYOU}} </dd> {{/SANYOU}}\n{{/SANYOU_under_3}}\n{{#GEMILA_under_3}}\n{{#GEMILA}}<dt> Gemila </dt><dd> 3 or fewer </dd> {{/GEMILA}}\n{{/GEMILA_under_3}}\n{{^GEMILA_under_3}}\n{{#GEMILA}}<dt> Gemila  </dt><dd> {{GEMILA}} </dd> {{/GEMILA}}\n{{/GEMILA_under_3}}\n{{#E-MAX_under_3}}\n{{#E-MAX}}<dt> E-Max </dt><dd> 3 or fewer </dd> {{/E-MAX}}\n{{/E-MAX_under_3}}\n{{^E-MAX_under_3}}\n{{#E-MAX}}<dt> E-Max  </dt><dd> {{E-MAX}} </dd> {{/E-MAX}}\n{{/E-MAX_under_3}}\n{{#HONDA_under_3}}\n{{#HONDA}}<dt> Honda </dt><dd> 3 or fewer </dd> {{/HONDA}}\n{{/HONDA_under_3}}\n{{^HONDA_under_3}}\n{{#HONDA}}<dt> Honda  </dt><dd> {{HONDA}} </dd> {{/HONDA}}\n{{/HONDA_under_3}}\n{{#CTROEN_under_3}}\n{{#CTROEN}}<dt> Ctroen </dt><dd> 3 or fewer </dd> {{/CTROEN}}\n{{/CTROEN_under_3}}\n{{^CTROEN_under_3}}\n{{#CTROEN}}<dt> Ctroen  </dt><dd> {{CTROEN}} </dd> {{/CTROEN}}\n{{/CTROEN_under_3}}\n{{#EVT_under_3}}\n{{#EVT}}<dt> Evt </dt><dd> 3 or fewer </dd> {{/EVT}}\n{{/EVT_under_3}}\n{{^EVT_under_3}}\n{{#EVT}}<dt> Evt  </dt><dd> {{EVT}} </dd> {{/EVT}}\n{{/EVT_under_3}}\n{{#JAGUAR_under_3}}\n{{#JAGUAR}}<dt> Jaguar </dt><dd> 3 or fewer </dd> {{/JAGUAR}}\n{{/JAGUAR_under_3}}\n{{^JAGUAR_under_3}}\n{{#JAGUAR}}<dt> Jaguar  </dt><dd> {{JAGUAR}} </dd> {{/JAGUAR}}\n{{/JAGUAR_under_3}}\n{{#VOLVO_under_3}}\n{{#VOLVO}}<dt> Volvo </dt><dd> 3 or fewer </dd> {{/VOLVO}}\n{{/VOLVO_under_3}}\n{{^VOLVO_under_3}}\n{{#VOLVO}}<dt> Volvo  </dt><dd> {{VOLVO}} </dd> {{/VOLVO}}\n{{/VOLVO_under_3}}\n{{#HYUNDA_under_3}}\n{{#HYUNDA}}<dt> Hyunda </dt><dd> 3 or fewer </dd> {{/HYUNDA}}\n{{/HYUNDA_under_3}}\n{{^HYUNDA_under_3}}\n{{#HYUNDA}}<dt> Hyunda  </dt><dd> {{HYUNDA}} </dd> {{/HYUNDA}}\n{{/HYUNDA_under_3}}\n{{#KYBURZ_under_3}}\n{{#KYBURZ}}<dt> Kyburz </dt><dd> 3 or fewer </dd> {{/KYBURZ}}\n{{/KYBURZ_under_3}}\n{{^KYBURZ_under_3}}\n{{#KYBURZ}}<dt> Kyburz  </dt><dd> {{KYBURZ}} </dd> {{/KYBURZ}}\n{{/KYBURZ_under_3}}\n{{#FORD_under_3}}\n{{#FORD}}<dt> Ford </dt><dd> 3 or fewer </dd> {{/FORD}}\n{{/FORD_under_3}}\n{{^FORD_under_3}}\n{{#FORD}}<dt> Ford  </dt><dd> {{FORD}} </dd> {{/FORD}}\n{{/FORD_under_3}}\n{{#TUKTUA_under_3}}\n{{#TUKTUA}}<dt> Tuktua </dt><dd> 3 or fewer </dd> {{/TUKTUA}}\n{{/TUKTUA_under_3}}\n{{^TUKTUA_under_3}}\n{{#TUKTUA}}<dt> Tuktua  </dt><dd> {{TUKTUA}} </dd> {{/TUKTUA}}\n{{/TUKTUA_under_3}}\n{{#PORSC_under_3}}\n{{#PORSC}}<dt> Porsc </dt><dd> 3 or fewer </dd> {{/PORSC}}\n{{/PORSC_under_3}}\n{{^PORSC_under_3}}\n{{#PORSC}}<dt> Porsc  </dt><dd> {{PORSC}} </dd> {{/PORSC}}\n{{/PORSC_under_3}}\n{{#FONZAR_under_3}}\n{{#FONZAR}}<dt> Fonzar </dt><dd> 3 or fewer </dd> {{/FONZAR}}\n{{/FONZAR_under_3}}\n{{^FONZAR_under_3}}\n{{#FONZAR}}<dt> Fonzar  </dt><dd> {{FONZAR}} </dd> {{/FONZAR}}\n{{/FONZAR_under_3}}\n{{#ERIDER_under_3}}\n{{#ERIDER}}<dt> Erider </dt><dd> 3 or fewer </dd> {{/ERIDER}}\n{{/ERIDER_under_3}}\n{{^ERIDER_under_3}}\n{{#ERIDER}}<dt> Erider  </dt><dd> {{ERIDER}} </dd> {{/ERIDER}}\n{{/ERIDER_under_3}}\n{{#SUR-RO_under_3}}\n{{#SUR-RO}}<dt> Sur-Ro </dt><dd> 3 or fewer </dd> {{/SUR-RO}}\n{{/SUR-RO_under_3}}\n{{^SUR-RO_under_3}}\n{{#SUR-RO}}<dt> Sur-Ro  </dt><dd> {{SUR-RO}} </dd> {{/SUR-RO}}\n{{/SUR-RO_under_3}}\n{{#HUASHA_under_3}}\n{{#HUASHA}}<dt> Huasha </dt><dd> 3 or fewer </dd> {{/HUASHA}}\n{{/HUASHA_under_3}}\n{{^HUASHA_under_3}}\n{{#HUASHA}}<dt> Huasha  </dt><dd> {{HUASHA}} </dd> {{/HUASHA}}\n{{/HUASHA_under_3}}\n{{#VICTOA_under_3}}\n{{#VICTOA}}<dt> Victoa </dt><dd> 3 or fewer </dd> {{/VICTOA}}\n{{/VICTOA_under_3}}\n{{^VICTOA_under_3}}\n{{#VICTOA}}<dt> Victoa  </dt><dd> {{VICTOA}} </dd> {{/VICTOA}}\n{{/VICTOA_under_3}}\n{{#YUTONG_under_3}}\n{{#YUTONG}}<dt> Yutong </dt><dd> 3 or fewer </dd> {{/YUTONG}}\n{{/YUTONG_under_3}}\n{{^YUTONG_under_3}}\n{{#YUTONG}}<dt> Yutong  </dt><dd> {{YUTONG}} </dd> {{/YUTONG}}\n{{/YUTONG_under_3}}\n{{#VMOTOA_under_3}}\n{{#VMOTOA}}<dt> Vmotoa </dt><dd> 3 or fewer </dd> {{/VMOTOA}}\n{{/VMOTOA_under_3}}\n{{^VMOTOA_under_3}}\n{{#VMOTOA}}<dt> Vmotoa  </dt><dd> {{VMOTOA}} </dd> {{/VMOTOA}}\n{{/VMOTOA_under_3}}\n{{#ECOSPI_under_3}}\n{{#ECOSPI}}<dt> Ecospi </dt><dd> 3 or fewer </dd> {{/ECOSPI}}\n{{/ECOSPI_under_3}}\n{{^ECOSPI_under_3}}\n{{#ECOSPI}}<dt> Ecospi  </dt><dd> {{ECOSPI}} </dd> {{/ECOSPI}}\n{{/ECOSPI_under_3}}\n{{#CITRON_under_3}}\n{{#CITRON}}<dt> Citron </dt><dd> 3 or fewer </dd> {{/CITRON}}\n{{/CITRON_under_3}}\n{{^CITRON_under_3}}\n{{#CITRON}}<dt> Citron  </dt><dd> {{CITRON}} </dd> {{/CITRON}}\n{{/CITRON_under_3}}\n{{#LEYLND_under_3}}\n{{#LEYLND}}<dt> Leylnd </dt><dd> 3 or fewer </dd> {{/LEYLND}}\n{{/LEYLND_under_3}}\n{{^LEYLND_under_3}}\n{{#LEYLND}}<dt> Leylnd  </dt><dd> {{LEYLND}} </dd> {{/LEYLND}}\n{{/LEYLND_under_3}}\n{{#IVECO_under_3}}\n{{#IVECO}}<dt> Iveco </dt><dd> 3 or fewer </dd> {{/IVECO}}\n{{/IVECO_under_3}}\n{{^IVECO_under_3}}\n{{#IVECO}}<dt> Iveco  </dt><dd> {{IVECO}} </dd> {{/IVECO}}\n{{/IVECO_under_3}}\n{{#LIFAN_under_3}}\n{{#LIFAN}}<dt> Lifan </dt><dd> 3 or fewer </dd> {{/LIFAN}}\n{{/LIFAN_under_3}}\n{{^LIFAN_under_3}}\n{{#LIFAN}}<dt> Lifan  </dt><dd> {{LIFAN}} </dd> {{/LIFAN}}\n{{/LIFAN_under_3}}\n{{#VECTRI_under_3}}\n{{#VECTRI}}<dt> Vectri </dt><dd> 3 or fewer </dd> {{/VECTRI}}\n{{/VECTRI_under_3}}\n{{^VECTRI_under_3}}\n{{#VECTRI}}<dt> Vectri  </dt><dd> {{VECTRI}} </dd> {{/VECTRI}}\n{{/VECTRI_under_3}}\n{{#DELRAN_under_3}}\n{{#DELRAN}}<dt> Delran </dt><dd> 3 or fewer </dd> {{/DELRAN}}\n{{/DELRAN_under_3}}\n{{^DELRAN_under_3}}\n{{#DELRAN}}<dt> Delran  </dt><dd> {{DELRAN}} </dd> {{/DELRAN}}\n{{/DELRAN_under_3}}\n{{#MER_under_3}}\n{{#MER}}<dt> Mer </dt><dd> 3 or fewer </dd> {{/MER}}\n{{/MER_under_3}}\n{{^MER_under_3}}\n{{#MER}}<dt> Mer  </dt><dd> {{MER}} </dd> {{/MER}}\n{{/MER_under_3}}\n{{#MAZDA_under_3}}\n{{#MAZDA}}<dt> Mazda </dt><dd> 3 or fewer </dd> {{/MAZDA}}\n{{/MAZDA_under_3}}\n{{^MAZDA_under_3}}\n{{#MAZDA}}<dt> Mazda  </dt><dd> {{MAZDA}} </dd> {{/MAZDA}}\n{{/MAZDA_under_3}}\n{{#LANBAG_under_3}}\n{{#LANBAG}}<dt> Lanbag </dt><dd> 3 or fewer </dd> {{/LANBAG}}\n{{/LANBAG_under_3}}\n{{^LANBAG_under_3}}\n{{#LANBAG}}<dt> Lanbag  </dt><dd> {{LANBAG}} </dd> {{/LANBAG}}\n{{/LANBAG_under_3}}\n{{#SUB_under_3}}\n{{#SUB}}<dt> Sub </dt><dd> 3 or fewer </dd> {{/SUB}}\n{{/SUB_under_3}}\n{{^SUB_under_3}}\n{{#SUB}}<dt> Sub  </dt><dd> {{SUB}} </dd> {{/SUB}}\n{{/SUB_under_3}}\n{{#TOYOTA_under_3}}\n{{#TOYOTA}}<dt> Toyota </dt><dd> 3 or fewer </dd> {{/TOYOTA}}\n{{/TOYOTA_under_3}}\n{{^TOYOTA_under_3}}\n{{#TOYOTA}}<dt> Toyota  </dt><dd> {{TOYOTA}} </dd> {{/TOYOTA}}\n{{/TOYOTA_under_3}}\n{{#ISUZU_under_3}}\n{{#ISUZU}}<dt> Isuzu </dt><dd> 3 or fewer </dd> {{/ISUZU}}\n{{/ISUZU_under_3}}\n{{^ISUZU_under_3}}\n{{#ISUZU}}<dt> Isuzu  </dt><dd> {{ISUZU}} </dd> {{/ISUZU}}\n{{/ISUZU_under_3}}\n{{#SURRON_under_3}}\n{{#SURRON}}<dt> Surron </dt><dd> 3 or fewer </dd> {{/SURRON}}\n{{/SURRON_under_3}}\n{{^SURRON_under_3}}\n{{#SURRON}}<dt> Surron  </dt><dd> {{SURRON}} </dd> {{/SURRON}}\n{{/SURRON_under_3}}\n{{#ALFROM_under_3}}\n{{#ALFROM}}<dt> Alfrom </dt><dd> 3 or fewer </dd> {{/ALFROM}}\n{{/ALFROM_under_3}}\n{{^ALFROM_under_3}}\n{{#ALFROM}}<dt> Alfrom  </dt><dd> {{ALFROM}} </dd> {{/ALFROM}}\n{{/ALFROM_under_3}}\n{{#UNEEDA_under_3}}\n{{#UNEEDA}}<dt> Uneeda </dt><dd> 3 or fewer </dd> {{/UNEEDA}}\n{{/UNEEDA_under_3}}\n{{^UNEEDA_under_3}}\n{{#UNEEDA}}<dt> Uneeda  </dt><dd> {{UNEEDA}} </dd> {{/UNEEDA}}\n{{/UNEEDA_under_3}}\n{{#ZERO_under_3}}\n{{#ZERO}}<dt> Zero </dt><dd> 3 or fewer </dd> {{/ZERO}}\n{{/ZERO_under_3}}\n{{^ZERO_under_3}}\n{{#ZERO}}<dt> Zero  </dt><dd> {{ZERO}} </dd> {{/ZERO}}\n{{/ZERO_under_3}}\n{{#NISSAN_under_3}}\n{{#NISSAN}}<dt> Nissan </dt><dd> 3 or fewer </dd> {{/NISSAN}}\n{{/NISSAN_under_3}}\n{{^NISSAN_under_3}}\n{{#NISSAN}}<dt> Nissan  </dt><dd> {{NISSAN}} </dd> {{/NISSAN}}\n{{/NISSAN_under_3}}\n{{#KTM_under_3}}\n{{#KTM}}<dt> Ktm </dt><dd> 3 or fewer </dd> {{/KTM}}\n{{/KTM_under_3}}\n{{^KTM_under_3}}\n{{#KTM}}<dt> Ktm  </dt><dd> {{KTM}} </dd> {{/KTM}}\n{{/KTM_under_3}}\n{{#KIA_under_3}}\n{{#KIA}}<dt> Kia </dt><dd> 3 or fewer </dd> {{/KIA}}\n{{/KIA_under_3}}\n{{^KIA_under_3}}\n{{#KIA}}<dt> Kia  </dt><dd> {{KIA}} </dd> {{/KIA}}\n{{/KIA_under_3}}\n</dl>\n\n<br/>\n\n<h3>Shape</h3>\n<dl class='isf-info'>\n{{#PANEL VAN WITH SIDE WINDOWS_under_3}}\n{{#PANEL VAN WITH SIDE WINDOWS}}<dt> Panel Van With Side Windows </dt><dd> 3 or fewer </dd> {{/PANEL VAN WITH SIDE WINDOWS}}\n{{/PANEL VAN WITH SIDE WINDOWS_under_3}}\n{{^PANEL VAN WITH SIDE WINDOWS_under_3}}\n{{#PANEL VAN WITH SIDE WINDOWS}}<dt> Panel Van With Side Windows  </dt><dd> {{PANEL VAN WITH SIDE WINDOWS}} </dd> {{/PANEL VAN WITH SIDE WINDOWS}}\n{{/PANEL VAN WITH SIDE WINDOWS_under_3}}\n{{#TIPPER_under_3}}\n{{#TIPPER}}<dt> Tipper </dt><dd> 3 or fewer </dd> {{/TIPPER}}\n{{/TIPPER_under_3}}\n{{^TIPPER_under_3}}\n{{#TIPPER}}<dt> Tipper  </dt><dd> {{TIPPER}} </dd> {{/TIPPER}}\n{{/TIPPER_under_3}}\n{{#AGRICULTURAL PLANT_under_3}}\n{{#AGRICULTURAL PLANT}}<dt> Agricultural Plant </dt><dd> 3 or fewer </dd> {{/AGRICULTURAL PLANT}}\n{{/AGRICULTURAL PLANT_under_3}}\n{{^AGRICULTURAL PLANT_under_3}}\n{{#AGRICULTURAL PLANT}}<dt> Agricultural Plant  </dt><dd> {{AGRICULTURAL PLANT}} </dd> {{/AGRICULTURAL PLANT}}\n{{/AGRICULTURAL PLANT_under_3}}\n{{#TABLE TOP WITHOUT FITTINGS_under_3}}\n{{#TABLE TOP WITHOUT FITTINGS}}<dt> Table Top Without Fittings </dt><dd> 3 or fewer </dd> {{/TABLE TOP WITHOUT FITTINGS}}\n{{/TABLE TOP WITHOUT FITTINGS_under_3}}\n{{^TABLE TOP WITHOUT FITTINGS_under_3}}\n{{#TABLE TOP WITHOUT FITTINGS}}<dt> Table Top Without Fittings  </dt><dd> {{TABLE TOP WITHOUT FITTINGS}} </dd> {{/TABLE TOP WITHOUT FITTINGS}}\n{{/TABLE TOP WITHOUT FITTINGS_under_3}}\n{{#MOTOR CYCLE_under_3}}\n{{#MOTOR CYCLE}}<dt> Motor Cycle </dt><dd> 3 or fewer </dd> {{/MOTOR CYCLE}}\n{{/MOTOR CYCLE_under_3}}\n{{^MOTOR CYCLE_under_3}}\n{{#MOTOR CYCLE}}<dt> Motor Cycle  </dt><dd> {{MOTOR CYCLE}} </dd> {{/MOTOR CYCLE}}\n{{/MOTOR CYCLE_under_3}}\n{{#CONVERTIBLE_under_3}}\n{{#CONVERTIBLE}}<dt> Convertible </dt><dd> 3 or fewer </dd> {{/CONVERTIBLE}}\n{{/CONVERTIBLE_under_3}}\n{{^CONVERTIBLE_under_3}}\n{{#CONVERTIBLE}}<dt> Convertible  </dt><dd> {{CONVERTIBLE}} </dd> {{/CONVERTIBLE}}\n{{/CONVERTIBLE_under_3}}\n{{#COUPE_under_3}}\n{{#COUPE}}<dt> Coupe </dt><dd> 3 or fewer </dd> {{/COUPE}}\n{{/COUPE_under_3}}\n{{^COUPE_under_3}}\n{{#COUPE}}<dt> Coupe  </dt><dd> {{COUPE}} </dd> {{/COUPE}}\n{{/COUPE_under_3}}\n{{#TABLE TOP WITH FITTINGS_under_3}}\n{{#TABLE TOP WITH FITTINGS}}<dt> Table Top With Fittings </dt><dd> 3 or fewer </dd> {{/TABLE TOP WITH FITTINGS}}\n{{/TABLE TOP WITH FITTINGS_under_3}}\n{{^TABLE TOP WITH FITTINGS_under_3}}\n{{#TABLE TOP WITH FITTINGS}}<dt> Table Top With Fittings  </dt><dd> {{TABLE TOP WITH FITTINGS}} </dd> {{/TABLE TOP WITH FITTINGS}}\n{{/TABLE TOP WITH FITTINGS_under_3}}\n{{#FORK-LIFT_under_3}}\n{{#FORK-LIFT}}<dt> Fork-Lift </dt><dd> 3 or fewer </dd> {{/FORK-LIFT}}\n{{/FORK-LIFT_under_3}}\n{{^FORK-LIFT_under_3}}\n{{#FORK-LIFT}}<dt> Fork-Lift  </dt><dd> {{FORK-LIFT}} </dd> {{/FORK-LIFT}}\n{{/FORK-LIFT_under_3}}\n{{#REFRIGERATED VAN_under_3}}\n{{#REFRIGERATED VAN}}<dt> Refrigerated Van </dt><dd> 3 or fewer </dd> {{/REFRIGERATED VAN}}\n{{/REFRIGERATED VAN_under_3}}\n{{^REFRIGERATED VAN_under_3}}\n{{#REFRIGERATED VAN}}<dt> Refrigerated Van  </dt><dd> {{REFRIGERATED VAN}} </dd> {{/REFRIGERATED VAN}}\n{{/REFRIGERATED VAN_under_3}}\n{{#LOW LOADER TRAILER_under_3}}\n{{#LOW LOADER TRAILER}}<dt> Low Loader Trailer </dt><dd> 3 or fewer </dd> {{/LOW LOADER TRAILER}}\n{{/LOW LOADER TRAILER_under_3}}\n{{^LOW LOADER TRAILER_under_3}}\n{{#LOW LOADER TRAILER}}<dt> Low Loader Trailer  </dt><dd> {{LOW LOADER TRAILER}} </dd> {{/LOW LOADER TRAILER}}\n{{/LOW LOADER TRAILER_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S - 4WD_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S - 4WD}}<dt> Panel Van With Windows & Seat/S - 4Wd </dt><dd> 3 or fewer </dd> {{/PANEL VAN WITH WINDOWS & SEAT/S - 4WD}}\n{{/PANEL VAN WITH WINDOWS & SEAT/S - 4WD_under_3}}\n{{^PANEL VAN WITH WINDOWS & SEAT/S - 4WD_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S - 4WD}}<dt> Panel Van With Windows & Seat/S - 4Wd  </dt><dd> {{PANEL VAN WITH WINDOWS & SEAT/S - 4WD}} </dd> {{/PANEL VAN WITH WINDOWS & SEAT/S - 4WD}}\n{{/PANEL VAN WITH WINDOWS & SEAT/S - 4WD_under_3}}\n{{#INDUSTRIAL PLANT_under_3}}\n{{#INDUSTRIAL PLANT}}<dt> Industrial Plant </dt><dd> 3 or fewer </dd> {{/INDUSTRIAL PLANT}}\n{{/INDUSTRIAL PLANT_under_3}}\n{{^INDUSTRIAL PLANT_under_3}}\n{{#INDUSTRIAL PLANT}}<dt> Industrial Plant  </dt><dd> {{INDUSTRIAL PLANT}} </dd> {{/INDUSTRIAL PLANT}}\n{{/INDUSTRIAL PLANT_under_3}}\n{{#ANIMAL CARRIER TRAILER_under_3}}\n{{#ANIMAL CARRIER TRAILER}}<dt> Animal Carrier Trailer </dt><dd> 3 or fewer </dd> {{/ANIMAL CARRIER TRAILER}}\n{{/ANIMAL CARRIER TRAILER_under_3}}\n{{^ANIMAL CARRIER TRAILER_under_3}}\n{{#ANIMAL CARRIER TRAILER}}<dt> Animal Carrier Trailer  </dt><dd> {{ANIMAL CARRIER TRAILER}} </dd> {{/ANIMAL CARRIER TRAILER}}\n{{/ANIMAL CARRIER TRAILER_under_3}}\n{{#THREE WHEEL CAR_under_3}}\n{{#THREE WHEEL CAR}}<dt> Three Wheel Car </dt><dd> 3 or fewer </dd> {{/THREE WHEEL CAR}}\n{{/THREE WHEEL CAR_under_3}}\n{{^THREE WHEEL CAR_under_3}}\n{{#THREE WHEEL CAR}}<dt> Three Wheel Car  </dt><dd> {{THREE WHEEL CAR}} </dd> {{/THREE WHEEL CAR}}\n{{/THREE WHEEL CAR_under_3}}\n{{#UTILITY_under_3}}\n{{#UTILITY}}<dt> Utility </dt><dd> 3 or fewer </dd> {{/UTILITY}}\n{{/UTILITY_under_3}}\n{{^UTILITY_under_3}}\n{{#UTILITY}}<dt> Utility  </dt><dd> {{UTILITY}} </dd> {{/UTILITY}}\n{{/UTILITY_under_3}}\n{{#VAN_under_3}}\n{{#VAN}}<dt> Van </dt><dd> 3 or fewer </dd> {{/VAN}}\n{{/VAN_under_3}}\n{{^VAN_under_3}}\n{{#VAN}}<dt> Van  </dt><dd> {{VAN}} </dd> {{/VAN}}\n{{/VAN_under_3}}\n{{#PANEL VAN_under_3}}\n{{#PANEL VAN}}<dt> Panel Van </dt><dd> 3 or fewer </dd> {{/PANEL VAN}}\n{{/PANEL VAN_under_3}}\n{{^PANEL VAN_under_3}}\n{{#PANEL VAN}}<dt> Panel Van  </dt><dd> {{PANEL VAN}} </dd> {{/PANEL VAN}}\n{{/PANEL VAN_under_3}}\n{{#BUS_under_3}}\n{{#BUS}}<dt> Bus </dt><dd> 3 or fewer </dd> {{/BUS}}\n{{/BUS_under_3}}\n{{^BUS_under_3}}\n{{#BUS}}<dt> Bus  </dt><dd> {{BUS}} </dd> {{/BUS}}\n{{/BUS_under_3}}\n{{#STATION WAGON_under_3}}\n{{#STATION WAGON}}<dt> Station Wagon </dt><dd> 3 or fewer </dd> {{/STATION WAGON}}\n{{/STATION WAGON_under_3}}\n{{^STATION WAGON_under_3}}\n{{#STATION WAGON}}<dt> Station Wagon  </dt><dd> {{STATION WAGON}} </dd> {{/STATION WAGON}}\n{{/STATION WAGON_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S}}<dt> Panel Van With Windows & Seat/S </dt><dd> 3 or fewer </dd> {{/PANEL VAN WITH WINDOWS & SEAT/S}}\n{{/PANEL VAN WITH WINDOWS & SEAT/S_under_3}}\n{{^PANEL VAN WITH WINDOWS & SEAT/S_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S}}<dt> Panel Van With Windows & Seat/S  </dt><dd> {{PANEL VAN WITH WINDOWS & SEAT/S}} </dd> {{/PANEL VAN WITH WINDOWS & SEAT/S}}\n{{/PANEL VAN WITH WINDOWS & SEAT/S_under_3}}\n{{#SEDAN_under_3}}\n{{#SEDAN}}<dt> Sedan </dt><dd> 3 or fewer </dd> {{/SEDAN}}\n{{/SEDAN_under_3}}\n{{^SEDAN_under_3}}\n{{#SEDAN}}<dt> Sedan  </dt><dd> {{SEDAN}} </dd> {{/SEDAN}}\n{{/SEDAN_under_3}}\n</dl>\n\n<br/>\n\n<h3>Tare Group</h3>\n<dl class='isf-info'>\n{{#1505-2504Kg_under_3}}\n{{#1505-2504Kg}}<dt> 1505-2504Kg </dt><dd> 3 or fewer </dd> {{/1505-2504Kg}}\n{{/1505-2504Kg_under_3}}\n{{^1505-2504Kg_under_3}}\n{{#1505-2504Kg}}<dt> 1505-2504Kg  </dt><dd> {{1505-2504Kg}} </dd> {{/1505-2504Kg}}\n{{/1505-2504Kg_under_3}}\n{{#1155-1504Kg_under_3}}\n{{#1155-1504Kg}}<dt> 1155-1504Kg </dt><dd> 3 or fewer </dd> {{/1155-1504Kg}}\n{{/1155-1504Kg_under_3}}\n{{^1155-1504Kg_under_3}}\n{{#1155-1504Kg}}<dt> 1155-1504Kg  </dt><dd> {{1155-1504Kg}} </dd> {{/1155-1504Kg}}\n{{/1155-1504Kg_under_3}}\n{{#255-764Kg_under_3}}\n{{#255-764Kg}}<dt> 255-764Kg </dt><dd> 3 or fewer </dd> {{/255-764Kg}}\n{{/255-764Kg_under_3}}\n{{^255-764Kg_under_3}}\n{{#255-764Kg}}<dt> 255-764Kg  </dt><dd> {{255-764Kg}} </dd> {{/255-764Kg}}\n{{/255-764Kg_under_3}}\n{{#765-975Kg_under_3}}\n{{#765-975Kg}}<dt> 765-975Kg </dt><dd> 3 or fewer </dd> {{/765-975Kg}}\n{{/765-975Kg_under_3}}\n{{^765-975Kg_under_3}}\n{{#765-975Kg}}<dt> 765-975Kg  </dt><dd> {{765-975Kg}} </dd> {{/765-975Kg}}\n{{/765-975Kg_under_3}}\n{{#2505-3500Kg_under_3}}\n{{#2505-3500Kg}}<dt> 2505-3500Kg </dt><dd> 3 or fewer </dd> {{/2505-3500Kg}}\n{{/2505-3500Kg_under_3}}\n{{^2505-3500Kg_under_3}}\n{{#2505-3500Kg}}<dt> 2505-3500Kg  </dt><dd> {{2505-3500Kg}} </dd> {{/2505-3500Kg}}\n{{/2505-3500Kg_under_3}}\n{{#3501-4500Kg_under_3}}\n{{#3501-4500Kg}}<dt> 3501-4500Kg </dt><dd> 3 or fewer </dd> {{/3501-4500Kg}}\n{{/3501-4500Kg_under_3}}\n{{^3501-4500Kg_under_3}}\n{{#3501-4500Kg}}<dt> 3501-4500Kg  </dt><dd> {{3501-4500Kg}} </dd> {{/3501-4500Kg}}\n{{/3501-4500Kg_under_3}}\n{{#976-1154Kg_under_3}}\n{{#976-1154Kg}}<dt> 976-1154Kg </dt><dd> 3 or fewer </dd> {{/976-1154Kg}}\n{{/976-1154Kg_under_3}}\n{{^976-1154Kg_under_3}}\n{{#976-1154Kg}}<dt> 976-1154Kg  </dt><dd> {{976-1154Kg}} </dd> {{/976-1154Kg}}\n{{/976-1154Kg_under_3}}\n{{#4500+Kg_under_3}}\n{{#4500+Kg}}<dt> 4500+Kg </dt><dd> 3 or fewer </dd> {{/4500+Kg}}\n{{/4500+Kg_under_3}}\n{{^4500+Kg_under_3}}\n{{#4500+Kg}}<dt> 4500+Kg  </dt><dd> {{4500+Kg}} </dd> {{/4500+Kg}}\n{{/4500+Kg_under_3}}\n{{#0-254Kg_under_3}}\n{{#0-254Kg}}<dt> 0-254Kg </dt><dd> 3 or fewer </dd> {{/0-254Kg}}\n{{/0-254Kg_under_3}}\n{{^0-254Kg_under_3}}\n{{#0-254Kg}}<dt> 0-254Kg  </dt><dd> {{0-254Kg}} </dd> {{/0-254Kg}}\n{{/0-254Kg_under_3}}\n</dl>\n\n<br/>\n\n<h3>Usage</h3>\n<dl class='isf-info'>\n{{#BUSINESS - GENERAL_under_3}}\n{{#BUSINESS - GENERAL}}<dt> Business - General </dt><dd> 3 or fewer </dd> {{/BUSINESS - GENERAL}}\n{{/BUSINESS - GENERAL_under_3}}\n{{^BUSINESS - GENERAL_under_3}}\n{{#BUSINESS - GENERAL}}<dt> Business - General  </dt><dd> {{BUSINESS - GENERAL}} </dd> {{/BUSINESS - GENERAL}}\n{{/BUSINESS - GENERAL_under_3}}\n{{#HIRE CAR_under_3}}\n{{#HIRE CAR}}<dt> Hire Car </dt><dd> 3 or fewer </dd> {{/HIRE CAR}}\n{{/HIRE CAR_under_3}}\n{{^HIRE CAR_under_3}}\n{{#HIRE CAR}}<dt> Hire Car  </dt><dd> {{HIRE CAR}} </dd> {{/HIRE CAR}}\n{{/HIRE CAR_under_3}}\n{{#CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE_under_3}}\n{{#CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE}}<dt> Charter / Airways Bus Usage - Let For Hire </dt><dd> 3 or fewer </dd> {{/CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE}}\n{{/CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE_under_3}}\n{{^CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE_under_3}}\n{{#CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE}}<dt> Charter / Airways Bus Usage - Let For Hire  </dt><dd> {{CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE}} </dd> {{/CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE}}\n{{/CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE_under_3}}\n{{#PRIMARY PRODUCER GENERAL_under_3}}\n{{#PRIMARY PRODUCER GENERAL}}<dt> Primary Producer General </dt><dd> 3 or fewer </dd> {{/PRIMARY PRODUCER GENERAL}}\n{{/PRIMARY PRODUCER GENERAL_under_3}}\n{{^PRIMARY PRODUCER GENERAL_under_3}}\n{{#PRIMARY PRODUCER GENERAL}}<dt> Primary Producer General  </dt><dd> {{PRIMARY PRODUCER GENERAL}} </dd> {{/PRIMARY PRODUCER GENERAL}}\n{{/PRIMARY PRODUCER GENERAL_under_3}}\n{{#HELD FOR RE-SALE BY A LICENSED MOTOR DEALER_under_3}}\n{{#HELD FOR RE-SALE BY A LICENSED MOTOR DEALER}}<dt> Held For Re-Sale By A Licensed Motor Dealer </dt><dd> 3 or fewer </dd> {{/HELD FOR RE-SALE BY A LICENSED MOTOR DEALER}}\n{{/HELD FOR RE-SALE BY A LICENSED MOTOR DEALER_under_3}}\n{{^HELD FOR RE-SALE BY A LICENSED MOTOR DEALER_under_3}}\n{{#HELD FOR RE-SALE BY A LICENSED MOTOR DEALER}}<dt> Held For Re-Sale By A Licensed Motor Dealer  </dt><dd> {{HELD FOR RE-SALE BY A LICENSED MOTOR DEALER}} </dd> {{/HELD FOR RE-SALE BY A LICENSED MOTOR DEALER}}\n{{/HELD FOR RE-SALE BY A LICENSED MOTOR DEALER_under_3}}\n{{#ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD_under_3}}\n{{#ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD}}<dt> Road Construction/Maintenance Concession - Declaration Reqd </dt><dd> 3 or fewer </dd> {{/ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD}}\n{{/ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD_under_3}}\n{{^ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD_under_3}}\n{{#ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD}}<dt> Road Construction/Maintenance Concession - Declaration Reqd  </dt><dd> {{ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD}} </dd> {{/ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD}}\n{{/ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD_under_3}}\n{{#GENERAL PRIVATE_under_3}}\n{{#GENERAL PRIVATE}}<dt> General Private </dt><dd> 3 or fewer </dd> {{/GENERAL PRIVATE}}\n{{/GENERAL PRIVATE_under_3}}\n{{^GENERAL PRIVATE_under_3}}\n{{#GENERAL PRIVATE}}<dt> General Private  </dt><dd> {{GENERAL PRIVATE}} </dd> {{/GENERAL PRIVATE}}\n{{/GENERAL PRIVATE_under_3}}\n{{#GENERAL PURPOSE PLANT_under_3}}\n{{#GENERAL PURPOSE PLANT}}<dt> General Purpose Plant </dt><dd> 3 or fewer </dd> {{/GENERAL PURPOSE PLANT}}\n{{/GENERAL PURPOSE PLANT_under_3}}\n{{^GENERAL PURPOSE PLANT_under_3}}\n{{#GENERAL PURPOSE PLANT}}<dt> General Purpose Plant  </dt><dd> {{GENERAL PURPOSE PLANT}} </dd> {{/GENERAL PURPOSE PLANT}}\n{{/GENERAL PURPOSE PLANT_under_3}}\n{{#RENTAL VEHICLE_under_3}}\n{{#RENTAL VEHICLE}}<dt> Rental Vehicle </dt><dd> 3 or fewer </dd> {{/RENTAL VEHICLE}}\n{{/RENTAL VEHICLE_under_3}}\n{{^RENTAL VEHICLE_under_3}}\n{{#RENTAL VEHICLE}}<dt> Rental Vehicle  </dt><dd> {{RENTAL VEHICLE}} </dd> {{/RENTAL VEHICLE}}\n{{/RENTAL VEHICLE_under_3}}\n{{#PENSIONER CONCESSION_under_3}}\n{{#PENSIONER CONCESSION}}<dt> Pensioner Concession </dt><dd> 3 or fewer </dd> {{/PENSIONER CONCESSION}}\n{{/PENSIONER CONCESSION_under_3}}\n{{^PENSIONER CONCESSION_under_3}}\n{{#PENSIONER CONCESSION}}<dt> Pensioner Concession  </dt><dd> {{PENSIONER CONCESSION}} </dd> {{/PENSIONER CONCESSION}}\n{{/PENSIONER CONCESSION_under_3}}\n{{#BUS/TOURIST VEHICLE USED FOR HIRE_under_3}}\n{{#BUS/TOURIST VEHICLE USED FOR HIRE}}<dt> Bus/Tourist Vehicle Used For Hire </dt><dd> 3 or fewer </dd> {{/BUS/TOURIST VEHICLE USED FOR HIRE}}\n{{/BUS/TOURIST VEHICLE USED FOR HIRE_under_3}}\n{{^BUS/TOURIST VEHICLE USED FOR HIRE_under_3}}\n{{#BUS/TOURIST VEHICLE USED FOR HIRE}}<dt> Bus/Tourist Vehicle Used For Hire  </dt><dd> {{BUS/TOURIST VEHICLE USED FOR HIRE}} </dd> {{/BUS/TOURIST VEHICLE USED FOR HIRE}}\n{{/BUS/TOURIST VEHICLE USED FOR HIRE_under_3}}\n{{#DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER_under_3}}\n{{#DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER}}<dt> Demonstrator Vehicle Used By A Licensed Motor Dealer </dt><dd> 3 or fewer </dd> {{/DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER}}\n{{/DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER_under_3}}\n{{^DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER_under_3}}\n{{#DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER}}<dt> Demonstrator Vehicle Used By A Licensed Motor Dealer  </dt><dd> {{DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER}} </dd> {{/DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER}}\n{{/DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER_under_3}}\n{{#USED FOR CHARITABLE PURPOSES_under_3}}\n{{#USED FOR CHARITABLE PURPOSES}}<dt> Used For Charitable Purposes </dt><dd> 3 or fewer </dd> {{/USED FOR CHARITABLE PURPOSES}}\n{{/USED FOR CHARITABLE PURPOSES_under_3}}\n{{^USED FOR CHARITABLE PURPOSES_under_3}}\n{{#USED FOR CHARITABLE PURPOSES}}<dt> Used For Charitable Purposes  </dt><dd> {{USED FOR CHARITABLE PURPOSES}} </dd> {{/USED FOR CHARITABLE PURPOSES}}\n{{/USED FOR CHARITABLE PURPOSES_under_3}}\n</dl>\n\n<br/>\n\n<h3>Compliance Plate Year</h3>\n<dl class='isf-info'>\n{{#1964_under_3}}\n{{#1964}}<dt> 1964 </dt><dd> 3 or fewer </dd> {{/1964}}\n{{/1964_under_3}}\n{{^1964_under_3}}\n{{#1964}}<dt> 1964  </dt><dd> {{1964}} </dd> {{/1964}}\n{{/1964_under_3}}\n{{#1971_under_3}}\n{{#1971}}<dt> 1971 </dt><dd> 3 or fewer </dd> {{/1971}}\n{{/1971_under_3}}\n{{^1971_under_3}}\n{{#1971}}<dt> 1971  </dt><dd> {{1971}} </dd> {{/1971}}\n{{/1971_under_3}}\n{{#1980_under_3}}\n{{#1980}}<dt> 1980 </dt><dd> 3 or fewer </dd> {{/1980}}\n{{/1980_under_3}}\n{{^1980_under_3}}\n{{#1980}}<dt> 1980  </dt><dd> {{1980}} </dd> {{/1980}}\n{{/1980_under_3}}\n{{#1981_under_3}}\n{{#1981}}<dt> 1981 </dt><dd> 3 or fewer </dd> {{/1981}}\n{{/1981_under_3}}\n{{^1981_under_3}}\n{{#1981}}<dt> 1981  </dt><dd> {{1981}} </dd> {{/1981}}\n{{/1981_under_3}}\n{{#1982_under_3}}\n{{#1982}}<dt> 1982 </dt><dd> 3 or fewer </dd> {{/1982}}\n{{/1982_under_3}}\n{{^1982_under_3}}\n{{#1982}}<dt> 1982  </dt><dd> {{1982}} </dd> {{/1982}}\n{{/1982_under_3}}\n{{#1984_under_3}}\n{{#1984}}<dt> 1984 </dt><dd> 3 or fewer </dd> {{/1984}}\n{{/1984_under_3}}\n{{^1984_under_3}}\n{{#1984}}<dt> 1984  </dt><dd> {{1984}} </dd> {{/1984}}\n{{/1984_under_3}}\n{{#1985_under_3}}\n{{#1985}}<dt> 1985 </dt><dd> 3 or fewer </dd> {{/1985}}\n{{/1985_under_3}}\n{{^1985_under_3}}\n{{#1985}}<dt> 1985  </dt><dd> {{1985}} </dd> {{/1985}}\n{{/1985_under_3}}\n{{#1986_under_3}}\n{{#1986}}<dt> 1986 </dt><dd> 3 or fewer </dd> {{/1986}}\n{{/1986_under_3}}\n{{^1986_under_3}}\n{{#1986}}<dt> 1986  </dt><dd> {{1986}} </dd> {{/1986}}\n{{/1986_under_3}}\n{{#1987_under_3}}\n{{#1987}}<dt> 1987 </dt><dd> 3 or fewer </dd> {{/1987}}\n{{/1987_under_3}}\n{{^1987_under_3}}\n{{#1987}}<dt> 1987  </dt><dd> {{1987}} </dd> {{/1987}}\n{{/1987_under_3}}\n{{#1990_under_3}}\n{{#1990}}<dt> 1990 </dt><dd> 3 or fewer </dd> {{/1990}}\n{{/1990_under_3}}\n{{^1990_under_3}}\n{{#1990}}<dt> 1990  </dt><dd> {{1990}} </dd> {{/1990}}\n{{/1990_under_3}}\n{{#1991_under_3}}\n{{#1991}}<dt> 1991 </dt><dd> 3 or fewer </dd> {{/1991}}\n{{/1991_under_3}}\n{{^1991_under_3}}\n{{#1991}}<dt> 1991  </dt><dd> {{1991}} </dd> {{/1991}}\n{{/1991_under_3}}\n{{#1992_under_3}}\n{{#1992}}<dt> 1992 </dt><dd> 3 or fewer </dd> {{/1992}}\n{{/1992_under_3}}\n{{^1992_under_3}}\n{{#1992}}<dt> 1992  </dt><dd> {{1992}} </dd> {{/1992}}\n{{/1992_under_3}}\n{{#1993_under_3}}\n{{#1993}}<dt> 1993 </dt><dd> 3 or fewer </dd> {{/1993}}\n{{/1993_under_3}}\n{{^1993_under_3}}\n{{#1993}}<dt> 1993  </dt><dd> {{1993}} </dd> {{/1993}}\n{{/1993_under_3}}\n{{#1994_under_3}}\n{{#1994}}<dt> 1994 </dt><dd> 3 or fewer </dd> {{/1994}}\n{{/1994_under_3}}\n{{^1994_under_3}}\n{{#1994}}<dt> 1994  </dt><dd> {{1994}} </dd> {{/1994}}\n{{/1994_under_3}}\n{{#1995_under_3}}\n{{#1995}}<dt> 1995 </dt><dd> 3 or fewer </dd> {{/1995}}\n{{/1995_under_3}}\n{{^1995_under_3}}\n{{#1995}}<dt> 1995  </dt><dd> {{1995}} </dd> {{/1995}}\n{{/1995_under_3}}\n{{#1996_under_3}}\n{{#1996}}<dt> 1996 </dt><dd> 3 or fewer </dd> {{/1996}}\n{{/1996_under_3}}\n{{^1996_under_3}}\n{{#1996}}<dt> 1996  </dt><dd> {{1996}} </dd> {{/1996}}\n{{/1996_under_3}}\n{{#1998_under_3}}\n{{#1998}}<dt> 1998 </dt><dd> 3 or fewer </dd> {{/1998}}\n{{/1998_under_3}}\n{{^1998_under_3}}\n{{#1998}}<dt> 1998  </dt><dd> {{1998}} </dd> {{/1998}}\n{{/1998_under_3}}\n{{#1999_under_3}}\n{{#1999}}<dt> 1999 </dt><dd> 3 or fewer </dd> {{/1999}}\n{{/1999_under_3}}\n{{^1999_under_3}}\n{{#1999}}<dt> 1999  </dt><dd> {{1999}} </dd> {{/1999}}\n{{/1999_under_3}}\n{{#2000_under_3}}\n{{#2000}}<dt> 2000 </dt><dd> 3 or fewer </dd> {{/2000}}\n{{/2000_under_3}}\n{{^2000_under_3}}\n{{#2000}}<dt> 2000  </dt><dd> {{2000}} </dd> {{/2000}}\n{{/2000_under_3}}\n{{#2001_under_3}}\n{{#2001}}<dt> 2001 </dt><dd> 3 or fewer </dd> {{/2001}}\n{{/2001_under_3}}\n{{^2001_under_3}}\n{{#2001}}<dt> 2001  </dt><dd> {{2001}} </dd> {{/2001}}\n{{/2001_under_3}}\n{{#2002_under_3}}\n{{#2002}}<dt> 2002 </dt><dd> 3 or fewer </dd> {{/2002}}\n{{/2002_under_3}}\n{{^2002_under_3}}\n{{#2002}}<dt> 2002  </dt><dd> {{2002}} </dd> {{/2002}}\n{{/2002_under_3}}\n{{#2003_under_3}}\n{{#2003}}<dt> 2003 </dt><dd> 3 or fewer </dd> {{/2003}}\n{{/2003_under_3}}\n{{^2003_under_3}}\n{{#2003}}<dt> 2003  </dt><dd> {{2003}} </dd> {{/2003}}\n{{/2003_under_3}}\n{{#2004_under_3}}\n{{#2004}}<dt> 2004 </dt><dd> 3 or fewer </dd> {{/2004}}\n{{/2004_under_3}}\n{{^2004_under_3}}\n{{#2004}}<dt> 2004  </dt><dd> {{2004}} </dd> {{/2004}}\n{{/2004_under_3}}\n{{#2005_under_3}}\n{{#2005}}<dt> 2005 </dt><dd> 3 or fewer </dd> {{/2005}}\n{{/2005_under_3}}\n{{^2005_under_3}}\n{{#2005}}<dt> 2005  </dt><dd> {{2005}} </dd> {{/2005}}\n{{/2005_under_3}}\n{{#2006_under_3}}\n{{#2006}}<dt> 2006 </dt><dd> 3 or fewer </dd> {{/2006}}\n{{/2006_under_3}}\n{{^2006_under_3}}\n{{#2006}}<dt> 2006  </dt><dd> {{2006}} </dd> {{/2006}}\n{{/2006_under_3}}\n{{#2007_under_3}}\n{{#2007}}<dt> 2007 </dt><dd> 3 or fewer </dd> {{/2007}}\n{{/2007_under_3}}\n{{^2007_under_3}}\n{{#2007}}<dt> 2007  </dt><dd> {{2007}} </dd> {{/2007}}\n{{/2007_under_3}}\n{{#2008_under_3}}\n{{#2008}}<dt> 2008 </dt><dd> 3 or fewer </dd> {{/2008}}\n{{/2008_under_3}}\n{{^2008_under_3}}\n{{#2008}}<dt> 2008  </dt><dd> {{2008}} </dd> {{/2008}}\n{{/2008_under_3}}\n{{#2009_under_3}}\n{{#2009}}<dt> 2009 </dt><dd> 3 or fewer </dd> {{/2009}}\n{{/2009_under_3}}\n{{^2009_under_3}}\n{{#2009}}<dt> 2009  </dt><dd> {{2009}} </dd> {{/2009}}\n{{/2009_under_3}}\n{{#2010_under_3}}\n{{#2010}}<dt> 2010 </dt><dd> 3 or fewer </dd> {{/2010}}\n{{/2010_under_3}}\n{{^2010_under_3}}\n{{#2010}}<dt> 2010  </dt><dd> {{2010}} </dd> {{/2010}}\n{{/2010_under_3}}\n{{#2011_under_3}}\n{{#2011}}<dt> 2011 </dt><dd> 3 or fewer </dd> {{/2011}}\n{{/2011_under_3}}\n{{^2011_under_3}}\n{{#2011}}<dt> 2011  </dt><dd> {{2011}} </dd> {{/2011}}\n{{/2011_under_3}}\n{{#2012_under_3}}\n{{#2012}}<dt> 2012 </dt><dd> 3 or fewer </dd> {{/2012}}\n{{/2012_under_3}}\n{{^2012_under_3}}\n{{#2012}}<dt> 2012  </dt><dd> {{2012}} </dd> {{/2012}}\n{{/2012_under_3}}\n{{#2013_under_3}}\n{{#2013}}<dt> 2013 </dt><dd> 3 or fewer </dd> {{/2013}}\n{{/2013_under_3}}\n{{^2013_under_3}}\n{{#2013}}<dt> 2013  </dt><dd> {{2013}} </dd> {{/2013}}\n{{/2013_under_3}}\n{{#2014_under_3}}\n{{#2014}}<dt> 2014 </dt><dd> 3 or fewer </dd> {{/2014}}\n{{/2014_under_3}}\n{{^2014_under_3}}\n{{#2014}}<dt> 2014  </dt><dd> {{2014}} </dd> {{/2014}}\n{{/2014_under_3}}\n{{#2015_under_3}}\n{{#2015}}<dt> 2015 </dt><dd> 3 or fewer </dd> {{/2015}}\n{{/2015_under_3}}\n{{^2015_under_3}}\n{{#2015}}<dt> 2015  </dt><dd> {{2015}} </dd> {{/2015}}\n{{/2015_under_3}}\n{{#2016_under_3}}\n{{#2016}}<dt> 2016 </dt><dd> 3 or fewer </dd> {{/2016}}\n{{/2016_under_3}}\n{{^2016_under_3}}\n{{#2016}}<dt> 2016  </dt><dd> {{2016}} </dd> {{/2016}}\n{{/2016_under_3}}\n{{#2017_under_3}}\n{{#2017}}<dt> 2017 </dt><dd> 3 or fewer </dd> {{/2017}}\n{{/2017_under_3}}\n{{^2017_under_3}}\n{{#2017}}<dt> 2017  </dt><dd> {{2017}} </dd> {{/2017}}\n{{/2017_under_3}}\n{{#2018_under_3}}\n{{#2018}}<dt> 2018 </dt><dd> 3 or fewer </dd> {{/2018}}\n{{/2018_under_3}}\n{{^2018_under_3}}\n{{#2018}}<dt> 2018  </dt><dd> {{2018}} </dd> {{/2018}}\n{{/2018_under_3}}\n{{#2019_under_3}}\n{{#2019}}<dt> 2019 </dt><dd> 3 or fewer </dd> {{/2019}}\n{{/2019_under_3}}\n{{^2019_under_3}}\n{{#2019}}<dt> 2019  </dt><dd> {{2019}} </dd> {{/2019}}\n{{/2019_under_3}}\n</dl>\n\n<br/>\n{{/Registrations}}\n\n{{^Registrations}}<dt>Number of registrations</dt> <dd> 0 </dd>{{/Registrations}}\n\n<dl><dt> <a href={{census_quickstats_link}}> Click here to see 2016 ABS Census QuickStats for this postcode</a></dt><dd></dd>\n</dl>\n<br/>"
+      "info": [
+        {
+          "name": "Data Description",
+          "content": "<p>This is a NSW map of total number of Electric Vehicle (EV) registrations by postcode for a specified year. Use the time slider bar at the bottom to explore how registrations have changed since 2016.</p> <p>The following additional display variables can also be used:</p> <ul> <li>Use type: Business general &ndash; registration count specified as primarily for business use.</li> <li>Use type: General private &ndash; registration count specified as primarily for private use.</li> </ul> <p>In the context of Electric Vehicle charging infrastructure planning, this is a critical variable that indicates growth areas for EV uptake and potential demand for charging services.</p> <p>Click on a postcode region to reveal the following information:</p> <ul> <li><strong>Postcode</strong></li> <li><strong>LGA:</strong> Local Government Area name where EVs are registered</li> <li><strong>Registration count broken down by:</strong></li> <ul> <li>body type (sedans vs coupes)</li> <li>make</li> <li>(primary) use</li> <li>year of manufacture</li> </ul> <li><strong>Link to ABS Census Quickstats</strong> <strong>for this postcode:</strong> to get a rapid appraisal of socio-demographic characteristics.</li> </ul>"
+        },
+        {
+          "name": "Data Updates",
+          "content": "<p>Data is updated 6-monthly in June and December./p>"
+          },
+          {
+            "name": "Data Supplier and Processing",
+            "content": "<p>The data is supplied by the NSW Government Roads and Maritime Services. Data is processed and hosted by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
+          },
+          {
+            "name": "Disclaimer",
+            "content": "<p>Transport for NSW publishes statistical registration Data for information purposes only.</p> <p>The Data presented is derived from third party Address Data provided by the registered owners of electric powered vehicles. You acknowledge that the Address Data provided by the registered owner of a vehicle may not always accurately represent the geographical location of that vehicle, and that the Address Data is subject to change from time to time. Transport for NSW has not independently verified the Address Data the Data relies on.</p> <p>Transport for NSW does not warrant, represent or guarantee the accuracy or suitability for any purpose of the information (including the Data) published at this website.</p> <p>Transport for NSW does not accept any legal liability for any loss or damage arising directly or indirectly from any person’s use of information (including the Data) published at this website. You hereby release Transport for NSW, including its officers, agents and contractors, from all actions, suits, claims, demands, costs, damages and expenses which You might have against Transport for NSW, including its officers, agents and contractors, for any loss or damage of whatsoever nature and howsoever arising in connection with Your use of the information (including the Data) published at this website.</p> <p>Use of information (including the Data) published at this website is at Your sole risk. Transport for NSW recommends that You exercise Your own skill, care and judgment with respect to Your use of information (including the Data) published. You must seek Your own appropriate independent professional advice before making any decision based on information (including the Data) published at this website.</p>"
+          }
+        ],
+        "featureInfoTemplate": "<h2>Registrations by Postcode</h2>\n<dl class='isf-info'>\n<dt>Postcode</dt>   <dd>{{Postcode}}</dd>\n<dt>Year</dt>   <dd>{{Year}}</dd>\n\n{{#Registrations}}\n\n{{#Registrations_under_3}}\n<dt>Number of registrations</dt> <dd> 3 or fewer </dd>\n{{/Registrations_under_3}}\n\n{{^Registrations_under_3}}\n<dt>Number of registrations</dt> <dd> {{Registrations}} </dd>\n{{/Registrations_under_3}}\n</dl>\n\n<h3>Make</h3>\n<dl class='isf-info'>\n{{#RNAULT_under_3}}\n{{#RNAULT}}<dt> Rnault </dt><dd> 3 or fewer </dd> {{/RNAULT}}\n{{/RNAULT_under_3}}\n{{^RNAULT_under_3}}\n{{#RNAULT}}<dt> Rnault  </dt><dd> {{RNAULT}} </dd> {{/RNAULT}}\n{{/RNAULT_under_3}}\n{{#TESLA_under_3}}\n{{#TESLA}}<dt> Tesla </dt><dd> 3 or fewer </dd> {{/TESLA}}\n{{/TESLA_under_3}}\n{{^TESLA_under_3}}\n{{#TESLA}}<dt> Tesla  </dt><dd> {{TESLA}} </dd> {{/TESLA}}\n{{/TESLA_under_3}}\n{{#HINO_under_3}}\n{{#HINO}}<dt> Hino </dt><dd> 3 or fewer </dd> {{/HINO}}\n{{/HINO_under_3}}\n{{^HINO_under_3}}\n{{#HINO}}<dt> Hino  </dt><dd> {{HINO}} </dd> {{/HINO}}\n{{/HINO_under_3}}\n{{#BEVHYU_under_3}}\n{{#BEVHYU}}<dt> Bevhyu </dt><dd> 3 or fewer </dd> {{/BEVHYU}}\n{{/BEVHYU_under_3}}\n{{^BEVHYU_under_3}}\n{{#BEVHYU}}<dt> Bevhyu  </dt><dd> {{BEVHYU}} </dd> {{/BEVHYU}}\n{{/BEVHYU_under_3}}\n{{#UBCO_under_3}}\n{{#UBCO}}<dt> Ubco </dt><dd> 3 or fewer </dd> {{/UBCO}}\n{{/UBCO_under_3}}\n{{^UBCO_under_3}}\n{{#UBCO}}<dt> Ubco  </dt><dd> {{UBCO}} </dd> {{/UBCO}}\n{{/UBCO_under_3}}\n{{#CARBRI_under_3}}\n{{#CARBRI}}<dt> Carbri </dt><dd> 3 or fewer </dd> {{/CARBRI}}\n{{/CARBRI_under_3}}\n{{^CARBRI_under_3}}\n{{#CARBRI}}<dt> Carbri  </dt><dd> {{CARBRI}} </dd> {{/CARBRI}}\n{{/CARBRI_under_3}}\n{{#CLUBCR_under_3}}\n{{#CLUBCR}}<dt> Clubcr </dt><dd> 3 or fewer </dd> {{/CLUBCR}}\n{{/CLUBCR_under_3}}\n{{^CLUBCR_under_3}}\n{{#CLUBCR}}<dt> Clubcr  </dt><dd> {{CLUBCR}} </dd> {{/CLUBCR}}\n{{/CLUBCR_under_3}}\n{{#SUZUKI_under_3}}\n{{#SUZUKI}}<dt> Suzuki </dt><dd> 3 or fewer </dd> {{/SUZUKI}}\n{{/SUZUKI_under_3}}\n{{^SUZUKI_under_3}}\n{{#SUZUKI}}<dt> Suzuki  </dt><dd> {{SUZUKI}} </dd> {{/SUZUKI}}\n{{/SUZUKI_under_3}}\n{{#BMW_under_3}}\n{{#BMW}}<dt> Bmw </dt><dd> 3 or fewer </dd> {{/BMW}}\n{{/BMW_under_3}}\n{{^BMW_under_3}}\n{{#BMW}}<dt> Bmw  </dt><dd> {{BMW}} </dd> {{/BMW}}\n{{/BMW_under_3}}\n{{#MITSU_under_3}}\n{{#MITSU}}<dt> Mitsu </dt><dd> 3 or fewer </dd> {{/MITSU}}\n{{/MITSU_under_3}}\n{{^MITSU_under_3}}\n{{#MITSU}}<dt> Mitsu  </dt><dd> {{MITSU}} </dd> {{/MITSU}}\n{{/MITSU_under_3}}\n{{#LEX_under_3}}\n{{#LEX}}<dt> Lex </dt><dd> 3 or fewer </dd> {{/LEX}}\n{{/LEX_under_3}}\n{{^LEX_under_3}}\n{{#LEX}}<dt> Lex  </dt><dd> {{LEX}} </dd> {{/LEX}}\n{{/LEX_under_3}}\n{{#SWAP_under_3}}\n{{#SWAP}}<dt> Swap </dt><dd> 3 or fewer </dd> {{/SWAP}}\n{{/SWAP_under_3}}\n{{^SWAP_under_3}}\n{{#SWAP}}<dt> Swap  </dt><dd> {{SWAP}} </dd> {{/SWAP}}\n{{/SWAP_under_3}}\n{{#VOLKSW_under_3}}\n{{#VOLKSW}}<dt> Volksw </dt><dd> 3 or fewer </dd> {{/VOLKSW}}\n{{/VOLKSW_under_3}}\n{{^VOLKSW_under_3}}\n{{#VOLKSW}}<dt> Volksw  </dt><dd> {{VOLKSW}} </dd> {{/VOLKSW}}\n{{/VOLKSW_under_3}}\n{{#BZOOMA_under_3}}\n{{#BZOOMA}}<dt> Bzooma </dt><dd> 3 or fewer </dd> {{/BZOOMA}}\n{{/BZOOMA_under_3}}\n{{^BZOOMA_under_3}}\n{{#BZOOMA}}<dt> Bzooma  </dt><dd> {{BZOOMA}} </dd> {{/BZOOMA}}\n{{/BZOOMA_under_3}}\n{{#BYD_under_3}}\n{{#BYD}}<dt> Byd </dt><dd> 3 or fewer </dd> {{/BYD}}\n{{/BYD_under_3}}\n{{^BYD_under_3}}\n{{#BYD}}<dt> Byd  </dt><dd> {{BYD}} </dd> {{/BYD}}\n{{/BYD_under_3}}\n{{#SMART_under_3}}\n{{#SMART}}<dt> Smart </dt><dd> 3 or fewer </dd> {{/SMART}}\n{{/SMART_under_3}}\n{{^SMART_under_3}}\n{{#SMART}}<dt> Smart  </dt><dd> {{SMART}} </dd> {{/SMART}}\n{{/SMART_under_3}}\n{{#DAIHAT_under_3}}\n{{#DAIHAT}}<dt> Daihat </dt><dd> 3 or fewer </dd> {{/DAIHAT}}\n{{/DAIHAT_under_3}}\n{{^DAIHAT_under_3}}\n{{#DAIHAT}}<dt> Daihat  </dt><dd> {{DAIHAT}} </dd> {{/DAIHAT}}\n{{/DAIHAT_under_3}}\n{{#TAILG_under_3}}\n{{#TAILG}}<dt> Tailg </dt><dd> 3 or fewer </dd> {{/TAILG}}\n{{/TAILG_under_3}}\n{{^TAILG_under_3}}\n{{#TAILG}}<dt> Tailg  </dt><dd> {{TAILG}} </dd> {{/TAILG}}\n{{/TAILG_under_3}}\n{{#HOLDEN_under_3}}\n{{#HOLDEN}}<dt> Holden </dt><dd> 3 or fewer </dd> {{/HOLDEN}}\n{{/HOLDEN_under_3}}\n{{^HOLDEN_under_3}}\n{{#HOLDEN}}<dt> Holden  </dt><dd> {{HOLDEN}} </dd> {{/HOLDEN}}\n{{/HOLDEN_under_3}}\n{{#FRETER_under_3}}\n{{#FRETER}}<dt> Freter </dt><dd> 3 or fewer </dd> {{/FRETER}}\n{{/FRETER_under_3}}\n{{^FRETER_under_3}}\n{{#FRETER}}<dt> Freter  </dt><dd> {{FRETER}} </dd> {{/FRETER}}\n{{/FRETER_under_3}}\n{{#ELECTR_under_3}}\n{{#ELECTR}}<dt> Electr </dt><dd> 3 or fewer </dd> {{/ELECTR}}\n{{/ELECTR_under_3}}\n{{^ELECTR_under_3}}\n{{#ELECTR}}<dt> Electr  </dt><dd> {{ELECTR}} </dd> {{/ELECTR}}\n{{/ELECTR_under_3}}\n{{#KWSAKI_under_3}}\n{{#KWSAKI}}<dt> Kwsaki </dt><dd> 3 or fewer </dd> {{/KWSAKI}}\n{{/KWSAKI_under_3}}\n{{^KWSAKI_under_3}}\n{{#KWSAKI}}<dt> Kwsaki  </dt><dd> {{KWSAKI}} </dd> {{/KWSAKI}}\n{{/KWSAKI_under_3}}\n{{#SANYOU_under_3}}\n{{#SANYOU}}<dt> Sanyou </dt><dd> 3 or fewer </dd> {{/SANYOU}}\n{{/SANYOU_under_3}}\n{{^SANYOU_under_3}}\n{{#SANYOU}}<dt> Sanyou  </dt><dd> {{SANYOU}} </dd> {{/SANYOU}}\n{{/SANYOU_under_3}}\n{{#GEMILA_under_3}}\n{{#GEMILA}}<dt> Gemila </dt><dd> 3 or fewer </dd> {{/GEMILA}}\n{{/GEMILA_under_3}}\n{{^GEMILA_under_3}}\n{{#GEMILA}}<dt> Gemila  </dt><dd> {{GEMILA}} </dd> {{/GEMILA}}\n{{/GEMILA_under_3}}\n{{#E-MAX_under_3}}\n{{#E-MAX}}<dt> E-Max </dt><dd> 3 or fewer </dd> {{/E-MAX}}\n{{/E-MAX_under_3}}\n{{^E-MAX_under_3}}\n{{#E-MAX}}<dt> E-Max  </dt><dd> {{E-MAX}} </dd> {{/E-MAX}}\n{{/E-MAX_under_3}}\n{{#HONDA_under_3}}\n{{#HONDA}}<dt> Honda </dt><dd> 3 or fewer </dd> {{/HONDA}}\n{{/HONDA_under_3}}\n{{^HONDA_under_3}}\n{{#HONDA}}<dt> Honda  </dt><dd> {{HONDA}} </dd> {{/HONDA}}\n{{/HONDA_under_3}}\n{{#CTROEN_under_3}}\n{{#CTROEN}}<dt> Ctroen </dt><dd> 3 or fewer </dd> {{/CTROEN}}\n{{/CTROEN_under_3}}\n{{^CTROEN_under_3}}\n{{#CTROEN}}<dt> Ctroen  </dt><dd> {{CTROEN}} </dd> {{/CTROEN}}\n{{/CTROEN_under_3}}\n{{#EVT_under_3}}\n{{#EVT}}<dt> Evt </dt><dd> 3 or fewer </dd> {{/EVT}}\n{{/EVT_under_3}}\n{{^EVT_under_3}}\n{{#EVT}}<dt> Evt  </dt><dd> {{EVT}} </dd> {{/EVT}}\n{{/EVT_under_3}}\n{{#JAGUAR_under_3}}\n{{#JAGUAR}}<dt> Jaguar </dt><dd> 3 or fewer </dd> {{/JAGUAR}}\n{{/JAGUAR_under_3}}\n{{^JAGUAR_under_3}}\n{{#JAGUAR}}<dt> Jaguar  </dt><dd> {{JAGUAR}} </dd> {{/JAGUAR}}\n{{/JAGUAR_under_3}}\n{{#VOLVO_under_3}}\n{{#VOLVO}}<dt> Volvo </dt><dd> 3 or fewer </dd> {{/VOLVO}}\n{{/VOLVO_under_3}}\n{{^VOLVO_under_3}}\n{{#VOLVO}}<dt> Volvo  </dt><dd> {{VOLVO}} </dd> {{/VOLVO}}\n{{/VOLVO_under_3}}\n{{#HYUNDA_under_3}}\n{{#HYUNDA}}<dt> Hyunda </dt><dd> 3 or fewer </dd> {{/HYUNDA}}\n{{/HYUNDA_under_3}}\n{{^HYUNDA_under_3}}\n{{#HYUNDA}}<dt> Hyunda  </dt><dd> {{HYUNDA}} </dd> {{/HYUNDA}}\n{{/HYUNDA_under_3}}\n{{#KYBURZ_under_3}}\n{{#KYBURZ}}<dt> Kyburz </dt><dd> 3 or fewer </dd> {{/KYBURZ}}\n{{/KYBURZ_under_3}}\n{{^KYBURZ_under_3}}\n{{#KYBURZ}}<dt> Kyburz  </dt><dd> {{KYBURZ}} </dd> {{/KYBURZ}}\n{{/KYBURZ_under_3}}\n{{#FORD_under_3}}\n{{#FORD}}<dt> Ford </dt><dd> 3 or fewer </dd> {{/FORD}}\n{{/FORD_under_3}}\n{{^FORD_under_3}}\n{{#FORD}}<dt> Ford  </dt><dd> {{FORD}} </dd> {{/FORD}}\n{{/FORD_under_3}}\n{{#TUKTUA_under_3}}\n{{#TUKTUA}}<dt> Tuktua </dt><dd> 3 or fewer </dd> {{/TUKTUA}}\n{{/TUKTUA_under_3}}\n{{^TUKTUA_under_3}}\n{{#TUKTUA}}<dt> Tuktua  </dt><dd> {{TUKTUA}} </dd> {{/TUKTUA}}\n{{/TUKTUA_under_3}}\n{{#PORSC_under_3}}\n{{#PORSC}}<dt> Porsc </dt><dd> 3 or fewer </dd> {{/PORSC}}\n{{/PORSC_under_3}}\n{{^PORSC_under_3}}\n{{#PORSC}}<dt> Porsc  </dt><dd> {{PORSC}} </dd> {{/PORSC}}\n{{/PORSC_under_3}}\n{{#FONZAR_under_3}}\n{{#FONZAR}}<dt> Fonzar </dt><dd> 3 or fewer </dd> {{/FONZAR}}\n{{/FONZAR_under_3}}\n{{^FONZAR_under_3}}\n{{#FONZAR}}<dt> Fonzar  </dt><dd> {{FONZAR}} </dd> {{/FONZAR}}\n{{/FONZAR_under_3}}\n{{#ERIDER_under_3}}\n{{#ERIDER}}<dt> Erider </dt><dd> 3 or fewer </dd> {{/ERIDER}}\n{{/ERIDER_under_3}}\n{{^ERIDER_under_3}}\n{{#ERIDER}}<dt> Erider  </dt><dd> {{ERIDER}} </dd> {{/ERIDER}}\n{{/ERIDER_under_3}}\n{{#SUR-RO_under_3}}\n{{#SUR-RO}}<dt> Sur-Ro </dt><dd> 3 or fewer </dd> {{/SUR-RO}}\n{{/SUR-RO_under_3}}\n{{^SUR-RO_under_3}}\n{{#SUR-RO}}<dt> Sur-Ro  </dt><dd> {{SUR-RO}} </dd> {{/SUR-RO}}\n{{/SUR-RO_under_3}}\n{{#HUASHA_under_3}}\n{{#HUASHA}}<dt> Huasha </dt><dd> 3 or fewer </dd> {{/HUASHA}}\n{{/HUASHA_under_3}}\n{{^HUASHA_under_3}}\n{{#HUASHA}}<dt> Huasha  </dt><dd> {{HUASHA}} </dd> {{/HUASHA}}\n{{/HUASHA_under_3}}\n{{#VICTOA_under_3}}\n{{#VICTOA}}<dt> Victoa </dt><dd> 3 or fewer </dd> {{/VICTOA}}\n{{/VICTOA_under_3}}\n{{^VICTOA_under_3}}\n{{#VICTOA}}<dt> Victoa  </dt><dd> {{VICTOA}} </dd> {{/VICTOA}}\n{{/VICTOA_under_3}}\n{{#YUTONG_under_3}}\n{{#YUTONG}}<dt> Yutong </dt><dd> 3 or fewer </dd> {{/YUTONG}}\n{{/YUTONG_under_3}}\n{{^YUTONG_under_3}}\n{{#YUTONG}}<dt> Yutong  </dt><dd> {{YUTONG}} </dd> {{/YUTONG}}\n{{/YUTONG_under_3}}\n{{#VMOTOA_under_3}}\n{{#VMOTOA}}<dt> Vmotoa </dt><dd> 3 or fewer </dd> {{/VMOTOA}}\n{{/VMOTOA_under_3}}\n{{^VMOTOA_under_3}}\n{{#VMOTOA}}<dt> Vmotoa  </dt><dd> {{VMOTOA}} </dd> {{/VMOTOA}}\n{{/VMOTOA_under_3}}\n{{#ECOSPI_under_3}}\n{{#ECOSPI}}<dt> Ecospi </dt><dd> 3 or fewer </dd> {{/ECOSPI}}\n{{/ECOSPI_under_3}}\n{{^ECOSPI_under_3}}\n{{#ECOSPI}}<dt> Ecospi  </dt><dd> {{ECOSPI}} </dd> {{/ECOSPI}}\n{{/ECOSPI_under_3}}\n{{#CITRON_under_3}}\n{{#CITRON}}<dt> Citron </dt><dd> 3 or fewer </dd> {{/CITRON}}\n{{/CITRON_under_3}}\n{{^CITRON_under_3}}\n{{#CITRON}}<dt> Citron  </dt><dd> {{CITRON}} </dd> {{/CITRON}}\n{{/CITRON_under_3}}\n{{#LEYLND_under_3}}\n{{#LEYLND}}<dt> Leylnd </dt><dd> 3 or fewer </dd> {{/LEYLND}}\n{{/LEYLND_under_3}}\n{{^LEYLND_under_3}}\n{{#LEYLND}}<dt> Leylnd  </dt><dd> {{LEYLND}} </dd> {{/LEYLND}}\n{{/LEYLND_under_3}}\n{{#IVECO_under_3}}\n{{#IVECO}}<dt> Iveco </dt><dd> 3 or fewer </dd> {{/IVECO}}\n{{/IVECO_under_3}}\n{{^IVECO_under_3}}\n{{#IVECO}}<dt> Iveco  </dt><dd> {{IVECO}} </dd> {{/IVECO}}\n{{/IVECO_under_3}}\n{{#LIFAN_under_3}}\n{{#LIFAN}}<dt> Lifan </dt><dd> 3 or fewer </dd> {{/LIFAN}}\n{{/LIFAN_under_3}}\n{{^LIFAN_under_3}}\n{{#LIFAN}}<dt> Lifan  </dt><dd> {{LIFAN}} </dd> {{/LIFAN}}\n{{/LIFAN_under_3}}\n{{#VECTRI_under_3}}\n{{#VECTRI}}<dt> Vectri </dt><dd> 3 or fewer </dd> {{/VECTRI}}\n{{/VECTRI_under_3}}\n{{^VECTRI_under_3}}\n{{#VECTRI}}<dt> Vectri  </dt><dd> {{VECTRI}} </dd> {{/VECTRI}}\n{{/VECTRI_under_3}}\n{{#DELRAN_under_3}}\n{{#DELRAN}}<dt> Delran </dt><dd> 3 or fewer </dd> {{/DELRAN}}\n{{/DELRAN_under_3}}\n{{^DELRAN_under_3}}\n{{#DELRAN}}<dt> Delran  </dt><dd> {{DELRAN}} </dd> {{/DELRAN}}\n{{/DELRAN_under_3}}\n{{#MER_under_3}}\n{{#MER}}<dt> Mer </dt><dd> 3 or fewer </dd> {{/MER}}\n{{/MER_under_3}}\n{{^MER_under_3}}\n{{#MER}}<dt> Mer  </dt><dd> {{MER}} </dd> {{/MER}}\n{{/MER_under_3}}\n{{#MAZDA_under_3}}\n{{#MAZDA}}<dt> Mazda </dt><dd> 3 or fewer </dd> {{/MAZDA}}\n{{/MAZDA_under_3}}\n{{^MAZDA_under_3}}\n{{#MAZDA}}<dt> Mazda  </dt><dd> {{MAZDA}} </dd> {{/MAZDA}}\n{{/MAZDA_under_3}}\n{{#LANBAG_under_3}}\n{{#LANBAG}}<dt> Lanbag </dt><dd> 3 or fewer </dd> {{/LANBAG}}\n{{/LANBAG_under_3}}\n{{^LANBAG_under_3}}\n{{#LANBAG}}<dt> Lanbag  </dt><dd> {{LANBAG}} </dd> {{/LANBAG}}\n{{/LANBAG_under_3}}\n{{#SUB_under_3}}\n{{#SUB}}<dt> Sub </dt><dd> 3 or fewer </dd> {{/SUB}}\n{{/SUB_under_3}}\n{{^SUB_under_3}}\n{{#SUB}}<dt> Sub  </dt><dd> {{SUB}} </dd> {{/SUB}}\n{{/SUB_under_3}}\n{{#TOYOTA_under_3}}\n{{#TOYOTA}}<dt> Toyota </dt><dd> 3 or fewer </dd> {{/TOYOTA}}\n{{/TOYOTA_under_3}}\n{{^TOYOTA_under_3}}\n{{#TOYOTA}}<dt> Toyota  </dt><dd> {{TOYOTA}} </dd> {{/TOYOTA}}\n{{/TOYOTA_under_3}}\n{{#ISUZU_under_3}}\n{{#ISUZU}}<dt> Isuzu </dt><dd> 3 or fewer </dd> {{/ISUZU}}\n{{/ISUZU_under_3}}\n{{^ISUZU_under_3}}\n{{#ISUZU}}<dt> Isuzu  </dt><dd> {{ISUZU}} </dd> {{/ISUZU}}\n{{/ISUZU_under_3}}\n{{#SURRON_under_3}}\n{{#SURRON}}<dt> Surron </dt><dd> 3 or fewer </dd> {{/SURRON}}\n{{/SURRON_under_3}}\n{{^SURRON_under_3}}\n{{#SURRON}}<dt> Surron  </dt><dd> {{SURRON}} </dd> {{/SURRON}}\n{{/SURRON_under_3}}\n{{#ALFROM_under_3}}\n{{#ALFROM}}<dt> Alfrom </dt><dd> 3 or fewer </dd> {{/ALFROM}}\n{{/ALFROM_under_3}}\n{{^ALFROM_under_3}}\n{{#ALFROM}}<dt> Alfrom  </dt><dd> {{ALFROM}} </dd> {{/ALFROM}}\n{{/ALFROM_under_3}}\n{{#UNEEDA_under_3}}\n{{#UNEEDA}}<dt> Uneeda </dt><dd> 3 or fewer </dd> {{/UNEEDA}}\n{{/UNEEDA_under_3}}\n{{^UNEEDA_under_3}}\n{{#UNEEDA}}<dt> Uneeda  </dt><dd> {{UNEEDA}} </dd> {{/UNEEDA}}\n{{/UNEEDA_under_3}}\n{{#ZERO_under_3}}\n{{#ZERO}}<dt> Zero </dt><dd> 3 or fewer </dd> {{/ZERO}}\n{{/ZERO_under_3}}\n{{^ZERO_under_3}}\n{{#ZERO}}<dt> Zero  </dt><dd> {{ZERO}} </dd> {{/ZERO}}\n{{/ZERO_under_3}}\n{{#NISSAN_under_3}}\n{{#NISSAN}}<dt> Nissan </dt><dd> 3 or fewer </dd> {{/NISSAN}}\n{{/NISSAN_under_3}}\n{{^NISSAN_under_3}}\n{{#NISSAN}}<dt> Nissan  </dt><dd> {{NISSAN}} </dd> {{/NISSAN}}\n{{/NISSAN_under_3}}\n{{#KTM_under_3}}\n{{#KTM}}<dt> Ktm </dt><dd> 3 or fewer </dd> {{/KTM}}\n{{/KTM_under_3}}\n{{^KTM_under_3}}\n{{#KTM}}<dt> Ktm  </dt><dd> {{KTM}} </dd> {{/KTM}}\n{{/KTM_under_3}}\n{{#KIA_under_3}}\n{{#KIA}}<dt> Kia </dt><dd> 3 or fewer </dd> {{/KIA}}\n{{/KIA_under_3}}\n{{^KIA_under_3}}\n{{#KIA}}<dt> Kia  </dt><dd> {{KIA}} </dd> {{/KIA}}\n{{/KIA_under_3}}\n</dl>\n\n<br/>\n\n<h3>Shape</h3>\n<dl class='isf-info'>\n{{#PANEL VAN WITH SIDE WINDOWS_under_3}}\n{{#PANEL VAN WITH SIDE WINDOWS}}<dt> Panel Van With Side Windows </dt><dd> 3 or fewer </dd> {{/PANEL VAN WITH SIDE WINDOWS}}\n{{/PANEL VAN WITH SIDE WINDOWS_under_3}}\n{{^PANEL VAN WITH SIDE WINDOWS_under_3}}\n{{#PANEL VAN WITH SIDE WINDOWS}}<dt> Panel Van With Side Windows  </dt><dd> {{PANEL VAN WITH SIDE WINDOWS}} </dd> {{/PANEL VAN WITH SIDE WINDOWS}}\n{{/PANEL VAN WITH SIDE WINDOWS_under_3}}\n{{#TIPPER_under_3}}\n{{#TIPPER}}<dt> Tipper </dt><dd> 3 or fewer </dd> {{/TIPPER}}\n{{/TIPPER_under_3}}\n{{^TIPPER_under_3}}\n{{#TIPPER}}<dt> Tipper  </dt><dd> {{TIPPER}} </dd> {{/TIPPER}}\n{{/TIPPER_under_3}}\n{{#AGRICULTURAL PLANT_under_3}}\n{{#AGRICULTURAL PLANT}}<dt> Agricultural Plant </dt><dd> 3 or fewer </dd> {{/AGRICULTURAL PLANT}}\n{{/AGRICULTURAL PLANT_under_3}}\n{{^AGRICULTURAL PLANT_under_3}}\n{{#AGRICULTURAL PLANT}}<dt> Agricultural Plant  </dt><dd> {{AGRICULTURAL PLANT}} </dd> {{/AGRICULTURAL PLANT}}\n{{/AGRICULTURAL PLANT_under_3}}\n{{#TABLE TOP WITHOUT FITTINGS_under_3}}\n{{#TABLE TOP WITHOUT FITTINGS}}<dt> Table Top Without Fittings </dt><dd> 3 or fewer </dd> {{/TABLE TOP WITHOUT FITTINGS}}\n{{/TABLE TOP WITHOUT FITTINGS_under_3}}\n{{^TABLE TOP WITHOUT FITTINGS_under_3}}\n{{#TABLE TOP WITHOUT FITTINGS}}<dt> Table Top Without Fittings  </dt><dd> {{TABLE TOP WITHOUT FITTINGS}} </dd> {{/TABLE TOP WITHOUT FITTINGS}}\n{{/TABLE TOP WITHOUT FITTINGS_under_3}}\n{{#MOTOR CYCLE_under_3}}\n{{#MOTOR CYCLE}}<dt> Motor Cycle </dt><dd> 3 or fewer </dd> {{/MOTOR CYCLE}}\n{{/MOTOR CYCLE_under_3}}\n{{^MOTOR CYCLE_under_3}}\n{{#MOTOR CYCLE}}<dt> Motor Cycle  </dt><dd> {{MOTOR CYCLE}} </dd> {{/MOTOR CYCLE}}\n{{/MOTOR CYCLE_under_3}}\n{{#CONVERTIBLE_under_3}}\n{{#CONVERTIBLE}}<dt> Convertible </dt><dd> 3 or fewer </dd> {{/CONVERTIBLE}}\n{{/CONVERTIBLE_under_3}}\n{{^CONVERTIBLE_under_3}}\n{{#CONVERTIBLE}}<dt> Convertible  </dt><dd> {{CONVERTIBLE}} </dd> {{/CONVERTIBLE}}\n{{/CONVERTIBLE_under_3}}\n{{#COUPE_under_3}}\n{{#COUPE}}<dt> Coupe </dt><dd> 3 or fewer </dd> {{/COUPE}}\n{{/COUPE_under_3}}\n{{^COUPE_under_3}}\n{{#COUPE}}<dt> Coupe  </dt><dd> {{COUPE}} </dd> {{/COUPE}}\n{{/COUPE_under_3}}\n{{#TABLE TOP WITH FITTINGS_under_3}}\n{{#TABLE TOP WITH FITTINGS}}<dt> Table Top With Fittings </dt><dd> 3 or fewer </dd> {{/TABLE TOP WITH FITTINGS}}\n{{/TABLE TOP WITH FITTINGS_under_3}}\n{{^TABLE TOP WITH FITTINGS_under_3}}\n{{#TABLE TOP WITH FITTINGS}}<dt> Table Top With Fittings  </dt><dd> {{TABLE TOP WITH FITTINGS}} </dd> {{/TABLE TOP WITH FITTINGS}}\n{{/TABLE TOP WITH FITTINGS_under_3}}\n{{#FORK-LIFT_under_3}}\n{{#FORK-LIFT}}<dt> Fork-Lift </dt><dd> 3 or fewer </dd> {{/FORK-LIFT}}\n{{/FORK-LIFT_under_3}}\n{{^FORK-LIFT_under_3}}\n{{#FORK-LIFT}}<dt> Fork-Lift  </dt><dd> {{FORK-LIFT}} </dd> {{/FORK-LIFT}}\n{{/FORK-LIFT_under_3}}\n{{#REFRIGERATED VAN_under_3}}\n{{#REFRIGERATED VAN}}<dt> Refrigerated Van </dt><dd> 3 or fewer </dd> {{/REFRIGERATED VAN}}\n{{/REFRIGERATED VAN_under_3}}\n{{^REFRIGERATED VAN_under_3}}\n{{#REFRIGERATED VAN}}<dt> Refrigerated Van  </dt><dd> {{REFRIGERATED VAN}} </dd> {{/REFRIGERATED VAN}}\n{{/REFRIGERATED VAN_under_3}}\n{{#LOW LOADER TRAILER_under_3}}\n{{#LOW LOADER TRAILER}}<dt> Low Loader Trailer </dt><dd> 3 or fewer </dd> {{/LOW LOADER TRAILER}}\n{{/LOW LOADER TRAILER_under_3}}\n{{^LOW LOADER TRAILER_under_3}}\n{{#LOW LOADER TRAILER}}<dt> Low Loader Trailer  </dt><dd> {{LOW LOADER TRAILER}} </dd> {{/LOW LOADER TRAILER}}\n{{/LOW LOADER TRAILER_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S - 4WD_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S - 4WD}}<dt> Panel Van With Windows & Seat/S - 4Wd </dt><dd> 3 or fewer </dd> {{/PANEL VAN WITH WINDOWS & SEAT/S - 4WD}}\n{{/PANEL VAN WITH WINDOWS & SEAT/S - 4WD_under_3}}\n{{^PANEL VAN WITH WINDOWS & SEAT/S - 4WD_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S - 4WD}}<dt> Panel Van With Windows & Seat/S - 4Wd  </dt><dd> {{PANEL VAN WITH WINDOWS & SEAT/S - 4WD}} </dd> {{/PANEL VAN WITH WINDOWS & SEAT/S - 4WD}}\n{{/PANEL VAN WITH WINDOWS & SEAT/S - 4WD_under_3}}\n{{#INDUSTRIAL PLANT_under_3}}\n{{#INDUSTRIAL PLANT}}<dt> Industrial Plant </dt><dd> 3 or fewer </dd> {{/INDUSTRIAL PLANT}}\n{{/INDUSTRIAL PLANT_under_3}}\n{{^INDUSTRIAL PLANT_under_3}}\n{{#INDUSTRIAL PLANT}}<dt> Industrial Plant  </dt><dd> {{INDUSTRIAL PLANT}} </dd> {{/INDUSTRIAL PLANT}}\n{{/INDUSTRIAL PLANT_under_3}}\n{{#ANIMAL CARRIER TRAILER_under_3}}\n{{#ANIMAL CARRIER TRAILER}}<dt> Animal Carrier Trailer </dt><dd> 3 or fewer </dd> {{/ANIMAL CARRIER TRAILER}}\n{{/ANIMAL CARRIER TRAILER_under_3}}\n{{^ANIMAL CARRIER TRAILER_under_3}}\n{{#ANIMAL CARRIER TRAILER}}<dt> Animal Carrier Trailer  </dt><dd> {{ANIMAL CARRIER TRAILER}} </dd> {{/ANIMAL CARRIER TRAILER}}\n{{/ANIMAL CARRIER TRAILER_under_3}}\n{{#THREE WHEEL CAR_under_3}}\n{{#THREE WHEEL CAR}}<dt> Three Wheel Car </dt><dd> 3 or fewer </dd> {{/THREE WHEEL CAR}}\n{{/THREE WHEEL CAR_under_3}}\n{{^THREE WHEEL CAR_under_3}}\n{{#THREE WHEEL CAR}}<dt> Three Wheel Car  </dt><dd> {{THREE WHEEL CAR}} </dd> {{/THREE WHEEL CAR}}\n{{/THREE WHEEL CAR_under_3}}\n{{#UTILITY_under_3}}\n{{#UTILITY}}<dt> Utility </dt><dd> 3 or fewer </dd> {{/UTILITY}}\n{{/UTILITY_under_3}}\n{{^UTILITY_under_3}}\n{{#UTILITY}}<dt> Utility  </dt><dd> {{UTILITY}} </dd> {{/UTILITY}}\n{{/UTILITY_under_3}}\n{{#VAN_under_3}}\n{{#VAN}}<dt> Van </dt><dd> 3 or fewer </dd> {{/VAN}}\n{{/VAN_under_3}}\n{{^VAN_under_3}}\n{{#VAN}}<dt> Van  </dt><dd> {{VAN}} </dd> {{/VAN}}\n{{/VAN_under_3}}\n{{#PANEL VAN_under_3}}\n{{#PANEL VAN}}<dt> Panel Van </dt><dd> 3 or fewer </dd> {{/PANEL VAN}}\n{{/PANEL VAN_under_3}}\n{{^PANEL VAN_under_3}}\n{{#PANEL VAN}}<dt> Panel Van  </dt><dd> {{PANEL VAN}} </dd> {{/PANEL VAN}}\n{{/PANEL VAN_under_3}}\n{{#BUS_under_3}}\n{{#BUS}}<dt> Bus </dt><dd> 3 or fewer </dd> {{/BUS}}\n{{/BUS_under_3}}\n{{^BUS_under_3}}\n{{#BUS}}<dt> Bus  </dt><dd> {{BUS}} </dd> {{/BUS}}\n{{/BUS_under_3}}\n{{#STATION WAGON_under_3}}\n{{#STATION WAGON}}<dt> Station Wagon </dt><dd> 3 or fewer </dd> {{/STATION WAGON}}\n{{/STATION WAGON_under_3}}\n{{^STATION WAGON_under_3}}\n{{#STATION WAGON}}<dt> Station Wagon  </dt><dd> {{STATION WAGON}} </dd> {{/STATION WAGON}}\n{{/STATION WAGON_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S}}<dt> Panel Van With Windows & Seat/S </dt><dd> 3 or fewer </dd> {{/PANEL VAN WITH WINDOWS & SEAT/S}}\n{{/PANEL VAN WITH WINDOWS & SEAT/S_under_3}}\n{{^PANEL VAN WITH WINDOWS & SEAT/S_under_3}}\n{{#PANEL VAN WITH WINDOWS & SEAT/S}}<dt> Panel Van With Windows & Seat/S  </dt><dd> {{PANEL VAN WITH WINDOWS & SEAT/S}} </dd> {{/PANEL VAN WITH WINDOWS & SEAT/S}}\n{{/PANEL VAN WITH WINDOWS & SEAT/S_under_3}}\n{{#SEDAN_under_3}}\n{{#SEDAN}}<dt> Sedan </dt><dd> 3 or fewer </dd> {{/SEDAN}}\n{{/SEDAN_under_3}}\n{{^SEDAN_under_3}}\n{{#SEDAN}}<dt> Sedan  </dt><dd> {{SEDAN}} </dd> {{/SEDAN}}\n{{/SEDAN_under_3}}\n</dl>\n\n<br/>\n\n<h3>Tare Group</h3>\n<dl class='isf-info'>\n{{#1505-2504Kg_under_3}}\n{{#1505-2504Kg}}<dt> 1505-2504Kg </dt><dd> 3 or fewer </dd> {{/1505-2504Kg}}\n{{/1505-2504Kg_under_3}}\n{{^1505-2504Kg_under_3}}\n{{#1505-2504Kg}}<dt> 1505-2504Kg  </dt><dd> {{1505-2504Kg}} </dd> {{/1505-2504Kg}}\n{{/1505-2504Kg_under_3}}\n{{#1155-1504Kg_under_3}}\n{{#1155-1504Kg}}<dt> 1155-1504Kg </dt><dd> 3 or fewer </dd> {{/1155-1504Kg}}\n{{/1155-1504Kg_under_3}}\n{{^1155-1504Kg_under_3}}\n{{#1155-1504Kg}}<dt> 1155-1504Kg  </dt><dd> {{1155-1504Kg}} </dd> {{/1155-1504Kg}}\n{{/1155-1504Kg_under_3}}\n{{#255-764Kg_under_3}}\n{{#255-764Kg}}<dt> 255-764Kg </dt><dd> 3 or fewer </dd> {{/255-764Kg}}\n{{/255-764Kg_under_3}}\n{{^255-764Kg_under_3}}\n{{#255-764Kg}}<dt> 255-764Kg  </dt><dd> {{255-764Kg}} </dd> {{/255-764Kg}}\n{{/255-764Kg_under_3}}\n{{#765-975Kg_under_3}}\n{{#765-975Kg}}<dt> 765-975Kg </dt><dd> 3 or fewer </dd> {{/765-975Kg}}\n{{/765-975Kg_under_3}}\n{{^765-975Kg_under_3}}\n{{#765-975Kg}}<dt> 765-975Kg  </dt><dd> {{765-975Kg}} </dd> {{/765-975Kg}}\n{{/765-975Kg_under_3}}\n{{#2505-3500Kg_under_3}}\n{{#2505-3500Kg}}<dt> 2505-3500Kg </dt><dd> 3 or fewer </dd> {{/2505-3500Kg}}\n{{/2505-3500Kg_under_3}}\n{{^2505-3500Kg_under_3}}\n{{#2505-3500Kg}}<dt> 2505-3500Kg  </dt><dd> {{2505-3500Kg}} </dd> {{/2505-3500Kg}}\n{{/2505-3500Kg_under_3}}\n{{#3501-4500Kg_under_3}}\n{{#3501-4500Kg}}<dt> 3501-4500Kg </dt><dd> 3 or fewer </dd> {{/3501-4500Kg}}\n{{/3501-4500Kg_under_3}}\n{{^3501-4500Kg_under_3}}\n{{#3501-4500Kg}}<dt> 3501-4500Kg  </dt><dd> {{3501-4500Kg}} </dd> {{/3501-4500Kg}}\n{{/3501-4500Kg_under_3}}\n{{#976-1154Kg_under_3}}\n{{#976-1154Kg}}<dt> 976-1154Kg </dt><dd> 3 or fewer </dd> {{/976-1154Kg}}\n{{/976-1154Kg_under_3}}\n{{^976-1154Kg_under_3}}\n{{#976-1154Kg}}<dt> 976-1154Kg  </dt><dd> {{976-1154Kg}} </dd> {{/976-1154Kg}}\n{{/976-1154Kg_under_3}}\n{{#4500+Kg_under_3}}\n{{#4500+Kg}}<dt> 4500+Kg </dt><dd> 3 or fewer </dd> {{/4500+Kg}}\n{{/4500+Kg_under_3}}\n{{^4500+Kg_under_3}}\n{{#4500+Kg}}<dt> 4500+Kg  </dt><dd> {{4500+Kg}} </dd> {{/4500+Kg}}\n{{/4500+Kg_under_3}}\n{{#0-254Kg_under_3}}\n{{#0-254Kg}}<dt> 0-254Kg </dt><dd> 3 or fewer </dd> {{/0-254Kg}}\n{{/0-254Kg_under_3}}\n{{^0-254Kg_under_3}}\n{{#0-254Kg}}<dt> 0-254Kg  </dt><dd> {{0-254Kg}} </dd> {{/0-254Kg}}\n{{/0-254Kg_under_3}}\n</dl>\n\n<br/>\n\n<h3>Usage</h3>\n<dl class='isf-info'>\n{{#BUSINESS - GENERAL_under_3}}\n{{#BUSINESS - GENERAL}}<dt> Business - General </dt><dd> 3 or fewer </dd> {{/BUSINESS - GENERAL}}\n{{/BUSINESS - GENERAL_under_3}}\n{{^BUSINESS - GENERAL_under_3}}\n{{#BUSINESS - GENERAL}}<dt> Business - General  </dt><dd> {{BUSINESS - GENERAL}} </dd> {{/BUSINESS - GENERAL}}\n{{/BUSINESS - GENERAL_under_3}}\n{{#HIRE CAR_under_3}}\n{{#HIRE CAR}}<dt> Hire Car </dt><dd> 3 or fewer </dd> {{/HIRE CAR}}\n{{/HIRE CAR_under_3}}\n{{^HIRE CAR_under_3}}\n{{#HIRE CAR}}<dt> Hire Car  </dt><dd> {{HIRE CAR}} </dd> {{/HIRE CAR}}\n{{/HIRE CAR_under_3}}\n{{#CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE_under_3}}\n{{#CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE}}<dt> Charter / Airways Bus Usage - Let For Hire </dt><dd> 3 or fewer </dd> {{/CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE}}\n{{/CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE_under_3}}\n{{^CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE_under_3}}\n{{#CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE}}<dt> Charter / Airways Bus Usage - Let For Hire  </dt><dd> {{CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE}} </dd> {{/CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE}}\n{{/CHARTER / AIRWAYS BUS USAGE - LET FOR HIRE_under_3}}\n{{#PRIMARY PRODUCER GENERAL_under_3}}\n{{#PRIMARY PRODUCER GENERAL}}<dt> Primary Producer General </dt><dd> 3 or fewer </dd> {{/PRIMARY PRODUCER GENERAL}}\n{{/PRIMARY PRODUCER GENERAL_under_3}}\n{{^PRIMARY PRODUCER GENERAL_under_3}}\n{{#PRIMARY PRODUCER GENERAL}}<dt> Primary Producer General  </dt><dd> {{PRIMARY PRODUCER GENERAL}} </dd> {{/PRIMARY PRODUCER GENERAL}}\n{{/PRIMARY PRODUCER GENERAL_under_3}}\n{{#HELD FOR RE-SALE BY A LICENSED MOTOR DEALER_under_3}}\n{{#HELD FOR RE-SALE BY A LICENSED MOTOR DEALER}}<dt> Held For Re-Sale By A Licensed Motor Dealer </dt><dd> 3 or fewer </dd> {{/HELD FOR RE-SALE BY A LICENSED MOTOR DEALER}}\n{{/HELD FOR RE-SALE BY A LICENSED MOTOR DEALER_under_3}}\n{{^HELD FOR RE-SALE BY A LICENSED MOTOR DEALER_under_3}}\n{{#HELD FOR RE-SALE BY A LICENSED MOTOR DEALER}}<dt> Held For Re-Sale By A Licensed Motor Dealer  </dt><dd> {{HELD FOR RE-SALE BY A LICENSED MOTOR DEALER}} </dd> {{/HELD FOR RE-SALE BY A LICENSED MOTOR DEALER}}\n{{/HELD FOR RE-SALE BY A LICENSED MOTOR DEALER_under_3}}\n{{#ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD_under_3}}\n{{#ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD}}<dt> Road Construction/Maintenance Concession - Declaration Reqd </dt><dd> 3 or fewer </dd> {{/ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD}}\n{{/ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD_under_3}}\n{{^ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD_under_3}}\n{{#ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD}}<dt> Road Construction/Maintenance Concession - Declaration Reqd  </dt><dd> {{ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD}} </dd> {{/ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD}}\n{{/ROAD CONSTRUCTION/MAINTENANCE CONCESSION - DECLARATION REQD_under_3}}\n{{#GENERAL PRIVATE_under_3}}\n{{#GENERAL PRIVATE}}<dt> General Private </dt><dd> 3 or fewer </dd> {{/GENERAL PRIVATE}}\n{{/GENERAL PRIVATE_under_3}}\n{{^GENERAL PRIVATE_under_3}}\n{{#GENERAL PRIVATE}}<dt> General Private  </dt><dd> {{GENERAL PRIVATE}} </dd> {{/GENERAL PRIVATE}}\n{{/GENERAL PRIVATE_under_3}}\n{{#GENERAL PURPOSE PLANT_under_3}}\n{{#GENERAL PURPOSE PLANT}}<dt> General Purpose Plant </dt><dd> 3 or fewer </dd> {{/GENERAL PURPOSE PLANT}}\n{{/GENERAL PURPOSE PLANT_under_3}}\n{{^GENERAL PURPOSE PLANT_under_3}}\n{{#GENERAL PURPOSE PLANT}}<dt> General Purpose Plant  </dt><dd> {{GENERAL PURPOSE PLANT}} </dd> {{/GENERAL PURPOSE PLANT}}\n{{/GENERAL PURPOSE PLANT_under_3}}\n{{#RENTAL VEHICLE_under_3}}\n{{#RENTAL VEHICLE}}<dt> Rental Vehicle </dt><dd> 3 or fewer </dd> {{/RENTAL VEHICLE}}\n{{/RENTAL VEHICLE_under_3}}\n{{^RENTAL VEHICLE_under_3}}\n{{#RENTAL VEHICLE}}<dt> Rental Vehicle  </dt><dd> {{RENTAL VEHICLE}} </dd> {{/RENTAL VEHICLE}}\n{{/RENTAL VEHICLE_under_3}}\n{{#PENSIONER CONCESSION_under_3}}\n{{#PENSIONER CONCESSION}}<dt> Pensioner Concession </dt><dd> 3 or fewer </dd> {{/PENSIONER CONCESSION}}\n{{/PENSIONER CONCESSION_under_3}}\n{{^PENSIONER CONCESSION_under_3}}\n{{#PENSIONER CONCESSION}}<dt> Pensioner Concession  </dt><dd> {{PENSIONER CONCESSION}} </dd> {{/PENSIONER CONCESSION}}\n{{/PENSIONER CONCESSION_under_3}}\n{{#BUS/TOURIST VEHICLE USED FOR HIRE_under_3}}\n{{#BUS/TOURIST VEHICLE USED FOR HIRE}}<dt> Bus/Tourist Vehicle Used For Hire </dt><dd> 3 or fewer </dd> {{/BUS/TOURIST VEHICLE USED FOR HIRE}}\n{{/BUS/TOURIST VEHICLE USED FOR HIRE_under_3}}\n{{^BUS/TOURIST VEHICLE USED FOR HIRE_under_3}}\n{{#BUS/TOURIST VEHICLE USED FOR HIRE}}<dt> Bus/Tourist Vehicle Used For Hire  </dt><dd> {{BUS/TOURIST VEHICLE USED FOR HIRE}} </dd> {{/BUS/TOURIST VEHICLE USED FOR HIRE}}\n{{/BUS/TOURIST VEHICLE USED FOR HIRE_under_3}}\n{{#DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER_under_3}}\n{{#DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER}}<dt> Demonstrator Vehicle Used By A Licensed Motor Dealer </dt><dd> 3 or fewer </dd> {{/DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER}}\n{{/DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER_under_3}}\n{{^DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER_under_3}}\n{{#DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER}}<dt> Demonstrator Vehicle Used By A Licensed Motor Dealer  </dt><dd> {{DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER}} </dd> {{/DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER}}\n{{/DEMONSTRATOR VEHICLE USED BY A LICENSED MOTOR DEALER_under_3}}\n{{#USED FOR CHARITABLE PURPOSES_under_3}}\n{{#USED FOR CHARITABLE PURPOSES}}<dt> Used For Charitable Purposes </dt><dd> 3 or fewer </dd> {{/USED FOR CHARITABLE PURPOSES}}\n{{/USED FOR CHARITABLE PURPOSES_under_3}}\n{{^USED FOR CHARITABLE PURPOSES_under_3}}\n{{#USED FOR CHARITABLE PURPOSES}}<dt> Used For Charitable Purposes  </dt><dd> {{USED FOR CHARITABLE PURPOSES}} </dd> {{/USED FOR CHARITABLE PURPOSES}}\n{{/USED FOR CHARITABLE PURPOSES_under_3}}\n</dl>\n\n<br/>\n\n<h3>Compliance Plate Year</h3>\n<dl class='isf-info'>\n{{#1964_under_3}}\n{{#1964}}<dt> 1964 </dt><dd> 3 or fewer </dd> {{/1964}}\n{{/1964_under_3}}\n{{^1964_under_3}}\n{{#1964}}<dt> 1964  </dt><dd> {{1964}} </dd> {{/1964}}\n{{/1964_under_3}}\n{{#1971_under_3}}\n{{#1971}}<dt> 1971 </dt><dd> 3 or fewer </dd> {{/1971}}\n{{/1971_under_3}}\n{{^1971_under_3}}\n{{#1971}}<dt> 1971  </dt><dd> {{1971}} </dd> {{/1971}}\n{{/1971_under_3}}\n{{#1980_under_3}}\n{{#1980}}<dt> 1980 </dt><dd> 3 or fewer </dd> {{/1980}}\n{{/1980_under_3}}\n{{^1980_under_3}}\n{{#1980}}<dt> 1980  </dt><dd> {{1980}} </dd> {{/1980}}\n{{/1980_under_3}}\n{{#1981_under_3}}\n{{#1981}}<dt> 1981 </dt><dd> 3 or fewer </dd> {{/1981}}\n{{/1981_under_3}}\n{{^1981_under_3}}\n{{#1981}}<dt> 1981  </dt><dd> {{1981}} </dd> {{/1981}}\n{{/1981_under_3}}\n{{#1982_under_3}}\n{{#1982}}<dt> 1982 </dt><dd> 3 or fewer </dd> {{/1982}}\n{{/1982_under_3}}\n{{^1982_under_3}}\n{{#1982}}<dt> 1982  </dt><dd> {{1982}} </dd> {{/1982}}\n{{/1982_under_3}}\n{{#1984_under_3}}\n{{#1984}}<dt> 1984 </dt><dd> 3 or fewer </dd> {{/1984}}\n{{/1984_under_3}}\n{{^1984_under_3}}\n{{#1984}}<dt> 1984  </dt><dd> {{1984}} </dd> {{/1984}}\n{{/1984_under_3}}\n{{#1985_under_3}}\n{{#1985}}<dt> 1985 </dt><dd> 3 or fewer </dd> {{/1985}}\n{{/1985_under_3}}\n{{^1985_under_3}}\n{{#1985}}<dt> 1985  </dt><dd> {{1985}} </dd> {{/1985}}\n{{/1985_under_3}}\n{{#1986_under_3}}\n{{#1986}}<dt> 1986 </dt><dd> 3 or fewer </dd> {{/1986}}\n{{/1986_under_3}}\n{{^1986_under_3}}\n{{#1986}}<dt> 1986  </dt><dd> {{1986}} </dd> {{/1986}}\n{{/1986_under_3}}\n{{#1987_under_3}}\n{{#1987}}<dt> 1987 </dt><dd> 3 or fewer </dd> {{/1987}}\n{{/1987_under_3}}\n{{^1987_under_3}}\n{{#1987}}<dt> 1987  </dt><dd> {{1987}} </dd> {{/1987}}\n{{/1987_under_3}}\n{{#1990_under_3}}\n{{#1990}}<dt> 1990 </dt><dd> 3 or fewer </dd> {{/1990}}\n{{/1990_under_3}}\n{{^1990_under_3}}\n{{#1990}}<dt> 1990  </dt><dd> {{1990}} </dd> {{/1990}}\n{{/1990_under_3}}\n{{#1991_under_3}}\n{{#1991}}<dt> 1991 </dt><dd> 3 or fewer </dd> {{/1991}}\n{{/1991_under_3}}\n{{^1991_under_3}}\n{{#1991}}<dt> 1991  </dt><dd> {{1991}} </dd> {{/1991}}\n{{/1991_under_3}}\n{{#1992_under_3}}\n{{#1992}}<dt> 1992 </dt><dd> 3 or fewer </dd> {{/1992}}\n{{/1992_under_3}}\n{{^1992_under_3}}\n{{#1992}}<dt> 1992  </dt><dd> {{1992}} </dd> {{/1992}}\n{{/1992_under_3}}\n{{#1993_under_3}}\n{{#1993}}<dt> 1993 </dt><dd> 3 or fewer </dd> {{/1993}}\n{{/1993_under_3}}\n{{^1993_under_3}}\n{{#1993}}<dt> 1993  </dt><dd> {{1993}} </dd> {{/1993}}\n{{/1993_under_3}}\n{{#1994_under_3}}\n{{#1994}}<dt> 1994 </dt><dd> 3 or fewer </dd> {{/1994}}\n{{/1994_under_3}}\n{{^1994_under_3}}\n{{#1994}}<dt> 1994  </dt><dd> {{1994}} </dd> {{/1994}}\n{{/1994_under_3}}\n{{#1995_under_3}}\n{{#1995}}<dt> 1995 </dt><dd> 3 or fewer </dd> {{/1995}}\n{{/1995_under_3}}\n{{^1995_under_3}}\n{{#1995}}<dt> 1995  </dt><dd> {{1995}} </dd> {{/1995}}\n{{/1995_under_3}}\n{{#1996_under_3}}\n{{#1996}}<dt> 1996 </dt><dd> 3 or fewer </dd> {{/1996}}\n{{/1996_under_3}}\n{{^1996_under_3}}\n{{#1996}}<dt> 1996  </dt><dd> {{1996}} </dd> {{/1996}}\n{{/1996_under_3}}\n{{#1998_under_3}}\n{{#1998}}<dt> 1998 </dt><dd> 3 or fewer </dd> {{/1998}}\n{{/1998_under_3}}\n{{^1998_under_3}}\n{{#1998}}<dt> 1998  </dt><dd> {{1998}} </dd> {{/1998}}\n{{/1998_under_3}}\n{{#1999_under_3}}\n{{#1999}}<dt> 1999 </dt><dd> 3 or fewer </dd> {{/1999}}\n{{/1999_under_3}}\n{{^1999_under_3}}\n{{#1999}}<dt> 1999  </dt><dd> {{1999}} </dd> {{/1999}}\n{{/1999_under_3}}\n{{#2000_under_3}}\n{{#2000}}<dt> 2000 </dt><dd> 3 or fewer </dd> {{/2000}}\n{{/2000_under_3}}\n{{^2000_under_3}}\n{{#2000}}<dt> 2000  </dt><dd> {{2000}} </dd> {{/2000}}\n{{/2000_under_3}}\n{{#2001_under_3}}\n{{#2001}}<dt> 2001 </dt><dd> 3 or fewer </dd> {{/2001}}\n{{/2001_under_3}}\n{{^2001_under_3}}\n{{#2001}}<dt> 2001  </dt><dd> {{2001}} </dd> {{/2001}}\n{{/2001_under_3}}\n{{#2002_under_3}}\n{{#2002}}<dt> 2002 </dt><dd> 3 or fewer </dd> {{/2002}}\n{{/2002_under_3}}\n{{^2002_under_3}}\n{{#2002}}<dt> 2002  </dt><dd> {{2002}} </dd> {{/2002}}\n{{/2002_under_3}}\n{{#2003_under_3}}\n{{#2003}}<dt> 2003 </dt><dd> 3 or fewer </dd> {{/2003}}\n{{/2003_under_3}}\n{{^2003_under_3}}\n{{#2003}}<dt> 2003  </dt><dd> {{2003}} </dd> {{/2003}}\n{{/2003_under_3}}\n{{#2004_under_3}}\n{{#2004}}<dt> 2004 </dt><dd> 3 or fewer </dd> {{/2004}}\n{{/2004_under_3}}\n{{^2004_under_3}}\n{{#2004}}<dt> 2004  </dt><dd> {{2004}} </dd> {{/2004}}\n{{/2004_under_3}}\n{{#2005_under_3}}\n{{#2005}}<dt> 2005 </dt><dd> 3 or fewer </dd> {{/2005}}\n{{/2005_under_3}}\n{{^2005_under_3}}\n{{#2005}}<dt> 2005  </dt><dd> {{2005}} </dd> {{/2005}}\n{{/2005_under_3}}\n{{#2006_under_3}}\n{{#2006}}<dt> 2006 </dt><dd> 3 or fewer </dd> {{/2006}}\n{{/2006_under_3}}\n{{^2006_under_3}}\n{{#2006}}<dt> 2006  </dt><dd> {{2006}} </dd> {{/2006}}\n{{/2006_under_3}}\n{{#2007_under_3}}\n{{#2007}}<dt> 2007 </dt><dd> 3 or fewer </dd> {{/2007}}\n{{/2007_under_3}}\n{{^2007_under_3}}\n{{#2007}}<dt> 2007  </dt><dd> {{2007}} </dd> {{/2007}}\n{{/2007_under_3}}\n{{#2008_under_3}}\n{{#2008}}<dt> 2008 </dt><dd> 3 or fewer </dd> {{/2008}}\n{{/2008_under_3}}\n{{^2008_under_3}}\n{{#2008}}<dt> 2008  </dt><dd> {{2008}} </dd> {{/2008}}\n{{/2008_under_3}}\n{{#2009_under_3}}\n{{#2009}}<dt> 2009 </dt><dd> 3 or fewer </dd> {{/2009}}\n{{/2009_under_3}}\n{{^2009_under_3}}\n{{#2009}}<dt> 2009  </dt><dd> {{2009}} </dd> {{/2009}}\n{{/2009_under_3}}\n{{#2010_under_3}}\n{{#2010}}<dt> 2010 </dt><dd> 3 or fewer </dd> {{/2010}}\n{{/2010_under_3}}\n{{^2010_under_3}}\n{{#2010}}<dt> 2010  </dt><dd> {{2010}} </dd> {{/2010}}\n{{/2010_under_3}}\n{{#2011_under_3}}\n{{#2011}}<dt> 2011 </dt><dd> 3 or fewer </dd> {{/2011}}\n{{/2011_under_3}}\n{{^2011_under_3}}\n{{#2011}}<dt> 2011  </dt><dd> {{2011}} </dd> {{/2011}}\n{{/2011_under_3}}\n{{#2012_under_3}}\n{{#2012}}<dt> 2012 </dt><dd> 3 or fewer </dd> {{/2012}}\n{{/2012_under_3}}\n{{^2012_under_3}}\n{{#2012}}<dt> 2012  </dt><dd> {{2012}} </dd> {{/2012}}\n{{/2012_under_3}}\n{{#2013_under_3}}\n{{#2013}}<dt> 2013 </dt><dd> 3 or fewer </dd> {{/2013}}\n{{/2013_under_3}}\n{{^2013_under_3}}\n{{#2013}}<dt> 2013  </dt><dd> {{2013}} </dd> {{/2013}}\n{{/2013_under_3}}\n{{#2014_under_3}}\n{{#2014}}<dt> 2014 </dt><dd> 3 or fewer </dd> {{/2014}}\n{{/2014_under_3}}\n{{^2014_under_3}}\n{{#2014}}<dt> 2014  </dt><dd> {{2014}} </dd> {{/2014}}\n{{/2014_under_3}}\n{{#2015_under_3}}\n{{#2015}}<dt> 2015 </dt><dd> 3 or fewer </dd> {{/2015}}\n{{/2015_under_3}}\n{{^2015_under_3}}\n{{#2015}}<dt> 2015  </dt><dd> {{2015}} </dd> {{/2015}}\n{{/2015_under_3}}\n{{#2016_under_3}}\n{{#2016}}<dt> 2016 </dt><dd> 3 or fewer </dd> {{/2016}}\n{{/2016_under_3}}\n{{^2016_under_3}}\n{{#2016}}<dt> 2016  </dt><dd> {{2016}} </dd> {{/2016}}\n{{/2016_under_3}}\n{{#2017_under_3}}\n{{#2017}}<dt> 2017 </dt><dd> 3 or fewer </dd> {{/2017}}\n{{/2017_under_3}}\n{{^2017_under_3}}\n{{#2017}}<dt> 2017  </dt><dd> {{2017}} </dd> {{/2017}}\n{{/2017_under_3}}\n{{#2018_under_3}}\n{{#2018}}<dt> 2018 </dt><dd> 3 or fewer </dd> {{/2018}}\n{{/2018_under_3}}\n{{^2018_under_3}}\n{{#2018}}<dt> 2018  </dt><dd> {{2018}} </dd> {{/2018}}\n{{/2018_under_3}}\n{{#2019_under_3}}\n{{#2019}}<dt> 2019 </dt><dd> 3 or fewer </dd> {{/2019}}\n{{/2019_under_3}}\n{{^2019_under_3}}\n{{#2019}}<dt> 2019  </dt><dd> {{2019}} </dd> {{/2019}}\n{{/2019_under_3}}\n</dl>\n\n<br/>\n{{/Registrations}}\n\n{{^Registrations}}<dt>Number of registrations</dt> <dd> 0 </dd>{{/Registrations}}\n\n<dl><dt> <a href={{census_quickstats_link}}> Click here to see 2016 ABS Census QuickStats for this postcode</a></dt><dd></dd>\n</dl>\n<br/>"
     },
     {
       "type": "nsw-traffic-hourly-volume",
@@ -1005,31 +1002,121 @@
       },
       "customProperties": {
         "tableStyle": {
-          "colorPalette": "8-class GnBu"
+          "colorPalette": "8-class GnBu",
+          "columns": {
+            "station_id": {
+              "type": "hidden"
+            },
+            "name": {
+              "type": "hidden"
+            },
+            "lga": {
+              "type": "hidden"
+            },
+            "suburb": {
+              "type": "hidden"
+            },
+            "road_type": {
+              "name": "Road Type"
+            },
+            "hour_00": {
+              "name": "12 AM"
+            },
+            "hour_01": {
+              "name": "1 AM"
+            },
+            "hour_02": {
+              "name": "2 AM"
+            },
+            "hour_03": {
+              "name": "3 AM"
+            },
+            "hour_04": {
+              "name": "4 AM"
+            },
+            "hour_05": {
+              "name": "5 AM"
+            },
+            "hour_06": {
+              "name": "6 AM"
+            },
+            "hour_07": {
+              "name": "7 AM"
+            },
+            "hour_08": {
+              "name": "8 AM"
+            },
+            "hour_09": {
+              "name": "9 AM"
+            },
+            "hour_10": {
+              "name": "10 AM"
+            },
+            "hour_11": {
+              "name": "11 AM"
+            },
+            "hour_12": {
+              "name": "12 PM"
+            },
+            "hour_13": {
+              "name": "1 PM"
+            },
+            "hour_14": {
+              "name": "2 PM"
+            },
+            "hour_15": {
+              "name": "3 PM"
+            },
+            "hour_16": {
+              "name": "4 PM"
+            },
+            "hour_17": {
+              "name": "5 PM"
+            },
+            "hour_18": {
+              "name": "6 PM"
+            },
+            "hour_19": {
+              "name": "7 PM"
+            },
+            "hour_20": {
+              "name": "8 PM"
+            },
+            "hour_21": {
+              "name": "9 PM"
+            },
+            "hour_22": {
+              "name": "10 PM"
+            },
+            "hour_23": {
+              "name": "11 PM"
+            }
+          }
         }
       },
       "infoSectionOrder": [
-      "Data Description",
-      "Data Updates",
-      "Data Supplier and Processing",
-      "Disclaimer"
+        "Data Description",
+        "Data Updates",
+        "Data Supplier and Processing",
+        "Disclaimer"
       ],
-      "info": [{
-        "name": "Data Description",
-        "content": "<p>This is a NSW map of average hourly weekday traffic volumes at different monitoring stations, recorded in average number of vehicles per hour on all weekdays of the year (i.e. excluding weekends but not holidays). Data displayed is for the primary direction of travel specified (east-west or north-south). Data presented is for the most recent available year.</p> <p>Use the time slider bar at the bottom to explore how traffic volumes and the location of traffic monitoring stations change across 24 hours of the average weekday. An alternative data display variable &lsquo;road type&rsquo; can also be used for quick reference.</p> <p>In the context of Electric Vehicle charging infrastructure planning, this is a critical variable that indicates potential volume and timing of charging needs, dictated by passing road traffic.</p> <p>Click on a monitoring station to reveal the following information:</p> <ul> <li><strong>Station name</strong></li> <li><strong>Station ID: </strong>Code used to identify specific monitoring station</li> <li><strong>LGA; Suburb:</strong> Local Government Area and suburb in which the monitoring station is located</li> <li><strong>Road type:</strong> Motorway, Arterial road, Sub-Arterial Road, Distributor Road, Primary Road</li> <li><strong>Primary direction captured:</strong> Direction of travel presented in the data</li> <li><strong>Average hourly weekday table:</strong> All 24hrs presented separately chart is provided for the daily variations underpinning the average figures.</li> <li><strong>Average hourly weekday graph:</strong> <u>Click &ldquo;Expand&rdquo; to add to a larger chart to compare monitoring stations and download </u><u>graphed data.</u></li> </ul>"
-      },
-      {
-        "name": "Data Updates",
-        "content": "<p>Continually updated from API.</p>"
-      },
-      {
-        "name": "Data Supplier and processing",
-        "content": "<p>The data is served directly from the Transport NSW API. Data processing for visualisation is managed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS).</p>"
-      },
-      {
-        "name": "Disclaimer",
-        "content": "<p>Although every effort has been made to ensure the quality of the data, neither the Institute for Sustainable Futures nor the NSW Roads and Maritime Services can guarantee the accuracy of the data and does not accept responsibility for any consequences arising from its use.</p>"
-      }
+      "info": [
+        {
+          "name": "Data Description",
+          "content": "<p>This is a NSW map of average hourly weekday traffic volumes at different monitoring stations, recorded in average number of vehicles per hour on all weekdays of the year (i.e. excluding weekends but not holidays). Data displayed is for the primary direction of travel specified (east-west or north-south). Data presented is for the most recent available year.</p> <p>Use the time slider bar at the bottom to explore how traffic volumes and the location of traffic monitoring stations change across 24 hours of the average weekday. An alternative data display variable &lsquo;road type&rsquo; can also be used for quick reference.</p> <p>In the context of Electric Vehicle charging infrastructure planning, this is a critical variable that indicates potential volume and timing of charging needs, dictated by passing road traffic.</p> <p>Click on a monitoring station to reveal the following information:</p> <ul> <li><strong>Station name</strong></li> <li><strong>Station ID: </strong>Code used to identify specific monitoring station</li> <li><strong>LGA; Suburb:</strong> Local Government Area and suburb in which the monitoring station is located</li> <li><strong>Road type:</strong> Motorway, Arterial road, Sub-Arterial Road, Distributor Road, Primary Road</li> <li><strong>Primary direction captured:</strong> Direction of travel presented in the data</li> <li><strong>Average hourly weekday table:</strong> All 24hrs presented separately chart is provided for the daily variations underpinning the average figures.</li> <li><strong>Average hourly weekday graph:</strong> <u>Click &ldquo;Expand&rdquo; to add to a larger chart to compare monitoring stations and download </u><u>graphed data.</u></li> </ul>"
+        },
+        {
+          "name": "Data Updates",
+          "content": "<p>Continually updated from API.</p>"
+        },
+        {
+          "name": "Data Supplier and processing",
+          "content": "<p>The data is served directly from the Transport NSW API. Data processing for visualisation is managed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS).</p>"
+        },
+        {
+          "name": "Disclaimer",
+          "content": "<p>Although every effort has been made to ensure the quality of the data, neither the Institute for Sustainable Futures nor the NSW Roads and Maritime Services can guarantee the accuracy of the data and does not accept responsibility for any consequences arising from its use.</p>"
+        }
       ]
     },
     {
@@ -1038,11 +1125,16 @@
       "tableStyle": {
         "colorPalette": "YlOrBr",
         "columns": {
+          "has_vehicle_classifier": {
+            "type": "hidden"
+          },
           "lga": {
-            "name": "Local Government Area"
+            "name": "Local Government Area",
+            "type": "hidden"
           },
           "suburb": {
-            "name": "Suburb"
+            "name": "Suburb",
+            "type": "hidden"
           },
           "station_id": {
             "type": "HIDDEN"
@@ -1051,7 +1143,7 @@
             "type": "HIDDEN"
           },
           "road_type": {
-            "type": "HIDDEN"
+            "name": "Road Type"
           },
           "primary_direction": {
             "type": "HIDDEN"
@@ -1108,27 +1200,28 @@
         }
       },
       "infoSectionOrder": [
-      "Data Description",
-      "Data Updates",
-      "Data Supplier and Processing",
-      "Disclaimer"
+        "Data Description",
+        "Data Updates",
+        "Data Supplier and Processing",
+        "Disclaimer"
       ],
-      "info": [{
-        "name": "Data Description",
-        "content": "<p>This is a NSW map of average daily traffic volumes at different monitoring stations, recorded in average number of vehicles per day across each reported year. Data displayed is for the primary direction of travel specified (east-west or north-south) and is in annual timesteps from 2015 onwards.</p> <p>Use the time slider bar at the bottom to explore how traffic volumes and the location of traffic monitoring stations change over time. A number of different display variables can also be selected in the legend panel: road type, all vehicles, heavy vehicles, light vehicles or unclassified vehicles.</p> <p>In the context of Electric Vehicle charging infrastructure planning, this is a critical variable that indicates potential demand for charging services, dictated by passing road traffic.</p> <p>Click on a monitoring station to reveal the following information:</p> <ul> <li><strong>Station name</strong></li> <li><strong>Station ID: </strong>Code used to identify specific monitoring station</li> <li><strong>LGA; Suburb:</strong> Local Government Area and suburb in which the monitoring station is located</li> <li><strong>Road type:</strong> Motorway, Arterial road, Sub-Arterial Road, Distributor Road, Primary Road</li> <li><strong>Primary direction captured:</strong> Direction of travel presented in the data</li> <li><strong>Vehicle counts:</strong></li> <ul> <li><strong>All vehicles: </strong>Total number of vehicles of any type</li> <li><strong>Light vehicles:</strong> This tends to be passenger vehicles.</li> <li><strong>Heavy vehicles:</strong> This tends to be commercial vehicles.</li> <li><strong>Unclassified vehicles:</strong> Some stations do not classify vehicles by weight and thus this is generally the same as &ldquo;All vehicles&rdquo; for these stations.</li> </ul> <li><strong>Daily History:</strong> A chart is provided for the daily variations underpinning the average figures. <u>Click &ldquo;Expand&rdquo; to add to a larger chart to compare monitoring stations and download graphed data.</u> Select in the legend which directions of travel are graphed (primary direction and/or opposite direction).</li> </ul>"
-      },
-      {
-        "name": "Data Updates",
-        "content": "<p>Continually updated from API.</p>"
-      },
-      {
-        "name": "Data Supplier and processing",
-        "content": "<p>The data is served directly from the Transport NSW API. Data processing for visualisation is managed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS).</p>"
-      },
-      {
-        "name": "Disclaimer",
-        "content": "<p>Although every effort has been made to ensure the quality of the data, neither the Institute for Sustainable Futures nor the NSW Roads and Maritime Services can guarantee the accuracy of the data and does not accept responsibility for any consequences arising from its use.</p>"
-      }
+      "info": [
+        {
+          "name": "Data Description",
+          "content": "<p>This is a NSW map of average daily traffic volumes at different monitoring stations, recorded in average number of vehicles per day across each reported year. Data displayed is for the primary direction of travel specified (east-west or north-south) and is in annual timesteps from 2015 onwards.</p> <p>Use the time slider bar at the bottom to explore how traffic volumes and the location of traffic monitoring stations change over time. A number of different display variables can also be selected in the legend panel: road type, all vehicles, heavy vehicles, light vehicles or unclassified vehicles.</p> <p>In the context of Electric Vehicle charging infrastructure planning, this is a critical variable that indicates potential demand for charging services, dictated by passing road traffic.</p> <p>Click on a monitoring station to reveal the following information:</p> <ul> <li><strong>Station name</strong></li> <li><strong>Station ID: </strong>Code used to identify specific monitoring station</li> <li><strong>LGA; Suburb:</strong> Local Government Area and suburb in which the monitoring station is located</li> <li><strong>Road type:</strong> Motorway, Arterial road, Sub-Arterial Road, Distributor Road, Primary Road</li> <li><strong>Primary direction captured:</strong> Direction of travel presented in the data</li> <li><strong>Vehicle counts:</strong></li> <ul> <li><strong>All vehicles: </strong>Total number of vehicles of any type</li> <li><strong>Light vehicles:</strong> This tends to be passenger vehicles.</li> <li><strong>Heavy vehicles:</strong> This tends to be commercial vehicles.</li> <li><strong>Unclassified vehicles:</strong> Some stations do not classify vehicles by weight and thus this is generally the same as &ldquo;All vehicles&rdquo; for these stations.</li> </ul> <li><strong>Daily History:</strong> A chart is provided for the daily variations underpinning the average figures. <u>Click &ldquo;Expand&rdquo; to add to a larger chart to compare monitoring stations and download graphed data.</u> Select in the legend which directions of travel are graphed (primary direction and/or opposite direction).</li> </ul>"
+        },
+        {
+          "name": "Data Updates",
+          "content": "<p>Continually updated from API.</p>"
+        },
+        {
+          "name": "Data Supplier and processing",
+          "content": "<p>The data is served directly from the Transport NSW API. Data processing for visualisation is managed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS).</p>"
+        },
+        {
+          "name": "Disclaimer",
+          "content": "<p>Although every effort has been made to ensure the quality of the data, neither the Institute for Sustainable Futures nor the NSW Roads and Maritime Services can guarantee the accuracy of the data and does not accept responsibility for any consequences arising from its use.</p>"
+        }
       ]
     },
     {
@@ -1150,43 +1243,43 @@
         },
         "opacity": 0.8,
         "infoSectionOrder": [
-        "Data Description",
-        "Layer Content",
-        "Accuracy",
-        "Data Updates",
-        "Data Supplier and Processing",
-        "Service Description",
-        "Disclaimer"
+          "Data Description",
+          "Layer Content",
+          "Accuracy",
+          "Data Updates",
+          "Data Supplier and Processing",
+          "Service Description",
+          "Disclaimer"
         ],
         "info": [
-        {
-          "name": "Data Description",
-          "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
-        },
-        {
-          "name": "Accuracy",
-          "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
-        },
-        {
-          "name": "Data Updates",
-          "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
-        },
-        {
-          "name": "Data Supplier and Processing",
-          "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
-        },
-        {
-          "name": "Service Description",
-          "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
-        },
-        {
-          "name": "Disclaimer",
-          "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
-        },
-        {
-          "name": "Layer Content",
-          "content": "<ul> <li>Art Gallery</li> <li>Library</li> <li>Museum</li><li>Observatory</li> <li>Religious Institution</li> <li>Post Office</li> <li>Tourist Information Centre</li> </ul>"
-        }
+          {
+            "name": "Data Description",
+            "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
+          },
+          {
+            "name": "Accuracy",
+            "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
+          },
+          {
+            "name": "Data Updates",
+            "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
+          },
+          {
+            "name": "Data Supplier and Processing",
+            "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
+          },
+          {
+            "name": "Service Description",
+            "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
+          },
+          {
+            "name": "Disclaimer",
+            "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
+          },
+          {
+            "name": "Layer Content",
+            "content": "<ul> <li>Art Gallery</li> <li>Library</li> <li>Museum</li><li>Observatory</li> <li>Religious Institution</li> <li>Post Office</li> <li>Tourist Information Centre</li> </ul>"
+          }
         ]
       },
       {
@@ -1203,42 +1296,42 @@
         },
         "opacity": 0.8,
         "infoSectionOrder": [
-        "Data Description",
-        "Layer Content",
-        "Accuracy",
-        "Data Updates",
-        "Data Supplier and Processing",
-        "Service Description",
-        "Disclaimer"
+          "Data Description",
+          "Layer Content",
+          "Accuracy",
+          "Data Updates",
+          "Data Supplier and Processing",
+          "Service Description",
+          "Disclaimer"
         ],
         "info": [
-        {
-          "name": "Data Description",
-          "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
-        },
-        {
-          "name": "Accuracy",
-          "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
-        },
-        {
-          "name": "Data Updates",
-          "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
-        },
-        {
-          "name": "Data Supplier and Processing",
-          "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
-        },
-        {
-          "name": "Service Description",
-          "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
-        },
-        {
-          "name": "Disclaimer",
-          "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
-        },
-        {
-          "name": "Layer Content",
-          "content": "<ul> <li>Club</li> <li>Sports Centre</li> <li>Tourist Attraction</li> <li>Zoo</li> <li>Swimming Pool Facility</li><li>Caravan Park / Tourist Park</li><li>Lighthouse/li> </ul>"
+          {
+            "name": "Data Description",
+            "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
+          },
+          {
+            "name": "Accuracy",
+            "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
+          },
+          {
+            "name": "Data Updates",
+            "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
+          },
+          {
+            "name": "Data Supplier and Processing",
+            "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
+          },
+          {
+            "name": "Service Description",
+            "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
+          },
+          {
+            "name": "Disclaimer",
+            "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
+          },
+          {
+            "name": "Layer Content",
+            "content": "<ul> <li>Club</li> <li>Sports Centre</li> <li>Tourist Attraction</li> <li>Zoo</li> <li>Swimming Pool Facility</li><li>Caravan Park / Tourist Park</li><li>Lighthouse/li> </ul>"
           }
           ]
         },
@@ -1415,6 +1508,28 @@
             "content": "<p>This dataset is sourced from <a href='https://data.gov.au/dataset/ds-dga-553b3049-2b8b-46a2-95e6-640d7986a8c1/details'>data.gov.au</a></p>"
           }
           ]
+        },
+        {
+          "type": "csv",
+          "url": "http://static.aremi.data61.io/datasets/evmap/petrolStations.csv",
+          "name": "Petrol Stations",
+          "description": "Extracted from the NSW Fuel API https://api.nsw.gov.au/Product/Index/22",
+          "tableStyle": {
+            "idColumns": ["name"],
+            "colorBins": 1,
+            "columns": {
+              "name": {
+                "colorBins": 1,
+                "name": "Station Name",
+                "type": "hidden"
+              },
+              "brand": {
+                "name": "Brand",
+                "type": "hidden"
+              }
+            }
+          }
+
         }
         ]
       },
@@ -1423,7 +1538,7 @@
         "name": "Electricity Infrastructure",
         "items": [{
           "type": "wms",
-          "url": "http://nsw-digital-twin-data.terria.io:8080/geoserver/ows",
+          "url": "https://nsw-digital-twin-data.terria.io/geoserver/ows",
           "layers": "cite:Cables",
           "name": "Distribution Cables",
           "cacheDuration": "1d",
@@ -1450,12 +1565,15 @@
           },
           {
             "type": "wms",
-            "url": "http://nsw-digital-twin-data.terria.io:8080/geoserver/ows",
+            "url": "https://nsw-digital-twin-data.terria.io/geoserver/ows",
             "layers": "cite:Substations",
             "name": "Distribution Substations",
             "cacheDuration": "1d",
             "opacity": 1,
-            "featureInfoTemplate": "<h2>{{network}} Substation</h2> <dl class='isf-info'> {{#network}}<dt> Network  </dt><dd> {{network}} </dd> {{/network}} {{#asset_id}}<dt> Asset ID  </dt><dd> {{asset_id}} </dd> {{/asset_id}} {{#other_ids}}<dt> Other identifiers  </dt><dd> {{other_ids}} </dd> {{/other_ids}} {{#prim_v}}<dt> Primary voltage (kV)  </dt><dd> {{prim_v}} </dd> {{/prim_v}} {{#second_v}}<dt> Secondary voltage (kV)  </dt><dd> {{second_v}} </dd> {{/second_v}} {{#capacity}}<dt> Capacity (kVA)  </dt><dd> {{capacity}} </dd> {{/capacity}} {{#oriented}}<dt> Orientation  </dt><dd> {{oriented}} </dd> {{/oriented}} {{#phases}}<dt> Number of Phases  </dt><dd> {{phases}} </dd> {{/phases}} {{#status}}<dt> Service status  </dt><dd> {{status}} </dd> {{/status}} {{#norm_state}}<dt> Normal status  </dt><dd> {{norm_state}} </dd> {{/norm_state}} {{#feeder}}<dt> HV feeder name  </dt><dd> {{feeder}} </dd> {{/feeder}} {{#sub_type}}<dt> Substation type  </dt><dd> {{sub_type}} </dd> {{/sub_type}} {{#conductor}}<dt> Conductor Type  </dt><dd> {{conductor}} </dd> {{/conductor}} {{#conductor2}}<dt> Secondary conductor type  </dt><dd> {{conductor2}} </dd> {{/conductor2}} {{#const_type}}<dt> Hardware type  </dt><dd> {{const_type}} </dd> {{/const_type}} {{#owned_by}}<dt> Owner  </dt><dd> {{owned_by}} </dd> {{/owned_by}} </dl>",
+            "featureInfoTemplate": {
+              "template": "<h2>{{network}} Substation</h2> <dl class='isf-info'> {{#network}}<dt> Network  </dt><dd> {{network}} </dd> {{/network}} {{#asset_id}}<dt> Asset ID  </dt><dd> {{asset_id}} </dd> {{/asset_id}} {{#other_ids}}<dt> Other identifiers  </dt><dd> {{other_ids}} </dd> {{/other_ids}} {{#prim_v}}<dt> Primary voltage (kV)  </dt><dd> {{prim_v}} </dd> {{/prim_v}} {{#second_v}}<dt> Secondary voltage (kV)  </dt><dd> {{second_v}} </dd> {{/second_v}} {{#capacity}}<dt> Capacity (kVA)  </dt><dd> {{capacity}} </dd> {{/capacity}} {{#oriented}}<dt> Orientation  </dt><dd> {{oriented}} </dd> {{/oriented}} {{#phases}}<dt> Number of Phases  </dt><dd> {{phases}} </dd> {{/phases}} {{#status}}<dt> Service status  </dt><dd> {{status}} </dd> {{/status}} {{#norm_state}}<dt> Normal status  </dt><dd> {{norm_state}} </dd> {{/norm_state}} {{#feeder}}<dt> HV feeder name  </dt><dd> {{feeder}} </dd> {{/feeder}} {{#sub_type}}<dt> Substation type  </dt><dd> {{sub_type}} </dd> {{/sub_type}} {{#conductor}}<dt> Conductor Type  </dt><dd> {{conductor}} </dd> {{/conductor}} {{#conductor2}}<dt> Secondary conductor type  </dt><dd> {{conductor2}} </dd> {{/conductor2}} {{#const_type}}<dt> Hardware type  </dt><dd> {{const_type}} </dd> {{/const_type}} {{#owned_by}}<dt> Owner  </dt><dd> {{owned_by}} </dd> {{/owned_by}} </dl>",
+              "name": "{{capacity}} kVA"
+            },
             "infoSectionOrder": ["A Description of the Data", "Data Supplier and Processing", "Data Updates", "Disclaimer"],
             "info": [{
               "name": "Data Supplier and Processing",
