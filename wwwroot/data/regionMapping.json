@@ -2545,8 +2545,8 @@
             "regionIdsFile": "build/TerriaJS/data/regionids/region_map-AEC_FED_2017_AMLS_FED_ABB.json"
         },
         "AREMI_ISF_combined": {
-            "layerName": "aremi_isf_combined",
-            "server": "https://tiles.terria.io/aremi_isf_combined-v16/{z}/{x}/{y}.pbf",
+            "layerName": "AREMI_ISF_combined",
+            "server": "https://tiles.terria.io/aremi_isf_combined-v17/{z}/{x}/{y}.pbf",
             "serverType": "MVT",
             "serverMaxNativeZoom": 12,
             "serverMaxZoom": 28,
