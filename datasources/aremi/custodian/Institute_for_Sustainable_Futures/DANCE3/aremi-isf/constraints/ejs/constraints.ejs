@@ -1,7 +1,7 @@
 {
   "id": "3aa89fcb",
   "name": "Available Distribution Capacity",
-  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/surge/available_capacity_timeseries.csv",
+  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/published-initial/available_capacity_timeseries.csv",
   "type": "csv",
   "cacheDuration": "1h",
   "initialTimeSource": "2022",
@@ -44,7 +44,7 @@
 {
   "id": "2fb9cae8",
   "name": "Proposed Investment",
-  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/surge/proposed_investment.csv",
+  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/published-initial/proposed_investment.csv",
   "type": "csv",
   "cacheDuration": "1h",
   "tableStyle": {
@@ -55,6 +55,8 @@
       "asset_code": {"type":"HIDDEN"},
       "asset_name": {"type":"HIDDEN"},
       "asset_type": {"type":"HIDDEN"},
+      "wacc_rate": {"type":"HIDDEN"},
+      "depr_rate": {"type":"HIDDEN"},
       "asset_type_str": {"name": "Asset Type"},
       "augmentation_invest": {
         "name": "Augmentation Investment (m$)",
@@ -143,7 +145,7 @@
 {
   "id": "9fe2927c",
   "name": "Annual Deferral Value",
-  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/surge/deferral_values_timeseries.csv",
+  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/published-initial/deferral_values_timeseries.csv",
   "type": "csv",
   "cacheDuration": "1h",
   "initialTimeSource": "2027",
@@ -185,10 +187,10 @@
 {
   "id": "e16f1613",
   "name": "Peak Day Available Capacity",
-  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/surge/peak_day.csv",
+  "url": "https://network-opportunity-maps.s3-ap-southeast-2.amazonaws.com/constraints/published-initial/peak_day.csv",
   "type": "csv",
   "cacheDuration": "1h",
-  "initialTimeSource": "2020-01-01T17:00:00",
+  "initialTimeSource": "1900-01-01T18:00:00",
   "showWarnings": false,
   "tableStyle": {
     "dataVariable": "percent_available",

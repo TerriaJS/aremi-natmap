@@ -85,6 +85,7 @@
         }
       },
       "featureInfoTemplate": "\n\n<h2>{{Charging Network}} Charging Station</h2>\n<dl class='isf-info'>\n{{#Charger type}}                 <dt>Charger type:                       </dt><dd>{{Charger type}}                </dd>{{/Charger type}} \n{{#Plug types}}                   <dt>Plug type:                          </dt><dd>{{Plug types}}                  </dd>{{/Plug types}} \n{{#Power (kW)}}                   <dt>Power (kW): Charge rating at plug   </dt><dd>{{Power (kW)}}                  </dd>{{/Power (kW)}}\n{{#stations}}                     <dt>No. of charging stations            </dt><dd>{{stations}}                    </dd>{{/stations}}\n{{#Hardware brand}}               <dt>Hardware brand:                     </dt><dd>{{Hardware brand}}              </dd>{{/Hardware brand}}\n{{#Charging Network}}             <dt>Network:                            </dt><dd>{{Charging Network}}             </dd>{{/Charging Network}}\n</dl>\n\n<h3>Location details</h3>\n{{Name}} {{#Name}}<br>{{/Name}} \n{{Address}}  {{#Address}}<br>{{/Address}}\n\n<dl class='isf-info'>\n{{#latitude}}         <dt>Latitude:       </dt><dd>{{latitude}}           </dd>{{/latitude}} \n{{#longitude}}        <dt>Longitude:      </dt><dd>{{longitude}}         </dd>{{/longitude}}\n</dl>\n\n\n\n\n\n",
+      "infoSectionOrder": ["Data Description", "Data Updates", "Data Supplier and Processing","Disclaimer"],
       "info": [
         {
             "name": "Data Supplier and Processing",
@@ -95,7 +96,7 @@
             "content": "<p>Data is updated 6-monthly in June and December.</p>"
         },
         {
-            "name": "A Description of the Data",
+            "name": "Data Description",
             "content": "<p>This is an Australia-wide map of the number and location of current Electric Vehicle (EV) charging stations. The \u2018plug type\u2019 displayed refers to the charging plug(s) available at the station. Note that some stations are plotted directly on top of each other where multiple network providers and/or charge heads of differing types are at the same site. The details of all the chargers can be accessed by selecting the feature and looking through the feature info box</p><p>The following additional \u2018display variables\u2019 can also be selected in the legend panel: charger type, No. of vehicles which can simultaneously charge, charging network, power (kW) and Hardware brand. When 'No. of vehicles which can simultaneously charge' or 'Power (kW)' is selected as display variable, points are additionally scaled in size by their numeric value of the selected variable.</p><p> In the context of Electric Vehicle charging infrastructure planning, these variables are important to understand gaps in the existing charging infrastructure provision.</p><p>Click on a charging station to reveal the following information:</p><ul><li><strong>Name</strong></li><li><strong>Location details</strong> such as address, latitude and longitude</li><li><strong>Charger type:</strong> AC (Level 2) / DC (Level 3) information on power level and whether the charger uses Alternating Current (AC) or Direct Current (DC)</li><li><strong>Plug types: </strong>Specifies the relevant plug type compatibility, as each charging station will only be capable of connecting certain electric vehicle models.</li><li><strong>Charging network:</strong> The charging network to which the station belongs. Non-networked stations refer to those openly accessible to all EV owners, not only those that are part of a given charging network.</li><li><strong>Power (kW):</strong> Where available, the output power of charginge station at the charging plug (kW).</li><li><strong>Hardware brand:</strong> Where available, the manufacturer of charging station hardware.</li></ul>"
         },
         {
@@ -1134,7 +1135,7 @@
       "info": [
         {
           "name": "Data Description",
-          "content": "<p>This is a NSW map of average hourly weekday traffic volumes at different monitoring stations, recorded in average number of vehicles per hour on all weekdays of the year (i.e. excluding weekends but not holidays). Data displayed is for the primary direction of travel specified (east-west or north-south). Data presented is for the most recent available year.</p> <p>Use the time slider bar at the bottom to explore how traffic volumes and the location of traffic monitoring stations change across 24 hours of the average weekday. An alternative data display variable &lsquo;road type&rsquo; can also be used for quick reference.</p> <p>In the context of Electric Vehicle charging infrastructure planning, this is a critical variable that indicates potential volume and timing of charging needs, dictated by passing road traffic.</p> <p>Click on a monitoring station to reveal the following information:</p> <ul> <li><strong>Station name</strong></li> <li><strong>Station ID: </strong>Code used to identify specific monitoring station</li> <li><strong>LGA; Suburb:</strong> Local Government Area and suburb in which the monitoring station is located</li> <li><strong>Road type:</strong> Motorway, Arterial road, Sub-Arterial Road, Distributor Road, Primary Road</li> <li><strong>Primary direction captured:</strong> Direction of travel presented in the data</li> <li><strong>Average hourly weekday table:</strong> All 24hrs presented separately chart is provided for the daily variations underpinning the average figures.</li> <li><strong>Average hourly weekday graph:</strong> <u>Click &ldquo;Expand&rdquo; to add to a larger chart to compare monitoring stations and download </u><u>graphed data.</u></li> </ul>"
+          "content": "<p>This is a NSW map of average hourly weekday traffic volumes at different monitoring stations, recorded in average number of vehicles per hour on all weekdays of the year (i.e. excluding weekends but not holidays). Data displayed is for the primary direction of travel specified (east-west or north-south). Data presented is for the most recent available year.</p> <p>In the context of Electric Vehicle charging infrastructure planning, this is a critical variable that indicates potential volume and timing of charging needs, dictated by passing road traffic.</p> <p>Click on a monitoring station to reveal the following information:</p> <ul> <li><strong>Station name</strong></li> <li><strong>Station ID: </strong>Code used to identify specific monitoring station</li> <li><strong>LGA; Suburb:</strong> Local Government Area and suburb in which the monitoring station is located</li> <li><strong>Road type:</strong> Motorway, Arterial road, Sub-Arterial Road, Distributor Road, Primary Road</li> <li><strong>Primary direction captured:</strong> Direction of travel presented in the data</li> <li><strong>Average hourly weekday table:</strong> All 24hrs presented separately chart is provided for the daily variations underpinning the average figures.</li> <li><strong>Average hourly weekday graph:</strong> <u>Click &ldquo;Expand&rdquo; to add to a larger chart to compare monitoring stations and download </u><u>graphed data.</u></li> </ul>"
         },
         {
           "name": "Data Updates",
@@ -1148,7 +1149,14 @@
           "name": "Disclaimer",
           "content": "<p>Although every effort has been made to ensure the quality of the data, neither the Institute for Sustainable Futures nor the NSW Roads and Maritime Services can guarantee the accuracy of the data and does not accept responsibility for any consequences arising from its use.</p>"
         }
-      ]
+      ],
+      "tableStyle": {
+        "columns": {
+          "direction_seq_name": {
+            "name": "Direction Sequence"
+          }
+        }
+      }
     },
     {
       "type": "nsw-traffic-volume",
@@ -1260,110 +1268,110 @@
       "type": "group",
       "preserveOrder": true,
       "items": [
-      {
-        "name": "Community Buildings",
-        "type": "esri-mapServer",
-        "url": "https://portal.spatial.nsw.gov.au/server/rest/services/NSW_Features_of_Interest_Category/MapServer",
-        "tableStyle": null,
-        "featureInfoTemplate": "{{#generalname}}\n  <h2>{{generalname}}</h2>\n{{/generalname}}\n{{^generalname}}\n  <h2>Point of Interest Information</h2>\n{{/generalname}}\n\n<img src='https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/visual-assets/poi-feature-box-images/{{buildingcomplextype}}{{generalculturaltype}}.png' style='float: left; width: 20%; margin-right: 2%;'>\n{{#classsubtype}}<h3>{{classsubtype}}\n{{#buildingcomplextype}} - {{buildingcomplextype}}{{/buildingcomplextype}}\n{{#generalculturaltype}} - {{generalculturaltype}}{{/generalculturaltype}}\n</h3>{{/classsubtype}}\n{{#operationalstatus}}<p>{{operationalstatus}}</p>{{/operationalstatus}}\n{{#urbanity}}<p>Urbanity: {{urbanity}}</p>{{/urbanity}}\n\n\n<div style='clear: both;''></div>\n\n<dl class='isf-info'>\n{{#placetype}}              <dt>Category:              </dt><dd>{{placetype}}                   </dd>{{/placetype}}\n</dl>\n\n{{#population}}<h3>Population</h3>\n<dl class='isf-info'>\n{{#population}}             <dt>Population:            </dt><dd>{{population}}            </dd>{{/population}}\n{{#popsourcedate}}          <dt>Population source date:</dt><dd>{{popsourcedate}}.        </dd>{{/popsourcedate}}\n</dl>\n{{/population}}\n\n{{#lastupdate}}<h3>Metadata</h3>\n<dl class='isf-info'>\n{{#featurereliabilitydate}} <dt>Data reliable as at:   </dt><dd>{{featurereliabilitydate}}</dd>{{/featurereliabilitydate}}\n{{#lastupdate}}             <dt>Last update            </dt><dd>{{lastupdate}}            </dd>{{/lastupdate}}\n</dl>\n{{/lastupdate}}\n\n",
-        "id": "9d9ff391-3bc7-4162-9dcf-db88aab1cdbd",
-        "legendUrl": "https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/visual-assets/poi-legends/community.png",
-        "parameters": {
-          "tolerance": 10,
-          "dynamicLayers": "[{'id':0,'source':{'type':'mapLayer','mapLayerId':'3'},'definitionExpression':'(classsubtype IN (2) AND buildingcomplextype IN (2,11,14,15,16,18,20))','drawingInfo':{'renderer':{'type':'uniqueValue','field1':'classsubtype','field2':'buildingcomplextype','fieldDelimiter':',','uniqueValueInfos':[{'value':'2,2','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/8'}},{'value':'2,11','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/a'}},{'value':'2,14','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/b'}},{'value':'2,15','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/c'}},{'value':'2,16','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/d'}},{'value':'2,18','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/f'}},{'value':'2,20','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/g'}}]}}}]"
+        {
+          "name": "Community Buildings",
+          "type": "esri-mapServer",
+          "url": "https://portal.spatial.nsw.gov.au/server/rest/services/NSW_Features_of_Interest_Category/MapServer",
+          "tableStyle": null,
+          "featureInfoTemplate": "{{#generalname}}\n  <h2>{{generalname}}</h2>\n{{/generalname}}\n{{^generalname}}\n  <h2>Point of Interest Information</h2>\n{{/generalname}}\n\n<img src='https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/visual-assets/poi-feature-box-images/{{buildingcomplextype}}{{generalculturaltype}}.png' style='float: left; width: 20%; margin-right: 2%;'>\n{{#classsubtype}}<h3>{{classsubtype}}\n{{#buildingcomplextype}} - {{buildingcomplextype}}{{/buildingcomplextype}}\n{{#generalculturaltype}} - {{generalculturaltype}}{{/generalculturaltype}}\n</h3>{{/classsubtype}}\n{{#operationalstatus}}<p>{{operationalstatus}}</p>{{/operationalstatus}}\n{{#urbanity}}<p>Urbanity: {{urbanity}}</p>{{/urbanity}}\n\n\n<div style='clear: both;''></div>\n\n<dl class='isf-info'>\n{{#placetype}}              <dt>Category:              </dt><dd>{{placetype}}                   </dd>{{/placetype}}\n</dl>\n\n{{#population}}<h3>Population</h3>\n<dl class='isf-info'>\n{{#population}}             <dt>Population:            </dt><dd>{{population}}            </dd>{{/population}}\n{{#popsourcedate}}          <dt>Population source date:</dt><dd>{{popsourcedate}}.        </dd>{{/popsourcedate}}\n</dl>\n{{/population}}\n\n{{#lastupdate}}<h3>Metadata</h3>\n<dl class='isf-info'>\n{{#featurereliabilitydate}} <dt>Data reliable as at:   </dt><dd>{{featurereliabilitydate}}</dd>{{/featurereliabilitydate}}\n{{#lastupdate}}             <dt>Last update            </dt><dd>{{lastupdate}}            </dd>{{/lastupdate}}\n</dl>\n{{/lastupdate}}\n\n",
+          "id": "9d9ff391-3bc7-4162-9dcf-db88aab1cdbd",
+          "legendUrl": "https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/visual-assets/poi-legends/community.png",
+          "parameters": {
+            "tolerance": 10,
+            "dynamicLayers": "[{'id':0,'source':{'type':'mapLayer','mapLayerId':'3'},'definitionExpression':'(classsubtype IN (2) AND buildingcomplextype IN (2,11,14,15,16,18,20))','drawingInfo':{'renderer':{'type':'uniqueValue','field1':'classsubtype','field2':'buildingcomplextype','fieldDelimiter':',','uniqueValueInfos':[{'value':'2,2','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/8'}},{'value':'2,11','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/a'}},{'value':'2,14','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/b'}},{'value':'2,15','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/c'}},{'value':'2,16','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/d'}},{'value':'2,18','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/f'}},{'value':'2,20','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/g'}}]}}}]"
+          },
+          "opacity": 0.8,
+          "infoSectionOrder": [
+            "Data Description",
+            "Layer Content",
+            "Accuracy",
+            "Data Updates",
+            "Data Supplier and Processing",
+            "Service Description",
+            "Disclaimer"
+          ],
+          "info": [
+            {
+              "name": "Data Description",
+              "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
+            },
+            {
+              "name": "Accuracy",
+              "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
+            },
+            {
+              "name": "Data Updates",
+              "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
+            },
+            {
+              "name": "Data Supplier and Processing",
+              "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
+            },
+            {
+              "name": "Service Description",
+              "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
+            },
+            {
+              "name": "Disclaimer",
+              "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
+            },
+            {
+              "name": "Layer Content",
+              "content": "<ul> <li>Art Gallery</li> <li>Library</li> <li>Museum</li><li>Observatory</li> <li>Religious Institution</li> <li>Post Office</li> <li>Tourist Information Centre</li> </ul>"
+            }
+          ]
         },
-        "opacity": 0.8,
-        "infoSectionOrder": [
-          "Data Description",
-          "Layer Content",
-          "Accuracy",
-          "Data Updates",
-          "Data Supplier and Processing",
-          "Service Description",
-          "Disclaimer"
-        ],
-        "info": [
-          {
-            "name": "Data Description",
-            "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
+        {
+          "name": "Recreational Buildings",
+          "type": "esri-mapServer",
+          "url": "https://portal.spatial.nsw.gov.au/server/rest/services/NSW_Features_of_Interest_Category/MapServer",
+          "tableStyle": null,
+          "featureInfoTemplate": "{{#generalname}}\n  <h2>{{generalname}}</h2>\n{{/generalname}}\n{{^generalname}}\n  <h2>Point of Interest Information</h2>\n{{/generalname}}\n\n<img src='https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/visual-assets/poi-feature-box-images/{{buildingcomplextype}}{{generalculturaltype}}.png' style='float: left; width: 20%; margin-right: 2%;'>\n{{#classsubtype}}<h3>{{classsubtype}}\n{{#buildingcomplextype}} - {{buildingcomplextype}}{{/buildingcomplextype}}\n{{#generalculturaltype}} - {{generalculturaltype}}{{/generalculturaltype}}\n</h3>{{/classsubtype}}\n{{#operationalstatus}}<p>{{operationalstatus}}</p>{{/operationalstatus}}\n{{#urbanity}}<p>Urbanity: {{urbanity}}</p>{{/urbanity}}\n\n\n<div style='clear: both;''></div>\n\n<dl class='isf-info'>\n{{#placetype}}              <dt>Category:              </dt><dd>{{placetype}}                   </dd>{{/placetype}}\n</dl>\n\n{{#population}}<h3>Population</h3>\n<dl class='isf-info'>\n{{#population}}             <dt>Population:            </dt><dd>{{population}}            </dd>{{/population}}\n{{#popsourcedate}}          <dt>Population source date:</dt><dd>{{popsourcedate}}.        </dd>{{/popsourcedate}}\n</dl>\n{{/population}}\n\n{{#lastupdate}}<h3>Metadata</h3>\n<dl class='isf-info'>\n{{#featurereliabilitydate}} <dt>Data reliable as at:   </dt><dd>{{featurereliabilitydate}}</dd>{{/featurereliabilitydate}}\n{{#lastupdate}}             <dt>Last update            </dt><dd>{{lastupdate}}            </dd>{{/lastupdate}}\n</dl>\n{{/lastupdate}}\n\n",
+          "id": "21513330-f5cb-4e26-95bf-859584889566",
+          "legendUrl": "https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/visual-assets/poi-legends/recreationbuildings.png",
+          "parameters": {
+            "tolerance": 10,
+            "dynamicLayers": "[{'id':0,'source':{'type':'mapLayer','mapLayerId':'3'},'definitionExpression':'(classsubtype IN (6) AND buildingcomplextype IN (2,3,12,17,18,15)) OR (classsubtype IN (2) AND buildingcomplextype IN (24))','drawingInfo':{'renderer':{'type':'uniqueValue','field1':'classsubtype','field2':'buildingcomplextype','fieldDelimiter':',','uniqueValueInfos':[{'value':'6,2','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/p'}},{'value':'6,3','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/q'}},{'value':'6,12','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/r'}},{'value':'6,17','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/s'}},{'value':'6,18','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/t'}},{'value':'6,15','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/u'}},{'value':'2,24','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/h'}}]}}}]"
           },
-          {
-            "name": "Accuracy",
-            "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
-          },
-          {
-            "name": "Data Updates",
-            "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
-          },
-          {
-            "name": "Data Supplier and Processing",
-            "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
-          },
-          {
-            "name": "Service Description",
-            "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
-          },
-          {
-            "name": "Disclaimer",
-            "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
-          },
-          {
-            "name": "Layer Content",
-            "content": "<ul> <li>Art Gallery</li> <li>Library</li> <li>Museum</li><li>Observatory</li> <li>Religious Institution</li> <li>Post Office</li> <li>Tourist Information Centre</li> </ul>"
-          }
-        ]
-      },
-      {
-        "name": "Recreational Buildings",
-        "type": "esri-mapServer",
-        "url": "https://portal.spatial.nsw.gov.au/server/rest/services/NSW_Features_of_Interest_Category/MapServer",
-        "tableStyle": null,
-        "featureInfoTemplate": "{{#generalname}}\n  <h2>{{generalname}}</h2>\n{{/generalname}}\n{{^generalname}}\n  <h2>Point of Interest Information</h2>\n{{/generalname}}\n\n<img src='https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/visual-assets/poi-feature-box-images/{{buildingcomplextype}}{{generalculturaltype}}.png' style='float: left; width: 20%; margin-right: 2%;'>\n{{#classsubtype}}<h3>{{classsubtype}}\n{{#buildingcomplextype}} - {{buildingcomplextype}}{{/buildingcomplextype}}\n{{#generalculturaltype}} - {{generalculturaltype}}{{/generalculturaltype}}\n</h3>{{/classsubtype}}\n{{#operationalstatus}}<p>{{operationalstatus}}</p>{{/operationalstatus}}\n{{#urbanity}}<p>Urbanity: {{urbanity}}</p>{{/urbanity}}\n\n\n<div style='clear: both;''></div>\n\n<dl class='isf-info'>\n{{#placetype}}              <dt>Category:              </dt><dd>{{placetype}}                   </dd>{{/placetype}}\n</dl>\n\n{{#population}}<h3>Population</h3>\n<dl class='isf-info'>\n{{#population}}             <dt>Population:            </dt><dd>{{population}}            </dd>{{/population}}\n{{#popsourcedate}}          <dt>Population source date:</dt><dd>{{popsourcedate}}.        </dd>{{/popsourcedate}}\n</dl>\n{{/population}}\n\n{{#lastupdate}}<h3>Metadata</h3>\n<dl class='isf-info'>\n{{#featurereliabilitydate}} <dt>Data reliable as at:   </dt><dd>{{featurereliabilitydate}}</dd>{{/featurereliabilitydate}}\n{{#lastupdate}}             <dt>Last update            </dt><dd>{{lastupdate}}            </dd>{{/lastupdate}}\n</dl>\n{{/lastupdate}}\n\n",
-        "id": "21513330-f5cb-4e26-95bf-859584889566",
-        "legendUrl": "https://ev-infrastructure-mapping.s3-ap-southeast-2.amazonaws.com/visual-assets/poi-legends/recreationbuildings.png",
-        "parameters": {
-          "tolerance": 10,
-          "dynamicLayers": "[{'id':0,'source':{'type':'mapLayer','mapLayerId':'3'},'definitionExpression':'(classsubtype IN (6) AND buildingcomplextype IN (2,3,12,17,18,15)) OR (classsubtype IN (2) AND buildingcomplextype IN (24))','drawingInfo':{'renderer':{'type':'uniqueValue','field1':'classsubtype','field2':'buildingcomplextype','fieldDelimiter':',','uniqueValueInfos':[{'value':'6,2','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/p'}},{'value':'6,3','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/q'}},{'value':'6,12','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/r'}},{'value':'6,17','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/s'}},{'value':'6,18','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/t'}},{'value':'6,15','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/u'}},{'value':'2,24','symbol':{'type':'esriPMS','url':'https://d3qdjyj5kszox2.cloudfront.net/h'}}]}}}]"
-        },
-        "opacity": 0.8,
-        "infoSectionOrder": [
-          "Data Description",
-          "Layer Content",
-          "Accuracy",
-          "Data Updates",
-          "Data Supplier and Processing",
-          "Service Description",
-          "Disclaimer"
-        ],
-        "info": [
-          {
-            "name": "Data Description",
-            "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
-          },
-          {
-            "name": "Accuracy",
-            "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
-          },
-          {
-            "name": "Data Updates",
-            "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
-          },
-          {
-            "name": "Data Supplier and Processing",
-            "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
-          },
-          {
-            "name": "Service Description",
-            "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
-          },
-          {
-            "name": "Disclaimer",
-            "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
-          },
-          {
-            "name": "Layer Content",
-            "content": "<ul> <li>Club</li> <li>Sports Centre</li> <li>Tourist Attraction</li> <li>Zoo</li> <li>Swimming Pool Facility</li><li>Caravan Park / Tourist Park</li><li>Lighthouse/li> </ul>"
-          }
+          "opacity": 0.8,
+          "infoSectionOrder": [
+            "Data Description",
+            "Layer Content",
+            "Accuracy",
+            "Data Updates",
+            "Data Supplier and Processing",
+            "Service Description",
+            "Disclaimer"
+          ],
+          "info": [
+            {
+              "name": "Data Description",
+              "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
+            },
+            {
+              "name": "Accuracy",
+              "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
+            },
+            {
+              "name": "Data Updates",
+              "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
+            },
+            {
+              "name": "Data Supplier and Processing",
+              "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
+            },
+            {
+              "name": "Service Description",
+              "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
+            },
+            {
+              "name": "Disclaimer",
+              "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
+            },
+            {
+              "name": "Layer Content",
+              "content": "<ul> <li>Club</li> <li>Sports Centre</li> <li>Tourist Attraction</li> <li>Zoo</li> <li>Swimming Pool Facility</li><li>Caravan Park / Tourist Park</li><li>Lighthouse/li> </ul>"
+            }
           ]
         },
         {
@@ -1389,34 +1397,34 @@
           "Disclaimer"
           ],
           "info": [
-          {
-            "name": "Data Description",
-            "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
-          },
-          {
-            "name": "Accuracy",
-            "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
-          },
-          {
-            "name": "Data Updates",
-            "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
-          },
-          {
-            "name": "Data Supplier and Processing",
-            "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
-          },
-          {
-            "name": "Service Description",
-            "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
-          },
-          {
-            "name": "Disclaimer",
-            "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
-          },
-          {
-            "name": "Layer Content",
-            "content": "<ul><li>Historic Site</li> <li>Monument</li> <li>Lookout</li> <li>Outdoor Theatre</li> <li>Lighthouse</li><li>Showground</li> <li>Camping Ground</li> </ul>"
-          }
+            {
+              "name": "Data Description",
+              "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
+            },
+            {
+              "name": "Accuracy",
+              "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
+            },
+            {
+              "name": "Data Updates",
+              "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
+            },
+            {
+              "name": "Data Supplier and Processing",
+              "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
+            },
+            {
+              "name": "Service Description",
+              "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
+            },
+            {
+              "name": "Disclaimer",
+              "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
+            },
+            {
+              "name": "Layer Content",
+              "content": "<ul><li>Historic Site</li> <li>Monument</li> <li>Lookout</li> <li>Outdoor Theatre</li> <li>Lighthouse</li><li>Showground</li> <li>Camping Ground</li> </ul>"
+            }
           ]
         },
         {
@@ -1442,34 +1450,34 @@
           "Disclaimer"
           ],
           "info": [
-          {
-            "name": "Data Description",
-            "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
-          },
-          {
-            "name": "Accuracy",
-            "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
-          },
-          {
-            "name": "Data Updates",
-            "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
-          },
-          {
-            "name": "Data Supplier and Processing",
-            "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
-          },
-          {
-            "name": "Service Description",
-            "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
-          },
-          {
-            "name": "Disclaimer",
-            "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
-          },
-          {
-            "name": "Layer Content",
-            "content": "<ul> <li>Shopping Centre</li><li>General Hospital</li> <li>Emergency Hospital</li> <li>Integrated Health Service</li> <li>Multi-Purpose Service</li> <li>Community Medical Centre</li> <li>Technical College</li> <li>University</li> <li>Academy</li> <li>Park</li><li>Picnic area</li>  </ul>"
-          }
+            {
+              "name": "Data Description",
+              "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
+            },
+            {
+              "name": "Accuracy",
+              "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
+            },
+            {
+              "name": "Data Updates",
+              "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
+            },
+            {
+              "name": "Data Supplier and Processing",
+              "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
+            },
+            {
+              "name": "Service Description",
+              "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
+            },
+            {
+              "name": "Disclaimer",
+              "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
+            },
+            {
+              "name": "Layer Content",
+              "content": "<ul> <li>Shopping Centre</li><li>General Hospital</li> <li>Emergency Hospital</li> <li>Integrated Health Service</li> <li>Multi-Purpose Service</li> <li>Community Medical Centre</li> <li>Technical College</li> <li>University</li> <li>Academy</li> <li>Park</li><li>Picnic area</li>  </ul>"
+            }
           ]
         },
         {
@@ -1495,34 +1503,34 @@
           "Disclaimer"
           ],
           "info": [
-          {
-            "name": "Data Description",
-            "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
-          },
-          {
-            "name": "Accuracy",
-            "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
-          },
-          {
-            "name": "Data Updates",
-            "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
-          },
-          {
-            "name": "Data Supplier and Processing",
-            "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
-          },
-          {
-            "name": "Service Description",
-            "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
-          },
-          {
-            "name": "Disclaimer",
-            "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
-          },
-          {
-            "name": "Layer Content",
-            "content": "<ul><li>Golf Course</li> <li>Sports Court</li> <li>Sports Field</li> <li>Athletics Track</li> <li>Racecourse (including Motorracing)</li> <li>Equestrican Racing and Trotting Tracks</li></ul>"
-          }
+            {
+              "name": "Data Description",
+              "content": "<p>This is a filtered subset of the NSW/ACT &lsquo;Places of Interest &ndash; All&rsquo;, including infrastructure (such as utilities, police stations, ambulance stations and hospitals), cultural and leisure sites. It has been filtered to include only the features of potential relevance to Electric Vehicle charging infrastructure planning. That is, those sites most relevant as attractions that draw customers to an area for leisure activities (such as those which can be undertaken while a vehicle is charging).</p> <p><strong>NB: Data points are only visible when zoomed in.</strong></p> <p>The following features are included in the filtered dataset.</p>"
+            },
+            {
+              "name": "Accuracy",
+              "content": "<p>The dataset maintains a positional relationship to, and alignment with, a range of themes from the NSW FSDF including, transport, Imagery, positioning, water and land cover. It was captured by digitising the best available cadastral mapping at a variety of scales and accuracies, ranging from 1:500 to 1:250 000 according to the National Mapping Council of Australia, Standards of Map Accuracy (1975).</p>"
+            },
+            {
+              "name": "Data Updates",
+              "content": "<p>Dataset on AREMI is updated automatically from the NSW Government spatial services data portal, and is updated by the data supplier as required.</p>"
+            },
+            {
+              "name": "Data Supplier and Processing",
+              "content": "<p>The data is supplied and hosted by the NSW Government (<a href='mailto:SS-SDS@customerservice.nsw.gov.au'>SS-SDS@customerservice.nsw.gov.au</a>). Data is processed by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
+            },
+            {
+              "name": "Service Description",
+              "content": "<p>The places of interest layer is served by an ESRI ArcGIS mapserver.</p> <p>It comprises features whose primary characteristic are of a cultural (man-made) origin, but generally not including transportation related features.</p> <p>The service is primarily used for planning, developmental activities, navigation and resource monitoring by emergency services, the Defence Forces, environmental resource managers and engineers.</p> <p>The features in this dataset are captured as part of the NSW Digital Topographic mapping program and can be displayed in their correct relative position with other data themes, eg. Transport.</p> <p>The service has Open Geospatial Consortium (OGC) implemented and is compatible for consumption by&nbsp;common GIS platforms. Available as either cache or non-cache, depending on client use or requirement.</p> <p>Metadata AS/NZS ISO 19115:<br /><a href='http://www.anzlic.gov.au/resources/anzlic-metadata-profile'>http://www.anzlic.gov.au/resources/anzlic-metadata-profile</a></p>"
+            },
+            {
+              "name": "Disclaimer",
+              "content": "<p>You are free to use the data in accordance with the Creative Commons Attribution By (CC BY) Licence, but do so at your own risk. The data is provided without any warranty, representation or condition of any kind given by the &lsquo;Providers&rsquo; &ndash; which includes the Department of Customer Service &ndash; Spatial Services (DCS SS), UTS and Data61 &ndash; express or implied, including, but not limited to, warranties of performance, merchantability, fitness for a particular purpose, accuracy, completeness or currency. By viewing or downloading the data the user agrees to irrevocably release the Providers from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer, including following indemnity clauses relating to DCS SS:</p> <ul> <li>To the extent permitted by law, the State of New South Wales will be in no way liable for any costs, loss, damage or injury (whether in contract, tort or otherwise) arising from your use of or reliance on the data. Without limiting the foregoing, the State of New South Wales will not be liable for any indirect or consequential loss (including loss of profit) or punitive or special damages.</li> <li>Where liability arises under legislation (including but not limited to the Competition and Consumer Act 2010) then to the extent permissible by law, the liability of the State of New South Wales is limited to supplying its services again or paying the cost of having the services supplied again.</li> <li>You must indemnify and keep indemnified the State of New South Wales against any costs, loss, damage or injury which it may incur to the extent that they arise from any breach by you of this Agreement.</li> </ul>"
+            },
+            {
+              "name": "Layer Content",
+              "content": "<ul><li>Golf Course</li> <li>Sports Court</li> <li>Sports Field</li> <li>Athletics Track</li> <li>Racecourse (including Motorracing)</li> <li>Equestrican Racing and Trotting Tracks</li></ul>"
+            }
           ]
         },
         {
@@ -1534,100 +1542,42 @@
             "dataVariable": "FacilityType"
           },
           "info": [
-          {
-            "name": "Data Supplier",
-            "content": "<p>This dataset is sourced from <a href='https://data.gov.au/dataset/ds-dga-553b3049-2b8b-46a2-95e6-640d7986a8c1/details'>data.gov.au</a></p>"
-          }
+            {
+              "name": "Data Supplier",
+              "content": "<p>This dataset is sourced from <a href='https://data.gov.au/dataset/ds-dga-553b3049-2b8b-46a2-95e6-640d7986a8c1/details'>data.gov.au</a></p>"
+            }
           ]
         },
         {
-          "type": "csv",
-          "url": "http://static.aremi.data61.io/datasets/evmap/petrolStations.csv",
-          "name": "Petrol Stations",
-          "description": "Extracted from the NSW Fuel API https://api.nsw.gov.au/Product/Index/22",
-          "tableStyle": {
-            "idColumns": ["name"],
-            "colorBins": 1,
-            "columns": {
-              "name": {
-                "colorBins": 1,
-                "name": "Station Name",
-                "type": "hidden"
-              },
-              "brand": {
-                "name": "Brand",
-                "type": "hidden"
+            "type": "csv",
+            "url": "http://static.aremi.data61.io/datasets/evmap/petrolStations.csv",
+            "name": "Petrol Stations",
+            "description": "Extracted from the NSW Fuel API https://api.nsw.gov.au/Product/Index/22",
+            "tableStyle": {
+              "idColumns": ["name"],
+              "colorBins": 1,
+              "columns": {
+                "name": {
+                  "colorBins": 1,
+                  "name": "Station Name",
+                  "type": "hidden"
+                },
+                "brand": {
+                  "name": "Brand",
+                  "type": "hidden"
+                }
               }
             }
           }
-
-        }
-        ]
-      },
-      {
-        "type": "group",
-        "name": "Electricity Infrastructure",
-        "items": [{
-          "type": "wms",
-          "url": "https://nsw-digital-twin-data.terria.io/geoserver/ows",
-          "layers": "cite:Cables",
-          "name": "Distribution Cables",
-          "cacheDuration": "1d",
-          "legendUrl": "http://static.aremi.data61.io/datasets/evmap/cables.png",
-          "featureInfoTemplate": "<h2>{{network}} Conductor</h2> <dl class='isf-info'> {{#network}}<dt> Network  </dt><dd> {{network}} </dd> {{/network}} {{#asset_id}}<dt> Asset ID  </dt><dd> {{asset_id}} </dd> {{/asset_id}} {{#voltage}}<dt> Voltage (kV)  </dt><dd> {{voltage}} </dd> {{/voltage}} {{#phases}}<dt> Number of Phases  </dt><dd> {{phases}} </dd> {{/phases}} {{#oriented}}<dt> Orientation  </dt><dd> {{oriented}} </dd> {{/oriented}} {{#feeder}}<dt> HV feeder name  </dt><dd> {{feeder}} </dd> {{/feeder}} {{#status}}<dt> Service Status  </dt><dd> {{status}} </dd> {{/status}} {{#type}}<dt> Conductor type  </dt><dd> {{type}} </dd> {{/type}} {{#owner}}<dt> Owner  </dt><dd> {{owner}} </dd> {{/owner}} {{#descript}}<dt> Description  </dt><dd> {{descript}} </dd> {{/descript}} </dl>",
-          "opacity": 1,
-          "infoSectionOrder": ["A Description of the Data", "Data Supplier and Processing", "Data Updates", "Disclaimer"],
-          "info": [{
-            "name": "Data Supplier and Processing",
-            "content": "<p>The data is supplied by the Endeavour Energy and Essential Energy. Data is processed and by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
-          },
-          {
-            "name": "Data Updates",
-            "content": "<p>Data is updated 6-monthly in June and December.</p>"
-          },
-          {
-            "name": "A Description of the Data",
-            "content": "<p></li>This is a map of distribution feeders in the Essential energy and Endeavour Energy networks</ul>"
-            },
-            {
-              "name": "Disclaimer",
-              "content": "<p>This data layer provides information on locations and characteristics of current electricity distribution network assets within the NEM, to inform potential gaps in the network and opportunities for extending the charging network. You are free to use the data but do so at your own risk. While due care and attention has been taken in the compilation and presentation of the data, the Providers of these maps do not make any representations, guarantees or warranties as to the accuracy, reliability, completeness or currency of the data and content of the maps.</p><p>By viewing or downloading the data the user agrees to irrevocably release the creators, authors, publishers and contributors to the maps, who include Endeavour Energy and Essential Energy, and UTS (‘the ‘Providers’), from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer.</p>"
-            }
-            ]
-          },
-          {
-            "type": "wms",
-            "url": "https://nsw-digital-twin-data.terria.io/geoserver/ows",
-            "layers": "cite:Substations",
-            "name": "Distribution Substations",
-            "legendUrl":"http://static.aremi.data61.io/datasets/evmap/substations.png",
-            "cacheDuration": "1d",
-            "opacity": 1,
-            "featureInfoTemplate": {
-              "template": "<h2>{{network}} Substation</h2> <dl class='isf-info'> {{#network}}<dt> Network  </dt><dd> {{network}} </dd> {{/network}} {{#asset_id}}<dt> Asset ID  </dt><dd> {{asset_id}} </dd> {{/asset_id}} {{#other_ids}}<dt> Other identifiers  </dt><dd> {{other_ids}} </dd> {{/other_ids}} {{#prim_v}}<dt> Primary voltage (kV)  </dt><dd> {{prim_v}} </dd> {{/prim_v}} {{#second_v}}<dt> Secondary voltage (kV)  </dt><dd> {{second_v}} </dd> {{/second_v}} {{#capacity}}<dt> Capacity (kVA)  </dt><dd> {{capacity}} </dd> {{/capacity}} {{#oriented}}<dt> Orientation  </dt><dd> {{oriented}} </dd> {{/oriented}} {{#phases}}<dt> Number of Phases  </dt><dd> {{phases}} </dd> {{/phases}} {{#status}}<dt> Service status  </dt><dd> {{status}} </dd> {{/status}} {{#norm_state}}<dt> Normal status  </dt><dd> {{norm_state}} </dd> {{/norm_state}} {{#feeder}}<dt> HV feeder name  </dt><dd> {{feeder}} </dd> {{/feeder}} {{#sub_type}}<dt> Substation type  </dt><dd> {{sub_type}} </dd> {{/sub_type}} {{#conductor}}<dt> Conductor Type  </dt><dd> {{conductor}} </dd> {{/conductor}} {{#conductor2}}<dt> Secondary conductor type  </dt><dd> {{conductor2}} </dd> {{/conductor2}} {{#const_type}}<dt> Hardware type  </dt><dd> {{const_type}} </dd> {{/const_type}} {{#owned_by}}<dt> Owner  </dt><dd> {{owned_by}} </dd> {{/owned_by}} </dl>",
-              "name": "{{capacity}} kVA"
-            },
-            "infoSectionOrder": ["A Description of the Data", "Data Supplier and Processing", "Data Updates", "Disclaimer"],
-            "info": [{
-              "name": "Data Supplier and Processing",
-              "content": "<p>The data is supplied by the Endeavour Energy and Essential Energy. Data is processed and by the Institute of Sustainable Futures at the University of Technology Sydney (UTS) for display on AREMI.</p>"
-            },
-            {
-              "name": "Data Updates",
-              "content": "<p>Data is updated 6-monthly in June and December.</p>"
-            },
-            {
-              "name": "A Description of the Data",
-              "content": "<p></li>This is a map of distribution substations in the Essential energy and Endeavour Energy networks</ul>"
-              },
-              {
-                "name": "Disclaimer",
-                "content": "<p>This data layer provides information on locations and characteristics of current electricity distribution network assets within the NEM, to inform potential gaps in the network and opportunities for extending the charging network. You are free to use the data but do so at your own risk. While due care and attention has been taken in the compilation and presentation of the data, the Providers of these maps do not make any representations, guarantees or warranties as to the accuracy, reliability, completeness or currency of the data and content of the maps.</p><p>By viewing or downloading the data the user agrees to irrevocably release the creators, authors, publishers and contributors to the maps, who include Endeavour Energy and Essential Energy, and UTS (‘the ‘Providers’), from all claims, actions, damages, judgments, losses, remedies or matters whether in tort, contract or under statute or otherwise, relating to the data. By proceeding, the user releases the Providers from all liability, and accepts the terms of this Disclaimer.</p>"
-              }
-              ]
-              
-            }
-            ]
-          }
-          ]
-        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "Electricity Infrastructure",
+      "items": [
+        <% include ../Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Distribution-cables %>,
+        <% include ../Institute_for_Sustainable_Futures/DANCE3/aremi-isf/DG-connection/Distribution-substations-wms %>,
+      ]
+    }
+  ]
+}
