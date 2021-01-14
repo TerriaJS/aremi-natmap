@@ -104,9 +104,7 @@ export const NoticePure = ({ showNotice, setShowNotice, viewState }) => {
               />
             </span> */}
             <CloseButton onClick={handleClose.bind(null, false)} />
-            <h1>
-              Notice of decommissioning
-            </h1>
+            <h1>Notice of decommissioning</h1>
             <span className={Styles.popupModalBody}>
               {/* <p>
                 We’re looking for great stories.
@@ -124,8 +122,8 @@ export const NoticePure = ({ showNotice, setShowNotice, viewState }) => {
                     Australian NationalMap
                   </a>
                   . While efforts are made to limit the disruption to users and
-                  data custodians, please expect some data or functionalities'
-                  discrepancies. Please let us know your feedback by emailing{" "}
+                  data custodians, please expect some discrepancies in data or
+                  functionality. Please let us know your feedback by emailing{" "}
                   <a href="mailto:info@terria.io">info@terria.io</a>. Thank you
                   for your support!
                 </p>
